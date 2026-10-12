@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>บทเรียน | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law1u.css">
+<style>.up { justify-self:start; font-size:14px; font-weight:600; color:var(--hue-ink, var(--ink)); text-decoration:none; } .up::before { content:"‹ "; } .up:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }</style>
+<link rel="stylesheet" href="law1u-skin.css">
+</head>
+<body>
+<main>
+  <span class="tag">ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span>
+  <a class="up" id="up" href="law2u-index.html">เราอยู่ตรงไหนนะ</a>
+  <h1 id="title"></h1>
+  <nav class="nav" id="nav" aria-label="เรื่องในบทนี้"></nav>
+  <div class="prog" id="prog" role="img"><i></i><span></span></div>
+  <div id="view"></div>
+</main>
+<div class="foot"><button class="btn ghost" id="prev" type="button">ย้อนกลับ</button><button class="btn" id="next" type="button">ต่อไป</button></div>
+<script>
+(function () { var m = /[?&]s=([A-Z][0-9]{2}(?:-[a-z0-9]+)?)/.exec(location.search), id = m ? m[1] : 'W01', s = document.createElement('script'), home = { W: 'law2u-wht.html', R: 'law2u-prof.html', V: 'law2u-vat.html', C: 'law2u-cit.html' }[id.charAt(0)] || 'law2u-index.html'; window.LAW1U_HOME = { href: home, label: 'เราอยู่ตรงไหนนะ' }; document.getElementById('up').href = home; s.src = 'law2u-data/' + id + '.js'; s.onload = function () { var e = document.createElement('script'); e.src = 'law1u.js'; document.body.appendChild(e); }; s.onerror = function () { document.getElementById('view').textContent = 'ยังไม่มีบท ' + id + ' ในรูปแบบนี้'; }; document.body.appendChild(s); })();
+</script>
+</body>
+</html>

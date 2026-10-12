@@ -1,0 +1,107 @@
+/* CPA Answer · หน้าตาชุดใหม่ของเครื่อง law1u (12 ต.ค. 2569)
+ * โหลดต่อจาก law1u.css และ <style> ของหน้า · ถอดลิงก์ไฟล์นี้ออก = กลับหน้าตาเดิม
+ * หลัก: พื้นเรียบ ไม่มีเส้นกรอบ · สีหนึ่งสีต่อสาย · ปุ่มหลักหนึ่งปุ่มต่อจอ · ของที่แตะได้เป็นแผ่นทึบ
+ * ที่มาและเหตุผล: exchange/v2/design/CPA-ANSWER-SKIN-2026-10-12.md */
+:root { --cream:#F7F5EF; --soft:#F1EEE6; --line:#CFCBBF; --muted:#4A5F5F; --sun:#F0C84B;
+  --r-s:12px; --r-m:16px; --r-l:24px; --r-xl:28px;
+  --lift:0 1px 2px rgba(11,59,60,.05), 0 10px 28px rgba(11,59,60,.07); }
+body { -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+main { gap:16px; padding-top:16px; }
+h1 { font-size:30px; letter-spacing:-.01em; } h2 { letter-spacing:-.005em; }
+.tag { font-size:12px; border:0; background:var(--soft); }
+
+/* ปุ่ม: หลักหนึ่งปุ่ม เต็มความกว้างเมื่ออยู่ลำพัง */
+.btn { min-height:52px; padding:8px 22px; font-size:17px; transition:transform .12s ease, box-shadow .12s ease; }
+.btn:active:not(:disabled) { transform:scale(.97); }
+.btn.ghost { border:0; box-shadow:inset 0 0 0 1.5px var(--line); }
+.foot { padding:16px 16px calc(14px + env(safe-area-inset-bottom)); background:linear-gradient(transparent, var(--cream) 38%); }
+.foot #next { flex:1; box-shadow:0 8px 20px rgba(11,59,60,.22); } .foot #prev { flex:none; }
+
+/* ทางเดินของบท: จุดต่อกันด้วยเส้น ช่องที่ครบแล้วเส้นเป็นสีเขียว */
+.nav { background:var(--cream); border-bottom:0; padding:10px 12px 8px; }
+.nav button { opacity:1; gap:8px; padding-bottom:4px; }
+.nav button .ico { position:relative; z-index:1; width:44px; height:44px; background:var(--white); box-shadow:0 0 0 1.5px var(--line); transition:transform .15s ease; }
+.nav button + button::before { content:""; position:absolute; top:27px; right:calc(50% + 26px); width:calc(100% - 52px); height:3px; border-radius:2px; background:var(--line); }
+.nav button:has(.ok) + button::before { background:var(--good); }
+.nav button[aria-current="step"] .ico { box-shadow:0 0 0 4px var(--hue-soft); transform:scale(1.04); }
+.nav button:has(.ok) .ico { box-shadow:0 0 0 1.5px var(--good); }
+.nav button .ok { z-index:2; right:calc(50% - 30px); }
+
+/* ความคืบหน้า: แถบบาง ตัวหนังสืออยู่ใต้แถบ */
+.prog { height:30px; border:0; background:transparent; overflow:visible; }
+.prog::before { content:""; position:absolute; left:0; right:0; top:0; height:8px; border-radius:99px; background:rgba(11,59,60,.10); }
+.prog i { bottom:auto; height:8px; border-radius:99px; background:var(--hue); min-width:0; } .prog.full i { background:var(--good); }
+.prog span { inset:auto 0 0 0; place-items:center start; font-size:12px; color:var(--muted); } .prog.full span { color:var(--good); }
+
+/* การ์ด: พื้นขาว ไม่มีกรอบ */
+.card { border:0; border-radius:var(--r-l); padding:20px 18px; gap:14px; box-shadow:var(--lift); }
+.card.pass { box-shadow:0 0 0 3px var(--good), var(--lift); }
+.card.take { border:0; } details.card { border:1.5px dashed var(--line); box-shadow:none; background:transparent; }
+.say { padding:14px 16px; border-radius:22px 22px 22px 6px; font-size:17px; } .say .ico { width:38px; height:38px; }
+.ex { border-left:0; border-radius:var(--r-m); padding:12px 14px; } .ex b { letter-spacing:.02em; }
+.eq { border-radius:var(--r-m); padding:10px 14px; }
+.tiles div { border-radius:var(--r-l); padding:16px 8px; box-shadow:var(--lift); } .tiles .ico { width:52px; height:52px; }
+.mini { border:0; border-radius:var(--r-m); }
+
+/* ของที่แตะได้: แผ่นทึบ ยังไม่เลือกไม่มีเส้น เลือกแล้วขึ้นสีของสาย */
+.pick, .ent, .pp, .zone, .chips button, .sub button, .cks button, .srtb button { border-color:transparent; background:var(--soft); transition:transform .12s ease, background-color .12s ease, border-color .12s ease; }
+.pick:active, .ent:active:not(:disabled), .pp:active, .chips button:active, .sub button:active, .cks button:active, .srtb button:active, .q button:active { transform:scale(.98); }
+.pick { border-radius:var(--r-l); padding:14px; } .zone { border-radius:var(--r-m); }
+.step button { border:0; border-radius:var(--r-m); } .toggle { border-radius:var(--r-m); border-color:transparent; }
+.checks li { border-color:transparent; background:var(--soft); border-radius:var(--r-m); padding:12px; }
+.checks li.ok { background:var(--good-soft); } .checks li.no { background:var(--white); } .checks .mk { background:var(--white); }
+
+/* คำถาม: ตัวเลือกเป็นแผ่นใหญ่ ปุ่มตรวจเต็มความกว้าง */
+.q { border:0; border-radius:var(--r-l); padding:18px 16px; gap:10px; box-shadow:var(--lift); }
+.card .q { box-shadow:none; background:var(--cream); }
+.q .f { border-left:0; border-radius:var(--r-m); padding:12px 14px; }
+.q button { min-height:54px; padding:12px 16px; border-radius:var(--r-m); border-color:transparent; background:var(--soft); transition:transform .12s ease, background-color .12s ease, border-color .12s ease; }
+.card .q button { background:var(--white); }
+.q button.sel { border-color:var(--hue); background:var(--hue-soft); color:var(--hue-ink); font-weight:600; }
+.q button.btn, .card .q button.btn { width:100%; min-height:52px; background:var(--ink); border-color:var(--ink); border-radius:99px; }
+.q button.btn.ghost, .card .q button.btn.ghost { background:var(--white); border-color:transparent; box-shadow:inset 0 0 0 1.5px var(--line); }
+.ordb .btn { width:auto; }
+.fb { padding:12px 14px; border-radius:var(--r-m); } .q .allwhy { border:0; background:var(--soft); border-radius:var(--r-m); padding:10px 14px; }
+.card .q .allwhy { background:var(--white); }
+.numrow input { border-radius:var(--r-m); border-color:var(--line); background:var(--white); } .numrow input:focus { border-color:var(--ink); }
+
+/* การ์ด “เรียนต่อ” (หน้ารวมและหน้าแผนที่): บล็อกเข้มหนึ่งบล็อกต่อหน้า */
+section.here { border:0; background:var(--ink); color:#fff; border-radius:var(--r-xl); padding:22px 20px; gap:10px; box-shadow:0 14px 32px rgba(11,59,60,.22); }
+section.here h2 { font-family:var(--body); font-size:13px; font-weight:600; letter-spacing:.04em; color:rgba(255,255,255,.72); }
+section.here small, .hn small, .hn.now small { color:rgba(255,255,255,.72); } section.here b, .hn b { color:#fff; font-size:22px; } .hn p { color:rgba(255,255,255,.82); }
+.hn::before { background:rgba(255,255,255,.28); } .hn .b { border-color:rgba(255,255,255,.5); background:var(--ink); }
+.hn.now .b { border-color:var(--sun); background:var(--sun); box-shadow:0 0 0 5px rgba(240,200,75,.25); } .hn.done .b { border-color:#8FD3A8; background:#8FD3A8; }
+section.here .btn { display:block; justify-self:stretch; text-align:center; background:var(--sun); color:var(--ink); line-height:1.3; padding:15px 18px; margin-top:6px; }
+section.here .btn:focus-visible { outline-color:#fff; }
+
+/* หน้าเริ่มของบท: ข้อความเปิดอยู่ในการ์ด ไม่ลอยบนพื้นหน้า · ป้ายของตัวควบคุมเข้มพอจะอ่านเป็นป้าย */
+#view > p:first-child:not(.say):not(.small) { padding:18px; border-radius:var(--r-l); background:var(--white); box-shadow:var(--lift); font-size:18px; line-height:1.6; }
+#view > p.small.muted:last-child { padding:10px 14px; border-radius:var(--r-m); background:var(--soft); }
+.card p.small.muted:has(+ .chips), .card p.small.muted:has(+ .ents), .card p.small.muted:has(+ .ppl), .card p.small.muted:has(+ .seg) { color:var(--ink); font-weight:600; margin-bottom:6px; }
+.step .num small { color:var(--ink); }
+
+/* หน้ารวม: การ์ดสายเป็นบล็อกสีอ่อนของสาย แถบความคืบหน้าเป็นปล้อง */
+.lede { font-size:18px; margin:0 0 8px; }
+.lines { gap:14px; } .lines > h2, .map > h2 { font-size:22px; }
+.hubln { border:0; background:var(--hs); border-radius:var(--r-xl); padding:20px 20px 18px; gap:8px; min-height:176px; align-content:start; transition:transform .15s ease, box-shadow .15s ease; }
+.hubln::before { left:auto; right:-34px; top:-34px; bottom:auto; width:128px; height:128px; border-radius:50%; background:var(--h); opacity:.16; }
+a.hubln:hover { transform:translateY(-3px); box-shadow:var(--lift); } a.hubln:active { transform:scale(.985); }
+.hubln .hubno { justify-self:start; padding:2px 10px; border-radius:99px; background:rgba(255,255,255,.8); }
+.hubln h3 { font-size:25px; color:var(--hi); } .hubln p { color:var(--hi); font-size:16px; }
+.hubln .hubdots { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:3px; margin-top:auto; padding-top:14px; }
+.hubln .hubdots i { width:auto; height:8px; border:0; border-radius:99px; background:rgba(255,255,255,.85); }
+.hubln .hubdots i.done { background:var(--h); } .hubln .hubdots i.part { background:linear-gradient(90deg, var(--h) 50%, rgba(255,255,255,.85) 50%); }
+.hubln .hubdots i.now { background:var(--hi); box-shadow:none; }
+.hubln.cur { box-shadow:0 0 0 3px var(--h); }
+.hubln.off { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); border:0; min-height:0; } .hubln.off::before { display:none; } .hubln.off h3, .hubln.off p { color:var(--muted); }
+@media (min-width:720px) { .lines { grid-template-columns:1fr 1fr; } .lines > h2 { grid-column:1 / -1; } }
+
+/* หน้าแผนที่ของสาย */
+.strip a { border:0; background:var(--white); border-radius:var(--r-m); padding:10px 6px; box-shadow:var(--lift); } .strip a.cur { background:var(--hue-ink); color:#fff; }
+.part { border:0; border-radius:var(--r-l); padding:18px 16px 12px; box-shadow:var(--lift); } .part.cur { box-shadow:0 0 0 3px var(--hue), var(--lift); }
+.part .pn { width:44px; height:44px; background:var(--hue); color:#fff; } .part header { grid-template-columns:44px 1fr; gap:12px; }
+.st { min-height:52px; border-radius:var(--r-m); transition:background-color .12s ease; } a.st:hover { background:var(--soft); }
+.st.now, a.st.now:hover { background:var(--hue-soft); } .st.adj { outline:0; }
+
+@media (prefers-reduced-motion: reduce) { .btn, .nav button .ico, .pick, .ent, .pp, .chips button, .sub button, .cks button, .srtb button, .q button, .hubln, .st { transition:none; }
+  .btn:active:not(:disabled), .pick:active, .q button:active, a.hubln:hover, a.hubln:active, .nav button[aria-current="step"] .ico { transform:none; } }
