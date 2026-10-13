@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ทำแบบไหน ถึงเรียกว่าทำให้วิชาชีพเสื่อมเสีย | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะหน้า หลัก (จ) · คำนำ xee- */
+.map .fork.xee-f { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.xee-tag { padding:1px 10px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; }
+.xee-tag.xee-t2 { background:var(--bad); }
+/* ภาพหลัก: วรรคท้ายของหลัก (ถ้อยคำตัวบท ไม่ใช่ปุ่ม) และห้าส่วนของบท */
+.xee-quote { width:100%; margin-top:14px; padding:6px 0 6px 14px; border-left:4px solid var(--line); display:grid; gap:6px; text-align:left; font-size:14px; line-height:1.5; color:var(--muted); }
+.xee-quote b { font-size:12px; font-weight:700; letter-spacing:.03em; color:var(--hue-ink); }
+.xee-ph { width:100%; margin-top:18px; text-align:left; font-family:var(--display); font-weight:800; font-size:18px; line-height:1.3; }
+.xee-ph small { display:block; font-family:var(--body); font-weight:500; font-size:14px; color:var(--muted); }
+.xee-parts { width:100%; display:grid; grid-template-columns:minmax(0,1fr); gap:8px; margin-top:10px; }
+.xee-parts a { display:grid; grid-template-columns:32px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--soft); color:var(--ink); text-align:left; text-decoration:none; }
+.xee-parts a:hover { box-shadow:inset 0 0 0 2px var(--hue); }
+.xee-parts i { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; font-style:normal; font-family:var(--display); font-weight:800; font-size:15px; }
+.xee-parts em { display:inline-block; padding:0 8px; border-radius:99px; background:var(--hue-soft); color:var(--hue-ink); font-style:normal; font-size:11px; font-weight:700; }
+.xee-parts b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+.xee-parts small { display:block; font-size:13px; line-height:1.45; color:var(--muted); }
+.xee-parts a.xee-k2 i { background:var(--sun); color:var(--ink); } .xee-parts a.xee-k2 em { background:var(--gold-soft); color:#5A4710; }
+.xee-parts a.xee-k3 i { background:var(--white); color:var(--ink); box-shadow:inset 0 0 0 2px var(--line); } .xee-parts a.xee-k3 em { background:var(--white); color:var(--muted); box-shadow:inset 0 0 0 1px var(--line); }
+/* บรรทัดอธิบายศัพท์ */
+.xee-def { display:grid; grid-template-columns:22px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:14px; line-height:1.5; }
+.xee-def svg { width:20px; height:20px; margin-top:1px; color:var(--hue); }
+/* ข้อเท็จจริงเปิดปิด */
+.xee-els { display:grid; gap:6px; }
+.xee-el { display:grid; grid-template-columns:30px minmax(0,1fr); gap:10px; align-items:center; min-height:56px; padding:10px 12px; border-radius:16px; border:2px solid transparent; background:var(--soft); font:inherit; font-size:15px; font-weight:600; line-height:1.4; color:var(--ink); text-align:left; cursor:pointer; transition:background-color .15s ease; }
+.xee-el .xee-mk { width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:#fff; box-shadow:inset 0 0 0 2px var(--line); }
+.xee-el .xee-mk svg { width:15px; height:15px; }
+.xee-el small { display:block; font-size:13px; font-weight:500; color:var(--muted); }
+.xee-el b { font-weight:700; text-decoration:underline; text-decoration-color:var(--sun); text-decoration-thickness:3px; text-underline-offset:3px; }
+.xee-el[aria-pressed="true"] { background:var(--hue-soft); border-color:var(--hue); color:var(--hue-ink); }
+.xee-el[aria-pressed="true"] .xee-mk { background:var(--hue); box-shadow:none; }
+.xee-op { justify-self:center; padding:1px 14px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; }
+.xee-op.xee-or { background:var(--white); color:var(--ink); box-shadow:inset 0 0 0 1.5px var(--ink); }
+.xee-grp { display:grid; gap:6px; padding:8px; border-radius:22px; box-shadow:inset 0 0 0 1.5px var(--line); }
+.xee-fx { padding:12px 14px; border-radius:16px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:15px; font-weight:600; line-height:1.45; }
+.xee-hint { font-size:14px; line-height:1.5; color:var(--muted); }
+/* ส่วนที่ 1: สองระดับของกรณี (1) */
+.xee-lv { display:grid; grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr); align-items:stretch; }
+.xee-lv > div { display:grid; align-content:start; justify-items:start; gap:6px; padding:10px 12px; border-radius:16px; background:var(--soft); color:var(--muted); font-size:13px; font-weight:700; line-height:1.35; opacity:.55; transition:opacity .2s ease, background-color .2s ease; }
+.xee-lv > div.xee-lit { opacity:1; background:var(--gold-soft); color:#5A4710; box-shadow:inset 0 0 0 2px var(--gold); }
+.xee-lv > div.xee-lit.xee-top { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.xee-lv > svg { width:22px; height:22px; align-self:center; } .xee-lv > svg path { fill:none; stroke:var(--line); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+/* กล่องผล */
+.xee-v { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:14px; border-radius:20px; background:var(--soft); transition:background-color .2s ease; }
+.xee-v .xee-vi { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--muted); }
+.xee-v .xee-vi svg { width:24px; height:24px; }
+.xee-v b { display:block; font-family:var(--display); font-size:19px; line-height:1.25; }
+.xee-v p { font-size:15px; margin-top:4px; }
+.xee-v ul { margin:6px 0 0; padding-left:18px; font-size:14px; display:grid; gap:4px; }
+.xee-v p.xee-nx { margin-top:10px; padding-top:8px; border-top:1px solid rgba(11,59,60,.16); font-size:14px; }
+.xee-v.xee-stop { background:var(--bad-soft); color:var(--bad-ink); } .xee-v.xee-stop .xee-vi { background:var(--bad); color:#fff; }
+.xee-v.xee-go { background:var(--good-soft); color:var(--good); } .xee-v.xee-go .xee-vi { background:var(--good); color:#fff; }
+.xee-v.xee-ask { background:var(--gold-soft); color:#5A4710; } .xee-v.xee-ask .xee-vi { background:var(--sun); color:var(--ink); }
+.xee-v.xee-hue { background:var(--hue-soft); color:var(--hue-ink); } .xee-v.xee-hue .xee-vi { background:var(--hue); color:#fff; }
+/* ส่วนที่ 2: ป้ายโฆษณา */
+.xee-ad { display:grid; gap:6px; padding:18px 16px; border-radius:20px; background:var(--hue-ink); color:#fff; }
+.xee-ad small { font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--sun); }
+.xee-ad b { font-family:var(--display); font-size:22px; line-height:1.25; }
+.xee-ad span { font-size:14px; color:rgba(255,255,255,.86); }
+/* ส่วนที่ 3: ค่าธรรมเนียม */
+.xee-tie { display:grid; grid-template-columns:minmax(0,1fr) 52px minmax(0,1fr); align-items:center; }
+.xee-nd { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 8px; border-radius:18px; background:var(--soft); text-align:center; }
+.xee-nd .xee-ic { width:42px; height:42px; border-radius:50%; background:var(--white); display:grid; place-items:center; color:var(--hue); } .xee-nd .xee-ic svg { width:22px; height:22px; }
+.xee-nd b { font-family:var(--display); font-size:16px; line-height:1.25; } .xee-nd small { font-size:12px; line-height:1.35; color:var(--muted); }
+.xee-rope { width:100%; height:24px; } .xee-rope path { fill:none; stroke:var(--gold); stroke-width:7; stroke-linecap:round; vector-effect:non-scaling-stroke; }
+.xee-pill { justify-self:center; padding:3px 14px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:13px; font-weight:700; text-align:center; }
+.xee-duo { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; }
+.xee-duo div { padding:12px 10px; border-radius:16px; background:var(--soft); font-size:14px; line-height:1.4; } .xee-duo b { display:block; font-family:var(--display); font-size:15px; }
+.gate.xee-unk { background:var(--gold-soft); color:#5A4710; }
+.xee-x { display:grid; gap:6px; font-size:15px; } .xee-x ul { margin:0; padding-left:18px; font-size:14px; display:grid; gap:4px; }
+.xee-flow { display:grid; grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr); align-items:center; }
+.xee-arr { display:grid; justify-items:center; gap:2px; font-size:11px; font-weight:700; color:var(--muted); text-align:center; line-height:1.2; }
+.xee-arr svg { width:52px; height:22px; } .xee-arr svg path { fill:none; stroke:var(--gold); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.xee-see { width:100%; height:22px; } .xee-see path { fill:none; stroke:var(--line); stroke-width:4; stroke-linecap:round; stroke-dasharray:2 9; vector-effect:non-scaling-stroke; transition:stroke .2s ease; }
+.xee-see.xee-kn path { stroke:var(--hue); stroke-dasharray:none; }
+.xee-cl { display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:16px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:14px; font-weight:600; line-height:1.4; transition:background-color .2s ease; }
+.xee-cl > span:first-child { width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--soft); color:var(--muted); } .xee-cl svg { width:15px; height:15px; }
+.xee-cl.xee-kn { background:var(--hue-soft); color:var(--hue-ink); box-shadow:inset 0 0 0 2px var(--hue); } .xee-cl.xee-kn > span:first-child { background:var(--hue); color:#fff; }
+/* ส่วนที่ 4: เงินของลูกค้า · ส่วนที่ 5: เรื่องที่หมวด 360 กำหนด */
+.xee-wal { display:grid; grid-template-columns:minmax(0,1fr) 8px minmax(0,1fr); gap:8px; align-items:stretch; }
+.xee-box { display:grid; justify-items:center; align-content:start; gap:8px; min-height:132px; padding:12px 8px; border-radius:18px; background:var(--soft); text-align:center; font-size:13px; font-weight:700; line-height:1.3; transition:background-color .2s ease; }
+.xee-box > span { color:var(--muted); font-weight:600; }
+.xee-box > small { font-size:12px; font-weight:500; line-height:1.4; color:var(--muted); }
+.xee-box.xee-here { background:var(--hue-soft); box-shadow:inset 0 0 0 3px var(--hue); } .xee-box.xee-here > span { color:var(--hue-ink); font-weight:700; }
+.xee-wall { border-radius:4px; background:var(--ink); transition:opacity .2s ease; } .xee-wal.xee-mixed .xee-wall { opacity:.12; }
+.xee-coins { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
+.xee-coin { display:grid; place-items:center; width:74px; height:74px; padding:6px; text-align:center; border-radius:50%; background:var(--sun); color:var(--ink); font-size:11px; font-weight:800; line-height:1.15; box-shadow:inset 0 0 0 3px rgba(11,59,60,.16); }
+.xee-coin.xee-own { background:var(--white); box-shadow:inset 0 0 0 2px var(--line); color:var(--muted); }
+.xee-coin.xee-gone { background:transparent; box-shadow:inset 0 0 0 2px var(--bad); color:var(--bad-ink); }
+.xee-coin.xee-sm { width:66px; height:66px; background:transparent; box-shadow:none; border:2px dashed var(--bad); color:var(--bad-ink); }
+.xee-pin { display:inline-grid; place-items:center; padding:8px 14px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:800; line-height:1.2; }
+.xee-duty { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.xee-duty li { display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--soft); font-size:15px; }
+.xee-duty .xee-dm { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--good); color:#fff; } .xee-duty .xee-dm svg { width:14px; height:14px; }
+.xee-duty li.xee-bad { background:var(--white); box-shadow:inset 0 0 0 2px var(--bad); color:var(--bad-ink); } .xee-duty li.xee-bad .xee-dm { background:var(--bad); }
+.xee-duty li.xee-na .xee-dm { background:var(--white); color:var(--muted); box-shadow:inset 0 0 0 1.5px var(--line); }
+/* ส่วนที่ 5: เส้นขั้น */
+.xee-cmp { display:grid; gap:5px; padding:10px 12px; border-radius:16px; background:var(--soft); }
+.xee-cr { display:grid; grid-template-columns:minmax(0,1fr) 92px 44px; gap:8px; align-items:center; font-size:12px; font-weight:600; line-height:1.3; color:var(--muted); }
+.xee-cr > span:nth-child(2) { display:flex; gap:3px; } .xee-cr i { width:10px; height:10px; border-radius:50%; background:var(--line); }
+.xee-cr > span:last-child { text-align:right; }
+.xee-cr.xee-cur { color:var(--hue-ink); font-weight:800; } .xee-cr.xee-cur i { background:var(--hue); }
+.xee-lawbar { display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--gold); color:#5A4710; font-size:14px; font-weight:600; line-height:1.45; }
+.xee-lawbar svg { width:22px; height:22px; }
+.todo li > div { min-width:0; }
+.todo.xee-lawon li::after { background:var(--gold); }
+.todo li.xee-lw::before { box-shadow:0 0 0 4px var(--gold); }
+.xee-tg { display:inline-block; margin-top:5px; padding:1px 10px; border-radius:99px; font-size:12px; font-weight:700; line-height:1.5; }
+.xee-tg.xee-tg1 { background:var(--sun); color:var(--ink); }
+.xee-tg.xee-tg2 { background:var(--white); color:#5A4710; box-shadow:inset 0 0 0 1.5px var(--gold); }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · จรรยาบรรณ หลัก (จ) พฤติกรรมทางวิชาชีพ · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่เปิดเทียบ: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 (ภาพ p1–p8) ข้อ 4 ข้อ 8 ข้อ 9 (จ) ข้อ 10 ข้อ 11 (ก)
+     คู่มือประมวลจรรยาบรรณฯ แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566: หมวดย่อย 115 · หมวด 330 · 350 · 360 · 260 · ย่อหน้า 410.8 A1 R410.9 R410.10 410.10 A1 R905.6 · อภิธานศัพท์ · ชื่อหมวดย่อยของหมวด 600
+     พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.46 ม.49 ม.50 · พ.ร.บ.การประกอบธุรกิจของคนต่างด้าว พ.ศ. 2542 ม.36 (cpa-tarot/sources/FBA.pdf)
+     รายละเอียดอยู่ใน exchange/v2/builds/law2u-2026-10-11/law2v/notes/ETH-e.notes.md · บุคคลในหน้านี้เป็นกรณีสมมติ -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 9 · จรรยาบรรณ หลัก (จ)</p>
+    <h1>ทำแบบไหน ถึงเรียกว่าทำให้วิชาชีพเสื่อมเสีย</h1>
+    <p class="sub">คำตอบอยู่ในข้อ 9 (จ) ของข้อบังคับจรรยาบรรณของสภาวิชาชีพบัญชี ซึ่งระบุไว้ห้ากรณี บทนี้ดูห้ากรณีนั้น กับอีกสี่เรื่องจากคู่มือประมวลจรรยาบรรณของสภาฯ</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพตราดาว แทนเกียรติศักดิ์ของวิชาชีพบัญชี">
+      <path d="M18 114 C 80 114, 86 78, 140 74 M200 74 C 254 70, 262 34, 322 30" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 13"/>
+      <path d="M150 78l-14 44 18-9 9 17 9-40zM190 78l14 44-18-9-9 17-9-40z" fill="rgba(255,255,255,.28)"/>
+      <circle cx="170" cy="58" r="40" fill="#F0C84B"/><circle cx="170" cy="58" r="31" fill="none" stroke="#1C4257" stroke-width="2.5" stroke-dasharray="2 5"/>
+      <path d="M170 36l6.500 13.200 14.700 2.200-10.700 10.300 2.500 14.500-13-6.800-13 6.800 2.500-14.500-10.700-10.300 14.700-2.200z" fill="#1C4257"/>
+      <circle cx="60" cy="108" r="8" fill="#F0C84B"/><circle cx="104" cy="88" r="8" fill="#F0C84B"/><circle cx="244" cy="62" r="8" fill="#F0C84B"/><circle cx="290" cy="38" r="8" fill="#F0C84B"/>
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="ส่วนของบท">
+    <a href="#s1"><i>1</i>ห้ากรณี</a><a href="#s2"><i>2</i>หาลูกค้า</a><a href="#s3"><i>3</i>ค่าธรรมเนียม</a><a href="#s4"><i>4</i>ของลูกค้า</a><a href="#s5"><i>5</i>พบเรื่องผิดกฎหมาย</a>
+  </nav>
+
+  <!-- ภาพหลัก: ถ้อยคำของข้อ 9 (จ) และห้าส่วนของบท -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">หลักนี้เขียนว่าอะไร</span>
+    <h2 id="f0">ทำตามกฎหมาย และไม่ทำสิ่งที่อาจทำให้วิชาชีพเสื่อมเสีย</h2>
+    <p class="cap">ข้อ 9 ของข้อบังคับมีหลักการพื้นฐานหกข้อ (ก) ถึง (ฉ) ภาพนี้คือข้อ (จ) กับห้าส่วนของบทนี้ แตะส่วนที่อยากดู</p>
+    <div class="map">
+      <div class="nd"><span class="ico" data-ico="shield"></span><b>พฤติกรรมทางวิชาชีพ</b><small>ใช้กับผู้ประกอบวิชาชีพบัญชี เช่น ด้านการทำบัญชี ด้านการสอบบัญชี รวมถึงผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี</small><span class="law">ข้อ 9 (จ) · ข้อ 4</span></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork xee-f">
+        <a class="tr" href="#s5"><span class="xee-tag">ต้องทำ</span><span class="ico" data-ico="book"></span><b>ปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้อง</b><span class="go">ส่วนที่ 5</span></a>
+        <a class="tr" href="#s1"><span class="xee-tag xee-t2">ต้องเลี่ยง</span><span class="ico" data-ico="flag"></span><b>การกระทำใด ๆ ที่อาจทำให้เกิดความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี</b><span class="go">ส่วนที่ 1</span></a>
+      </div>
+      <div class="xee-quote">
+        <b>ข้อ 9 (จ) เขียนต่อท้ายอีกสองวรรค</b>
+        <span>“รับผิดชอบต่อผู้รับบริการ ได้แก่ ผู้ว่าจ้างผู้ประกอบวิชาชีพบัญชี หรือบุคคลอื่นที่ใช้ผลงานของผู้ประกอบวิชาชีพบัญชีด้วยความสุจริตและจำเป็น”</span>
+        <span>“รับผิดชอบต่อผู้ถือหุ้น ผู้เป็นหุ้นส่วน บุคคล นิติบุคคล หรือสำนักงานในหน่วยงานของผู้ประกอบวิชาชีพเอง”</span>
+      </div>
+      <p class="xee-ph">ห้าส่วนของบทนี้ เกี่ยวกับหลักนี้ตรงไหน<small>ส่วนที่ 2 ถึง 5 มาจากคู่มือ ซึ่งคณะกรรมการสภาวิชาชีพบัญชีใช้เป็นแนวทางวินิจฉัย เมื่อมีปัญหาเกี่ยวกับการปฏิบัติตามข้อบังคับ <span class="law">ข้อ 8</span></small></p>
+      <div class="xee-parts">
+        <a href="#s1"><i>1</i><span><em>ข้อบังคับ</em><b>ห้ากรณีที่ถือว่าเสื่อมเสียเกียรติศักดิ์</b><small>อยู่ในข้อ (จ) เอง <span class="law">ข้อ 9 (จ) (1)–(5)</span></small></span></a>
+        <a href="#s2" class="xee-k2"><i>2</i><span><em>คู่มือ · หลักนี้</em><b>หาลูกค้าและโฆษณา</b><small>ทำการตลาดต้องไม่ทำให้วิชาชีพบัญชีเสื่อมเสียชื่อเสียง <span class="law">ย่อหน้า R115.2</span></small></span></a>
+        <a href="#s3" class="xee-k3"><i>3</i><span><em>คู่มือ · หลักข้ออื่น</em><b>ค่าธรรมเนียม</b><small>คู่มือเอ่ยถึงสองหลักอื่น ดูในส่วนที่ 3 <span class="law">ย่อหน้า 330.3 A2 · 330.4 A1</span></small></span></a>
+        <a href="#s4" class="xee-k2"><i>4</i><span><em>คู่มือ · หลักนี้</em><b>ทรัพย์สินของลูกค้า</b><small>ถือครองทรัพย์สินลูกค้า อาจเกิดอุปสรรคต่อหลักนี้และหลักความเที่ยงธรรม <span class="law">ย่อหน้า 350.2</span></small></span></a>
+        <a href="#s5" class="xee-k2"><i>5</i><span><em>คู่มือ · หลักนี้</em><b>พบการไม่ปฏิบัติตามกฎหมายและข้อบังคับ</b><small>รู้หรือสงสัยเรื่องนี้ อุปสรรคต่อหลักนี้และหลักความซื่อสัตย์สุจริตจะเกิดขึ้น <span class="law">ย่อหน้า 360.2</span></small></span></a>
+      </div>
+    </div>
+    <p class="xee-def"><span data-ico="flag"></span><span><b>อุปสรรค</b> คืออุปสรรคในการปฏิบัติตามหลักการพื้นฐาน ซึ่งสถานการณ์ที่ทำงานอยู่ (เหตุการณ์แวดล้อม) อาจทำให้เกิดขึ้น <span class="law">ข้อ 10</span> วิธีจัดการอยู่ในบทที่ 11 <a href="law2v-r11.html">เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง</a></span></p>
+  </section>
+
+  <!-- ส่วนที่ 1 -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>ส่วนที่ 1 · ข้อ 9 (จ) (1)–(5)</small><h2 id="h1">ห้ากรณีที่ข้อบังคับถือว่าเสื่อมเสียเกียรติศักดิ์ แต่ละกรณีมีข้อเท็จจริงที่ต้องครบ</h2></div></div>
+    <p class="cap">เริ่มที่กรณี (1): ผู้ประกอบวิชาชีพบัญชีคนหนึ่งฝ่าฝืนจรรยาบรรณ แต่ไม่ได้จงใจ และไม่ได้ประมาทเลินเล่ออย่างร้ายแรง จึงยังไม่เข้ากรณีนี้ แตะข้อเท็จจริงเพื่อเปิดหรือปิดทีละข้อ แล้วลองเปลี่ยนกรณี</p>
+    <div class="chips" data-pick="cs">
+      <button data-v="0" aria-pressed="true">(1) ฝ่าฝืนจรรยาบรรณ</button>
+      <button data-v="1">(2) ถูกลงโทษแล้วทำซ้ำ</button>
+      <button data-v="2">(3) ความผิดในการประกอบวิชาชีพบัญชี</button>
+      <button data-v="3">(4) ความผิดตามกฎหมายธุรกิจของคนต่างด้าว</button>
+      <button data-v="4">(5) กรณีอื่น</button>
+    </div>
+    <p class="lbl">ข้อเท็จจริงของกรณีนี้</p>
+    <div class="xee-els" id="csEls"></div>
+    <p class="xee-hint" id="csH" hidden></p>
+    <div class="xee-lv" id="csLv" aria-hidden="true">
+      <div id="lvA">ถือว่าประพฤติผิดจรรยาบรรณ ตามพระราชบัญญัติวิชาชีพบัญชี<span class="law">ม.46</span></div>
+      <svg viewBox="0 0 22 22"><path d="M5 11h12M12 5l6 6-6 6"/></svg>
+      <div id="lvB" class="xee-top">ถือเป็นการประพฤติผิดจรรยาบรรณอันจะนำมาซึ่งความเสื่อมเสียเกียรติศักดิ์<span class="law">ข้อ 9 (จ)</span></div>
+    </div>
+    <div class="xee-v" id="csV" role="status"></div>
+  </section>
+
+  <!-- ส่วนที่ 2 -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>ส่วนที่ 2 · หาลูกค้าและโฆษณา</small><h2 id="h2">หาลูกค้าและโฆษณา ต้องซื่อสัตย์สุจริตและอยู่บนพื้นฐานของความจริง</h2></div></div>
+    <p class="cap">สำนักงานของพี่แพมซึ่งเป็นผู้สอบบัญชีรับอนุญาต จะลงป้ายโฆษณา ป้ายแรกบอกบริการและประสบการณ์ตามจริง จึงไม่ขัด ลองเปลี่ยนข้อความบนป้าย</p>
+    <div class="chips" data-pick="ad">
+      <button data-v="0" aria-pressed="true">บอกบริการและประสบการณ์ตามจริง</button>
+      <button data-v="1">อวดประสบการณ์เกินจริง</button>
+      <button data-v="2">ใช้ถ้อยคำดูหมิ่นสำนักงานอื่น</button>
+      <button data-v="3">เทียบกับผู้อื่นโดยไม่มีความจริงรองรับ</button>
+    </div>
+    <div class="xee-ad" aria-live="polite"><small>ป้ายโฆษณาของสำนักงาน</small><b id="adB"></b><span id="adS"></span></div>
+    <div class="facts" id="adF"></div>
+    <p class="lbl">สองข้อที่ต้องไม่ทำ <span class="law">ย่อหน้า R115.2</span></p>
+    <ul class="xee-duty">
+      <li id="adRa"><span class="xee-dm"></span><span>(ก) ต้องไม่โอ้อวดเกินความเป็นจริงในการให้บริการทางวิชาชีพบัญชีของตน ไม่ว่าในทางคุณสมบัติ หรือในทางประสบการณ์ที่มี</span></li>
+      <li id="adRb"><span class="xee-dm"></span><span>(ข) ต้องไม่อ้างอิงโดยใช้ถ้อยคำดูหมิ่น หรือเปรียบเทียบงานของตนกับผู้อื่นโดยไม่ได้อยู่บนหลักความจริง</span></li>
+    </ul>
+    <div class="xee-v" id="adV" role="status"></div>
+    <p class="note"><span data-ico="info"></span><span>ถ้าสงสัยว่ารูปแบบของการโฆษณาเหมาะสมหรือไม่ คู่มือสนับสนุนให้ปรึกษาองค์กรวิชาชีพที่เกี่ยวข้อง <span class="law">ย่อหน้า 115.2 A1</span></span></p>
+  </section>
+
+  <!-- ส่วนที่ 3 -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>ส่วนที่ 3 · ค่าธรรมเนียม</small><h2 id="h3">ค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน เรียกเก็บได้ไหม ขึ้นกับว่าเป็นงานอะไร</h2></div></div>
+    <p class="xee-def"><span data-ico="info"></span><span>ในหมวดค่าธรรมเนียม คู่มือเอ่ยถึงหลักความเที่ยงธรรม (บทที่ 6 <a href="law2v-r06.html">ความเห็นนี้ เป็นของเราเองจริงไหม</a>) และหลักความรู้ ความสามารถ และความเอาใจใส่ทางวิชาชีพ (บทที่ 7 <a href="law2v-r07.html">งานนี้เราทำได้จริงไหม</a>) <span class="law">ย่อหน้า 330.3 A2 · 330.4 A1</span></span></p>
+    <p class="cap">สำนักงานของพี่แพมตกลงกับลูกค้าว่า จะได้ค่าธรรมเนียมเมื่อได้ผลตามที่ตกลงกันไว้ล่วงหน้า <span class="law">ย่อหน้า 410.8 A1</span></p>
+    <div>
+      <div class="xee-tie">
+        <div class="xee-nd"><span class="xee-ic" data-ico="flag"></span><b>ผลของงาน</b><small>ผลลัพธ์ของรายการ หรือผลของบริการ</small></div>
+        <svg class="xee-rope" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12H98"/></svg>
+        <div class="xee-nd"><span class="xee-ic" data-ico="card"></span><b>ค่าธรรมเนียม</b><small>คำนวณตามเกณฑ์ที่กำหนดล่วงหน้า</small></div>
+      </div>
+    </div>
+    <span class="xee-pill">ค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน</span>
+    <div class="xee-duo">
+      <div><b>งานที่ให้ความเชื่อมั่น</b>งานที่ผู้ประกอบวิชาชีพบัญชีหาหลักฐาน แล้วให้ข้อสรุปเพื่อเพิ่มระดับความเชื่อมั่นของผู้ใช้รายงาน เช่น งานสอบบัญชี</div>
+      <div><b>งานที่ไม่ให้ความเชื่อมั่น</b>เช่น บริการด้านภาษีอากร บริการด้านการบัญชีและการจัดทำบัญชี</div>
+    </div>
+    <p class="cap">สองช่องนี้มาจากคู่มือ <span class="law">อภิธานศัพท์ · ชื่อหมวดย่อยของหมวด 600</span> ถ้างานของพี่แพมคืองานสอบบัญชี เรียกเก็บแบบนี้ไม่ได้ ลองเปลี่ยนงาน</p>
+    <p class="lbl">งานที่ทำ</p>
+    <div class="chips" data-pick="job">
+      <button data-v="0" aria-pressed="true">งานสอบบัญชี</button>
+      <button data-v="1">งานที่ให้ความเชื่อมั่นอื่น</button>
+      <button data-v="2">งานที่ไม่ให้ความเชื่อมั่น ให้ลูกค้างานสอบบัญชี</button>
+      <button data-v="3">งานที่ไม่ให้ความเชื่อมั่น ให้ลูกค้ารายอื่น</button>
+    </div>
+    <div class="facts" id="jobF" aria-live="polite"></div>
+    <div class="gate" id="feeG" role="status"><span data-door></span><div><b id="feeGT"></b><span id="feeGS"></span></div></div>
+    <div class="xee-x" id="feeX" aria-live="polite"></div>
+    <p class="xee-def"><span data-ico="info"></span><span><b>อุปสรรคจากผลประโยชน์ส่วนตน</b> คืออุปสรรคที่เกิดจากผลประโยชน์ทางการเงินหรือผลประโยชน์อื่น ที่มีอิทธิพลอย่างไม่เหมาะสมต่อการใช้ดุลยพินิจหรือพฤติกรรม <span class="law">ข้อ 11 (ก)</span> <b>มาตรการป้องกัน</b> คือการกระทำเพื่อลดอุปสรรคให้อยู่ในระดับที่ยอมรับได้ <span class="law">อภิธานศัพท์ของคู่มือ</span></span></p>
+    <p class="note"><span data-ico="info"></span><span>ค่าธรรมเนียมที่ศาลหรือหน่วยงานอื่นของรัฐกำหนด ไม่ถือเป็นค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน <span class="law">ย่อหน้า 410.8 A1</span></span></p>
+
+    <h3 style="margin-top:8px">ค่านายหน้าและค่าแนะนำ คู่มือให้ดูอุปสรรคแล้วจัดการ</h3>
+    <p class="cap">ลูกค้าของพี่แพมซื้อซอฟต์แวร์ แล้วผู้ขายจ่ายค่านายหน้าให้พี่แพม ตอนนี้ลูกค้าไม่รู้เรื่องนี้ ลองเปิดสิ่งที่พี่แพมทำ</p>
+    <div>
+      <div class="xee-flow">
+        <div class="xee-nd"><span class="xee-ic" data-ico="bag"></span><b>ผู้ขายซอฟต์แวร์</b><small>บุคคลที่สาม</small></div>
+        <div class="xee-arr"><svg viewBox="0 0 52 22" aria-hidden="true"><path d="M4 11H46M38 4l8 7-8 7"/></svg><span>ค่านายหน้า</span></div>
+        <div class="xee-nd"><span class="xee-ic" data-ico="star"></span><b>พี่แพม</b><small>ผู้ประกอบวิชาชีพบัญชี</small></div>
+      </div>
+      <svg class="xee-see" id="refL" viewBox="0 0 100 22" preserveAspectRatio="none" aria-hidden="true"><path d="M50 2V20"/></svg>
+      <p class="xee-cl" id="refC" aria-live="polite"></p>
+    </div>
+    <div class="xee-els" id="refT">
+      <button type="button" class="xee-el" data-k="pre" aria-pressed="false"><span class="xee-mk"></span><span>ได้รับสัญญาล่วงหน้าจากลูกค้า สำหรับค่านายหน้านี้</span></button>
+      <button type="button" class="xee-el" data-k="dis" aria-pressed="false"><span class="xee-mk"></span><span>เปิดเผยให้ลูกค้าทราบถึงค่านายหน้าที่ได้รับ</span></button>
+    </div>
+    <div class="xee-v" id="refV" role="status"></div>
+    <p class="cap">ค่าแนะนำลูกค้า ทั้งที่จ่ายและที่รับ คู่มือเขียนไว้ในย่อหน้าเดียวกัน <span class="law">ย่อหน้า 330.5 A1</span></p>
+  </section>
+
+  <!-- ส่วนที่ 4 -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>ส่วนที่ 4 · การดูแลรักษาทรัพย์สินของลูกค้า</small><h2 id="h4">เงินของลูกค้าที่รับมาดูแล ต้องเก็บแยก และใช้ตามที่ตั้งใจเท่านั้น</h2></div></div>
+    <p class="cap">คู่มือเขียนว่า การถือครองทรัพย์สินของลูกค้าอาจทำให้เกิดอุปสรรคต่อหลักพฤติกรรมทางวิชาชีพและหลักความเที่ยงธรรม <span class="law">ย่อหน้า 350.2</span></p>
+    <h3>ก่อนรับดูแล</h3>
+    <ol class="todo">
+      <li><div><b>กฎหมายอนุญาตให้ทำ</b><small>ต้องไม่ดูแลรักษาเงินหรือทรัพย์สินอื่นของลูกค้า ยกเว้นได้รับอนุญาตให้ทำตามกฎหมาย และเป็นไปตามเงื่อนไขการดูแลรักษาทรัพย์สินที่อาจต้องถูกกำหนดไว้ <span class="law">ย่อหน้า R350.3</span></small></div></li>
+      <li><div><b>สอบถามที่มาของทรัพย์สิน และพิจารณาภาระผูกพันตามกฎหมายและข้อบังคับที่เกี่ยวข้อง</b><small>ถ้าการสอบถามเผยว่าทรัพย์สินได้มาจากกิจกรรมที่ผิดกฎหมาย เช่น การฟอกเงิน อาจต้องใช้ลำดับในส่วนที่ 5 <span class="law">ย่อหน้า R350.4 · 350.4 A1</span></small></div></li>
+    </ol>
+    <h3 style="margin-top:8px">เมื่อรับมาดูแลแล้ว</h3>
+    <p class="cap">ลูกค้าฝากเงินก้อนหนึ่งให้พี่แพมนำไปจ่ายค่าธรรมเนียมราชการแทน สมมติว่ากฎหมายอนุญาตให้พี่แพมดูแลเงินนี้ได้ พี่แพมเก็บในบัญชีแยกและจ่ายตามที่ฝากไว้ จึงทำครบ ลองเปลี่ยนสิ่งที่พี่แพมทำกับเงินก้อนนี้</p>
+    <div class="chips" data-pick="keep">
+      <button data-v="0" aria-pressed="true">เก็บในบัญชีแยก จ่ายตามที่ฝากไว้</button>
+      <button data-v="1">โอนรวมกับเงินของสำนักงาน</button>
+      <button data-v="2">นำไปจ่ายค่าเช่าสำนักงานก่อน</button>
+      <button data-v="3">มีดอกเบี้ยเกิดขึ้น แต่ไม่ได้บันทึกให้ลูกค้า</button>
+    </div>
+    <div class="xee-wal" id="wal" aria-live="polite">
+      <div class="xee-box"><span>ของลูกค้า</span><div class="xee-coins" id="walL"></div></div>
+      <div class="xee-wall" aria-hidden="true"></div>
+      <div class="xee-box"><span>ของพี่แพมหรือของสำนักงาน</span><div class="xee-coins" id="walR"></div></div>
+    </div>
+    <ul class="xee-duty">
+      <li class="xee-na" id="dA"><span class="xee-dm" data-ico="info"></span><span>(ก) ปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้องกับการถือครองและรับผิดชอบต่อทรัพย์สิน</span></li>
+      <li id="dB"><span class="xee-dm"></span><span>(ข) เก็บทรัพย์สินดังกล่าวแยกจากทรัพย์สินส่วนตัวหรือของสำนักงาน</span></li>
+      <li id="dC"><span class="xee-dm"></span><span>(ค) ใช้ทรัพย์สินดังกล่าวสำหรับวัตถุประสงค์ที่ตั้งใจเท่านั้น</span></li>
+      <li id="dD"><span class="xee-dm"></span><span>(ง) พร้อมตลอดเวลาเพื่อบันทึกทรัพย์สินนั้น และรายได้ใด ๆ เงินปันผล หรือผลประโยชน์ที่เกิดขึ้น ให้กับบุคคลที่มีสิทธิในบัญชีนั้น</span></li>
+    </ul>
+    <div class="xee-v" id="keepV" role="status"></div>
+    <p class="note"><span data-ico="info"></span><span>สี่ข้อนี้ใช้กับผู้ประกอบวิชาชีพบัญชีที่ได้รับความไว้วางใจให้ดูแลเงินหรือทรัพย์สินอื่นของผู้อื่น <span class="law">ย่อหน้า R350.5</span></span></p>
+  </section>
+
+  <!-- ส่วนที่ 5 -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>ส่วนที่ 5 · การตอบสนองต่อการไม่ปฏิบัติตามกฎหมายและข้อบังคับ</small><h2 id="h5">พบว่าลูกค้าอาจทำผิดกฎหมาย เริ่มจากทำความเข้าใจ แล้วคุยกับคนในกิจการก่อน</h2></div></div>
+    <p class="cap">เรื่องนี้เกี่ยวกับตัวเรา เพราะคู่มือเขียนว่า เมื่อรู้หรือสงสัยว่ามีการไม่ปฏิบัติตามกฎหมายและข้อบังคับ อุปสรรคต่อหลักความซื่อสัตย์สุจริตและหลักพฤติกรรมทางวิชาชีพจะเกิดขึ้น <span class="law">ย่อหน้า 360.2</span></p>
+
+    <h3>เรื่องแบบไหน ที่หมวด 360 ของคู่มือกำหนด</h3>
+    <p class="cap">พี่แพมเป็นผู้สอบบัญชีของบริษัทแห่งหนึ่ง ระหว่างตรวจสอบ สงสัยว่าบริษัทให้สินบนเจ้าหน้าที่ของรัฐเพื่อให้ได้สัญญา เรื่องนี้หมวด 360 กำหนด ลองเปลี่ยนเรื่องที่พบ</p>
+    <p class="xee-def"><span data-ico="info"></span><span><b>ผู้มีหน้าที่กำกับดูแล</b> คือบุคคลหรือองค์กรที่รับผิดชอบกำกับดูแลทิศทางเชิงกลยุทธ์ของกิจการ ภาระผูกพันที่เกี่ยวกับการรับผิดชอบของกิจการ และกระบวนการรายงานทางการเงิน <span class="law">ข้อ 4</span> ผู้บริหารทำงานภายใต้การกำกับดูแลของคนกลุ่มนี้ <span class="law">ย่อหน้า 360.8 A1</span></span></p>
+    <div class="chips" data-pick="scope">
+      <button data-v="0" aria-pressed="true">บริษัทลูกค้าให้สินบนเพื่อให้ได้สัญญา</button>
+      <button data-v="1">ผู้บริหารประพฤติมิชอบ ไม่เกี่ยวกับกิจกรรมทางธุรกิจของลูกค้า</button>
+      <button data-v="2">คนทำคือบุคคลที่สาม ที่ลูกค้าจ้างให้ไปสอบทานธุรกิจ</button>
+      <button data-v="3">เรื่องที่ไม่สำคัญอย่างเห็นได้ชัด</button>
+    </div>
+    <div class="xee-wal" aria-live="polite">
+      <div class="xee-box" id="scIn"><span>หมวด 360 กำหนด</span><small>ขัดต่อกฎหมายหรือข้อบังคับ โดยลูกค้า ผู้มีหน้าที่กำกับดูแล ผู้บริหาร หรือบุคคลอื่นที่ทำงานหรืออยู่ภายใต้คำสั่งของลูกค้า</small><div id="scL"></div></div>
+      <div class="xee-wall" aria-hidden="true"></div>
+      <div class="xee-box" id="scOut"><span>หมวด 360 ไม่ได้กำหนด หรือไม่ต้องปฏิบัติตาม</span><div id="scR"></div></div>
+    </div>
+    <div class="xee-v" id="scV" role="status"></div>
+
+    <h3 style="margin-top:8px">ลำดับที่ต้องทำ เปลี่ยนตามคนที่พบเรื่อง</h3>
+    <p class="cap">เรื่องเดิม ข้างล่างคือลำดับของพี่แพมในฐานะผู้สอบบัญชี ลองเปลี่ยนคนที่พบเรื่อง แล้วเปิดข้อเท็จจริงเพิ่มทีละข้อ</p>
+    <p class="lbl">คนที่พบเรื่อง</p>
+    <div class="chips" data-pick="role">
+      <button data-v="0" aria-pressed="true">ผู้สอบบัญชีของบริษัทนั้น</button>
+      <button data-v="1">คนในสำนักงานที่ให้บริการอื่นแก่บริษัทนั้น</button>
+      <button data-v="2">ผู้ประกอบวิชาชีพบัญชีอาวุโสในบริษัทนั้น</button>
+      <button data-v="3">ผู้ประกอบวิชาชีพบัญชีคนอื่นในบริษัทนั้น</button>
+    </div>
+    <div class="facts" id="roleD" aria-live="polite"></div>
+    <div class="xee-cmp" id="cmp" aria-hidden="true"></div>
+    <div class="xee-els" id="nocT">
+      <button type="button" class="xee-el" data-k="inv" aria-pressed="false"><span class="xee-mk"></span><span>คนที่ต้องคุยด้วยเป็นคนแรก มีส่วนเกี่ยวข้องกับเรื่องนั้นเอง<small>ผู้บริหารของลูกค้า หรือผู้บังคับบัญชาที่เหนือขึ้นไป</small></span></button>
+      <button type="button" class="xee-el" data-k="law" aria-pressed="false"><span class="xee-mk"></span><span>มีกฎหมายกำหนดให้รายงานเรื่องแบบนี้ต่อหน่วยงานที่มีอำนาจ<small>การเปิดเผยนี้ทำเพื่อให้หน่วยงานนั้นสอบสวนและดำเนินการเพื่อประโยชน์สาธารณะได้ (ย่อหน้า 360.25 A1)</small></span></button>
+    </div>
+    <div class="xee-lawbar" id="lawBar" hidden><span data-ico="book"></span><span id="lawBarT"></span></div>
+    <ol class="todo" id="path" aria-live="polite"></ol>
+    <div class="xee-v" id="pathV" role="status"></div>
+    <p class="note"><span data-ico="clock"></span><span>ทุกขั้นต้องทำอย่างทันท่วงที <span class="law">ย่อหน้า R360.9</span></span></p>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="shield"></span><span>หลัก (จ): ปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้อง และเลี่ยงการกระทำที่อาจทำให้วิชาชีพบัญชีเสื่อมเสียเกียรติศักดิ์</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>ห้ากรณี: ฝ่าฝืนโดยจงใจหรือประมาทเลินเล่ออย่างร้ายแรง · ถูกลงโทษถึงที่สุดแล้วยังทำซ้ำ · คำพิพากษาถึงที่สุดให้จำคุกตามสองมาตราที่ระบุ · กรณีอื่นที่คณะกรรมการจรรยาบรรณเห็น</span></li>
+      <li><span class="ico" data-ico="info"></span><span>ไม่ปฏิบัติตามจรรยาบรรณ ถือว่าประพฤติผิดจรรยาบรรณ แม้ยังไม่เข้ากรณี (1)</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>โฆษณาต้องอยู่บนความจริง ไม่โอ้อวดเกินจริง ไม่ดูหมิ่นหรือเทียบกับผู้อื่นโดยไม่มีความจริงรองรับ</span></li>
+      <li><span class="ico" data-ico="card"></span><span>ค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน เรียกเก็บไม่ได้สำหรับงานสอบบัญชีและงานที่ให้ความเชื่อมั่น · ค่านายหน้า ให้ดูอุปสรรคแล้วจัดการ</span></li>
+      <li><span class="ico" data-ico="lock"></span><span>ทรัพย์สินของลูกค้า: กฎหมายต้องอนุญาต เก็บแยก ใช้ตามวัตถุประสงค์ที่ตั้งใจ และบันทึกให้ผู้มีสิทธิ</span></li>
+      <li><span class="ico" data-ico="book"></span><span>พบการไม่ปฏิบัติตามกฎหมายและข้อบังคับ: ทำความเข้าใจ คุยกับคนในกิจการ ประเมินการตอบสนอง แล้วจึงพิจารณาดำเนินการต่อไป</span></li>
+      <li><span class="ico" data-ico="mail"></span><span>วิธีระบุ ประเมิน และจัดการอุปสรรค อยู่ในบทที่ 11 <a href="law2v-r11.html">เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง</a></span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>“ข้อ” คือข้อของข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
+      <li>“ย่อหน้า” คือย่อหน้าของคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 ย่อหน้าที่ขึ้นต้นด้วย R เป็นข้อกำหนด ที่มี A กับตัวเลขต่อท้ายเป็นคำอธิบายการนำไปปฏิบัติ · “อภิธานศัพท์” คืออภิธานศัพท์ท้ายคู่มือเล่มเดียวกัน</li>
+      <li>หมวดของคู่มือที่ใช้: 115 พฤติกรรมทางวิชาชีพ · 330 ค่าธรรมเนียมและค่าตอบแทนอื่น · 350 การดูแลรักษาทรัพย์สินของลูกค้า · 360 และ 260 การตอบสนองต่อการไม่ปฏิบัติตามกฎหมายและข้อบังคับ · 410 · 905 · 600</li>
+      <li>พระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547 มาตรา 46 มาตรา 49 และมาตรา 50</li>
+      <li>พระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว พ.ศ. 2542 มาตรา 36</li>
+      <li>“สำนักงาน” คือผู้ที่ปฏิบัติงานคนเดียว คณะบุคคล ห้างหุ้นส่วนหรือบริษัทของผู้ประกอบวิชาชีพบัญชี (ข้อ 4) · “สำนักงานเครือข่าย” คือสำนักงานหรือกิจการที่เป็นของเครือข่าย (อภิธานศัพท์) · บุคคลและสำนักงานในหน้านี้เป็นกรณีสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>ไม่แสดงรายการนี้ในงบ ได้ไหม</b>
+    <p>หลัก (ฉ) ความโปร่งใส ข้อสุดท้ายในข้อ 9 ของข้อบังคับจรรยาบรรณ</p>
+    <a class="btn" href="law2v-r10.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function law(t) { return ' <span class="law">' + t + '</span>'; }
+  function verdict(id, kind, title, body) { var e = $(id);
+    e.className = 'xee-v' + (kind ? ' xee-' + kind : '');
+    e.innerHTML = '<span class="xee-vi">' + V.icon(kind === 'stop' ? 'x' : (kind === 'go' ? 'check' : 'info')) + '</span><div><b>' + title + '</b>' + body + '</div>'; }
+  function list(a) { return '<ul>' + a.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>'; }
+  /* ปุ่มข้อเท็จจริงเปิดปิดที่เขียนไว้ใน HTML: state = { คีย์: จริงหรือเท็จ } */
+  function els(boxId, state, fn) { [].forEach.call($(boxId).querySelectorAll('button[data-k]'), function (b) { b.onclick = function () { var k = b.getAttribute('data-k'); state[k] = !state[k];
+    b.setAttribute('aria-pressed', state[k] ? 'true' : 'false'); b.querySelector('.xee-mk').innerHTML = state[k] ? V.icon('check') : ''; fn(); }; }); fn(); }
+  var CH12 = 'บทที่ 12 <a href="law2v-r12.html">ถ้ามีคนร้องเรียนเรา</a>';
+  var NX12 = '<p class="xee-nx">การสอบสวนและโทษ อยู่ใน' + CH12 + '</p>';
+  /* ผลต่อจากข้อกำหนดของคู่มือ: ข้อ 8 ของข้อบังคับ */
+  var NXH = '<p class="xee-nx">เมื่อมีปัญหาเกี่ยวกับการปฏิบัติตามข้อบังคับ คณะกรรมการสภาวิชาชีพบัญชีวินิจฉัยโดยใช้แนวทางตามคู่มือ' + law('ข้อ 8') + ' เรื่องร้องเรียนและโทษ อยู่ใน' + CH12 + '</p>';
+  V.spy('#steps');
+
+  /* ส่วนที่ 1: ข้อ 9 (จ) (1)–(5) ของข้อบังคับจรรยาบรรณ พ.ศ. 2569 · on = ค่าตั้งต้นของข้อเท็จจริง · miss = ข้อความเมื่อขาดข้อนั้น · hint = คำอธิบายใต้ข้อเท็จจริง */
+  var HARM = 'ถือเป็นการประพฤติผิดจรรยาบรรณอันจะนำมาซึ่งความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี';
+  var CS = [
+    { n: '(1)', a: ['ฝ่าฝืนหรือไม่ปฏิบัติตามจรรยาบรรณแห่งวิชาชีพบัญชีตามข้อบังคับนี้', 'กระทำโดยจงใจ', 'กระทำโดยประมาทเลินเล่ออย่างร้ายแรง'], on: [1, 0, 0], or: true },
+    { n: '(2)', a: ['เคยถูกลงโทษเนื่องจากประพฤติผิดจรรยาบรรณ ตามมาตรา 49 แห่งพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547', 'คำสั่งลงโทษนั้นถึงที่สุดแล้ว', 'ยังประพฤติผิดซ้ำ หรือไม่หลาบจำ หรือไม่มีความเกรงกลัวต่อการประพฤติผิดจรรยาบรรณแห่งวิชาชีพบัญชี'], on: [1, 0, 1],
+      miss: ['กรณีนี้เริ่มจากการเคยถูกลงโทษเนื่องจากประพฤติผิดจรรยาบรรณตามมาตรา 49', 'คำสั่งลงโทษยังไม่ถึงที่สุด', 'ไม่มีการประพฤติผิดซ้ำ ไม่หลาบจำ หรือไม่เกรงกลัวต่อการประพฤติผิดจรรยาบรรณ'],
+      hint: 'มาตรา 49 คือมาตราที่กำหนดโทษการประพฤติผิดจรรยาบรรณ ตั้งแต่ตักเตือนเป็นหนังสือ ถึงเพิกถอนใบอนุญาต' + law('พ.ร.บ.วิชาชีพบัญชี ม.49') + ' รายละเอียดอยู่ใน' + CH12 },
+    { n: '(3)', a: ['ศาลพิพากษาว่ากระทำความผิด<b>ในการประกอบวิชาชีพบัญชี</b> ตามประมวลกฎหมายอาญา มาตรา 269', 'คำพิพากษานั้นถึงที่สุดแล้ว', 'คำพิพากษา<b>ให้จำคุก</b>'], on: [1, 0, 1],
+      miss: ['กรณีนี้เริ่มจากคำพิพากษาว่ากระทำความผิดในการประกอบวิชาชีพบัญชีตามประมวลกฎหมายอาญา มาตรา 269', 'คำพิพากษายังไม่ถึงที่สุด', 'คำพิพากษาไม่ได้ให้จำคุก'],
+      hint: 'คำที่ขีดเส้นใต้คือสิ่งที่ข้อบังคับเขียนไว้เอง: ต้องเป็นความผิดในการประกอบวิชาชีพบัญชี และคำพิพากษาถึงที่สุดต้องให้จำคุก' + law('ข้อ 9 (จ) (3)') },
+    { n: '(4)', a: ['ศาลพิพากษาว่ากระทำความผิดตามมาตรา 36 แห่งพระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว พ.ศ. 2542', 'คำพิพากษานั้นถึงที่สุดแล้ว', 'คำพิพากษา<b>ให้จำคุก</b>'], on: [1, 1, 0],
+      miss: ['กรณีนี้เริ่มจากคำพิพากษาว่ากระทำความผิดตามมาตรา 36 แห่งพระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว', 'คำพิพากษายังไม่ถึงที่สุด', 'คำพิพากษาไม่ได้ให้จำคุก'],
+      hint: 'มาตรา 36 ว่าด้วยผู้มีสัญชาติไทยหรือนิติบุคคลที่มิใช่คนต่างด้าว ซึ่งให้ความช่วยเหลือ สนับสนุน หรือร่วมประกอบธุรกิจของคนต่างด้าวที่มิได้รับอนุญาต หรือถือหุ้นแทนคนต่างด้าว เพื่อให้คนต่างด้าวประกอบธุรกิจโดยหลีกเลี่ยงหรือฝ่าฝืนพระราชบัญญัตินั้น' + law('พ.ร.บ.การประกอบธุรกิจของคนต่างด้าว ม.36') },
+    { n: '(5)', fixed: 'กรณีอื่นที่คณะกรรมการจรรยาบรรณเห็นว่าเป็นการประพฤติผิดจรรยาบรรณอันจะนำมาซึ่งความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี', a: [], on: [],
+      hint: 'คณะกรรมการจรรยาบรรณ คือคณะที่คณะกรรมการสภาวิชาชีพบัญชีแต่งตั้ง โดยความเห็นชอบของที่ประชุมใหญ่สภาวิชาชีพบัญชี' + law('พ.ร.บ.วิชาชีพบัญชี ม.50') + ' งานของคณะนี้อยู่ใน' + CH12 }
+  ], cur = 0;
+  function csVerdict() { var c = CS[cur], s = c.on, tag = law('ข้อ 9 (จ) ' + c.n);
+    if (c.fixed) return verdict('csV', '', 'ขึ้นกับความเห็นของคณะกรรมการจรรยาบรรณ', '<p>กรณีนี้ไม่มีรายการข้อเท็จจริงให้ไล่ทีละข้อ ข้อบังคับให้เป็นเรื่องที่คณะกรรมการจรรยาบรรณเห็น' + tag + '</p>');
+    if (c.or) {
+      $('lvA').className = s[0] ? 'xee-lit' : ''; $('lvB').className = 'xee-top' + (s[0] && (s[1] || s[2]) ? ' xee-lit' : '');
+      if (s[0] && (s[1] || s[2])) verdict('csV', 'stop', 'เข้ากรณี (1)', '<p>ฝ่าฝืนจรรยาบรรณตามข้อบังคับนี้ และเป็นการกระทำโดย' + (s[1] ? 'จงใจ' : 'ประมาทเลินเล่ออย่างร้ายแรง') + ' จึง' + HARM + tag + '</p>' + NX12);
+      else if (s[0]) verdict('csV', 'ask', 'ยังไม่เข้ากรณี (1) แต่ถือว่าประพฤติผิดจรรยาบรรณแล้ว', '<p>ผู้ใดไม่ปฏิบัติตามจรรยาบรรณ ให้ถือว่าผู้นั้นประพฤติผิดจรรยาบรรณ' + law('พ.ร.บ.วิชาชีพบัญชี ม.46') + ' ส่วนกรณี (1) ต้องจงใจ หรือประมาทเลินเล่ออย่างร้ายแรง อย่างใดอย่างหนึ่งด้วย' + tag + '</p>' + NX12);
+      else verdict('csV', '', 'ไม่เข้ากรณี (1)', '<p>กรณีนี้เริ่มจากการฝ่าฝืนหรือไม่ปฏิบัติตามจรรยาบรรณตามข้อบังคับนี้' + tag + '</p>');
+      return; }
+    var lack = []; s.forEach(function (o, i) { if (!o) lack.push(c.miss[i]); });
+    if (!lack.length) verdict('csV', 'stop', 'เข้ากรณี ' + c.n, '<p>ข้อเท็จจริงครบตามที่ข้อนี้เขียน จึง' + HARM + tag + '</p>' + NX12);
+    else verdict('csV', 'ask', 'ยังไม่เข้ากรณี ' + c.n, '<p>ที่ยังขาด' + tag + '</p>' + list(lack)); }
+  function csDraw() { var c = CS[cur], h = '';
+    c.a.forEach(function (t, i) {
+      if (i > 0 && !(c.or && i === 2)) h += '<span class="xee-op">และ</span>';
+      if (c.or && i === 1) h += '<div class="xee-grp">';
+      if (c.or && i === 2) h += '<span class="xee-op xee-or">หรือ</span>';
+      h += '<button type="button" class="xee-el" data-i="' + i + '" aria-pressed="' + (c.on[i] ? 'true' : 'false') + '"><span class="xee-mk">' + (c.on[i] ? V.icon('check') : '') + '</span><span>' + t + '</span></button>';
+      if (c.or && i === 2) h += '</div>'; });
+    if (c.fixed) h = '<div class="xee-fx">' + c.fixed + '</div>';
+    $('csEls').innerHTML = h;
+    $('csH').hidden = !c.hint; $('csH').innerHTML = c.hint || '';
+    $('csLv').hidden = !c.or;
+    [].forEach.call($('csEls').querySelectorAll('button'), function (b) { b.onclick = function () { var i = +b.getAttribute('data-i'); c.on[i] = c.on[i] ? 0 : 1;
+      b.setAttribute('aria-pressed', c.on[i] ? 'true' : 'false'); b.querySelector('.xee-mk').innerHTML = c.on[i] ? V.icon('check') : ''; csVerdict(); }; });
+    csVerdict(); }
+  V.pick('cs', function (v) { cur = v; csDraw(); });
+
+  /* ส่วนที่ 2: คู่มือ ย่อหน้า R115.2 (ก) (ข) · ข้อความบนป้ายเป็นกรณีที่แต่งขึ้นจากถ้อยคำของย่อหน้านี้ · bad = แถวข้อย่อยที่ขัด */
+  var AD = [
+    { b: 'รับสอบบัญชีและวางระบบบัญชี', s: 'ผู้สอบบัญชีรับอนุญาต 2 คน เปิดสำนักงานมา 2 ปี', f: ['ทุกข้อความบนป้ายตรงกับความจริง', 'ไม่ได้พูดถึงสำนักงานอื่น'], bad: '', k: 'go', t: 'ไม่ขัดกับข้อนี้', r: 'ป้ายนี้อยู่บนพื้นฐานของความจริง ไม่มีการโอ้อวดเกินความเป็นจริง และไม่มีการอ้างถึงผู้อื่น', l: 'ย่อหน้า R115.2' },
+    { b: 'ประสบการณ์มากที่สุดในประเทศ', s: 'รับสอบบัญชีและวางระบบบัญชี', f: ['ความจริง: เปิดสำนักงานมา 2 ปี', 'ไม่ได้พูดถึงสำนักงานอื่น'], bad: 'adRa', k: 'stop', t: 'ต้องไม่ทำ', r: 'เป็นการโอ้อวดเกินความเป็นจริงในการให้บริการของตน ในทางประสบการณ์ที่มี', l: 'ย่อหน้า R115.2 (ก)' },
+    { b: 'สำนักงานอื่นทำงานหยาบ มาใช้เราดีกว่า', s: 'รับสอบบัญชีและวางระบบบัญชี', f: ['ข้อความเรื่องบริการของตนตรงกับความจริง', 'พูดถึงสำนักงานอื่นด้วยถ้อยคำดูหมิ่น'], bad: 'adRb', k: 'stop', t: 'ต้องไม่ทำ', r: 'เป็นการอ้างอิงโดยใช้ถ้อยคำดูหมิ่น แม้ข้อความเรื่องบริการของตนจะตรงกับความจริง', l: 'ย่อหน้า R115.2 (ข)' },
+    { b: 'ตรวจละเอียดกว่าทุกสำนักงาน', s: 'รับสอบบัญชีและวางระบบบัญชี', f: ['ความจริง: ไม่มีข้อมูลที่ใช้เทียบกับสำนักงานอื่น', 'ไม่มีถ้อยคำดูหมิ่น'], bad: 'adRb', k: 'stop', t: 'ต้องไม่ทำ', r: 'เป็นการเปรียบเทียบงานของตนกับผู้อื่น โดยไม่ได้อยู่บนหลักความจริง แม้ไม่มีถ้อยคำดูหมิ่น', l: 'ย่อหน้า R115.2 (ข)' }];
+  V.pick('ad', function (v) { var a = AD[v]; $('adB').textContent = a.b; $('adS').textContent = a.s;
+    $('adF').innerHTML = a.f.map(function (f) { return '<span>' + f + '</span>'; }).join('');
+    ['adRa', 'adRb'].forEach(function (id) { var bad = id === a.bad; $(id).className = bad ? 'xee-bad' : ''; $(id).querySelector('.xee-dm').innerHTML = V.icon(bad ? 'x' : 'check'); });
+    verdict('adV', a.k, a.t, '<p>' + a.r + law(a.l) + '</p>' + (a.k === 'stop' ? NXH : '')); });
+
+  /* ส่วนที่ 3: ค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน — R410.9 · R905.6 · R410.10 · 410.10 A1 · 330.4 A1 · 330.4 A3 · 330.4 A4 · g = สถานะประตู */
+  var JOB = [
+    { f: ['แสดงความเห็นต่องบการเงิน'], g: 'shut', t: 'เรียกเก็บแบบนี้ไม่ได้', s: 'สำนักงานต้องไม่เรียกเก็บค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน ทั้งโดยตรงและโดยอ้อม สำหรับงานสอบบัญชี', x: '<p>' + law('ย่อหน้า R410.9') + '</p>' },
+    { f: ['งานที่ให้ความเชื่อมั่น นอกเหนือจากงานสอบบัญชีหรืองานสอบทาน'], g: 'shut', t: 'เรียกเก็บแบบนี้ไม่ได้', s: 'สำนักงานต้องไม่เรียกเก็บค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน ทั้งโดยตรงและโดยอ้อม สำหรับงานที่ให้ความเชื่อมั่น', x: '<p>' + law('ย่อหน้า R905.6') + '</p>' },
+    { f: ['เช่น บริการด้านภาษีอากร', 'ลูกค้ารายนี้ สำนักงานเป็นผู้สอบบัญชีด้วย'], g: 'unk', t: 'ยังสรุปไม่ได้ ต้องรู้เพิ่ม', s: 'ย่อหน้าที่ใช้ตัดสิน ห้ามเมื่อเข้าข้อใดข้อหนึ่งที่ย่อหน้านั้นไล่ไว้',
+      x: '<p>ต้องรู้เพิ่มสองเรื่อง' + law('ย่อหน้า R410.10') + '</p>' + list(['ใครเป็นผู้เรียกเก็บ และค่าธรรมเนียมนั้นมีสาระสำคัญหรือคาดว่าจะมีสาระสำคัญต่อสำนักงานนั้นหรือไม่ (ข้อ (ก) และ (ข))', 'ผลของงานและจำนวนค่าธรรมเนียม ขึ้นอยู่กับการใช้ดุลยพินิจที่เกี่ยวข้องกับการตรวจสอบจำนวนที่มีสาระสำคัญในงบการเงินหรือไม่ (ข้อ (ค))']) + '<p>ถ้าไม่เข้าสักข้อ วิธีคิดค่าธรรมเนียมนี้อาจยังมีผลต่อระดับของอุปสรรคจากผลประโยชน์ส่วนตน' + law('ย่อหน้า 410.10 A1') + '</p>' },
+    { f: ['เช่น บริการด้านภาษีอากร', 'ลูกค้ารายนี้ สำนักงานไม่ได้สอบบัญชี และไม่ได้ให้ความเชื่อมั่น'], g: 'open', t: 'ใช้กับงานแบบนี้ได้ แต่อาจเกิดอุปสรรค', s: 'ค่าธรรมเนียมที่ขึ้นอยู่กับผลงานใช้สำหรับงานบริการที่ไม่ให้ความเชื่อมั่น แต่อาจทำให้เกิดอุปสรรคจากผลประโยชน์ส่วนตนต่อหลักความเที่ยงธรรม',
+      x: '<p>' + law('ย่อหน้า 330.4 A1') + ' ตัวอย่างการกระทำที่อาจเป็นมาตรการป้องกัน' + law('ย่อหน้า 330.4 A3') + '</p>' + list(['ให้ผู้สอบทานที่เหมาะสมซึ่งไม่มีส่วนเกี่ยวข้องกับงานนั้น สอบทานการปฏิบัติงาน', 'ทำสัญญาเป็นลายลักษณ์อักษรล่วงหน้ากับลูกค้า เรื่องหลักเกณฑ์ของค่าตอบแทน']) }];
+  V.pick('job', function (v) { var j = JOB[v];
+    $('jobF').innerHTML = j.f.map(function (f) { return '<span>' + f + '</span>'; }).join('');
+    $('feeG').className = 'gate' + (j.g === 'open' ? ' open' : (j.g === 'unk' ? ' xee-unk' : ''));
+    $('feeGT').textContent = j.t; $('feeGS').textContent = j.s; $('feeX').innerHTML = j.x; });
+
+  /* ส่วนที่ 3: ค่านายหน้า — 330.1 · 330.5 A1 · 330.5 A2 */
+  var ref = { pre: false, dis: false };
+  els('refT', ref, function () { var any = ref.pre || ref.dis, done = [];
+    if (ref.pre) done.push('ได้รับสัญญาล่วงหน้าจากลูกค้า สำหรับค่านายหน้าที่เกี่ยวกับการขายสินค้าหรือบริการโดยบุคคลอื่นให้กับลูกค้า');
+    if (ref.dis) done.push('เปิดเผยให้ลูกค้าทราบถึงค่านายหน้าที่รับจากบุคคลที่สาม');
+    $('refL').setAttribute('class', 'xee-see' + (any ? ' xee-kn' : ''));
+    $('refC').className = 'xee-cl' + (any ? ' xee-kn' : '');
+    $('refC').innerHTML = '<span>' + V.icon(any ? 'check' : 'lock') + '</span><span>ลูกค้าของพี่แพม: ' + (ref.pre && ref.dis ? 'ตกลงเรื่องค่านายหน้านี้ไว้ล่วงหน้า และได้รับแจ้งแล้ว' : (ref.pre ? 'ตกลงเรื่องค่านายหน้านี้ไว้ล่วงหน้า' : (ref.dis ? 'ได้รับแจ้งเรื่องค่านายหน้านี้แล้ว' : 'ไม่รู้เรื่องค่านายหน้านี้'))) + '</span>';
+    if (any) verdict('refV', 'hue', 'คู่มือเขียนว่า การกระทำนี้อาจเป็นการจัดการอุปสรรค', '<p>สิ่งที่พี่แพมทำ เป็นตัวอย่างการกระทำที่อาจเป็นมาตรการป้องกัน' + law('ย่อหน้า 330.5 A2') + '</p>' + list(done));
+    else verdict('refV', 'ask', 'อุปสรรคจากผลประโยชน์ส่วนตนเกิดขึ้นได้', '<p>ต่อหลักความเที่ยงธรรม และหลักความรู้ ความสามารถ และความเอาใจใส่ทางวิชาชีพ' + law('ย่อหน้า 330.5 A1') + '</p><p>ย่อหน้านี้ไม่ได้ตอบว่ารับได้หรือรับไม่ได้ สิ่งที่คู่มือให้ทำคือระบุ ประเมิน และจัดการอุปสรรค' + law('ย่อหน้า 330.1') + '</p>'); });
+
+  /* ส่วนที่ 4: R350.5 (ก)–(ง) · L/R = เหรียญในกล่องซ้ายและขวา */
+  var OWN = '<span class="xee-coin xee-own">เงินของสำนักงาน</span>', CL = '<span class="xee-coin">เงินของลูกค้า</span>';
+  var KEEP = [
+    { L: CL, R: OWN, bad: '', k: 'go', t: 'ทำครบตามที่ย่อหน้านี้เขียน', r: 'เงินของลูกค้าอยู่แยกจากเงินของสำนักงาน และใช้จ่ายค่าธรรมเนียมราชการตามที่ลูกค้าฝากไว้' },
+    { L: '', R: OWN + CL, mixed: true, bad: 'dB', k: 'stop', t: 'ขัดข้อ (ข)', r: 'ทรัพย์สินของลูกค้าต้องเก็บแยกจากทรัพย์สินส่วนตัวหรือของสำนักงาน' },
+    { L: '<span class="xee-coin xee-gone">จ่ายค่าเช่าสำนักงาน</span>', R: OWN, bad: 'dC', k: 'stop', t: 'ขัดข้อ (ค)', r: 'ทรัพย์สินของลูกค้าใช้ได้สำหรับวัตถุประสงค์ที่ตั้งใจเท่านั้น ค่าเช่าสำนักงานไม่ใช่สิ่งที่ลูกค้าฝากเงินไว้ให้จ่าย' },
+    { L: CL + '<span class="xee-coin xee-sm">ดอกเบี้ย ไม่ได้บันทึก</span>', R: OWN, bad: 'dD', k: 'stop', t: 'ขัดข้อ (ง)', r: 'ต้องพร้อมตลอดเวลาเพื่อบันทึกทรัพย์สินนั้น และรายได้หรือผลประโยชน์ที่เกิดขึ้น ให้กับบุคคลที่มีสิทธิ' }];
+  V.pick('keep', function (v) { var s = KEEP[v];
+    $('walL').innerHTML = s.L; $('walR').innerHTML = s.R; $('wal').className = 'xee-wal' + (s.mixed ? ' xee-mixed' : '');
+    ['dB', 'dC', 'dD'].forEach(function (id) { var bad = id === s.bad; $(id).className = bad ? 'xee-bad' : ''; $(id).querySelector('.xee-dm').innerHTML = V.icon(bad ? 'x' : 'check'); });
+    verdict('keepV', s.k, s.t, '<p>' + s.r + law('ย่อหน้า R350.5') + '</p>' + (s.k === 'stop' ? NXH : '')); });
+
+  /* ส่วนที่ 5 ภาพแรก: เรื่องที่หมวด 360 กำหนด — 360.5 A1 · 360.5 A2 · 360.7 A2 · 360.7 A3 */
+  var USE = 'แต่อาจใช้แนวทางในหมวดนี้ช่วยพิจารณาวิธีตอบสนองได้';
+  var SCOPE = [
+    { inn: true, k: 'hue', t: 'อยู่ในเรื่องที่หมวด 360 กำหนด', r: 'เป็นการกระทำที่ขัดต่อกฎหมาย โดยลูกค้า และการติดสินบนเป็นตัวอย่างที่คู่มือยกไว้' + law('ย่อหน้า 360.5 A1 · 360.5 A2') + ' ใช้ลำดับข้างล่าง' },
+    { inn: false, k: '', t: 'หมวด 360 ไม่ได้กำหนดเรื่องนี้', r: 'หมวดนี้ไม่ได้กำหนดเรื่องการประพฤติมิชอบที่ไม่เกี่ยวกับกิจกรรมทางธุรกิจของลูกค้า แม้คนทำจะเป็นผู้บริหารของลูกค้า' + law('ย่อหน้า 360.7 A3 (ก)') + ' ' + USE },
+    { inn: false, k: '', t: 'หมวด 360 ไม่ได้กำหนดเรื่องนี้', r: 'หมวดนี้ไม่ได้กำหนดเรื่องการไม่ปฏิบัติตามกฎหมายและข้อบังคับโดยฝ่ายอื่น นอกจากสี่กลุ่มทางซ้าย คู่มือยกตัวอย่างบุคคลที่สามซึ่งผู้ประกอบวิชาชีพบัญชีได้รับการว่าจ้างจากลูกค้าให้ไปสอบทานธุรกิจ' + law('ย่อหน้า 360.7 A3 (ข)') + ' ' + USE },
+    { inn: false, k: '', t: 'ไม่ต้องปฏิบัติตามหมวด 360', r: 'ผู้ประกอบวิชาชีพบัญชีที่พบเรื่องที่ไม่สำคัญอย่างเห็นได้ชัด ไม่ต้องปฏิบัติตามหมวดนี้' + law('ย่อหน้า 360.7 A2') }];
+  V.pick('scope', function (v) { var s = SCOPE[v], pin = '<span class="xee-pin">เรื่องที่พบ</span>';
+    $('scL').innerHTML = s.inn ? pin : ''; $('scR').innerHTML = s.inn ? '' : pin;
+    $('scIn').className = 'xee-box' + (s.inn ? ' xee-here' : ''); $('scOut').className = 'xee-box' + (s.inn ? '' : ' xee-here');
+    verdict('scV', s.k, s.t, '<p>' + s.r + '</p>'); });
+
+  /* ส่วนที่ 5 ภาพที่สอง: หมวด 360 (งานตรวจสอบงบการเงิน R360.10–R360.28 · บริการอื่น R360.29–360.40 A1) · หมวด 260 (อาวุโส R260.12–260.23 A1 · คนอื่น R260.24–260.27 A1)
+     แต่ละขั้น: [หัวข้อ, คำอธิบาย, ย่อหน้า, ชนิดป้าย inv หรือ law, ข้อความป้าย] · ข้อกำหนดเรื่องกฎหมายที่ให้รายงานอยู่ในย่อหน้าทั่วไป R360.6 และ R260.6 */
+  var role = 0, noc = { inv: false, law: false };
+  var ROLEN = ['ผู้สอบบัญชี', 'คนในสำนักงานที่ให้บริการอื่น', 'ผู้ประกอบวิชาชีพบัญชีอาวุโสในบริษัท', 'ผู้ประกอบวิชาชีพบัญชีคนอื่นในบริษัท'];
+  var ROLED = [
+    ['พี่แพม ผู้สอบบัญชีรับอนุญาต', 'ได้รับการว่าจ้างให้ตรวจสอบงบการเงินของบริษัทนั้น'],
+    ['ผู้ประกอบวิชาชีพบัญชีในสำนักงานที่ให้บริการทางวิชาชีพ', 'ให้บริการอื่นแก่บริษัทนั้น ไม่ใช่การตรวจสอบงบการเงิน'],
+    ['กรรมการ เจ้าหน้าที่ หรือพนักงานระดับอาวุโสของบริษัทนั้น', 'ใช้อิทธิพลอย่างมีนัยสำคัญและตัดสินใจเรื่องทรัพยากรของบริษัทได้'],
+    ['ผู้ประกอบวิชาชีพบัญชีที่เป็นพนักงานของบริษัทนั้น', 'ไม่ใช่ผู้ประกอบวิชาชีพบัญชีอาวุโส']];
+  var TI = 'เปลี่ยน เพราะคนที่ต้องคุยด้วยมีส่วนเกี่ยวข้อง', TF = 'มีปัจจัยเพิ่ม เพราะผู้บริหารมีส่วนเกี่ยวข้อง', TL = 'คู่มือเขียนเรื่องการรายงานตามกฎหมายไว้ที่ขั้นนี้';
+  function pathOf(r) { var i = noc.inv, l = noc.law, p = [];
+    if (r === 0) {
+      p.push(['ทำความเข้าใจเรื่อง', 'ลักษณะของเรื่อง และสถานการณ์ที่เกิดขึ้นแล้วหรืออาจเกิดขึ้น', 'R360.10']);
+      p.push(i ? ['ปรึกษาหารือกับผู้มีหน้าที่กำกับดูแล', 'เมื่อเชื่อว่าผู้บริหารมีส่วนเกี่ยวข้อง', 'R360.12', 'inv', TI] : ['ปรึกษาหารือกับผู้บริหารในระดับที่เหมาะสม', 'และผู้มีหน้าที่กำกับดูแลตามความเหมาะสม', 'R360.11']);
+      p.push(['แนะนำให้ดำเนินการอย่างเหมาะสมและทันท่วงที', 'ถ้าผู้บริหารและผู้มีหน้าที่กำกับดูแลยังไม่ได้ทำ เช่น แก้ไขหรือบรรเทาผลกระทบ', 'R360.13']);
+      p.push(['ปฏิบัติตามกฎหมายและมาตรฐานการสอบบัญชี', 'รวมทั้งข้อกำหนดของกฎหมายเรื่องการรายงาน', 'R360.15', l ? 'law' : '', TL]);
+      p.push(['ประเมินการตอบสนองของผู้บริหาร', 'และผู้มีหน้าที่กำกับดูแลในกรณีที่เหมาะสม เช่น ทันเวลาไหม', 'R360.19 · 360.19 A1']);
+      p.push(['พิจารณาว่าต้องดำเนินการต่อไปเพื่อประโยชน์สาธารณะหรือไม่', 'เช่น เปิดเผยต่อหน่วยงานที่มีอำนาจ หรือถอนตัวจากงานเมื่อกฎหมายอนุญาต', 'R360.20 · 360.21 A1']);
+      p.push(['จัดทำเอกสารหลักฐาน', 'การตอบสนองของผู้บริหาร ดุลยพินิจที่ใช้ และการตัดสินใจ', 'R360.28']);
+    } else if (r === 1) {
+      p.push(['ทำความเข้าใจเรื่อง', 'ลักษณะของเรื่อง และสถานการณ์ที่เกิดขึ้นแล้วหรืออาจเกิดขึ้น', 'R360.29']);
+      p.push(['ปรึกษาหารือกับผู้บริหารในระดับที่เหมาะสม', 'ถ้าเข้าถึงผู้มีหน้าที่กำกับดูแลได้ ต้องปรึกษาหารือตามที่เหมาะสมด้วย', 'R360.30']);
+      p.push(['สื่อสารกับผู้สอบบัญชี', 'สำนักงานเดียวกันเป็นผู้สอบบัญชีของบริษัท ต้องสื่อสารภายในสำนักงาน เว้นแต่กฎหมายห้าม · สำนักงานและสำนักงานเครือข่ายไม่ได้เป็นผู้สอบบัญชี ต้องพิจารณาว่าจะสื่อสารกับผู้สอบบัญชีภายนอกหรือไม่', 'R360.31 · R360.33']);
+      p.push(['พิจารณาว่าต้องดำเนินการต่อไปเพื่อประโยชน์สาธารณะหรือไม่', (i ? 'การมีส่วนร่วมของผู้บริหารในเรื่องนั้นเป็นปัจจัยหนึ่งที่ใช้พิจารณา ' : '') + 'เช่น เปิดเผยต่อหน่วยงานที่มีอำนาจ หรือถอนตัวจากงานเมื่อกฎหมายอนุญาต', 'R360.36 · 360.36 A1–A2', i ? 'inv' : '', TF]);
+      p.push(['บันทึกเรื่องและการตัดสินใจ', 'คู่มือสนับสนุนให้บันทึก', '360.40 A1']);
+    } else if (r === 2) {
+      p.push(['ทำความเข้าใจเรื่อง', 'รวมถึงกฎหมายที่เกี่ยวข้อง และผลกระทบที่อาจเกิดขึ้น', 'R260.12']);
+      p.push(i ? ['ปรึกษาผู้มีอำนาจระดับสูงขึ้นไปอีกในบริษัท', 'เมื่อผู้บังคับบัญชาที่เหนือขึ้นไปมีส่วนเกี่ยวข้อง', 'R260.13', 'inv', TI] : ['ปรึกษาผู้บังคับบัญชาที่เหนือขึ้นไป', 'ถ้ามี', 'R260.13']);
+      p.push(['ดำเนินการตามขั้นตอนที่เหมาะสม', 'เช่น สื่อสารไปยังผู้มีหน้าที่กำกับดูแล ปฏิบัติตามกฎหมายรวมทั้งข้อกำหนดเรื่องการรายงาน ให้แก้ไขหรือบรรเทาผลกระทบ', 'R260.14', l ? 'law' : '', TL]);
+      p.push(['ตัดสินใจว่าจำเป็นต้องเปิดเผยเรื่องนั้นแก่ผู้สอบบัญชีของบริษัทหรือไม่', 'ถ้าบริษัทมีผู้สอบบัญชี', 'R260.15']);
+      p.push(['ประเมินการตอบสนองของผู้บังคับบัญชาและผู้มีหน้าที่กำกับดูแล', 'เช่น ทันเวลาไหม', 'R260.16 · 260.16 A1']);
+      p.push(['พิจารณาว่าต้องดำเนินการต่อไปเพื่อประโยชน์สาธารณะหรือไม่', 'เช่น แจ้งผู้บริหารของบริษัทใหญ่ เปิดเผยต่อหน่วยงานที่มีอำนาจ หรือลาออก', 'R260.17 · 260.18 A1']);
+      p.push(['บันทึกเรื่องและการตัดสินใจ', 'คู่มือสนับสนุนให้บันทึก', '260.23 A1']);
+    } else {
+      p.push(['พยายามทำความเข้าใจเรื่อง', 'ลักษณะของเรื่อง และสถานการณ์ที่เกิดขึ้นหรืออาจเกิดขึ้น', 'R260.24']);
+      p.push(i ? ['แจ้งผู้มีอำนาจระดับสูงขึ้นไปอีกในบริษัท', 'เมื่อผู้บังคับบัญชาที่เหนือขึ้นไปมีส่วนเกี่ยวข้อง', 'R260.25', 'inv', TI] : ['แจ้งผู้บังคับบัญชาที่เหนือขึ้นไป', 'เพื่อให้ผู้บังคับบัญชาดำเนินการตามที่เหมาะสมได้', 'R260.25']);
+      p.push(['ในสถานการณ์ที่ไม่ปกติ อาจต้องพิจารณาเปิดเผยต่อหน่วยงานที่มีอำนาจ', 'ดูจากลักษณะและขอบเขตของความเสียหายที่เกิดขึ้นจริงหรืออาจเกิดขึ้น', 'R260.26 · 260.20 A2']);
+      p.push(['บันทึกเรื่องและการตัดสินใจ', 'คู่มือสนับสนุนให้บันทึก', '260.27 A1']);
+    }
+    return p; }
+  function nocDraw() { var p = pathOf(role), R6 = role < 2 ? 'R360.6' : 'R260.6', sec = role < 2 ? '360' : '260', notes = [];
+    $('roleD').innerHTML = ROLED[role].map(function (f) { return '<span>' + f + '</span>'; }).join('');
+    $('cmp').innerHTML = ROLEN.map(function (n, r) { var k = pathOf(r).length, d = ''; for (var x = 0; x < k; x++) d += '<i></i>';
+      return '<div class="xee-cr' + (r === role ? ' xee-cur' : '') + '"><span>' + n + '</span><span>' + d + '</span><span>' + k + ' ขั้น</span></div>'; }).join('');
+    $('lawBar').hidden = !noc.law;
+    $('lawBarT').innerHTML = 'เมื่อพบเรื่อง ต้องทำความเข้าใจข้อกำหนดของกฎหมายนั้นและปฏิบัติตาม' + law('ย่อหน้า ' + R6);
+    $('path').className = 'todo' + (noc.law ? ' xee-lawon' : '');
+    $('path').innerHTML = p.map(function (s) { return '<li' + (s[3] === 'inv' ? ' class="first"' : (s[3] === 'law' ? ' class="xee-lw"' : '')) + '><div><b>' + s[0] + '</b><small>' + s[1] + law('ย่อหน้า ' + s[2]) + '</small>' + (s[3] ? '<span class="xee-tg ' + (s[3] === 'inv' ? 'xee-tg1' : 'xee-tg2') + '">' + s[4] + '</span>' : '') + '</div></li>'; }).join('');
+    if (noc.inv) notes.push('คนที่ต้องคุยด้วยมีส่วนเกี่ยวข้อง: ' + ['ขั้นที่ 2 เปลี่ยนเป็นปรึกษาหารือกับผู้มีหน้าที่กำกับดูแล' + law('ย่อหน้า R360.12'),
+      'ขั้นที่ 4 มีปัจจัยเพิ่ม คือการมีส่วนร่วมของผู้บริหารในเรื่องนั้น' + law('ย่อหน้า 360.36 A1'),
+      'ขั้นที่ 2 เปลี่ยนเป็นปรึกษาผู้มีอำนาจระดับสูงขึ้นไปอีกในบริษัท' + law('ย่อหน้า R260.13'),
+      'ขั้นที่ 2 เปลี่ยนเป็นแจ้งผู้มีอำนาจระดับสูงขึ้นไปอีกในบริษัท' + law('ย่อหน้า R260.25')][role]);
+    if (noc.law) notes.push('มีกฎหมายกำหนดให้รายงาน: ' + ['ข้อความของขั้นไม่เปลี่ยน ขั้นที่ 4 คือขั้นที่คู่มือเขียนเรื่องนี้ไว้ในลำดับ' + law('ย่อหน้า R360.15') + ' กฎหมายบางฉบับอาจกำหนดระยะเวลาในการรายงาน' + law('ย่อหน้า 360.15 A1'),
+      'ไม่เปลี่ยนขั้นใดของลำดับนี้ เพราะข้อกำหนดเรื่องนี้อยู่ในย่อหน้า R360.6 ซึ่งเป็นข้อทั่วไปของหมวด 360 ไม่ได้อยู่ในขั้นใด',
+      'ข้อความของขั้นไม่เปลี่ยน ขั้นที่ 3 คือขั้นที่คู่มือเขียนเรื่องนี้ไว้ในลำดับ' + law('ย่อหน้า R260.14'),
+      'ไม่เปลี่ยนขั้นใดของลำดับนี้ เพราะข้อกำหนดเรื่องนี้อยู่ในย่อหน้า R260.6 ซึ่งเป็นข้อทั่วไปของหมวด 260 ไม่ได้อยู่ในขั้นใด'][role]);
+    var first = role === 3 ? 'พยายามทำความเข้าใจเรื่อง แล้วแจ้งคนในบริษัท' : (role === 2 ? 'ทำความเข้าใจเรื่อง แล้วปรึกษาคนในบริษัท' : 'ทำความเข้าใจเรื่อง แล้วปรึกษาหารือกับคนในบริษัท');
+    if (noc.law) verdict('pathV', 'ask', 'มีกฎหมายกำหนดให้รายงาน ต้องทำตามกฎหมายนั้น', '<p>ข้อกำหนดของกฎหมายอาจแตกต่างจากที่หมวด ' + sec + ' กำหนด' + law('ย่อหน้า ' + R6) + '</p>' + list(notes));
+    else verdict('pathV', '', 'เริ่มจาก' + first, '<p>กฎหมายไม่ได้กำหนดให้รายงาน การเปิดเผยต่อหน่วยงานที่มีอำนาจจึงเป็นเรื่องที่พิจารณาทีหลัง ไม่ใช่ขั้นแรก' + (role === 0 ? ' การถอนตัวจากงานไม่ได้ทดแทนการดำเนินการอื่นที่จำเป็น' + law('ย่อหน้า 360.21 A2') : (role === 2 ? ' การลาออกไม่ได้ทดแทนการดำเนินการอื่นที่จำเป็น' + law('ย่อหน้า 260.18 A2') : '')) + '</p>' + (notes.length ? list(notes) : '')); }
+  V.pick('role', function (v) { role = v; nocDraw(); });
+  els('nocT', noc, nocDraw);
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'ศาลพิพากษาให้จำคุกผู้สอบบัญชีคนหนึ่ง ฐานกระทำความผิดในการประกอบวิชาชีพบัญชี ตามประมวลกฎหมายอาญา มาตรา 269', q: 'จะรู้ว่าเข้ากรณี (3) ของข้อ 9 (จ) หรือไม่ ต้องรู้เรื่องใดเพิ่ม', o: [
+      ['ผู้สอบบัญชีคนนั้นจงใจหรือไม่', 0, 'การกระทำโดยจงใจเป็นข้อเท็จจริงของกรณี (1) ส่วนกรณี (3) ดูสามเรื่อง คือความผิดในการประกอบวิชาชีพบัญชีตามมาตรา 269 คำพิพากษาถึงที่สุด และคำพิพากษาให้จำคุก (ข้อ 9 (จ) (1) · (3))'],
+      ['คำพิพากษานั้นถึงที่สุดแล้วหรือยัง', 1, 'กรณี (3) มีข้อเท็จจริงสามข้อ คือความผิดในการประกอบวิชาชีพบัญชีตามมาตรา 269 คำพิพากษาถึงที่สุด และคำพิพากษาให้จำคุก เรื่องนี้รู้แล้วสองข้อ ยังขาดว่าคำพิพากษาถึงที่สุดแล้วหรือยัง (ข้อ 9 (จ) (3))'],
+      ['เคยถูกสั่งลงโทษเรื่องจรรยาบรรณมาก่อนหรือไม่', 0, 'การเคยถูกลงโทษเป็นข้อเท็จจริงของกรณี (2) กรณี (3) ไม่ได้ดูเรื่องนี้ (ข้อ 9 (จ) (2) · (3))']] },
+    { f: 'ลูกค้าฝากเงินให้ผู้ทำบัญชีในสำนักงานบัญชีแห่งหนึ่งนำไปจ่ายภาษีแทน สมมติว่ากฎหมายอนุญาตให้ผู้ทำบัญชีดูแลเงินนี้ได้ ผู้ทำบัญชีนำเงินเข้าบัญชีเงินฝากส่วนตัวที่ใช้รับเงินเดือน แล้วจ่ายภาษีครบตามที่ลูกค้าฝากไว้', q: 'ผู้ทำบัญชีทำครบตามข้อ (ข) และข้อ (ค) ในส่วนที่ 4 หรือไม่', o: [
+      ['ครบ เพราะจ่ายภาษีครบตามที่ลูกค้าฝากไว้', 0, 'การจ่ายตามที่ฝากไว้ตรงกับข้อ (ค) คือใช้สำหรับวัตถุประสงค์ที่ตั้งใจ แต่ข้อ (ข) ให้เก็บทรัพย์สินนั้นแยกจากทรัพย์สินส่วนตัวหรือของสำนักงานด้วย (ย่อหน้า R350.5)'],
+      ['ไม่ครบ เพราะใช้เงินผิดจากที่ลูกค้าตั้งใจ', 0, 'เงินถูกใช้จ่ายภาษีตามที่ลูกค้าฝากไว้ จึงตรงกับวัตถุประสงค์ที่ตั้งใจ ข้อที่ไม่ครบคือข้อ (ข) การเก็บแยกจากทรัพย์สินส่วนตัว (ย่อหน้า R350.5 (ข) · (ค))'],
+      ['ไม่ครบ เพราะไม่ได้เก็บแยกจากทรัพย์สินส่วนตัว', 1, 'เงินของลูกค้าอยู่ในบัญชีเดียวกับเงินส่วนตัว จึงไม่ได้เก็บแยกตามข้อ (ข) แม้จะใช้เงินตรงตามวัตถุประสงค์ที่ตั้งใจตามข้อ (ค) (ย่อหน้า R350.5 (ข))']] },
+    { f: 'ผู้ประกอบวิชาชีพบัญชีคนหนึ่งให้บริการแก่บริษัทลูกค้า แล้วรู้ว่าผู้บริหารคนหนึ่งของลูกค้าประพฤติมิชอบ ในเรื่องที่ไม่เกี่ยวกับกิจกรรมทางธุรกิจของบริษัท', q: 'หมวด 360 ของคู่มือกำหนดเรื่องนี้ไว้หรือไม่', o: [
+      ['กำหนด เพราะคนทำเป็นผู้บริหารของลูกค้า', 0, 'ผู้บริหารของลูกค้าอยู่ในรายชื่อคนทำก็จริง แต่หมวด 360 ไม่ได้กำหนดเรื่องการประพฤติมิชอบที่ไม่เกี่ยวกับกิจกรรมทางธุรกิจของลูกค้า (ย่อหน้า 360.5 A1 · 360.7 A3 (ก))'],
+      ['ไม่ได้กำหนด เพราะเรื่องนั้นไม่เกี่ยวกับกิจกรรมทางธุรกิจของลูกค้า', 1, 'หมวด 360 ไม่ได้กำหนดเรื่องการประพฤติมิชอบที่ไม่เกี่ยวกับกิจกรรมทางธุรกิจของลูกค้า แต่อาจใช้แนวทางในหมวดนี้ช่วยพิจารณาวิธีตอบสนองได้ (ย่อหน้า 360.7 A3)'],
+      ['ไม่ได้กำหนด เพราะหมวด 360 ใช้เฉพาะกับผู้สอบบัญชี', 0, 'ลำดับในส่วนที่ 5 มีทั้งของผู้สอบบัญชีและของคนในสำนักงานที่ให้บริการอื่น เหตุที่ไม่ได้กำหนดเรื่องนี้คือเรื่องนั้นไม่เกี่ยวกับกิจกรรมทางธุรกิจของลูกค้า (ย่อหน้า R360.29 · 360.7 A3 (ก))']] }
+  ]);
+})();
+</script>
+</body>
+</html>

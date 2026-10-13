@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ถ้ามีคนร้องเรียนเรา | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะหน้า บท 12 (ขึ้นต้น x12-) */
+.x12-line { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:2px; }
+.x12-line::before { content:""; position:absolute; left:10%; right:10%; top:22px; height:4px; border-radius:2px; background:linear-gradient(90deg, var(--line) 0 62%, var(--gold) 62% 100%); }
+.x12-line button { position:relative; display:grid; justify-items:center; align-content:start; gap:4px; min-height:74px; padding:0 0 4px; border:0; background:none; font:inherit; font-size:12px; font-weight:600; line-height:1.2; color:var(--muted); cursor:pointer; }
+.x12-line button i { width:48px; height:48px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 2px var(--line); font-style:normal; font-family:var(--display); font-weight:800; font-size:18px; color:var(--ink); transition:background-color .15s ease, box-shadow .15s ease; }
+.x12-line button i svg { width:24px; height:24px; }
+.x12-line button.x12-ord i { box-shadow:inset 0 0 0 2px var(--gold); background:var(--gold-soft); }
+.x12-terms { display:grid; gap:6px; padding:12px 14px; border-radius:18px; background:var(--soft); }
+.x12-terms > b { font-family:var(--display); font-size:15px; }
+.x12-term { display:grid; grid-template-columns:minmax(0,2fr) 18px minmax(0,3fr); gap:6px; align-items:center; font-size:14px; line-height:1.35; }
+.x12-term small { font-size:14px; color:var(--muted); } .x12-term i { font-style:normal; color:var(--muted); text-align:center; } .x12-term b { font-family:var(--display); font-size:15px; }
+.x12-wt { display:inline-block; margin-left:4px; padding:0 8px; border-radius:99px; box-shadow:inset 0 0 0 1.5px var(--line); font-style:normal; font-family:var(--body); font-size:12px; font-weight:600; line-height:1.6; vertical-align:middle; }
+.x12-tk { position:relative; height:18px; font-size:12px; font-weight:700; line-height:18px; color:var(--ink); }
+.x12-tk span { position:absolute; left:66.670%; transform:translateX(-50%); white-space:nowrap; }
+.x12-chk button { border-radius:18px; text-align:left; line-height:1.35; }
+.x12-rts .x12-wide { grid-column:1 / -1; }
+.cg.x12-keep { box-shadow:inset 0 0 0 2px var(--good); }
+.x12-rl span.x12-hit { background:var(--hue); color:#fff; box-shadow:none; }
+.x12-run { display:grid; gap:10px; padding:14px; border-radius:20px; background:var(--soft); }
+.x12-rw { display:grid; grid-template-columns:44px minmax(0,1fr); gap:10px; align-items:center; }
+.x12-rw small { display:block; margin-bottom:4px; font-size:13px; font-weight:700; line-height:1.3; }
+.x12-seg { display:grid; grid-template-columns:auto minmax(12px,1fr) auto; gap:6px; align-items:center; font-size:13px; font-weight:700; line-height:1.3; }
+.x12-seg span { padding:5px 8px; border-radius:10px; background:var(--white); }
+.x12-seg i { height:4px; border-radius:2px; background:repeating-linear-gradient(90deg, var(--muted) 0 6px, transparent 6px 12px); }
+.x12-hold { padding:7px 10px; border-radius:10px; background:var(--bad); color:#fff; font-size:13px; font-weight:700; line-height:1.35; text-align:center; }
+.x12-line button[aria-pressed="true"] { color:var(--hue-ink); font-weight:700; }
+.x12-line button[aria-pressed="true"] i { background:var(--hue); color:#fff; box-shadow:0 0 0 5px var(--hue-soft); }
+.x12-span { display:grid; grid-template-columns:3fr 2fr; gap:6px; font-size:12px; font-weight:700; text-align:center; }
+.x12-span span { padding:5px 6px; border-radius:10px; line-height:1.3; }
+.x12-pre { background:var(--soft); color:var(--muted); } .x12-post { background:var(--gold-soft); color:#5A470F; }
+.x12-st { display:grid; grid-template-columns:48px minmax(0,1fr); gap:12px; align-items:center; padding:14px; border-radius:20px; background:var(--hue-soft); color:var(--hue-ink); transition:background-color .2s ease; }
+.x12-st .x12-sti { width:48px; height:48px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .x12-st .x12-sti svg { width:24px; height:24px; }
+.x12-st b { display:block; font-family:var(--display); font-size:20px; line-height:1.25; } .x12-st p { font-size:15px; line-height:1.4; }
+.x12-st.x12-has { background:var(--gold-soft); color:#5A470F; }
+.x12-lanes { display:grid; gap:8px; }
+.x12-lane { display:grid; grid-template-columns:44px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--soft); transition:background-color .2s ease; }
+.x12-lane.x12-dim { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
+.x12-av { width:44px; height:44px; border-radius:50%; background:var(--white); display:grid; place-items:center; color:var(--hue); overflow:hidden; } .x12-av svg { width:22px; height:22px; } .x12-av[data-face] svg { width:44px; height:44px; }
+.x12-lane.x12-dim .x12-av { color:var(--muted); box-shadow:inset 0 0 0 1.5px var(--line); }
+.x12-lane b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; } .x12-lane p { font-size:15px; line-height:1.45; }
+.x12-go { justify-self:start; display:inline-flex; align-items:center; min-height:44px; padding:0 4px; font-size:14px; font-weight:700; color:var(--hue-ink); }
+.x12-rts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; } .x12-rts .ty b { font-size:16px; line-height:1.25; }
+.cg .x12-law, .x12-lane .x12-law { display:inline-block; font-size:12px; }
+.cg.x12-na { color:var(--muted); } .cg.x12-na .ico { background:var(--muted); }
+.x12-cks { display:grid; gap:8px; }
+.x12-ck { display:grid; grid-template-columns:76px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border-radius:18px; background:var(--hue-soft); color:var(--hue-ink); }
+.x12-n { display:grid; justify-items:center; font-family:var(--display); font-weight:800; font-size:36px; line-height:1; } .x12-n i { font-style:normal; font-size:13px; font-weight:600; }
+.x12-ck b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; color:var(--ink); } .x12-ck small { display:block; font-size:13px; line-height:1.4; }
+.x12-from { display:inline-block; margin:3px 0; padding:2px 8px; border-radius:8px; background:var(--white); font-size:13px; font-weight:700; line-height:1.35; }
+.x12-rel { display:grid; justify-items:center; }
+.x12-rn { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; width:100%; padding:10px 12px; border-radius:16px; background:var(--soft); font-family:var(--display); font-weight:800; font-size:16px; line-height:1.3; }
+.x12-rn .ico { width:40px; height:40px; border-radius:50%; background:var(--white); display:grid; place-items:center; color:var(--hue); } .x12-rn .ico svg { width:20px; height:20px; }
+.x12-rl { position:relative; display:flex; flex-wrap:wrap; justify-content:center; gap:6px; width:100%; padding:14px 0; }
+.x12-rl::before { content:""; position:absolute; left:50%; top:0; bottom:0; width:4px; margin-left:-2px; border-radius:2px; background:var(--line); }
+.x12-rl span, .x12-ro span { position:relative; padding:4px 10px; border-radius:14px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--hue); color:var(--hue-ink); font-size:13px; font-weight:600; line-height:1.3; }
+.x12-rl em, .x12-ro em { font-style:normal; font-weight:500; opacity:.8; }
+.x12-ro { display:flex; flex-wrap:wrap; gap:6px; }
+.x12-pens { display:grid; gap:8px; }
+.x12-pen { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; padding:12px; border-radius:16px; background:var(--soft); }
+.x12-pen:nth-child(1) { margin-right:18%; } .x12-pen:nth-child(2) { margin-right:9%; }
+.x12-pen > i { width:40px; height:40px; border-radius:50%; background:var(--ink); color:#fff; display:grid; place-items:center; font-style:normal; font-family:var(--display); font-weight:800; font-size:16px; }
+.x12-pen b { display:block; font-family:var(--display); font-size:16px; line-height:1.35; } .x12-pen small { display:block; font-size:13px; color:var(--muted); line-height:1.4; }
+.x12-pen.x12-hv { background:var(--bad-soft); } .x12-pen.x12-hv > i { background:var(--bad); } .x12-pen.x12-hv small { color:var(--bad-ink); }
+.x12-cap3 { display:grid; grid-template-columns:2fr 1fr; margin-top:6px; height:28px; border-radius:8px; overflow:hidden; font-size:12px; font-weight:700; text-align:center; }
+.x12-cap3 span { display:grid; place-items:center; } .x12-cap3 span:first-child { background:var(--white); color:var(--ink); } .x12-cap3 span:last-child { background:repeating-linear-gradient(135deg, var(--bad) 0 6px, var(--bad-ink) 6px 12px); color:#fff; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ บท 12 (หัวข้อ R13 ของโครง v2) · เขียน 12 ต.ค. 2569
+     ตัวบทที่ผู้เขียนเปิดเองรอบนี้ (sources/law2/1-profession): พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.40 41 46 49 50 53 54 55 57 59 60 70 71
+     · ข้อบังคับสภาวิชาชีพบัญชี (ฉบับที่ 12) เรื่อง การพิจารณาเกี่ยวกับจรรยาบรรณ พ.ศ. 2549 ฉบับรวมแก้ไขโดย (ฉบับที่ 21) พ.ศ. 2554 ข้อ 3 6 9–12 14–18 20 23–25 27
+     · ข้อกำหนดฯ วิธีการสอบสวน พ.ศ. 2550 ข้อ 9 · ประกาศเรื่องหลักเกณฑ์และวิธีการอุทธรณ์ พ.ศ. 2549 ไม่มีในคลัง เรื่องอุทธรณ์จึงใช้เฉพาะ ม.55 และ ม.60 (5)
+     รอบแก้หลัง blind test 12 ต.ค. 2569: ข้อ 16 วรรคสาม และ ม.55 วรรคสาม ใช้ถ้อยคำตัวบท ไม่เลือกความหมาย · ผู้คัดค้านใช้คำของข้อ 10 ไม่ระบุว่าเป็นฝ่ายใด
+     · สำเนาก่อนแก้: exchange/v2/builds/law2u-2026-10-11/law2v/backup-before-blind-fix/law2v-r12.html
+     แพรและผู้กล่าวหาเป็นกรณีสมมติ หน้านี้ไม่บอกว่าเรื่องที่กล่าวหาคืออะไร และไม่ตัดสินว่าใครผิด · บันทึก: exchange/v2/builds/law2u-2026-10-11/law2v/notes/R12.notes.md -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 12</p>
+    <h1>ถ้ามีคนร้องเรียนเรา</h1>
+    <p class="sub">มีคนร้องเรียนแล้ว เราผิดทันทีหรือยัง คำตอบคือยัง ดูเรื่องหนึ่งเรื่องตั้งแต่คำกล่าวหาถึงอุทธรณ์ ว่าแต่ละขั้นใครทำอะไรได้</p>
+    <svg viewBox="0 0 340 118" role="img" aria-label="ภาพเส้นเวลาห้าขั้นของเรื่องร้องเรียน สามขั้นแรกยังไม่มีคำสั่ง คำสั่งอยู่ที่ขั้นที่สี่ แล้วจึงอุทธรณ์">
+      <path d="M38 56H302" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 12"/>
+      <g fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.8)" stroke-width="2"><circle cx="38" cy="56" r="21"/><circle cx="104" cy="56" r="21"/><circle cx="170" cy="56" r="21"/></g>
+      <circle cx="236" cy="56" r="23" fill="#F0C84B"/>
+      <circle cx="302" cy="56" r="21" fill="none" stroke="#F0C84B" stroke-width="3"/>
+      <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path transform="translate(26 44)" d="M3.5 6h17v12h-17zM3.5 7l8.5 6 8.5-6"/>
+        <path transform="translate(92 44)" d="M6 4.5h12v15H6zM9 9.5l2 2 4-4M9 15.5h6"/>
+        <path transform="translate(158 44)" d="M10.500 4a6.500 6.500 0 100 13 6.500 6.500 0 000-13zM15.500 15.500L20 20"/>
+      </g>
+      <path transform="translate(224 44)" d="M7 3.500h7l4 4V20.500H7zM14 3.500v4h4M9.500 12h6M9.500 15.500h6" fill="none" stroke="#1C4257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path transform="translate(290 44)" d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="#F0C84B" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17 92v6h174v-6" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M213 92v6h110v-6" fill="none" stroke="#F0C84B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="0" y="112" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="ขั้นของเรื่องร้องเรียน">
+    <a href="#s1"><i>1</i>กล่าวหา</a><a href="#s2"><i>2</i>รับเรื่อง</a><a href="#s3"><i>3</i>สอบสวน</a><a href="#s4"><i>4</i>คำสั่ง</a><a href="#s5"><i>5</i>อุทธรณ์</a>
+  </nav>
+
+  <!-- หน้าหลัก: เส้นเวลาของเรื่องหนึ่งเรื่อง -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">เส้นเวลาของบท</span>
+    <h2 id="f0">ถูกกล่าวหายังไม่ใช่ถูกลงโทษ มติมีที่ขั้น 4</h2>
+    <p class="cap">หลายปีต่อมา แพรเป็นผู้สอบบัญชีรับอนุญาตแล้ว ผู้ถือหุ้นคนหนึ่งของบริษัทลูกค้าร้องเรียนว่าแพรประพฤติผิดจรรยาบรรณ</p>
+    <div class="x12-terms">
+      <b>คำที่กฎหมายใช้ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.53</span></b>
+      <div class="x12-term"><small>การร้องเรียนแบบนี้</small><i aria-hidden="true">→</i><b>การกล่าวหา</b></div>
+      <div class="x12-term"><small>คนร้องเรียน</small><i aria-hidden="true">→</i><b>ผู้กล่าวหา</b></div>
+      <div class="x12-term"><small>คนถูกร้องเรียน คือแพร</small><i aria-hidden="true">→</i><b>ผู้ถูกกล่าวหา</b></div>
+      <div class="x12-term"><small>ผู้รับเรื่อง</small><i aria-hidden="true">→</i><b>คณะกรรมการจรรยาบรรณ</b></div>
+    </div>
+    <p class="cap">ตอนนี้แพรเพิ่งได้รับสำเนาคำกล่าวหา เรื่องอยู่ที่ขั้นที่สอง</p>
+    <p class="lbl">แตะวงกลม ดูว่าขั้นนั้นใครทำอะไรได้ ส่วนแถบเลข 1 ถึง 5 ด้านบน ใช้เลื่อนไปอ่านขั้นนั้น</p>
+    <div class="x12-line" data-pick="stage" role="group" aria-label="เลือกขั้น ดูว่าขั้นนั้นใครทำอะไรได้">
+      <button data-v="0"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6h17v12h-17zM3.5 7l8.5 6 8.5-6"/></svg></i><span>ยื่น</span></button>
+      <button data-v="1" aria-pressed="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h12v15H6zM9 9.5l2 2 4-4M9 15.5h6"/></svg></i><span>ตรวจ</span></button>
+      <button data-v="2"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM15.5 15.5L20 20"/></svg></i><span>สอบสวน</span></button>
+      <button data-v="3" class="x12-ord"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7l4 4V20.5H7zM14 3.5v4h4M9.5 12h6M9.5 15.5h6"/></svg></i><span>มีมติ</span></button>
+      <button data-v="4" class="x12-ord"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i><span>อุทธรณ์</span></button>
+    </div>
+    <div class="x12-span" aria-hidden="true"><span class="x12-pre">สามขั้นแรก ยังไม่มีมติว่าประพฤติผิดหรือไม่</span><span class="x12-post">สองขั้นหลัง มีมติและคำสั่งแล้ว</span></div>
+    <div class="x12-st" id="st" role="status"><span class="x12-sti" id="stI"></span><div><b id="stT"></b><p id="stS"></p></div></div>
+    <p class="lbl" id="stK"></p>
+    <div class="x12-lanes" aria-live="polite">
+      <div class="x12-lane" id="ln0"><span class="x12-av" data-ico="pen"></span><div><b>ผู้กล่าวหา <em class="x12-wt" id="ln0w" hidden>ขั้นนี้เป็นฝ่ายรอ</em></b><p id="ln0t"></p></div></div>
+      <div class="x12-lane" id="ln1"><span class="x12-av" data-face="prae2"></span><div><b>แพร ผู้ถูกกล่าวหา <em class="x12-wt" id="ln1w" hidden>ขั้นนี้เป็นฝ่ายรอ</em></b><p id="ln1t"></p></div></div>
+      <div class="x12-lane" id="ln2"><span class="x12-av" data-ico="shield"></span><div><b><span id="ln2b"></span> <em class="x12-wt" id="ln2w" hidden>ขั้นนี้เป็นฝ่ายรอ</em></b><p id="ln2t"></p></div></div>
+    </div>
+    <a class="x12-go" id="stGo" href="#s2"></a>
+    <p class="note"><span data-ico="info"></span><span>คณะกรรมการจรรยาบรรณมี 9 ถึง 15 คน คณะกรรมการสภาวิชาชีพบัญชีแต่งตั้งโดยความเห็นชอบของที่ประชุมใหญ่ หน้านี้เรียกสภาวิชาชีพบัญชีสั้น ๆ ว่าสภาฯ <span class="law">ม.50</span></span></p>
+  </section>
+
+  <!-- ขั้นที่ 1 -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>ขั้นที่ 1 · ยื่นคำกล่าวหา</small><h2 id="h1">ยื่นได้เมื่อยังไม่พ้น 1 ปี และยังไม่เกิน 3 ปี</h2></div></div>
+    <p class="cap">สิทธิการกล่าวหามีกำหนดเวลาสองข้อ จุดเริ่มนับไม่เหมือนกัน และต้องไม่พ้นทั้งสองข้อ <span class="law">ม.53 วรรคสอง</span></p>
+    <div class="x12-cks">
+      <div class="x12-ck"><span class="x12-n">1<i>ปี</i></span><div><b>สิทธิการกล่าวหาสิ้นสุดเมื่อพ้นหนึ่งปี</b><span class="x12-from">นับแต่วันที่รู้เรื่อง และรู้ตัวผู้ประพฤติผิด</span><small>คนที่รู้ คือผู้ได้รับความเสียหายหรือผู้กล่าวหา รู้ตัว คือรู้ว่าใครเป็นคนประพฤติผิด</small></div></div>
+      <div class="x12-ck"><span class="x12-n">3<i>ปี</i></span><div><b>ทั้งนี้ ไม่เกินสามปี</b><span class="x12-from">นับแต่วันที่มีการประพฤติผิด</span><small>ในภาพข้างล่างเรียกวันนี้ว่าวันเกิดเหตุ</small></div></div>
+    </div>
+    <p class="cap">เรื่องของแพร ผู้กล่าวหารู้เรื่องและรู้ว่าเป็นแพร หลังวันเกิดเหตุ 6 เดือน แล้วยื่นคำกล่าวหาหลังวันที่รู้อีก 8 เดือน ยังยื่นได้ ลองเปลี่ยนทีละเรื่อง</p>
+    <p class="lbl">ผู้กล่าวหารู้เรื่องและรู้ว่าเป็นแพร หลังวันเกิดเหตุ</p>
+    <div class="chips" data-pick="know">
+      <button data-v="0" aria-pressed="true">6 เดือน</button>
+      <button data-v="1">30 เดือน</button>
+    </div>
+    <p class="lbl">ยื่นคำกล่าวหา หลังวันที่รู้</p>
+    <div class="chips" data-pick="wait">
+      <button data-v="0" aria-pressed="true">8 เดือน</button>
+      <button data-v="1">14 เดือน</button>
+    </div>
+    <div class="gauges">
+      <div class="hd"><span>สิทธิการกล่าวหาสิ้นสุดแล้วหรือยัง</span><span class="law">ม.53 วรรคสอง</span></div>
+      <div class="gz" id="g0"><div class="top"><span>นับแต่วันที่รู้เรื่องและรู้ตัวผู้ประพฤติผิด</span><b><span id="g0v"></span> <i>เดือน</i></b></div><div class="bar"><i></i><em style="left:66.670%"></em></div><div class="x12-tk" aria-hidden="true"><span>1 ปี คือ 12 เดือน</span></div><div class="st" id="g0s"></div></div>
+      <span class="and">ต้องไม่พ้นทั้งสองข้อ</span>
+      <div class="gz" id="g1"><div class="top"><span>นับแต่วันที่มีการประพฤติผิด</span><b><span id="g1v"></span> <i>เดือน</i></b></div><div class="bar"><i></i><em style="left:66.670%"></em></div><div class="x12-tk" aria-hidden="true"><span>3 ปี คือ 36 เดือน</span></div><div class="st" id="g1s"></div></div>
+    </div>
+    <div class="gate" id="gate1" role="status"><span data-door></span><div><b id="gate1T"></b><span id="gate1S"></span></div></div>
+    <div class="cons" aria-live="polite">
+      <b>แล้วเรื่องไปไหนต่อ</b>
+      <div class="cg" id="n1"><span class="ico"></span><div><b id="n1b"></b><span id="n1s"></span></div></div>
+    </div>
+    <h3 style="margin-top:8px">ในคำกล่าวหาต้องมีอะไร</h3>
+    <ul class="needs">
+      <li><span class="hd">ทำตามแบบของสภาฯ อย่างน้อยต้องมี <span class="law">ข้อ 14</span></span></li>
+      <li><span class="mk" data-ico="check"></span><span>ชื่อตัว ชื่อสกุล และที่อยู่ของผู้กล่าวหา</span></li>
+      <li><span class="mk" data-ico="check"></span><span>ชื่อตัว ชื่อสกุลของผู้ถูกกล่าวหา</span></li>
+      <li><span class="mk" data-ico="check"></span><span>ข้อเท็จจริงแห่งการประพฤติผิดจรรยาบรรณ</span></li>
+      <li><span class="mk" data-ico="check"></span><span>ลายมือชื่อผู้กล่าวหา พร้อมสำเนาบัตรประจำตัวประชาชน หรือหลักฐานแสดงตนที่ทางราชการออกให้ หรือสำเนาหนังสือเดินทาง หรือหนังสือรับรองการเป็นนิติบุคคล</span></li>
+      <li><span class="mk" data-ico="check"></span><span>หลักฐานประกอบการพิจารณา</span></li>
+    </ul>
+    <p class="note"><span data-ico="info"></span><span>เรื่องเริ่มได้อีกทางหนึ่ง คือปรากฏต่อคณะกรรมการจรรยาบรรณเองว่ามีผู้ประพฤติผิดจรรยาบรรณ คนที่ถูกกล่าวหาได้ มีทั้งผู้ประกอบวิชาชีพบัญชี และผู้ซึ่งขึ้นทะเบียนไว้กับสภาฯ เช่น ผู้ที่ขึ้นทะเบียนเพื่อเป็นผู้ทำบัญชี <span class="law">ม.53 วรรคหนึ่ง</span> <span class="law">ข้อ 3</span></span></p>
+  </section>
+
+  <!-- ขั้นที่ 2 -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>ขั้นที่ 2 · ตรวจและรับเป็นคำกล่าวหา</small><h2 id="h2">ประธานตรวจก่อน รับแล้วแพรจึงได้สำเนา</h2></div></div>
+    <p class="cap">ผู้ตรวจคือประธานคณะกรรมการจรรยาบรรณ หรือผู้ที่ประธานมอบหมาย และต้องตรวจโดยไม่ชักช้า <span class="law">ข้อ 16</span></p>
+    <div class="x12-cks">
+      <div class="x12-ck"><span class="x12-n">15<i>วัน</i></span><div><b>ผู้ยื่นคำกล่าวหาแก้ไขเพิ่มเติมคำกล่าวหา หรือชี้แจงข้อเท็จจริงและหลักฐานเพิ่มเติม</b><span class="x12-from">นับแต่วันที่ได้รับแจ้ง</span><small>ผู้ตรวจอาจมีคำสั่งเช่นนี้ เมื่อเห็นว่าคำกล่าวหามีข้อบกพร่อง อ่านไม่เข้าใจ หรือรายละเอียดยังไม่ชัดแจ้ง เพื่อประกอบการพิจารณา <span class="law">ข้อ 16 วรรคสอง</span></small></div></div>
+    </div>
+    <p class="cap">เรื่องของแพร ประธานเห็นว่าคำกล่าวหามีมูล คือมีเค้าว่าอาจเป็นจริง จึงรับ ลองเปลี่ยนผลการตรวจ ดูว่าเรื่องไปทางไหน</p>
+    <p class="lbl">ผลการตรวจคำกล่าวหา</p>
+    <div class="chips x12-chk" data-pick="chk">
+      <button data-v="0" aria-pressed="true">ประธานเห็นว่ามีมูล</button>
+      <button data-v="1">ประธานเห็นว่าไม่มีมูล</button>
+      <button data-v="2">ไม่ปรากฏชื่อและที่อยู่ของผู้กล่าวหา และชื่อของผู้ถูกกล่าวหา</button>
+    </div>
+    <div class="x12-rts">
+      <div class="ty" id="rt0"><span class="ico" data-ico="check"></span><b>รับเป็นคำกล่าวหา</b><small>มีมูล หรือมีเหตุอันสมควรให้สอบสวน <span class="law">ข้อ 17</span></small></div>
+      <div class="ty" id="rt1"><span class="ico" data-ico="x"></span><b>สั่งไม่รับคำกล่าวหา</b><small>ไม่มีมูล สิทธิกล่าวหาสิ้นสุดลง หรือมีเหตุอันไม่สมควรให้สอบสวน <span class="law">ข้อ 17</span></small></div>
+      <div class="ty x12-wide" id="rt2"><span class="ico" data-ico="lock"></span><b>ไม่รับไว้พิจารณา</b><small>คำกล่าวหาที่ไม่ปรากฏชื่อตัว ชื่อสกุล และที่อยู่ของผู้กล่าวหา และชื่อตัว ชื่อสกุลของผู้ถูกกล่าวหา <span class="law">ข้อ 16 วรรคสาม</span></small></div>
+    </div>
+    <div class="cons" aria-live="polite">
+      <b>แล้วเรื่องไปไหนต่อ</b>
+      <div class="cg" id="c2"><span class="ico"></span><div><b id="c2b"></b><span id="c2s"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>การรับเป็นคำกล่าวหาทำให้เรื่องเข้าสู่การสอบสวน ยังไม่ใช่มติว่าแพรประพฤติผิด <span class="law">ข้อ 17 · ข้อ 18</span></span></p>
+  </section>
+
+  <!-- ขั้นที่ 3 -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>ขั้นที่ 3 · สอบสวน</small><h2 id="h3">แพรชี้แจงได้ การสอบสวนไม่หยุด และอนุกรรมการอาจถูกคัดค้านได้</h2></div></div>
+    <p class="cap">คณะกรรมการจรรยาบรรณสอบสวนเอง หรือจะแต่งตั้งคณะอนุกรรมการ ซึ่งมีกรรมการจรรยาบรรณอย่างน้อยหนึ่งคน ทำแทนก็ได้ <span class="law">ม.53 วรรคสี่</span> เรื่องของแพร แพรได้รับสำเนาคำกล่าวหาแล้ว และคณะกรรมการจรรยาบรรณแต่งตั้งคณะอนุกรรมการสอบสวน กำหนดเวลาสองเรื่องจึงเริ่มนับ</p>
+    <div class="x12-cks">
+      <div class="x12-ck"><span class="x12-n">15<i>วัน</i></span><div><b>แพรทำคำแก้ข้อกล่าวหา คือหนังสือชี้แจงแก้ข้อกล่าวหา</b><span class="x12-from">นับแต่วันที่แพรได้รับสำเนาคำกล่าวหา</span><small>หรือภายในเวลาที่ประธานคณะกรรมการจรรยาบรรณ หรือประธานคณะอนุกรรมการขยายให้ <span class="law">ข้อ 24</span></small></div></div>
+      <div class="x12-ck"><span class="x12-n">30<i>วัน</i></span><div><b>คณะอนุกรรมการเริ่มทำการสอบสวนเรื่องของแพร</b><span class="x12-from">นับแต่วันแต่งตั้งคณะอนุกรรมการ</span><small>ประธานคณะกรรมการจรรยาบรรณแจ้งคำสั่งแต่งตั้งให้ผู้กล่าวหาและแพรทราบด้วย <span class="law">ข้อ 6</span></small></div></div>
+    </div>
+
+    <h3 style="margin-top:8px">ถ้าแพรไม่ชี้แจง หรือผู้กล่าวหาถอนเรื่อง</h3>
+    <p class="cap">ตอนนี้แพรยื่นคำแก้ข้อกล่าวหาแล้ว และผู้กล่าวหายังไม่ถอนเรื่อง ลองเปิดปิดทีละข้อ ดูว่าการสอบสวนหยุดไหม</p>
+    <div class="togs" data-togs="inv">
+      <button data-k="ans" aria-pressed="true"><span>แพรยื่นคำแก้ข้อกล่าวหา<small>เป็นหนังสือ ภายใน 15 วันนับแต่วันที่ได้รับสำเนาคำกล่าวหา</small></span></button>
+      <button data-k="wd" aria-pressed="false"><span>ผู้กล่าวหาขอถอนเรื่อง<small>หลังจากยื่นคำกล่าวหาไว้แล้ว</small></span></button>
+    </div>
+    <div class="cons" aria-live="polite">
+      <b>ผลต่อการสอบสวน</b>
+      <div class="cg" id="a0"><span class="ico"></span><div><b id="a0b"></b><span id="a0s"></span></div></div>
+      <div class="cg" id="a1"><span class="ico"></span><div><b id="a1b"></b><span id="a1s"></span></div></div>
+    </div>
+    <p class="result ok" id="invR" role="status"></p>
+
+    <h3 style="margin-top:8px">ระหว่างสอบสวน เรียกคนและเอกสารได้</h3>
+    <ul class="needs">
+      <li><span class="hd">คณะกรรมการจรรยาบรรณและคณะอนุกรรมการมีอำนาจ <span class="law">ม.53 วรรคห้า</span></span></li>
+      <li><span class="mk i" data-ico="pen"></span><span>เรียกบุคคลที่เกี่ยวข้องมาให้ถ้อยคำ ชี้แจงข้อเท็จจริง หรือทำคำชี้แจงเป็นหนังสือ</span></li>
+      <li><span class="mk i" data-ico="book"></span><span>เรียกให้ส่งบัญชี ทะเบียน เอกสาร หรือหลักฐาน เพื่อตรวจสอบหรือประกอบการพิจารณา</span></li>
+      <li><span class="mk i" data-ico="info"></span><span>การสอบสวนของคณะอนุกรรมการ ไม่จำเป็นต้องทำต่อหน้าผู้กล่าวหาและผู้ถูกกล่าวหา <span class="law">ข้อกำหนด พ.ศ. 2550 ข้อ 9</span></span></li>
+    </ul>
+    <p class="note"><span data-ico="lock"></span><span>ผู้ใดไม่ปฏิบัติตามคำสั่งเรียกเช่นนี้ของคณะกรรมการจรรยาบรรณ มีความผิดและมีโทษทางอาญา <span class="law">ม.71</span></span></p>
+
+    <h3 style="margin-top:8px">กรรมการจรรยาบรรณหรืออนุกรรมการ อาจถูกคัดค้านได้</h3>
+    <p class="cap">คัดค้าน คือการยื่นหนังสือบอกข้อเท็จจริงว่า กรรมการจรรยาบรรณหรืออนุกรรมการคนใดมีเหตุตามข้อ 9 ถ้าคำคัดค้านรับฟังได้ คนนั้นพ้นจากการทำหน้าที่ในเรื่องนั้น ข้อ 10 เรียกคนที่ยื่นว่าผู้คัดค้าน</p>
+    <p class="cap">เรื่องของแพร สมมติว่าอนุกรรมการคนหนึ่งเป็นคู่สมรสของผู้กล่าวหา ตรงกับเหตุ (2) ที่ระบายสีไว้ อนุกรรมการคนนั้นอาจถูกคัดค้านได้</p>
+    <p class="lbl">เหตุที่ดูจากความเกี่ยวข้องระหว่างสองฝั่งนี้ เลขในวงเล็บคือเลขข้อย่อยของข้อ 9</p>
+    <div class="x12-rel">
+      <div class="x12-rn"><span class="ico" data-ico="shield"></span><span>กรรมการจรรยาบรรณ หรืออนุกรรมการ</span></div>
+      <div class="x12-rl">
+        <span class="x12-hit">คู่หมั้น หรือคู่สมรส <em>(2)</em></span>
+        <span>บุพการี เช่น พ่อแม่ หรือผู้สืบสันดาน เช่น ลูก <em>(3)</em></span>
+        <span>ผู้แทน ตัวแทน หรือบุคคลอื่นที่ข้อย่อยนี้ไล่ไว้ <em>(4)</em></span>
+        <span>เจ้าหนี้ หรือลูกหนี้ <em>(5)</em></span>
+        <span>นายจ้าง หรือลูกจ้าง <em>(5)</em></span>
+        <span>มีสาเหตุโกรธเคืองกัน <em>(7)</em></span>
+      </div>
+      <div class="x12-rn"><span class="ico" data-ico="card"></span><span>ผู้กล่าวหา หรือผู้ถูกกล่าวหา</span></div>
+    </div>
+    <p class="lbl">เหตุอีกสามข้อ ไม่ได้ดูจากความเกี่ยวข้องกับผู้กล่าวหาหรือผู้ถูกกล่าวหา</p>
+    <div class="x12-ro">
+      <span>เป็นผู้กล่าวหาเอง <em>(1)</em></span>
+      <span>มีประโยชน์ได้เสียในเรื่องที่กล่าวหา <em>(6)</em></span>
+      <span>มีเหตุอื่นซึ่งอาจทำให้การสอบสวนเสียความเป็นธรรม <em>(8)</em></span>
+    </div>
+
+    <p class="lbl">คัดค้านอนุกรรมการในเรื่องของแพร ต้องทำภายในเมื่อไร</p>
+    <div class="x12-cks">
+      <div class="x12-ck"><span class="x12-n">7<i>วัน</i></span><div><b>ผู้คัดค้านต้องคัดค้านอนุกรรมการ</b><span class="x12-from">นับแต่วันรับทราบคำสั่งแต่งตั้งคณะอนุกรรมการ หรือวันทราบเหตุแห่งการคัดค้าน</span><small>และต้องทำก่อนการพิจารณาของคณะอนุกรรมการเสร็จสิ้น ส่วนการคัดค้านกรรมการจรรยาบรรณ ต้องทำก่อนการพิจารณาเสร็จสิ้น <span class="law">ข้อ 10</span></small></div></div>
+    </div>
+
+    <p class="lbl">ยื่นคำคัดค้านแล้ว เรื่องเดินอย่างไร</p>
+    <div class="map">
+      <div class="nd"><span class="ico" data-ico="pen"></span><b>ผู้คัดค้านทำคำคัดค้านเป็นหนังสือ</b><small>แสดงข้อเท็จจริงที่เป็นเหตุแห่งการคัดค้านตามข้อ 9 แล้วยื่นต่อประธานคณะกรรมการจรรยาบรรณ</small><span class="law">ข้อ 10</span></div>
+      <span class="ln"></span>
+      <div class="nd"><span class="ico" data-ico="shield"></span><b>คณะกรรมการจรรยาบรรณพิจารณาคำคัดค้าน</b><span class="law">ข้อ 11 · ข้อ 12</span></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <div class="tr"><span class="ico" data-ico="check"></span><small>เห็นว่าคำคัดค้านมีเหตุผลรับฟังได้</small><b>ผู้ถูกคัดค้านพ้นจากการทำหน้าที่สอบสวนและพิจารณาในเรื่องนั้น</b></div>
+        <div class="tr"><span class="ico" data-ico="x"></span><small>เห็นว่าคำคัดค้านไม่มีเหตุผลพอที่จะรับฟังได้</small><b>ยกคำคัดค้าน</b></div>
+      </div>
+      <span class="ln"></span>
+      <div class="nd"><span class="ico" data-ico="flag"></span><b>คำสั่งเกี่ยวกับคำคัดค้านเป็นที่สุด</b><span class="law">ข้อ 12</span></div>
+    </div>
+    <p class="note"><span data-ico="shield"></span><span>แม้ไม่มีการคัดค้าน กรรมการจรรยาบรรณหรืออนุกรรมการที่มีส่วนได้เสียเป็นการส่วนตัวในเรื่องใด ก็ห้ามเข้าร่วมพิจารณา ปรึกษาหารือ หรือลงคะแนนเสียงในเรื่องนั้น <span class="law">ม.57</span></span></p>
+  </section>
+
+  <!-- ขั้นที่ 4 -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>ขั้นที่ 4 · มติและคำสั่ง</small><h2 id="h4">คำสั่งมาจากมติ ไม่ใช่จากความเห็น</h2></div></div>
+    <p class="cap">คณะอนุกรรมการเสนอได้เพียงความเห็น ผู้มีมติและออกคำสั่งคือคณะกรรมการจรรยาบรรณ ลองเปลี่ยนมติ ดูว่าคำสั่งเป็นแบบไหน และใครอุทธรณ์คำสั่งนั้นต่อคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีได้</p>
+    <div class="chips" data-pick="res">
+      <button data-v="0" aria-pressed="true">ถ้ามติคือ มิได้ประพฤติผิด</button>
+      <button data-v="1">ถ้ามติคือ ประพฤติผิด</button>
+    </div>
+    <div class="map">
+      <div class="nd"><span class="ico" data-ico="pen"></span><b>คณะอนุกรรมการสอบสวน เสนอความเห็น</b><small>มีสรุปคำกล่าวหา คำแก้ข้อกล่าวหา ข้อเท็จจริงจากการสอบสวน และข้อเสนอในการลงโทษหรือยกคำกล่าวหา</small><span class="law">ข้อ 27</span></div>
+      <span class="ln"></span>
+      <div class="nd"><span class="ico" data-ico="shield"></span><b>คณะกรรมการจรรยาบรรณ มีมติ</b><small>พิจารณาจากผลการสอบสวน</small><span class="law">พ.ร.บ.วิชาชีพบัญชี ม.54</span></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <div class="tr" id="o0"><span class="ico" data-ico="check"></span><b>คำสั่งยกคำกล่าวหา</b><small>มีมติว่าผู้ถูกกล่าวหามิได้ประพฤติผิดจรรยาบรรณ</small><span class="law">ม.54 วรรคสอง</span></div>
+        <div class="tr" id="o1"><span class="ico" data-ico="flag"></span><b>คำสั่งลงโทษ</b><small>มีมติว่าประพฤติผิดจรรยาบรรณ ลงโทษตามมาตรา 49</small><span class="law">ม.54 วรรคหนึ่ง</span></div>
+      </div>
+    </div>
+    <div class="cons" aria-live="polite">
+      <b>ผลของมตินี้</b>
+      <div class="cg" id="r0"><span class="ico"></span><div><b id="r0b"></b><span id="r0s"></span></div></div>
+      <div class="cg" id="r1"><span class="ico"></span><div><b id="r1b"></b><span id="r1s"></span></div></div>
+      <div class="cg" id="r2"><span class="ico"></span><div><b id="r2b"></b><span id="r2s"></span></div></div>
+    </div>
+
+    <h3 style="margin-top:8px">โทษการประพฤติผิดจรรยาบรรณ ตามมาตรา 49</h3>
+    <div class="x12-pens">
+      <div class="x12-pen"><i>1</i><div><b>ตักเตือนเป็นหนังสือ</b></div></div>
+      <div class="x12-pen"><i>2</i><div><b>ภาคทัณฑ์</b><small>คำนี้ในภาษาทั่วไป หมายถึงตำหนิโทษไว้</small></div></div>
+      <div class="x12-pen x12-hv"><i>3</i><div><b>พักใช้ใบอนุญาต พักการขึ้นทะเบียน หรือห้ามการประกอบวิชาชีพบัญชีด้านที่ประพฤติผิดจรรยาบรรณ</b><small>โดยมีกำหนดเวลา แต่ไม่เกินสามปี</small><div class="x12-cap3" role="img" aria-label="กำหนดเวลาของโทษข้อนี้ สั่งได้ไม่เกินสามปี"><span>กำหนดเวลาได้ถึง 3 ปี</span><span>เกินไม่ได้</span></div></div></div>
+      <div class="x12-pen x12-hv"><i>4</i><div><b>เพิกถอนใบอนุญาต เพิกถอนการขึ้นทะเบียน หรือสั่งให้พ้นจากการเป็นสมาชิกสภาวิชาชีพบัญชี</b></div></div>
+    </div>
+    <p class="note"><span data-ico="lock"></span><span>ผู้ถูกลงโทษตาม (3) หรือ (4) ที่ทำการประกอบวิชาชีพบัญชีในระหว่างนั้น มีความผิดและมีโทษทางอาญา <span class="law">ม.70</span></span></p>
+    <p class="note"><span data-ico="clock"></span><span>ใบอนุญาตที่ถูกเพิกถอนเพราะประพฤติผิดจรรยาบรรณเป็นอันสิ้นผล ผู้ถูกเพิกถอนขอรับใบอนุญาตอีกได้เมื่อพ้น 5 ปี นับแต่วันที่ถูกสั่งเพิกถอนใบอนุญาต <span class="law">ม.41 (4) · ม.40</span></span></p>
+  </section>
+
+  <!-- ขั้นที่ 5 -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>ขั้นที่ 5 · อุทธรณ์</small><h2 id="h5">อุทธรณ์ได้ใน 30 วัน และระหว่างอุทธรณ์ยังต้องปฏิบัติตามคำสั่งลงโทษ</h2></div></div>
+    <p class="cap">สมมติว่าคณะกรรมการจรรยาบรรณสั่งพักใช้ใบอนุญาตของแพร 1 ปี แพรอุทธรณ์คำสั่งนี้ต่อคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีได้ โดยมีกำหนดเวลา</p>
+    <div class="x12-cks">
+      <div class="x12-ck"><span class="x12-n">30<i>วัน</i></span><div><b>แพรยื่นอุทธรณ์คำสั่งลงโทษ</b><span class="x12-from">นับแต่วันที่แพรได้รับคำสั่ง</span><small>ผู้กล่าวหาที่จะอุทธรณ์ ก็ใช้กำหนดเดียวกัน นับแต่วันที่ได้รับคำสั่ง <span class="law">ม.55 วรรคหนึ่ง</span></small></div></div>
+    </div>
+    <p class="cap">แพรยื่นอุทธรณ์เมื่อผ่านไป 20 วันนับแต่วันที่ได้รับคำสั่ง ยังอยู่ในกำหนด ลองเปลี่ยนวันที่ยื่น</p>
+    <div class="chips" data-pick="ap">
+      <button data-v="0" aria-pressed="true">ยื่นเมื่อผ่านไป 20 วัน</button>
+      <button data-v="1">ยื่นเมื่อผ่านไป 45 วัน</button>
+    </div>
+    <div class="gauges">
+      <div class="hd"><span>กำหนดอุทธรณ์</span><span class="law">ม.55 วรรคหนึ่ง</span></div>
+      <div class="gz" id="g5"><div class="top"><span>นับแต่วันที่ได้รับคำสั่ง</span><b><span id="g5v"></span> <i>วัน</i></b></div><div class="bar"><i></i><em style="left:66.670%"></em></div><div class="x12-tk" aria-hidden="true"><span>30 วัน</span></div><div class="st" id="g5s"></div></div>
+    </div>
+    <p class="result" id="apR" role="status"></p>
+
+    <h3 style="margin-top:8px">ระหว่างรอคำวินิจฉัย แพรยังต้องปฏิบัติตามคำสั่งพักใช้</h3>
+    <p class="cap">มาตรา 55 ใช้คำว่าทุเลา ซึ่งหมายถึงผ่อนหรือชะลอไว้ก่อน การยื่นอุทธรณ์ไม่ได้ทำให้การปฏิบัติตามคำสั่งลงโทษถูกชะลอ</p>
+    <div class="x12-run">
+      <div class="x12-rw"><span class="x12-av" data-ico="flag"></span><div><small>อุทธรณ์ของแพร</small><div class="x12-seg"><span>ยื่นอุทธรณ์</span><i aria-hidden="true"></i><span>คำวินิจฉัย</span></div></div></div>
+      <div class="x12-rw"><span class="x12-av" data-face="prae2"></span><div><small>คำสั่งพักใช้ใบอนุญาตของแพร</small><div class="x12-hold">ยังต้องปฏิบัติตาม ตลอดช่วงที่รอคำวินิจฉัย</div></div></div>
+    </div>
+    <div class="cons">
+      <div class="cg lock"><span class="ico" data-ico="lock"></span><div><b>ระหว่างอุทธรณ์ แพรยังต้องปฏิบัติตามคำสั่งพักใช้</b><span>การอุทธรณ์คำสั่งไม่เป็นการทุเลาการปฏิบัติตามคำสั่งลงโทษ เว้นแต่คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีจะสั่งเป็นอย่างอื่น <span class="law x12-law">ม.55 วรรคสาม</span></span></div></div>
+    </div>
+    <p class="note"><span data-ico="lock"></span><span>แพรถูกลงโทษตาม (3) ถ้าทำการประกอบวิชาชีพบัญชีในระหว่างนั้น เข้ามาตรา 70 ซึ่งโทษอยู่ท้ายขั้นที่ 4 <span class="law">ม.70</span></span></p>
+    <div class="endc"><span class="ico" data-ico="flag"></span><div><b>คำวินิจฉัยของคณะกรรมการกำกับดูแลฯ เป็นที่สุด</b><span>คณะกรรมการชุดนี้มีปลัดกระทรวงพาณิชย์เป็นประธานกรรมการ และมีหน้าที่พิจารณาอุทธรณ์ของผู้กล่าวหา หรือผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ <span class="law">ม.55 วรรคสอง · ม.59 · ม.60 (5)</span></span></div></div>
+    <p class="note"><span data-ico="info"></span><span>อุทธรณ์ตามมาตรา 55 ใช้กับคำสั่งตามมาตรา 54 คือคำสั่งลงโทษ และคำสั่งยกคำกล่าวหา ส่วนคำสั่งเกี่ยวกับคำคัดค้านในขั้นที่ 3 เป็นที่สุดตามข้อ 12 <span class="law">ม.55 วรรคหนึ่ง</span></span></p>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="shield"></span><span>ถูกกล่าวหายังไม่ใช่ถูกลงโทษ คำสั่งลงโทษมีได้เมื่อคณะกรรมการจรรยาบรรณพิจารณาจากผลการสอบสวน แล้วมีมติว่าประพฤติผิด</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>สิทธิการกล่าวหา ไม่พ้น 1 ปีนับแต่วันที่รู้เรื่องและรู้ตัวผู้ประพฤติผิด และไม่เกิน 3 ปีนับแต่วันที่มีการประพฤติผิด</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>คำแก้ข้อกล่าวหา ทำได้ภายใน 15 วันนับแต่วันที่ได้รับสำเนาคำกล่าวหา ส่วนการคัดค้านอนุกรรมการ ต้องทำภายใน 7 วันนับแต่วันรับทราบคำสั่งแต่งตั้ง หรือวันทราบเหตุแห่งการคัดค้าน</span></li>
+      <li><span class="ico" data-ico="mail"></span><span>ผู้กล่าวหาถอนเรื่อง ไม่เป็นเหตุให้ระงับการดำเนินการ</span></li>
+      <li><span class="ico" data-ico="lock"></span><span>โทษตามมาตรา 49 มี (1) ตักเตือนเป็นหนังสือ (2) ภาคทัณฑ์ (3) พักใช้ใบอนุญาต พักการขึ้นทะเบียน หรือห้ามประกอบวิชาชีพบัญชีด้านที่ประพฤติผิด ข้อนี้มีกำหนดเวลาไม่เกิน 3 ปี (4) เพิกถอนใบอนุญาต เพิกถอนการขึ้นทะเบียน หรือสั่งให้พ้นจากการเป็นสมาชิกสภาฯ</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>อุทธรณ์ต่อคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง คำวินิจฉัยเป็นที่สุด ระหว่างอุทธรณ์ยังต้องปฏิบัติตามคำสั่งลงโทษ เว้นแต่คณะกรรมการชุดนี้จะสั่งเป็นอย่างอื่น</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>ม. คือมาตราของพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
+      <li>เลขข้อที่ไม่ได้บอกชื่อกฎหมาย มาจากข้อบังคับสภาวิชาชีพบัญชี (ฉบับที่ 12) เรื่อง การพิจารณาเกี่ยวกับจรรยาบรรณ พ.ศ. 2549 ซึ่งแก้ไขเพิ่มเติมโดยข้อบังคับสภาวิชาชีพบัญชี (ฉบับที่ 21) พ.ศ. 2554</li>
+      <li>ข้อกำหนด พ.ศ. 2550 คือข้อกำหนดสภาวิชาชีพบัญชี เรื่อง หลักเกณฑ์และวิธีการสอบสวนของคณะอนุกรรมการสอบสวน พ.ศ. 2550</li>
+      <li>คณะกรรมการกำกับดูแลฯ คือคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี · “สภาฯ” คือสภาวิชาชีพบัญชี</li>
+      <li>แพรและผู้กล่าวหาเป็นกรณีสมมติ หน้านี้ไม่ได้บอกว่าเรื่องที่กล่าวหาคืออะไร</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>สภาฯ ทำอะไร ใครกำกับ</b>
+    <p>คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี ที่รับอุทธรณ์ในบทนี้ กำกับสภาฯ เรื่องอะไรอีกบ้าง</p>
+    <a class="btn" href="law2v-r13.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function law(t) { return ' <span class="law x12-law">' + t + '</span>'; }
+  function cg(id, kind, ico, b, s) { var e = $(id); e.className = 'cg' + (kind ? ' ' + kind : ''); e.querySelector('.ico').innerHTML = V.icon(ico); $(id + 'b').textContent = b; $(id + 's').innerHTML = s; }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  function gz(id, val, max, ok, txt) { $(id).className = 'gz' + (ok ? ' ok' : ''); $(id + 'v').textContent = val; $(id).querySelector('.bar i').style.width = Math.min(100, val / max * 100) + '%'; $(id + 's').textContent = txt; }
+  V.spy('#steps');
+
+  /* เส้นเวลา: ขั้นของเรื่อง → ใครทำอะไรได้ (พ.ร.บ. ม.53–55 ม.60 (5) · ข้อบังคับ (ฉบับที่ 12) ข้อ 10 14–18 23–25)
+     แถว L = [มีสิ่งที่ทำได้ในขั้นนี้ไหม, ข้อความ, ป้ายกฎหมาย] เรียง ผู้กล่าวหา · แพร · ผู้พิจารณา */
+  var NO = 'ยังไม่มีมติ ยังไม่มีคำสั่งลงโทษ';
+  var ST = [
+    { k: 'ยื่นคำกล่าวหา', has: 0, t: NO, s: 'มีเพียงคำกล่าวหาที่ยื่นเข้ามา ประธานยังไม่ได้ตรวจว่าจะรับหรือไม่', who: 'ประธานคณะกรรมการจรรยาบรรณ', L: [
+      [1, 'ยื่นคำกล่าวหาตามแบบของสภาวิชาชีพบัญชี ต่อประธานคณะกรรมการจรรยาบรรณ หรือส่งทางไปรษณีย์ลงทะเบียน', 'ข้อ 14 · ข้อ 15'],
+      [0, 'ยังไม่ได้รับสำเนาคำกล่าวหา สำเนาส่งให้เมื่อรับเป็นคำกล่าวหาแล้ว', 'ข้อ 18'],
+      [1, 'ตรวจสอบคำกล่าวหาโดยไม่ชักช้า หรือมอบหมายผู้อื่นตรวจ', 'ข้อ 16']] },
+    { k: 'ตรวจและรับเป็นคำกล่าวหา', has: 0, t: NO, s: 'รับเป็นคำกล่าวหา ทำให้เรื่องเข้าสู่การสอบสวน มติมีได้หลังการสอบสวน', who: 'ประธานคณะกรรมการจรรยาบรรณ', L: [
+      [0, 'คำกล่าวหาที่ยื่นไว้ผ่านการตรวจ และประธานรับแล้ว', 'ข้อ 17'],
+      [1, 'ได้รับสำเนาคำกล่าวหา พร้อมแจ้งสิทธิยื่นคำแก้ข้อกล่าวหา คือหนังสือที่แพรชี้แจงแก้ข้อกล่าวหา ทำได้ภายใน 15 วันนับแต่วันที่ได้รับสำเนา', 'ข้อ 18 · ข้อ 24'],
+      [1, 'เห็นว่าคำกล่าวหามีมูล คือมีเค้าว่าอาจเป็นจริง จึงรับเป็นคำกล่าวหา แล้วส่งสำเนาให้ผู้ถูกกล่าวหา', 'ข้อ 17 · ข้อ 18']] },
+    { k: 'สอบสวน', has: 0, t: NO, s: 'คณะอนุกรรมการสอบสวนเสนอได้เพียงความเห็น ยังไม่ใช่คำสั่ง', who: 'คณะกรรมการจรรยาบรรณ หรือคณะอนุกรรมการสอบสวน', L: [
+      [1, 'อ้างพยานหลักฐาน และขอตรวจดูเอกสารที่จำเป็นต้องรู้เพื่อการโต้แย้งหรือชี้แจงได้', 'ข้อ 23 · ข้อ 25'],
+      [1, 'ทำคำแก้ข้อกล่าวหา อ้างพยานหลักฐาน และขอตรวจดูเอกสารที่จำเป็นต้องรู้ได้', 'ข้อ 23 · ข้อ 24 · ข้อ 25'],
+      [1, 'สอบสวนเอง หรือแต่งตั้งคณะอนุกรรมการทำแทน สอบสวนเสร็จ คณะอนุกรรมการเสนอเรื่องพร้อมความเห็น กรรมการจรรยาบรรณหรืออนุกรรมการอาจถูกคัดค้านได้', 'ม.53 วรรคสี่ · วรรคหก · ข้อ 9']] },
+    { k: 'มติและคำสั่ง', has: 1, t: 'มติและคำสั่งเกิดที่ขั้นนี้', s: 'มีมติว่าประพฤติผิด ให้สั่งลงโทษ มีมติว่ามิได้ประพฤติผิด ให้สั่งยกคำกล่าวหา', who: 'คณะกรรมการจรรยาบรรณ', L: [
+      [0, 'ได้รับแจ้งคำสั่งเป็นหนังสือโดยเร็ว', 'ม.54 วรรคสาม'],
+      [0, 'ได้รับแจ้งคำสั่งเป็นหนังสือโดยเร็ว', 'ม.54 วรรคสาม'],
+      [1, 'พิจารณาจากผลการสอบสวนแล้วมีมติ จากนั้นออกคำสั่งลงโทษ หรือคำสั่งยกคำกล่าวหา', 'ม.54']] },
+    { k: 'อุทธรณ์', has: 1, t: 'มีคำสั่งแล้ว ยังอุทธรณ์ได้', s: 'ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง', who: 'คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี', L: [
+      [1, 'อุทธรณ์คำสั่งได้ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง', 'ม.55 วรรคหนึ่ง'],
+      [1, 'ถ้าถูกสั่งลงโทษ อุทธรณ์ได้ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง', 'ม.55 วรรคหนึ่ง'],
+      [1, 'พิจารณาอุทธรณ์ คำวินิจฉัยของคณะกรรมการกำกับดูแลฯ ให้เป็นที่สุด', 'ม.60 (5) · ม.55 วรรคสอง']] }];
+  V.pick('stage', function (v) { var d = ST[v];
+    $('st').className = 'x12-st' + (d.has ? ' x12-has' : ''); $('stI').innerHTML = V.icon(d.has ? 'flag' : 'clock');
+    $('stT').textContent = d.t; $('stS').textContent = d.s;
+    $('stK').textContent = 'ขั้นที่ ' + (v + 1) + ' · ' + d.k + ' ใครทำอะไรได้';
+    $('ln2b').textContent = d.who;
+    d.L.forEach(function (r, i) { $('ln' + i).className = 'x12-lane' + (r[0] ? '' : ' x12-dim'); $('ln' + i + 'w').hidden = !!r[0]; $('ln' + i + 't').innerHTML = r[1] + law(r[2]); });
+    var go = $('stGo'); go.href = '#s' + (v + 1); go.textContent = 'เลื่อนไปอ่านขั้นที่ ' + (v + 1) + ' ให้ละเอียด ›'; });
+
+  /* ขั้นที่ 1: พ.ร.บ. ม.53 วรรคสอง หนึ่งปีนับแต่วันที่รู้เรื่องและรู้ตัว · ไม่เกินสามปีนับแต่วันที่มีการประพฤติผิด · ข้อ 17 วรรคสอง
+     ค่าที่ให้เลือกเลี่ยงวันขอบ (ไม่มี 12 หรือ 36 เดือนพอดี) */
+  var KNOW = [6, 30], WAIT = [8, 14], kn = 0, wt = 0;
+  function draw1() { var k = KNOW[kn], w = WAIT[wt], tot = k + w, ok0 = w <= 12, ok1 = tot <= 36;
+    gz('g0', w, 18, ok0, ok0 ? 'ยังไม่พ้น 1 ปี' : 'พ้น 1 ปีแล้ว เกินมา ' + (w - 12) + ' เดือน');
+    gz('g1', tot, 54, ok1, ok1 ? 'ยังไม่เกิน 3 ปี' : 'เกิน 3 ปีแล้ว เกินมา ' + (tot - 36) + ' เดือน');
+    var s = ok0 && ok1 ? w + ' เดือนนับแต่วันที่รู้ ยังไม่พ้น 1 ปี และ ' + tot + ' เดือนนับแต่วันเกิดเหตุ ยังไม่เกิน 3 ปี คำกล่าวหาเรื่องของแพรจึงไปต่อได้'
+      : !ok0 && ok1 ? 'รู้แล้วรอถึง ' + w + ' เดือน พ้น 1 ปีนับแต่วันที่รู้ แม้นับแต่วันเกิดเหตุเพิ่ง ' + tot + ' เดือน'
+      : ok0 && !ok1 ? 'ยื่นหลังรู้เพียง ' + w + ' เดือน แต่นับแต่วันเกิดเหตุรวม ' + tot + ' เดือน เกิน 3 ปี เพิ่งรู้ก็ยื่นไม่ได้แล้ว'
+      : 'รู้แล้วรอถึง ' + w + ' เดือน พ้น 1 ปี และนับแต่วันเกิดเหตุรวม ' + tot + ' เดือน เกิน 3 ปี พ้นทั้งสองข้อ';
+    gate('gate1', ok0 && ok1, ok0 && ok1 ? 'ยังยื่นคำกล่าวหาได้' : 'สิทธิการกล่าวหาสิ้นสุดแล้ว', s);
+    if (ok0 && ok1) cg('n1', 'ok', 'check', 'ขั้นที่ 2 ประธานตรวจสอบคำกล่าวหา', 'ยื่นภายในกำหนดแล้ว ยังต้องผ่านการตรวจของประธานคณะกรรมการจรรยาบรรณก่อน' + law('ข้อ 16'));
+    else cg('n1', 'lock', 'lock', 'เรื่องไม่ไปถึงการสอบสวน', 'เมื่อสิทธิกล่าวหาสิ้นสุดลง ให้มีคำสั่งไม่รับคำกล่าวหา แจ้งผู้กล่าวหาโดยเร็ว พร้อมแสดงเหตุผล' + law('ข้อ 17 วรรคสอง')); }
+  V.pick('know', function (v) { kn = v; draw1(); });
+  V.pick('wait', function (v) { wt = v; draw1(); });
+
+  /* ขั้นที่ 2: ข้อ 16 วรรคสอง วรรคสาม · ข้อ 17 · ข้อ 18 */
+  var CHK = [
+    ['ok', 'check', 'แพรได้รับสำเนาคำกล่าวหา', 'รับเป็นคำกล่าวหาแล้ว ให้ส่งสำเนาคำกล่าวหาให้ผู้ถูกกล่าวหา พร้อมแจ้งสิทธิในการยื่นคำแก้ข้อกล่าวหา', 'ข้อ 17 · ข้อ 18'],
+    ['lock', 'lock', 'เรื่องไม่ไปถึงการสอบสวน', 'ให้มีคำสั่งไม่รับคำกล่าวหา แจ้งผู้กล่าวหาโดยเร็ว พร้อมแสดงเหตุผลแห่งการไม่รับ', 'ข้อ 17 วรรคสอง'],
+    ['lock', 'lock', 'ไม่รับไว้พิจารณา', 'ข้อ 16 เขียนว่า คำกล่าวหาที่ไม่ปรากฏชื่อตัว ชื่อสกุล และที่อยู่ของผู้กล่าวหา และชื่อตัว ชื่อสกุลของผู้ถูกกล่าวหา คณะกรรมการจรรยาบรรณจะไม่รับไว้พิจารณา', 'ข้อ 16 วรรคสาม']];
+  V.pick('chk', function (v) { var c = CHK[v];
+    [0, 1, 2].forEach(function (i) { $('rt' + i).className = 'ty' + (i === 2 ? ' x12-wide' : '') + (i === v ? ' on' : ''); });
+    cg('c2', c[0], c[1], c[2], c[3] + law(c[4])); });
+
+  /* ขั้นที่ 3: ข้อ 20 วรรคห้า · ข้อ 23 · ข้อ 27 · พ.ร.บ. ม.53 วรรคเจ็ด */
+  V.togs('inv', function (s) {
+    if (s.ans) cg('a0', 'ok', 'check', 'คำแก้ข้อกล่าวหาของแพรอยู่ในการพิจารณา', 'เมื่อสอบสวนเสร็จ คณะอนุกรรมการทำความเห็นเสนอคณะกรรมการจรรยาบรรณ ในความเห็นต้องมีสรุปคำกล่าวหา คำแก้ข้อกล่าวหา และข้อเท็จจริงจากการสอบสวน' + law('ม.53 วรรคหก · ข้อ 27'));
+    else cg('a0', 'lock', 'x', 'ไม่มีคำแก้ข้อกล่าวหาของแพร', 'คณะกรรมการจรรยาบรรณหรือคณะอนุกรรมการจะพิจารณาและวินิจฉัยไปตามพยานหลักฐานเท่าที่มีอยู่' + law('ข้อ 20'));
+    if (s.wd) cg('a1', 'ok x12-keep', 'mail', 'ถอนเรื่องแล้ว การดำเนินการไม่ระงับ', 'การถอนเรื่องการกล่าวหาที่ยื่นไว้แล้ว ไม่เป็นเหตุให้ระงับการดำเนินการ' + law('ม.53 วรรคเจ็ด'));
+    else cg('a1', 'ok', 'check', 'การสอบสวนเดินต่อ', 'คณะกรรมการจรรยาบรรณหรือคณะอนุกรรมการต้องสอบสวนให้ได้ความเป็นจริง' + law('ข้อ 23'));
+    $('invR').className = 'result' + (s.ans ? ' ok' : '');
+    $('invR').textContent = s.ans && !s.wd ? 'เรื่องของแพรตอนนี้ มีคำแก้ข้อกล่าวหา และการสอบสวนเดินต่อ'
+      : !s.ans && s.wd ? 'เปลี่ยนทั้งสองข้อแล้ว ก็ยังไม่มีข้อไหนเป็นเหตุให้การสอบสวนหยุด'
+      : !s.ans ? 'แพรไม่ยื่นคำแก้ข้อกล่าวหา การสอบสวนไม่หยุด และวินิจฉัยไปตามพยานหลักฐานเท่าที่มีอยู่'
+      : 'ผู้กล่าวหาถอนเรื่อง ไม่เป็นเหตุให้การสอบสวนหยุด'; });
+
+  /* ขั้นที่ 4: พ.ร.บ. ม.54 · ม.55 วรรคหนึ่ง (ผู้กล่าวหา หรือผู้ซึ่งถูกสั่งลงโทษ อุทธรณ์คำสั่งตามมาตรา 54) */
+  V.pick('res', function (v) { var pun = v === 1;
+    $('o0').className = 'tr' + (pun ? '' : ' now'); $('o1').className = 'tr' + (pun ? ' now' : '');
+    if (pun) {
+      cg('r0', 'lock', 'flag', 'แพรได้รับคำสั่งลงโทษ', 'ลงโทษตามมาตรา 49 แจ้งผู้กล่าวหาและแพรเป็นหนังสือโดยเร็ว' + law('ม.54 วรรคหนึ่ง · วรรคสาม'));
+      cg('r1', 'ok', 'check', 'แพรอุทธรณ์ได้', 'ในฐานะผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ' + law('ม.55 วรรคหนึ่ง'));
+      cg('r2', 'ok', 'check', 'ผู้กล่าวหาอุทธรณ์ได้', 'มาตรา 55 เขียนว่า ผู้กล่าวหาหรือผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ มีสิทธิอุทธรณ์คำสั่งตามมาตรา 54' + law('ม.55 วรรคหนึ่ง'));
+    } else {
+      cg('r0', 'ok', 'check', 'แพรได้รับคำสั่งยกคำกล่าวหา', 'เป็นคำสั่งหลังสอบสวนและมีมติแล้ว คนละคำสั่งกับคำสั่งไม่รับคำกล่าวหาในขั้นที่ 2 ซึ่งออกตอนตรวจคำกล่าวหา แจ้งผู้กล่าวหาและแพรเป็นหนังสือโดยเร็ว' + law('ม.54 วรรคสอง · วรรคสาม'));
+      cg('r1', 'x12-na', 'info', 'แพรไม่มีคำสั่งลงโทษให้อุทธรณ์', 'มาตรา 55 ให้สิทธิอุทธรณ์แก่ผู้กล่าวหา กับผู้ซึ่งถูกสั่งลงโทษ แพรไม่ได้ถูกสั่งลงโทษ' + law('ม.55 วรรคหนึ่ง'));
+      cg('r2', 'ok', 'check', 'ผู้กล่าวหาอุทธรณ์ได้', 'คำสั่งยกคำกล่าวหาเป็นคำสั่งตามมาตรา 54 ผู้กล่าวหาจึงอุทธรณ์ได้' + law('ม.55 วรรคหนึ่ง'));
+    } });
+
+  /* ขั้นที่ 5: พ.ร.บ. ม.55 วรรคหนึ่ง สามสิบวันนับแต่วันที่ได้รับคำสั่ง (ตัวบทไม่ได้เขียนผลของการยื่นเกินกำหนด จอจึงบอกเพียงว่าเกิน)
+     วรรคสาม ไม่ทุเลา เว้นแต่สั่งเป็นอย่างอื่น เป็นภาพนิ่งใน HTML ไม่มีสวิตช์ */
+  var AP = [20, 45];
+  V.pick('ap', function (v) { var d = AP[v], ok = d <= 30;
+    gz('g5', d, 45, ok, ok ? 'ยังอยู่ใน 30 วัน' : 'เกิน 30 วันแล้ว เกินมา ' + (d - 30) + ' วัน');
+    var r = $('apR'); r.className = 'result' + (ok ? ' ok' : '');
+    r.textContent = ok ? 'ยื่นเมื่อผ่านไป ' + d + ' วัน อยู่ในสามสิบวันนับแต่วันที่ได้รับคำสั่ง แพรใช้สิทธิอุทธรณ์ได้' : 'ยื่นเมื่อผ่านไป ' + d + ' วัน เกินสามสิบวันที่มาตรา 55 ให้สิทธิไว้'; });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'ผู้ทำบัญชีคนหนึ่งถูกกล่าวหาว่าประพฤติผิดจรรยาบรรณ คณะอนุกรรมการสอบสวนเสร็จแล้ว และทำความเห็นเสนอให้ลงโทษภาคทัณฑ์', q: 'ตอนนี้ผู้ทำบัญชีคนนี้ถูกลงโทษแล้วหรือยัง', o: [
+      ['ถูกลงโทษแล้ว เพราะคณะอนุกรรมการสอบสวนเสร็จและเสนอให้ลงโทษ', 0, 'คณะอนุกรรมการเสนอได้เพียงความเห็น ซึ่งมีข้อเสนอในการลงโทษหรือยกคำกล่าวหา คำสั่งลงโทษเป็นของคณะกรรมการจรรยาบรรณ (ข้อ 27 · มาตรา 54)'],
+      ['ยัง ต้องรอคณะกรรมการจรรยาบรรณพิจารณาจากผลการสอบสวนแล้วมีมติ', 1, 'มีมติว่าประพฤติผิดเมื่อใด คณะกรรมการจรรยาบรรณจึงมีคำสั่งลงโทษ ก่อนหน้านั้นมีเพียงความเห็นของคณะอนุกรรมการ (มาตรา 53 วรรคหก · มาตรา 54)'],
+      ['ยัง ต้องรอคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีออกคำสั่ง', 0, 'คณะกรรมการกำกับดูแลฯ เข้ามาเมื่อมีการอุทธรณ์คำสั่ง ผู้ออกคำสั่งลงโทษคือคณะกรรมการจรรยาบรรณ (มาตรา 54 · มาตรา 55)']] },
+    { f: 'ผู้ถือหุ้นคนหนึ่งจะยื่นคำกล่าวหาผู้สอบบัญชี เรื่องที่จะกล่าวหาเกิดมาแล้ว 2 ปี', q: 'เขายังยื่นคำกล่าวหาได้ไหม', o: [
+      ['ได้ เพราะยังไม่เกิน 3 ปีนับแต่วันที่มีการประพฤติผิด', 0, 'สามปีเป็นเพียงกำหนดหนึ่งในสองกำหนด ยังต้องไม่พ้นหนึ่งปีนับแต่วันที่รู้เรื่องและรู้ตัวผู้ประพฤติผิดด้วย ซึ่งโจทย์ยังไม่ได้บอก (มาตรา 53 วรรคสอง)'],
+      ['ไม่ได้ เพราะเกิน 1 ปีแล้ว', 0, 'หนึ่งปีนับแต่วันที่ผู้ได้รับความเสียหายหรือผู้กล่าวหารู้เรื่องและรู้ตัวผู้ประพฤติผิด ไม่ได้นับแต่วันที่มีการประพฤติผิด โจทย์ยังไม่ได้บอกวันที่รู้ (มาตรา 53 วรรคสอง)'],
+      ['ยังตอบไม่ได้ ต้องรู้ก่อนว่าเขารู้เรื่องและรู้ตัวผู้ประพฤติผิดเมื่อไร', 1, 'สองปียังไม่เกินกำหนดสามปี จึงเหลือกำหนดหนึ่งปีที่ต้องดู ซึ่งนับแต่วันที่รู้เรื่องและรู้ตัวผู้ประพฤติผิด ต้องรู้วันนั้นก่อนจึงตอบได้ (มาตรา 53 วรรคสอง)']] },
+    { f: 'คณะกรรมการจรรยาบรรณมีมติว่าผู้สอบบัญชีคนหนึ่งมิได้ประพฤติผิด และสั่งยกคำกล่าวหา ผู้กล่าวหาได้รับคำสั่งมาแล้ว 12 วัน', q: 'ผู้กล่าวหายังทำอะไรได้', o: [
+      ['ทำอะไรไม่ได้แล้ว เพราะคำสั่งของคณะกรรมการจรรยาบรรณเป็นที่สุด', 0, 'ที่เป็นที่สุดคือคำวินิจฉัยของคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี คำสั่งของคณะกรรมการจรรยาบรรณยังอุทธรณ์ได้ (มาตรา 55)'],
+      ['อุทธรณ์ต่อคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี เพราะยังไม่พ้น 30 วันนับแต่วันที่ได้รับคำสั่ง', 1, 'ผู้กล่าวหามีสิทธิอุทธรณ์คำสั่งตามมาตรา 54 ซึ่งรวมคำสั่งยกคำกล่าวหา ภายในสามสิบวันนับแต่วันที่ได้รับคำสั่ง (มาตรา 55 วรรคหนึ่ง)'],
+      ['อุทธรณ์ไม่ได้ เพราะมาตรา 55 ให้สิทธิเฉพาะคนที่ถูกสั่งลงโทษ', 0, 'มาตรา 55 ให้สิทธิอุทธรณ์ทั้งแก่ผู้กล่าวหา และผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ (มาตรา 55 วรรคหนึ่ง)']] }
+  ]);
+})();
+</script>
+</body>
+</html>

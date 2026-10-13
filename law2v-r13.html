@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>สภาฯ ทำอะไร ใครกำกับ | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สถานี 13 · สไตล์เฉพาะหน้า ทุก class ขึ้นต้น x13- */
+.steps.x13-steps { grid-template-columns:repeat(4,1fr); }
+.x13-tag { position:absolute; top:-11px; right:10px; z-index:1; padding:1px 10px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:12px; font-weight:700; white-space:nowrap; }
+.x13-tag:empty { display:none; }
+.x13-dim { opacity:.45; }
+.x13-gl { padding:4px 4px 0; font-size:12px; font-weight:700; line-height:1.35; color:var(--hue-ink); }
+.x13-fold { font-size:14px; line-height:1.45; }
+.x13-fold summary { display:flex; align-items:center; min-height:44px; cursor:pointer; font-weight:700; color:var(--hue-ink); }
+.x13-fold ul { margin:0; padding:0; list-style:none; display:grid; gap:4px; }
+.x13-fold li { display:grid; grid-template-columns:32px minmax(0,1fr); gap:4px; }
+.x13-fbox { padding:0 14px; border-radius:16px; box-shadow:inset 0 0 0 1.5px var(--line); }
+.x13-fbox[open] { padding-bottom:12px; }
+.x13-n { font-size:12px; font-weight:700; color:var(--hue-ink); padding-top:2px; }
+.fig a.x13-lk { font-weight:700; color:var(--hue-ink); }
+
+/* แผนที่ของบท: สภาฯ → คณะกรรมการกำกับดูแลฯ → รัฐมนตรี */
+.x13-head { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; padding:12px 14px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); }
+.x13-head b { font-family:var(--display); font-size:17px; line-height:1.4; }
+.x13-more { font-size:14px; line-height:1.45; }
+.x13-org .nd { max-width:none; padding-top:16px; transition:opacity .2s ease, box-shadow .2s ease; }
+.x13-org .ln { height:26px; transition:background .2s ease; }
+.x13-org .ln.x13-live { background:var(--hue); }
+.x13-org .ln.x13-if { background:repeating-linear-gradient(to bottom, var(--hue) 0 6px, transparent 6px 12px); }
+.x13-council { position:relative; width:100%; display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px 12px 6px; border-radius:22px; background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); }
+.x13-ct { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; min-height:44px; padding:0 2px 2px; color:var(--hue-ink); text-decoration:none; }
+.x13-ct b { display:block; font-family:var(--display); font-size:19px; line-height:1.25; }
+.x13-ct small { display:block; font-size:13px; line-height:1.4; }
+.x13-ct .ico { background:var(--hue); color:#fff; }
+.x13-rule { padding:8px 12px; border-radius:12px; background:var(--white); color:var(--hue-ink); font-size:14px; font-weight:600; line-height:1.45; }
+.x13-b { position:relative; display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--white); transition:opacity .2s ease, box-shadow .2s ease; }
+.x13-b b { display:block; font-family:var(--display); font-size:15px; line-height:1.3; }
+.x13-b small { display:block; font-size:13px; line-height:1.4; color:var(--muted); }
+.x13-b .ico { background:var(--hue-soft); }
+.x13-b.x13-main { box-shadow:inset 0 0 0 2px var(--hue); }
+.x13-b.x13-main .ico { background:var(--hue); color:#fff; }
+.x13-why { display:block; margin-top:6px; padding-top:6px; border-top:2px dashed var(--line); font-size:14px; line-height:1.45; color:var(--ink); }
+.x13-why:empty { display:none; }
+.x13-org a.go { justify-self:start; display:inline-flex; align-items:center; min-height:44px; padding:0 4px; text-decoration:none; }
+.x13-org .x13-ov { background:var(--ink); color:#fff; }
+.x13-org .x13-ov small { color:rgba(255,255,255,.86); }
+.x13-org .x13-ov .go { color:var(--sun); }
+.x13-org .x13-ov .law { box-shadow:none; }
+.x13-org .x13-ov .x13-why { color:#fff; border-top-color:rgba(255,255,255,.4); }
+.x13-org .x13-min { background:var(--gold-soft); }
+.x13-org .x13-min .ico { color:#6A5412; }
+.x13-hit, .x13-b.x13-hit, .x13-org a.x13-hit:hover { box-shadow:0 0 0 4px var(--sun); }
+.x13-miss, .x13-org a.x13-miss:hover { box-shadow:none; outline:2px dashed var(--sun); outline-offset:-2px; }
+
+/* ส่วนที่ 1: อำนาจหน้าที่ รายได้ ขอบเขตวิชาชีพ */
+.x13-nums { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:6px; }
+.x13-nums i { display:grid; place-items:center; min-height:34px; border-radius:99px; background:var(--soft); color:var(--muted); font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; transition:background-color .2s ease, color .2s ease; }
+.x13-nums i.x13-lit { background:var(--hue); color:#fff; }
+.x13-pg { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:12px; border-radius:18px; background:var(--soft); }
+.x13-pg .ico, .x13-bd .ico, .x13-cfh .ico, .x13-tool .ico { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; }
+.x13-pg .ico svg, .x13-bd .ico svg, .x13-cfh .ico svg, .x13-tool .ico svg { width:22px; height:22px; }
+.x13-pg b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
+.x13-pg ul { margin:4px 0 0; padding:0; list-style:none; display:grid; gap:4px; font-size:14px; line-height:1.4; }
+.x13-pg li { display:grid; grid-template-columns:32px minmax(0,1fr); gap:4px; }
+.x13-use { display:block; margin-top:6px; font-size:14px; font-weight:600; line-height:1.45; color:var(--hue-ink); }
+.x13-inc { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x13-inc div { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 8px; border-radius:16px; background:var(--gold-soft); text-align:center; font-size:13px; font-weight:600; line-height:1.35; }
+.x13-inc div:last-child { grid-column:1 / -1; }
+.x13-inc svg { width:26px; height:26px; color:#6A5412; }
+.x13-four { font-size:14px; line-height:1.45; color:var(--muted); }
+.x13-types { grid-template-columns:minmax(0,1fr); }
+.x13-types .ty { grid-template-columns:46px minmax(0,1fr); justify-items:start; align-items:center; column-gap:12px; padding:10px 12px; text-align:left; }
+.x13-types .ty b, .x13-types .ty small { display:block; }
+.x13-types .ty.x13-wait { opacity:1; background:var(--white); outline:2px dashed var(--hue); outline-offset:-2px; }
+.x13-req { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:14px; border-radius:20px; background:var(--hue-soft); color:var(--hue-ink); }
+.x13-req b { font-family:var(--display); font-size:19px; line-height:1.3; }
+.x13-req span { font-size:15px; line-height:1.5; }
+.x13-req .x13-who { font-size:13px; font-weight:700; }
+
+/* ส่วนที่ 2: คณะกรรมการในสภาฯ */
+.x13-cf { position:relative; display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px 10px 10px; border-radius:22px; background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); transition:box-shadow .2s ease; }
+.x13-cf.x13-own { box-shadow:inset 0 0 0 2px var(--hue), 0 0 0 4px var(--sun); }
+.x13-cfh { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:0 2px; color:var(--hue-ink); }
+.x13-cfh b { display:block; font-family:var(--display); font-size:18px; line-height:1.3; }
+.x13-cfh p { font-size:14px; line-height:1.45; }
+.x13-bd { position:relative; display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:12px; border-radius:18px; background:var(--white); transition:opacity .2s ease, box-shadow .2s ease; }
+.x13-bd b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+.x13-bd p { font-size:14px; line-height:1.45; }
+.x13-bd p + p { margin-top:6px; }
+.x13-bd.x13-pick { box-shadow:inset 0 0 0 3px var(--hue); }
+.x13-bd.x13-rest { opacity:.5; }
+
+/* ส่วนที่ 3: คณะกรรมการกำกับดูแลฯ */
+.x13-duo { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x13-duo div { display:grid; align-content:start; gap:4px; padding:12px 10px; border-radius:18px; text-align:center; font-size:13px; line-height:1.4; }
+.x13-duo div:first-child { background:var(--hue-soft); color:var(--hue-ink); }
+.x13-duo div:last-child { background:var(--ink); color:#fff; }
+.x13-duo div:last-child .law { box-shadow:none; }
+.x13-duo small { font-size:12px; font-weight:700; }
+.x13-duo b { font-family:var(--display); font-size:18px; line-height:1.25; }
+.x13-duo .law { justify-self:center; }
+.x13-seats { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:12px; border-radius:20px; background:var(--soft); }
+.x13-sr { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; padding:10px 12px; border-radius:14px; background:var(--white); }
+.x13-sr b { font-family:var(--display); font-size:16px; line-height:1.3; }
+.x13-sr span { font-size:14px; line-height:1.45; }
+.x13-dots { display:flex; flex-wrap:wrap; gap:5px; }
+.x13-dots i { width:20px; height:20px; border-radius:50%; background:var(--ink); }
+.x13-dots i.x13-g { background:var(--sun); box-shadow:inset 0 0 0 2px var(--ink); }
+.x13-dir { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; gap:4px; padding:12px; border-radius:20px; background:var(--soft); }
+.x13-dn { width:100%; display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--white); font-family:var(--display); font-weight:800; font-size:16px; line-height:1.3; transition:opacity .2s ease; }
+.x13-dn .ico { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--hue-soft); color:var(--hue); }
+.x13-dn .ico svg { width:22px; height:22px; }
+.x13-dn.x13-dk { background:var(--ink); color:#fff; }
+.x13-dn.x13-dk .ico { background:rgba(255,255,255,.14); color:var(--sun); }
+.x13-ar { display:grid; grid-template-columns:28px minmax(0,auto); gap:8px; align-items:center; min-height:44px; font-size:13px; font-weight:700; line-height:1.35; color:var(--hue-ink); }
+.x13-ar svg { width:28px; height:44px; color:var(--hue); transition:transform .2s ease; }
+.x13-dir.x13-up .x13-ar svg { transform:rotate(180deg); }
+.x13-dir.x13-none .x13-ar { visibility:hidden; }
+
+/* ส่วนที่ 4: สั่งแก้ไข เสนอให้พ้นจากตำแหน่ง กรรมการชั่วคราว */
+.x13-tools { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x13-tool { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:10px 12px; border-radius:18px; background:var(--soft); font-size:15px; line-height:1.4; }
+.x13-tool .ico { background:var(--ink); }
+.x13-cause button[aria-pressed="true"], .x13-dec button[aria-pressed="true"] { background:var(--gold-soft); color:var(--ink); }
+.x13-cause button[aria-pressed="true"]::before, .x13-dec button[aria-pressed="true"]::before { background-color:var(--ink); }
+.x13-flow { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; }
+.x13-fl { width:100%; padding:10px 14px; border-radius:16px; background:var(--soft); text-align:center; font-weight:700; font-size:15px; line-height:1.35; opacity:.5; transition:opacity .2s ease, background-color .2s ease, color .2s ease; }
+.x13-fl small { display:block; font-weight:500; font-size:13px; }
+.x13-fa { width:4px; height:16px; border-radius:2px; background:var(--line); transition:background-color .2s ease; }
+.x13-flow.x13-go .x13-fl { opacity:1; background:var(--hue-soft); color:var(--hue-ink); }
+.x13-flow.x13-go .x13-fa { background:var(--hue); }
+.x13-flow.x13-go .x13-fl.x13-end { background:var(--ink); color:#fff; }
+.x13-word { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--hue-soft); color:var(--hue-ink); }
+.x13-qt { font-family:var(--display); font-size:18px; font-weight:600; line-height:1.5; }
+.x13-qt b { padding:0 5px; border-radius:6px; background:var(--sun); color:var(--ink); font-weight:800; }
+.x13-word ul { margin:0; padding:0; list-style:none; display:grid; gap:4px; font-size:14px; line-height:1.45; }
+.x13-ex { padding:8px 12px; border-radius:12px; background:var(--white); font-size:14px; font-weight:600; line-height:1.45; }
+.x13-half { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:14px; border-radius:20px; background:var(--soft); }
+.x13-rl { font-size:13px; font-weight:700; color:var(--ink); }
+.x13-s8 { display:grid; grid-template-columns:repeat(8,minmax(0,1fr)); gap:6px; padding:6px; border-radius:99px; }
+.x13-s8.x13-first { background:var(--white); box-shadow:inset 0 0 0 2px var(--ink); transition:box-shadow .2s ease; }
+.x13-s8.x13-first.x13-short { box-shadow:inset 0 0 0 3px var(--bad); }
+.x13-s8 i { aspect-ratio:1; border-radius:50%; background:var(--ink); transition:background-color .2s ease; }
+.x13-s8 i.x13-out { background:transparent; border:2px dashed var(--bad); }
+.x13-key { display:flex; flex-wrap:wrap; gap:4px 14px; font-size:12px; font-weight:600; color:var(--muted); }
+.x13-key span { display:inline-flex; align-items:center; gap:5px; }
+.x13-key i { width:12px; height:12px; border-radius:50%; background:var(--ink); }
+.x13-key i.x13-out { background:transparent; border:2px dashed var(--bad); }
+.x13-res { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; padding:12px 14px; border-radius:16px; background:var(--white); font-size:15px; line-height:1.45; }
+.x13-res b { font-family:var(--display); font-size:18px; line-height:1.3; }
+.x13-res.x13-hot { background:var(--ink); color:#fff; }
+.x13-two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x13-two div { padding:12px 10px; border-radius:18px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; font-size:13px; font-weight:600; line-height:1.4; }
+.x13-two b { display:block; font-family:var(--display); font-weight:800; font-size:24px; line-height:1.15; }
+.x13-tmpbox { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; }
+.x13-result { padding:12px 14px; border-radius:16px; background:var(--soft); font-weight:700; text-align:center; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ บท 13 “สภาฯ ทำอะไร ใครกำกับ” (หัวข้อ R14 ของโครง v2) · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่ผู้เขียนเปิดเอง: sources/law2/1-profession/P00-พรบ-วิชาชีพบัญชี-2547-ฉบับล่าสุด-TFAC.pdf
+     มาตรา 4–11 · 22 · 27–36 · 38 · 42 · 44 · 45 · 47 · 53–55 · 59–64 · 71
+     กติกาเดียวทั้งหน้า: อำนาจหน้าที่เป็นของสภาฯ (ม.7) ผู้ลงมือทำคือคณะกรรมการสภาฯ (ม.28 (1) (2)) เว้นแต่งานที่ตัวบทระบุผู้ทำเป็นอย่างอื่น (ม.31 · ม.32 · ม.34 · ม.53)
+     ที่มา วาระ องค์ประชุมของแต่ละตำแหน่งอยู่ในบท 15 · ขั้นออกข้อบังคับและมาตรฐานอยู่ในบท 14 · ขั้นตอนเรื่องร้องเรียนอยู่ในบท 12
+     พราว พีท พี่แพม และจำนวนกรรมการ 16 คนในภาพมาตรา 64 เป็นกรณีสมมติ -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 13</p>
+    <h1>สภาฯ ทำอะไร ใครกำกับ</h1>
+    <p class="sub">“สภาฯ” ในบทนี้คือสภาวิชาชีพบัญชี เรื่องไหนเป็นหน้าที่ของสภาฯ และใครตรวจสอบสภาฯ อีกที แตะเรื่องที่เกิดขึ้น แล้วดูในแผนที่ว่าเรื่องไปถึงใคร</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพอาคารสภาวิชาชีพบัญชี มีแว่นขยายของผู้กำกับดูแลส่องอยู่">
+      <g transform="translate(34 30)">
+        <path d="M0 34L62 4l62 30z" fill="rgba(255,255,255,.92)"/>
+        <circle cx="62" cy="23" r="6" fill="#1C4257"/>
+        <rect x="6" y="38" width="112" height="8" rx="2" fill="rgba(255,255,255,.92)"/>
+        <g fill="rgba(255,255,255,.55)"><rect x="14" y="50" width="12" height="34" rx="3"/><rect x="42" y="50" width="12" height="34" rx="3"/><rect x="70" y="50" width="12" height="34" rx="3"/><rect x="98" y="50" width="12" height="34" rx="3"/></g>
+        <rect x="0" y="86" width="124" height="10" rx="2" fill="rgba(255,255,255,.92)"/>
+      </g>
+      <path d="M170 86C198 86 196 60 226 58" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 13"/>
+      <g transform="translate(226 14)">
+        <circle cx="38" cy="38" r="28" fill="rgba(255,255,255,.1)" stroke="#F0C84B" stroke-width="8"/>
+        <path d="M59 59l24 24" stroke="#F0C84B" stroke-width="11" stroke-linecap="round"/>
+        <path d="M26 39l9 9 17-19" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps x13-steps" id="steps" aria-label="ส่วนของบท">
+    <a href="#s1"><i>1</i>สภาฯ</a><a href="#s2"><i>2</i>ข้างในสภาฯ</a><a href="#s3"><i>3</i>ผู้กำกับดูแล</a><a href="#s4"><i>4</i>สั่งแล้วไม่ทำ</a>
+  </nav>
+
+  <!-- หน้าหลัก: แผนที่ใครทำอะไร · ผลของปุ่มอยู่ติดใต้ปุ่ม (x13-head) และเหตุผลขึ้นในกล่องของแผนที่เอง (x13-why) -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">แผนที่ของบท</span>
+    <h2 id="f0">สภาฯ ทำงาน อีกคณะหนึ่งกำกับดูแล</h2>
+    <p class="cap">พราวฝึกหัดงานครบ สอบผ่านครบ เป็นสมาชิกสามัญ และยื่นคำขอรับใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาตแล้ว ดูว่าเรื่องของพราวอยู่ที่ใคร แล้วแตะเรื่องอื่นเพื่อเปลี่ยน</p>
+    <p class="lbl">เรื่องที่เกิดขึ้น</p>
+    <div class="chips" data-pick="mat">
+      <button data-v="0" aria-pressed="true">พราวขอรับใบอนุญาต</button>
+      <button data-v="1">มีผู้กล่าวหาว่าผิดจรรยาบรรณ</button>
+      <button data-v="2">ปรับปรุงมาตรฐานการบัญชี</button>
+      <button data-v="3">ออกข้อบังคับค่าบำรุงสมาชิก</button>
+      <button data-v="4">พัฒนาวิชาชีพด้านการสอบบัญชี</button>
+      <button data-v="5">คณะกรรมการสภาฯ ทำสิ่งที่ขัดต่อข้อบังคับสภาฯ</button>
+    </div>
+    <div class="x13-head" id="rt" role="status"></div>
+    <div class="map x13-org">
+      <span class="pinp" id="pin"><span data-face="praw"></span>คำขอของพราวอยู่ที่นี่</span>
+      <div class="x13-council" id="nCo">
+        <span class="x13-tag" id="coTag"></span>
+        <a class="x13-ct" href="#s1"><span class="ico" data-x13="hall"></span><span><b>สภาวิชาชีพบัญชี</b><small>เป็นนิติบุคคล คือองค์กรที่มีสิทธิและหน้าที่ในชื่อของตัวเองได้ ตั้งขึ้นเพื่อส่งเสริมและพัฒนาวิชาชีพบัญชี <span class="law">ม.6</span></small></span></a>
+        <p class="x13-rule">อำนาจหน้าที่เป็นของสภาฯ ผู้ลงมือทำคือคณะกรรมการสภาฯ เว้นแต่งานที่พระราชบัญญัติระบุคณะอื่น <span class="law">ม.7 · ม.28 (2)</span></p>
+        <div class="x13-b x13-main" id="nCc"><span class="x13-tag"></span><span class="ico" data-ico="flag"></span><span><b>คณะกรรมการสภาวิชาชีพบัญชี</b><small>บริหารกิจการของสภาฯ และกระทำกิจการที่อยู่ในอำนาจหน้าที่ของสภาฯ <span class="law">ม.28 (1) (2)</span></small><span class="x13-why"></span></span></div>
+        <span class="x13-gl">คณะที่พระราชบัญญัติระบุไว้สำหรับงานเฉพาะเรื่อง</span>
+        <div class="x13-b" id="nPf"><span class="x13-tag"></span><span class="ico" data-ico="bag"></span><span><b>คณะกรรมการวิชาชีพบัญชีของแต่ละด้าน</b><small>พัฒนาและส่งเสริมวิชาชีพด้านนั้น <span class="law">ม.32</span></small><span class="x13-why"></span></span></div>
+        <div class="x13-b" id="nStd"><span class="x13-tag"></span><span class="ico" data-ico="book"></span><span><b>คณะกรรมการกำหนดมาตรฐานการบัญชี</b><small>กำหนดและปรับปรุงมาตรฐานการบัญชี <span class="law">ม.34</span></small><span class="x13-why"></span></span></div>
+        <div class="x13-b" id="nEth"><span class="x13-tag"></span><span class="ico" data-ico="shield"></span><span><b>คณะกรรมการจรรยาบรรณ</b><small>สอบสวนพิจารณาคำกล่าวหา <span class="law">ม.53</span></small><span class="x13-why"></span></span></div>
+        <a class="go" href="#s2">งานของแต่ละคณะ อยู่ในส่วนที่ 2</a>
+      </div>
+      <span class="ln" id="l1"></span>
+      <a class="nd x13-ov" id="nOv" href="#s3"><span class="x13-tag"></span><span class="ico" data-x13="search"></span><b>คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</b><small>อีกคณะหนึ่ง ไม่ได้อยู่ในสภาฯ ปลัดกระทรวงพาณิชย์เป็นประธาน</small><span class="law">ม.59 · ม.60</span><span class="x13-why"></span><span class="go">ส่วนที่ 3</span></a>
+      <span class="ln" id="l2"></span>
+      <a class="nd x13-min" id="nMin" href="#s4"><span class="x13-tag"></span><span class="ico" data-x13="stamp"></span><b>รัฐมนตรีว่าการกระทรวงพาณิชย์</b><small>พระราชบัญญัตินี้ให้เป็นผู้รักษาการ คือรัฐมนตรีที่รับผิดชอบกฎหมายฉบับนี้ มีคำสั่งให้พ้นจากตำแหน่งได้</small><span class="law">ม.5 · ม.63</span><span class="x13-why"></span><span class="go">ส่วนที่ 4</span></a>
+    </div>
+  </section>
+
+  <!-- ส่วนที่ 1 -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>ส่วนที่ 1 · สภาวิชาชีพบัญชี</small><h2 id="h1">สภาฯ ตั้งขึ้นเพื่อส่งเสริมและพัฒนาวิชาชีพบัญชี</h2></div></div>
+    <p class="cap">สภาฯ มีอำนาจหน้าที่ 14 ข้อ ภาพนี้จัดเป็นห้ากลุ่มตามสิ่งที่สภาฯ ทำ คำขอรับใบอนุญาตของพราวอยู่ในกลุ่มที่สี่ แตะกลุ่มอื่นเพื่อดู <span class="law">ม.6 · ม.7</span></p>
+    <div class="chips" data-pick="pw">
+      <button data-v="0">ส่งเสริมและช่วยเหลือ</button>
+      <button data-v="1">กำหนดและออกข้อบังคับ</button>
+      <button data-v="2">รับรอง</button>
+      <button data-v="3" aria-pressed="true">ขึ้นทะเบียน ออกใบอนุญาต และควบคุม</button>
+      <button data-v="4">เป็นตัวแทนและให้คำปรึกษา</button>
+    </div>
+    <p class="lbl">เลขข้อของมาตรา 7 ข้อที่สว่างคือข้อในกลุ่มที่เลือก</p>
+    <div class="x13-nums" id="nums" role="img" aria-label="เลขข้อ 1 ถึง 14 ของมาตรา 7"></div>
+    <div class="x13-pg" id="pw" role="status"></div>
+
+    <h3 style="margin-top:8px">สภาฯ อาจมีรายได้จากอะไรบ้าง</h3>
+    <div class="x13-inc">
+      <div><span data-x13="coin"></span>ค่าบำรุงสมาชิกและค่าธรรมเนียม</div>
+      <div><span data-x13="coin"></span>เงินอุดหนุนจากงบประมาณแผ่นดิน</div>
+      <div><span data-x13="coin"></span>ผลประโยชน์จากการจัดการทรัพย์สินและการดำเนินกิจการของสภาฯ</div>
+      <div><span data-x13="coin"></span>เงินและทรัพย์สินซึ่งมีผู้ให้แก่สภาฯ</div>
+      <div><span data-x13="coin"></span>ดอกผล (เช่น ดอกเบี้ย) ของเงินและทรัพย์สินสี่ข้อข้างบน <span class="law">ม.8</span></div>
+    </div>
+    <p class="cap">ค่าบำรุงสมาชิกในข้อแรก คือเรื่องของปุ่ม “ออกข้อบังคับค่าบำรุงสมาชิก” ในแผนที่ของบท</p>
+
+    <h3 style="margin-top:8px">ทำงานด้านไหน ต้องมีอะไรจากสภาฯ ก่อน</h3>
+    <p class="cap">พีทเป็นผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด งานของพีทอยู่ด้านการทำบัญชี แตะด้านอื่น แล้วดูว่าต้องมีอะไรก่อน</p>
+    <p class="lbl">มาตรา 4 เขียนชื่อวิชาชีพบัญชีไว้หกด้าน</p>
+    <div class="chips" data-pick="sc">
+      <button data-v="0" aria-pressed="true">การทำบัญชี</button>
+      <button data-v="1">การสอบบัญชี</button>
+      <button data-v="2">อีกสี่ด้าน</button>
+    </div>
+    <p class="x13-four">อีกสี่ด้านคือ การบัญชีบริหาร · การวางระบบบัญชี · การบัญชีภาษีอากร · การศึกษาและเทคโนโลยีการบัญชี</p>
+    <div class="togs x13-dec" data-togs="dec" id="decBox" hidden>
+      <button data-k="dec" aria-pressed="false"><span>มีพระราชกฤษฎีกาใช้บังคับสำหรับด้านนี้แล้ว<small>พระราชกฤษฎีกา คือกฎหมายลูกที่ออกตามอำนาจที่พระราชบัญญัติให้ไว้</small></span></button>
+    </div>
+    <div class="types x13-types">
+      <div class="ty" id="ty0"><span class="ico" data-ico="star"></span><span><b>ใบอนุญาต</b><small>ด้านการสอบบัญชี</small></span></div>
+      <div class="ty" id="ty1"><span class="ico" data-ico="card"></span><span><b>เป็นสมาชิก หรือขึ้นทะเบียน</b><small>ด้านการทำบัญชี</small></span></div>
+      <div class="ty" id="ty2"><span class="ico" data-x13="doc"></span><span><b>ใบอนุญาต หรือขึ้นทะเบียน</b><small>อีกสี่ด้าน เฉพาะเมื่อมีพระราชกฤษฎีกาใช้บังคับสำหรับด้านนั้น</small></span></div>
+    </div>
+    <div class="x13-req" id="req" role="status"></div>
+    <p class="note"><span data-ico="info"></span><span>ผู้เสนอแนะให้ตราพระราชกฤษฎีกานี้คือคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี คำว่า “ตรา” แปลว่าออกกฎหมาย <span class="law">ม.60 (2)</span></span></p>
+    <details class="x13-fold x13-fbox">
+      <summary>ถ้อยคำของมาตรา 9 ว่าตราได้ในกรณีใด</summary>
+      <p>“ในกรณีที่การประกอบวิชาชีพบัญชีด้านใดมีผลกระทบต่อประโยชน์ได้เสียของประชาชน หรือเพื่อประโยชน์ที่จะให้มีการคุ้มครองประชาชนและพัฒนาหรือจัดระเบียบการประกอบวิชาชีพบัญชีด้านใด จะตราพระราชกฤษฎีกากำหนดให้การประกอบวิชาชีพบัญชีด้านนั้นต้องได้รับใบอนุญาตหรือต้องขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชีก็ได้” <span class="law">ม.9</span></p>
+    </details>
+    <p class="cap">นอกจากหกด้านนี้ วิชาชีพบัญชียังรวมบริการเกี่ยวกับการบัญชีด้านอื่นตามที่กำหนดโดยกฎกระทรวง <span class="law">ม.4</span></p>
+  </section>
+
+  <!-- ส่วนที่ 2 -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>ส่วนที่ 2 · ข้างในสภาฯ</small><h2 id="h2">จัดทำจรรยาบรรณ กับสอบสวนคำกล่าวหา เป็นงานของคนละฝ่าย</h2></div></div>
+    <p class="cap">อำนาจหน้าที่เป็นของสภาฯ ผู้ลงมือทำคือคณะกรรมการสภาฯ เว้นแต่งานที่พระราชบัญญัติระบุคณะอื่น เลือกงาน แล้วดูว่าใครเป็นผู้ทำ</p>
+    <div class="chips" data-pick="job">
+      <button data-v="0" aria-pressed="true">จัดทำจรรยาบรรณ</button>
+      <button data-v="1">สอบสวนคำกล่าวหา</button>
+      <button data-v="2">กำหนดมาตรฐานการบัญชี</button>
+      <button data-v="3">ออกใบอนุญาตผู้สอบบัญชี</button>
+      <button data-v="4">ทำการแทนสภาฯ ต่อบุคคลภายนอก</button>
+      <button data-v="5">พัฒนาวิชาชีพด้านการบัญชีบริหาร</button>
+    </div>
+    <div class="x13-req" id="ans" role="status"></div>
+    <div class="x13-cf" id="bCo">
+      <span class="x13-tag" id="bCoT"></span>
+      <div class="x13-cfh"><span class="ico" data-x13="hall"></span><div><b>สภาวิชาชีพบัญชี</b><p>อำนาจหน้าที่ 14 ข้อในส่วนที่ 1 เป็นของสภาฯ <span class="law">ม.7</span></p></div></div>
+      <div class="x13-bd" id="bCc"><span class="x13-tag"></span><span class="ico" data-ico="flag"></span><div><b>คณะกรรมการสภาวิชาชีพบัญชี</b>
+        <p>บริหารกิจการของสภาฯ และกระทำกิจการที่อยู่ในอำนาจหน้าที่ของสภาฯ <span class="law">ม.28 (1) (2)</span></p>
+        <p>นายกสภาวิชาชีพบัญชีอยู่ในคณะนี้ และมีอำนาจกระทำการแทนสภาฯ ในกิจการที่เกี่ยวกับบุคคลภายนอก <span class="law">ม.22 (1) · ม.31</span></p>
+        <details class="x13-fold">
+          <summary>อำนาจหน้าที่อีกสามข้อของคณะนี้</summary>
+          <ul>
+            <li><span class="x13-n">(3)</span><span>เสนอร่างข้อบังคับสภาฯ ต่อที่ประชุมใหญ่</span></li>
+            <li><span class="x13-n">(4)</span><span>จัดให้มีการประชุมใหญ่</span></li>
+            <li><span class="x13-n">(5)</span><span>ออกระเบียบเพื่อปฏิบัติการตามพระราชบัญญัติ <span class="law">ม.28</span></span></li>
+          </ul>
+        </details></div></div>
+      <span class="x13-gl">คณะที่พระราชบัญญัติระบุไว้สำหรับงานเฉพาะเรื่อง</span>
+      <div class="x13-bd" id="bPf"><span class="x13-tag"></span><span class="ico" data-ico="bag"></span><div><b>คณะกรรมการวิชาชีพบัญชีของแต่ละด้าน</b><p>มีไว้เพื่อประโยชน์ในการพัฒนาและส่งเสริมการประกอบวิชาชีพบัญชีด้านนั้น อำนาจหน้าที่เป็นไปตามข้อบังคับสภาฯ <span class="law">ม.32</span></p></div></div>
+      <div class="x13-bd" id="bStd"><span class="x13-tag"></span><span class="ico" data-ico="book"></span><div><b>คณะกรรมการกำหนดมาตรฐานการบัญชี</b><p>กำหนดและปรับปรุงมาตรฐานการบัญชี คือมาตรฐานที่ใช้ในการจัดทำบัญชี ต้องจัดทำขึ้นเป็นภาษาไทย <span class="law">ม.34</span></p></div></div>
+      <div class="x13-bd" id="bEth"><span class="x13-tag"></span><span class="ico" data-ico="shield"></span><div><b>คณะกรรมการจรรยาบรรณ</b><p>สอบสวนพิจารณาเมื่อมีผู้กล่าวหาว่าประพฤติผิดจรรยาบรรณ แล้วมีคำสั่งลงโทษ หรือสั่งยกคำกล่าวหา <span class="law">ม.53 · ม.54</span></p></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>คณะกรรมการสภาฯ คณะกรรมการกำหนดมาตรฐานการบัญชี และคณะกรรมการจรรยาบรรณ แต่งตั้งคณะอนุกรรมการได้ <span class="law">ม.27 · ม.35 · ม.53 วรรคสี่</span></span></p>
+    <p class="cap">มาตรา 34 เขียนถึงมาตรฐานการบัญชีเท่านั้น มาตรฐานชนิดอื่นอยู่ใน<a class="x13-lk" href="law2v-r14.html">บทที่ 14</a> ส่วนแต่ละตำแหน่งมาจากการเลือกตั้งหรือแต่งตั้ง วาระกี่ปี ประชุมอย่างไร อยู่ใน<a class="x13-lk" href="law2v-r15.html">บทที่ 15</a></p>
+  </section>
+
+  <!-- ส่วนที่ 3 -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>ส่วนที่ 3 · คณะกรรมการกำกับดูแลฯ</small><h2 id="h3">ผู้กำกับดูแลเป็นอีกคณะหนึ่ง ไม่ได้อยู่ในสภาฯ</h2></div></div>
+    <p class="cap">ชื่อเต็มคือคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี นายกสภาฯ เป็นกรรมการคนหนึ่งในคณะนี้ แต่ไม่ได้เป็นประธาน</p>
+    <div class="x13-duo">
+      <div><small>ในสภาฯ</small><b>นายกสภาวิชาชีพบัญชี</b><span>อยู่ในคณะกรรมการสภาฯ</span><span class="law">ม.22 (1)</span></div>
+      <div><small>คณะกรรมการกำกับดูแลฯ</small><b>ปลัดกระทรวงพาณิชย์</b><span>เป็นประธานกรรมการ</span><span class="law">ม.59 (1)</span></div>
+    </div>
+    <h3 style="margin-top:8px">ใครนั่งในคณะกรรมการกำกับดูแลฯ</h3>
+    <div class="x13-seats">
+      <div class="x13-sr"><span class="x13-dots" aria-hidden="true"><i></i></span><b>ประธานกรรมการ</b><span>ปลัดกระทรวงพาณิชย์ <span class="law">ม.59 (1)</span></span></div>
+      <div class="x13-sr"><span class="x13-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i class="x13-g"></i><i></i><i></i><i></i></span><b>กรรมการโดยตำแหน่ง 9 คน</b><span>คือคนที่เป็นกรรมการเพราะดำรงตำแหน่งนั้นอยู่ เช่น อธิบดีกรมสรรพากร ผู้ว่าการธนาคารแห่งประเทศไทย ผู้ว่าการตรวจเงินแผ่นดิน ประธานกรรมการหอการค้าไทย และนายกสภาวิชาชีพบัญชี (วงสีเหลือง) อีกสี่ตำแหน่งอยู่ในมาตรา 59 (2) <span class="law">ม.59 (2)</span></span></div>
+      <div class="x13-sr"><span class="x13-dots" aria-hidden="true"><i></i><i></i><i></i></span><b>กรรมการผู้ทรงคุณวุฒิ 3 คน</b><span>รัฐมนตรีแต่งตั้ง จากผู้มีความรู้และความเชี่ยวชาญเกี่ยวกับวิชาการบัญชี 2 คน และผู้ทรงคุณวุฒิทางด้านกฎหมาย 1 คน <span class="law">ม.59 (3)</span></span></div>
+      <div class="x13-sr"><span class="x13-dots" aria-hidden="true"><i></i></span><b>กรรมการและเลขานุการ</b><span>อธิบดีกรมพัฒนาธุรกิจการค้า <span class="law">ม.59 วรรคสอง</span></span></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>กรมพัฒนาธุรกิจการค้าทำหน้าที่ธุรการและสนับสนุนการดำเนินงานของคณะนี้ กรรมการผู้ทรงคุณวุฒิของคณะนี้มีวาระคราวละ 3 ปี แต่งตั้งอีกได้ แต่เกินสองวาระติดต่อกันไม่ได้ <span class="law">ม.59 วรรคสาม · วรรคสี่</span></span></p>
+
+    <h3 style="margin-top:8px">อำนาจหน้าที่หกข้อของคณะนี้</h3>
+    <p class="cap">ถ้าสภาฯ ไม่ออกใบอนุญาตให้พราว พราวอุทธรณ์มาที่คณะนี้ได้ ตรงกับข้อ 4 แตะข้ออื่น แล้วดูว่าเรื่องเดินจากฝั่งไหน</p>
+    <div class="chips" data-pick="du">
+      <button data-v="0">1 กำกับดูแลสภาฯ</button>
+      <button data-v="1">2 เสนอแนะพระราชกฤษฎีกา</button>
+      <button data-v="2">3 ให้ความเห็นชอบ</button>
+      <button data-v="3" aria-pressed="true">4 อุทธรณ์เรื่องใบอนุญาต</button>
+      <button data-v="4">5 อุทธรณ์เรื่องจรรยาบรรณ</button>
+      <button data-v="5">6 ตั้งคณะอนุกรรมการ</button>
+    </div>
+    <div class="x13-dir" id="dir">
+      <div class="x13-dn" id="dA"><span class="ico" data-x13="hall"></span><span>สภาวิชาชีพบัญชี</span></div>
+      <div class="x13-ar"><svg viewBox="0 0 28 44" aria-hidden="true"><path d="M14 3v32M5 27l9 10 9-10" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="dLab"></span></div>
+      <div class="x13-dn x13-dk"><span class="ico" data-x13="search"></span><span>คณะกรรมการกำกับดูแลฯ</span></div>
+    </div>
+    <div class="x13-req" id="duR" role="status"></div>
+  </section>
+
+  <!-- ส่วนที่ 4 -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>ส่วนที่ 4 · เมื่อสั่งแล้วไม่ทำ</small><h2 id="h4">คณะกรรมการกำกับดูแลฯ สั่งให้แก้ไข รัฐมนตรีสั่งให้พ้นจากตำแหน่ง</h2></div></div>
+    <p class="cap">ในการกำกับดูแลการดำเนินกิจการของสภาฯ คณะกรรมการกำกับดูแลฯ มีอำนาจสามข้อนี้ด้วย <span class="law">ม.61</span></p>
+    <div class="x13-tools">
+      <div class="x13-tool"><span class="ico" data-x13="search"></span><span>สอบสวนข้อเท็จจริงเกี่ยวกับการดำเนินงานของสภาฯ <span class="law">ม.61 (1)</span></span></div>
+      <div class="x13-tool"><span class="ico" data-ico="mail"></span><span>สั่งเป็นหนังสือให้สมาชิก กรรมการ อนุกรรมการของสภาฯ หรือบุคคลใด ชี้แจงข้อเท็จจริงเกี่ยวกับกิจการของสภาฯ <span class="law">ม.61 (2)</span></span></div>
+      <div class="x13-tool"><span class="ico" data-ico="pen"></span><span>สั่งเป็นหนังสือให้สภาฯ คณะกรรมการ หรือคณะอนุกรรมการ ระงับ แก้ไข หรือวางมาตรการแก้ไขการกระทำที่ขัดต่อกฎหมาย วัตถุประสงค์ หรือข้อบังคับสภาฯ <span class="law">ม.61 (3)</span></span></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>ผู้ไม่ปฏิบัติตามคำสั่งตามมาตรา 61 (2) หรือ (3) มีโทษทางอาญาตามมาตรา 71 บทนี้ไม่ลงอัตราโทษ เพราะขอบเขตการสอบเว้นอัตราโทษไว้ <span class="law">ม.71</span></span></p>
+
+    <h3 style="margin-top:8px">เหตุข้อเดียวก็ไปถึงรัฐมนตรี</h3>
+    <p class="cap">คณะกรรมการกำกับดูแลฯ สั่งเป็นหนังสือให้คณะกรรมการสภาฯ ระงับการกระทำที่ขัดต่อข้อบังคับสภาฯ กรรมการคนหนึ่งไม่ปฏิบัติตาม ลองปิดเหตุนี้ หรือเปิดอีกเหตุหนึ่ง</p>
+    <div class="togs x13-cause" data-togs="cause">
+      <button data-k="ord" aria-pressed="true"><span>ไม่ปฏิบัติตามคำสั่งของคณะกรรมการกำกับดูแลฯ<small>กรรมการคนนี้ได้รับคำสั่งแล้ว แต่ยังทำต่อ</small></span></button>
+      <button data-k="dmg" aria-pressed="false"><span>กระทำการอันเป็นการเสื่อมเสียอย่างร้ายแรงแก่สภาฯ<small>เหตุอีกข้อหนึ่งที่มาตรา 63 เขียนไว้</small></span></button>
+    </div>
+    <div class="x13-flow" id="flow">
+      <div class="x13-fl">คณะกรรมการกำกับดูแลฯ สอบสวนโดยเร็ว</div>
+      <span class="x13-fa"></span>
+      <div class="x13-fl">เสนอผลการพิจารณาต่อรัฐมนตรี</div>
+      <span class="x13-fa"></span>
+      <div class="x13-fl x13-end">รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่ง<small>คำสั่งของรัฐมนตรีเป็นที่สุด คือจบที่ตรงนี้ พระราชบัญญัตินี้ไม่ได้เขียนขั้นอุทธรณ์ต่อ</small></div>
+    </div>
+    <p class="x13-result" id="causeR" role="status"></p>
+    <p class="note"><span data-ico="info"></span><span>มาตรานี้ใช้กับนายกสภาวิชาชีพบัญชี กรรมการ และอนุกรรมการตามพระราชบัญญัตินี้ <span class="law">ม.63</span></span></p>
+
+    <h3 style="margin-top:8px">กรรมการสภาฯ เหลือไม่ถึงกึ่งหนึ่ง จึงมีกรรมการชั่วคราว</h3>
+    <p class="cap">มาตรา 64 ให้ดูสองจำนวน คือจำนวนกรรมการที่คณะกรรมการสภาฯ พึงมี กับจำนวนที่เหลือหลังรัฐมนตรีมีคำสั่งตามมาตรา 63</p>
+    <div class="x13-word">
+      <span class="x13-qt">“เหลือ<b>ไม่ถึงกึ่งหนึ่ง</b>ของจำนวนกรรมการที่<b>พึงมี</b>” <span class="law">ม.64 วรรคหนึ่ง</span></span>
+      <ul>
+        <li><b>พึงมี</b> แปลว่าควรมี คือจำนวนกรรมการเต็มคณะ ไม่ใช่จำนวนที่เหลืออยู่</li>
+        <li><b>ไม่ถึงกึ่งหนึ่ง</b> คือน้อยกว่าครึ่ง เหลือเท่ากับครึ่งพอดียังไม่เข้ามาตรานี้</li>
+      </ul>
+      <p class="x13-ex">16 คนในภาพนี้เป็นตัวเลขตัวอย่าง ใช้เพื่อให้เห็นจุดกึ่งหนึ่ง มาตรา 22 กำหนดกรรมการเป็นรายตำแหน่ง ไม่ได้เขียนจำนวนรวมเป็นตัวเลขเดียว</p>
+    </div>
+    <p class="lbl">คณะตัวอย่างพึงมีกรรมการ 16 คน รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่งกี่คน</p>
+    <div class="chips" data-pick="left">
+      <button data-v="0">พ้น 3 คน เหลือ 13</button>
+      <button data-v="1">พ้น 8 คน เหลือ 8</button>
+      <button data-v="2" aria-pressed="true">พ้น 9 คน เหลือ 7</button>
+    </div>
+    <div class="x13-half">
+      <span class="x13-rl" id="halfL"></span>
+      <div class="x13-s8 x13-first" id="row1" role="img"></div>
+      <div class="x13-s8" id="row2" role="img"></div>
+      <div class="x13-key"><span><i></i>กรรมการที่เหลือ</span><span><i class="x13-out"></i>พ้นจากตำแหน่ง</span></div>
+      <div class="x13-res" id="leftR" role="status"></div>
+    </div>
+    <div class="x13-tmpbox" id="tmp">
+      <div class="x13-two">
+        <div><b>วันเดียวกัน</b>รัฐมนตรีแต่งตั้งกรรมการชั่วคราว ในวันที่มีคำสั่งให้กรรมการพ้นจากตำแหน่ง</div>
+        <div><b>90 วัน</b>เลือกตั้งหรือแต่งตั้งกรรมการใหม่ให้แล้วเสร็จ นับแต่วันที่มีคำสั่งแต่งตั้งกรรมการชั่วคราว</div>
+      </div>
+      <p class="note"><span data-ico="clock"></span><span>กำหนด 90 วันมีข้อยกเว้นตามถ้อยคำของมาตรา 64 ว่า “เว้นแต่มีวาระเหลืออยู่ไม่ถึงหนึ่งร้อยแปดสิบวัน รัฐมนตรีจะสั่งให้ไม่มีการเลือกตั้งก็ได้” และกรรมการชั่วคราวพ้นจากตำแหน่งเมื่อกรรมการใหม่เข้ารับหน้าที่แล้ว <span class="law">ม.64 วรรคสอง · วรรคสาม</span></span></p>
+    </div>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-x13="hall"></span><span>สภาวิชาชีพบัญชีเป็นนิติบุคคล ตั้งขึ้นเพื่อส่งเสริมและพัฒนาวิชาชีพบัญชี</span></li>
+      <li><span class="ico" data-ico="card"></span><span>ด้านการสอบบัญชีต้องมีใบอนุญาต ด้านการทำบัญชีต้องเป็นสมาชิกหรือขึ้นทะเบียน อีกสี่ด้านต้องมีใบอนุญาตหรือขึ้นทะเบียน ก็ต่อเมื่อมีพระราชกฤษฎีกาใช้บังคับสำหรับด้านนั้น</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>อำนาจหน้าที่เป็นของสภาฯ ผู้ลงมือทำคือคณะกรรมการสภาฯ เว้นแต่งานที่พระราชบัญญัติระบุคณะอื่น</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>กำหนดมาตรฐานการบัญชีเป็นงานของคณะกรรมการกำหนดมาตรฐานการบัญชี สอบสวนคำกล่าวหาเป็นงานของคณะกรรมการจรรยาบรรณ สองงานนี้พระราชบัญญัติระบุคณะไว้เอง</span></li>
+      <li><span class="ico" data-x13="search"></span><span>คณะกรรมการกำกับดูแลฯ เป็นอีกคณะหนึ่ง ปลัดกระทรวงพาณิชย์เป็นประธาน นายกสภาฯ เป็นกรรมการคนหนึ่ง</span></li>
+      <li><span class="ico" data-ico="mail"></span><span>เรื่องจากสภาฯ ที่ไปถึงคณะกรรมการกำกับดูแลฯ คือความเห็นชอบข้อบังคับบางเรื่องและมาตรฐานการบัญชี กับอุทธรณ์การไม่ออกใบอนุญาต และอุทธรณ์คำสั่งของคณะกรรมการจรรยาบรรณ</span></li>
+      <li><span class="ico" data-x13="stamp"></span><span>คณะกรรมการกำกับดูแลฯ สั่งให้ระงับหรือแก้ไขได้ คนมีคำสั่งให้พ้นจากตำแหน่งคือรัฐมนตรี</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>กรรมการสภาฯ เหลือไม่ถึงกึ่งหนึ่งของจำนวนที่พึงมี รัฐมนตรีแต่งตั้งกรรมการชั่วคราวในวันเดียวกัน แล้วต้องมีกรรมการใหม่ภายใน 90 วัน</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>เลขมาตรา (ม.) ทุกเลขในหน้านี้ มาจากพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
+      <li>“สภาฯ” คือสภาวิชาชีพบัญชี · “คณะกรรมการสภาฯ” คือคณะกรรมการสภาวิชาชีพบัญชี</li>
+      <li>“คณะกรรมการกำกับดูแลฯ” คือคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</li>
+      <li>“รัฐมนตรี” คือรัฐมนตรีว่าการกระทรวงพาณิชย์ ผู้รักษาการตามพระราชบัญญัตินี้ (มาตรา 5)</li>
+      <li>พราว พีท พี่แพม และจำนวนกรรมการ 16 คนในภาพของมาตรา 64 เป็นกรณีสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>กฎและมาตรฐานมาจากไหน</b>
+    <p>รู้แล้วว่าใครมีอำนาจเรื่องอะไร บทถัดไปตามดูข้อบังคับและมาตรฐานหนึ่งฉบับ ตั้งแต่เสนอจนใช้บังคับได้</p>
+    <a class="btn" href="law2v-r14.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function law(t) { return ' <span class="law">' + t + '</span>'; }
+  function flag(e, c, yes) { var k = ' ' + e.className + ' ', has = k.indexOf(' ' + c + ' ') >= 0; if (yes && !has) e.className += ' ' + c; if (!yes && has) e.className = k.replace(' ' + c + ' ', ' ').replace(/^ +| +$/g, ''); }
+
+  /* ไอคอนเส้นเฉพาะหน้านี้ (ลายเส้นแบบเดียวกับของกลาง) */
+  var X = {
+    hall: 'M3 9.5l9-5.5 9 5.5M5.5 10v8M10 10v8M14 10v8M18.5 10v8M3.5 20h17',
+    search: 'M10.5 4a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM15.5 15.5L20 20',
+    stamp: 'M6 20h12M8 16h8l1.5-5h-11zM10 11V7a2 2 0 014 0v4',
+    coin: 'M12 3.5a8.5 8.5 0 100 17 8.5 8.5 0 000-17zM14.5 9.5H11a1.5 1.5 0 000 3h2a1.5 1.5 0 010 3H9.5M12 7.5v2M12 15.5v1.5',
+    people: 'M9 11a3 3 0 100-6 3 3 0 000 6zM3 19c0-3 2.7-5 6-5s6 2 6 5M16 5.3a3 3 0 010 5.4M18 14.3c1.8.7 3 2.3 3 4.7',
+    up: 'M4 10v4l3 .5 8 4V5.5l-8 4zM7 14.5l1 4.5h2.5l-.8-4M18 9.5a3.5 3.5 0 010 5',
+    doc: 'M7 3.5h7l4 4v13H7zM14 3.5v4h4M10 12h5M10 15.5h5'
+  };
+  function xico(n) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + X[n] + '"/></svg>'; }
+  [].forEach.call(document.querySelectorAll('[data-x13]'), function (e) { e.innerHTML = xico(e.getAttribute('data-x13')); });
+  V.spy('#steps');
+
+  /* แผนที่ของบท: เรื่อง → คณะที่เรื่องอยู่ → ไปถึงคณะกรรมการกำกับดูแลฯ หรือรัฐมนตรีเมื่อไร
+     head/sub/more = ผลที่ขึ้นติดใต้ปุ่ม · hit[id] = [ป้ายบนกล่อง, เหตุผลที่ขึ้นในกล่อง, มาตรา, miss?] · ln = เส้น (live ต้องไปถึง · if ไปถึงเมื่อมีเงื่อนไข)
+     กติกาเดียวทั้งหน้า: อำนาจหน้าที่ของสภาฯ → คณะกรรมการสภาฯ เป็นผู้ลงมือทำ (ม.28 (2)) เว้นแต่ตัวบทระบุคณะอื่น */
+  var NODES = ['nCc', 'nPf', 'nStd', 'nEth', 'nOv', 'nMin'], HERE = 'เรื่องอยู่ที่นี่';
+  var MAT = [
+    { head: 'คำขอของพราวอยู่ที่สภาฯ ผู้ลงมือทำคือคณะกรรมการสภาฯ', sub: 'จะไปถึงคณะกรรมการกำกับดูแลฯ ต่อเมื่อสภาฯ ไม่ออกใบอนุญาตให้ แล้วพราวอุทธรณ์ อุทธรณ์คือขอให้อีกคณะหนึ่งพิจารณาใหม่',
+      hit: { nCc: [HERE, 'ออกใบอนุญาตเป็นอำนาจหน้าที่ของสภาฯ คณะนี้จึงเป็นผู้ลงมือทำ', 'ม.7 (5) · ม.38 · ม.28 (2)'],
+        nOv: ['ถ้าอุทธรณ์', 'ถ้าสภาฯ ไม่ออกใบอนุญาตให้ ต้องแสดงเหตุผลไว้โดยชัดแจ้ง และผู้ยื่นคำขอมีสิทธิอุทธรณ์ต่อคณะนี้', 'ม.42 วรรคสอง · ม.60 (4)'] },
+      ln: { l1: 'if' } },
+    { head: 'เรื่องอยู่ที่คณะกรรมการจรรยาบรรณ เพราะพระราชบัญญัติระบุคณะนี้เป็นผู้สอบสวนพิจารณา', sub: 'จะไปถึงคณะกรรมการกำกับดูแลฯ เมื่อมีการอุทธรณ์คำสั่ง',
+      hit: { nEth: [HERE, 'สอบสวนพิจารณาโดยเร็ว แล้วมีคำสั่งลงโทษ หรือสั่งยกคำกล่าวหา', 'ม.53 · ม.54'],
+        nOv: ['ถ้าอุทธรณ์', 'ผู้กล่าวหา หรือผู้ซึ่งถูกสั่งลงโทษ อุทธรณ์คำสั่งได้ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง คำวินิจฉัยของคณะนี้เป็นที่สุด คือจบที่คณะนี้ พระราชบัญญัตินี้ไม่ได้เขียนขั้นอุทธรณ์ต่อ', 'ม.55 · ม.60 (5)'] },
+      ln: { l1: 'if' }, more: 'ขั้นตอนของเรื่องร้องเรียนอยู่ใน<a class="x13-lk" href="law2v-r12.html">บทที่ 12</a>' },
+    { head: 'คณะกรรมการกำหนดมาตรฐานการบัญชีเป็นผู้ปรับปรุง เพราะพระราชบัญญัติระบุคณะนี้', sub: 'ผู้ให้ความเห็นชอบคือคณะกรรมการกำกับดูแลฯ',
+      hit: { nStd: [HERE, 'มีอำนาจหน้าที่กำหนดและปรับปรุงมาตรฐานการบัญชี', 'ม.34 วรรคหนึ่ง'],
+        nOv: ['ต้องให้ความเห็นชอบ', 'มาตรฐานการบัญชีต้องได้รับความเห็นชอบจากคณะนี้', 'ม.34 วรรคสาม · ม.60 (3)'] },
+      ln: { l1: 'live' }, more: 'ขั้นตอนจนมาตรฐานใช้บังคับได้ อยู่ใน<a class="x13-lk" href="law2v-r14.html">บทที่ 14 “กฎและมาตรฐานมาจากไหน”</a>' },
+    { head: 'คณะกรรมการสภาฯ เป็นผู้เสนอร่างข้อบังคับ', sub: 'ผู้ให้ความเห็นชอบร่างข้อบังคับเรื่องนี้คือคณะกรรมการกำกับดูแลฯ',
+      hit: { nCc: [HERE, 'เสนอร่างข้อบังคับสภาฯ ต่อที่ประชุมใหญ่สภาวิชาชีพบัญชี', 'ม.28 (3)'],
+        nOv: ['ต้องให้ความเห็นชอบ', 'ร่างข้อบังคับเกี่ยวกับค่าบำรุงสมาชิกหรือค่าธรรมเนียม ต้องได้รับความเห็นชอบจากคณะนี้ก่อน', 'ม.30 วรรคสอง · ม.60 (3)'] },
+      ln: { l1: 'live' }, more: 'ข้อบังคับเรื่องอื่นที่ต้องได้รับความเห็นชอบ และขั้นตอนจนใช้บังคับได้ อยู่ใน<a class="x13-lk" href="law2v-r14.html">บทที่ 14 “กฎและมาตรฐานมาจากไหน”</a>' },
+    { head: 'งานนี้อยู่ที่คณะกรรมการวิชาชีพบัญชีด้านการสอบบัญชี', sub: 'ไม่ใช่เรื่องขอความเห็นชอบ และไม่ใช่เรื่องอุทธรณ์ จึงไม่อยู่ในเรื่องที่ต้องไปถึงคณะกรรมการกำกับดูแลฯ',
+      hit: { nPf: [HERE, 'แต่ละด้านมีคณะกรรมการวิชาชีพบัญชีของตัวเอง เพื่อประโยชน์ในการพัฒนาและส่งเสริมการประกอบวิชาชีพบัญชีด้านนั้น', 'ม.32'],
+        nOv: ['ไม่ใช่เรื่องที่ต้องมาถึง', 'เรื่องจากสภาฯ ที่ต้องมาถึงคณะนี้มีสามแบบ คือขอความเห็นชอบข้อบังคับบางเรื่องและมาตรฐานการบัญชี อุทธรณ์การไม่ออกใบอนุญาต และอุทธรณ์คำสั่งของคณะกรรมการจรรยาบรรณ งานนี้ไม่ใช่ทั้งสามแบบ คณะนี้ดูในฐานะผู้กำกับดูแลการดำเนินกิจการของสภาฯ', 'ม.60 (1) (3) (4) (5)', 1] },
+      ln: {} },
+    { head: 'เรื่องนี้เป็นงานของคณะกรรมการกำกับดูแลฯ สภาฯ เป็นฝ่ายถูกตรวจสอบ', sub: 'ถ้ามีคนไม่ปฏิบัติตามคำสั่ง เรื่องไปถึงรัฐมนตรี',
+      hit: { nOv: [HERE, 'สอบสวนข้อเท็จจริง สั่งเป็นหนังสือให้ชี้แจง และสั่งเป็นหนังสือให้สภาฯ คณะกรรมการ หรือคณะอนุกรรมการ ระงับ แก้ไข หรือวางมาตรการแก้ไขการกระทำที่ขัดต่อกฎหมาย วัตถุประสงค์ หรือข้อบังคับสภาฯ', 'ม.61'],
+        nMin: ['ถ้าไม่ทำตามคำสั่ง', 'ถ้านายกสภาฯ กรรมการ หรืออนุกรรมการไม่ปฏิบัติตามคำสั่ง คณะกรรมการกำกับดูแลฯ สอบสวนโดยเร็ว แล้วเสนอผลการพิจารณาเพื่อให้รัฐมนตรีมีคำสั่งให้ผู้นั้นพ้นจากตำแหน่ง', 'ม.63'] },
+      ln: { l1: 'live', l2: 'if' }, co: 'ถูกตรวจสอบ', all: true, more: 'ดูต่อใน<a class="x13-lk" href="#s4">ส่วนที่ 4</a>' }
+  ];
+  V.pick('mat', function (v) { var m = MAT[v];
+    NODES.forEach(function (id, n) { var e = $(id), h = m.hit[id];
+      flag(e, 'x13-hit', !!h && !h[3]); flag(e, 'x13-miss', !!h && !!h[3]); flag(e, 'x13-dim', !h && !(m.all && n < 4));
+      e.querySelector('.x13-tag').textContent = h ? h[0] : '';
+      e.querySelector('.x13-why').innerHTML = h ? h[1] + law(h[2]) : ''; });
+    $('coTag').textContent = m.co || '';
+    ['l1', 'l2'].forEach(function (id) { $(id).className = 'ln' + (m.ln[id] ? ' x13-' + m.ln[id] : ''); });
+    $('pin').hidden = v !== 0;
+    $('rt').innerHTML = '<b>' + m.head + '</b><span class="x13-more">' + m.sub + '</span>' + (m.more ? '<span class="x13-more">' + m.more + '</span>' : ''); });
+
+  /* ส่วนที่ 1: อำนาจหน้าที่ 14 ข้อของมาตรา 7 จัดห้ากลุ่ม แตะกลุ่ม → เลขข้อสว่าง และข้อในกลุ่มขึ้น */
+  var PW = [
+    { n: 'ส่งเสริมและช่วยเหลือ', x: 'up', it: [[1, 'ส่งเสริมการศึกษา การอบรม และการวิจัยเกี่ยวกับวิชาชีพบัญชี'], [2, 'ส่งเสริมความสามัคคีและผดุงเกียรติ (รักษาเกียรติ) ของสมาชิก จัดสวัสดิการและการสงเคราะห์ (การช่วยเหลือกัน) ระหว่างสมาชิก'], [10, 'ช่วยเหลือ แนะนำ เผยแพร่ และให้บริการวิชาการแก่ประชาชนเกี่ยวกับวิชาชีพบัญชี']] },
+    { n: 'กำหนดและออกข้อบังคับ', i: 'pen', it: [[3, 'กำหนดมาตรฐานการบัญชี มาตรฐานการสอบบัญชี และมาตรฐานอื่นที่เกี่ยวกับวิชาชีพบัญชี'], [4, 'กำหนดจรรยาบรรณผู้ประกอบวิชาชีพบัญชี'], [11, 'ออกข้อบังคับสภาวิชาชีพบัญชี']],
+      use: 'ในแผนที่ของบท: ปรับปรุงมาตรฐานการบัญชีเกี่ยวกับข้อ (3) ออกข้อบังคับค่าบำรุงสมาชิกเกี่ยวกับข้อ (11)' },
+    { n: 'รับรอง', i: 'check', it: [[6, 'รับรองปริญญาหรือประกาศนียบัตรในวิชาการบัญชีของสถาบันการศึกษาต่าง ๆ เพื่อประโยชน์ในการรับสมัครเป็นสมาชิก'], [7, 'รับรองความรู้ความชำนาญในการประกอบวิชาชีพบัญชี'], [8, 'รับรองหลักสูตรการฝึกอบรมเป็นผู้ชำนาญการ และการศึกษาต่อเนื่องในด้านต่าง ๆ ของผู้ประกอบวิชาชีพบัญชี']] },
+    { n: 'ขึ้นทะเบียน ออกใบอนุญาต และควบคุม', i: 'shield', it: [[5, 'รับขึ้นทะเบียนการประกอบวิชาชีพบัญชี ออกใบอนุญาต พักใช้ หรือเพิกถอนใบอนุญาตผู้ประกอบวิชาชีพบัญชี'], [9, 'ควบคุมความประพฤติและการดำเนินงานของสมาชิกและผู้ขึ้นทะเบียน ให้ถูกต้องตามจรรยาบรรณ']],
+      use: 'ในแผนที่ของบท: คำขอรับใบอนุญาตของพราวเกี่ยวกับข้อ (5) คำกล่าวหาว่าผิดจรรยาบรรณเกี่ยวกับข้อ (9)', def: 'ขึ้นทะเบียน คือให้สภาฯ ลงชื่อไว้ในทะเบียนของสภาฯ โดยไม่ต้องเป็นสมาชิก' },
+    { n: 'เป็นตัวแทนและให้คำปรึกษา', x: 'people', it: [[12, 'เป็นตัวแทนของผู้ประกอบวิชาชีพบัญชี'], [13, 'ให้คำปรึกษาและเสนอแนะต่อรัฐบาลเกี่ยวกับนโยบายและปัญหาของวิชาชีพบัญชี'], [14, 'ดำเนินการอื่นเพื่อให้เป็นไปตามวัตถุประสงค์และอำนาจหน้าที่ของสภาฯ ตามพระราชบัญญัตินี้']] }
+  ];
+  (function () { var h = ''; for (var i = 1; i <= 14; i++) h += '<i>' + i + '</i>'; $('nums').innerHTML = h; })();
+  V.pick('pw', function (v) { var g = PW[v], on = {}; g.it.forEach(function (r) { on[r[0]] = 1; });
+    [].forEach.call($('nums').children, function (e, i) { e.className = on[i + 1] ? 'x13-lit' : ''; });
+    $('pw').innerHTML = '<span class="ico">' + (g.x ? xico(g.x) : V.icon(g.i)) + '</span><div><b>' + g.n + '</b><ul>' +
+      g.it.map(function (r) { return '<li><span class="x13-n">(' + r[0] + ')</span><span>' + r[1] + '</span></li>'; }).join('') + '</ul>' +
+      (g.def ? '<span class="x13-use">' + g.def + '</span>' : '') + (g.use ? '<span class="x13-use">' + g.use + '</span>' : '') + '</div>'; });
+
+  /* ส่วนที่ 1: ด้านของวิชาชีพบัญชี (ม.4) → สิ่งที่ต้องมีก่อน (ม.38 · ม.44 · ม.9–10)
+     อีกสี่ด้านได้ผลเดียวกัน จึงเป็นปุ่มเดียว และมีสวิตช์ “มีพระราชกฤษฎีกาใช้บังคับ” เป็นข้อเท็จจริงที่ทำให้ผลเปลี่ยน */
+  var SC = [
+    { ty: 1, who: 'ด้านการทำบัญชี · พีท ผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด', t: 'ต้องเป็นสมาชิกสภาฯ หรือขึ้นทะเบียนไว้กับสภาฯ',
+      s: 'ห้ามประกอบวิชาชีพเป็นผู้ทำบัญชี เว้นแต่เป็นสมาชิกสภาฯ หรือขึ้นทะเบียนไว้กับสภาฯ อย่างใดอย่างหนึ่งก็พอ ขึ้นทะเบียนคือให้สภาฯ ลงชื่อไว้ในทะเบียนโดยไม่ต้องเป็นสมาชิก หลักเกณฑ์อยู่ในข้อบังคับสภาฯ', law: 'ม.44' },
+    { ty: 0, who: 'ด้านการสอบบัญชี · พี่แพม ผู้สอบบัญชีรับอนุญาต', t: 'ต้องได้รับใบอนุญาตจากสภาฯ', s: 'ผู้ใดจะเป็นผู้สอบบัญชีรับอนุญาต ต้องได้รับใบอนุญาตจากสภาฯ', law: 'ม.38' }
+  ];
+  var DEC = [
+    { who: 'อีกสี่ด้าน · ยังไม่มีพระราชกฤษฎีกาใช้บังคับสำหรับด้านนี้', t: 'ข้อห้ามของมาตรา 10 ยังไม่ใช้กับด้านนี้',
+      s: 'ด้านการสอบบัญชีและด้านการทำบัญชี พระราชบัญญัติเขียนการควบคุมไว้เองในหมวด 5 และหมวด 6 ส่วนด้านอื่น มาตรา 10 ห้ามก็ต่อเมื่อมีพระราชกฤษฎีกาตามมาตรา 9 ใช้บังคับสำหรับด้านนั้นแล้ว เปิดสวิตช์ข้างบนเพื่อดูผล', law: 'ม.9 · ม.10' },
+    { who: 'อีกสี่ด้าน · มีพระราชกฤษฎีกาใช้บังคับสำหรับด้านนี้แล้ว', t: 'ต้องได้รับใบอนุญาต หรือขึ้นทะเบียนกับสภาฯ',
+      s: 'เมื่อมีพระราชกฤษฎีกาตามมาตรา 9 ใช้บังคับสำหรับวิชาชีพบัญชีด้านใด ห้ามประกอบวิชาชีพบัญชีด้านนั้น เว้นแต่ได้รับใบอนุญาตหรือขึ้นทะเบียนกับสภาฯ', law: 'ม.9 · ม.10' }
+  ];
+  var scV = 0, decOn = false;
+  function drawSc() { var four = scV === 2, s = four ? DEC[decOn ? 1 : 0] : SC[scV];
+    $('decBox').hidden = !four;
+    [0, 1, 2].forEach(function (i) { $('ty' + i).className = 'ty' + (four ? (i === 2 ? (decOn ? ' on' : ' x13-wait') : '') : (i === s.ty ? ' on' : '')); });
+    $('req').innerHTML = '<span class="x13-who">' + s.who + '</span><b>' + s.t + '</b><span>' + s.s + law(s.law) + '</span>'; }
+  V.togs('dec', function (s) { decOn = !!s.dec; drawSc(); });
+  V.pick('sc', function (v) { scV = v; drawSc(); });
+
+  /* ส่วนที่ 2: งาน → ผู้ทำ · own = งานในอำนาจหน้าที่ของสภาฯ (กรอบสภาฯ สว่าง และคณะกรรมการสภาฯ เป็นผู้ลงมือทำ) */
+  var BD = ['bCc', 'bPf', 'bStd', 'bEth'], NAMED = 'พระราชบัญญัติระบุคณะนี้';
+  var JOB = [
+    { on: 'bCc', own: 1, tag: 'ผู้ลงมือทำ', t: 'อำนาจหน้าที่ของสภาฯ ผู้ลงมือทำคือคณะกรรมการสภาฯ ไม่ใช่คณะกรรมการจรรยาบรรณ', s: 'มาตรา 47 ให้สภาฯ จัดทำจรรยาบรรณของผู้ประกอบวิชาชีพบัญชีขึ้นเป็นภาษาไทย และมาตรา 28 (2) ให้คณะกรรมการสภาฯ กระทำกิจการที่อยู่ในอำนาจหน้าที่ของสภาฯ ส่วนคณะกรรมการจรรยาบรรณเป็นผู้สอบสวนพิจารณา เมื่อมีเรื่องประพฤติผิดจรรยาบรรณ', law: 'ม.7 (4) · ม.47 · ม.28 (2)' },
+    { on: 'bEth', tag: NAMED, t: 'คณะกรรมการจรรยาบรรณเป็นผู้สอบสวนพิจารณา', s: 'เมื่อมีผู้กล่าวหา หรือปรากฏต่อคณะกรรมการจรรยาบรรณ ว่าผู้ประกอบวิชาชีพบัญชีหรือผู้ซึ่งขึ้นทะเบียนไว้กับสภาฯ ประพฤติผิดจรรยาบรรณ คณะนี้ต้องดำเนินการสอบสวนพิจารณาโดยเร็ว', law: 'ม.53' },
+    { on: 'bStd', tag: NAMED, t: 'คณะกรรมการกำหนดมาตรฐานการบัญชีเป็นผู้กำหนดและปรับปรุง', s: 'เพื่อใช้เป็นมาตรฐานในการจัดทำบัญชีตามกฎหมายว่าด้วยการบัญชีและกฎหมายอื่น', law: 'ม.34 วรรคหนึ่ง' },
+    { on: 'bCc', own: 1, tag: 'ผู้ลงมือทำ', t: 'อำนาจหน้าที่ของสภาฯ ผู้ลงมือทำคือคณะกรรมการสภาฯ', s: 'ผู้ใดจะเป็นผู้สอบบัญชีรับอนุญาต ต้องได้รับใบอนุญาตจากสภาฯ และมาตรา 28 (2) ให้คณะกรรมการสภาฯ กระทำกิจการที่อยู่ในอำนาจหน้าที่ของสภาฯ ตรงกับเรื่องของพราวในแผนที่ของบท', law: 'ม.7 (5) · ม.38 · ม.28 (2)' },
+    { on: 'bCc', tag: 'นายกสภาฯ อยู่ในคณะนี้', t: 'พระราชบัญญัติระบุตัวผู้ทำ คือนายกสภาวิชาชีพบัญชี', s: 'ในกิจการที่เกี่ยวกับบุคคลภายนอก นายกสภาวิชาชีพบัญชีมีอำนาจกระทำการแทนสภาฯ และจะมอบหมายเป็นหนังสือให้กรรมการอื่นกระทำการแทนตนเฉพาะในกิจการใดก็ได้', law: 'ม.31' },
+    { on: 'bPf', tag: NAMED, t: 'คณะกรรมการวิชาชีพบัญชีด้านการบัญชีบริหาร', s: 'แต่ละด้านมีคณะกรรมการวิชาชีพบัญชีของตัวเอง เพื่อประโยชน์ในการพัฒนาและส่งเสริมการประกอบวิชาชีพบัญชีด้านนั้น', law: 'ม.32' }];
+  V.pick('job', function (v) { var j = JOB[v];
+    BD.forEach(function (id) { var e = $(id); flag(e, 'x13-pick', id === j.on); flag(e, 'x13-rest', id !== j.on); e.querySelector('.x13-tag').textContent = id === j.on ? j.tag : ''; });
+    flag($('bCo'), 'x13-own', !!j.own); $('bCoT').textContent = j.own ? 'อำนาจหน้าที่ของสภาฯ' : '';
+    $('ans').innerHTML = '<b>' + j.t + '</b><span>' + j.s + law(j.law) + '</span>'; });
+
+  /* ส่วนที่ 3: อำนาจหน้าที่หกข้อของมาตรา 60 · dir = ลูกศร (down เรื่องจากฝั่งสภาฯ มาถึงคณะนี้ · up คณะนี้เข้าไปดูสภาฯ · none งานของคณะนี้เอง) */
+  var DU = [
+    { dir: 'up', lab: 'คณะนี้เป็นฝ่ายเข้าไปดู', t: 'กำกับดูแลการดำเนินกิจการของสภาฯ', s: 'ให้เป็นไปตามกฎหมาย และสอดคล้องกับวัตถุประสงค์ของสภาฯ ข้อนี้มีอำนาจสอบสวนและสั่งเป็นหนังสือตามมาตรา 61 ประกอบ ดูต่อในส่วนที่ 4 ตรงกับเรื่องที่หกในแผนที่ของบท', law: 'ม.60 (1) · ม.61' },
+    { dir: 'none', lab: '', t: 'เสนอแนะให้มีการตราพระราชกฤษฎีกาตามมาตรา 9', s: 'คือพระราชกฤษฎีกาในส่วนที่ 1 ที่กำหนดให้วิชาชีพบัญชีด้านใดต้องได้รับใบอนุญาตหรือต้องขึ้นทะเบียน ข้อนี้เป็นงานของคณะนี้เอง', law: 'ม.60 (2)' },
+    { dir: 'down', lab: 'ต้องมาขอความเห็นชอบ', t: 'ให้ความเห็นชอบข้อบังคับสภาฯ บางเรื่อง และมาตรฐานการบัญชี', s: 'ข้อบังคับที่ต้องได้รับความเห็นชอบ เช่น เรื่องค่าบำรุงสมาชิกหรือค่าธรรมเนียม ตรงกับเรื่องที่สามและที่สี่ในแผนที่ของบท รายการเต็มและขั้นตอนต่อจากนี้อยู่ใน<a class="x13-lk" href="law2v-r14.html">บทที่ 14</a>', law: 'ม.60 (3) · ม.30 วรรคสอง · ม.34 วรรคสาม' },
+    { dir: 'down', lab: 'ผู้ยื่นคำขออุทธรณ์มา', t: 'พิจารณาอุทธรณ์ของผู้ขอรับใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต', s: 'เมื่อสภาฯ ไม่ออกใบอนุญาตให้ ผู้ยื่นคำขอมีสิทธิอุทธรณ์ต่อคณะนี้ ตรงกับเรื่องของพราวในแผนที่ของบท', law: 'ม.60 (4) · ม.42 วรรคสอง' },
+    { dir: 'down', lab: 'ผู้กล่าวหา หรือผู้ถูกสั่งลงโทษ อุทธรณ์มา', t: 'พิจารณาอุทธรณ์ของผู้กล่าวหา หรือผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ', s: 'อุทธรณ์คำสั่งของคณะกรรมการจรรยาบรรณได้ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง ตรงกับเรื่องที่สองในแผนที่ของบท', law: 'ม.60 (5) · ม.55' },
+    { dir: 'none', lab: '', t: 'แต่งตั้งคณะอนุกรรมการ', s: 'เพื่อปฏิบัติการตามที่อยู่ในอำนาจหน้าที่ของคณะกรรมการกำกับดูแลฯ เป็นงานของคณะนี้เอง', law: 'ม.60 (6)' }
+  ];
+  V.pick('du', function (v) { var d = DU[v];
+    $('dir').className = 'x13-dir x13-' + d.dir; flag($('dA'), 'x13-dim', d.dir === 'none'); $('dLab').textContent = d.lab;
+    $('duR').innerHTML = '<span class="x13-who">ข้อ ' + (v + 1) + ' ของมาตรา 60</span><b>' + d.t + '</b><span>' + d.s + law(d.law) + '</span>'; });
+
+  /* ส่วนที่ 4: สองเหตุของมาตรา 63 คั่นด้วย “หรือ” เหตุข้อเดียวก็พอ */
+  V.togs('cause', function (s) { var go = s.ord || s.dmg;
+    $('flow').className = 'x13-flow' + (go ? ' x13-go' : '');
+    $('causeR').textContent = s.ord && s.dmg ? 'มีสองเหตุ เรื่องเดินเหมือนเดิม เหตุข้อเดียวก็พอแล้ว'
+      : s.ord ? 'มีเหตุตามมาตรา 63 เรื่องของกรรมการคนนี้เดินไปถึงรัฐมนตรี'
+      : s.dmg ? 'เหตุนี้ข้อเดียวก็เข้ามาตรา 63 เพราะมาตรานี้คั่นสองเหตุด้วยคำว่า “หรือ”'
+      : 'ไม่มีเหตุตามมาตรา 63 เรื่องไม่ไปถึงรัฐมนตรี'; });
+
+  /* ส่วนที่ 4: มาตรา 64 เหลือไม่ถึงกึ่งหนึ่งของจำนวนกรรมการที่พึงมี (16 คนเป็นตัวเลขตัวอย่าง)
+     ที่นั่งที่พ้นจากตำแหน่งไม่ระบายเป็นกรรมการชั่วคราว (คำตัดสินห้องหลัก) ผลที่ตามมาอยู่ในกล่อง #tmp ตามถ้อยคำตัวบท */
+  var ALL = 16, LEFT = [13, 8, 7];
+  V.pick('left', function (v) { var n = LEFT[v], hot = n * 2 < ALL, even = n * 2 === ALL, r1 = '', r2 = '';
+    for (var i = 0; i < ALL; i++) { var c = i < n ? '' : ' class="x13-out"'; if (i < ALL / 2) r1 += '<i' + c + '></i>'; else r2 += '<i' + c + '></i>'; }
+    $('row1').innerHTML = r1; $('row2').innerHTML = r2;
+    $('row1').className = 'x13-s8 x13-first' + (hot ? ' x13-short' : '');
+    $('row1').setAttribute('aria-label', 'แถวบน 8 ที่นั่ง มีกรรมการที่เหลือ ' + Math.min(n, 8) + ' คน');
+    $('row2').setAttribute('aria-label', 'แถวล่าง 8 ที่นั่ง มีกรรมการที่เหลือ ' + Math.max(n - 8, 0) + ' คน');
+    $('halfL').textContent = 'แถวบน 8 ที่นั่งคือกึ่งหนึ่งของ 16 คน · ' + (hot ? 'แถวบนไม่เต็ม เหลือไม่ถึงกึ่งหนึ่ง' : even ? 'แถวบนเต็มพอดี เหลือเท่ากับกึ่งหนึ่ง' : 'แถวบนเต็ม และยังมีแถวล่าง เหลือเกินกึ่งหนึ่ง');
+    $('leftR').className = 'x13-res' + (hot ? ' x13-hot' : '');
+    $('leftR').innerHTML = '<b>เหลือ ' + n + ' จาก ' + ALL + ' คน ' + (hot ? 'เข้ามาตรา 64' : 'ไม่เข้ามาตรา 64') + '</b><span>' +
+      (hot ? 'เหลือไม่ถึงกึ่งหนึ่งของจำนวนกรรมการที่พึงมี รัฐมนตรีแต่งตั้งสมาชิกสามัญเป็นกรรมการชั่วคราว แทนกรรมการที่พ้นจากตำแหน่ง'
+        : even ? 'เหลือ 8 คน เท่ากับกึ่งหนึ่งพอดี ตัวบทเขียนว่า “ไม่ถึงกึ่งหนึ่ง” จึงไม่มีการแต่งตั้งกรรมการชั่วคราวตามมาตรานี้'
+        : 'กรรมการที่เหลือยังเกินกึ่งหนึ่ง จึงไม่มีการแต่งตั้งกรรมการชั่วคราวตามมาตรานี้') + law('ม.64 วรรคหนึ่ง') + '</span>';
+    $('tmp').hidden = !hot; });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { multi: true, f: 'ห้าเรื่องนี้เกิดขึ้นในช่วงเดียวกัน', q: 'แตะทุกเรื่องที่ไปถึงคณะกรรมการกำกับดูแลฯ แล้ว', o: [
+      ['สภาฯ ไม่ออกใบอนุญาตให้ผู้ยื่นคำขอคนหนึ่ง และเขายื่นอุทธรณ์', 1, 'ผู้ยื่นคำขอมีสิทธิอุทธรณ์การไม่ออกใบอนุญาตต่อคณะกรรมการกำกับดูแลฯ (ม.42 วรรคสอง · ม.60 (4))'],
+      ['มีผู้ยื่นคำกล่าวหาว่าผู้ทำบัญชีคนหนึ่งประพฤติผิดจรรยาบรรณ', 0, 'คำกล่าวหาที่เพิ่งยื่น เป็นงานสอบสวนพิจารณาของคณะกรรมการจรรยาบรรณ จะไปถึงคณะกรรมการกำกับดูแลฯ เมื่อมีการอุทธรณ์คำสั่ง (ม.53 · ม.55)'],
+      ['มาตรฐานการบัญชีฉบับปรับปรุงเสร็จแล้ว และส่งไปขอความเห็นชอบ', 1, 'มาตรฐานการบัญชีต้องได้รับความเห็นชอบจากคณะกรรมการกำกับดูแลฯ (ม.34 วรรคสาม · ม.60 (3))'],
+      ['พราวเพิ่งยื่นคำขอรับใบอนุญาต สภาฯ ยังพิจารณาอยู่', 0, 'คำขอรับใบอนุญาตเป็นเรื่องที่สภาฯ พิจารณา จะไปถึงคณะกรรมการกำกับดูแลฯ ต่อเมื่อสภาฯ ไม่ออกใบอนุญาตให้ แล้วผู้ยื่นคำขออุทธรณ์ (ม.42)'],
+      ['ผู้สอบบัญชีที่ถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ ยื่นอุทธรณ์คำสั่งภายในกำหนด', 1, 'ผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษมีสิทธิอุทธรณ์คำสั่งต่อคณะกรรมการกำกับดูแลฯ (ม.55 · ม.60 (5))']],
+      ex: 'สามเรื่องนี้ตรงกับข้อ 3 ข้อ 4 และข้อ 5 ของมาตรา 60 ส่วนคำขอที่เพิ่งยื่นยังอยู่ที่สภาฯ และคำกล่าวหาที่เพิ่งยื่นยังอยู่ที่คณะกรรมการจรรยาบรรณ' },
+    { f: 'คณะกรรมการสภาฯ แต่งตั้งคณะอนุกรรมการชุดหนึ่ง ต่อมาคณะกรรมการกำกับดูแลฯ สั่งเป็นหนังสือให้คณะอนุกรรมการชุดนี้ระงับการกระทำที่ขัดต่อข้อบังคับสภาฯ อนุกรรมการคนหนึ่งไม่ปฏิบัติตามคำสั่ง', q: 'ตามมาตรา 63 เรื่องของอนุกรรมการคนนี้เดินต่ออย่างไร', o: [
+      ['คณะกรรมการกำกับดูแลฯ มีคำสั่งให้พ้นจากตำแหน่งได้เอง', 0, 'มาตรา 63 ให้คณะกรรมการกำกับดูแลฯ ทำการสอบสวนโดยเร็ว และเสนอผลการพิจารณา ผู้มีคำสั่งให้พ้นจากตำแหน่งคือรัฐมนตรี'],
+      ['คณะกรรมการกำกับดูแลฯ สอบสวนโดยเร็ว แล้วเสนอผลการพิจารณาเพื่อให้รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่ง', 1, 'มาตรา 63 ใช้กับนายกสภาวิชาชีพบัญชี กรรมการ และอนุกรรมการตามพระราชบัญญัตินี้ ที่ไม่ปฏิบัติตามคำสั่งของคณะกรรมการกำกับดูแลฯ และคำสั่งของรัฐมนตรีเป็นที่สุด'],
+      ['มาตรา 63 ใช้กับนายกสภาฯ และกรรมการเท่านั้น อนุกรรมการไม่อยู่ในมาตรานี้', 0, 'มาตรา 63 เขียนถึงนายกสภาวิชาชีพบัญชี กรรมการ หรืออนุกรรมการตามพระราชบัญญัตินี้ อนุกรรมการจึงอยู่ในมาตรานี้ด้วย']] },
+    { f: 'รัฐมนตรีมีคำสั่งตามมาตรา 63 ให้กรรมการของคณะกรรมการสภาฯ ชุดหนึ่งพ้นจากตำแหน่งพร้อมกัน 6 คน โจทย์บอกมาเท่านี้', q: 'รัฐมนตรีต้องแต่งตั้งกรรมการชั่วคราวหรือไม่', o: [
+      ['ต้องแต่งตั้ง เพราะมีกรรมการพ้นจากตำแหน่งพร้อมกันหลายคน', 0, 'มาตรา 64 ไม่ได้ดูว่าพ้นกี่คน แต่ดูว่ากรรมการที่เหลือ ไม่ถึงกึ่งหนึ่งของจำนวนกรรมการที่พึงมีหรือไม่'],
+      ['ไม่ต้องแต่งตั้ง เพราะเหลือ 10 จาก 16 คน ยังเกินกึ่งหนึ่ง', 0, '16 คนเป็นตัวเลขตัวอย่างของภาพในส่วนที่ 4 โจทย์นี้ไม่ได้บอกว่าคณะนี้พึงมีกรรมการกี่คน จึงยังเทียบกับกึ่งหนึ่งไม่ได้'],
+      ['ยังตอบไม่ได้ ต้องรู้ก่อนว่าคณะนี้พึงมีกรรมการกี่คน', 1, 'มาตรา 64 เทียบจำนวนที่เหลือกับกึ่งหนึ่งของจำนวนกรรมการที่พึงมี ถ้าคณะนี้พึงมี 16 คน พ้น 6 คนเหลือ 10 คน ไม่เข้ามาตรานี้ แต่ถ้าพึงมี 10 คน พ้น 6 คนเหลือ 4 คน เข้ามาตรานี้ คำตอบจึงขึ้นกับจำนวนที่พึงมี']] }
+  ]);
+})();
+</script>
+</body>
+</html>

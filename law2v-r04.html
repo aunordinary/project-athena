@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>เปิดสำนักงาน ต้องมีอะไรบ้าง | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะบทที่ 4 (ขึ้นต้น x04-) */
+.x04-grid { display:grid; grid-template-columns:58px minmax(0,1fr) minmax(0,1fr); gap:8px; align-items:stretch; }
+.x04-colh { align-self:end; text-align:center; font-family:var(--display); font-weight:800; font-size:15px; line-height:1.2; padding:2px; }
+.x04-colh small { display:block; font-family:var(--body); font-weight:500; font-size:12px; color:var(--muted); }
+.x04-rowh { display:grid; justify-items:center; align-content:center; gap:4px; padding:6px 2px; border-radius:16px; background:var(--hue-ink); color:#fff; font-family:var(--display); font-weight:800; font-size:13px; line-height:1.2; text-align:center; }
+.x04-rowh svg { width:22px; height:22px; color:var(--sun); }
+.x04-grid button { display:grid; justify-items:center; align-content:center; gap:8px; min-height:96px; padding:10px 4px; border-radius:18px; border:3px solid transparent; background:var(--soft); color:var(--ink); font:inherit; font-size:13px; font-weight:600; line-height:1.25; cursor:pointer; transition:transform .12s ease, background-color .12s ease; }
+.x04-grid button:active { transform:scale(.97); }
+.x04-grid button[aria-pressed="true"] { border-color:var(--hue); background:var(--hue-soft); color:var(--hue-ink); }
+.x04-pips { display:flex; gap:2px; }
+.x04-pips i { width:17px; height:17px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--line); box-shadow:inset 0 0 0 1.5px var(--line); }
+.x04-pips i:first-child { margin-right:4px; }
+.x04-pips i svg { width:10px; height:10px; }
+.x04-pips i.x04-lit { background:var(--hue); color:#fff; box-shadow:none; }
+.x04-out { display:grid; gap:10px; padding:14px; border-radius:20px; background:var(--soft); }
+.x04-out > b { font-family:var(--display); font-size:19px; line-height:1.25; }
+.x04-out > span { font-size:15px; color:var(--muted); margin-top:-6px; }
+.x04-reqs { display:grid; gap:8px; margin:0; padding:0; list-style:none; }
+.x04-req { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--white); }
+.x04-req .ico { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; }
+.x04-req .ico svg { width:20px; height:20px; }
+.x04-req b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+.x04-req div > span { display:block; font-size:14px; line-height:1.45; }
+.x04-req a { display:inline-block; margin:2px 12px 0 0; padding:4px 0; font-size:13px; font-weight:700; color:var(--hue-ink); }
+.x04-req a::after { content:" ›"; }
+.x04-tag { display:inline-block; padding:0 8px; border-radius:99px; background:var(--hue-soft); color:var(--hue-ink); font-style:normal; font-size:12px; font-weight:700; }
+.x04-tag.x04-ent { background:var(--gold-soft); color:#6A5412; box-shadow:inset 0 0 0 1px var(--gold); }
+.x04-req.x04-off { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
+.x04-req.x04-off .ico { background:var(--white); color:var(--line); box-shadow:inset 0 0 0 1.5px var(--line); }
+.x04-req.x04-off b { font-weight:600; font-size:15px; }
+
+.x04-orwrap { position:relative; }
+.x04-or { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:1; padding:2px 12px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:700; }
+#payS .law, .gate .law { display:inline-block; margin-top:0; font-size:12px; }
+.cond.x04-idle { opacity:.6; } .cond.x04-idle .mk { display:none; }
+
+details.x04-more { padding:12px 14px; border-radius:18px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:14px; }
+details.x04-more summary { cursor:pointer; font-family:var(--display); font-weight:800; font-size:16px; line-height:1.3; min-height:28px; }
+details.x04-more > * + * { margin-top:10px; }
+.x04-ifs { display:grid; gap:6px; margin:0; padding:0; list-style:none; }
+.x04-ifs li { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); border-radius:14px; overflow:hidden; font-size:14px; line-height:1.35; box-shadow:inset 0 0 0 1.5px var(--line); }
+.x04-ifs li span { padding:9px 10px; }
+.x04-ifs li span:last-child { background:var(--soft); font-weight:700; }
+
+.x04-year { display:grid; gap:6px; }
+.x04-yb { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); min-height:56px; border-radius:14px; overflow:hidden; font-size:13px; font-weight:700; text-align:center; line-height:1.25; }
+.x04-yb span { display:grid; place-items:center; align-content:center; padding:6px; }
+.x04-yb small { display:block; font-weight:500; font-size:12px; }
+.x04-y1 { background:var(--hue-soft); color:var(--hue-ink); }
+.x04-y2 { background:var(--good); color:#fff; transition:background-color .2s ease; }
+.x04-y2.x04-end { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.x04-yt { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); font-size:12px; font-weight:700; color:var(--muted); }
+.x04-yt span:first-child { text-align:right; padding-right:6px; border-right:3px solid var(--ink); }
+.x04-yt span:last-child { padding-left:6px; }
+
+.x04-evs { width:100%; max-width:300px; display:grid; justify-items:center; gap:4px; }
+.x04-ev { width:100%; display:grid; grid-template-columns:24px minmax(0,1fr); gap:8px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--soft); font-size:14px; font-weight:600; line-height:1.35; }
+.x04-ev svg { width:22px; height:22px; color:var(--hue); }
+.x04-orr { padding:0 10px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; }
+.x04-pill { justify-self:center; padding:3px 14px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:14px; font-weight:800; font-family:var(--display); }
+
+.x04-defs, .x04-chg, .x04-fees { display:grid; gap:6px; margin:0; padding:0; list-style:none; }
+.x04-defs li { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.35; }
+.x04-defs b { font-family:var(--display); font-size:15px; }
+.x04-fees li { display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:6px 2px; border-bottom:1.5px solid var(--line); font-size:14px; }
+.x04-fees b { font-family:var(--display); white-space:nowrap; }
+.x04-kinds { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; }
+.x04-kind { position:relative; display:grid; align-content:start; gap:4px; padding:14px 10px 12px; border-radius:18px; background:var(--soft); font-size:13px; line-height:1.35; color:var(--muted); }
+.x04-kind i { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--ink); color:#fff; font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; }
+.x04-kind b { font-family:var(--display); font-size:15px; line-height:1.25; color:var(--ink); }
+.x04-kind.x04-wide { grid-column:1 / -1; background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--gold); }
+.x04-sum { display:grid; gap:0; padding:12px 14px; border-radius:18px; background:var(--soft); }
+.x04-sum div { display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:5px 0; font-size:14px; }
+.x04-sum b { font-family:var(--display); font-weight:800; font-size:20px; white-space:nowrap; }
+.x04-sum b i { font-style:normal; font-size:13px; font-weight:600; }
+.x04-sum div.x04-tot { margin-top:4px; padding-top:9px; border-top:3px solid var(--ink); font-weight:700; }
+.x04-sum div.x04-tot b { font-size:26px; }
+.x04-cmp { display:grid; gap:10px; }
+.x04-bar { display:grid; gap:4px; padding:10px 12px; border-radius:16px; background:var(--soft); transition:background-color .2s ease; }
+.x04-bar .x04-bh { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:14px; font-weight:600; }
+.x04-bar .x04-bh b { font-family:var(--display); font-weight:800; font-size:18px; white-space:nowrap; }
+.x04-bar .x04-bt { height:14px; border-radius:99px; background:var(--white); overflow:hidden; }
+.x04-bar .x04-bt i { display:block; height:100%; border-radius:99px; background:var(--line); transition:width .35s ease, background-color .2s ease; }
+.x04-bar em { display:none; justify-self:start; padding:1px 10px; border-radius:99px; background:var(--hue); color:#fff; font-style:normal; font-size:12px; font-weight:700; }
+.x04-bar.x04-big { background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); color:var(--hue-ink); }
+.x04-bar.x04-big .x04-bt i { background:var(--hue); } .x04-bar.x04-big em { display:inline-block; }
+.x04-bar.x04-not { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
+.x04-bar.x04-not .x04-bt i { background:repeating-linear-gradient(135deg, var(--line) 0 6px, transparent 6px 12px); }
+.x04-bar.x04-not em { display:inline-block; background:var(--white); color:var(--muted); box-shadow:inset 0 0 0 1.5px var(--line); }
+.x04-two { display:grid; gap:6px; }
+.x04-two div { display:grid; gap:2px; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.4; }
+.x04-two div:last-child { background:var(--hue-soft); color:var(--hue-ink); }
+.x04-two b { font-family:var(--display); font-size:15px; }
+.x04-lane { display:grid; gap:6px; padding:12px; border-radius:18px; background:var(--soft); }
+.x04-lane > b { font-family:var(--display); font-size:16px; line-height:1.3; }
+.x04-lb { display:grid; height:42px; border-radius:12px; overflow:hidden; font-size:12px; font-weight:700; text-align:center; line-height:1.2; }
+.x04-lb span { display:grid; place-items:center; padding:0 4px; }
+.x04-lb span:first-child { background:var(--white); color:var(--muted); } .x04-lb span:last-child { background:var(--good); color:#fff; }
+.x04-la .x04-lb, .x04-la .x04-lt { grid-template-columns:minmax(0,3fr) minmax(0,1.4fr); }
+.x04-lz .x04-lb, .x04-lz .x04-lt { grid-template-columns:minmax(0,3fr) minmax(0,1.3fr); }
+.x04-lt { display:grid; font-size:12px; font-weight:700; color:var(--muted); }
+.x04-la .x04-lt span:first-child { text-align:right; padding-right:6px; border-right:3px solid var(--ink); }
+.x04-lz .x04-lt span:first-child { padding-left:6px; border-left:3px solid var(--ink); }
+.x04-lz .x04-lt span:last-child { text-align:right; padding-right:6px; border-right:3px solid var(--ink); }
+.x04-lane p { font-size:14px; line-height:1.45; }
+.x04-chg li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; align-items:center; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.4; }
+.x04-chg b { font-family:var(--display); font-size:15px; display:block; }
+.x04-chg em { font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; white-space:nowrap; }
+.x04-chain { display:grid; justify-items:center; gap:6px; }
+.x04-node { width:100%; display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border-radius:18px; background:var(--bad-soft); color:var(--bad-ink); transition:background-color .2s ease, opacity .2s ease; }
+.x04-node .ico { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--white); } .x04-node .ico svg { width:22px; height:22px; }
+.x04-node b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; } .x04-node div > span { font-size:14px; line-height:1.4; }
+.x04-node.x04-skip { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
+.x04-link { padding:2px 12px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:700; text-align:center; }
+.x04-link.x04-if { background:var(--white); color:var(--ink); box-shadow:inset 0 0 0 1.5px var(--ink); }
+.x04-vs { display:grid; gap:10px; padding:14px; border-radius:18px; background:var(--soft); }
+.x04-vs div { display:grid; gap:4px; font-size:14px; } .x04-vs b { font-family:var(--display); font-size:16px; }
+.x04-vb { height:18px; border-radius:99px; } .x04-v1 { width:14%; background:var(--gold); } .x04-v2 { width:100%; background:linear-gradient(90deg, var(--bad) 0 82%, transparent); border-radius:99px 0 0 99px; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ บทที่ 4 (หัวข้อ R05 ของโครง v2) · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่เปิดอ่านเอง (sources/law2/1-profession): พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.4 ม.11 ม.37–38 ม.44–46 ม.66 ม.67 ม.69
+     · พ.ร.บ.การบัญชี พ.ศ. 2543 ม.4 ม.8 (เฉพาะนิยามผู้ทำบัญชี) · กฎกระทรวงกำหนดหลักประกันฯ พ.ศ. 2553 ข้อ 1–6
+     · ประกาศสภาฯ ที่ 3/2558 ข้อ 3–12 (อ่านจากภาพสแกน) · ประกาศสภาฯ ที่ 15/2562 ข้อ 3 (อ่านจากภาพสแกน)
+     · ข้อบังคับผู้ขึ้นทะเบียนเป็นผู้ทำบัญชี พ.ศ. 2556 ข้อ 4–13 · ข้อบังคับค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556 ข้อ 7
+     แพร พีท และบริษัทในภาพเป็นกรณีสมมติ ตัวเลขทุน รายได้ และหลักประกันเป็นตัวเลขสมมติ อัตราร้อยละ 3 และกำหนดวันมาจากตัวบท -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 4</p>
+    <h1>เปิดสำนักงาน ต้องมีอะไรบ้าง</h1>
+    <p class="sub">รับสอบบัญชีหรือรับทำบัญชี ต้องดูตัวคนที่ทำงาน และนิติบุคคลที่ให้บริการ แตะเรื่องที่อยากดู</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพสำนักงานบัญชี ด้านซ้ายเป็นคนที่ทำงาน ด้านขวาเป็นทะเบียนและหลักประกันของนิติบุคคล">
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+      <g transform="translate(118 22)">
+        <rect x="0" y="16" width="104" height="88" rx="8" fill="rgba(255,255,255,.14)"/>
+        <rect x="14" y="0" width="76" height="22" rx="6" fill="#F0C84B"/>
+        <path d="M26 11h52" stroke="#1C4257" stroke-width="4" stroke-linecap="round"/>
+        <g fill="rgba(255,255,255,.6)"><rect x="12" y="32" width="20" height="18" rx="3"/><rect x="42" y="32" width="20" height="18" rx="3"/><rect x="72" y="32" width="20" height="18" rx="3"/><rect x="12" y="58" width="20" height="18" rx="3"/><rect x="72" y="58" width="20" height="18" rx="3"/></g>
+        <rect x="40" y="62" width="24" height="42" rx="4" fill="#fff"/><circle cx="58" cy="84" r="2.500" fill="#1C4257"/>
+      </g>
+      <g transform="translate(26 44)">
+        <circle cx="22" cy="18" r="13" fill="#F0C84B"/><path d="M0 62c2-18 10-26 22-26s20 8 22 26z" fill="#F0C84B"/>
+        <circle cx="62" cy="26" r="11" fill="rgba(255,255,255,.75)"/><path d="M44 62c2-15 8-22 18-22s16 7 18 22z" fill="rgba(255,255,255,.75)"/>
+      </g>
+      <g transform="translate(244 30)">
+        <rect x="0" y="6" width="46" height="60" rx="6" fill="#fff"/><path d="M9 20h28M9 31h28M9 42h16" stroke="#CFCBBF" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="54" r="8" fill="#0F5132"/>
+        <path d="M66 22l18 7v13c0 11-7 19-18 23-11-4-18-12-18-23V29z" fill="#F0C84B" stroke="#1C4257" stroke-width="3" stroke-linejoin="round"/><path d="M58 43l6 6 11-12" fill="none" stroke="#1C4257" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M96 96h18M226 96h14" stroke="rgba(255,255,255,.35)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="เรื่องในบทนี้">
+    <a href="#s1"><i>1</i>ผู้ทำบัญชี</a><a href="#s2"><i>2</i>จดทะเบียน</a><a href="#s3"><i>3</i>หลักประกัน</a><a href="#s4"><i>4</i>ทุกปี</a><a href="#s5"><i>5</i>รับผิด</a>
+  </nav>
+
+  <!-- ภาพหลัก: ตารางสองแกน งาน × มีนิติบุคคลให้บริการหรือไม่ -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">ภาพรวมของบท</span>
+    <h2 id="f0">งานอะไร ใครเป็นผู้ให้บริการ ต้องมีอะไร</h2>
+    <p class="cap">หลายปีต่อมา แพรเป็นผู้สอบบัญชีรับอนุญาตแล้ว และตั้งบริษัทจำกัดรับสอบบัญชี บริษัทของแพรอยู่ช่องขวาบน แตะช่องอื่นเพื่อเทียบ</p>
+    <p class="lbl">สอบบัญชี คือตรวจสอบบัญชีของกิจการแล้วแสดงความเห็นในฐานะผู้สอบบัญชี · ทำบัญชี คือจัดทำบัญชีของกิจการ</p>
+    <div class="x04-grid" data-pick="cell">
+      <span></span>
+      <span class="x04-colh">ไม่มีนิติบุคคลให้บริการ</span>
+      <span class="x04-colh">นิติบุคคลให้บริการ<small>บริษัท ห้างหุ้นส่วน</small></span>
+      <span class="x04-rowh"><span data-ico="star"></span>สอบบัญชี</span>
+      <button data-v="0" aria-label="สอบบัญชี ไม่มีนิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i data-ico="pen"></i><i data-ico="shield"></i><i data-ico="flag"></i><i data-ico="bag"></i></span>ดูที่ตัวคน</button>
+      <button data-v="1" aria-pressed="true" aria-label="สอบบัญชี นิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i class="x04-lit" data-ico="pen"></i><i class="x04-lit" data-ico="shield"></i><i class="x04-lit" data-ico="flag"></i><i class="x04-lit" data-ico="bag"></i></span>ดูตัวคนและนิติบุคคล</button>
+      <span class="x04-rowh"><span data-ico="book"></span>ทำบัญชี</span>
+      <button data-v="2" aria-label="ทำบัญชี ไม่มีนิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i data-ico="pen"></i><i data-ico="shield"></i><i data-ico="flag"></i><i data-ico="bag"></i></span>ดูที่ตัวคน</button>
+      <button data-v="3" aria-label="ทำบัญชี นิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i class="x04-lit" data-ico="pen"></i><i class="x04-lit" data-ico="shield"></i><i data-ico="flag"></i><i data-ico="bag"></i></span>ดูตัวคนและนิติบุคคล</button>
+    </div>
+    <p class="lbl">จุดสีเข้ม คือข้อที่ใช้กับช่องนั้น เรียงตามรายการข้างล่าง</p>
+    <div class="x04-out" role="status">
+      <b id="cellT"></b><span id="cellS"></span>
+      <ul class="x04-reqs" id="cellR"></ul>
+    </div>
+  </section>
+
+  <!-- เรื่องที่ 1 ผู้ทำบัญชี -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>เรื่องที่ 1 · ตัวคน ฝั่งทำบัญชี</small><h2 id="h1">ผู้ทำบัญชี เป็นสมาชิกหรือขึ้นทะเบียน อย่างเดียวก็พอ</h2></div></div>
+    <p class="note"><span data-ico="info"></span><span>ผู้ทำบัญชี คือผู้รับผิดชอบในการทำบัญชีของผู้มีหน้าที่จัดทำบัญชี เช่น บริษัทจำกัด ไม่ว่าจะทำในฐานะลูกจ้างของผู้นั้นหรือไม่ก็ตาม <span class="law">พ.ร.บ. ม.4</span> <span class="law">พ.ร.บ.การบัญชี ม.4 · ม.8</span></span></p>
+    <p class="cap">พีทเป็นพนักงานของบริษัท พาวเด้ออ้าย จำกัด บริษัทขายแป้งของพริ้ง รับผิดชอบทำบัญชีของบริษัทนั้น จึงเป็นผู้ทำบัญชี พีทไม่ได้เป็นสมาชิกสภาฯ แต่ขึ้นทะเบียนไว้ ลองปิดและเปิดทีละอย่าง</p>
+    <div class="togs" data-togs="bk">
+      <button data-k="mem" aria-pressed="false"><span>พีทเป็นสมาชิกสภาฯ<small>สมัครสมาชิกตามบทที่ 1</small></span></button>
+      <button data-k="reg" aria-pressed="true"><span>พีทขึ้นทะเบียนเป็นผู้ทำบัญชีไว้กับสภาฯ<small>มีบัตรประจำตัวผู้ขึ้นทะเบียนของปีนี้</small></span></button>
+    </div>
+    <div>
+      <div class="x04-orwrap">
+        <div class="conds two">
+          <div class="cond" id="d0"><span class="mk"></span><span class="ico" data-ico="card"></span><span>เป็นสมาชิกสภาฯ<small>ม.44</small></span></div>
+          <div class="cond" id="d1"><span class="mk"></span><span class="ico" data-ico="pen"></span><span>ขึ้นทะเบียนไว้กับสภาฯ<small>ม.44</small></span></div>
+        </div>
+        <span class="x04-or">หรือ</span>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="k0" d="M75 0C75 18 150 12 150 30"/><path id="k1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="gate" id="gate1" role="status"><span data-door></span><div><b id="gate1T"></b><span id="gate1S"></span></div></div>
+    </div>
+    <details class="x04-more">
+      <summary>ทางขึ้นทะเบียน ต้องมีคุณสมบัติอะไร</summary>
+      <ul class="needs">
+        <li><span class="hd">ผู้ทำบัญชีที่จะขึ้นทะเบียน <span class="law">พ.ร.บ. ม.45</span></span></li>
+        <li><span class="mk" data-ico="check"></span><span>มีภูมิลำเนาหรือถิ่นที่อยู่ในราชอาณาจักร</span></li>
+        <li><span class="mk" data-ico="check"></span><span>มีความรู้ภาษาไทยเพียงพอที่จะทำบัญชีเป็นภาษาไทยได้</span></li>
+        <li><span class="mk" data-ico="check"></span><span>ไม่เคยต้องคำพิพากษาถึงที่สุดให้จำคุกในความผิดตามที่มาตรา 39 (3) กำหนด เช่น ความผิดตามกฎหมายว่าด้วยการบัญชี เว้นแต่ต้องคำพิพากษาหรือพ้นโทษมาแล้วไม่น้อยกว่า 3 ปี</span></li>
+        <li><span class="mk" data-ico="check"></span><span>มีวุฒิการศึกษาเช่นเดียวกับวุฒิของผู้ทำบัญชีตามประกาศของกรมพัฒนาธุรกิจการค้า ซึ่งออกตามกฎหมายว่าด้วยการบัญชี <span class="law">ข้อบังคับผู้ทำบัญชี ข้อ 6</span></span></li>
+        <li><span class="mk" data-ico="check"></span><span>ไม่มีลักษณะต้องห้ามอื่นตามที่กำหนดในข้อบังคับสภาฯ</span></li>
+        <li><span class="mk i" data-ico="info"></span><span>ผู้ไม่มีสัญชาติไทย ต้องมีความรู้เกี่ยวกับมาตรฐานการรายงานทางการเงินและกฎหมายภาษีอากรของประเทศไทยด้วย <span class="law">ข้อ 5 วรรคสอง</span></span></li>
+      </ul>
+      <p>คนที่เคยถูกเพิกถอนการขึ้นทะเบียน หรือถูกสั่งให้พ้นจากการเป็นสมาชิก เพราะโทษจรรยาบรรณ <span class="law">ข้อ 5 วรรคสาม</span></p>
+      <ul class="x04-ifs">
+        <li><span>ได้รับโทษมาแล้วไม่น้อยกว่า 3 ปี</span><span>ขอขึ้นทะเบียนได้</span></li>
+        <li><span>ถ้าคณะกรรมการสภาฯ ปฏิเสธ</span><span>ยื่นคำขอได้อีกเมื่อสิ้น 1 ปีนับจากวันที่ปฏิเสธ</span></li>
+        <li><span>ถ้าถูกปฏิเสธเป็นครั้งที่สอง</span><span>หมดสิทธิขอขึ้นทะเบียนอีกต่อไป</span></li>
+      </ul>
+    </details>
+
+    <h3 style="margin-top:8px">ขึ้นทะเบียนแล้ว ต้องต่ออายุทุกปี</h3>
+    <p class="cap">บัตรประจำตัวผู้ขึ้นทะเบียนใช้ได้ถึงสิ้นปีปฏิทิน ลองเปลี่ยนสิ่งที่พีททำตอนปลายปี</p>
+    <div class="stats"><div class="stat"><b>500</b><span>บาทต่อปี ผู้ขึ้นทะเบียนที่จบปริญญาตรีหรือเทียบเท่าขึ้นไป</span></div><div class="stat"><b>300</b><span>บาทต่อปี จบต่ำกว่าปริญญาตรี</span></div></div>
+    <div class="chips" data-pick="pay">
+      <button data-v="0" aria-pressed="true">ชำระครบภายในกำหนด</button>
+      <button data-v="1">ไม่ได้ชำระ</button>
+    </div>
+    <div class="x04-year" role="img" aria-label="แถบปี บัตรของปีนี้ใช้ได้ถึงวันที่ 31 ธันวาคม ต้องต่ออายุและชำระค่าธรรมเนียมของปีถัดไปภายในวันทำการสุดท้ายของปี">
+      <div class="x04-yb"><span class="x04-y1">บัตรของปีนี้<small>ใช้ได้ถึง 31 ธันวาคม</small></span><span class="x04-y2" id="yNext"></span></div>
+      <div class="x04-yt"><span>วันทำการสุดท้ายของปี</span><span>ปีถัดไป</span></div>
+    </div>
+    <div class="cons" aria-live="polite">
+      <b>พีทเป็นผู้ทำบัญชีต่อได้ไหม</b>
+      <div class="cg" id="payC"><span class="ico"></span><div><b id="payT"></b><span id="payS"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="mail"></span><span>ไม่ชำระครบ ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลง เว้นแต่ทำหนังสือยื่นต่อคณะกรรมการสภาฯ หรือผู้ซึ่งคณะกรรมการมอบหมาย แสดงให้เห็นว่าเกิดจากพฤติการณ์ที่จำเป็น และยื่นภายใน 1 เดือนนับจากวันที่พฤติการณ์นั้นสิ้นสุดลง <span class="law">ข้อบังคับผู้ทำบัญชี ข้อ 13</span></span></p>
+  </section>
+
+  <!-- เรื่องที่ 2 จดทะเบียนนิติบุคคล -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>เรื่องที่ 2 · นิติบุคคล จดทะเบียนต่อสภาฯ</small><h2 id="h2">นิติบุคคลที่รับสอบบัญชีหรือทำบัญชี ต้องจดทะเบียนต่อสภาฯ ใน 30 วัน</h2></div></div>
+    <p class="cap">บริษัทของแพรจดทะเบียนสองแห่ง กรมพัฒนาธุรกิจการค้าเพื่อเป็นนิติบุคคล และสภาวิชาชีพบัญชีเพราะรับสอบบัญชี</p>
+    <p class="lbl">30 วัน นับหลังจากเหตุการณ์ใดเหตุการณ์หนึ่ง แล้วแต่กรณี <span class="law">ประกาศ 3/2558 ข้อ 4</span></p>
+    <div class="map">
+      <div class="x04-evs">
+        <div class="x04-ev"><span data-ico="bag"></span><span>จดทะเบียนจัดตั้งนิติบุคคลที่กรมพัฒนาธุรกิจการค้า</span></div>
+        <span class="x04-orr">หรือ</span>
+        <div class="x04-ev"><span data-ico="pen"></span><span>จดทะเบียนเปลี่ยนแปลงวัตถุประสงค์ เพื่อให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี</span></div>
+        <span class="x04-orr">หรือ</span>
+        <div class="x04-ev"><span data-ico="flag"></span><span>เริ่มให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี</span></div>
+      </div>
+      <span class="ln"></span><span class="x04-pill">ภายใน 30 วัน</span><span class="ln"></span>
+      <div class="nd end"><span class="ico" data-ico="pen"></span><b>จดทะเบียนต่อสภาวิชาชีพบัญชี</b><small>พร้อมหลักฐาน และแจ้งรายละเอียดเกี่ยวกับหลักประกันมาพร้อมกัน</small><span class="law">ประกาศ 3/2558 ข้อ 4 · ข้อ 8 (1)</span></div>
+    </div>
+
+    <h3 style="margin-top:8px">รับสอบบัญชี ต้องดูคนที่มีอำนาจลงนามผูกพันด้วย</h3>
+    <p class="cap">คนที่มีอำนาจลงนามผูกพัน คือคนที่ลงนามแล้วผูกพันบริษัทในการให้บริการการสอบบัญชี ในบริษัทของแพรคือแพร ซึ่งเป็นกรรมการ ลองเปลี่ยนทีละเรื่อง</p>
+    <p class="lbl">งานที่บริษัทรับ</p>
+    <div class="chips" data-pick="svc">
+      <button data-v="0" aria-pressed="true">รับสอบบัญชี</button>
+      <button data-v="1">รับทำบัญชีอย่างเดียว</button>
+    </div>
+    <p class="lbl">คนที่มีอำนาจลงนามผูกพันบริษัท</p>
+    <div class="chips" data-pick="sig">
+      <button data-v="0" aria-pressed="true">แพร ผู้สอบบัญชีรับอนุญาต</button>
+      <button data-v="1">เปลี่ยนเป็นกรรมการอีกคน ที่ไม่ใช่ผู้สอบบัญชีรับอนุญาต</button>
+    </div>
+    <div>
+      <div class="conds two">
+        <div class="cond ok" id="e0"><span class="mk" data-ico="check"></span><span class="ico" data-ico="shield"></span><span>มีหลักประกัน<small>ม.11 (1) · ดูเรื่องที่ 3</small></span></div>
+        <div class="cond" id="e1"><span class="mk"></span><span class="ico" data-ico="flag"></span><span>คนที่มีอำนาจลงนามผูกพันเป็นผู้สอบบัญชีรับอนุญาต<small id="e1s">ม.11 (2)</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="ok" d="M75 0C75 18 150 12 150 30"/><path id="m1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="gate" id="gate2" role="status"><span data-door></span><div><b id="gate2T"></b><span id="gate2S"></span></div></div>
+    </div>
+  </section>
+
+  <!-- เรื่องที่ 3 หลักประกัน วันยื่นจด -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>เรื่องที่ 3 · นิติบุคคล หลักประกันวันยื่นจด</small><h2 id="h3">วันยื่นจด ต้องมีหลักประกันไม่น้อยกว่าร้อยละ 3 ของทุน</h2></div></div>
+    <p class="note"><span data-ico="shield"></span><span>หลักประกันนี้นิติบุคคลต้องจัดให้มีไว้ เพื่อประกันความรับผิดต่อบุคคลที่สาม คือคนอื่นที่ไม่ใช่นิติบุคคลผู้ให้บริการเอง <span class="law">พ.ร.บ. ม.11 (1)</span></span></p>
+    <p class="cap">วันยื่นจด บริษัทของแพรมีเงินฝากประจำ 1 ปี 60,000 บาท บริษัทจำกัดคิดจากทุนจดทะเบียน <span class="law">กฎกระทรวง ข้อ 1</span> ลองเปลี่ยนทุน หรือให้เงินฝากก้อนนี้มีภาระผูกพัน</p>
+    <p class="lbl">ทุนจดทะเบียน ณ วันที่ยื่นจดทะเบียน</p>
+    <div class="chips" data-pick="cap">
+      <button data-v="0">1,000,000 บาท</button>
+      <button data-v="1" aria-pressed="true">2,000,000 บาท</button>
+      <button data-v="2">3,000,000 บาท</button>
+    </div>
+    <div class="togs" data-togs="enc">
+      <button data-k="enc" aria-pressed="false"><span>เงินฝากก้อนนี้จำนำเป็นประกันเงินกู้ของบริษัท<small>มีภาระผูกพัน</small></span></button>
+    </div>
+    <div class="x04-sum" aria-live="polite">
+      <div><span>ทุนจดทะเบียน</span><b><span id="q3a"></span> <i>บาท</i></b></div>
+      <div><span>คูณ</span><b>ร้อยละ 3</b></div>
+      <div class="x04-tot"><span>ต้องมีหลักประกันไม่น้อยกว่า</span><b><span id="q3b"></span> <i>บาท</i></b></div>
+    </div>
+    <div class="gauges">
+      <div class="hd"><span>เทียบกับหลักประกันที่บริษัทมี</span><span class="law">กฎกระทรวง ข้อ 2</span></div>
+      <div class="gz" id="g3"><div class="top"><span>หลักประกันที่นับได้</span><b><span id="g3v"></span> <i>บาท</i></b></div><div class="bar"><i></i><em id="g3m"></em></div><div class="st" id="g3s"></div></div>
+    </div>
+    <p class="result" id="r3" role="status"></p>
+
+    <h3 style="margin-top:8px">หลักประกันใช้ได้ห้าประเภท</h3>
+    <div class="x04-kinds">
+      <div class="x04-kind"><i>1</i><b>เงินฝากประจำ ตั้งแต่ 1 ปีขึ้นไป</b></div>
+      <div class="x04-kind"><i>2</i><b>บัตรเงินฝาก</b></div>
+      <div class="x04-kind"><i>3</i><b>พันธบัตรรัฐบาลไทย</b></div>
+      <div class="x04-kind"><i>4</i><b>พันธบัตรองค์การหรือรัฐวิสาหกิจ</b></div>
+      <div class="x04-kind x04-wide"><i>5</i><b>กรมธรรม์ประกันภัยความรับผิดทางวิชาชีพบัญชี</b>นับตามจำนวนเงินเอาประกันภัยที่ระบุไว้ในกรมธรรม์ ไม่ได้นับจากเบี้ยประกันที่จ่าย <span class="law">กฎกระทรวง ข้อ 4</span></div>
+    </div>
+    <p class="note"><span data-ico="lock"></span><span>ทุกประเภทต้องปราศจากภาระผูกพัน <span class="law">กฎกระทรวง ข้อ 3</span></span></p>
+    <details class="x04-more">
+      <summary>รายละเอียดของแต่ละประเภท และทุนของนิติบุคคลแบบอื่น</summary>
+      <ul class="x04-defs">
+        <li><b>1 เงินฝากประจำ</b><span>ฝากกับสถาบันการเงินในประเทศ</span></li>
+        <li><b>2 บัตรเงินฝาก</b><span>สถาบันการเงินในประเทศออกให้นิติบุคคลนั้น เป็นหลักฐานการฝากเงิน</span></li>
+        <li><b>3 พันธบัตรรัฐบาลไทย</b><span>ที่จำหน่ายในราชอาณาจักร</span></li>
+        <li><b>4 พันธบัตรองค์การหรือรัฐวิสาหกิจ</b><span>ที่เป็นนิติบุคคลซึ่งมีพระราชบัญญัติหรือพระราชกฤษฎีกาจัดตั้งขึ้น</span></li>
+      </ul>
+      <p>ประเภท 2 ถึง 4 นับตามจำนวนเงินที่ปรากฏในบัตรเงินฝากหรือพันธบัตรนั้น <span class="law">กฎกระทรวง ข้อ 3 · ข้อ 4</span></p>
+      <ul class="x04-defs">
+        <li><b>บริษัทมหาชนจำกัด</b><span>ทุนชำระแล้ว</span></li>
+        <li><b>ห้างหุ้นส่วนจดทะเบียน หรือห้างหุ้นส่วนจำกัด</b><span>ส่วนลงหุ้นของผู้เป็นหุ้นส่วนทุกคน</span></li>
+        <li><b>นิติบุคคลอื่น</b><span>เงินที่ผู้เป็นหุ้นส่วนหรือสมาชิกนำมาลงหุ้น</span></li>
+      </ul>
+      <p><span class="law">กฎกระทรวง ข้อ 1</span></p>
+    </details>
+  </section>
+
+  <!-- เรื่องที่ 4 ทุกปี -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>เรื่องที่ 4 · นิติบุคคล หน้าที่ประจำปี</small><h2 id="h4">ทุกปี ร้อยละ 3 เท่าเดิม แต่ใช้ทุนหรือรายได้ จำนวนที่มากกว่า</h2></div></div>
+    <p class="cap">รอบปีบัญชีคือรอบเวลาที่บริษัทปิดบัญชีแต่ละครั้ง สิ้นรอบแรก บริษัทของแพรมีหลักประกัน 60,000 บาท ทุนจดทะเบียน 2,000,000 บาท รายได้ค่าสอบบัญชี 1,000,000 บาท ลองเปลี่ยนทีละเรื่อง</p>
+    <p class="lbl">รายได้จากการให้บริการสอบบัญชี รอบปีบัญชีที่ผ่านมา</p>
+    <div class="chips" data-pick="rev">
+      <button data-v="0" aria-pressed="true">1,000,000 บาท</button>
+      <button data-v="1">3,000,000 บาท</button>
+      <button data-v="2">5,000,000 บาท</button>
+    </div>
+    <p class="lbl">ทุนจดทะเบียน ณ วันสิ้นรอบปีบัญชี</p>
+    <div class="chips" data-pick="cap2">
+      <button data-v="0" aria-pressed="true">เท่าเดิม 2,000,000 บาท</button>
+      <button data-v="1">เพิ่มทุนระหว่างปี เป็น 4,000,000 บาท</button>
+    </div>
+    <div class="togs" data-togs="oth">
+      <button data-k="oth" aria-pressed="false"><span>ปีนั้นบริษัทมีรายได้ค่าเช่าอาคารอีก 4,000,000 บาท<small>ไม่ได้เกิดจากการให้บริการสอบบัญชีหรือทำบัญชี</small></span></button>
+    </div>
+    <div class="x04-two" id="w4" hidden>
+      <div><b>ระหว่างรอบปีบัญชี</b><span>การเพิ่มทุนไม่กระทบจำนวนหลักประกันที่จัดให้มีแล้วในรอบปีบัญชีนั้น <span class="law">กฎกระทรวง ข้อ 2 วรรคสอง</span></span></div>
+      <div><b>หลังวันสิ้นรอบปีบัญชี</b><span>คิดใหม่จากทุน ณ วันสิ้นรอบปีบัญชี 4,000,000 บาท <span class="law">ข้อ 6</span></span></div>
+    </div>
+    <div class="x04-cmp" aria-live="polite">
+      <div class="x04-bar" id="bCap"><div class="x04-bh"><span>ทุน ณ วันสิ้นรอบปีบัญชีที่ผ่านมา</span><b id="bCapV"></b></div><div class="x04-bt"><i></i></div><em>จำนวนที่มากกว่า</em></div>
+      <div class="x04-bar" id="bRev"><div class="x04-bh"><span>รายได้ที่เกิดจากการให้บริการสอบบัญชีหรือทำบัญชี รอบปีบัญชีที่ผ่านมา <span class="law">ข้อ 1</span></span><b id="bRevV"></b></div><div class="x04-bt"><i></i></div><em>จำนวนที่มากกว่า</em></div>
+      <div class="x04-bar x04-not" id="bOth" hidden><div class="x04-bh"><span>ค่าเช่าอาคาร</span><b>4,000,000</b></div><div class="x04-bt"><i style="width:80%"></i></div><em>ไม่ใช่รายได้จากการให้บริการ ไม่นำมาเทียบ</em></div>
+    </div>
+    <div class="x04-sum" aria-live="polite">
+      <div><span id="q4l"></span><b><span id="q4a"></span> <i>บาท</i></b></div>
+      <div><span>คูณ</span><b>ร้อยละ 3</b></div>
+      <div class="x04-tot"><span>ต้องมีหลักประกันไม่น้อยกว่า</span><b><span id="q4b"></span> <i>บาท</i></b></div>
+    </div>
+    <div class="gauges">
+      <div class="hd"><span>เทียบกับหลักประกันที่มีอยู่</span><span class="law">กฎกระทรวง ข้อ 6</span></div>
+      <div class="gz" id="g4"><div class="top"><span>หลักประกันที่มีอยู่</span><b>60,000 <i>บาท</i></b></div><div class="bar"><i></i><em id="g4m"></em></div><div class="st" id="g4s"></div></div>
+    </div>
+    <p class="result" id="r4" role="status"></p>
+
+    <h3 style="margin-top:8px">สองกำหนดประจำปี นับจากคนละวัน</h3>
+    <div class="x04-lane x04-la" role="img" aria-label="กำหนดเรื่องหลักประกัน นับ 60 วันจากวันสิ้นรอบปีบัญชี">
+      <b>หลักประกัน นับจากวันสิ้นรอบปีบัญชี</b>
+      <div class="x04-lb"><span>รอบปีบัญชี</span><span>60 วัน</span></div>
+      <div class="x04-lt"><span>วันสิ้นรอบปีบัญชี</span><span></span></div>
+      <p>จัดให้มีหลักประกันตามจำนวนที่คิดใหม่ และแจ้งรายละเอียดต่อสภาฯ <span class="law">กฎกระทรวง ข้อ 6</span> <span class="law">ประกาศ ข้อ 8 (2)</span></p>
+    </div>
+    <div class="x04-lane x04-lz" role="img" aria-label="กำหนดเรื่องต่อทะเบียน ทุกหนึ่งปีนับแต่วันจดทะเบียน ทำภายในสามเดือนก่อนครบกำหนดหนึ่งปี">
+      <b>ทะเบียนนิติบุคคล นับจากวันจดทะเบียน</b>
+      <div class="x04-lb"><span>นับจากวันจดทะเบียน</span><span>3 เดือนก่อนครบ</span></div>
+      <div class="x04-lt"><span>วันจดทะเบียน</span><span>ครบหนึ่งปี</span></div>
+      <p>ต่อทะเบียนทุกหนึ่งปี ภายในสามเดือนก่อนครบกำหนดหนึ่งปี <span class="law">ประกาศ 15/2562 ข้อ 3</span></p>
+    </div>
+    <p class="note"><span data-ico="shield"></span><span>ต้องดำรงหลักประกันไว้ตลอดระยะเวลาที่ประกอบกิจการ <span class="law">กฎกระทรวง ข้อ 5</span></span></p>
+
+    <h3 style="margin-top:8px">มีเรื่องเปลี่ยน ทำภายใน 15 วัน</h3>
+    <ul class="x04-chg">
+      <li><b>เปลี่ยนประเภทของหลักประกันระหว่างรอบปีบัญชี</b><em>แจ้งสภาฯ</em></li>
+      <li><b>แก้ไขข้อมูลนิติบุคคลที่จดทะเบียนไว้</b><em>จดทะเบียนแก้ไข</em></li>
+      <li><b>เลิกให้บริการสอบบัญชีหรือทำบัญชี</b><em>จดทะเบียนเลิก</em></li>
+    </ul>
+    <p class="lbl"><span class="law">กฎกระทรวง ข้อ 6</span> <span class="law">ประกาศ 3/2558 ข้อ 6 · ข้อ 7 · ข้อ 9</span></p>
+    <p class="cap">ไม่ทำตามกำหนดในเรื่องที่ 2 และเรื่องนี้ สภาฯ อาจมีหนังสือให้นิติบุคคลมาชี้แจงหรือส่งเอกสาร รวมถึงพิจารณาแจ้งความต่อพนักงานเจ้าหน้าที่ <span class="law">ประกาศ 3/2558 ข้อ 11</span></p>
+    <details class="x04-more">
+      <summary>ค่าดำเนินการที่จ่ายให้สภาฯ</summary>
+      <ul class="x04-fees">
+        <li><span>จดทะเบียนนิติบุคคล</span><b>2,000 บาท</b></li>
+        <li><span>ต่ออายุทะเบียนนิติบุคคล</span><b>2,000 บาท</b></li>
+        <li><span>จดทะเบียนแก้ไขข้อมูลนิติบุคคล</span><b>500 บาท</b></li>
+        <li><span>จดทะเบียนเลิกให้บริการ</span><b>500 บาท</b></li>
+        <li><span>แจ้งรายละเอียดเกี่ยวกับหลักประกัน</span><b>400 บาท</b></li>
+        <li><span>แจ้งเปลี่ยนประเภทหลักประกัน</span><b>200 บาท</b></li>
+      </ul>
+      <p><span class="law">ประกาศ 3/2558 ข้อ 12</span></p>
+    </details>
+  </section>
+
+  <!-- เรื่องที่ 5 ใครรับผิด -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>เรื่องที่ 5 · เมื่อเกิดความเสียหาย</small><h2 id="h5">ผู้สอบบัญชีต้องรับผิด นิติบุคคลร่วมรับผิดด้วย จนครบจำนวน</h2></div></div>
+    <p class="cap">สมมติว่าผู้สอบบัญชีคนหนึ่งในบริษัทของแพรต้องรับผิดชอบต่อบุคคลที่สาม คือคนอื่นที่ไม่ใช่บริษัทเอง ลองเปลี่ยนสองเรื่อง แล้วดูว่าใครต้องร่วมรับผิด</p>
+    <div class="chips" data-pick="paid">
+      <button data-v="0" aria-pressed="true">ยังชำระค่าเสียหายได้ไม่ครบ</button>
+      <button data-v="1">ชำระได้ครบจำนวนแล้ว</button>
+    </div>
+    <div class="togs" data-togs="pf">
+      <button data-k="pf" aria-pressed="false"><span>กรรมการผู้มีอำนาจลงนามผูกพันพิสูจน์ได้<small>ว่าตนมิได้มีส่วนรู้เห็นหรือยินยอมในการกระทำผิดที่ต้องรับผิด</small></span></button>
+    </div>
+    <div class="x04-chain">
+      <div class="x04-node"><span class="ico" data-ico="star"></span><div><b>ผู้สอบบัญชี</b><span>ต้องรับผิดชอบต่อบุคคลที่สาม</span></div></div>
+      <span class="x04-link">ร่วมรับผิดด้วยอย่างลูกหนี้ร่วม</span>
+      <div class="x04-node"><span class="ico" data-ico="bag"></span><div><b>นิติบุคคลที่ผู้สอบบัญชีสังกัด</b><span>บริษัทของแพร ร่วมรับผิดด้วย</span></div></div>
+      <span class="x04-link x04-if">ถ้ายังชำระค่าเสียหายได้ไม่ครบจำนวน</span>
+      <div class="x04-node" id="n3"><span class="ico" data-ico="card"></span><div><b>หุ้นส่วน กรรมการผู้มีอำนาจลงนามผูกพัน หรือผู้แทนที่ต้องรับผิดชอบในการดำเนินการของนิติบุคคล</b><span id="n3s"></span></div></div>
+    </div>
+    <p class="result" id="r5" role="status"></p>
+    <p class="lbl">“ร่วมรับผิดด้วยอย่างลูกหนี้ร่วม” เป็นถ้อยคำของ <span class="law">พ.ร.บ. ม.11 วรรคสาม</span></p>
+
+    <h3 style="margin-top:8px">จำนวนหลักประกัน กับจำนวนที่ต้องรับผิด เป็นคนละจำนวน</h3>
+    <div class="x04-vs" role="img" aria-label="แถบสั้นคือหลักประกันที่ต้องมีไว้ คิดจากทุนหรือรายได้ แถบยาวคือค่าเสียหายที่ต้องร่วมรับผิดจนครบจำนวน">
+      <div><span>หลักประกันที่ต้องมีไว้ คิดจากทุนหรือรายได้ <span class="law">ข้อ 2 · ข้อ 6</span></span><div class="x04-vb x04-v1"></div><b>ไม่น้อยกว่าร้อยละ 3</b></div>
+      <div><span>ค่าเสียหายที่ต้องรับผิดต่อบุคคลที่สาม <span class="law">ม.11 วรรคสาม</span></span><div class="x04-vb x04-v2"></div><b>ร่วมรับผิดจนครบจำนวน</b></div>
+    </div>
+    <p class="cap">ผู้ประกอบวิชาชีพบัญชี และผู้ซึ่งขึ้นทะเบียนไว้กับสภาฯ อย่างพีท มีหน้าที่ปฏิบัติตามจรรยาบรรณ <span class="law">พ.ร.บ. ม.46</span> เริ่มในบทถัดไป</p>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="card"></span><span>ลงลายมือชื่อรับรองการสอบบัญชี ต้องเป็นผู้สอบบัญชีรับอนุญาต (CPA) ผู้ทำบัญชีเป็นสมาชิกหรือขึ้นทะเบียน อย่างเดียวก็พอ</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>ผู้ขึ้นทะเบียนชำระค่าธรรมเนียมทุกปี ไม่ชำระครบตามกำหนด การขึ้นทะเบียนสิ้นสุดลง</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>นิติบุคคลที่ให้บริการสอบบัญชีหรือทำบัญชี จดทะเบียนต่อสภาฯ ภายใน 30 วัน ต่อทะเบียนทุกหนึ่งปี</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>รับสอบบัญชี คนที่มีอำนาจลงนามผูกพันนิติบุคคลต้องเป็นผู้สอบบัญชีรับอนุญาต</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>หลักประกัน วันยื่นจดร้อยละ 3 ของทุน ทุกปีภายใน 60 วัน ร้อยละ 3 ของทุนหรือรายได้จากการให้บริการ จำนวนที่มากกว่า</span></li>
+      <li><span class="ico" data-ico="lock"></span><span>หลักประกันมีห้าประเภท ต้องปราศจากภาระผูกพัน</span></li>
+      <li><span class="ico" data-ico="mail"></span><span>เปลี่ยนประเภทหลักประกัน แก้ข้อมูล หรือเลิกให้บริการ ทำภายใน 15 วัน</span></li>
+      <li><span class="ico" data-ico="bag"></span><span>ผู้สอบบัญชีต้องรับผิดชอบต่อบุคคลที่สาม นิติบุคคลที่สังกัดร่วมรับผิดจนครบจำนวน</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>พ.ร.บ. คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
+      <li>พ.ร.บ.การบัญชี คือพระราชบัญญัติการบัญชี พ.ศ. 2543 หน้านี้ใช้เฉพาะนิยามผู้ทำบัญชี</li>
+      <li>กฎกระทรวง คือกฎกระทรวงกำหนดหลักประกันความรับผิดต่อบุคคลที่สามของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2553 ในกฎกระทรวงนี้ “ผู้ประกอบวิชาชีพบัญชี” หมายความว่านิติบุคคลซึ่งประกอบกิจการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี</li>
+      <li>ประกาศ 3/2558 และประกาศ 15/2562 คือประกาศสภาวิชาชีพบัญชี เรื่อง หลักเกณฑ์และวิธีการจดทะเบียน การแจ้งรายละเอียดเกี่ยวกับหลักประกันเพื่อประกันความรับผิดต่อบุคคลที่สามของนิติบุคคลที่ให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี ฉบับหลังแก้ข้อ 5 ของฉบับแรก จากต่อทะเบียนทุกสามปีเป็นทุกหนึ่งปี</li>
+      <li>ข้อบังคับผู้ทำบัญชี คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยหลักเกณฑ์ วิธีการ เงื่อนไข และคุณสมบัติของผู้ขึ้นทะเบียนเป็นผู้ทำบัญชี พ.ศ. 2556 เลขข้อในเรื่องที่ 1 ที่ไม่ได้บอกชื่อ มาจากข้อบังคับนี้</li>
+      <li>ค่าธรรมเนียมรายปีของผู้ขึ้นทะเบียน มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556 ข้อ 7</li>
+      <li>“สภาฯ” คือสภาวิชาชีพบัญชี · CPA คือผู้สอบบัญชีรับอนุญาต · คน บริษัท และตัวเลขทุน รายได้ หลักประกันในภาพเป็นเรื่องสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>ถูกขอให้แก้ตัวเลข ทำตามได้แค่ไหน</b>
+    <p>เริ่มภาคจรรยาบรรณ จากหลัก (ก) ความซื่อสัตย์สุจริต ข้อแรกในหกหลักการพื้นฐาน</p>
+    <a class="btn" href="law2v-r05.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function law(t) { return ' <span class="law">' + t + '</span>'; }
+  /* สถานะของกล่องเงื่อนไข: ok = ผ่าน · no = ไม่ผ่าน · idle = ไม่ใช้ตัดสินในกรณีนี้ */
+  function cond(id, st) { var c = $(id); c.className = 'cond' + (st === 'ok' ? ' ok' : st === 'no' ? ' no' : ' x04-idle'); c.querySelector('.mk').innerHTML = st === 'idle' ? '' : V.icon(st === 'ok' ? 'check' : 'x'); }
+  function line(id, st) { $(id).setAttribute('class', st === 'ok' ? 'ok' : st === 'no' ? 'no' : ''); }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').innerHTML = s; }
+  V.spy('#steps');
+
+  /* ภาพหลัก: งาน × มีนิติบุคคลให้บริการหรือไม่ (พ.ร.บ. ม.11 ม.37 ม.44 ม.67 · พ.ร.บ.การบัญชี ม.4)
+     แต่ละข้อ: [ไอคอน, เป็นเรื่องของตัวคน (1) หรือนิติบุคคล (0), หัวข้อ, ชื่อสั้นตอนไม่ใช้, ข้อความ, [[ลิงก์, คำ]…]] */
+  var REQ = {
+    cpa: ['card', 1, 'คนที่ลงลายมือชื่อรับรองการสอบบัญชี', '', 'ลงลายมือชื่อในฐานะผู้สอบบัญชี ต้องเป็นผู้สอบบัญชีรับอนุญาต' + law('พ.ร.บ. ม.37') + ' ฝ่าฝืนมีโทษจำคุกหรือปรับ' + law('ม.67'), []],
+    bk: ['card', 1, 'คนที่เป็นผู้ทำบัญชี', '', 'ผู้ทำบัญชีคือผู้รับผิดชอบในการทำบัญชีของกิจการ ต้องเป็นสมาชิกสภาวิชาชีพบัญชี (สภาฯ) หรือขึ้นทะเบียนไว้กับสภาฯ' + law('พ.ร.บ. ม.44'), [['#s1', 'เรื่องที่ 1']]],
+    reg: ['pen', 0, 'จดทะเบียนต่อสภาวิชาชีพบัญชี (สภาฯ)', 'จดทะเบียนต่อสภาวิชาชีพบัญชี', 'นิติบุคคลที่ให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี ต้องจดทะเบียน' + law('พ.ร.บ. ม.11'), [['#s2', 'เรื่องที่ 2']]],
+    gua: ['shield', 0, 'หลักประกัน', 'หลักประกัน', 'มีไว้ประกันความรับผิดต่อบุคคลที่สาม คือคนอื่นที่ไม่ใช่นิติบุคคลผู้ให้บริการเอง' + law('พ.ร.บ. ม.11 (1)'), [['#s3', 'เรื่องที่ 3 วันยื่นจด'], ['#s4', 'เรื่องที่ 4 ทุกปี']]],
+    sig: ['flag', 0, 'คนที่มีอำนาจลงนามผูกพันนิติบุคคล', 'คนที่มีอำนาจลงนามผูกพัน', 'ลงนามแล้วผูกพันนิติบุคคลในการให้บริการการสอบบัญชี ต้องเป็นผู้สอบบัญชีรับอนุญาต เป็นคนละเรื่องกับข้อแรก' + law('พ.ร.บ. ม.11 (2)'), [['#s2', 'เรื่องที่ 2']]],
+    liab: ['bag', 0, 'ร่วมรับผิดเมื่อเกิดความเสียหาย', 'ร่วมรับผิด', 'ผู้สอบบัญชีต้องรับผิดชอบต่อบุคคลที่สาม นิติบุคคลที่สังกัดร่วมรับผิดด้วย' + law('พ.ร.บ. ม.11 วรรคสาม'), [['#s5', 'เรื่องที่ 5']]]
+  };
+  var WHY_P = 'พ.ร.บ.วิชาชีพบัญชี มาตรา 11 เขียนเรื่องเหล่านี้กับนิติบุคคลที่ประกอบกิจการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี',
+    WHY_S = 'มาตรา 11 (2) เขียนถึงกรณีให้บริการการสอบบัญชี และวรรคสามเขียนถึงกรณีที่ผู้สอบบัญชีต้องรับผิดชอบต่อบุคคลที่สาม';
+  var CELL = [
+    { t: 'สอบบัญชี ไม่มีนิติบุคคลให้บริการ', s: 'ถ้าแพรรับสอบบัญชีในนามตัวเอง ไม่ได้ตั้งนิติบุคคล เรื่องที่ต้องดูคือใบอนุญาตของแพร', on: ['cpa'], off: ['reg', 'gua', 'sig', 'liab'], why: WHY_P },
+    { t: 'สอบบัญชี นิติบุคคลให้บริการ', s: 'บริษัทของแพรอยู่ช่องนี้ ใช้ครบทุกข้อ แพรเป็นทั้งคนที่ลงลายมือชื่อรับรองการสอบบัญชี และคนที่มีอำนาจลงนามผูกพันบริษัท', on: ['cpa', 'reg', 'gua', 'sig', 'liab'], off: [], why: '' },
+    { t: 'ทำบัญชี ไม่มีนิติบุคคลให้บริการ', s: 'พีทเป็นพนักงานของบริษัท พาวเด้ออ้าย จำกัด บริษัทขายแป้งของพริ้ง และรับผิดชอบทำบัญชีของบริษัทนั้น บริษัทขายแป้งไม่ได้ประกอบกิจการให้บริการด้านการทำบัญชี เรื่องที่ต้องดูคือตัวพีท', on: ['bk'], off: ['reg', 'gua', 'sig', 'liab'], why: WHY_P },
+    { t: 'ทำบัญชี นิติบุคคลให้บริการ', s: 'เช่น ห้างหุ้นส่วนจำกัดที่รับทำบัญชีให้กิจการอื่นอย่างเดียว ต้องดูคนที่เป็นผู้ทำบัญชี และห้างต้องจดทะเบียนกับมีหลักประกัน', on: ['bk', 'reg', 'gua'], off: ['sig', 'liab'], why: WHY_S }];
+  V.pick('cell', function (v) { var c = CELL[v];
+    $('cellT').textContent = c.t; $('cellS').textContent = c.s;
+    var h = c.on.map(function (k) { var q = REQ[k];
+      return '<li class="x04-req"><span class="ico">' + V.icon(q[0]) + '</span><div><em class="x04-tag' + (q[1] ? '' : ' x04-ent') + '">' + (q[1] ? 'ตัวคน' : 'นิติบุคคล') + '</em><b>' + q[2] + '</b><span>' + q[4] + '</span>'
+        + q[5].map(function (a) { return '<a href="' + a[0] + '">' + a[1] + '</a>'; }).join('') + '</div></li>'; }).join('');
+    if (c.off.length) h += '<li class="x04-req x04-off"><span class="ico">' + V.icon('info') + '</span><div><b>' + c.off.map(function (k) { return REQ[k][3]; }).join(' · ') + '</b><span>' + c.why + '</span></div></li>';
+    $('cellR').innerHTML = h; });
+
+  /* เรื่องที่ 1: พ.ร.บ. ม.44 เป็นสมาชิก หรือ ขึ้นทะเบียน · ม.69 */
+  V.togs('bk', function (s) { var any = s.mem || s.reg;
+    cond('d0', s.mem ? 'ok' : (any ? 'idle' : 'no')); cond('d1', s.reg ? 'ok' : (any ? 'idle' : 'no'));
+    line('k0', s.mem ? 'ok' : (any ? '' : 'no')); line('k1', s.reg ? 'ok' : (any ? '' : 'no'));
+    gate('gate1', any, any ? 'พีทเป็นผู้ทำบัญชีได้' : 'พีทยังเป็นผู้ทำบัญชีไม่ได้',
+      s.mem && s.reg ? 'มีทั้งสองอย่าง มีอย่างเดียวก็พอแล้ว' : s.reg ? 'ขึ้นทะเบียนไว้แล้ว ไม่ต้องเป็นสมาชิกด้วย' : s.mem ? 'เป็นสมาชิกสภาฯ แล้ว ไม่ต้องขึ้นทะเบียนอีก'
+        : 'ไม่ได้เป็นสมาชิก และไม่ได้ขึ้นทะเบียน ต้องมีอย่างใดอย่างหนึ่งก่อน ฝ่าฝืนมาตรา 44 มีโทษจำคุกหรือปรับ' + law('ม.69')); });
+
+  /* เรื่องที่ 1: ต่ออายุบัตรและค่าธรรมเนียมรายปี (ข้อบังคับผู้ทำบัญชี ข้อ 8 · 9 · 13) */
+  var PAY = [
+    { ok: true, y: 'บัตรของปีถัดไป<small>1 มกราคม ถึง 31 ธันวาคม</small>', t: 'ได้ ยังเป็นผู้ขึ้นทะเบียน', s: 'ต่ออายุบัตรและชำระค่าธรรมเนียมของปีถัดไปครบ ภายในวันทำการสุดท้ายของปี ถ้าโอนเงินผ่านธนาคารหรืออินเทอร์เน็ต ชำระได้ถึงวันสิ้นสุดของปี' + law('ข้อ 9') },
+    { ok: false, y: 'การขึ้นทะเบียนสิ้นสุดลง', t: 'ไม่ได้ จนกว่าจะเป็นสมาชิกหรือขึ้นทะเบียนไว้กับสภาฯ', s: 'ไม่ชำระค่าธรรมเนียมให้ครบภายในกำหนด ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลง' + law('ข้อ 13') + ' พีทไม่ได้เป็นสมาชิก จึงไม่เหลือสักอย่างตามมาตรา 44' }];
+  V.pick('pay', function (v) { var p = PAY[v];
+    $('yNext').className = 'x04-y2' + (p.ok ? '' : ' x04-end'); $('yNext').innerHTML = p.y;
+    $('payC').className = 'cg ' + (p.ok ? 'ok' : 'lock'); $('payC').querySelector('.ico').innerHTML = V.icon(p.ok ? 'check' : 'lock');
+    $('payT').textContent = p.t; $('payS').innerHTML = p.s; });
+
+  /* เรื่องที่ 2: พ.ร.บ. ม.11 (1) (2) · ม.66 */
+  var st2 = { svc: 0, sig: 0 };
+  function draw2() { var audit = st2.svc === 0, cpa = st2.sig === 0, e1 = audit ? (cpa ? 'ok' : 'no') : 'idle', open = e1 !== 'no';
+    cond('e1', e1); line('m1', e1 === 'idle' ? '' : e1); $('e1s').textContent = audit ? 'ม.11 (2)' : 'ม.11 (2) ไม่ใช้กับบริษัทนี้';
+    gate('gate2', open, open ? 'บริษัทครบเงื่อนไขการจดทะเบียนของมาตรา 11' : 'บริษัทยังไม่ครบเงื่อนไขการจดทะเบียนของมาตรา 11',
+      audit ? (cpa ? 'มีหลักประกัน และคนที่มีอำนาจลงนามผูกพันในการให้บริการการสอบบัญชีเป็นผู้สอบบัญชีรับอนุญาต'
+          : 'รับสอบบัญชี แต่คนที่มีอำนาจลงนามผูกพันไม่ใช่ผู้สอบบัญชีรับอนุญาต นิติบุคคลที่ฝ่าฝืนหรือไม่ปฏิบัติตามมาตรา 11 มีโทษปรับ และปรับรายวันจนกว่าจะปฏิบัติให้ถูกต้อง' + law('ม.66'))
+        : (cpa ? 'รับทำบัญชีอย่างเดียว มาตรา 11 (2) เขียนไว้สำหรับกิจการให้บริการการสอบบัญชี เหลือเงื่อนไขหลักประกันข้อเดียว' : 'รับทำบัญชีอย่างเดียว มาตรา 11 (2) ไม่ใช้กับบริษัทนี้ เปลี่ยนคนลงนามแล้วผลจึงไม่เปลี่ยน')); }
+  V.pick('svc', function (v) { st2.svc = v; draw2(); });
+  V.pick('sig', function (v) { st2.sig = v; draw2(); });
+
+  /* เรื่องที่ 3: กฎกระทรวง ข้อ 2 (ร้อยละ 3 ของทุน ณ วันที่ยื่นจดทะเบียน) · ข้อ 3 วรรคสอง (ปราศจากภาระผูกพัน) */
+  var RATE = 3, HELD = 60000, CAPS = [1000000, 2000000, 3000000], st3 = { cap: 1, enc: false };
+  function meter(g, held, need, max) { $(g).className = 'gz' + (held >= need ? ' ok' : ''); $(g).querySelector('.bar i').style.width = Math.min(100, held / max * 100) + '%'; $(g + 'm').style.left = Math.min(100, need / max * 100) + '%'; }
+  function draw3() { var cap = CAPS[st3.cap], need = cap * RATE / 100, held = st3.enc ? 0 : HELD, ok = held >= need;
+    $('q3a').textContent = fmt(cap); $('q3b').textContent = fmt(need); $('g3v').textContent = fmt(held);
+    meter('g3', held, need, 120000);
+    $('g3s').textContent = st3.enc ? 'เงินฝาก 60,000 บาทมีภาระผูกพัน นับเป็นหลักประกันไม่ได้' : ok ? (held === need ? 'เท่ากับ ' + fmt(need) + ' บาทพอดี' : 'มากกว่า ' + fmt(need) + ' บาท') : 'ยังขาดอีก ' + fmt(need - held) + ' บาท';
+    var r = $('r3'); r.className = 'result' + (ok ? ' ok' : '');
+    r.textContent = st3.enc ? 'ยังไม่ผ่าน หลักประกันต้องปราศจากภาระผูกพัน เงินฝากที่จำนำไว้จึงใช้ไม่ได้ ทุนเท่าไรผลก็เหมือนกัน'
+      : ok ? (held === need ? 'ผ่าน กฎเขียนว่าไม่น้อยกว่า เท่ากับร้อยละ 3 พอดีก็ใช้ได้' : 'ผ่าน หลักประกันมากกว่าร้อยละ 3 ของทุน')
+      : 'ยังไม่ผ่าน ทุนมากขึ้น ร้อยละ 3 ก็มากขึ้น ต้องเพิ่มหลักประกันอีก ' + fmt(need - held) + ' บาทก่อนยื่นจด'; }
+  V.pick('cap', function (v) { st3.cap = v; draw3(); });
+  V.togs('enc', function (s) { st3.enc = s.enc; draw3(); });
+
+  /* เรื่องที่ 4: กฎกระทรวง ข้อ 6 (ร้อยละ 3 ของทุน ณ วันสิ้นรอบปีบัญชี หรือของรายได้รอบปีบัญชีที่ผ่านมา แล้วแต่จำนวนใดจะมากกว่า)
+     · ข้อ 1 (รายได้ = รายได้ที่เกิดจากการให้บริการ) · ข้อ 2 วรรคสอง (เพิ่มทุนระหว่างรอบปีบัญชี) */
+  var REVS = [1000000, 3000000, 5000000], CAP2 = [2000000, 4000000], st4 = { rev: 0, cap: 0, oth: false };
+  function draw4() { var cap = CAP2[st4.cap], rev = REVS[st4.rev], byCap = cap >= rev, base = byCap ? cap : rev, need = base * RATE / 100, ok = HELD >= need, raised = st4.cap === 1;
+    $('bCapV').textContent = fmt(cap); $('bRevV').textContent = fmt(rev);
+    $('bCap').className = 'x04-bar' + (byCap ? ' x04-big' : ''); $('bRev').className = 'x04-bar' + (byCap ? '' : ' x04-big');
+    $('bCap').querySelector('.x04-bt i').style.width = cap / 5000000 * 100 + '%'; $('bRev').querySelector('.x04-bt i').style.width = rev / 5000000 * 100 + '%';
+    $('bOth').hidden = !st4.oth; $('w4').hidden = !raised;
+    $('q4l').textContent = byCap ? 'ทุนมากกว่า ใช้ทุน' : 'รายได้มากกว่า ใช้รายได้'; $('q4a').textContent = fmt(base); $('q4b').textContent = fmt(need);
+    meter('g4', HELD, need, 150000);
+    $('g4s').textContent = ok ? 'เท่ากับ ' + fmt(need) + ' บาทพอดี' : 'ยังขาดอีก ' + fmt(need - HELD) + ' บาท';
+    var r = $('r4'); r.className = 'result' + (ok ? ' ok' : '');
+    r.textContent = (ok ? 'หลักประกันเดิมพอ รายได้น้อยกว่าทุน จึงยังใช้ทุนเหมือนวันยื่นจด เหลือแจ้งรายละเอียดต่อสภาฯ ภายใน 60 วัน'
+      : (byCap ? 'ทุน ณ วันสิ้นรอบปีบัญชีเป็น 4,000,000 บาท มากกว่ารายได้ จึงใช้ทุน '
+        : (raised ? 'เพิ่มทุนแล้วก็ยังน้อยกว่ารายได้ จึงใช้รายได้ ' : 'ทุนเท่าเดิม แต่รายได้มากกว่าทุน จึงใช้รายได้ ')) + 'ต้องเพิ่มหลักประกันอีก ' + fmt(need - HELD) + ' บาท ภายใน 60 วันนับแต่วันสิ้นรอบปีบัญชี')
+      + (st4.oth ? ' มีค่าเช่าอาคารหรือไม่ ผลเท่าเดิม' : ''); }
+  V.pick('rev', function (v) { st4.rev = v; draw4(); });
+  V.pick('cap2', function (v) { st4.cap = v; draw4(); });
+  V.togs('oth', function (s) { st4.oth = s.oth; draw4(); });
+
+  /* เรื่องที่ 5: พ.ร.บ. ม.11 วรรคสาม */
+  var st5 = { paid: 0, pf: false };
+  function draw5() { var full = st5.paid === 1, liable = !full && !st5.pf;
+    $('n3').className = 'x04-node' + (liable ? '' : ' x04-skip');
+    $('n3s').textContent = full ? 'ไม่ถึงขั้นนี้ เพราะชำระค่าเสียหายได้ครบจำนวนแล้ว' : st5.pf ? 'กรรมการคนที่พิสูจน์ได้ ไม่ต้องร่วมรับผิด' : 'ต้องร่วมรับผิดจนครบจำนวน';
+    var r = $('r5'); r.className = 'result';
+    r.textContent = full ? (st5.pf ? 'ชำระค่าเสียหายได้ครบจำนวนแล้ว จึงไม่ถึงขั้นของกรรมการ ข้อพิสูจน์ของกรรมการไม่เปลี่ยนผล' : 'ชำระค่าเสียหายได้ครบจำนวนแล้ว จึงไม่ถึงขั้นที่หุ้นส่วนหรือกรรมการต้องร่วมรับผิด')
+      : st5.pf ? 'ยังชำระได้ไม่ครบ แต่กรรมการคนนี้พิสูจน์ได้ว่าตนมิได้มีส่วนรู้เห็นหรือยินยอม จึงไม่ต้องร่วมรับผิด ผู้สอบบัญชีกับบริษัทยังต้องรับผิดเหมือนเดิม'
+      : 'ยังชำระได้ไม่ครบ กรรมการผู้มีอำนาจลงนามผูกพันต้องร่วมรับผิดจนครบจำนวน'; }
+  V.pick('paid', function (v) { st5.paid = v; draw5(); });
+  V.togs('pf', function (s) { st5.pf = s.pf; draw5(); });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'ผู้ทำบัญชีคนหนึ่งไม่ได้เป็นสมาชิกสภาฯ ใช้ทางขึ้นทะเบียน ปลายปีเขาไม่ได้ชำระค่าธรรมเนียมของปีถัดไป และไม่ได้ยื่นหนังสือแสดงเหตุจำเป็น', q: 'ผลกับการขึ้นทะเบียนของเขาคืออะไร', o: [
+      ['การขึ้นทะเบียนสิ้นสุดลง', 1, 'ไม่ชำระค่าธรรมเนียมให้ครบภายในกำหนด ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลง เว้นแต่ยื่นหนังสือแสดงว่าเกิดจากพฤติการณ์ที่จำเป็น ซึ่งเขาไม่ได้ยื่น (ข้อบังคับผู้ทำบัญชี ข้อ 13) เมื่อไม่ได้เป็นสมาชิกและไม่ได้ขึ้นทะเบียน ก็เป็นผู้ทำบัญชีไม่ได้ (พ.ร.บ. มาตรา 44)'],
+      ['ยังขึ้นทะเบียนอยู่ เพราะขึ้นทะเบียนครั้งเดียวใช้ได้ตลอด', 0, 'บัตรประจำตัวผู้ขึ้นทะเบียนใช้ได้ถึง 31 ธันวาคมของแต่ละปี ต้องต่ออายุและชำระค่าธรรมเนียมของปีต่อไปล่วงหน้า (ข้อบังคับผู้ทำบัญชี ข้อ 8 · ข้อ 9)'],
+      ['ยังขึ้นทะเบียนอยู่ จนกว่าสภาฯ จะสั่งเพิกถอน', 0, 'ข้อ 13 ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลงเมื่อไม่ชำระค่าธรรมเนียมให้ครบภายในกำหนด (ข้อบังคับผู้ทำบัญชี ข้อ 13)']] },
+    { f: 'บริษัทจำกัดแห่งหนึ่งยื่นจดทะเบียนต่อสภาฯ เพื่อรับทำบัญชีอย่างเดียว ทุนจดทะเบียน 5,000,000 บาท มีพันธบัตรรัฐบาลไทยที่จำหน่ายในราชอาณาจักร 150,000 บาท ปราศจากภาระผูกพัน คนที่มีอำนาจลงนามผูกพันบริษัทไม่ใช่ผู้สอบบัญชีรับอนุญาต', q: 'บริษัทนี้ครบเงื่อนไขการจดทะเบียนของมาตรา 11 ไหม', o: [
+      ['ยังไม่ครบ เพราะคนที่มีอำนาจลงนามผูกพันไม่ใช่ผู้สอบบัญชีรับอนุญาต', 0, 'มาตรา 11 (2) เขียนไว้สำหรับกรณีประกอบกิจการให้บริการการสอบบัญชี บริษัทนี้รับทำบัญชีอย่างเดียว (พ.ร.บ. มาตรา 11 (2))'],
+      ['ครบ', 1, 'ร้อยละ 3 ของทุนจดทะเบียน 5,000,000 บาทคือ 150,000 บาท กฎเขียนว่าไม่น้อยกว่า เท่ากันพอดีจึงใช้ได้ และพันธบัตรรัฐบาลไทยเป็นหลักประกันประเภทหนึ่ง (กฎกระทรวง ข้อ 2 · ข้อ 3) ส่วนมาตรา 11 (2) เขียนไว้สำหรับกิจการให้บริการการสอบบัญชี บริษัทนี้รับทำบัญชีอย่างเดียว'],
+      ['ยังไม่ครบ เพราะหลักประกันต้องมากกว่าร้อยละ 3 ของทุน', 0, 'กฎกระทรวงเขียนว่าไม่น้อยกว่าร้อยละ 3 ของทุน ณ วันที่ยื่นจดทะเบียน 150,000 บาทเท่ากับร้อยละ 3 ของ 5,000,000 บาทพอดี (กฎกระทรวง ข้อ 2)']] },
+    { f: 'สิ้นรอบปีบัญชี บริษัทจำกัดแห่งหนึ่งที่รับสอบบัญชีมีทุนจดทะเบียน 2,000,000 บาท ปีนั้นบริษัทมีรายได้รวม 6,000,000 บาท ส่วนหนึ่งเป็นค่าสอบบัญชี อีกส่วนเป็นค่าเช่าอาคารที่บริษัทให้คนอื่นเช่า', q: 'ภายใน 60 วัน บริษัทต้องมีหลักประกันไม่น้อยกว่าเท่าไร', o: [
+      ['180,000 บาท คือร้อยละ 3 ของ 6,000,000 บาท', 0, 'รายได้ที่ใช้เทียบคือรายได้ที่เกิดจากการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี (กฎกระทรวง ข้อ 1) ค่าเช่าอาคารไม่นำมาเทียบ และโจทย์ยังไม่บอกว่าใน 6,000,000 บาทเป็นค่าสอบบัญชีเท่าไร'],
+      ['60,000 บาท คือร้อยละ 3 ของทุน 2,000,000 บาท', 0, 'ต้องเทียบทุนกับรายได้จากค่าสอบบัญชีก่อน แล้วใช้จำนวนที่มากกว่า (กฎกระทรวง ข้อ 6) โจทย์ยังไม่บอกรายได้ส่วนนี้ จึงยังสรุปเป็น 60,000 บาทไม่ได้'],
+      ['ยังสรุปไม่ได้ ต้องรู้ก่อนว่าค่าสอบบัญชีเป็นเท่าไร', 1, 'รายได้ที่ใช้เทียบคือรายได้ที่เกิดจากการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี (กฎกระทรวง ข้อ 1) ถ้าค่าสอบบัญชีไม่เกิน 2,000,000 บาท ใช้ทุน ได้ 60,000 บาท ถ้าเกิน ใช้ค่าสอบบัญชีคูณร้อยละ 3 (ข้อ 6)']] }
+  ]);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ถูกขอให้แก้ตัวเลข ทำตามได้แค่ไหน | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะหน้า หลัก (ก) ความซื่อสัตย์สุจริต — คำนำ xea- · แก้หลัง blind test 12 ต.ค. 2569 */
+.xea-stack, .xea-parse { display:grid; gap:8px; grid-template-columns:minmax(0,1fr); }
+.xea-laws { display:flex; flex-wrap:wrap; gap:6px; }
+.xea-cg span .law, .xea-dir .law { display:inline-block; font-size:12px; }
+
+/* ภาพหกหลักการ: ชุดเดียวของหน้าที่ใช้ตัวอักษร ก–ฉ */
+.xea-reg { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px; background:var(--hue-ink); color:#fff; }
+.xea-reg .ico { width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.14); display:grid; place-items:center; }
+.xea-reg .ico svg { width:22px; height:22px; }
+.xea-reg small { display:block; font-size:12px; font-weight:700; letter-spacing:.03em; color:var(--sun); }
+.xea-reg b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+.xea-ln { justify-self:center; width:4px; height:14px; margin:-8px 0; background:var(--line); border-radius:2px; }
+.xea-art { font-size:15px; font-weight:600; line-height:1.45; }
+.xea-six { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; margin:0; padding:0; list-style:none; }
+.xea-six a, .xea-six .xea-me { display:grid; grid-template-columns:38px minmax(0,1fr) auto; gap:10px; align-items:center; min-height:50px; padding:6px 12px 6px 6px; border-radius:14px; background:var(--soft); color:var(--ink); text-decoration:none; }
+.xea-six a:hover { box-shadow:inset 0 0 0 2px var(--hue); }
+.xea-six i { width:38px; height:38px; border-radius:11px; display:grid; place-items:center; background:var(--hue); color:#fff; font-style:normal; font-family:var(--display); font-weight:800; font-size:18px; }
+.xea-six b { font-family:var(--display); font-size:15px; line-height:1.3; }
+.xea-six em { font-style:normal; font-size:12px; font-weight:700; color:var(--hue-ink); white-space:nowrap; }
+.xea-six a em::after { content:"\00a0›"; }
+.xea-six .xea-me { background:var(--sun); box-shadow:0 0 0 4px rgba(240,200,75,.3); }
+.xea-six .xea-me i { background:var(--ink); }
+.xea-six .xea-me em { color:var(--ink); }
+.xea-mix { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px; box-shadow:inset 0 0 0 1.5px var(--line); text-decoration:none; color:var(--ink); font-size:14px; line-height:1.45; }
+.xea-mix:hover { box-shadow:inset 0 0 0 2px var(--hue); }
+.xea-mix .ico { width:44px; height:44px; border-radius:50%; background:var(--soft); color:var(--hue); display:grid; place-items:center; }
+.xea-mix .ico svg { width:22px; height:22px; }
+.xea-mix b { display:block; margin-top:4px; font-family:var(--display); font-size:15px; color:var(--hue-ink); }
+.xea-mix b::after { content:"\00a0›"; }
+
+/* 1 ถ้อยคำของข้อ 9 (ก) */
+.xea-quote { display:grid; gap:8px; padding:18px 16px; border-radius:20px; background:var(--hue-ink); color:#fff; }
+.xea-quote b { font-family:var(--display); font-weight:800; font-size:21px; line-height:1.35; }
+.xea-quote .law { box-shadow:none; justify-self:start; }
+.xea-row { display:grid; grid-template-columns:78px minmax(0,1fr); gap:10px; align-items:start; padding:12px; border-radius:18px; background:var(--soft); }
+.xea-k { font-size:13px; font-weight:700; color:var(--hue-ink); padding-top:6px; }
+.xea-v { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.xea-v b { padding:5px 12px; border-radius:99px; background:var(--hue); color:#fff; font-family:var(--display); font-size:16px; line-height:1.3; }
+.xea-v i { font-style:normal; padding:4px 10px; border-radius:99px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--hue); color:var(--hue-ink); font-size:14px; font-weight:700; line-height:1.3; }
+.xea-v small { flex-basis:100%; font-size:13px; color:var(--muted); line-height:1.45; }
+.xea-duo { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.xea-p { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 8px; border-radius:18px; background:var(--soft); text-align:center; }
+.xea-p svg { width:60px; height:60px; border-radius:50%; }
+.xea-p > b { font-family:var(--display); font-size:19px; line-height:1.1; }
+.xea-p > small { font-size:13px; color:var(--muted); line-height:1.35; }
+.xea-ty { align-self:end; width:100%; margin-top:4px; padding:8px 6px; border-radius:12px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--hue); font-size:13px; font-weight:700; line-height:1.3; color:var(--hue-ink); }
+.xea-ty small { display:block; margin-top:2px; font-weight:500; font-size:12px; color:var(--muted); }
+.xea-ra { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.xea-ra div { display:grid; gap:2px; align-content:start; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:13px; line-height:1.4; }
+.xea-ra b { font-family:var(--display); font-weight:800; font-size:22px; line-height:1; color:var(--hue); }
+
+/* แถวมีเลขลำดับ: ใช้กับข้อย่อยของคู่มือ (เลขในวงกลมขอบเส้น ไม่ใช่ตัวอักษรของหลักการ) */
+.xea-rows { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; counter-reset:xr; }
+.xea-rows > li { counter-increment:xr; display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:15px; line-height:1.45; }
+.xea-rows > li::before { content:counter(xr); width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--muted); color:var(--muted); font-family:var(--display); font-weight:800; font-size:14px; }
+.xea-box { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:18px; background:var(--soft); }
+.xea-box > b { font-family:var(--display); font-size:17px; line-height:1.35; }
+.xea-box .xea-rows > li { background:var(--white); }
+.xea-box > small { font-size:13px; color:var(--muted); line-height:1.45; }
+.xea-jump { display:flex; align-items:center; min-height:40px; font-size:13px; font-weight:700; color:var(--hue-ink); }
+.xea-jump::after { content:"\00a0›"; }
+.xea-pt { display:block; margin-top:4px; font-size:13px; font-weight:600; line-height:1.4; color:var(--hue-ink); }
+.xea-tri { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:14px; border-radius:18px; background:var(--soft); text-decoration:none; color:var(--ink); }
+a.xea-tri:hover { box-shadow:inset 0 0 0 2px var(--hue); }
+.xea-tri .ico { width:44px; height:44px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; }
+.xea-tri .ico svg { width:22px; height:22px; }
+.xea-tri b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
+.xea-tri small { display:block; font-size:14px; color:var(--muted); line-height:1.45; margin-top:2px; }
+.xea-tri .xea-go { display:inline-block; margin-top:6px; font-size:13px; font-weight:700; color:var(--hue-ink); }
+.xea-tri .xea-go::after { content:"\00a0›"; }
+
+/* 2 คำขอ · กระดาษสองใบ · คนขอสามคน */
+.xea-req { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px 18px 18px 4px; background:var(--hue-soft); color:var(--hue-ink); }
+.xea-req .ico { width:44px; height:44px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; }
+.xea-req .ico svg { width:22px; height:22px; }
+.xea-req small { display:block; font-size:12px; font-weight:700; letter-spacing:.03em; }
+.xea-req b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
+.xea-cmp { display:grid; grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr); gap:6px; align-items:center; }
+.xea-paper { display:grid; gap:2px; justify-items:center; padding:14px 6px 12px; border-radius:6px 18px 18px 18px; background:var(--soft); text-align:center; box-shadow:inset 0 0 0 1.5px var(--line); transition:box-shadow .2s ease; }
+.xea-paper small { font-size:12px; font-weight:700; color:var(--muted); line-height:1.3; }
+.xea-paper b { font-family:var(--display); font-weight:800; font-size:22px; line-height:1.15; }
+.xea-paper em { font-style:normal; font-size:12px; color:var(--muted); }
+.xea-mid { display:grid; justify-items:center; gap:4px; }
+.xea-sign { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:#fff; font-family:var(--display); font-weight:800; font-size:26px; line-height:1; background:var(--muted); transition:background-color .2s ease; }
+.xea-mid small { font-size:11px; font-weight:700; text-align:center; line-height:1.2; }
+.xea-cmp.xea-match .xea-sign { background:var(--good); } .xea-cmp.xea-match .xea-mid small { color:var(--good); }
+.xea-cmp.xea-diff .xea-sign { background:var(--bad); } .xea-cmp.xea-diff .xea-mid small { color:var(--bad-ink); }
+.xea-cmp.xea-diff .xea-doc { box-shadow:inset 0 0 0 2px var(--bad); }
+.xea-next { justify-self:start; display:inline-flex; align-items:center; min-height:44px; font-size:14px; font-weight:700; color:var(--hue-ink); }
+.xea-next::after { content:"\00a0›"; }
+.chips.xea-ask { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.chips.xea-ask button { min-height:56px; padding:6px 4px; border-radius:16px; font-size:14px; line-height:1.25; text-align:center; }
+.xea-askfig { display:grid; grid-template-columns:minmax(0,1fr); gap:0; }
+.xea-same { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:12px 14px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.45; transition:background-color .2s ease; }
+.xea-same b { font-family:var(--display); }
+.xea-pill { justify-self:center; padding:3px 16px; border-radius:99px; background:var(--muted); color:#fff; font-family:var(--display); font-weight:800; font-size:16px; }
+.xea-same.xea-good { background:var(--good-soft); color:var(--good); } .xea-same.xea-good .xea-pill { background:var(--good); }
+.xea-same.xea-bad { background:var(--bad-soft); color:var(--bad-ink); } .xea-same.xea-bad .xea-pill { background:var(--bad); }
+
+/* 3 สมการของตัวอย่าง 220.4 A1 · ห้างานที่ต้องเลือกเอง */
+.xea-eq { display:grid; grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr); gap:6px; align-items:stretch; }
+.xea-eqc { display:grid; gap:2px; align-content:start; padding:10px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.35; }
+.xea-eqc small { font-size:12px; font-weight:700; color:var(--muted); }
+.xea-eqc b { font-family:var(--display); font-size:15px; }
+.xea-eqc em { font-style:normal; font-size:13px; color:var(--muted); }
+.xea-op { display:grid; place-items:center; font-family:var(--display); font-weight:800; font-size:22px; color:var(--muted); }
+.xea-eqr { grid-column:1 / -1; background:var(--bad-soft); color:var(--bad-ink); text-align:center; justify-items:center; }
+.xea-eqr small { color:var(--bad-ink); }
+.xea-eqr::before { content:"="; justify-self:center; font-family:var(--display); font-weight:800; font-size:22px; line-height:1; }
+.xea-mine { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:12px 14px; border-radius:18px; background:var(--bad-soft); color:var(--bad-ink); font-size:14px; line-height:1.45; }
+.xea-mine svg { width:44px; height:44px; border-radius:50%; }
+.xea-mine b { display:block; margin-bottom:4px; font-family:var(--display); font-size:16px; line-height:1.3; }
+
+/* 4 ที่มาของความกดดัน · สองทิศ · ปรึกษาใคร */
+.xea-s3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.xea-s3 > div { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 6px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; }
+.xea-s3 svg { width:24px; height:24px; }
+.xea-s3 b { font-family:var(--display); font-size:14px; line-height:1.25; }
+.xea-s3 small { font-size:12px; line-height:1.35; }
+.xea-tag { margin-top:4px; padding:3px 8px; border-radius:10px; background:var(--sun); color:var(--ink); font-size:12px; font-weight:700; line-height:1.3; }
+.xea-down { justify-self:center; width:120px; height:26px; margin:-6px 0; }
+.xea-down path { fill:none; stroke:var(--line); stroke-width:4; stroke-linecap:round; }
+.xea-dir { display:grid; grid-template-columns:84px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border-radius:18px; background:var(--soft); }
+.xea-dir > svg { width:84px; height:60px; }
+.xea-dir b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+.xea-dir span { font-size:14px; line-height:1.45; }
+
+/* 5 ลำดับตามถ้อยคำของคู่มือ */
+.xea-send { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:8px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--soft); font-size:13px; font-weight:700; }
+.xea-end { display:inline-flex; align-items:center; gap:6px; }
+.xea-end svg { width:20px; height:20px; color:var(--hue); }
+.xea-way { position:relative; height:4px; border-radius:2px; background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px); }
+.xea-way i { position:absolute; top:-9px; left:0; width:18px; height:22px; border-radius:2px 7px 3px 3px; background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); transition:left .35s ease; }
+.xea-send.xea-sent .xea-way { background:var(--hue); }
+.xea-send.xea-sent .xea-way i { left:calc(100% - 18px); background:var(--hue); }
+.xea-lad li { grid-template-columns:40px minmax(0,1fr); transition:opacity .2s ease; }
+.xea-lad li > div { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; justify-items:start; }
+.xea-lad small .law { margin-top:4px; }
+.xea-when { padding:4px 10px; border-radius:10px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:13px; font-weight:600; line-height:1.4; color:var(--muted); }
+.xea-when.xea-met { box-shadow:none; background:var(--hue-soft); color:var(--hue-ink); }
+.xea-gl { padding:6px 10px; border-radius:10px; background:var(--gold-soft); }
+.xea-acts { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:13px; font-weight:700; }
+.xea-act { padding:4px 10px; border-radius:12px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); font-size:13px; font-weight:700; line-height:1.3; color:var(--muted); transition:background-color .2s ease; }
+.xea-act small { display:block; font-weight:500; font-size:12px; color:inherit; }
+.xea-act.xea-lit { box-shadow:none; background:var(--hue); color:#fff; }
+.xea-lad li .xea-st { display:inline-block; padding:2px 10px; border-radius:99px; font-size:13px; font-weight:700; background:var(--soft); color:var(--muted); }
+.xea-lad li.xea-fix::before { background:var(--good); } .xea-lad li.xea-fix .xea-st { background:var(--good-soft); color:var(--good); }
+.xea-lad li.xea-tried::before { background:var(--muted); }
+.xea-lad li.xea-far { opacity:.45; }
+.xea-lad li.xea-stop::before { background:var(--bad); } .xea-lad li.xea-stop .xea-st { background:var(--bad-soft); color:var(--bad-ink); }
+.result.xea-res { text-align:left; font-weight:500; font-size:15px; line-height:1.5; }
+.result.xea-res b { font-family:var(--display); }
+.result.xea-res.xea-halt { background:var(--bad-soft); color:var(--bad-ink); }
+.xea-keep { display:block; margin-top:8px; padding-top:8px; border-top:1.5px dashed currentColor; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ ภาคจรรยาบรรณ · หลักการพื้นฐานข้อ (ก) ความซื่อสัตย์สุจริต · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่เปิดเทียบรอบแก้: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 (ภาพ p1–p4) ข้อ 4 · ข้อ 8 · ข้อ 9 · ข้อ 10
+     คู่มือประมวลจรรยาบรรณฯ แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 (sources/law2/1-profession/P2.6.2-คู่มือประมวลจรรยาบรรณ-V2022Dec25-acpro.pdf) เลขย่อหน้าชุดเนื้อหาหลัก
+     100.5 A1–A2 · 200.1 · หมวดย่อย 111 (รวม 111.2 A1) · 220.3 A3 · R220.4 · 220.4 A1 · R220.5 · 220.5 A1 · R220.8 · 220.8 A1–A2 · R220.9 · R270.3 · 270.3 A1 · A2 · A4 · 250.4 A1 · 250.9 A2 · 260.2 · 260.4 · R320.7 · อภิธานศัพท์ (ผู้ประกอบวิชาชีพบัญชีที่เสนองาน)
+     พีท พราว พริ้ง เป็นกรณีสมมติ ที่มาของแต่ละกรณีและก้อนที่ถอดออกอยู่ใน notes/ETH-a.notes.md -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 5 · จรรยาบรรณ หลัก (ก)</p>
+    <h1>ถูกขอให้แก้ตัวเลข ทำตามได้แค่ไหน</h1>
+    <p class="sub">แก้ให้ตรงกับความจริง ทำได้ แก้แล้วคนอ่านเข้าใจผิด ทำไม่ได้ นี่คือหลักความซื่อสัตย์สุจริต ข้อแรกในหลักการพื้นฐานหกข้อของจรรยาบรรณ แตะเรื่องที่อยากดู</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพแผ่นบัญชีที่มีตัวเลขหนึ่งช่องถูกขอให้แก้ แล้วแยกไปสองทาง ทางหนึ่งเป็นเครื่องหมายถูก อีกทางเป็นกากบาท">
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+      <g transform="translate(24 14)">
+        <rect width="112" height="104" rx="10" fill="#fff"/>
+        <rect x="12" y="14" width="56" height="7" rx="3.5" fill="#CFE0EA"/>
+        <rect x="12" y="32" width="88" height="6" rx="3" fill="#E4ECF1"/>
+        <rect x="12" y="46" width="88" height="6" rx="3" fill="#E4ECF1"/>
+        <rect x="8" y="58" width="96" height="20" rx="6" fill="#F0C84B"/>
+        <rect x="14" y="65" width="40" height="6" rx="3" fill="#1C4257" opacity=".55"/>
+        <rect x="66" y="65" width="32" height="6" rx="3" fill="#1C4257"/>
+        <rect x="12" y="86" width="88" height="6" rx="3" fill="#E4ECF1"/>
+      </g>
+      <g transform="translate(126 60) rotate(-32)"><rect x="0" y="-5" width="44" height="10" rx="2" fill="#F0C84B"/><path d="M0-5l-11 5 11 5z" fill="#fff"/><rect x="38" y="-5" width="6" height="10" fill="#E3B598"/></g>
+      <path d="M176 82h20c22 0 20-34 44-34h24M196 82c22 0 20 26 44 26h24" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 12"/>
+      <circle cx="290" cy="48" r="19" fill="#F0C84B"/><path d="M281 48l6 6 12-13" fill="none" stroke="#1C4257" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="290" cy="106" r="14" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/><path d="M284 100l12 12M296 100l-12 12" stroke="rgba(255,255,255,.75)" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="ส่วนของบท">
+    <a href="#s1"><i>1</i>หลักนี้</a><a href="#s2"><i>2</i>แก้ตัวเลข</a><a href="#s3"><i>3</i>ตัดข้อมูล</a><a href="#s4"><i>4</i>ถูกกดดัน</a><a href="#s5"><i>5</i>รู้ทีหลัง</a>
+  </nav>
+
+  <!-- ภาพเปิดภาคจรรยาบรรณ: ข้อบังคับ → ข้อ 9 หกหลักการ → บทที่ 5–10 · ข้อ 10 → บทที่ 11 -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">จรรยาบรรณ เจ็ดบท</span>
+    <h2 id="f0">หลักการพื้นฐานมีหกข้อ บทนี้คือข้อ (ก)</h2>
+    <p class="cap">แตะข้ออื่นเพื่อไปบทของข้อนั้น</p>
+    <div class="xea-reg"><span class="ico" data-ico="book"></span><span><small>จรรยาบรรณเขียนอยู่ใน</small><b>ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</b></span></div>
+    <span class="xea-ln" aria-hidden="true"></span>
+    <p class="xea-art"><span class="law">ข้อ 9</span> ผู้ประกอบวิชาชีพบัญชีต้องปฏิบัติตามหลักการพื้นฐานของจรรยาบรรณ หกข้อนี้</p>
+    <ul class="xea-six">
+      <li><span class="xea-me" aria-current="true"><i>ก</i><b>ความซื่อสัตย์สุจริต</b><em>บทนี้</em></span></li>
+      <li><a href="law2v-r06.html"><i>ข</i><b>ความเที่ยงธรรมและความเป็นอิสระ</b><em>บทที่ 6</em></a></li>
+      <li><a href="law2v-r07.html"><i>ค</i><b>ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน</b><em>บทที่ 7</em></a></li>
+      <li><a href="law2v-r08.html"><i>ง</i><b>การรักษาความลับ</b><em>บทที่ 8</em></a></li>
+      <li><a href="law2v-r09.html"><i>จ</i><b>พฤติกรรมทางวิชาชีพ</b><em>บทที่ 9</em></a></li>
+      <li><a href="law2v-r10.html"><i>ฉ</i><b>ความโปร่งใส</b><em>บทที่ 10</em></a></li>
+    </ul>
+    <span class="xea-ln" aria-hidden="true"></span>
+    <a class="xea-mix" href="law2v-r11.html"><span class="ico" data-ico="shield"></span><span><span class="law">ข้อ 10</span> เหตุการณ์แวดล้อมที่ผู้ประกอบวิชาชีพบัญชีปฏิบัติงานอยู่ อาจทำให้เกิดอุปสรรคในการปฏิบัติตามหลักการพื้นฐาน ข้อบังคับจึงให้ระบุ ประเมิน และจัดการอุปสรรค<b>บทที่ 11 เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง</b></span></a>
+  </section>
+
+  <!-- 1 หลักนี้เขียนว่าอะไร -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>หลักนี้เขียนว่าอะไร · ข้อ 9 (ก)</small><h2 id="h1">ความซื่อสัตย์สุจริต คือตรงไปตรงมาและจริงใจ</h2></div></div>
+    <p class="cap">ถ้อยคำของข้อนี้มีประโยคเดียว</p>
+    <div class="xea-quote"><b>ประพฤติตนอย่างตรงไปตรงมา จริงใจในความสัมพันธ์ทั้งมวล ทั้งทางวิชาชีพและทางธุรกิจ</b><span class="law">ข้อ 9 (ก) ความซื่อสัตย์สุจริต</span></div>
+    <div class="xea-parse">
+      <div class="xea-row"><span class="xea-k">ต้องทำ</span><div class="xea-v"><b>ตรงไปตรงมา</b><b>จริงใจ</b></div></div>
+      <div class="xea-row"><span class="xea-k">ครอบคลุม</span><div class="xea-v"><b>ความสัมพันธ์ทั้งมวล</b><i>ทางวิชาชีพ</i><i>ทางธุรกิจ</i></div></div>
+      <div class="xea-row"><span class="xea-k">ใครต้องทำ</span><div class="xea-v"><b>ผู้ประกอบวิชาชีพบัญชี</b><small>เช่น ด้านการทำบัญชี ด้านการสอบบัญชี และรวมถึงผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี <span class="law">ข้อ 4</span></small></div></div>
+    </div>
+
+    <h3 style="margin-top:8px">ทำงานในบริษัท หรือในสำนักงานสอบบัญชี ก็ต้องปฏิบัติตามหลักข้อนี้</h3>
+    <p class="cap">พีทกับพราวต่างกันที่ชื่อเรียกตามข้อ 4</p>
+    <div>
+      <div class="xea-duo">
+        <div class="xea-p"><span data-xea-face></span><b>พีท</b><small>ผู้ทำบัญชี ลูกจ้างของบริษัท พาวเด้ออ้าย จำกัด ขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี</small><span class="xea-ty">ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ<small>คือผู้ที่ได้รับการว่าจ้างในกิจการ</small></span></div>
+        <div class="xea-p"><span data-face="praw"></span><b>พราว</b><small>หลายปีต่อมาเป็นผู้สอบบัญชีรับอนุญาต พนักงานของสำนักงานสอบบัญชี</small><span class="xea-ty">ผู้ประกอบวิชาชีพบัญชีที่ให้บริการสาธารณะ<small>คือผู้ที่อยู่ในสำนักงานที่ให้บริการทางวิชาชีพ</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="ok" d="M75 0C75 18 150 12 150 30"/><path class="ok" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="cons">
+        <div class="cg ok xea-cg"><span class="ico" data-ico="check"></span><div><b>ทั้งพีทและพราวต้องปฏิบัติตามหลักข้อ (ก)</b><span>เป็นผู้ประกอบวิชาชีพบัญชีทั้งคู่ <span class="law">ข้อ 4</span> <span class="law">ข้อ 9</span></span></div></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:8px">คู่มือประมวลจรรยาบรรณ อธิบายหลักนี้ต่อ</h3>
+    <p class="cap">คู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี เป็นของสภาวิชาชีพบัญชี คณะกรรมการสภาวิชาชีพบัญชีใช้เป็นแนวทางวินิจฉัย เมื่อมีปัญหาเกี่ยวกับการปฏิบัติตามข้อบังคับ <span class="law">ข้อ 8</span> บทนี้เรียกว่าคู่มือ</p>
+    <div class="xea-ra" role="img" aria-label="เลขย่อหน้าของคู่มือ ขึ้นต้นด้วย R คือข้อกำหนด มีตัว A คือคำอธิบายการนำไปปฏิบัติ">
+      <div><b>R</b><span>เลขย่อหน้าขึ้นต้นด้วย R คือข้อกำหนด ถือเป็นภาระหน้าที่</span></div>
+      <div><b>A</b><span>เลขย่อหน้าที่มี A คือคำอธิบายการนำไปปฏิบัติ</span></div>
+    </div>
+
+    <p class="lbl">คู่มือเขียนเรื่องหลักนี้ไว้สามเรื่อง แตะเพื่อไปดู</p>
+    <div class="xea-stack">
+      <div class="xea-box">
+        <b>ต้องไม่เข้าไปเกี่ยวข้องทั้ง ๆ ที่รู้ กับรายงาน แบบแสดงรายการภาษี การสื่อสาร หรือข้อมูลอื่น ที่เชื่อว่า</b>
+        <ol class="xea-rows">
+          <li><div>ประกอบด้วยข้อผิดพลาดที่มีสาระสำคัญ หรือรายงานที่ทำให้เกิดความเข้าใจผิด <span class="law">R111.2 (ก)</span><a class="xea-jump" href="#s2">ดูเรื่องที่ 2</a></div></li>
+          <li><div>ประกอบด้วยรายงานหรือข้อมูลที่จัดทำขึ้นโดยไม่ไตร่ตรอง <span class="law">R111.2 (ข)</span></div></li>
+          <li><div>ละเว้นหรือปิดบังข้อมูลที่จำเป็นต้องมี ซึ่งการละเว้นหรือปิดบังนั้นอาจทำให้เกิดความเข้าใจผิด <span class="law">R111.2 (ค)</span><a class="xea-jump" href="#s3">ดูเรื่องที่ 3</a></div></li>
+        </ol>
+        <small>ถ้าผู้ประกอบวิชาชีพบัญชีแสดงรายงานที่เปลี่ยนแปลงไปต่อรายงาน แบบแสดงรายการภาษี การสื่อสาร หรือข้อมูลอื่น ผู้ประกอบวิชาชีพบัญชีไม่ฝ่าฝืนย่อหน้า R111.2 <span class="law">111.2 A1</span></small>
+      </div>
+      <a class="xea-tri" href="#s4"><span class="ico" data-ico="shield"></span><span><b>กระทำอย่างเหมาะสม แม้เมื่อเผชิญกับแรงกดดันให้ปฏิบัติเป็นอย่างอื่น</b><small><span class="law">111.1 A1</span></small><span class="xea-go">เรื่องที่ 4 ถูกกดดัน</span></span></a>
+      <a class="xea-tri" href="#s5"><span class="ico" data-ico="clock"></span><span><b>เริ่มตระหนักว่าตนเกี่ยวข้องกับข้อมูลสามแบบข้างบน ต้องดำเนินการเพื่อยุติการเกี่ยวข้อง</b><small><span class="law">R111.3</span></small><span class="xea-go">เรื่องที่ 5 รู้ทีหลัง</span></span></a>
+    </div>
+  </section>
+
+  <!-- 2 เห็นจากกรณี -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>ถูกขอให้แก้ตัวเลข</small><h2 id="h2">คำขอเดียวกัน ผลไม่เหมือนกัน</h2></div></div>
+    <p class="cap">พีทเป็นผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด มีคนขอให้แก้ยอดขายในงบที่จะส่งธนาคารผู้ให้กู้ เปลี่ยนข้อเท็จจริงทีละข้อ แล้วดูผล</p>
+    <div class="xea-req"><span class="ico" data-ico="mail"></span><span><small id="reqWho"></small><b>แก้ยอดขายเดือนนี้ จาก 1,200,000 บาท เป็น 1,500,000 บาท</b></span></div>
+    <div class="facts"><span>บัญชีลงยอดขายไว้ 1,200,000 บาท</span><span>งบนี้จะส่งธนาคารผู้ให้กู้</span><span>คนขออยากให้ยอดขายถึงตามที่ธนาคารคาดหวัง</span></div>
+
+    <p class="lbl">เปลี่ยนข้อที่ 1 · เอกสารการขายของเดือนนี้รวมได้เท่าไร</p>
+    <div class="chips" data-pick="doc">
+      <button data-v="0" aria-pressed="true">1,500,000 บาท</button>
+      <button data-v="1">1,200,000 บาท</button>
+    </div>
+    <div class="xea-cmp" id="cmp">
+      <div class="xea-paper"><small>บัญชีหลังแก้ตามคำขอ</small><b>1,500,000</b><em>ก่อนแก้ 1,200,000</em></div>
+      <div class="xea-mid"><span class="xea-sign" id="cmpSign" aria-hidden="true"></span><small id="cmpSay"></small></div>
+      <div class="xea-paper xea-doc"><small>เอกสารการขายรวม</small><b id="cmpDoc"></b><em>บาท</em></div>
+    </div>
+    <div class="gate" id="gA" role="status"><span data-door></span><div><b id="gAT"></b><span id="gAS"></span></div></div>
+    <p class="xea-laws" id="gALaw" aria-live="polite"></p>
+    <a class="xea-next" id="gAGo" href="#s3"></a>
+
+    <p class="lbl">เปลี่ยนข้อที่ 2 · ใครเป็นคนขอ</p>
+    <div class="xea-askfig">
+      <div class="chips xea-ask" data-pick="ask">
+        <button data-v="0" aria-pressed="true">หัวหน้าของพีท</button>
+        <button data-v="1">พริ้ง เจ้าของบริษัท</button>
+        <button data-v="2">เพื่อนร่วมงาน</button>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="a0" d="M50 0C50 18 150 12 150 30"/><path id="a1" d="M150 0V30"/><path id="a2" d="M250 0C250 18 150 12 150 30"/></svg>
+      <div class="xea-same" id="askBox" role="status"><span class="xea-pill" id="askP"></span><span id="askR"></span></div>
+    </div>
+  </section>
+
+  <!-- 3 การจัดทำและนำเสนอข้อมูล -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>การจัดทำและนำเสนอข้อมูล</small><h2 id="h3">ตัวเลขถูกทุกตัว ก็ยังทำให้เข้าใจผิดได้</h2></div></div>
+    <p class="cap">งบของพีทแก้จนยอดขายตรงกับเอกสารแล้ว คราวนี้หัวหน้าขอให้ตัดข้อมูลเรื่องความเสี่ยงทางการเงินออก เพื่อให้ธนาคารเข้าใจว่าบริษัทไม่มีความเสี่ยงนี้ เปิดปิดทีละข้อ</p>
+    <div class="togs" data-togs="inf">
+      <button data-k="num" aria-pressed="true"><span>ตัวเลขในงบตรงกับเอกสาร<small id="tNum"></small></span></button>
+      <button data-k="dis" aria-pressed="false"><span>ข้อมูลความเสี่ยงทางการเงินยังอยู่ในงบ<small id="tDis"></small></span></button>
+    </div>
+    <div>
+      <div class="conds two">
+        <div class="cond" id="i0"><span class="mk"></span><span class="ico" data-ico="pen"></span><span>ตัวเลขตรงกับเอกสาร<small>ข้อเดียวกับเรื่องที่ 2</small></span></div>
+        <div class="cond" id="i1"><span class="mk"></span><span class="ico" data-ico="book"></span><span>ไม่ละเว้นข้อมูลโดยมีเจตนาให้เข้าใจผิด<small>R220.4 (ง)</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="n0" d="M75 0C75 18 150 12 150 30"/><path id="n1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="gate" id="gI" role="status"><span data-door></span><div><b id="gIT"></b><span id="gIS"></span></div></div>
+    </div>
+    <p class="xea-laws" id="gILaw" aria-live="polite"></p>
+
+    <h3 style="margin-top:8px">ถ้อยคำของคู่มือ ที่ใช้กับงบของพีท</h3>
+    <p class="cap">R220.4 เขียนสิ่งที่ต้องทำเมื่อจัดทำหรือนำเสนอข้อมูลไว้หกข้อ บทนี้ใช้สามข้อ</p>
+    <ol class="xea-rows">
+      <li><div>จัดทำหรือนำเสนอข้อมูล โดยไม่ทำให้เข้าใจผิด หรือมีอิทธิพลต่อผลลัพธ์ตามสัญญาหรือตามกฎระเบียบต่าง ๆ อย่างไม่เหมาะสม <span class="law">R220.4 (ข)</span><span class="xea-pt">เรื่องที่ 2: ยอดขายที่ไม่มีการขายจริง</span></div></li>
+      <li><div>นำเสนอความจริงอย่างถูกต้องและครบถ้วนในส่วนที่เป็นสาระสำคัญทั้งหมด <span class="law">R220.4 (ค)</span><span class="xea-pt">เรื่องที่ 2: แก้ยอดขายที่ลงขาดไป</span></div></li>
+      <li><div>ไม่ละเว้นข้อมูลใด ๆ โดยมีเจตนาที่จะทำให้ข้อมูลนั้นทำให้เกิดความเข้าใจผิด หรือมีอิทธิพลต่อผลลัพธ์ตามสัญญา หรือตามกฎระเบียบต่าง ๆ อย่างไม่เหมาะสม <span class="law">R220.4 (ง)</span><span class="xea-pt">เรื่องนี้: ตัดข้อมูลความเสี่ยงทางการเงินออก</span></div></li>
+    </ol>
+
+    <p class="lbl">ตัวอย่างของคู่มือ เรื่องอิทธิพลต่อผลลัพธ์ตามสัญญา <span class="law">220.4 A1</span></p>
+    <div class="xea-eq" role="img" aria-label="ใช้ประมาณการที่ไม่สมจริง โดยเจตนาที่จะหลีกเลี่ยงการฝ่าฝืนข้อกำหนดตามสัญญา เช่น พันธะสัญญาการกู้เงิน เป็นตัวอย่างของอิทธิพลต่อผลลัพธ์ตามสัญญาอย่างไม่เหมาะสม">
+      <div class="xea-eqc"><small>สิ่งที่ทำ</small><b>ใช้ประมาณการที่ไม่สมจริง</b></div>
+      <span class="xea-op" aria-hidden="true">+</span>
+      <div class="xea-eqc"><small>เจตนา</small><b>หลีกเลี่ยงการฝ่าฝืนข้อกำหนดตามสัญญา</b><em>เช่น พันธะสัญญาการกู้เงิน ซึ่งเป็นข้อกำหนดตามสัญญาอย่างหนึ่ง</em></div>
+      <div class="xea-eqc xea-eqr"><small>คู่มือยกเป็นตัวอย่างของ</small><b>อิทธิพลต่อผลลัพธ์ตามสัญญาอย่างไม่เหมาะสม</b></div>
+    </div>
+
+    <div class="xea-mine"><span data-xea-face></span><span><b>งานที่ต้องใช้ดุลยพินิจ ห้ามใช้อย่างตั้งใจที่จะทำให้ผู้อื่นเข้าใจผิด</b>ดุลยพินิจ คือเรื่องที่ต้องตัดสินใจเอง เช่น การเลือกเปิดเผยข้อมูล <span class="law">R220.5</span> คู่มือยกตัวอย่างที่ตรงกับงบของพีท คือการละเว้นไม่แสดงข้อมูล หรือแสดงข้อมูลอย่างคลุมเครือ ที่เกี่ยวข้องกับความเสี่ยงทางการเงิน เพื่อให้เข้าใจผิด <span class="law">220.5 A1</span></span></div>
+  </section>
+
+  <!-- 4 ถูกกดดัน -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>ความกดดัน</small><h2 id="h4">ถูกกดดัน ก็ยังต้องทำสิ่งที่เหมาะสม</h2></div></div>
+    <p class="cap">ความซื่อสัตย์สุจริตเกี่ยวข้องกับลักษณะนิสัยที่เข้มแข็งในการกระทำอย่างเหมาะสม แม้เมื่อเผชิญกับแรงกดดันให้ปฏิบัติเป็นอย่างอื่น <span class="law">111.1 A1</span></p>
+    <p class="lbl">การกระทำอย่างเหมาะสม เกี่ยวข้องกับ <span class="law">111.1 A2</span></p>
+    <ol class="xea-rows">
+      <li><div>การมีจุดยืนอย่างมั่นคง เมื่อเผชิญกับสภาวะลำบากในการตัดสินใจ และสถานการณ์ที่ยาก</div></li>
+      <li><div>หรือการโต้แย้งผู้อื่น เมื่อมีเหตุการณ์แวดล้อมที่มีเหตุผลสมควร</div></li>
+    </ol>
+    <p class="cap">ในลักษณะที่เหมาะสมกับเหตุการณ์แวดล้อมนั้น</p>
+
+    <h3 style="margin-top:8px">ความกดดันมาจากไหนได้บ้าง</h3>
+    <p class="cap">ความกดดันอาจชัดเจน หรือโดยนัย คือไม่ได้พูดออกมาตรง ๆ และอาจมาจากสามทาง <span class="law">270.3 A1</span></p>
+    <div>
+      <div class="xea-s3">
+        <div><span data-ico="bag"></span><b>ภายในองค์กรผู้ว่าจ้าง</b><small>เช่น เพื่อนร่วมงาน หรือผู้บังคับบัญชา</small><span class="xea-tag">เรื่องของพีท: หัวหน้า</span></div>
+        <div><span data-ico="mail"></span><b>บุคคลหรือองค์กรภายนอก</b><small>เช่น ผู้จำหน่าย ลูกค้า หรือผู้ให้กู้</small></div>
+        <div><span data-ico="flag"></span><b>เป้าหมาย และความคาดหวัง</b><small>เป้าหมายภายในหรือภายนอก</small><span class="xea-tag">เรื่องของพีท: ยอดขายที่ธนาคารคาดหวัง</span></div>
+      </div>
+      <svg class="xea-down" viewBox="0 0 120 26" aria-hidden="true"><path d="M20 2C20 14 60 10 60 22M60 2V22M100 2C100 14 60 10 60 22M53 16l7 7 7-7"/></svg>
+      <div class="xea-stack">
+        <div class="xea-dir">
+          <svg viewBox="0 0 84 60" aria-hidden="true"><g fill="none" stroke="#CFCBBF" stroke-width="3" stroke-linecap="round"><path d="M17 12l25 12M17 30h24M17 48l25-12"/></g><circle cx="10" cy="12" r="6" fill="#CFCBBF"/><circle cx="10" cy="30" r="6" fill="#CFCBBF"/><circle cx="10" cy="48" r="6" fill="#CFCBBF"/><circle cx="62" cy="30" r="17" fill="#2F6B8A"/><path d="M62 20l8 3.200v6c0 5-3.300 8.600-8 10.200-4.700-1.600-8-5.200-8-10.200v-6z" fill="none" stroke="#fff" stroke-width="2.200" stroke-linejoin="round"/></svg>
+          <div><b>คนอื่นกดดันพีท</b><span>ต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน <span class="law">R270.3 (ก)</span></span></div>
+        </div>
+        <div class="xea-dir">
+          <svg viewBox="0 0 84 60" aria-hidden="true"><circle cx="22" cy="30" r="17" fill="#2F6B8A"/><path d="M41 30h24" fill="none" stroke="#CFCBBF" stroke-width="3" stroke-linecap="round"/><circle cx="74" cy="30" r="7" fill="#CFCBBF"/><path d="M47 22l12 16M59 22L47 38" fill="none" stroke="#B3261E" stroke-width="3.500" stroke-linecap="round"/></svg>
+          <div><b>พีทกดดันคนอื่น</b><span>ต้องไม่สร้างแรงกดดันต่อผู้อื่น ที่รู้หรือมีเหตุผลที่จะเชื่อว่าจะส่งผลให้บุคคลอื่นฝ่าฝืนหลักการพื้นฐาน <span class="law">R270.3 (ข)</span></span></div>
+        </div>
+      </div>
+    </div>
+    <p class="cap">องค์กรผู้ว่าจ้างของพีท คือบริษัท พาวเด้ออ้าย จำกัด เรื่องที่ 2 ใกล้กับตัวอย่างที่คู่มือยก คือความกดดันที่จะรายงานผลการดำเนินงานที่ทำให้เข้าใจผิด เพื่อให้เป็นไปตามความคาดหวังของนักลงทุน นักวิเคราะห์ หรือผู้ให้กู้ <span class="law">270.3 A2</span></p>
+
+    <h3 style="margin-top:8px">ถูกกดดันแล้ว ปรึกษาใครได้บ้าง</h3>
+    <p class="cap">การปรึกษาหารือเกี่ยวกับเหตุการณ์แวดล้อมที่ทำให้เกิดความกดดัน อาจช่วยในการประเมินระดับของอุปสรรค และต้องตระหนักถึงหลักการพื้นฐานเรื่องการรักษาความลับ <span class="law">270.3 A4</span> ลองเปลี่ยนว่าใครสร้างความกดดัน</p>
+    <div class="chips" data-pick="prs">
+      <button data-v="0" aria-pressed="true">หัวหน้าของพีท</button>
+      <button data-v="1">เพื่อนร่วมงาน</button>
+    </div>
+    <div class="cons" role="status">
+      <div class="cg ok xea-cg"><span class="ico" data-ico="check"></span><div><b>ปรึกษาหารือกับบุคคลที่พยายามสร้างความกดดัน เพื่อหาแนวทางแก้ไข</b><span id="prA"></span></div></div>
+      <div class="cg xea-cg" id="prBox"><span class="ico" id="prIco"></span><div><b>ปรึกษาหารือกับผู้บังคับบัญชา ถ้าผู้บังคับบัญชาไม่ได้เป็นบุคคลที่สร้างความกดดัน</b><span id="prB"></span></div></div>
+    </div>
+    <p class="cap">และอาจรวมถึงการขยายเรื่องนั้นภายในองค์กรเมื่อเหมาะสม การเปิดเผยตามนโยบายขององค์กร และการปรึกษากับผู้อื่น เช่น ที่ปรึกษากฎหมาย</p>
+  </section>
+
+  <!-- 5 รู้ทีหลัง -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>ข้อมูลที่ทำให้เข้าใจผิด</small><h2 id="h5">รู้ทีหลัง ก็ต้องหาทางแก้และยุติการเกี่ยวข้อง</h2></div></div>
+    <p class="cap">หลังพีทส่งงาน หัวหน้าแก้ยอดขายเป็น 1,500,000 บาทเอง ทั้งที่เอกสารการขายรวม 1,200,000 บาท งบชุดนี้มีชื่อพีทเป็นผู้จัดทำ พีทเพิ่งรู้ เมื่อเริ่มตระหนัก ต้องดำเนินการเพื่อยุติการเกี่ยวข้องกับข้อมูลนั้น <span class="law">R111.3</span> ลองเปลี่ยนสองข้อข้างล่าง</p>
+    <p class="lbl">บริษัทแก้ไขข้อมูลเมื่อไร</p>
+    <div class="chips" data-pick="esc">
+      <button data-v="0" aria-pressed="true">หลังพีทปรึกษาในบริษัท</button>
+      <button data-v="1">หลังพีทดำเนินการเพิ่มเติม</button>
+      <button data-v="2">ไม่แก้เลย</button>
+    </div>
+    <p class="lbl">งบชุดนี้ถึงธนาคารหรือยัง</p>
+    <div class="chips" data-pick="sent">
+      <button data-v="0" aria-pressed="true">ยังไม่ถึง</button>
+      <button data-v="1">ถึงแล้ว</button>
+    </div>
+    <div class="xea-send" id="send" aria-hidden="true"><span class="xea-end"><span data-ico="pen"></span>งบที่มีชื่อพีท</span><span class="xea-way"><i></i></span><span class="xea-end"><span data-ico="bag"></span>ธนาคารผู้ให้กู้</span></div>
+    <p class="lbl">สามข้อนี้ต่อกันด้วยเงื่อนไขที่คู่มือเขียน</p>
+    <ol class="todo xea-lad">
+      <li id="L0"><div>
+        <span class="xea-when xea-met">เมื่อรู้ หรือมีเหตุผลที่เชื่อได้ว่า ข้อมูลที่ตนเกี่ยวข้องอยู่นั้นทำให้เข้าใจผิด</span>
+        <b>ต้องดำเนินการที่เหมาะสมเพื่อหาทางแก้ไข</b>
+        <small>รวมถึงปรึกษาหารือข้อกังวลกับผู้บังคับบัญชา ผู้บริหารระดับที่เหมาะสม หรือผู้มีหน้าที่กำกับดูแล และขอให้บุคคลดังกล่าวดำเนินการอย่างเหมาะสมเพื่อแก้ไข · ปรึกษาเกี่ยวกับนโยบายขององค์กร เช่น นโยบายการแจ้งเบาะแสการกระทำผิด <span class="law">R220.8</span> <span class="law">220.8 A1</span></small>
+        <small class="xea-gl">ผู้มีหน้าที่กำกับดูแล คือบุคคลหรือองค์กรซึ่งมีความรับผิดชอบต่อการกำกับดูแลกิจการ เช่น การกำกับดูแลกระบวนการรายงานทางการเงิน <span class="law">ข้อ 4</span></small>
+        <span class="xea-acts">การดำเนินการของบุคคลดังกล่าว อาจรวมถึง <span class="xea-act xea-lit">แก้ไขข้อมูลให้ถูกต้อง</span><span class="xea-act" id="actTell">แจ้งแก้ไขข้อมูลให้ถูกต้อง<small id="actTellS"></small></span></span>
+        <span class="xea-st" id="L0s"></span>
+      </div></li>
+      <li id="L1"><div>
+        <span class="xea-when" id="W1">ต่อจากข้อ 1 เมื่อพิจารณาว่าองค์กรยังมิได้ดำเนินการอย่างเหมาะสม และยังมีเหตุผลที่เชื่อได้ว่าข้อมูลทำให้เข้าใจผิด</span>
+        <b>ดำเนินการเพิ่มเติม</b>
+        <small>อาจเหมาะสม หากตระหนักถึงหลักการพื้นฐานเรื่องการรักษาความลับ · ปรึกษากับองค์กรวิชาชีพที่เกี่ยวข้อง ผู้ตรวจสอบภายในหรือผู้สอบบัญชีขององค์กร ที่ปรึกษากฎหมาย · พิจารณาว่ามีข้อกำหนดอื่นใดให้สื่อสารกับบุคคลที่สาม รวมทั้งผู้ใช้ข้อมูล หน่วยงานกำกับดูแล <span class="law">220.8 A2</span></small>
+        <span class="xea-st" id="L1s"></span>
+      </div></li>
+      <li id="L2"><div>
+        <span class="xea-when" id="W2">ต่อจากข้อ 1 และข้อ 2 เมื่อใช้ทางเลือกที่มีจนหมดแล้ว พิจารณาว่ายังไม่ได้ดำเนินการที่เหมาะสม และมีเหตุผลที่เชื่อได้ว่าข้อมูลยังคงทำให้เข้าใจผิดอยู่</span>
+        <b>ต้องปฏิเสธที่จะเกี่ยวข้องกับข้อมูล หรือปฏิเสธที่จะยังคงข้อมูลดังกล่าวไว้ต่อไป</b>
+        <small>ถ้อยคำของคู่มือ <span class="law">R220.9</span></small>
+        <span class="xea-st" id="L2s"></span>
+      </div></li>
+    </ol>
+    <div class="result xea-res" id="escR" role="status"></div>
+  </section>
+
+  <!-- หลักนี้ในเรื่องอื่น -->
+  <section class="fig" aria-labelledby="fo">
+    <span class="fno">หลักนี้ในเรื่องอื่น</span>
+    <h2 id="fo">คู่มือเอ่ยถึงหลักนี้ในอีกสามเรื่อง</h2>
+    <p class="cap">รายละเอียดอยู่ในบทของหลักข้ออื่น แตะเพื่อไปบทนั้น</p>
+    <div class="xea-stack">
+      <a class="xea-tri" href="law2v-r06.html"><span class="ico" data-ico="star"></span><span><b>เสนอให้หรือยอมรับสิ่งจูงใจ เช่น ของขวัญ หรือการต้อนรับ</b><small>เมื่อมีเจตนาที่จะให้มีอิทธิพลอย่างไม่เหมาะสมต่อพฤติกรรมของผู้รับหรือของอีกบุคคลหนึ่ง เป็นการฝ่าฝืนหลักนี้ <span class="law">250.4 A1</span> <span class="law">250.9 A2</span></small><span class="xea-go">บทที่ 6 ความเที่ยงธรรมและความเป็นอิสระ</span></span></a>
+      <a class="xea-tri" href="law2v-r09.html"><span class="ico" data-ico="flag"></span><span><b>รู้หรือสงสัยว่ามีการไม่ปฏิบัติตามกฎหมายและข้อบังคับ</b><small>วัตถุประสงค์ข้อแรกของการตอบสนอง คือเพื่อปฏิบัติตามหลักนี้และหลักพฤติกรรมทางวิชาชีพ <span class="law">260.4</span></small><span class="xea-go">บทที่ 9 พฤติกรรมทางวิชาชีพ</span></span></a>
+      <a class="xea-tri" href="law2v-r08.html"><span class="ico" data-ico="mail"></span><span><b>ผู้ประกอบวิชาชีพบัญชีอีกคนกำลังพิจารณารับงาน แล้วติดต่อมาถาม</b><small>คนปัจจุบันหรือคนก่อนที่ถูกร้องขอให้ตอบ ต้องให้ข้อมูลด้วยความซื่อสัตย์สุจริต ไม่คลุมเครือ <span class="law">R320.7 (ข)</span></small><span class="xea-go">บทที่ 8 การรักษาความลับ</span></span></a>
+    </div>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px;grid-template-columns:minmax(0,1fr)"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="book"></span><span>จรรยาบรรณอยู่ในข้อบังคับสภาวิชาชีพบัญชี ข้อ 9 มีหลักการพื้นฐานหกข้อ บทนี้คือข้อ (ก)</span></li>
+      <li><span class="ico" data-ico="star"></span><span>หลัก (ก) ความซื่อสัตย์สุจริต คือตรงไปตรงมา จริงใจในความสัมพันธ์ทั้งมวล ทั้งทางวิชาชีพและทางธุรกิจ</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>ถูกขอให้แก้ตัวเลข ดูที่ข้อมูลหลังแก้ ตรงกับความจริง แก้ได้ ทำให้เข้าใจผิด ทำตามไม่ได้</span></li>
+      <li><span class="ico" data-ico="x"></span><span>ห้ามเกี่ยวข้องทั้งที่รู้ กับข้อมูลที่ทำให้เกิดความเข้าใจผิด ที่จัดทำขึ้นโดยไม่ไตร่ตรอง หรือที่ละเว้นปิดบังข้อมูลที่จำเป็นต้องมี</span></li>
+      <li><span class="ico" data-ico="book"></span><span>ตัวเลขถูกทุกตัว แต่ละเว้นข้อมูลเพื่อให้เข้าใจผิด ก็ยังนำเสนอไม่ได้</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>ใครขอหรือกดดัน ผลเท่าเดิม และห้ามกดดันคนอื่นให้ฝ่าฝืนด้วย</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>รู้ทีหลัง ก็ต้องหาทางแก้ และยุติการเกี่ยวข้องกับข้อมูลนั้น</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>หาทางแก้ในองค์กรก่อน องค์กรยังไม่ดำเนินการ จึงดำเนินการเพิ่มเติม ใช้ทางเลือกจนหมดแล้วข้อมูลยังทำให้เข้าใจผิด ต้องปฏิเสธที่จะเกี่ยวข้อง</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>ข้อ 4 ข้อ 8 ข้อ 9 และข้อ 10 มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
+      <li>ผู้ประกอบวิชาชีพบัญชี ตามข้อ 4 คือผู้ประกอบวิชาชีพบัญชีด้านการทำบัญชี ด้านการสอบบัญชี ด้านการบัญชีบริหาร ด้านการวางระบบบัญชี ด้านการบัญชีภาษีอากร ด้านการศึกษาและเทคโนโลยีการบัญชี และบริการเกี่ยวกับการบัญชีด้านอื่นตามที่กฎกระทรวงกำหนดให้เป็นวิชาชีพบัญชี และรวมถึงผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชีด้วย</li>
+      <li>เลขที่มีจุด เช่น R111.2 หรือ 220.8 A1 คือย่อหน้าของคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566</li>
+      <li>หมวดย่อย 111 ความซื่อสัตย์สุจริต อยู่ในส่วนที่ 1 ของคู่มือ หมวด 220 การจัดทำและการนำเสนอข้อมูล กับหมวด 270 ความกดดันต่อการฝ่าฝืนหลักการพื้นฐาน อยู่ในส่วนที่ 2 ซึ่งเขียนสำหรับผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจอย่างพีท</li>
+      <li>การจัดทำหรือการนำเสนอข้อมูลในหมวด 220 รวมถึงการบันทึกข้อมูล การเก็บรักษาข้อมูล และการอนุมัติข้อมูล (220.3 A3)</li>
+      <li>ผู้มีหน้าที่กำกับดูแล ตามข้อ 4 คือบุคคลหรือกลุ่มบุคคล หรือองค์กร หรือกลุ่มองค์กร ซึ่งมีความรับผิดชอบต่อการกำกับดูแลทิศทางเชิงกลยุทธ์ของกิจการ ภาระผูกพันที่เกี่ยวกับการรับผิดชอบของกิจการ การกำกับดูแลกระบวนการรายงานทางการเงิน</li>
+      <li>“ผู้บังคับบัญชา” ในคู่มือ คือหัวหน้า · พีท พราว พริ้ง และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ ตัวเลขบาทในหน้านี้เป็นของกรณีสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>ความเห็นนี้ เป็นของเราเองจริงไหม</b>
+    <p>หลัก (ข) ความเที่ยงธรรมและความเป็นอิสระ</p>
+    <a class="btn" href="law2v-r06.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function mark(id, ok) { var c = $(id); c.className = c.className.replace(/ ?\b(ok|no)\b/g, '') + (ok ? ' ok' : ' no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); }
+  function line(id, c) { $(id).setAttribute('class', c); }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  function law(t) { return '<span class="law">' + t + '</span>'; }
+  V.spy('#steps');
+
+  /* ภาพหน้าพีท: วาดเฉพาะหน้านี้ (ของกลางมีแต่แพรกับพราว) */
+  var PETE = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="xeaF"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#xeaF)">' +
+    '<rect width="120" height="120" fill="#E3F3E8"/>' +
+    '<path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#5B8DB8"/><path d="M48 96l12 12 12-12 5 3-17 20-17-20z" fill="#FDFDFB"/>' +
+    '<path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/>' +
+    '<ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><ellipse cx="39.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="80.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/>' +
+    '<path d="M38.500 54c-3-20 6-31 21.500-31s24.500 11 21.500 31c-2-9-5-14-9-17-9 3-20 3-27 0-4 3-6 9-7 17z" fill="#1F1A17"/>' +
+    '<ellipse cx="50" cy="57" rx="5.2" ry="3.4" fill="#fff"/><ellipse cx="70" cy="57" rx="5.2" ry="3.4" fill="#fff"/>' +
+    '<circle cx="50.4" cy="57" r="2.9" fill="#2E1D14"/><circle cx="69.6" cy="57" r="2.9" fill="#2E1D14"/><circle cx="51.3" cy="56" r=".9" fill="#fff"/><circle cx="70.5" cy="56" r=".9" fill="#fff"/>' +
+    '<path d="M44 52.500q6-3.500 12-.500M64 52q6-3 12 .500" fill="none" stroke="#1F1A17" stroke-width="2.2" stroke-linecap="round"/>' +
+    '<path d="M60 59c-1 4-2 6-1 8h2.500" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/>' +
+    '<path d="M54 72c3.500 2.400 8.500 2.400 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>' +
+    '</g></svg>';
+  [].forEach.call(document.querySelectorAll('[data-xea-face]'), function (e, n) { e.innerHTML = PETE.replace(/xeaF/g, 'xeaF' + n); });
+
+  /* 2 กรณีของพีท: เปลี่ยนยอดในเอกสารการขาย (ผลเปลี่ยน) · เปลี่ยนคนขอ (ผลไม่เปลี่ยน เส้นของคนขอทั้งสามลงที่ผลเดียวกัน)
+     ฐาน: R111.2 (ก) · R220.4 (ข) (ค) · 220.8 A1 · 270.3 A1 · R270.3 (ก) · ตัวอย่างต้นทาง 270.3 A2 */
+  var doc = 0, ask = 0, ASKER = ['หัวหน้า', 'พริ้ง', 'เพื่อนร่วมงาน'], ASKFULL = ['หัวหน้าของพีท', 'พริ้ง เจ้าของบริษัท', 'เพื่อนร่วมงานของพีท'];
+  function drawCase() { var ok = doc === 0;
+    $('reqWho').textContent = 'คำขอของ' + ASKER[ask];
+    $('cmpDoc').textContent = ok ? '1,500,000' : '1,200,000';
+    $('cmp').className = 'xea-cmp ' + (ok ? 'xea-match' : 'xea-diff');
+    $('cmpSign').textContent = ok ? '=' : '≠'; $('cmpSay').textContent = ok ? 'ตรงกัน' : 'ไม่ตรงกัน';
+    gate('gA', ok, ok ? 'พีทแก้ตามคำขอได้' : 'พีทแก้ตามคำขอไม่ได้',
+      ok ? 'บัญชีเดิมลงยอดขายขาดไป 300,000 บาท หลังแก้ บัญชีตรงกับเอกสาร เป็นการแก้ไขข้อมูลให้ถูกต้อง'
+         : 'บัญชีเดิมตรงกับเอกสารอยู่แล้ว ส่วนที่ขอเพิ่ม 300,000 บาทไม่มีการขายจริง ธนาคารที่อ่านงบจะเข้าใจผิด');
+    $('gALaw').innerHTML = ok ? law('R220.4 (ค)') + law('220.8 A1') : law('R111.2 (ก)') + law('R220.4 (ข)');
+    $('gAGo').setAttribute('href', ok ? '#s3' : '#s5');
+    $('gAGo').textContent = ok ? 'ตัวเลขตรงแล้ว ยังมีอีกข้อที่ต้องดู ไปเรื่องที่ 3' : 'ถ้างบแบบนี้ออกไปแล้ว พีททำอะไรต่อ ไปเรื่องที่ 5';
+    [0, 1, 2].forEach(function (i) { line('a' + i, i === ask ? (ok ? 'ok' : 'no') : ''); });
+    $('askBox').className = 'xea-same ' + (ok ? 'xea-good' : 'xea-bad');
+    $('askP').textContent = ok ? 'พีทแก้ตามคำขอได้' : 'พีทแก้ตามคำขอไม่ได้';
+    $('askR').innerHTML = (ask === 0 ? '<b>คนขอคือหัวหน้าของพีท</b> คู่มือเรียกหัวหน้าว่าผู้บังคับบัญชา ' : '<b>เปลี่ยนคนขอเป็น' + ASKFULL[ask] + ' ผลเท่าเดิม</b> ') +
+      (ok ? 'ผลมาจากยอดหลังแก้ที่ตรงกับเอกสาร ไม่ได้มาจากว่าใครเป็นคนขอ'
+          : 'ผลมาจากยอดหลังแก้ที่ไม่ตรงกับเอกสาร ไม่ได้มาจากว่าใครเป็นคนขอ ผู้ประกอบวิชาชีพบัญชีต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน ' + law('R270.3 (ก)') +
+            (ask === 1 ? ' เจ้าของบริษัทก็เป็นผู้อื่นตามข้อนี้' : ' คู่มือยกเพื่อนร่วมงานและผู้บังคับบัญชาเป็นตัวอย่างของความกดดันจากภายในองค์กร ' + law('270.3 A1'))); }
+  V.pick('doc', function (v) { doc = v; drawCase(); });
+  V.pick('ask', function (v) { ask = v; drawCase(); });
+
+  /* 3 สองข้อที่งบของพีทต้องผ่าน: ตัวเลขตรงกับเอกสาร (ข้อเท็จจริงเดียวกับเรื่องที่ 2) · ไม่ละเว้นข้อมูลโดยมีเจตนาให้เข้าใจผิด R220.4 (ง)
+     ช่องแรกไม่ใช้ถ้อยคำ R220.4 (ค)(1) “ถูกต้องและครบถ้วน” เพราะเมื่อข้อมูลถูกตัดออก ช่องนั้นจะติ๊กถูกไม่ได้ · ตัวอย่างต้นทาง 220.5 A1 ข้อสุดท้าย */
+  V.togs('inf', function (s) { mark('i0', s.num); mark('i1', s.dis); line('n0', s.num ? 'ok' : 'no'); line('n1', s.dis ? 'ok' : 'no');
+    $('tNum').textContent = s.num ? 'ยอดขาย 1,500,000 บาท ตามเอกสารการขาย' : 'ยอดขายในงบไม่ตรงกับเอกสารการขาย';
+    $('tDis').textContent = s.dis ? 'ไม่ได้ตัดออก' : 'ถูกตัดออก เพื่อให้ธนาคารเข้าใจว่าบริษัทไม่มีความเสี่ยงนี้';
+    var all = s.num && s.dis;
+    gate('gI', all, all ? 'งบชุดนี้ผ่านทั้งสองข้อ' : 'งบชุดนี้ยังนำเสนอไม่ได้',
+      all ? 'ตัวเลขตรงกับเอกสาร และไม่ได้ละเว้นข้อมูลเพื่อให้เข้าใจผิด'
+          : (s.num ? 'ตัวเลขถูกทุกตัว แต่ละเว้นข้อมูลความเสี่ยงทางการเงินเพื่อให้ธนาคารเข้าใจผิด'
+                   : (s.dis ? 'ข้อมูลความเสี่ยงอยู่ครบ แต่ตัวเลขไม่ตรงกับเอกสาร' : 'ติดทั้งสองข้อ ตัวเลขไม่ตรงกับเอกสาร และละเว้นข้อมูลเพื่อให้เข้าใจผิด')));
+    $('gILaw').innerHTML = (s.num ? '' : law('R220.4 (ข)') + law('R111.2 (ก)')) + (s.dis ? '' : law('R220.4 (ง)') + law('R111.2 (ค)')); });
+
+  /* 4 ปรึกษาใคร: 270.3 A4 ข้อแรกกับข้อที่สอง เงื่อนไขของข้อที่สองคือผู้บังคับบัญชาไม่ได้เป็นบุคคลที่สร้างความกดดัน */
+  V.pick('prs', function (v) { var boss = v === 0;
+    $('prA').textContent = 'ในเรื่องนี้คือ' + (boss ? 'หัวหน้าของพีท' : 'เพื่อนร่วมงานของพีท');
+    $('prBox').className = 'cg xea-cg ' + (boss ? 'lock' : 'ok');
+    $('prIco').innerHTML = V.icon(boss ? 'x' : 'check');
+    $('prB').textContent = boss ? 'หัวหน้าเป็นบุคคลที่สร้างความกดดัน ไม่ตรงเงื่อนไขของข้อนี้' : 'หัวหน้าไม่ได้เป็นบุคคลที่สร้างความกดดัน ตรงเงื่อนไขของข้อนี้'; });
+
+  /* 5 รู้ทีหลัง: R111.3 · R220.8 · 220.8 A1 · 220.8 A2 · R220.9
+     ลำดับมาจากถ้อยคำของคู่มือเอง: 220.8 A2 “ยังมิได้ดำเนินการอย่างเหมาะสม … การดำเนินการเพิ่มเติม” · R220.9 “หลังจากได้ใช้ทางเลือกที่มีจนหมดแล้ว”
+     งบถึงธนาคารหรือยัง: เปลี่ยนผลเฉพาะใน 220.8 A1 (แจ้งแก้ไขข้อมูลให้ถูกต้อง เมื่อข้อมูลเปิดเผยไปยังผู้ใช้รายงานแล้ว) · R220.9 ไม่มีเงื่อนไขเรื่องนี้ */
+  var esc = 0, sent = 0;
+  function drawEsc() {
+    var cls = [['xea-fix', 'xea-far', 'xea-far'], ['xea-tried', 'xea-fix', 'xea-far'], ['xea-tried', 'xea-tried', 'xea-stop']][esc],
+        st = [['บริษัทแก้ไขข้อมูลให้ถูกต้อง', 'ไปไม่ถึงข้อนี้', 'ไปไม่ถึงข้อนี้'],
+              ['ปรึกษาและขอให้แก้ไขแล้ว บริษัทยังไม่ดำเนินการ', 'บริษัทแก้ไขข้อมูลให้ถูกต้อง', 'ไปไม่ถึงข้อนี้'],
+              ['ปรึกษาและขอให้แก้ไขแล้ว บริษัทยังไม่ดำเนินการ', 'ดำเนินการเพิ่มเติมแล้ว ข้อมูลยังคงทำให้เข้าใจผิด', 'ข้อนี้ใช้กับพีทแล้ว']][esc];
+    [0, 1, 2].forEach(function (i) { $('L' + i).className = cls[i]; $('L' + i + 's').textContent = st[i]; });
+    $('W1').className = 'xea-when' + (esc >= 1 ? ' xea-met' : ''); $('W2').className = 'xea-when' + (esc === 2 ? ' xea-met' : '');
+    $('send').className = 'xea-send' + (sent ? ' xea-sent' : '');
+    $('actTell').className = 'xea-act' + (sent ? ' xea-lit' : '');
+    $('actTellS').textContent = sent ? 'งบถึงธนาคารแล้ว' : 'ใช้เมื่อข้อมูลเปิดเผยไปยังผู้ใช้รายงานแล้ว';
+    var r = $('escR'), fixed = esc < 2; r.className = 'result xea-res' + (fixed ? ' ok' : ' xea-halt');
+    r.innerHTML = fixed
+      ? '<b>' + (esc === 0 ? 'บริษัทแก้ไขข้อมูลให้ถูกต้อง หลังพีทปรึกษาและขอให้แก้ไข' : 'บริษัทแก้ไขข้อมูลให้ถูกต้อง หลังพีทดำเนินการเพิ่มเติม') + '</b> ' +
+        (sent ? 'งบถึงธนาคารแล้ว การดำเนินการเพื่อแก้ไขเรื่องนี้จึงอาจรวมถึงอีกอย่างหนึ่ง คู่มือเขียนว่า ถ้าข้อมูลนั้นได้รับการเปิดเผยไปยังผู้ตั้งใจจะให้เป็นผู้ใช้รายงานแล้ว ให้แจ้งแก้ไขข้อมูลให้ถูกต้อง '
+              : 'งบยังไม่ถึงธนาคาร ส่วนการแจ้งแก้ไขข้อมูลให้ถูกต้อง คู่มือเขียนไว้สำหรับข้อมูลที่เปิดเผยไปยังผู้ตั้งใจจะให้เป็นผู้ใช้รายงานแล้ว ') + law('220.8 A1')
+      : '<b>ใช้ทางเลือกที่มีจนหมดแล้ว และยังมีเหตุผลที่เชื่อได้ว่าข้อมูลยังคงทำให้เข้าใจผิดอยู่</b> คู่มือเขียนว่าต้องปฏิเสธที่จะเกี่ยวข้องกับข้อมูล หรือปฏิเสธที่จะยังคงข้อมูลดังกล่าวไว้ต่อไป ' + law('R220.9') +
+        '<span class="xea-keep"><b>' + (sent ? 'งบถึงธนาคารแล้ว ผลไม่เปลี่ยน' : 'งบยังไม่ถึงธนาคาร ผลก็เป็นแบบนี้') + '</b> เพราะ R220.9 ไม่ได้เขียนเงื่อนไขว่าข้อมูลถึงผู้ใช้แล้วหรือยัง ส่วนการสื่อสารกับผู้ใช้ข้อมูล คู่มือเขียนไว้ในข้อ 2 ให้พิจารณาว่ามีข้อกำหนดอื่นใดให้สื่อสารกับบุคคลที่สาม รวมทั้งผู้ใช้ข้อมูล ' + law('220.8 A2') + '</span>'; }
+  V.pick('esc', function (v) { esc = v; drawEsc(); });
+  V.pick('sent', function (v) { sent = v; drawEsc(); });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'เพื่อนของพีททำบัญชีอยู่อีกบริษัทหนึ่ง หัวหน้าขอให้แก้ยอดลูกหนี้ในรายงานที่จะส่งผู้ให้กู้ เพื่อนเล่ามาเท่านี้', q: 'ตอบได้หรือยังว่าเพื่อนแก้ตามคำขอได้ไหม', o: [
+      ['ยังตอบไม่ได้ ต้องรู้ก่อนว่ายอดหลังแก้ตรงกับความจริงหรือไม่', 1, 'คู่มือห้ามเข้าไปเกี่ยวข้องทั้งที่รู้กับข้อมูลที่เชื่อว่าทำให้เกิดความเข้าใจผิด ที่เล่ามายังไม่บอกว่ายอดหลังแก้ตรงกับความจริงหรือไม่ จึงต้องรู้ข้อนี้ก่อน (R111.2)'],
+      ['แก้ไม่ได้ เพราะรายงานนี้จะส่งผู้ให้กู้', 0, 'การส่งให้ผู้ให้กู้ยังไม่ทำให้การแก้เป็นข้อห้าม ในเรื่องของพีท ยอดเดิมลงขาดไป การแก้ให้ตรงกับเอกสารเป็นการแก้ไขข้อมูลให้ถูกต้อง ที่ต้องรู้ก่อนคือยอดหลังแก้ตรงกับความจริงหรือไม่'],
+      ['แก้ได้ เพราะหัวหน้าเป็นคนขอ', 0, 'ใครเป็นคนขอไม่ได้เปลี่ยนผล ผู้ประกอบวิชาชีพบัญชีต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน ที่ต้องรู้ก่อนคือยอดหลังแก้ตรงกับความจริงหรือไม่ (R270.3 (ก))']] },
+    { multi: true, f: 'พีทรู้ข้อเท็จจริงของข้อมูลแต่ละชุดตามที่เขียนไว้ คู่มือเขียนว่าต้องไม่เข้าไปเกี่ยวข้องทั้งที่รู้ กับข้อมูลที่ทำให้เกิดความเข้าใจผิด หรือที่ละเว้นข้อมูลที่จำเป็นต้องมีจนอาจทำให้เกิดความเข้าใจผิด', q: 'แตะทุกชุดที่เป็นข้อมูลแบบที่ข้อห้ามนี้เขียนถึง', o: [
+      ['รายงานที่ลงยอดขายเพิ่มจากเอกสารการขาย โดยส่วนที่เพิ่มไม่มีการขายจริง เพื่อให้ถึงตามที่ผู้ให้กู้คาดหวัง', 1, 'ส่วนที่เพิ่มไม่มีการขายจริง คนอ่านรายงานจะเข้าใจผิด เหมือนเรื่องที่ 2'],
+      ['งบที่ตัวเลขตรงกับเอกสารทุกตัว แต่ตัดข้อมูลความเสี่ยงทางการเงินออก เพื่อให้คนอ่านเข้าใจผิด', 1, 'ตัวเลขถูก แต่ละเว้นข้อมูลที่จำเป็นต้องมี จนอาจทำให้เกิดความเข้าใจผิด'],
+      ['งบที่แก้ยอดขายจนตรงกับเอกสารการขายแล้ว และไม่ได้ตัดข้อมูลใดออก', 0, 'หลังแก้ ตัวเลขตรงกับเอกสาร และไม่ได้ละเว้นข้อมูล จึงไม่ใช่ข้อมูลแบบที่ข้อห้ามเขียนถึง'],
+      ['งบที่ตัวเลขตรงกับเอกสาร ไม่ได้ตัดข้อมูลใดออก และเจ้าของบริษัทเป็นคนสั่งให้จัดทำ', 0, 'ข้อห้ามเขียนถึงตัวข้อมูล งบชุดนี้ตัวเลขตรงกับเอกสารและไม่ได้ละเว้นข้อมูล ใครเป็นคนสั่งไม่ได้เปลี่ยนผล']],
+      ex: 'สองชุดแรกเป็นข้อมูลที่ทำให้เกิดความเข้าใจผิด และข้อมูลที่ละเว้นข้อมูลที่จำเป็นต้องมี ส่วนสองชุดหลัง ตัวเลขตรงกับเอกสารและไม่ได้ละเว้นข้อมูล ใครเป็นคนสั่งไม่ได้เปลี่ยนผล (R111.2)' },
+    { f: 'พีทเพิ่งรู้ว่ารายงานที่มีชื่อตัวเองเป็นผู้จัดทำ มียอดที่ทำให้เข้าใจผิด รายงานถึงมือผู้ใช้แล้ว และพีทยังไม่ได้คุยกับใคร', q: 'ทำแบบไหนตรงกับการดำเนินการที่เหมาะสมที่คู่มือเขียนไว้', o: [
+      ['ปรึกษาหารือข้อกังวลกับผู้บังคับบัญชาหรือผู้บริหารระดับที่เหมาะสม และขอให้ดำเนินการแก้ไข', 1, 'เมื่อรู้ว่าข้อมูลที่ตนเกี่ยวข้องอยู่ทำให้เข้าใจผิด ต้องดำเนินการที่เหมาะสมเพื่อหาทางแก้ไข ซึ่งรวมถึงการปรึกษาหารือข้อกังวลและขอให้ดำเนินการแก้ไข และเมื่อข้อมูลเปิดเผยไปยังผู้ใช้รายงานแล้ว การดำเนินการนั้นอาจรวมถึงการแจ้งแก้ไขข้อมูลให้ถูกต้อง (R220.8 · 220.8 A1)'],
+      ['ไม่ต้องทำอะไร เพราะตอนจัดทำยังไม่รู้', 0, 'เมื่อเริ่มตระหนักว่าตนเกี่ยวข้องกับข้อมูลที่ทำให้เกิดความเข้าใจผิด ต้องดำเนินการเพื่อยุติการเกี่ยวข้องกับข้อมูลนั้น รู้ทีหลังก็ต้องทำ (R111.3)'],
+      ['ปฏิเสธที่จะเกี่ยวข้องกับรายงานนี้อย่างเดียว ไม่ต้องหาทางให้ข้อมูลถูกแก้ไข', 0, 'คู่มือเขียนว่าต้องดำเนินการที่เหมาะสมเพื่อหาทางแก้ไขเรื่องนั้น ส่วนการปฏิเสธที่จะเกี่ยวข้องกับข้อมูล คู่มือเขียนไว้สำหรับตอนที่ใช้ทางเลือกที่มีจนหมดแล้ว และพีทยังไม่ได้ใช้ทางเลือกใด (R220.8 · R220.9)']] }
+  ]);
+})();
+</script>
+</body>
+</html>

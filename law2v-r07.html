@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>งานนี้เราทำได้จริงไหม | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะหน้า หลัก (ค) — ทุก class ขึ้นต้น xec- */
+.xec-steps { grid-template-columns:repeat(4,1fr); }
+.xec-lk { color:var(--hue-ink); font-weight:700; text-underline-offset:3px; }
+.xec-hint { font-size:13px; color:var(--muted); line-height:1.45; }
+.xec-ic { flex:none; }
+
+/* ภาพหลัก: ถ้อยคำของข้อ 9 (ค) */
+.xec-map .and { margin:8px 0; }
+.xec-map .nd.xec-name { background:var(--hue-ink); color:#fff; padding:16px 14px; max-width:none; }
+.xec-map .nd.xec-name .law { box-shadow:none; margin-top:4px; }
+.xec-map .nd.xec-part { gap:6px; padding:16px 14px 12px; max-width:none; }
+.xec-verb { font-size:13px; font-weight:700; color:var(--hue-ink); }
+.xec-words { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
+.xec-words i { font-style:normal; font-family:var(--display); font-weight:800; font-size:17px; line-height:1.3; padding:3px 12px; border-radius:99px; background:var(--sun); color:var(--ink); }
+.xec-jump { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin-top:4px; }
+.xec-jump a { display:inline-grid; place-items:center; min-height:44px; padding:4px 14px; border-radius:99px; background:var(--white); color:var(--hue-ink); box-shadow:inset 0 0 0 1.5px var(--hue); font-size:13px; font-weight:700; line-height:1.25; text-decoration:none; }
+.xec-jump a::after { content:" ›"; }
+.xec-jump a:active { transform:scale(.97); }
+.xec-roles { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.xec-role { display:grid; grid-template-columns:52px minmax(0,1fr); gap:12px; align-items:center; min-height:52px; padding:10px 12px; border-radius:18px; background:var(--soft); text-decoration:none; color:var(--ink); transition:transform .12s ease, box-shadow .12s ease; }
+.xec-role:hover { box-shadow:inset 0 0 0 2px var(--hue); } .xec-role:active { transform:scale(.98); }
+.xec-role svg { width:52px; height:52px; border-radius:50%; }
+.xec-role .xec-ic { width:52px; height:52px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; } .xec-role .xec-ic svg { width:26px; height:26px; border-radius:0; }
+.xec-role b { display:block; font-family:var(--display); font-size:17px; line-height:1.25; }
+.xec-role small { display:block; font-size:13px; color:var(--muted); line-height:1.35; }
+.xec-role em { display:block; font-style:normal; font-size:12px; font-weight:700; color:var(--hue-ink); }
+.xec-pin { justify-self:start; margin:0; } .xec-pin svg { width:26px; height:26px; border-radius:50%; }
+
+/* ส่วน 1: ข้อเท็จจริงที่แตะสลับได้ เป็นแถว */
+.xec-facts { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.xec-fact { display:grid; grid-template-columns:40px minmax(0,1fr) 24px; gap:10px; align-items:center; min-height:60px; padding:10px 12px; border-radius:18px; border:0; background:var(--good-soft); color:var(--good); font:inherit; font-size:15px; font-weight:700; line-height:1.35; text-align:left; cursor:pointer; transition:background-color .2s ease, transform .12s ease; }
+.xec-fact:active { transform:scale(.98); }
+.xec-fact .xec-ic { width:40px; height:40px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .xec-fact .xec-ic svg { width:20px; height:20px; }
+.xec-fact .xec-mk { width:24px; height:24px; border-radius:50%; display:grid; place-items:center; color:#fff; background:var(--good); } .xec-fact .xec-mk svg { width:14px; height:14px; }
+.xec-fact small { display:block; margin-top:2px; font-weight:500; font-size:12px; line-height:1.4; }
+.xec-fact[aria-pressed="false"] { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.xec-fact[aria-pressed="false"] .xec-ic { background:var(--bad-soft); }
+.xec-fact[aria-pressed="false"] .xec-mk { background:var(--bad); }
+
+/* ทางจัดการที่คู่มือยกไว้: แถวที่สว่างเมื่อเรื่องของมันยังขาด */
+.xec-ways { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; margin:0; padding:0; list-style:none; }
+.xec-way { display:grid; grid-template-columns:32px minmax(0,1fr); gap:10px; align-items:center; min-height:48px; padding:8px 12px; border-radius:14px; background:var(--soft); color:var(--muted); font-size:14px; line-height:1.4; transition:background-color .2s ease, color .2s ease, box-shadow .2s ease; }
+.xec-way .xec-ic { width:32px; height:32px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .xec-way .xec-ic svg { width:16px; height:16px; }
+.xec-way small { display:block; font-size:12px; font-weight:500; }
+.xec-way.xec-hit { background:var(--gold-soft); color:#4A3B0C; box-shadow:inset 0 0 0 2px var(--gold); font-weight:600; }
+.xec-way.xec-done { background:var(--good-soft); color:var(--good); box-shadow:inset 0 0 0 2px var(--good); font-weight:600; }
+.xec-way.xec-shut { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); font-weight:600; }
+.cg.xec-neu .ico { background:var(--hue); }
+
+/* ส่วน 2: การ์ดที่แตะสลับ เพียงพอ / ไม่เพียงพอ */
+.xec-tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.xec-tile { position:relative; display:grid; justify-items:center; align-content:start; gap:6px; min-height:132px; padding:14px 8px 12px; border-radius:18px; border:0; background:var(--good-soft); color:var(--good); font:inherit; font-size:14px; font-weight:700; line-height:1.3; text-align:center; cursor:pointer; transition:background-color .2s ease, transform .12s ease; }
+.xec-tile:active { transform:scale(.98); }
+.xec-tile .xec-ic { width:46px; height:46px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .xec-tile .xec-ic svg { width:24px; height:24px; }
+.xec-tile .xec-mk { position:absolute; top:8px; right:8px; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; color:#fff; background:var(--good); } .xec-tile .xec-mk svg { width:13px; height:13px; }
+.xec-tile small { display:block; font-weight:500; font-size:12px; }
+.xec-tile .xec-st { padding:1px 10px; border-radius:99px; background:var(--good); color:#fff; font-size:12px; font-weight:700; }
+.xec-tile[aria-pressed="false"] { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.xec-tile[aria-pressed="false"] .xec-ic { background:var(--bad-soft); }
+.xec-tile[aria-pressed="false"] .xec-mk, .xec-tile[aria-pressed="false"] .xec-st { background:var(--bad); }
+/* ลำดับสามขั้น (ใช้ .todo ของกลาง) หรี่ลงเมื่อยังไม่มีเรื่องที่ไม่เพียงพอ */
+.xec-flow { padding:14px; border-radius:20px; background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--gold); transition:background-color .2s ease, box-shadow .2s ease; }
+.xec-flow li > div { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; justify-items:start; }
+.xec-flow b { font-size:16px; }
+.xec-flow .xec-eg { display:block; position:relative; padding-left:14px; font-size:14px; line-height:1.4; } .xec-flow .xec-eg::before { content:"•"; position:absolute; left:2px; }
+.xec-flow.xec-idle { background:var(--soft); box-shadow:none; }
+.xec-flow.xec-idle li::before { background:var(--line); color:var(--muted); box-shadow:none; }
+.xec-flow.xec-idle li::after { background:var(--line); }
+.xec-flow.xec-idle b, .xec-flow.xec-idle .xec-eg { color:var(--muted); }
+
+/* กล่องผล */
+.xec-out { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--soft); font-size:15px; line-height:1.45; transition:background-color .2s ease; }
+.xec-out > b { font-family:var(--display); font-size:20px; line-height:1.25; }
+.xec-out .xec-sub { font-weight:700; }
+.xec-out.xec-good { background:var(--good); color:#fff; } .xec-out.xec-good .law { box-shadow:none; }
+.xec-out.xec-warn { background:var(--gold-soft); color:#4A3B0C; box-shadow:inset 0 0 0 2px var(--gold); }
+.xec-out.xec-ink { background:var(--white); color:var(--ink); box-shadow:inset 0 0 0 2px var(--ink); }
+
+/* ส่วน 3: ภาพนิ่ง */
+.xec-three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.xec-three div { display:grid; justify-items:center; align-content:start; gap:6px; padding:14px 4px 12px; border-radius:18px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; font-family:var(--display); font-weight:800; font-size:15px; line-height:1.25; }
+.xec-three svg { width:28px; height:28px; }
+.xec-fc svg { width:52px; height:52px; border-radius:50%; }
+.xec-asst .tr { background:var(--good-soft); color:var(--good); } .xec-asst .tr small { color:var(--good); } .xec-asst .tr .ico { color:var(--good); }
+.xec-box { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:18px; background:var(--soft); font-size:14px; line-height:1.45; }
+.xec-bh { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; }
+.xec-bh .xec-ic { width:40px; height:40px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; } .xec-bh .xec-ic svg { width:20px; height:20px; }
+.xec-bh b { font-family:var(--display); font-size:17px; line-height:1.3; }
+.xec-box .facts span { background:var(--white); border-radius:14px; }
+
+/* ส่วน 4: ความเห็นที่สอง */
+.xec-stacks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.xec-stack { display:grid; justify-items:center; align-content:start; gap:8px; padding:12px 8px; border-radius:18px; background:var(--soft); text-align:center; }
+.xec-stack b { font-family:var(--display); font-size:15px; line-height:1.25; }
+.xec-stack small { font-size:12px; color:var(--muted); line-height:1.35; }
+.xec-docs { display:grid; grid-template-columns:repeat(2,36px); gap:6px; }
+.xec-docs span { position:relative; width:36px; height:44px; border-radius:6px; background:var(--hue); border:2px solid var(--hue); transition:background-color .25s ease, border-color .25s ease; }
+.xec-docs span::before { content:""; position:absolute; left:6px; right:6px; top:9px; height:3px; border-radius:2px; background:#fff; box-shadow:0 8px 0 #fff, 0 16px 0 #fff; opacity:.9; }
+.xec-docs span.xec-gap { background:transparent; border:2px dashed var(--line); } .xec-docs span.xec-gap::before { opacity:0; }
+.xec-docs span.xec-get { background:var(--good); border-color:var(--good); }
+.xec-docs span.xec-bar { background:var(--bad-soft); border:2px dashed var(--bad); } .xec-docs span.xec-bar::before { opacity:0; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · จรรยาบรรณ หลักการพื้นฐาน ข้อ 9 (ค) · 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่เปิดเทียบ: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 ข้อ 4 ข้อ 9 (ค) ข้อ 10 ข้อ 11 (ก) (ภาพ p1 p3 p4 p5)
+     คู่มือประมวลจรรยาบรรณฯ แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566: การนำประมวลจรรยาบรรณไปใช้ ข้อ 11 13 15 · 113 · 230 · 270.3 · 320.3–320.4 · 321 · พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.46
+     แพร พีท พริ้ง และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ ที่มาของแต่ละกรณีอยู่ใน notes/ETH-c.notes.md -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 7 · จรรยาบรรณ หลัก (ค)</p>
+    <h1>งานนี้เราทำได้จริงไหม</h1>
+    <p class="sub">ผู้ประกอบวิชาชีพบัญชีรับงานได้เมื่อมีความรู้ความสามารถพอ และต้องทำด้วยความเอาใจใส่ เรื่องนี้คือหลักการพื้นฐานข้อ (ค) ของจรรยาบรรณ</p>
+    <svg viewBox="0 0 340 126" role="img" aria-label="ภาพรายการตรวจความพร้อมก่อนรับงาน คู่กับหมวกบัณฑิต">
+      <g transform="translate(36 16)"><rect width="96" height="100" rx="12" fill="rgba(255,255,255,.14)"/><rect x="30" y="-7" width="36" height="16" rx="8" fill="#F0C84B"/>
+        <g stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M16 34l6 6 10-11M16 58l6 6 10-11M16 82l6 6 10-11"/></g>
+        <g stroke="rgba(255,255,255,.6)" stroke-width="5" stroke-linecap="round"><path d="M44 36h36M44 60h36M44 84h26"/></g></g>
+      <g stroke="#F0C84B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M152 66h40"/><path d="M182 54l14 12-14 12"/></g>
+      <g transform="translate(214 20)"><circle cx="46" cy="46" r="46" fill="#fff"/><path d="M14 40L46 24l32 16-32 16z" fill="#2F6B8A"/><path d="M28 50v12c5 6 11 8 18 8s13-2 18-8V50" fill="none" stroke="#2F6B8A" stroke-width="5" stroke-linecap="round"/><path d="M78 40v18" stroke="#F0C84B" stroke-width="5" stroke-linecap="round"/></g>
+      <rect x="0" y="120" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps xec-steps" id="steps" aria-label="ส่วนของบท">
+    <a href="#s1"><i>1</i>ก่อนรับงาน</a><a href="#s2"><i>2</i>งานในองค์กร</a><a href="#s3"><i>3</i>ระหว่างทำงาน</a><a href="#s4"><i>4</i>ความเห็นที่สอง</a>
+  </nav>
+
+  <!-- หลักนี้เขียนว่าอะไร -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">หลักนี้เขียนว่าอะไร</span>
+    <h2 id="f0">หลัก (ค) มีสองส่วน และต้องมีทั้งคู่</h2>
+    <p class="cap">บทนี้มีสี่ส่วน แตะส่วนที่อยากดู</p>
+    <div class="map xec-map">
+      <div class="nd xec-name"><span class="ico" data-ico="cap"></span><b>ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน</b><span class="law">ข้อบังคับจรรยาบรรณ ข้อ 9 (ค)</span></div>
+      <span class="ln"></span>
+      <div class="nd xec-part"><span class="xec-verb">รักษาไว้ซึ่ง</span><span class="xec-words"><i>ความรู้</i><i>ความสามารถ</i><i>ความชำนาญทางวิชาชีพ</i></span><small>ในระดับที่ลูกค้าหรือผู้ว่าจ้างได้รับบริการที่ทันวิวัฒนาการล่าสุด</small>
+        <span class="xec-jump"><a href="#s1">ส่วน 1 ก่อนรับงาน</a><a href="#s2">ส่วน 2 งานในองค์กร</a></span></div>
+      <span class="and">และ</span>
+      <div class="nd xec-part"><span class="xec-verb">ปฏิบัติหน้าที่ด้วย</span><span class="xec-words"><i>ความเอาใจใส่</i></span><small>ให้เป็นไปตามมาตรฐานวิชาชีพที่เกี่ยวข้อง</small>
+        <span class="xec-jump"><a href="#s3">ส่วน 3 ระหว่างทำงาน</a></span></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>ถ้อยคำเต็ม: รักษาไว้ซึ่งความรู้ ความสามารถ และความชำนาญทางวิชาชีพในระดับที่รับรองได้ว่าลูกค้าหรือผู้ว่าจ้างได้รับบริการทางวิชาชีพที่ถึงพร้อมด้วยวิวัฒนาการล่าสุดในวิธีการ หรือเทคนิคการปฏิบัติงาน หรือตามกฎหมาย และปฏิบัติหน้าที่ด้วยความเอาใจใส่ให้เป็นไปตามมาตรฐานวิชาชีพที่เกี่ยวข้อง <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 9 (ค)</span> ส่วนพระราชบัญญัติวิชาชีพบัญชี ให้ปฏิบัติหน้าที่ตามมาตรฐานการบัญชี มาตรฐานการสอบบัญชี หรือมาตรฐานอื่นใดที่เกี่ยวข้องที่กำหนดตามพระราชบัญญัติ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46</span></span></p>
+    <p class="lbl">ใช้กับผู้ประกอบวิชาชีพบัญชีทั้งสองบทบาท <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 4 · ข้อ 9</span></p>
+    <div class="xec-roles">
+      <a class="xec-role" href="#s1"><span data-face="prae2"></span><span><em>ส่วน 1</em><b>แพร ผู้สอบบัญชีรับอนุญาต ในสำนักงานสอบบัญชี</b><small>ข้อบังคับเรียกว่า ผู้ประกอบวิชาชีพบัญชีที่ให้บริการสาธารณะ คือผู้ประกอบวิชาชีพบัญชีในสำนักงานที่ให้บริการทางวิชาชีพ</small></span></a>
+      <a class="xec-role" href="#s2"><span data-xec-pete></span><span><em>ส่วน 2</em><b>พีท ผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด</b><small>ข้อบังคับเรียกว่า ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ คือผู้ประกอบวิชาชีพบัญชีที่ได้รับการว่าจ้างในกิจการ</small></span></a>
+      <a class="xec-role" href="#s4"><span class="xec-ic" data-ico="book"></span><span><em>ส่วน 4 · อีกเรื่องที่อยู่ใต้หลักนี้</em><b>ความเห็นที่สอง</b><small>บริษัทที่มีผู้สอบบัญชีอยู่แล้ว มาขอความเห็นจากผู้ประกอบวิชาชีพบัญชีอีกคน</small></span></a>
+    </div>
+    <p class="note"><span data-ico="book"></span><span>“คู่มือ” ในหน้านี้ คือคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี ของสภาวิชาชีพบัญชี เลขข้อที่ขึ้นต้นด้วย R เป็นข้อกำหนด เลขข้อที่มีอักษร A เป็นคำอธิบายการนำไปปฏิบัติ</span></p>
+  </section>
+
+  <!-- 1 ก่อนรับงาน -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>เห็นจากกรณี · ก่อนรับงาน</small><h2 id="h1">ทีมต้องทำงานนั้นได้ และต้องรู้ข้อเท็จจริงก่อนตอบรับ</h2></div></div>
+    <span class="pinp xec-pin"><span data-face="prae2"></span>แพร ผู้สอบบัญชีรับอนุญาต ในสำนักงานสอบบัญชี</span>
+    <p class="cap">พริ้ง เจ้าของบริษัท พาวเด้ออ้าย จำกัด ขอให้แพรเป็นผู้สอบบัญชีของบริษัท แทนผู้สอบบัญชีคนเดิม ตอนนี้ข้อเท็จจริงสามเรื่องข้างล่างเป็นสีเขียวทั้งหมด แตะเพื่อเปลี่ยนทีละเรื่อง</p>
+    <p class="note"><span data-ico="info"></span><span><b>อุปสรรค</b> เป็นคำของข้อบังคับ เหตุการณ์แวดล้อมที่ผู้ประกอบวิชาชีพบัญชีปฏิบัติงานอยู่ อาจทำให้เกิดอุปสรรคในการปฏิบัติตามหลักการพื้นฐาน ข้อบังคับให้ระบุอุปสรรค ประเมิน แล้วใช้ <b>มาตรการป้องกัน</b> ที่จำเป็น เพื่อขจัดหรือลดอุปสรรคให้อยู่ในระดับที่ยอมรับได้ <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 10</span></span></p>
+    <div class="xec-facts" data-togs="acc">
+      <p class="lbl">ทีมของแพรทำงานนี้ได้ไหม <span class="law">คู่มือ 320.3 A4</span></p>
+      <p class="xec-hint">คู่มือใช้หลายเรื่องประเมินระดับของอุปสรรคในเรื่องนี้ รวมถึงสองเรื่องข้างล่าง (คู่มือเรียกทีมว่า กลุ่มผู้ปฏิบัติงาน)</p>
+      <button class="xec-fact" id="a0" data-k="biz" aria-pressed="true"><span class="xec-ic" data-ico="bag"></span><span><span class="xec-tx"></span><small>คู่มือไล่ไว้ว่า ลักษณะธุรกิจของลูกค้า ความซับซ้อนของการดำเนินงาน ความต้องการของงาน และวัตถุประสงค์ ลักษณะและขอบเขตของงานที่ต้องปฏิบัติ</small></span><span class="xec-mk"></span></button>
+      <button class="xec-fact" id="a1" data-k="ind" aria-pressed="true"><span class="xec-ic" data-ico="book"></span><span class="xec-tx"></span><span class="xec-mk"></span></button>
+      <p class="lbl" style="margin-top:6px">ข้อเท็จจริงที่เกี่ยวข้อง ที่ต้องรู้ก่อนตอบรับ <span class="law">คู่มือ 320.4 A1 · A4</span></p>
+      <p class="xec-hint">ทางหนึ่งที่คู่มือยกไว้เพื่อให้รู้ คือขอข้อมูลที่ผู้สอบบัญชีคนเดิมทราบอยู่แล้ว และเห็นว่าผู้ที่จะรับงานจำเป็นต้องตระหนักก่อนตัดสินใจตอบรับ การขออาจทำให้ทราบข้อเท็จจริงในประเด็นที่ปกปิดก่อนหน้านี้</p>
+      <button class="xec-fact" id="a2" data-k="prev" aria-pressed="true"><span class="xec-ic" data-ico="mail"></span><span class="xec-tx"></span><span class="xec-mk"></span></button>
+    </div>
+    <div class="xec-out" id="out1" role="status"></div>
+    <p class="lbl">ตัวอย่างมาตรการป้องกันที่คู่มือยกไว้ <span class="law">คู่มือ 320.3 A5 · 320.4 A4</span></p>
+    <p class="xec-hint">แถวที่มีกรอบสีเหลือง คือทางของเรื่องที่ยังขาด</p>
+    <ul class="xec-ways">
+      <li class="xec-way" id="w0"><span class="xec-ic" data-ico="card"></span><span>มอบหมายงานให้พนักงานที่มีความรู้ความสามารถที่จำเป็น ในจำนวนที่เพียงพอ</span></li>
+      <li class="xec-way" id="w1"><span class="xec-ic" data-ico="clock"></span><span>ตกลงกรอบเวลาที่มีความเป็นไปได้ในการปฏิบัติงาน</span></li>
+      <li class="xec-way" id="w2"><span class="xec-ic" data-ico="cap"></span><span>ใช้ผู้เชี่ยวชาญในกรณีที่จำเป็น</span></li>
+      <li class="xec-way" id="w3"><span class="xec-ic" data-ico="mail"></span><span>ขอให้ผู้สอบบัญชีคนเดิมให้ข้อมูลที่ทราบอยู่แล้ว<small>วิธีติดต่ออยู่ในบทที่ 8 <a class="xec-lk" href="law2v-r08.html">“เรื่องนี้บอกใครได้บ้าง”</a></small></span></li>
+    </ul>
+    <div class="cons">
+      <b>ถ้าอุปสรรคจัดการด้วยมาตรการป้องกันไม่ได้</b>
+      <div class="cg xec-neu"><span class="ico" data-ico="flag"></span><div><b>อาจเป็นเหตุผลหนึ่งที่จะไม่ตอบรับงาน</b><span>เมื่อถูกขอให้มาแทนผู้ประกอบวิชาชีพบัญชีคนอื่น แพรต้องตัดสินใจว่ามีเหตุผลใดในการไม่ตอบรับงาน <span class="law">คู่มือ R320.4 · 320.4 A1</span></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>คู่มือเรียกอุปสรรคในส่วนนี้ว่า <b>อุปสรรคจากผลประโยชน์ส่วนตน</b> ข้อบังคับอธิบายว่า คืออุปสรรคที่เกิดจากผลประโยชน์ทางการเงินหรือผลประโยชน์อื่น ที่มีอิทธิพลอย่างไม่เหมาะสมต่อการใช้ดุลยพินิจ หรือพฤติกรรมของผู้ประกอบวิชาชีพ <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 11 (ก)</span> อุปสรรคประเภทอื่นและขั้นตอนจัดการ อยู่ในบทที่ 11 <a class="xec-lk" href="law2v-r11.html">“เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง”</a></span></p>
+  </section>
+
+  <!-- 2 งานในองค์กร -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>เห็นจากกรณี · งานในองค์กร</small><h2 id="h2">ขาดเวลา ข้อมูล ประสบการณ์ หรือทรัพยากร ก็กระทบหลักนี้ได้</h2></div></div>
+    <span class="pinp xec-pin"><span data-xec-pete></span>พีท ผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด</span>
+    <p class="cap">พริ้ง เจ้าของบริษัท เป็นผู้บังคับบัญชาของพีท พริ้งมอบงานสำคัญให้พีท คือจัดทำประมาณการทางการเงินเพื่อยื่นขอสินเชื่อ ตอนนี้พีทมีเพียงพอทั้งสี่เรื่อง</p>
+    <p class="lbl">แตะการ์ดเพื่อสลับระหว่าง เพียงพอ กับ ไม่เพียงพอ <span class="law">คู่มือ 230.3 A2</span></p>
+    <div class="xec-tiles" data-togs="pae">
+      <button class="xec-tile" id="p0" data-k="time" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="clock"></span><span>เวลา<small>ในการปฏิบัติหน้าที่ให้สำเร็จ</small></span><span class="xec-st"></span></button>
+      <button class="xec-tile" id="p1" data-k="info" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="card"></span><span>ข้อมูล<small>ต่อการปฏิบัติหน้าที่</small></span><span class="xec-st"></span></button>
+      <button class="xec-tile" id="p2" data-k="exp" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="cap"></span><span>ประสบการณ์<small>การฝึกอบรม และการศึกษา</small></span><span class="xec-st"></span></button>
+      <button class="xec-tile" id="p3" data-k="res" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="bag"></span><span>ทรัพยากร<small>สำหรับการปฏิบัติหน้าที่</small></span><span class="xec-st"></span></button>
+    </div>
+    <div class="count" aria-live="polite"><b id="pN"></b><span>จากสี่เรื่อง ที่พีทมีเพียงพอ</span></div>
+    <div class="xec-out" id="out2" role="status"></div>
+    <p class="lbl">เมื่ออาจเกิดอุปสรรค คู่มือเขียนลำดับไว้อย่างนี้ <span class="law">คู่มือ 230.3 A4 · R230.4</span></p>
+    <ol class="todo xec-flow xec-idle" id="flow2">
+      <li class="first"><div><b>จัดการอุปสรรค</b><span class="xec-hint">ตัวอย่างมาตรการป้องกันที่คู่มือยกไว้ เป็นชุดเดียว ไม่ได้แยกตามเรื่องที่ไม่เพียงพอ</span><span class="xec-eg">ได้รับความช่วยเหลือ หรือการฝึกอบรมจากผู้เชี่ยวชาญที่จำเป็น</span><span class="xec-eg">ทำให้มั่นใจได้ว่ามีเวลาเพียงพอในการปฏิบัติหน้าที่ที่เกี่ยวข้อง</span></div></li>
+      <li><div><b>ถ้าจัดการไม่ได้ ต้องพิจารณาว่าจะปฏิเสธการปฏิบัติหน้าที่ที่เป็นปัญหาหรือไม่</b></div></li>
+      <li><div><b>ถ้าเห็นว่าการปฏิเสธเหมาะสม ต้องสื่อสารถึงเหตุผลนั้น</b></div></li>
+    </ol>
+    <p class="lbl">เปลี่ยนอีกเรื่องหนึ่ง คำสั่งของพริ้ง</p>
+    <div class="togs" data-togs="push">
+      <button data-k="push" aria-pressed="false"><span>พริ้งสั่งว่า ขาดอะไรก็ให้ทำไปก่อน<small>และต้องส่งตามกำหนดเดิม</small></span></button>
+    </div>
+    <div class="xec-out xec-ink" id="out2b" role="status" hidden></div>
+    <ul class="legend">
+      <li><span data-ico="shield"></span><span>ความกดดันที่คู่มือยกตัวอย่างไว้ เช่น ความกดดันจากผู้บังคับบัญชาเพื่อปฏิบัติงานโดยไม่มีทักษะหรือการฝึกอบรมที่เพียงพอ หรือภายในกำหนดเวลาที่ไม่สมจริง ในกรณีนี้ผู้บังคับบัญชาคือพริ้ง <span class="law">คู่มือ 270.3 A2</span></span></li>
+      <li><span data-ico="info"></span><span>พีทต้องไม่จงใจทำให้องค์กรผู้ว่าจ้างเข้าใจผิดเกี่ยวกับระดับความเชี่ยวชาญหรือประสบการณ์ที่ตนมี <span class="law">คู่มือ R230.3</span></span></li>
+      <li><span data-ico="cap"></span><span>คู่มือเขียนว่า หลักนี้กำหนดให้ “รับงานที่สำคัญได้ต่อเมื่อ ผู้ประกอบวิชาชีพบัญชีมีหรือได้รับการฝึกอบรมหรือมีประสบการณ์ที่เพียงพอ” <span class="law">คู่มือ 230.3 A1</span></span></li>
+    </ul>
+  </section>
+
+  <!-- 3 ระหว่างทำงาน -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>ระหว่างทำงาน</small><h2 id="h3">ทำงานให้รอบคอบ ครบถ้วน และทันเวลา</h2></div></div>
+    <p class="cap">ส่วนที่สองของหลัก ใช้ตลอดเวลาที่ทำงาน ทั้งกับแพรและพีท</p>
+    <p class="xec-hint"><span class="law">คู่มือ 113.1 A3</span> การปฏิบัติงานอย่างมุ่งมั่น ขยันหมั่นเพียร ครอบคลุมถึงความรับผิดชอบในการปฏิบัติตามข้อกำหนดของงานที่ได้รับมอบหมาย อย่าง</p>
+    <div class="xec-three" role="img" aria-label="ระมัดระวังรอบคอบ ครบถ้วน และทันต่อเวลา">
+      <div><span data-ico="shield"></span>ระมัดระวังรอบคอบ</div>
+      <div><span data-ico="check"></span>ครบถ้วน</div>
+      <div><span data-ico="clock"></span>ทันต่อเวลา</div>
+    </div>
+
+    <h3 style="margin-top:8px">ถ้ามีผู้ช่วย ต้องทำให้มั่นใจว่าผู้ช่วยได้รับการฝึกอบรมและการกำกับดูแล</h3>
+    <p class="cap">ผู้ช่วยในทีมของแพรรับงานตรวจสอบไปทำส่วนหนึ่ง <span class="law">คู่มือ R113.2</span></p>
+    <div class="map xec-asst" role="img" aria-label="แพรต้องทำตามขั้นตอนที่สมเหตุสมผล เพื่อให้มั่นใจว่าผู้ช่วยที่อยู่ภายใต้การกำกับดูแลของแพร ได้รับการฝึกอบรมและการกำกับดูแลที่เหมาะสม">
+      <div class="nd"><span class="xec-fc" data-face="prae2"></span><b>แพร</b><small>ต้องทำตามขั้นตอนที่สมเหตุสมผล เพื่อให้มั่นใจว่า</small></div>
+      <span class="ln"></span>
+      <div class="nd"><span class="ico" data-ico="pen"></span><b>ผู้ช่วยที่อยู่ภายใต้การกำกับดูแลของแพร</b><small>ได้รับ</small></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <div class="tr"><span class="ico" data-ico="book"></span><b>การฝึกอบรม</b><small>ที่เหมาะสม</small></div>
+        <div class="tr"><span class="ico" data-ico="shield"></span><b>การกำกับดูแล</b><small>ที่เหมาะสม</small></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:8px">อีกสองเรื่องที่หลักนี้ให้ทำ</h3>
+    <div class="xec-box">
+      <div class="xec-bh"><span class="xec-ic" data-ico="flag"></span><b>ทำให้ผู้ใช้บริการตระหนักถึงข้อจำกัด</b></div>
+      <p>ต้องทำให้คนเหล่านี้ตระหนักถึงข้อจำกัดที่มีอยู่ในการให้บริการหรือกิจกรรม <span class="law">คู่มือ R113.3</span></p>
+      <div class="facts"><span>ลูกค้า</span><span>องค์กรผู้ว่าจ้าง</span><span>บุคคลอื่นที่เป็นผู้ใช้บริการทางวิชาชีพหรือกิจกรรมทางวิชาชีพ</span></div>
+    </div>
+    <div class="xec-box">
+      <div class="xec-bh"><span class="xec-ic" data-ico="book"></span><b>ตามความรู้ให้ทัน</b></div>
+      <p>การรักษาไว้ซึ่งความรู้ความสามารถ ต้องตระหนักรู้อย่างต่อเนื่อง และมีความเข้าใจเกี่ยวกับการพัฒนาที่เกี่ยวข้อง <span class="law">คู่มือ 113.1 A2</span></p>
+      <div class="facts"><span>ทางเทคนิค</span><span>ทางวิชาชีพ</span><span>ทางธุรกิจ</span><span>ทางเทคโนโลยี</span></div>
+      <p class="xec-hint">จำนวนชั่วโมงพัฒนาความรู้ต่อเนื่อง อยู่ในบทที่ 3 <a class="xec-lk" href="law2v-r03.html">“เป็น CPA แล้วต้องดูแลอะไร”</a></p>
+    </div>
+
+    <div class="cons">
+      <b>ถ้าไม่ปฏิบัติตามจรรยาบรรณ หรือมาตรฐานที่กำหนดตามพระราชบัญญัติ</b>
+      <div class="cg lock"><span class="ico" data-ico="flag"></span><div><b>ให้ถือว่าประพฤติผิดจรรยาบรรณ</b><span>มาตรานี้ให้ปฏิบัติหน้าที่ตามมาตรฐานการบัญชี มาตรฐานการสอบบัญชี หรือมาตรฐานอื่นใดที่เกี่ยวข้องที่กำหนดตามพระราชบัญญัติ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46</span> โทษและขั้นตอนอยู่ในบทที่ 12 <a class="xec-lk" href="law2v-r12.html">“ถ้ามีคนร้องเรียนเรา”</a></span></div></div>
+    </div>
+  </section>
+
+  <!-- 4 ความเห็นที่สอง -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>ความเห็นที่สอง</small><h2 id="h4">ความเห็นที่สอง ถ้าไม่ได้อยู่บนข้อเท็จจริงเดียวกับผู้สอบบัญชีของบริษัท อาจกระทบหลักนี้</h2></div></div>
+    <p class="cap">ความเห็นที่สอง คือความเห็นเรื่องการใช้มาตรฐานการบัญชี การสอบบัญชี การรายงาน หรือมาตรฐานอื่น ที่ให้แก่บริษัทหรือกิจการซึ่งไม่ได้เป็นลูกค้าของผู้ให้ความเห็นในขณะนั้น <span class="law">คู่มือ 321.2 · 321.3 A1</span></p>
+    <span class="pinp xec-pin"><span data-face="prae2"></span>บริษัทแห่งหนึ่งขอความเห็นที่สองจากแพร</span>
+    <div class="map" role="img" aria-label="บริษัทที่ขอความเห็น มีผู้สอบบัญชีอยู่แล้ว และไม่ได้เป็นลูกค้าของแพร ข้างล่างเทียบข้อเท็จจริงที่ผู้สอบบัญชีของบริษัทมี กับที่แพรมี">
+      <div class="nd"><span class="ico" data-ico="bag"></span><b>บริษัทที่ขอความเห็น</b><small>มีผู้สอบบัญชีอยู่แล้ว และไม่ได้เป็นลูกค้าของแพร บริษัทเล่ารายการหนึ่งให้แพรฟัง แล้วถามว่าควรใช้มาตรฐานการบัญชีอย่างไร</small></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+    </div>
+    <div class="xec-stacks">
+      <div class="xec-stack"><b>ผู้สอบบัญชีของบริษัท</b><div class="xec-docs"><span></span><span></span><span></span><span></span></div><small>ข้อเท็จจริงที่มีอยู่</small></div>
+      <div class="xec-stack"><b>แพร</b><div class="xec-docs" id="docsMe"><span></span><span class="xec-gap"></span><span class="xec-gap"></span><span class="xec-gap"></span></div><small id="docsCap" aria-live="polite"></small></div>
+    </div>
+    <p class="lbl">แพรขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท แล้วหรือยัง</p>
+    <div class="chips" data-pick="sec">
+      <button data-v="0" aria-pressed="true">ยังไม่ได้ขอ</button>
+      <button data-v="1">ขอแล้ว บริษัทอนุญาต</button>
+      <button data-v="2">ขอแล้ว บริษัทไม่อนุญาต</button>
+    </div>
+    <div class="xec-out" id="out4" role="status"></div>
+    <p class="lbl">ตัวอย่างมาตรการป้องกันที่คู่มือยกไว้ <span class="law">คู่มือ 321.3 A3</span></p>
+    <ul class="xec-ways">
+      <li class="xec-way" id="v0"><span class="xec-ic" data-ico="mail"></span><span>ขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท<small id="v0s"></small></span></li>
+      <li class="xec-way xec-hit"><span class="xec-ic" data-ico="flag"></span><span>อธิบายข้อจำกัดที่มีต่อการให้ความเห็น ในการสื่อสารใด ๆ กับบริษัท</span></li>
+      <li class="xec-way xec-hit"><span class="xec-ic" data-ico="card"></span><span>ให้สำเนาความเห็นของตนแก่ผู้สอบบัญชีของบริษัท</span></li>
+    </ul>
+  </section>
+
+  <p class="note"><span data-ico="flag"></span><span>เมื่อหลัก (ค) ถูกกระทบ ขั้นตอนระบุ ประเมิน และจัดการอุปสรรค รวมถึงเมื่อใดต้องปฏิเสธหรือยุติ อยู่ในบทที่ 11 <a class="xec-lk" href="law2v-r11.html">“เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง”</a></span></p>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="cap"></span><span>หลัก (ค) มีสองส่วน รักษาความรู้ ความสามารถ และความชำนาญทางวิชาชีพ กับปฏิบัติหน้าที่ด้วยความเอาใจใส่ตามมาตรฐานวิชาชีพ</span></li>
+      <li><span class="ico" data-ico="card"></span><span>ใช้ทั้งกับคนในสำนักงานที่ให้บริการทางวิชาชีพ และคนที่ได้รับการว่าจ้างในกิจการ</span></li>
+      <li><span class="ico" data-ico="bag"></span><span>ก่อนรับงาน ดูว่าทีมเข้าใจธุรกิจของลูกค้าและงานที่ต้องทำ มีความรู้ในอุตสาหกรรม และรู้ข้อเท็จจริงที่เกี่ยวข้องก่อนตอบรับ</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>ในองค์กร ขาดเวลา ข้อมูล ประสบการณ์ หรือทรัพยากร อาจเกิดอุปสรรคต่อหลักนี้ จัดการไม่ได้ต้องพิจารณาว่าจะปฏิเสธหรือไม่</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>ต้องไม่ปล่อยให้ความกดดันจากผู้อื่น ทำให้ฝ่าฝืนหลักการพื้นฐาน</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>ระหว่างทำงาน รอบคอบ ครบถ้วน ทันเวลา ดูแลให้ผู้ช่วยได้รับการฝึกอบรมและการกำกับดูแล และทำให้ผู้ใช้บริการตระหนักถึงข้อจำกัด</span></li>
+      <li><span class="ico" data-ico="book"></span><span>ความเห็นที่สอง ถ้าไม่ได้อยู่บนข้อเท็จจริงเดียวกับผู้สอบบัญชีของบริษัท อาจเกิดอุปสรรค ทางหนึ่งคือขออนุญาตบริษัทเพื่อขอข้อมูล</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>ไม่ปฏิบัติตามจรรยาบรรณหรือมาตรฐาน ให้ถือว่าประพฤติผิดจรรยาบรรณ</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>ข้อบังคับจรรยาบรรณ คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
+      <li>คู่มือ คือคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 เลขที่ขึ้นต้นด้วย R เป็นข้อกำหนด เลขที่มีอักษร A เป็นคำอธิบายการนำไปปฏิบัติ</li>
+      <li>หมวดของคู่มือที่ใช้ในหน้านี้: หมวดย่อย 113 ความรู้ ความสามารถ และความเอาใจใส่ทางวิชาชีพ · หมวด 230 การปฏิบัติงานด้วยความชำนาญที่เพียงพอ · หมวด 270 ความกดดันต่อการฝ่าฝืนหลักการพื้นฐาน · หมวด 320 การแต่งตั้งผู้ให้บริการวิชาชีพ · หมวด 321 การให้ความเห็นที่สองในทางวิชาชีพ</li>
+      <li>พ.ร.บ.วิชาชีพบัญชี คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
+      <li>“ทีม” ในหน้านี้ คู่มือเรียกว่า กลุ่มผู้ปฏิบัติงาน · “ผู้สอบบัญชีคนเดิม” และ “ผู้สอบบัญชีของบริษัท” คู่มือเรียกว่า ผู้ประกอบวิชาชีพบัญชีคนปัจจุบันหรือคนก่อน</li>
+      <li>“บริษัทที่ขอความเห็น” ในส่วน 4 คู่มือ R321.4 เรียกว่า กิจการที่ร้องขอให้แสดงความเห็นที่สอง ส่วนย่อหน้า 321.3 A3 ใช้คำว่า ลูกค้า</li>
+      <li>แพร พีท พริ้ง และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>เรื่องนี้บอกใครได้บ้าง</b>
+    <p>หลักการพื้นฐานข้อ 9 (ง) การรักษาความลับ</p>
+    <a class="btn" href="law2v-r08.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function L(t) { return ' <span class="law">' + t + '</span>'; }
+  function tile(id, on, yes, no) { var b = $(id); b.querySelector('.xec-mk').innerHTML = V.icon(on ? 'check' : 'x'); b.querySelector('.xec-st').textContent = on ? yes : no; }
+  function fact(id, on, yes, no) { var b = $(id); b.querySelector('.xec-mk').innerHTML = V.icon(on ? 'check' : 'x'); b.querySelector('.xec-tx').textContent = on ? yes : no; }
+  function way(id, kind) { $(id).className = 'xec-way' + (kind ? ' xec-' + kind : ''); }
+  function out(id, kind, html) { var o = $(id); o.className = 'xec-out xec-' + kind; o.innerHTML = html; }
+  V.spy('#steps');
+
+  /* ภาพหน้าของพีท (วาดในหน้านี้ ของกลางมีเฉพาะแพรกับพราว) */
+  var peteN = 0;
+  [].forEach.call(document.querySelectorAll('[data-xec-pete]'), function (e) { peteN++; var c = 'xecP' + peteN;
+    e.innerHTML = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="' + c + '"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#' + c + ')">' +
+      '<rect width="120" height="120" fill="#E3F3E8"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#2F6B8A"/><path d="M50 95l10 12 10-12 5 3-15 20-15-20z" fill="#FDFDFB"/>' +
+      '<path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="21" ry="25" fill="#F2CDB3"/><ellipse cx="39" cy="57" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="81" cy="57" rx="3" ry="5" fill="#F2CDB3"/>' +
+      '<path d="M38 54c-3-20 6-32 22-32s26 10 22 32c-2-9-5-14-10-17-8 3-20 3-27 1-4 4-6 9-7 16z" fill="#231712"/>' +
+      '<circle cx="51" cy="57" r="2.800" fill="#2A1B15"/><circle cx="69" cy="57" r="2.800" fill="#2A1B15"/><path d="M45 51q6-3 11 0M64 51q6-3 11 0" fill="none" stroke="#2A1B15" stroke-width="1.800" stroke-linecap="round"/>' +
+      '<path d="M60 59c-1 4-2 6-1 8h2.500" fill="none" stroke="#C99A7E" stroke-width="1.400" stroke-linecap="round"/><path d="M54 72c3.500 2.500 8.500 2.500 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/></g></svg>'; });
+
+  /* 1 ก่อนรับงาน (ผู้ให้บริการสาธารณะ): คู่มือ 320.3 A3–A5 · 320.4 A1 · 320.4 A4 */
+  V.togs('acc', function (s) {
+    fact('a0', s.biz, 'ทีมเข้าใจธุรกิจของพาวเด้ออ้าย และงานที่ต้องทำ', 'ทีมยังไม่เข้าใจธุรกิจของพาวเด้ออ้าย และงานที่ต้องทำ');
+    fact('a1', s.ind, 'ทีมมีความรู้ในอุตสาหกรรมที่เกี่ยวข้อง', 'ทีมยังไม่มีความรู้ในอุตสาหกรรมที่เกี่ยวข้อง');
+    fact('a2', s.prev, 'แพรได้ข้อมูลจากผู้สอบบัญชีคนเดิมแล้ว', 'แพรยังไม่ได้ขอข้อมูลจากผู้สอบบัญชีคนเดิม');
+    var team = s.biz && s.ind, lack = [];
+    ['w0', 'w1', 'w2'].forEach(function (id) { way(id, team ? '' : 'hit'); }); way('w3', s.prev ? '' : 'hit');
+    if (team && s.prev) { out('out1', 'good', '<b>ในสามเรื่องนี้ ไม่พบเหตุที่ต้องจัดการก่อนตอบรับ</b><span>ทีมเข้าใจธุรกิจของลูกค้าและงานที่ต้องทำ มีความรู้ในอุตสาหกรรมที่เกี่ยวข้อง และแพรได้ข้อมูลจากผู้สอบบัญชีคนเดิมแล้ว</span>'); return; }
+    var h = '<b>ก่อนตอบรับ ยังมีเรื่องที่ขาด</b>';
+    if (!s.biz) lack.push('ความเข้าใจธุรกิจและงาน'); if (!s.ind) lack.push('ความรู้ในอุตสาหกรรม');
+    if (lack.length) h += '<span><span class="xec-sub">ทีมยังขาด: ' + lack.join(' · ') + '</span> อุปสรรคต่อหลัก (ค) เกิดขึ้นได้ ถ้าทีมไม่มีความรู้ความสามารถที่งานนี้ต้องใช้ หรือหามาไม่ได้' + L('คู่มือ 320.3 A3') + '</span>';
+    if (!s.prev) h += '<span><span class="xec-sub">ยังไม่ได้ข้อมูลจากคนเดิม</span> ถ้าตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจมีอุปสรรคต่อหลัก (ค)' + L('คู่มือ 320.4 A1') + '</span>';
+    out('out1', 'warn', h); });
+
+  /* 2 งานในองค์กร (ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ): คู่มือ 230.3 A2 · 230.3 A4 · R230.4 · R270.3 (ก) */
+  var NAME = { time: 'เวลา', info: 'ข้อมูล', exp: 'ประสบการณ์ การฝึกอบรม หรือการศึกษา', res: 'ทรัพยากร' }, KEYS = ['time', 'info', 'exp', 'res'];
+  var pae = { time: true, info: true, exp: true, res: true }, push = false;
+  function r2() { var lack = [];
+    KEYS.forEach(function (k, i) { tile('p' + i, pae[k], 'เพียงพอ', 'ไม่เพียงพอ'); if (!pae[k]) lack.push(NAME[k]); });
+    $('pN').textContent = 4 - lack.length;
+    $('flow2').className = 'todo xec-flow' + (lack.length ? '' : ' xec-idle');
+    if (!lack.length) out('out2', 'good', '<b>ไม่พบเหตุที่กระทบหลัก (ค) จากสี่เรื่องนี้</b><span>พีทมีเวลา ข้อมูล ประสบการณ์ และทรัพยากร เพียงพอสำหรับงานนี้</span>');
+    else out('out2', 'warn', '<b>อาจเกิดอุปสรรคต่อหลัก (ค)</b><span><span class="xec-sub">ที่ไม่เพียงพอ: ' + lack.join(' · ') + '</span>' + L('คู่มือ 230.3 A2') + '</span><span>ลำดับที่คู่มือเขียนไว้ อยู่ข้างล่าง</span>');
+    var o = $('out2b'); o.hidden = !push; if (!push) { o.innerHTML = ''; return; }
+    o.innerHTML = lack.length ? '<b>พริ้งสั่งให้ทำไปก่อน ลำดับสามขั้นข้างบนไม่เปลี่ยน</b><span>พีทต้องไม่ปล่อยให้ความกดดันจากผู้อื่น ทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน' + L('คู่มือ R270.3 (ก)') + '</span>'
+      : '<b>ตอนนี้พีทมีเพียงพอทั้งสี่เรื่อง</b><span>แตะการ์ดให้ไม่เพียงพอสักเรื่อง เพื่อดูผลของคำสั่งนี้</span>'; }
+  V.togs('pae', function (s) { pae = s; r2(); });
+  V.togs('push', function (s) { push = s.push; r2(); });
+
+  /* 4 ความเห็นที่สอง: คู่มือ 321.2 · 321.3 A1 · 321.3 A3 · R321.4 · การนำประมวลจรรยาบรรณไปใช้ ข้อ 13 */
+  V.pick('sec', function (v) { var d = $('docsMe').querySelectorAll('span');
+    [1, 2, 3].forEach(function (i) { d[i].className = v === 1 ? 'xec-get' : v === 2 ? 'xec-bar' : 'xec-gap'; });
+    $('docsCap').textContent = v === 1 ? 'ที่บริษัทเล่า และที่ขอจากผู้สอบบัญชีของบริษัทได้' : v === 2 ? 'มีเท่าที่บริษัทเล่าให้ฟัง บริษัทไม่ให้ติดต่อ' : 'มีเท่าที่บริษัทเล่าให้ฟัง';
+    way('v0', v === 1 ? 'done' : v === 2 ? 'shut' : 'hit');
+    $('v0s').textContent = v === 1 ? 'บริษัทอนุญาตแล้ว' : v === 2 ? 'บริษัทไม่อนุญาต' : 'แพรยังไม่ได้ขอ';
+    if (v === 1) out('out4', 'good', '<b>แพรขอข้อมูลจากผู้สอบบัญชีของบริษัทได้</b><span>การขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท เป็นมาตรการป้องกันอย่างหนึ่งที่คู่มือยกไว้' + L('คู่มือ 321.3 A3') + '</span>');
+    else if (v === 2) out('out4', 'warn', '<b>บริษัทไม่อนุญาตให้แพรสื่อสารกับผู้สอบบัญชีของบริษัท</b><span>แพรต้องตัดสินใจว่าอาจต้องให้ความเห็นที่สองตามที่ได้รับการร้องขอหรือไม่' + L('คู่มือ R321.4') + '</span>' +
+      '<span>คำว่า “อาจต้อง” คู่มืออธิบายว่า แสดงความหมายว่าอนุญาตให้กระทำการเฉพาะอย่าง ไม่ได้แสดงถึงเรื่องความเป็นไปได้</span>');
+    else out('out4', 'warn', '<b>ข้อเท็จจริงของแพรอาจไม่เท่ากับของผู้สอบบัญชีของบริษัท</b><span>อุปสรรคต่อหลัก (ค) อาจเกิดขึ้นได้ ถ้าความเห็นที่สองไม่ได้อยู่บนพื้นฐานข้อเท็จจริงเดียวกับที่ผู้สอบบัญชีของบริษัทมีอยู่ หรืออยู่บนพื้นฐานที่ไม่มีหลักฐานเพียงพอ' + L('คู่มือ 321.3 A1') + '</span>'); });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'นักบัญชีคนหนึ่งในบริษัท ถูกหัวหน้าสั่งให้จัดทำรายงานทางการเงินชนิดหนึ่งให้เสร็จตามกำหนด ทั้งที่ไม่เคยทำรายงานชนิดนี้ ไม่เคยได้รับการฝึกอบรมเรื่องนี้ และเห็นว่าเวลาที่ให้มาไม่เพียงพอ', q: 'ข้อใดตรงกับที่คู่มือเขียน', o: [
+      ['ทำตามที่สั่งไปก่อน เพราะเป็นคำสั่งของหัวหน้า และกำหนดส่งเลื่อนไม่ได้', 0, 'ผู้ประกอบวิชาชีพบัญชีต้องไม่ปล่อยให้ความกดดันจากผู้อื่น ทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน คำสั่งของหัวหน้าจึงไม่เปลี่ยนสิ่งที่ต้องทำ (คู่มือ R270.3 (ก))'],
+      ['ขอความช่วยเหลือหรือการฝึกอบรมจากผู้เชี่ยวชาญ และขอเวลาให้เพียงพอ', 1, 'ประสบการณ์ การฝึกอบรม และเวลาที่ไม่เพียงพอ อาจทำให้เกิดอุปสรรคต่อหลัก (ค) คู่มือยกมาตรการป้องกันไว้สองอย่างนี้ ถ้าจัดการไม่ได้ ต้องพิจารณาว่าจะปฏิเสธหรือไม่ (คู่มือ 230.3 A2 · 230.3 A4 · R230.4)'],
+      ['บอกหัวหน้าว่าเคยทำมาก่อน แล้วค่อยหาวิธีทำทีหลังให้ทันกำหนด', 0, 'ผู้ประกอบวิชาชีพบัญชีต้องไม่จงใจทำให้องค์กรผู้ว่าจ้างเข้าใจผิดเกี่ยวกับระดับความเชี่ยวชาญหรือประสบการณ์ที่ตนมี (คู่มือ R230.3)']] },
+    { f: 'บริษัทแห่งหนึ่งซึ่งไม่ได้เป็นลูกค้าของแพร และมีผู้สอบบัญชีอยู่แล้ว เล่าข้อเท็จจริงของรายการหนึ่งให้แพรฟัง แล้วขอความเห็นที่สองว่าควรใช้มาตรฐานการบัญชีอย่างไร แพรยังไม่ได้ติดต่อผู้สอบบัญชีของบริษัท', q: 'ข้อใดเป็นมาตรการป้องกันที่คู่มือยกไว้', o: [
+      ['ขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท', 1, 'อุปสรรคอาจเกิดขึ้นได้ ถ้าความเห็นที่สองไม่ได้อยู่บนข้อเท็จจริงเดียวกับที่ผู้สอบบัญชีของบริษัทมีอยู่ การขออนุญาตเพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท เป็นมาตรการป้องกันที่คู่มือยกไว้ (คู่มือ 321.3 A1 · 321.3 A3)'],
+      ['ให้ความเห็นจากที่บริษัทเล่า โดยถือว่าข้อเท็จจริงครบแล้ว', 0, 'แพรยังไม่รู้ว่าข้อเท็จจริงที่ได้ฟัง ตรงกับที่ผู้สอบบัญชีของบริษัทมีอยู่หรือไม่ ความเห็นที่ไม่ได้อยู่บนข้อเท็จจริงเดียวกัน อาจทำให้เกิดอุปสรรคต่อหลัก (ค) (คู่มือ 321.3 A1)'],
+      ['ให้บริษัทย้ายมาเป็นลูกค้าของแพรก่อน แล้วจึงให้ความเห็น', 0, 'การเป็นลูกค้าไม่ได้อยู่ในมาตรการป้องกันที่คู่มือยกไว้ ที่ยกไว้คือขออนุญาตเพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท อธิบายข้อจำกัดของความเห็น และให้สำเนาความเห็นแก่ผู้สอบบัญชีของบริษัท (คู่มือ 321.3 A3)']] },
+    { f: 'สำนักงานสอบบัญชีแห่งหนึ่งถูกขอให้เป็นผู้สอบบัญชีของบริษัทแห่งหนึ่ง แทนผู้สอบบัญชีคนเดิม ทีมเข้าใจธุรกิจของบริษัทนี้และงานที่ต้องทำ แต่สำนักงานยังไม่ได้ขอข้อมูลจากผู้สอบบัญชีคนเดิม', q: 'ข้อใดตรงกับที่คู่มือเขียน', o: [
+      ['ทีมเข้าใจธุรกิจแล้ว ข้อมูลจากคนเดิมจึงไม่เกี่ยวกับหลัก (ค)', 0, 'คู่มือเขียนว่า ถ้าตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจมีอุปสรรคต่อหลักเรื่องความรู้ ความสามารถ และความเอาใจใส่ ซึ่งคือหลัก (ค) (คู่มือ 320.4 A1)'],
+      ['ตอบรับไปก่อนได้ ข้อเท็จจริงที่เหลือค่อยรู้ระหว่างตรวจสอบ', 0, 'คู่มือเขียนว่า ถ้าตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจมีอุปสรรคต่อหลัก (ค) และยกการขอข้อมูลจากคนเดิมก่อนตัดสินใจตอบรับ เป็นมาตรการป้องกัน (คู่มือ 320.4 A1 · 320.4 A4)'],
+      ['ขอให้คนเดิมให้ข้อมูลที่ทราบอยู่แล้ว ก่อนตัดสินใจตอบรับ', 1, 'คู่มือยกมาตรการป้องกันไว้ คือขอให้ผู้ประกอบวิชาชีพบัญชีคนปัจจุบันหรือคนก่อน ให้ข้อมูลที่ทราบอยู่แล้ว ซึ่งเห็นว่าผู้ที่จะรับงานจำเป็นต้องตระหนักก่อนตัดสินใจตอบรับ (คู่มือ 320.4 A4)']] }
+  ]);
+})();
+</script>
+</body>
+</html>

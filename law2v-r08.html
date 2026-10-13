@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>เรื่องนี้บอกใครได้บ้าง | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะหน้า หลัก (ง) การรักษาความลับ — คำนำ xed- */
+.xed-if { margin:2px 0 6px; padding:3px 12px; border-radius:99px; background:var(--hue-soft); color:var(--hue-ink); font-size:13px; font-weight:700; text-align:center; line-height:1.35; }
+.xed-pills { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin:4px 0 2px; }
+.xed-pills span { padding:3px 10px; border-radius:12px; background:var(--white); font-size:13px; font-weight:600; line-height:1.35; }
+.xed-doc { display:grid; grid-template-columns:72px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:20px; background:var(--hue-soft); color:var(--hue-ink); }
+.xed-doc svg { width:72px; height:84px; }
+.xed-doc b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
+.xed-doc small { display:block; font-size:13px; line-height:1.4; }
+.xed-doc i { display:inline-block; margin-top:5px; padding:1px 10px; border-radius:99px; background:var(--sun); color:var(--ink); font-style:normal; font-size:12px; font-weight:700; }
+.xed-opts { display:grid; gap:8px; }
+.xed-opts button { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; min-height:58px; padding:8px 12px; border-radius:18px; border:2px solid transparent; background:var(--soft); color:var(--ink); font:inherit; text-align:left; cursor:pointer; transition:transform .12s ease, background-color .12s ease; }
+.xed-opts button:active { transform:scale(.98); }
+.xed-opts button[aria-pressed="true"] { border-color:var(--hue); background:var(--hue-soft); }
+.xed-av { width:40px; height:40px; border-radius:50%; background:var(--white); display:grid; place-items:center; color:var(--hue); }
+.xed-av svg { width:22px; height:22px; }
+.xed-opts b { display:block; font-family:var(--display); font-size:16px; line-height:1.25; }
+.xed-opts small { display:block; font-size:13px; color:var(--muted); line-height:1.4; }
+.xed-res { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:14px; border-radius:20px; background:var(--bad-soft); color:var(--bad-ink); transition:background-color .2s ease; }
+.xed-ri { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--bad); color:#fff; font-family:var(--display); font-weight:800; font-size:22px; }
+.xed-ri svg { width:22px; height:22px; }
+.xed-res b { display:block; font-family:var(--display); font-size:20px; line-height:1.25; }
+.xed-rs { display:block; font-size:15px; line-height:1.45; margin-top:2px; }
+.xed-res.xed-good { background:var(--good); color:#fff; } .xed-res.xed-good .xed-ri { background:#fff; color:var(--good); }
+.xed-res.xed-told { background:var(--hue-soft); color:var(--hue-ink); } .xed-res.xed-told .xed-ri { background:var(--hue); color:#fff; }
+.xed-res.xed-need { background:var(--gold-soft); color:var(--ink); box-shadow:inset 0 0 0 2px var(--gold); } .xed-res.xed-need .xed-ri { background:var(--sun); color:var(--ink); }
+.xed-lawrow { display:flex; flex-wrap:wrap; gap:6px; }
+.xed-tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.xed-tile { display:grid; align-content:start; justify-items:start; gap:5px; padding:12px; border-radius:18px; background:var(--soft); }
+.xed-tile .xed-av { color:var(--hue); }
+.xed-tile b { font-family:var(--display); font-size:15px; line-height:1.3; }
+.xed-tile small { font-size:13px; color:var(--muted); line-height:1.4; }
+.xed-mk { position:absolute; top:8px; right:8px; width:22px; height:22px; border-radius:50%; display:none; place-items:center; background:var(--good); color:#fff; font-family:var(--display); font-weight:800; font-size:14px; }
+.xed-mk svg { width:13px; height:13px; }
+.join path.xed-askl { stroke:var(--gold); stroke-dasharray:2 8; }
+.gate.xed-need { background:var(--gold-soft); color:var(--ink); box-shadow:inset 0 0 0 2px var(--gold); }
+.gate.xed-need [data-door] { position:relative; }
+.gate.xed-need [data-door]::after { content:"?"; position:absolute; left:50%; top:50%; width:38px; height:38px; margin:-19px 0 0 -19px; border-radius:50%; display:grid; place-items:center; background:var(--sun); color:var(--ink); font-family:var(--display); font-weight:800; font-size:22px; }
+.xed-time { display:grid; grid-template-columns:1fr 1fr; border-radius:14px; overflow:hidden; font-size:13px; font-weight:700; text-align:center; color:#fff; }
+.xed-time span { display:grid; place-items:center; min-height:44px; padding:6px; line-height:1.25; background:var(--hue); } .xed-time span + span { background:var(--hue-ink); }
+.xed-carry { display:grid; gap:0; justify-items:stretch; }
+.xed-side { padding:12px 14px; border-radius:18px; background:var(--soft); text-align:center; font-family:var(--display); font-weight:800; font-size:17px; }
+.xed-side small { display:block; font-family:var(--body); font-weight:500; font-size:13px; color:var(--muted); }
+.xed-lanes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.xed-lane { display:grid; justify-items:center; gap:0; text-align:center; }
+.xed-pipe { width:6px; height:18px; background:var(--good); }
+.xed-pipe.xed-cut { background:var(--line); }
+.xed-box { display:grid; justify-items:center; gap:4px; width:100%; padding:12px 6px; border-radius:18px; background:var(--good-soft); color:var(--good); font-size:14px; font-weight:700; line-height:1.3; }
+.xed-box svg { width:26px; height:26px; }
+.xed-box small { font-size:12px; font-weight:600; }
+.xed-box.xed-held { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.xed-wall { width:56px; height:8px; border-radius:4px; background:var(--bad); }
+.xed-gap { height:18px; }
+.xed-face svg { width:56px; height:56px; border-radius:50%; }
+.xed-say { display:inline-block; margin-top:4px; padding:2px 12px; border-radius:99px; background:var(--white); font-size:13px; font-weight:700; }
+.xed-say.xed-y { background:var(--good); color:#fff; } .xed-say.xed-n { background:var(--bad); color:#fff; } .xed-say.xed-q { background:var(--sun); color:var(--ink); }
+.invite a { font-weight:700; }
+/* รอบแก้หลัง blind test 12 ต.ค. 2569 */
+.xed-gl { margin:0; display:grid; gap:6px; }
+.xed-gl > div { display:grid; grid-template-columns:minmax(0,104px) minmax(0,1fr); gap:10px; padding:8px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.4; }
+.xed-gl dt { font-family:var(--display); font-weight:800; }
+.xed-gl dd { margin:0; color:var(--muted); }
+details.xed-fold { padding:4px 14px; border-radius:16px; background:var(--gold-soft); font-size:15px; }
+details.xed-fold summary { cursor:pointer; font-weight:700; padding:10px 0; }
+.xed-text { display:grid; gap:6px; padding-bottom:10px; }
+.xed-text > span { display:block; padding-left:10px; border-left:3px solid var(--gold); }
+.xed-text > small { display:block; font-size:13px; color:var(--muted); line-height:1.4; }
+.xed-seven { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px; }
+.xed-seven span { display:grid; justify-items:center; gap:1px; padding:6px 0; border-radius:12px; background:var(--soft); color:var(--muted); font-family:var(--display); font-weight:800; font-size:16px; line-height:1.2; }
+.xed-seven small { font-family:var(--body); font-weight:600; font-size:12px; white-space:nowrap; }
+.xed-seven .xed-here { background:var(--hue-soft); color:var(--hue-ink); box-shadow:inset 0 0 0 2px var(--hue); }
+.xed-rows { display:grid; gap:8px; }
+.xed-row { position:relative; display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:start; padding:12px 36px 12px 12px; border-radius:18px; background:var(--soft); color:var(--muted); transition:background-color .2s ease; }
+.xed-row b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; color:var(--ink); }
+.xed-row small { display:block; font-size:13px; line-height:1.4; }
+.xed-row ol { margin:4px 0; padding-left:18px; display:grid; gap:2px; font-size:13px; line-height:1.4; }
+.xed-row .xed-av { color:var(--muted); }
+.xed-row li.xed-pk { font-weight:700; }
+.xed-row.xed-hit { background:var(--good-soft); color:var(--good); } .xed-row.xed-hit b, .xed-row.xed-hit .xed-av { color:var(--good); } .xed-row.xed-hit .xed-mk { display:grid; }
+.xed-row.xed-hit li { opacity:.7; } .xed-row.xed-hit li.xed-pk { opacity:1; }
+.xed-row.xed-ask { background:var(--gold-soft); color:var(--ink); box-shadow:inset 0 0 0 2px var(--gold); } .xed-row.xed-ask .xed-mk { display:grid; background:var(--sun); color:var(--ink); }
+.xed-stem { display:block; width:4px; height:22px; margin:0 auto; border-radius:2px; background:var(--line); }
+.xed-stem.xed-go { background:var(--good); }
+.xed-stem.xed-wait { background:repeating-linear-gradient(var(--gold) 0 5px, transparent 5px 9px); }
+.xed-stem.xed-stop { background:repeating-linear-gradient(var(--bad) 0 3px, transparent 3px 9px); }
+.xed-fk { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:8px; }
+.xed-fk > div { display:grid; align-content:start; gap:2px; padding:10px 12px; border-radius:16px; font-size:13px; line-height:1.4; }
+.xed-fk b { font-family:var(--display); font-size:15px; line-height:1.3; }
+.xed-fy { background:var(--good-soft); color:var(--good); } .xed-fn { background:var(--bad-soft); color:var(--bad-ink); } .xed-fb { background:var(--hue-soft); color:var(--hue-ink); }
+.xed-time span { transition:opacity .2s ease; } .xed-time span.xed-dim { opacity:.4; }
+.xed-pass { width:100%; display:grid; justify-items:center; }
+.xed-msg { margin-top:-2px; padding:4px 14px; border-radius:14px; background:var(--good); color:#fff; font-size:13px; font-weight:700; text-align:center; line-height:1.35; transition:background-color .2s ease; }
+.xed-msg.xed-told { background:var(--hue); } .xed-msg.xed-need { background:var(--sun); color:var(--ink); }
+.join path.xed-toldl { stroke:var(--hue); }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · จรรยาบรรณ หลักการพื้นฐาน (ง) การรักษาความลับ · เขียน 12 ต.ค. 2569
+     ตัวบทที่ผู้เขียนเปิดเองรอบนี้: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 (ภาพ p1–p8 อ่านครบ) ข้อ 4 ข้อ 6 ข้อ 8 ข้อ 9 (ง)
+     คู่มือประมวลจรรยาบรรณ แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 (ฉบับที่ขอบเขตสอบ 2.6.2 ระบุ): หมวดย่อย 114 · R240.3 · 320.5 A1 · R320.7 · 320.7 A1 · R320.8
+     พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 มาตรา 47 (3) · แพร พีท พริ้ง พี่แพม และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ
+     รอบแก้หลัง blind test 12 ต.ค. 2569: เปิดเทียบซ้ำ ข้อ 4 6 8 9 (ง) 10 (ภาพ p1–p4) · คู่มือ R114 (ก)–(ช) 114.1 A1 A2 R114.2 (ภาพหน้า 48–49 ของ PDF) · 320.5 A1 R320.7 320.7 A1 R320.8 (ภาพหน้า 124–125) · อภิธานศัพท์ (ภาพหน้า 350–351) -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 8 · จรรยาบรรณ หลัก (ง)</p>
+    <h1>เรื่องนี้บอกใครได้บ้าง</h1>
+    <p class="sub">ข้อมูลที่ได้จากงาน บอกใครได้ ใช้ทำอะไรได้ ต้องรักษานานแค่ไหน บทนี้คือหลัก (ง) การรักษาความลับ หนึ่งในหกหลักการพื้นฐานของจรรยาบรรณ (ก) ถึง (ฉ)</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพเอกสารติดกุญแจอยู่ตรงกลาง มีคนสี่คนอยู่รอบ ๆ มีเส้นทึบไปถึงคนเดียว">
+      <g stroke="rgba(255,255,255,.35)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 11" fill="none"><path d="M140 54L68 36"/><path d="M140 86L68 102"/><path d="M200 86L272 102"/></g>
+      <path d="M200 54L272 36" stroke="#F0C84B" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <g transform="translate(48 34)"><circle r="18" fill="rgba(255,255,255,.14)"/><circle cy="-5" r="5.5" fill="#fff"/><path d="M-9 11c1-7 5-9 9-9s8 2 9 9z" fill="#fff"/></g>
+      <g transform="translate(48 104)"><circle r="18" fill="rgba(255,255,255,.14)"/><circle cy="-5" r="5.5" fill="#fff"/><path d="M-9 11c1-7 5-9 9-9s8 2 9 9z" fill="#fff"/></g>
+      <g transform="translate(292 104)"><circle r="18" fill="rgba(255,255,255,.14)"/><circle cy="-5" r="5.5" fill="#fff"/><path d="M-9 11c1-7 5-9 9-9s8 2 9 9z" fill="#fff"/></g>
+      <g transform="translate(292 34)"><circle r="18" fill="#F0C84B"/><circle cy="-5" r="5.5" fill="#1C4257"/><path d="M-9 11c1-7 5-9 9-9s8 2 9 9z" fill="#1C4257"/></g>
+      <path d="M142 12h40l18 18v92h-58z" fill="#fff"/><path d="M182 12v18h18z" fill="#DCEBF3"/>
+      <path d="M152 44h38M152 56h38M152 68h24" stroke="#CFCBBF" stroke-width="4" stroke-linecap="round"/>
+      <g transform="translate(155 80)"><path d="M8 14V9a7 7 0 0114 0v5" fill="none" stroke="#C9A227" stroke-width="4"/><rect x="2" y="13" width="26" height="20" rx="5" fill="#F0C84B"/><circle cx="15" cy="23" r="3" fill="#0B3B3C"/></g>
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="ส่วนของบท">
+    <a href="#s1"><i>1</i>ตัวบท</a><a href="#s2"><i>2</i>ใช้ · เปิดเผย</a><a href="#s3"><i>3</i>ใครขอ</a><a href="#s4"><i>4</i>งานจบ</a><a href="#s5"><i>5</i>เปลี่ยนผู้สอบบัญชี</a>
+  </nav>
+
+  <!-- 1 หลักนี้เขียนว่าอะไร -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>ข้อ 9 (ง) · การรักษาความลับ</small><h2 id="h1">ข้อมูลจากงาน ไม่เปิดเผย และไม่นำไปใช้</h2></div></div>
+    <p class="cap">หลายปีต่อมา แพรเป็นผู้สอบบัญชีรับอนุญาต สอบบัญชีให้บริษัท พาวเด้ออ้าย จำกัด ภาพนี้แตกถ้อยคำของหลัก (ง) ออกเป็นส่วน แตะส่วนที่มีเลขเพื่อไปดู</p>
+    <p class="lbl">ป้ายเลขในบทนี้มาจากสองแหล่ง</p>
+    <dl class="xed-gl">
+      <div><dt>ข้อบังคับ</dt><dd>ข้อบังคับจรรยาบรรณ พ.ศ. 2569 ป้ายเขียนว่า <span class="law">ข้อ 9 (ง)</span></dd></div>
+      <div><dt>คู่มือ</dt><dd>คู่มือประมวลจรรยาบรรณ ที่คณะกรรมการสภาวิชาชีพบัญชีใช้เป็นแนวทางวินิจฉัยปัญหาการปฏิบัติตามข้อบังคับ <span class="law">ข้อ 8</span> ป้ายเขียนว่า <span class="law">คู่มือ R114</span></dd></div>
+    </dl>
+    <div class="map">
+      <span class="pinp"><span data-face="prae2"></span>แพรได้ข้อมูลของลูกค้ามาจากงานสอบบัญชี</span>
+      <div class="nd"><span class="ico" data-ico="lock"></span><b>ข้อมูลที่ได้มาจากความสัมพันธ์ทางวิชาชีพและทางธุรกิจ</b><small>ให้ความสำคัญกับความลับของข้อมูลนี้</small><span class="law">ข้อ 9 (ง)</span></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <a class="tr" href="#s2"><span class="num">2</span><span class="ico" data-ico="mail"></span><b>ไม่เปิดเผย</b><small>ให้กับบุคคลที่สาม โดยไม่ได้รับการอนุมัติ</small></a>
+        <a class="tr" href="#s2"><span class="num">2</span><span class="ico" data-ico="bag"></span><b>ไม่นำไปใช้</b><small>เพื่อประโยชน์ส่วนตน หรือเพื่อบุคคลที่สาม</small></a>
+      </div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M25 0C25 16 50 10 50 26"/></svg>
+      <a class="nd" href="#s3"><span class="num">3</span><span class="ico" data-ico="pen"></span><b>เปิดเผยได้ เมื่อมีข้อใดข้อหนึ่ง</b>
+        <span class="xed-pills"><span>อนุมัติจากผู้มีอำนาจ อย่างถูกต้องและเฉพาะเจาะจง</span><span>สิทธิทางกฎหมาย</span><span>สิทธิทางวิชาชีพ</span><span>หน้าที่ที่ต้องเปิดเผย</span></span>
+        <span class="law">ข้อ 9 (ง)</span></a>
+      <span class="ln"></span>
+      <span class="xed-if">คู่มือเขียนต่ออีกสองเรื่อง</span>
+      <a class="nd" href="#s4"><span class="num">4</span><span class="ico" data-ico="clock"></span><b>งานจบแล้ว หลักนี้ยังใช้อยู่</b><small>ใช้ประสบการณ์ได้ ใช้ข้อมูลที่เป็นความลับไม่ได้</small><span class="law">คู่มือ R114.2</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s5"><span class="num">5</span><span class="ico" data-ico="card"></span><b>บริษัทเปลี่ยนผู้สอบบัญชี คนที่จะมารับงานขอข้อมูล</b><small>แพรยังผูกพันด้วยหลักนี้ ดูว่าลูกค้ายินยอมหรือไม่</small><span class="law">คู่มือ R320.8</span></a>
+    </div>
+    <p class="lbl">คำที่ใช้ในบทนี้</p>
+    <dl class="xed-gl">
+      <div><dt>บุคคลที่สาม</dt><dd>คู่มือเขียนเรื่องเดียวกันว่า ไม่เปิดเผย “ภายนอกสำนักงานหรือองค์กรผู้ว่าจ้าง” <span class="law">คู่มือ R114 (ง)</span></dd></div>
+      <div><dt>องค์กรผู้ว่าจ้าง</dt><dd>กิจการที่ผู้ประกอบวิชาชีพบัญชีทำงานให้ เช่น เป็นพนักงาน ของพีทคือบริษัท พาวเด้ออ้าย จำกัด <span class="law">คู่มือ อภิธานศัพท์</span></dd></div>
+    </dl>
+    <details class="xed-fold">
+      <summary>ถ้อยคำเต็มของข้อ 9 (ง)</summary>
+      <div class="xed-text">
+        <span>ให้ความสำคัญกับความลับของข้อมูลที่ได้มาจากความสัมพันธ์ทางวิชาชีพและทางธุรกิจ</span>
+        <span>ดังนั้น จึงไม่พึงเปิดเผยข้อมูลดังกล่าวให้กับบุคคลที่สาม โดยไม่ได้รับการอนุมัติจากผู้มีอำนาจอย่างถูกต้องและเฉพาะเจาะจง</span>
+        <span>เว้นแต่เป็นการเปิดเผยตามสิทธิทางกฎหมาย หรือสิทธิทางวิชาชีพ หรือเป็นหน้าที่ที่ต้องเปิดเผย</span>
+        <span>หรือไม่นำข้อมูลดังกล่าวไปใช้เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม</span>
+        <small>ข้อบังคับเขียนทั้งหมดนี้ต่อกันเป็นวรรคเดียว ขึ้นบรรทัดใหม่ตามภาพข้างบนเพื่อให้อ่านง่าย คู่มือเขียนเรื่องนำไปใช้แยกเป็นข้อย่อยของตัวเอง <span class="law">คู่มือ R114 (จ)</span></small>
+      </div>
+    </details>
+    <div class="xed-lawrow"><span class="lbl">หลักนี้ใช้กับผู้ประกอบวิชาชีพบัญชีทุกด้าน เช่น ด้านการสอบบัญชีอย่างแพร และด้านการทำบัญชีอย่างพีท</span><span class="law">ข้อ 4</span></div>
+  </section>
+
+  <!-- 2 เห็นจากกรณี -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>เปิดเผย กับนำไปใช้</small><h2 id="h2">ไม่ได้บอกใครเลย ก็ยังขัดกับหลักนี้ได้ ถ้านำข้อมูลไปใช้เอง</h2></div></div>
+    <p class="cap">แพรไม่ได้ส่งตารางให้ใคร ไม่ได้เล่าราคาให้ใครฟัง แต่ใช้ราคาที่รู้ไปต่อรองซื้อของเข้าร้านของแพรเอง ผ่านเรื่องเปิดเผย ไม่ผ่านเรื่องนำไปใช้ ลองเปลี่ยนสิ่งที่แพรทำ</p>
+    <div class="xed-doc"><span data-xed-doc></span><div><b>ตารางราคาซื้อวัตถุดิบ</b><small>ของบริษัท พาวเด้ออ้าย จำกัด</small><i>แพรได้มาจากงานสอบบัญชี</i></div></div>
+    <p class="lbl">แพรทำอะไรกับตารางนี้</p>
+    <div class="xed-opts" data-pick="use">
+      <button data-v="0"><span class="xed-av" data-ico="book"></span><span><b>ใช้ตรวจสอบงบการเงินของบริษัทนี้</b><small>ไม่ได้ให้ใครนอกงานดู</small></span></button>
+      <button data-v="1"><span class="xed-av" data-ico="mail"></span><span><b>ส่งตารางให้เพื่อน</b><small>เพื่อนขายของคล้ายกัน จะเอาไปต่อราคากับผู้ขาย ไม่มีใครอนุมัติ</small></span></button>
+      <button data-v="2" aria-pressed="true"><span class="xed-av" data-ico="bag"></span><span><b>ไม่บอกใคร แต่ใช้ราคาที่รู้ไปต่อรองเอง</b><small>ซื้อของเข้าร้านของแพรเอง ไม่ได้เอ่ยราคาของบริษัทกับใคร</small></span></button>
+      <button data-v="3"><span class="xed-av" data-ico="info"></span><span><b>เล่าราคาให้คนในครอบครัวฟัง</b><small>ไม่มีใครเอาไปใช้ทำอะไร ไม่มีใครอนุมัติ</small></span></button>
+    </div>
+    <div>
+      <div class="conds two">
+        <div class="cond" id="u0"><span class="mk"></span><span class="ico" data-ico="mail"></span><span>ไม่เปิดเผย<small>ให้กับบุคคลที่สาม โดยไม่ได้รับการอนุมัติ</small></span></div>
+        <div class="cond" id="u1"><span class="mk"></span><span class="ico" data-ico="bag"></span><span>ไม่นำไปใช้<small>เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="uj0" d="M75 0C75 18 150 12 150 30"/><path id="uj1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="xed-res" id="useR" role="status"><span class="xed-ri"></span><div><b></b><span class="xed-rs"></span></div></div>
+    </div>
+    <div class="xed-lawrow" id="useL"></div>
+    <div class="invite" id="useN"><span class="ico" data-ico="flag"></span><span>ถ้ามีคนร้องเรียนเรื่องนี้ จะเกิดอะไรต่อ ดู<a href="law2v-r12.html">บทที่ 12 “ถ้ามีคนร้องเรียนเรา”</a></span></div>
+    <p class="note"><span data-ico="info"></span><span>พีท ผู้ทำบัญชีของบริษัท ก็ต้องไม่ใช้ข้อมูลที่เป็นความลับเพื่อผลประโยชน์ส่วนตัว หรือเพื่อผลประโยชน์ทางการเงินของผู้อื่น <span class="law">คู่มือ R240.3</span></span></p>
+
+    <h3 style="margin-top:8px">ต้องรักษากับใครอีกบ้าง</h3>
+    <p class="cap">คู่มือ R114 มีเจ็ดข้อย่อย (ก) ถึง (ช) สี่ข้อที่ระบายสีอยู่ตรงนี้</p>
+    <div class="xed-seven" role="img" aria-label="ข้อย่อยเจ็ดข้อของคู่มือ R114 ข้อ ก ข ค และ ช อยู่ตรงนี้ ข้อ ง กับ จ คือเรื่องเปิดเผยกับเรื่องนำไปใช้ข้างบน ข้อ ฉ อยู่ในส่วนที่ 4">
+      <span class="xed-here">ก<small>ตรงนี้</small></span><span class="xed-here">ข<small>ตรงนี้</small></span><span class="xed-here">ค<small>ตรงนี้</small></span><span>ง<small>ข้างบน</small></span><span>จ<small>ข้างบน</small></span><span>ฉ<small>ส่วน 4</small></span><span class="xed-here">ช<small>ตรงนี้</small></span>
+    </div>
+    <div class="xed-tiles">
+      <div class="xed-tile"><span class="xed-av" data-ico="star"></span><b>ในวงสังคมและในบ้าน</b><small>ระวังการเปิดเผยโดยพลั้งเผลอ โดยเฉพาะกับผู้ร่วมงานทางธุรกิจที่ใกล้ชิดและสมาชิกในครอบครัว</small><span class="law">คู่มือ R114 (ก)</span></div>
+      <div class="xed-tile"><span class="xed-av" data-ico="bag"></span><b>ในที่ทำงานเอง</b><small>“รักษาความลับของข้อมูลภายในสำนักงานหรือองค์กรผู้ว่าจ้าง”</small><span class="law">คู่มือ R114 (ข)</span></div>
+      <div class="xed-tile"><span class="xed-av" data-ico="card"></span><b>ผู้ที่มีโอกาสเป็นลูกค้า</b><small>“ข้อมูลที่เปิดเผยโดยผู้ที่มีโอกาสเป็นลูกค้า หรือองค์กรผู้ว่าจ้าง”</small><span class="law">คู่มือ R114 (ค)</span></div>
+      <div class="xed-tile"><span class="xed-av" data-ico="shield"></span><b>คนใต้การควบคุม และคนที่ขอคำปรึกษา</b><small>ทำตามขั้นตอนที่สมเหตุสมผล ให้มั่นใจว่าคนเหล่านี้รักษาความลับด้วย</small><span class="law">คู่มือ R114 (ช)</span></div>
+    </div>
+  </section>
+
+  <!-- 3 ใครขอ -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>เปิดเผยได้เมื่อไร</small><h2 id="h3">ตารางเดิม เปลี่ยนคนขอ คำตอบก็เปลี่ยน</h2></div></div>
+    <p class="cap">เพื่อนของแพรขอดูตารางราคาซื้อวัตถุดิบ ไม่มีใครอนุมัติ แพรจึงยังเปิดเผยไม่ได้ ลองเปลี่ยนทีละข้อ ตารางยังเป็นตารางเดิม</p>
+    <p class="lbl">ใครขอ หรือมีอะไรกำหนด</p>
+    <div class="xed-opts" data-pick="req">
+      <button data-v="0" aria-pressed="true"><span class="xed-av" data-ico="star"></span><span><b>เพื่อนของแพร</b><small>ขอไปเทียบราคา ไม่มีใครอนุมัติ</small></span></button>
+      <button data-v="1"><span class="xed-av" data-ico="pen"></span><span><b>ธนาคารที่บริษัทกำลังขอกู้</b><small>พริ้ง กรรมการผู้มีอำนาจของบริษัท อนุมัติให้ส่งตารางนี้ให้ธนาคารนี้ และกฎหมายอนุญาต</small></span></button>
+      <button data-v="2"><span class="xed-av" data-ico="info"></span><span><b>ธนาคารเดิม แต่คนอนุมัติเป็นพีท</b><small>อย่างอื่นเหมือนเดิม แพรยังไม่รู้ว่าพีท ผู้ทำบัญชีของบริษัท มีอำนาจอนุมัติแทนบริษัทหรือไม่</small></span></button>
+      <button data-v="3"><span class="xed-av" data-ico="info"></span><span><b>ธนาคารเดิม พริ้งอนุมัติ แต่ยังไม่รู้ว่าเอกสารใด</b><small>อย่างอื่นเหมือนเดิม แพรยังไม่รู้ว่าที่พริ้งอนุมัติรวมตารางนี้หรือไม่</small></span></button>
+      <button data-v="4"><span class="xed-av" data-ico="book"></span><span><b>กฎหมายกำหนดให้เปิดเผย</b><small>ให้ส่งตารางนี้เป็นหลักฐานในการดำเนินการทางกฎหมาย</small></span></button>
+      <button data-v="5"><span class="xed-av" data-ico="shield"></span><span><b>สภาวิชาชีพบัญชี</b><small>มีข้อซักถามมาถึงแพร ขอดูตารางนี้ และไม่มีข้อห้ามทางกฎหมาย</small></span></button>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>สามกลุ่มข้างล่างเป็นวิธีจัดของคู่มือ ป้ายในกล่องเลข 3 ของส่วนที่ 1 เป็นถ้อยคำของข้อบังคับ สองแหล่ง สองวิธีจัด ตัวบทไม่ได้จับคู่กันไว้ ไม่ต้องจับคู่เอง</span></p>
+    <div class="xed-lawrow"><span class="lbl">เหตุการณ์ที่เปิดเผยได้ มีกลุ่มเดียวก็พอ</span><span class="law">คู่มือ 114.1 A1</span></div>
+    <div>
+      <div class="xed-rows">
+        <div class="xed-row" id="w0"><span class="xed-mk"></span><span class="xed-av" data-ico="pen"></span><div><b>ได้รับอนุมัติ</b><small>กฎหมายอนุญาต และได้รับอนุมัติจากลูกค้าหรือองค์กรผู้ว่าจ้าง</small><span class="law">คู่มือ 114.1 A1 (ข)</span></div></div>
+        <div class="xed-row" id="w1"><span class="xed-mk"></span><span class="xed-av" data-ico="book"></span><div><b>กฎหมายกำหนดให้เปิดเผย</b><small>ตัวอย่างที่คู่มือยกไว้</small><ol><li id="e10">จัดทำเอกสารหรือจัดหาหลักฐานอื่น ในการดำเนินการทางกฎหมาย</li><li id="e11">เปิดเผยต่อหน่วยราชการที่เหมาะสม เกี่ยวกับการละเมิดกฎหมายเมื่อพบ</li></ol><span class="law">คู่มือ 114.1 A1 (ก)</span></div></div>
+        <div class="xed-row" id="w2"><span class="xed-mk"></span><span class="xed-av" data-ico="shield"></span><div><b>มีหน้าที่หรือสิทธิทางวิชาชีพ</b><small>เมื่อไม่มีข้อห้ามทางกฎหมาย</small><ol><li id="e20">ให้เป็นไปตามกระบวนการสอบทานคุณภาพขององค์กรวิชาชีพ</li><li id="e21">ตอบข้อซักถามหรือการไต่สวน โดยองค์กรวิชาชีพหรือองค์กรกำกับดูแล</li><li id="e22">ปกป้องผลประโยชน์ทางวิชาชีพของตน ในการดำเนินการทางกฎหมาย</li><li id="e23">ปฏิบัติตามมาตรฐานการปฏิบัติงานและมาตรฐานวิชาชีพ รวมทั้งข้อกำหนดด้านจรรยาบรรณ</li></ol><span class="law">คู่มือ 114.1 A1 (ค)</span></div></div>
+      </div>
+      <span class="xed-stem" id="rj"></span>
+      <div class="gate" id="gate3" role="status"><span data-door></span><div><b id="gate3T"></b><span id="gate3S"></span></div></div>
+      <div class="xed-fk" id="gate3F" aria-live="polite" hidden></div>
+    </div>
+    <div class="xed-lawrow" id="reqL"></div>
+
+    <h3 style="margin-top:8px">ในการตัดสินว่าจะเปิดเผย คู่มือยกปัจจัยที่ควรพิจารณาไว้</h3>
+    <div class="xed-tiles">
+      <div class="xed-tile"><span class="xed-av" data-ico="shield"></span><b>ใครอาจเสียหาย</b><small>ผลประโยชน์ของฝ่ายใดฝ่ายหนึ่ง รวมถึงบุคคลที่สาม แม้ลูกค้ายินยอมให้เปิดเผยแล้ว</small></div>
+      <div class="xed-tile"><span class="xed-av" data-ico="check"></span><b>รู้ครบและพิสูจน์แล้วหรือยัง</b><small>ข้อมูลที่เกี่ยวข้องทั้งหมด เท่าที่ปฏิบัติได้ คู่มือยกเรื่องข้อเท็จจริงที่พิสูจน์ไม่ได้ ข้อมูลไม่สมบูรณ์ และข้อสรุปที่พิสูจน์ไม่ได้</small></div>
+      <div class="xed-tile"><span class="xed-av" data-ico="mail"></span><b>สื่อสารในรูปแบบใด และถึงใคร</b></div>
+      <div class="xed-tile"><span class="xed-av" data-ico="card"></span><b>ผู้รับเป็นผู้รับที่เหมาะสมหรือไม่</b></div>
+    </div>
+    <div class="xed-lawrow"><span class="law">คู่มือ 114.1 A2</span></div>
+  </section>
+
+  <!-- 4 หลังจบงาน -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>หลังความสัมพันธ์สิ้นสุด</small><h2 id="h4">งานจบแล้ว หลักนี้ยังใช้อยู่</h2></div></div>
+    <p class="cap">แพรเลิกเป็นผู้สอบบัญชีของบริษัท พาวเด้ออ้าย จำกัด แล้วรับลูกค้ารายใหม่ ประสบการณ์ไปกับแพรได้ ข้อมูลที่เป็นความลับไปด้วยไม่ได้ ลองเปลี่ยนว่างานเดิมจบแล้วหรือยัง</p>
+    <div class="chips" data-pick="post">
+      <button data-v="0" aria-pressed="true">เลิกเป็นผู้สอบบัญชีของบริษัทนี้แล้ว</button>
+      <button data-v="1">ยังเป็นผู้สอบบัญชีของบริษัทนี้อยู่</button>
+    </div>
+    <div class="xed-time"><span id="t0">ระหว่างความสัมพันธ์กับลูกค้า</span><span id="t1">ความสัมพันธ์สิ้นสุดแล้ว</span></div>
+    <div class="xed-carry" role="img" aria-label="จากงานเดิมไปงานใหม่ ประสบการณ์ครั้งก่อนไปได้ ข้อมูลที่เป็นความลับไปไม่ได้ ทั้งตอนที่งานเดิมยังไม่จบและตอนที่จบแล้ว">
+      <div class="xed-side">งานเดิม<small id="postS"></small></div>
+      <div class="xed-lanes">
+        <div class="xed-lane"><span class="xed-pipe"></span><div class="xed-box"><span data-ico="cap"></span>ประสบการณ์ครั้งก่อน<small>มีสิทธิใช้</small></div><span class="xed-pipe"></span></div>
+        <div class="xed-lane"><span class="xed-pipe xed-cut"></span><div class="xed-box xed-held"><span data-ico="lock"></span>ข้อมูลที่เป็นความลับ<small>ไม่ใช้ ไม่เปิดเผย</small></div><span class="xed-wall"></span><span class="xed-gap"></span></div>
+      </div>
+      <div class="xed-side">งานใหม่<small>ลูกค้ารายใหม่ หรือที่ทำงานใหม่</small></div>
+    </div>
+    <div class="xed-res xed-told" id="postR" role="status"><span class="xed-ri"></span><div><b></b><span class="xed-rs"></span></div></div>
+    <div class="xed-lawrow" id="postL"></div>
+  </section>
+
+  <!-- 5 ผู้สอบบัญชีที่จะเสนองาน -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>เปลี่ยนผู้สอบบัญชี</small><h2 id="h5">ลูกค้าไม่ยินยอม แพรยังต้องบอกว่าลูกค้าไม่ยินยอม</h2></div></div>
+    <p class="cap">บริษัท พาวเด้ออ้าย จำกัด จะเปลี่ยนผู้สอบบัญชี คนที่กำลังพิจารณารับการแต่งตั้งเป็นผู้สอบบัญชีคนต่อไป คู่มือเรียกว่าผู้สอบบัญชีที่จะเสนองาน เขาขอข้อมูลจากแพร ผู้สอบบัญชีคนปัจจุบัน</p>
+    <ol class="todo">
+      <li><div><b>เขาขออนุญาตลูกค้าก่อนคุยกับแพร</b><small>โดยทั่วไปต้องได้รับอนุญาตจากลูกค้า ซึ่งควรเป็นลายลักษณ์อักษร <span class="law">คู่มือ 320.5 A1</span></small></div></li>
+      <li><div><b>แล้วขอข้อมูลจากแพร</b><small>ในงานตรวจสอบหรือสอบทานงบการเงิน เขาต้องขอ <span class="law">คู่มือ R320.8</span></small></div></li>
+      <li><div><b>แพรตอบ ตามที่ลูกค้ายินยอมให้เปิดเผยหรือไม่</b><small>ปฏิบัติตามกฎหมายและข้อบังคับอื่นที่เกี่ยวข้องกับการร้องขอนั้น ให้ข้อมูลด้วยความซื่อสัตย์สุจริต ไม่คลุมเครือ <span class="law">คู่มือ R320.7</span></small></div></li>
+    </ol>
+    <p class="lbl">ลูกค้ายินยอมให้แพรเปิดเผยหรือไม่</p>
+    <div class="chips" data-pick="pv">
+      <button data-v="0">ลูกค้ายินยอม</button>
+      <button data-v="1" aria-pressed="true">ลูกค้าไม่ยินยอม</button>
+      <button data-v="2">แพรยังไม่รู้ว่าลูกค้ายินยอมหรือไม่</button>
+    </div>
+    <div class="map">
+      <div class="nd"><span class="ico" data-ico="bag"></span><b>บริษัท พาวเด้ออ้าย จำกัด</b><small>ลูกค้า</small><span class="xed-say" id="pvSay"></span></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <div class="tr"><span class="xed-face" data-face="prae2"></span><b>แพร</b><small>ผู้สอบบัญชีคนปัจจุบัน ยังผูกพันด้วยหลักการรักษาความลับ</small><span class="law">คู่มือ 320.7 A1</span></div>
+        <div class="tr"><span class="ico" data-ico="pen"></span><b>ผู้สอบบัญชีที่จะเสนองาน</b><small>ขอข้อเท็จจริงหรือข้อมูลอื่นที่จำเป็นต้องตระหนักก่อนตัดสินใจตอบรับงาน</small><span class="law">คู่มือ R320.8</span></div>
+      </div>
+      <div class="xed-pass">
+        <svg class="join" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><path id="pvJ" d="M25 0V20H75V0"/></svg>
+        <span class="xed-msg" id="pvMsg"></span>
+      </div>
+    </div>
+    <p class="lbl">สิ่งที่แพรต้องทำ</p>
+    <div>
+      <div class="xed-res" id="pvR" role="status"><span class="xed-ri"></span><div><b></b><span class="xed-rs"></span></div></div>
+      <div class="xed-fk" id="pvF" aria-live="polite" hidden></div>
+    </div>
+    <div class="xed-lawrow" id="pvL"></div>
+    <p class="note"><span data-ico="info"></span><span>ภาพนี้ไม่รวมกรณีที่เกี่ยวข้องกับการไม่ปฏิบัติตามหรือต้องสงสัยว่าไม่ปฏิบัติตามกฎหมายและข้อบังคับ ซึ่งคู่มือเขียนแยกไว้ <span class="law">คู่มือ R320.8</span> พบว่าลูกค้าอาจทำผิดกฎหมายแล้วต้องเริ่มจากอะไร อยู่ใน<a href="law2v-r09.html#s5">บทที่ 9 ส่วนที่ 5</a></span></p>
+    <div class="invite"><span class="ico" data-ico="flag"></span><span>เหตุการณ์แวดล้อมอาจทำให้เกิดอุปสรรคในการปฏิบัติตามหลักการพื้นฐาน <span class="law">ข้อ 10</span> วิธีระบุ ประเมิน และจัดการอุปสรรค อยู่ใน<a href="law2v-r11.html">บทที่ 11 “เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง”</a></span></div>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สี่คำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="lock"></span><span>หลัก (ง) การรักษาความลับ ใช้กับข้อมูลที่ได้มาจากความสัมพันธ์ทางวิชาชีพและทางธุรกิจ</span></li>
+      <li><span class="ico" data-ico="bag"></span><span>ไม่เปิดเผยให้บุคคลที่สาม และไม่นำไปใช้เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม ไม่ได้บอกใครก็ยังขัดได้</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>ข้อบังคับ: เปิดเผยได้เมื่อผู้มีอำนาจอนุมัติอย่างถูกต้องและเฉพาะเจาะจง หรือเป็นสิทธิทางกฎหมาย สิทธิทางวิชาชีพ หรือหน้าที่ที่ต้องเปิดเผย</span></li>
+      <li><span class="ico" data-ico="book"></span><span>คู่มือจัดเป็นสามกลุ่ม: กฎหมายกำหนด · กฎหมายอนุญาตและลูกค้าอนุมัติ · มีหน้าที่หรือสิทธิทางวิชาชีพเมื่อไม่มีข้อห้ามทางกฎหมาย</span></li>
+      <li><span class="ico" data-ico="info"></span><span>ยังไม่รู้ว่าคนอนุมัติมีอำนาจหรือไม่ หรืออนุมัติเอกสารใด ยังตอบไม่ได้ ต้องรู้ข้อนั้นก่อน</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>งานจบแล้วหลักนี้ยังใช้อยู่ ใช้ประสบการณ์ได้ ใช้หรือเปิดเผยข้อมูลที่เป็นความลับไม่ได้</span></li>
+      <li><span class="ico" data-ico="card"></span><span>เปลี่ยนผู้สอบบัญชี: ลูกค้ายินยอม ให้ข้อมูลอย่างสุจริตและไม่คลุมเครือ ลูกค้าไม่ยินยอม บอกว่าลูกค้าไม่ยินยอม</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>เลขข้อที่ไม่ได้บอกชื่อ มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 หลัก (ง) การรักษาความลับ อยู่ในข้อ 9 หมวด 2 หลักการพื้นฐานของจรรยาบรรณ</li>
+      <li>“คู่มือ” คือคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 เลขที่ขึ้นต้นด้วย R เป็นข้อกำหนด เลขที่มี A เป็นคำอธิบายการนำไปปฏิบัติ</li>
+      <li>หมวดย่อย 114 ของคู่มือว่าด้วยการรักษาความลับ ย่อหน้าแรกของหมวดย่อยนี้พิมพ์เลขไว้ว่า R114 มีข้อย่อย (ก) ถึง (ช) หมวด 320 ว่าด้วยการแต่งตั้งผู้ให้บริการวิชาชีพ</li>
+      <li>ข้อบังคับ ข้อ 8 ให้คณะกรรมการสภาวิชาชีพบัญชีวินิจฉัยปัญหาเกี่ยวกับการปฏิบัติตามข้อบังคับ โดยใช้แนวทางตามคู่มือประมวลจรรยาบรรณ</li>
+      <li>พระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547 มาตรา 47 (3) กำหนดให้จรรยาบรรณต้องมีข้อกำหนดเรื่องความรับผิดชอบต่อผู้รับบริการและการรักษาความลับ</li>
+      <li>แพร พีท พริ้ง พี่แพม และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>ทำแบบไหน ถึงเรียกว่าทำให้วิชาชีพเสื่อมเสีย</b>
+    <p>หลัก (จ) พฤติกรรมทางวิชาชีพ รวมถึงเมื่อพบว่าลูกค้าหรือที่ทำงานไม่ปฏิบัติตามกฎหมาย</p>
+    <a class="btn" href="law2v-r09.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function mark(id, ok) { var c = $(id); c.className = c.className.replace(/ ?\b(ok|no)\b/g, '') + (ok ? ' ok' : ' no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); }
+  function line(id, cls) { $(id).setAttribute('class', cls); }
+  function laws(id, list) { $(id).innerHTML = list.map(function (l) { return '<span class="law">' + l + '</span>'; }).join(''); }
+  /* กล่องผล: kind = good | bad | told | need · ico = ชื่อไอคอนถ้าต้องการทับ */
+  function res(id, kind, t, s, ico) { var r = $(id), ic = ico || { good: 'check', bad: 'x', told: 'mail' }[kind];
+    r.className = 'xed-res' + (kind === 'bad' ? '' : ' xed-' + kind);
+    r.querySelector('.xed-ri').innerHTML = ic ? V.icon(ic) : '?'; r.querySelector('b').textContent = t; r.querySelector('.xed-rs').textContent = s; }
+  /* สองทางของกรณีที่ยังตอบไม่ได้: f = [[ถ้า…, ผล, class], [ถ้า…, ผล, class]] หรือไม่มี */
+  function fork(id, f) { var e = $(id); e.hidden = !f;
+    e.innerHTML = f ? f.map(function (x, i) { return '<div class="' + (x[2] || (i ? 'xed-fn' : 'xed-fy')) + '"><small>' + x[0] + '</small><b>' + x[1] + '</b></div>'; }).join('') : ''; }
+  V.spy('#steps');
+
+  /* ภาพเอกสาร ใช้สองที่ */
+  var DOC = '<svg viewBox="0 0 72 84" aria-hidden="true"><path d="M8 4h40l16 16v60H8z" fill="#fff"/><path d="M48 4v16h16z" fill="#DCEBF3"/><path d="M8 4h40l16 16v60H8zM48 4v16h16" fill="none" stroke="#2F6B8A" stroke-width="2" stroke-linejoin="round"/><path d="M16 32h30M16 42h40M16 52h20" stroke="#CFCBBF" stroke-width="3" stroke-linecap="round"/><path d="M45 60v-4a7 7 0 0114 0v4" fill="none" stroke="#C9A227" stroke-width="3"/><rect x="40" y="59" width="24" height="18" rx="4" fill="#F0C84B"/><circle cx="52" cy="68" r="2.5" fill="#0B3B3C"/></svg>';
+  [].forEach.call(document.querySelectorAll('[data-xed-doc]'), function (e) { e.innerHTML = DOC; });
+
+  /* ส่วนที่ 2: สองเรื่องของข้อ 9 (ง) — a = ไม่เปิดเผย · b = ไม่นำไปใช้ */
+  var USE = [
+    { a: true, b: true, t: 'เป็นไปตามหลักข้อนี้', s: 'แพรใช้ข้อมูลกับงานที่ได้ข้อมูลมา ไม่มีบุคคลที่สามได้เห็น และไม่ได้ใช้เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม', l: ['ข้อ 9 (ง)'] },
+    { a: false, b: false, t: 'ขัดกับหลักข้อนี้ ทั้งเรื่องเปิดเผยและเรื่องนำไปใช้', s: 'เพื่อนเป็นคนนอกสำนักงานของแพร ไม่มีใครอนุมัติ และข้อมูลถูกนำไปใช้เพื่อประโยชน์ของเพื่อน ซึ่งเป็นบุคคลที่สาม', l: ['ข้อ 9 (ง)', 'คู่มือ R114 (ง) (จ)'] },
+    { a: true, b: false, t: 'ขัดกับหลักข้อนี้ เรื่องนำไปใช้', s: 'ไม่มีใครได้เห็นตารางหรือได้ยินราคา แต่แพรใช้ข้อมูลเพื่อประโยชน์ส่วนตน คือร้านของแพรเอง', l: ['ข้อ 9 (ง)', 'คู่มือ R114 (จ)'] },
+    { a: false, b: true, t: 'ขัดกับหลักข้อนี้ เรื่องเปิดเผย', s: 'ไม่มีใครนำไปใช้ แต่ราคาถูกเปิดเผยออกไปโดยไม่มีใครอนุมัติ คู่มือระบุสมาชิกในครอบครัวไว้ตรง ๆ ว่าเป็นคนที่ต้องระวังการเปิดเผย', l: ['ข้อ 9 (ง)', 'คู่มือ R114 (ก)'] }];
+  V.pick('use', function (v) { var u = USE[v];
+    mark('u0', u.a); mark('u1', u.b); line('uj0', u.a ? 'ok' : 'no'); line('uj1', u.b ? 'ok' : 'no');
+    res('useR', u.a && u.b ? 'good' : 'bad', u.t, u.s); laws('useL', u.l); $('useN').hidden = u.a && u.b; });
+
+  /* ส่วนที่ 3: w = สถานะของสามกลุ่มของคู่มือ 114.1 A1 เรียง [(ข) อนุมัติ, (ก) กฎหมายกำหนด, (ค) วิชาชีพ] — 0 ไม่มี · 1 มี · 2 ยังไม่รู้
+     กรณี 2 และ 3 ต่างจากกรณี 1 ข้อเท็จจริงเดียว (คนอนุมัติ · สิ่งที่อนุมัติ) · e = ตัวอย่างของคู่มือที่ตรงกับกรณี */
+  var EX = ['e10', 'e11', 'e20', 'e21', 'e22', 'e23'];
+  var REQ = [
+    { w: [0, 0, 0], g: '', st: 'xed-stop', t: 'ยังเปิดเผยไม่ได้', s: 'ไม่มีกลุ่มใดในสามกลุ่ม ไม่ได้รับอนุมัติ กฎหมายไม่ได้กำหนด และไม่ใช่หน้าที่หรือสิทธิทางวิชาชีพ', l: ['ข้อ 9 (ง)', 'คู่มือ 114.1 A1'] },
+    { w: [1, 0, 0], g: 'open', st: 'xed-go', t: 'เปิดเผยได้ ตามที่อนุมัติ', s: 'กฎหมายอนุญาต ผู้มีอำนาจของบริษัทอนุมัติ และระบุว่าเปิดเผยอะไร ให้ใคร แพรส่งได้เฉพาะตารางนี้ ให้ธนาคารนี้', l: ['ข้อ 9 (ง)', 'คู่มือ 114.1 A1 (ข)'] },
+    { w: [2, 0, 0], g: 'xed-need', st: 'xed-wait', t: 'ยังตอบไม่ได้ ต้องรู้เพิ่มหนึ่งข้อ', s: 'ข้อที่ต้องรู้: พีทเป็นผู้มีอำนาจอนุมัติแทนบริษัทหรือไม่ ข้อบังคับใช้คำว่า อนุมัติจากผู้มีอำนาจอย่างถูกต้อง',
+      f: [['ถ้าพีทเป็นผู้มีอำนาจ', 'เปิดเผยได้ ตามที่อนุมัติ'], ['ถ้าพีทไม่ใช่ผู้มีอำนาจ', 'ยังเปิดเผยไม่ได้']], l: ['ข้อ 9 (ง)'] },
+    { w: [2, 0, 0], g: 'xed-need', st: 'xed-wait', t: 'ยังตอบไม่ได้ ต้องรู้เพิ่มหนึ่งข้อ', s: 'ข้อที่ต้องรู้: พริ้งอนุมัติให้เปิดเผยเอกสารใด ข้อบังคับใช้คำว่า อนุมัติอย่างเฉพาะเจาะจง',
+      f: [['ถ้าที่อนุมัติรวมตารางนี้', 'เปิดเผยตารางนี้ได้ ตามที่อนุมัติ'], ['ถ้าที่อนุมัติไม่รวมตารางนี้', 'ตารางนี้ยังเปิดเผยไม่ได้']], l: ['ข้อ 9 (ง)'] },
+    { w: [0, 1, 0], e: 'e10', g: 'open', st: 'xed-go', t: 'เปิดเผยตามที่กฎหมายกำหนด', s: 'ตรงกับตัวอย่างข้อ 1 ของกลุ่มนี้ การจัดทำเอกสารหรือการจัดหาหลักฐานอื่นในการดำเนินการทางกฎหมาย', l: ['คู่มือ 114.1 A1 (ก) (1)'] },
+    { w: [0, 0, 1], e: 'e21', g: 'open', st: 'xed-go', t: 'เปิดเผยได้ ตามหน้าที่หรือสิทธิทางวิชาชีพ', s: 'ตรงกับตัวอย่างข้อ 2 ของกลุ่มนี้ เพื่อตอบข้อซักถามหรือการไต่สวนโดยองค์กรวิชาชีพหรือองค์กรกำกับดูแล และไม่มีข้อห้ามทางกฎหมาย', l: ['คู่มือ 114.1 A1 (ค) (2)'] }];
+  V.pick('req', function (v) { var r = REQ[v];
+    r.w.forEach(function (x, i) { var w = $('w' + i);
+      w.className = 'xed-row' + (x === 1 ? ' xed-hit' : (x === 2 ? ' xed-ask' : ''));
+      w.querySelector('.xed-mk').innerHTML = x === 2 ? '?' : V.icon('check'); });
+    EX.forEach(function (id) { $(id).className = id === r.e ? 'xed-pk' : ''; });
+    $('rj').className = 'xed-stem ' + r.st;
+    $('gate3').className = 'gate' + (r.g ? ' ' + r.g : ''); $('gate3T').textContent = r.t; $('gate3S').textContent = r.s;
+    fork('gate3F', r.f); laws('reqL', r.l); });
+
+  /* ส่วนที่ 4: คู่มือ R114.2 · R114 (ง) (จ) (ฉ) — เปลี่ยนว่างานเดิมจบแล้วหรือยัง ผลไม่เปลี่ยน */
+  var POST = [
+    { now: 1, side: 'บริษัท พาวเด้ออ้าย จำกัด · แพรเลิกเป็นผู้สอบบัญชีแล้ว', t: 'งานจบแล้ว ผลก็ยังเหมือนเดิม', s: 'ต้องรักษาความลับอย่างต่อเนื่อง แม้ความสัมพันธ์กับลูกค้าสิ้นสุดลงแล้ว แพรมีสิทธิใช้ประสบการณ์ครั้งก่อน แต่ต้องไม่ใช้หรือเปิดเผยข้อมูลที่เป็นความลับ', l: ['คู่มือ R114.2', 'คู่มือ R114 (ฉ)'] },
+    { now: 0, side: 'บริษัท พาวเด้ออ้าย จำกัด · แพรยังเป็นผู้สอบบัญชีอยู่', t: 'งานยังไม่จบ ผลก็เหมือนกัน', s: 'เมื่อรับลูกค้ารายใหม่ แพรมีสิทธิใช้ประสบการณ์ครั้งก่อน แต่ต้องไม่ใช้หรือเปิดเผยข้อมูลที่เป็นความลับ งานเดิมจะจบแล้วหรือยังไม่จบ ผลไม่เปลี่ยน', l: ['คู่มือ R114.2', 'คู่มือ R114 (ง) (จ)'] }];
+  V.pick('post', function (v) { var p = POST[v];
+    $('t0').className = p.now === 0 ? '' : 'xed-dim'; $('t1').className = p.now === 1 ? '' : 'xed-dim';
+    $('postS').textContent = p.side; res('postR', 'told', p.t, p.s, 'clock'); laws('postL', p.l); });
+
+  /* ส่วนที่ 5: คู่มือ R320.8 (ก) (ข) · 320.7 A1 — ln = เส้นจากแพรไปผู้สอบบัญชีที่จะเสนองาน · msg = สิ่งที่ส่งไป */
+  var PV = [
+    { say: 'ยินยอม', c: 'xed-y', k: 'good', ln: 'ok', msg: 'แพรส่ง: ข้อเท็จจริงหรือข้อมูลอื่นที่จำเป็นต้องตระหนัก', t: 'ให้ข้อมูล อย่างสุจริตและไม่คลุมเครือ', s: 'ข้อเท็จจริงหรือข้อมูลอื่นที่แพรเห็นว่าผู้สอบบัญชีที่จะเสนองานจำเป็นต้องตระหนักก่อนตัดสินใจตอบรับงาน', l: ['คู่มือ R320.8 (ก)'] },
+    { say: 'ไม่ยินยอม', c: 'xed-n', k: 'told', ln: 'xed-toldl', msg: 'แพรส่ง: ข้อเท็จจริงว่าลูกค้าไม่ยินยอม', t: 'บอกว่าลูกค้าไม่ยินยอม', s: 'แพรต้องเปิดเผยข้อเท็จจริงนี้ ผู้สอบบัญชีที่จะเสนองานต้องพิจารณาเรื่องนี้อย่างรอบคอบ ตอนพิจารณาว่าจะตอบรับงานหรือไม่', l: ['คู่มือ R320.8 (ข)'] },
+    { say: 'ยังไม่รู้', c: 'xed-q', k: 'need', ln: 'xed-askl', msg: 'ยังไม่รู้ว่าแพรต้องส่งอะไร', t: 'ยังตอบไม่ได้ ต้องรู้คำตอบของลูกค้าก่อน', s: 'ข้อที่ต้องรู้: ลูกค้ายินยอมให้แพรเปิดเผยหรือไม่ คู่มือใช้ข้อนี้แยกผลเป็นสองแบบ และเรื่องนี้ยังขึ้นอยู่กับกฎหมายหรือข้อกำหนดทางจรรยาบรรณเกี่ยวกับการติดต่อสื่อสารและการเปิดเผยด้วย',
+      f: [['ถ้าลูกค้ายินยอม', 'ให้ข้อมูล อย่างสุจริตและไม่คลุมเครือ'], ['ถ้าลูกค้าไม่ยินยอมหรือปฏิเสธ', 'บอกว่าลูกค้าไม่ยินยอม', 'xed-fb']], l: ['คู่มือ R320.8 (ก) (ข)', 'คู่มือ 320.7 A1'] }];
+  V.pick('pv', function (v) { var p = PV[v];
+    $('pvSay').className = 'xed-say ' + p.c; $('pvSay').textContent = p.say;
+    line('pvJ', p.ln); $('pvMsg').className = 'xed-msg' + (p.k === 'good' ? '' : ' xed-' + p.k); $('pvMsg').textContent = p.msg;
+    res('pvR', p.k, p.t, p.s); fork('pvF', p.f); laws('pvL', p.l); });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'แพรเป็นผู้สอบบัญชีของบริษัทอีกแห่งหนึ่ง ผู้ให้เช่าอาคารขอดูงบทดลองของบริษัท พนักงานบัญชีของบริษัทแจ้งแพรว่าอนุมัติให้ส่งงบทดลองให้ผู้ให้เช่ารายนี้ได้ และกฎหมายอนุญาต แพรยังไม่รู้ว่าพนักงานคนนี้มีอำนาจอนุมัติแทนบริษัทหรือไม่', q: 'ตอนนี้แพรสรุปได้ว่าอย่างไร', o: [
+      ['ส่งได้เลย เพราะคนของบริษัทอนุมัติแล้ว', 0, 'ข้อบังคับใช้คำว่า อนุมัติจากผู้มีอำนาจอย่างถูกต้องและเฉพาะเจาะจง ตอนนี้ยังไม่รู้ว่าคนที่อนุมัติเป็นผู้มีอำนาจหรือไม่ จึงยังสรุปว่าส่งได้ไม่ได้ (ข้อ 9 (ง))'],
+      ['ส่งไม่ได้ทุกกรณี เพราะเป็นความลับของลูกค้า', 0, 'ข้อบังคับให้เปิดเผยได้เมื่อได้รับอนุมัติจากผู้มีอำนาจอย่างถูกต้องและเฉพาะเจาะจง ถ้าคนที่อนุมัติเป็นผู้มีอำนาจ แพรส่งได้ตามที่อนุมัติ จึงยังสรุปว่าส่งไม่ได้ทุกกรณีไม่ได้ (ข้อ 9 (ง))'],
+      ['ยังตอบไม่ได้ ต้องรู้ก่อนว่าพนักงานคนนี้มีอำนาจอนุมัติแทนบริษัทหรือไม่', 1, 'เรื่องนี้เหมือนกรณีพีทในส่วนที่ 3 ถ้าคนที่อนุมัติเป็นผู้มีอำนาจ แพรเปิดเผยได้ตามที่อนุมัติ ถ้าไม่ใช่ ยังเปิดเผยไม่ได้ ข้อที่ต้องรู้จึงเป็นข้อนี้ (ข้อ 9 (ง))']] },
+    { f: 'พีทเป็นผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด รู้จากงานว่าบริษัทซื้อวัตถุดิบจากผู้ขายแต่ละรายในราคาเท่าไร ซึ่งเป็นข้อมูลที่เป็นความลับ พีทไม่ได้บอกราคานี้กับใคร แต่ใช้ราคานี้ไปต่อรองซื้อวัตถุดิบเข้าร้านขนมของพีทเอง', q: 'การกระทำของพีทเป็นอย่างไรตามหลัก (ง)', o: [
+      ['เป็นไปตามหลักนี้ เพราะพีทไม่ได้เปิดเผยให้ใคร', 0, 'หลักนี้มีสองเรื่อง ไม่เปิดเผย และไม่นำไปใช้เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม ไม่ได้เปิดเผยให้ใคร จึงผ่านแค่เรื่องแรก (ข้อ 9 (ง))'],
+      ['ขัดกับหลักนี้ เรื่องนำไปใช้ แม้ไม่ได้เปิดเผยให้ใคร', 1, 'พีทใช้ข้อมูลที่เป็นความลับเพื่อประโยชน์ส่วนตน คือร้านของพีทเอง หลักนี้ใช้กับผู้ประกอบวิชาชีพบัญชีทุกด้าน รวมถึงด้านการทำบัญชี (ข้อ 9 (ง) · ข้อ 4 · คู่มือ R114 (จ) · R240.3)'],
+      ['ขัดกับหลักนี้ เรื่องเปิดเผย', 0, 'ในเรื่องนี้ไม่มีใครได้รับข้อมูลจากพีท สิ่งที่ขัดคือการนำข้อมูลไปใช้เพื่อประโยชน์ส่วนตน (ข้อ 9 (ง))']] },
+    { f: 'พี่แพมเคยเป็นผู้สอบบัญชีของบริษัทแห่งหนึ่ง เลิกเป็นมาสองปีแล้ว ระหว่างงานนั้นพี่แพมได้รู้ราคาที่บริษัทซื้อวัตถุดิบ ซึ่งเป็นข้อมูลที่เป็นความลับ ปีนี้พี่แพมรับลูกค้ารายใหม่ที่ทำธุรกิจแบบเดียวกัน', q: 'พี่แพมนำอะไรจากงานเดิมมาใช้กับลูกค้ารายใหม่ได้', o: [
+      ['ราคาที่ลูกค้าเดิมซื้อวัตถุดิบ เพราะความสัมพันธ์กับลูกค้าเดิมสิ้นสุดแล้ว', 0, 'ความสัมพันธ์สิ้นสุดแล้วก็ยังต้องปฏิบัติตามหลักการรักษาความลับอย่างต่อเนื่อง ข้อมูลที่เป็นความลับของลูกค้าเดิมจึงใช้ไม่ได้และเปิดเผยไม่ได้ (คู่มือ R114.2)'],
+      ['ประสบการณ์จากงานครั้งก่อน โดยไม่ใช้และไม่เปิดเผยข้อมูลที่เป็นความลับของลูกค้าเดิม', 1, 'เมื่อรับลูกค้ารายใหม่ มีสิทธิใช้ประสบการณ์ครั้งก่อน แต่ต้องไม่ใช้หรือเปิดเผยข้อมูลที่เป็นความลับที่ได้มาจากความสัมพันธ์ทางวิชาชีพหรือทางธุรกิจ (คู่มือ R114.2)'],
+      ['ใช้ไม่ได้เลย ทั้งประสบการณ์และข้อมูล', 0, 'คู่มือให้สิทธิใช้ประสบการณ์ครั้งก่อน สิ่งที่ใช้ไม่ได้คือข้อมูลที่เป็นความลับ (คู่มือ R114.2)']] },
+    { f: 'บริษัทแห่งหนึ่งจะเปลี่ยนผู้สอบบัญชี ผู้สอบบัญชีที่จะเสนองานขอข้อมูลจากผู้สอบบัญชีคนปัจจุบัน แต่บริษัทปฏิเสธ ไม่อนุญาตให้ผู้สอบบัญชีคนปัจจุบันปรึกษาหารือเรื่องงานของบริษัทกับผู้สอบบัญชีที่จะเสนองาน', q: 'ผู้สอบบัญชีคนปัจจุบันต้องทำอย่างไร', o: [
+      ['ให้ข้อมูลทุกเรื่อง เพราะอีกฝ่ายเป็นผู้สอบบัญชีเหมือนกัน', 0, 'ผู้สอบบัญชีคนปัจจุบันยังผูกพันด้วยหลักการรักษาความลับ จะปรึกษาหารือเรื่องของลูกค้าได้หรือไม่ ขึ้นกับว่าลูกค้าอนุญาตหรือไม่ และกฎหมายหรือข้อกำหนดทางจรรยาบรรณ (คู่มือ 320.7 A1)'],
+      ['บอกผู้สอบบัญชีที่จะเสนองานว่าบริษัทไม่ยินยอม', 1, 'ถ้าลูกค้าไม่ยินยอมหรือปฏิเสธ ผู้สอบบัญชีคนปัจจุบันต้องเปิดเผยข้อเท็จจริงนี้แก่ผู้สอบบัญชีที่จะเสนองาน ซึ่งต้องพิจารณาอย่างรอบคอบเมื่อพิจารณาว่าจะตอบรับงานหรือไม่ (คู่มือ R320.8 (ข))'],
+      ['ไม่ตอบอะไรเลย เพราะทุกอย่างเป็นความลับ', 0, 'คู่มือกำหนดให้เปิดเผยข้อเท็จจริงว่าลูกค้าไม่ยินยอม ผู้สอบบัญชีคนปัจจุบันจึงเงียบไม่ได้ (คู่มือ R320.8 (ข))']] }
+  ]);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>เป็น CPA แล้วต้องดูแลอะไร | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะบทที่ 3 (ขึ้นต้น x03-) */
+.x03-cal { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; justify-items:stretch; }
+.x03-cal .pinp { justify-self:start; margin:0; }
+.x03-grp { margin-top:6px; font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--hue-ink); }
+.x03-ax { position:relative; height:18px; margin:0 12px; font-size:12px; font-weight:700; color:var(--muted); }
+.x03-ax span { position:absolute; top:0; } .x03-ax span:nth-child(1) { left:0; } .x03-ax span:nth-child(2) { left:45.800%; transform:translateX(-50%); } .x03-ax span:nth-child(3) { right:0; }
+.x03-key { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); } .x03-key i { width:16px; height:12px; border-radius:4px; background:var(--sun); box-shadow:inset 0 0 0 2px var(--ink); }
+.x03-lane { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:12px; border-radius:18px; background:var(--soft); color:var(--ink); text-decoration:none; transition:transform .12s ease, box-shadow .12s ease; }
+a.x03-lane:hover, a.x03-lic:hover { box-shadow:inset 0 0 0 2px var(--hue); } a.x03-lane:active, a.x03-lic:active { transform:scale(.98); }
+.x03-lh { display:grid; grid-template-columns:26px minmax(0,1fr); gap:8px; align-items:center; }
+.x03-n { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--ink); color:#fff; font-family:var(--display); font-weight:800; font-size:14px; }
+.x03-lh b { font-family:var(--display); font-size:17px; line-height:1.25; }
+.x03-tr { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:2px; height:16px; }
+.x03-tr i { border-radius:4px; background:var(--hue-soft); } .x03-tr i.x03-due { background:var(--sun); box-shadow:inset 0 0 0 2px var(--ink); } .x03-tr i.x03-all { background:var(--hue); }
+.x03-lane small { font-size:13px; line-height:1.35; color:var(--muted); }
+.x03-miss { display:grid; grid-template-columns:18px minmax(0,1fr); gap:6px; align-items:start; font-size:13px; font-weight:700; line-height:1.35; color:var(--bad-ink); } .x03-miss svg { width:16px; height:16px; margin-top:1px; }
+.x03-lane .law, .x03-lic .law { justify-self:start; }
+.x03-ln { justify-self:center; width:4px; height:16px; border-radius:2px; background:var(--line); }
+.x03-lic { display:grid; grid-template-columns:26px 40px minmax(0,1fr); gap:8px; align-items:center; padding:12px; border-radius:18px; background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); color:var(--ink); text-decoration:none; transition:transform .12s ease; }
+.x03-lic .ico { width:40px; height:40px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; } .x03-lic .ico svg { width:22px; height:22px; }
+.x03-lic > span:last-child { display:grid; gap:2px; } .x03-lic b { font-family:var(--display); font-size:17px; line-height:1.25; } .x03-lic small { font-size:13px; line-height:1.35; color:var(--hue-ink); }
+
+.x03-two { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; padding:14px; border-radius:20px; background:var(--soft); }
+.x03-two div { display:grid; gap:3px; } .x03-two i { font-style:normal; display:flex; align-items:center; min-height:34px; padding:4px 14px; border-radius:99px; background:var(--hue); color:#fff; font-size:13px; font-weight:700; line-height:1.25; }
+.x03-two div:first-child i { width:84%; } .x03-two small { font-size:13px; font-weight:700; color:var(--hue-ink); } .x03-two div:first-child small { width:84%; text-align:right; } .x03-two div:last-child small { text-align:right; }
+
+.x03-kinds { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x03-kinds div { display:grid; align-content:start; gap:4px; padding:12px 10px; border-radius:18px; background:var(--soft); font-size:13px; line-height:1.4; }
+.x03-kinds b { font-family:var(--display); font-size:17px; } .x03-kinds em { font-style:normal; font-weight:700; color:var(--hue-ink); }
+.x03-hrs { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; padding:14px; border-radius:20px; background:var(--soft); }
+.x03-hr { display:grid; gap:5px; }
+.x03-top { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:14px; font-weight:700; } .x03-top b { font-family:var(--display); font-size:24px; line-height:1; white-space:nowrap; } .x03-top b i { font-style:normal; font-size:14px; font-weight:600; }
+.x03-bar { position:relative; height:20px; border-radius:99px; background:var(--white); }
+.x03-seg { display:flex; height:100%; border-radius:99px; overflow:hidden; } .x03-seg span { height:100%; transition:width .35s ease; }
+.x03-bar em { position:absolute; top:-5px; bottom:-5px; width:4px; margin-left:-2px; border-radius:2px; background:var(--ink); }
+.x03-c1 { background:var(--hue); } .x03-c2 { background:var(--sun); } .x03-c3 { background:#8FB7CC; } .x03-c4 { background:var(--muted); }
+.x03-c5 { background:repeating-linear-gradient(45deg, var(--hue) 0 4px, #8FB7CC 4px 8px); } .x03-c6 { background:repeating-linear-gradient(45deg, var(--sun) 0 4px, var(--gold) 4px 8px); }
+.x03-st { font-size:13px; font-weight:700; color:var(--bad-ink); } .x03-good .x03-st { color:var(--good); } .x03-plain .x03-st { color:var(--hue-ink); }
+.x03-leg { display:flex; flex-wrap:wrap; gap:4px 12px; font-size:12px; font-weight:600; color:var(--muted); } .x03-leg span { display:inline-flex; align-items:center; gap:5px; } .x03-leg i { width:12px; height:12px; border-radius:3px; }
+.x03-cq small.law, .cg small.law { margin-top:4px; }
+
+.x03-grps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x03-grps > div { display:grid; grid-template-columns:minmax(0,1fr); align-content:start; justify-items:start; gap:5px; padding:12px 10px; border-radius:18px; background:var(--soft); font-size:13px; line-height:1.4; }
+.x03-grps > div:first-child { grid-column:1 / -1; }
+.x03-big { display:grid; place-items:center; min-width:52px; height:44px; padding:0 10px; border-radius:12px; background:var(--hue-soft); color:var(--hue-ink); font-family:var(--display); font-weight:800; font-size:22px; line-height:1; white-space:nowrap; } .x03-big svg { width:24px; height:24px; }
+.x03-grps b { font-family:var(--display); font-size:15px; line-height:1.3; } .x03-grps .x03-min { justify-self:stretch; } .x03-grps .law { white-space:normal; }
+.x03-min { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.300fr) minmax(0,1fr); border-radius:14px; overflow:hidden; text-align:center; font-size:13px; font-weight:600; line-height:1.25; }
+.x03-min span { display:grid; align-content:center; gap:2px; min-height:52px; padding:8px 4px; } .x03-min b { font-family:var(--display); font-size:15px; }
+.x03-min span:nth-child(1) { background:var(--white); box-shadow:inset 0 0 0 1.500px var(--line); color:var(--muted); border-radius:14px 0 0 14px; } .x03-min span:nth-child(2) { background:var(--hue-soft); color:var(--hue-ink); } .x03-min span:nth-child(3) { background:var(--hue); color:#fff; }
+.x03-mon { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:4px; }
+.x03-mon i { font-style:normal; display:grid; place-items:center; min-height:38px; border-radius:10px; background:var(--white); box-shadow:inset 0 0 0 1.500px var(--line); font-size:13px; font-weight:700; color:var(--muted); transition:background-color .2s ease; }
+.x03-mon i.x03-in { background:var(--hue); color:#fff; box-shadow:none; }
+.x03-mon i.x03-cut { background:repeating-linear-gradient(45deg, var(--white) 0 5px, var(--hue-soft) 5px 10px); color:var(--hue-ink); }
+.x03-mon i.x03-at { background:var(--sun); color:var(--ink); box-shadow:inset 0 0 0 2px var(--ink); }
+.x03-box { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; padding:14px; border-radius:20px; background:var(--soft); }
+.x03-keyrow { display:flex; flex-wrap:wrap; gap:4px 12px; font-size:12px; font-weight:600; color:var(--muted); } .x03-keyrow span { display:inline-flex; align-items:center; gap:5px; } .x03-keyrow i { width:14px; height:14px; border-radius:4px; }
+
+.x03-cert { display:grid; justify-items:center; gap:6px; padding:16px 12px; border-radius:20px; background:var(--good-soft); color:var(--good); text-align:center; transition:background-color .2s ease, color .2s ease; }
+.x03-cert svg { width:170px; height:auto; } .x03-cert b { font-family:var(--display); font-size:24px; line-height:1.15; }
+.x03-cert.x03-end { background:var(--bad-soft); color:var(--bad-ink); } .x03-cert.x03-hold { background:var(--gold-soft); color:#6A5412; }
+.x03-band, .x03-tear { opacity:0; transition:opacity .25s ease; } .x03-paper { transition:opacity .25s ease; }
+.x03-cert.x03-hold .x03-band { opacity:1; } .x03-cert.x03-end .x03-tear { opacity:1; } .x03-cert.x03-end .x03-paper { opacity:.45; }
+.x03-why { padding:12px 14px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.45; } .x03-why .law { margin-top:4px; }
+.x03-six { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+.x03-six li { display:grid; grid-template-columns:34px minmax(0,1fr); gap:8px; align-items:center; padding:8px 10px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.35; transition:background-color .2s ease; }
+.x03-six li i { font-style:normal; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--white); font-family:var(--display); font-weight:800; font-size:13px; }
+.x03-six li small { display:block; font-size:12px; font-weight:500; color:var(--muted); }
+.x03-six li.x03-hit { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); font-weight:600; }
+
+.map .tr.x03-fh { background:var(--gold-soft); box-shadow:inset 0 0 0 3px var(--gold); } .map .tr.x03-fe { background:var(--bad-soft); box-shadow:inset 0 0 0 3px var(--bad); } .map .tr.x03-fe small { color:var(--bad-ink); }
+.map .tr { transition:background-color .2s ease; }
+
+.x03-list { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--soft); }
+.x03-lt { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:14px; font-weight:700; } .x03-lt b { font-family:var(--display); font-size:28px; line-height:1; white-space:nowrap; } .x03-lt b i { font-style:normal; font-size:14px; font-weight:600; }
+.x03-rows { list-style:none; margin:0; padding:8px; display:grid; gap:6px; border-radius:14px; background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); }
+.x03-rows li, .x03-out { display:grid; grid-template-columns:20px minmax(0,1fr); gap:8px; align-items:center; padding:8px 10px; border-radius:10px; background:var(--hue-soft); font-size:14px; font-weight:600; line-height:1.3; transition:background-color .2s ease; }
+.x03-rows li svg, .x03-out svg { width:18px; height:18px; } .x03-rows li small, .x03-out small { display:block; font-size:12px; font-weight:600; }
+.x03-rows li.x03-sign { background:var(--sun); box-shadow:inset 0 0 0 2px var(--ink); }
+.x03-out { background:var(--white); color:var(--bad-ink); outline:2px dashed var(--bad); outline-offset:-2px; }
+.x03-rows li[hidden], .x03-out[hidden] { display:none; }
+.x03-half { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:10px; border-radius:16px; background:var(--white); box-shadow:inset 0 0 0 1.500px var(--line); transition:background-color .2s ease; }
+.x03-flag { display:grid; grid-template-columns:20px minmax(0,1fr); gap:6px; align-items:center; font-size:14px; font-weight:700; color:var(--muted); } .x03-flag svg { width:18px; height:18px; }
+.x03-half.x03-live { background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); } .x03-half.x03-live .x03-flag { color:var(--hue-ink); }
+.needs li.x03-x .mk { background:var(--bad); }
+.result.x03-warn { background:var(--bad-soft); color:var(--bad-ink); } .result a { color:inherit; } #r5 { scroll-margin-top:76px; }
+.x03-over .x03-st { color:var(--bad-ink); } .x03-over .x03-bar { box-shadow:0 0 0 2px var(--bad); }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ บทที่ 3 (หัวข้อ R04 ของโครง v2) · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่เปิดเทียบ (sources/law2/1-profession): พ.ร.บ.วิชาชีพบัญชี ม.17 ม.37–43 ม.49 ม.68 · ข้อบังคับค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556 ข้อ 4 6 7
+     ข้อบังคับสมาชิก พ.ศ. 2569 ข้อ 12–15 (อ่านจากภาพ) · ข้อบังคับผู้สอบบัญชีฯ พ.ศ. 2556 ข้อ 14 15 (ฉบับที่ 3 และ 4 ไม่ได้แก้สองข้อนี้) · ข้อบังคับฝึกอบรมฯ พ.ศ. 2559 ทั้งฉบับ กับฉบับที่ 2 และ 3
+     ข้อกำหนดรายงานฯ พ.ศ. 2556 ข้อ 3–10 · ข้อบังคับจรรยาบรรณ พ.ศ. 2569 ข้อ 19 (อ่านจากภาพ)
+     ไม่มีเนื้อหาจากประกาศของสภาฯ เรื่องการพัฒนาความรู้ต่อเนื่อง และไม่สอนการพัฒนาความรู้ต่อเนื่องของผู้ทำบัญชี · ไม่ขึ้นอัตราโทษ · แพร พี่แพม และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 3</p>
+    <h1>เป็น CPA แล้วต้องดูแลอะไร</h1>
+    <p class="sub">มีใบอนุญาตแล้ว ทุกปียังมีเรื่องไหนต้องทำอีก และถ้าไม่ทำจะเป็นอย่างไร ดูกำหนดของทั้งปีในปฏิทินเดียว แล้วแตะแถวที่อยากดู</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพปฏิทินสิบสองเดือนที่มีกำหนดกลางปีกับสิ้นปี และใบอนุญาต">
+      <g fill="rgba(255,255,255,.16)">
+        <rect x="14" y="34" width="26" height="30" rx="6"/><rect x="46" y="34" width="26" height="30" rx="6"/><rect x="78" y="34" width="26" height="30" rx="6"/><rect x="110" y="34" width="26" height="30" rx="6"/><rect x="142" y="34" width="26" height="30" rx="6"/>
+        <rect x="14" y="72" width="26" height="30" rx="6"/><rect x="46" y="72" width="26" height="30" rx="6"/><rect x="78" y="72" width="26" height="30" rx="6"/><rect x="110" y="72" width="26" height="30" rx="6"/><rect x="142" y="72" width="26" height="30" rx="6"/>
+      </g>
+      <rect x="174" y="34" width="26" height="30" rx="6" fill="#F0C84B"/><rect x="174" y="72" width="26" height="30" rx="6" fill="#F0C84B"/>
+      <path d="M187 30v-12M187 19h13l-3 4 3 4h-13" fill="#F0C84B" stroke="#fff" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"/>
+      <g transform="translate(232 12)">
+        <rect width="92" height="108" rx="10" fill="#fff"/>
+        <path d="M18 24h56M18 38h56M18 52h36" stroke="#1C4257" stroke-width="5" stroke-linecap="round" opacity=".3"/>
+        <path d="M56 84l-6 22 12-7 12 7-6-22z" fill="#2F6B8A"/><circle cx="62" cy="78" r="15" fill="#F0C84B"/><path d="M55 78l5 5 9-10" fill="none" stroke="#fff" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="เรื่องในบทนี้">
+    <a href="#s1"><i>1</i>จ่ายรายปี</a><a href="#s2"><i>2</i>พัฒนาความรู้</a><a href="#s3"><i>3</i>ใบอนุญาต</a><a href="#s4"><i>4</i>แจ้งงาน</a><a href="#s5"><i>5</i>จำนวนราย</a>
+  </nav>
+
+  <!-- หน้าหลัก: ปฏิทินหนึ่งปี -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">ปฏิทินของบท</span>
+    <h2 id="f0">ใบอนุญาตไม่มีอายุ แต่ทุกปีมีกำหนดที่ต้องทำให้ทัน</h2>
+    <p class="cap">หลายปีต่อมา แพรเป็นผู้สอบบัญชีรับอนุญาตแล้ว นี่คือหนึ่งปีปฏิทินของแพร แตะแถวไหนก็ได้เพื่อดูเรื่องนั้น</p>
+    <div class="x03-cal">
+      <span class="pinp"><span data-face="prae2"></span>แพร ผู้สอบบัญชีรับอนุญาต เป็นสมาชิกสามัญ</span>
+      <span class="x03-key"><i></i>ช่องสีเหลืองคือเดือนที่ถึงกำหนด</span>
+
+      <span class="x03-grp">สมาชิกภาพและใบอนุญาต</span>
+      <div class="x03-ax" aria-hidden="true"><span>ม.ค.</span><span>มิ.ย.</span><span>ธ.ค.</span></div>
+      <a class="x03-lane" href="#s1">
+        <span class="x03-lh"><span class="x03-n">1</span><b>ค่าบำรุงสมาชิก และค่าธรรมเนียมใบอนุญาต</b></span>
+        <span class="x03-tr" data-due="12"></span>
+        <small>สองรายการ จ่ายของปีถัดไปล่วงหน้า ภายในวันทำการสุดท้ายของปี</small>
+        <span class="x03-miss"><span data-ico="x"></span><span>ไม่จ่ายให้ครบรายการไหน ใบอนุญาตก็สิ้นผล</span></span>
+        <span class="law">ข้อบังคับสมาชิกฯ ข้อ 13 · 15</span>
+        <span class="law">ข้อบังคับผู้สอบบัญชีฯ ข้อ 14 · 15</span>
+      </a>
+      <a class="x03-lane" href="#s2">
+        <span class="x03-lh"><span class="x03-n">2</span><b>ชั่วโมงพัฒนาความรู้ต่อเนื่อง</b></span>
+        <span class="x03-tr" data-due="12"></span>
+        <small>อย่างน้อย 40 ชั่วโมงต่อปี ยื่นหลักฐานภายในวันทำการสุดท้ายของปี</small>
+        <span class="x03-miss"><span data-ico="x"></span><span>ไม่ครบ สภาฯ อาจสั่งพักใช้ใบอนุญาต ถ้าสภาฯ ไม่ได้สั่งพักใช้ ใบอนุญาตสิ้นผล</span></span>
+        <span class="law">ข้อบังคับฝึกอบรมฯ ข้อ 10 · 21 · 22</span>
+        <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.41 (6) · ม.43</span>
+      </a>
+      <span class="x03-ln"></span>
+      <a class="x03-lic" href="#s3">
+        <span class="x03-n">3</span><span class="ico" data-ico="star"></span>
+        <span><b>ใบอนุญาตของแพร</b><small>ไม่มีอายุ แต่สิ้นผลได้ และถูกพักใช้ได้ ถ้าเรื่องข้างบนไม่ครบ</small><span class="law">พ.ร.บ.วิชาชีพบัญชี ม.41 · ม.43</span></span>
+      </a>
+
+      <span class="x03-grp">งานที่ลงลายมือชื่อ</span>
+      <div class="x03-ax" aria-hidden="true"><span>ม.ค.</span><span>มิ.ย.</span><span>ธ.ค.</span></div>
+      <a class="x03-lane" href="#s4">
+        <span class="x03-lh"><span class="x03-n">4</span><b>แจ้งงานที่ลงลายมือชื่อต่อสภาฯ</b></span>
+        <span class="x03-tr" data-due="6,12"></span>
+        <small>30 มิถุนายน แจ้งสองเรื่อง 31 ธันวาคม แจ้งหนึ่งเรื่อง และรายชื่อกิจการที่แจ้งไว้เปลี่ยนเมื่อไร แจ้งก่อนลงลายมือชื่อ</small>
+        <span class="x03-miss"><span data-ico="x"></span><span>ลงลายมือชื่อนอกรายชื่อ แจ้งช้า หรือไม่แจ้งยืนยัน ข้อกำหนดให้ถือว่ามิได้แจ้งข้อความให้ถูกต้องครบถ้วน</span></span>
+        <span class="law">ข้อกำหนดรายงานฯ ข้อ 6 · 7 · 9</span>
+      </a>
+      <a class="x03-lane" href="#s5" id="r5">
+        <span class="x03-lh"><span class="x03-n">5</span><b>จำนวนรายที่ลงลายมือชื่อ</b></span>
+        <span class="x03-tr" data-due="all"></span>
+        <small>หนึ่งรายคือหนึ่งกิจการ ไม่มีเดือนกำหนด นับรวมทุกเดือนของปีปฏิทิน ตามวันที่ลงลายมือชื่อ</small>
+        <span class="x03-miss"><span data-ico="info"></span><span>ตรวจสอบและแสดงความเห็นต่องบการเงินเกิน 200 รายต่อปี ข้อกำหนดให้สันนิษฐานไว้ก่อนว่าผู้สอบบัญชีนั้นตรวจสอบบัญชีเกินกว่าความรู้ ความสามารถ และไม่สอดคล้องกับมาตรฐานในการปฏิบัติงาน หรือปฏิบัติตนในลักษณะที่ทำให้เกิดความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี</span></span>
+        <span class="law">ข้อกำหนดรายงานฯ ข้อ 4 · 5</span>
+      </a>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>งานที่กฎหมายให้ผู้สอบบัญชีลงลายมือชื่อ คนที่ลงได้ต้องเป็นผู้สอบบัญชีรับอนุญาต ซึ่งต้องได้รับใบอนุญาตจากสภาฯ ใบอนุญาตจึงเป็นเรื่องแรกที่ต้องรักษา <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.37 · ม.38</span></span></p>
+  </section>
+
+  <!-- เรื่องที่ 1 -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>เรื่องที่ 1 · ค่าบำรุงสมาชิกและค่าธรรมเนียมใบอนุญาต</small><h2 id="h1">จ่ายสองรายการ ขาดรายการไหน ใบอนุญาตก็สิ้นผล</h2></div></div>
+    <p class="cap">ค่าบำรุงสมาชิกคือค่าสมาชิกภาพ ค่าธรรมเนียมใบอนุญาตเป็นของใบอนุญาต เป็นคนละรายการ ผู้สอบบัญชีรับอนุญาตจ่ายทั้งสองรายการทุกปี <span class="law">ข้อบังคับค่าบำรุงฯ ข้อ 4 · 6 · 7</span></p>
+    <div class="stats">
+      <div class="stat"><b>500</b><span>บาทต่อปี ค่าบำรุงสมาชิกสามัญ</span></div>
+      <div class="stat"><b>2,000</b><span>บาทต่อปี ค่าธรรมเนียมใบอนุญาตเป็นผู้สอบบัญชี</span></div>
+    </div>
+
+    <h3>จ่ายเมื่อไร</h3>
+    <p class="cap">สมาชิกภาพนับเป็นรายปี ตั้งแต่ 1 มกราคม ถึง 31 ธันวาคม ทั้งสองรายการจ่ายของปีถัดไปล่วงหน้าเต็มจำนวน กำหนดเดียวกัน <span class="law">ข้อบังคับสมาชิกฯ ข้อ 12 · 13</span> <span class="law">ข้อบังคับผู้สอบบัญชีฯ ข้อ 14</span></p>
+    <div class="x03-two" role="img" aria-label="กำหนดทั่วไปจ่ายได้ถึงวันทำการสุดท้ายของปี ถ้าโอนเงินผ่านธนาคารหรืออินเทอร์เน็ตจ่ายได้ถึงวันสิ้นสุดของปี">
+      <div><i>กำหนดทั่วไป</i><small>ถึงวันทำการสุดท้ายของปี</small></div>
+      <div><i>โอนเงินผ่านธนาคารหรืออินเทอร์เน็ต</i><small>ถึงวันสิ้นสุดของปี</small></div>
+    </div>
+
+    <h3>ถ้าจ่ายไม่ครบในกำหนด</h3>
+    <p class="cap">ปลายปีนี้แพรจ่ายค่าธรรมเนียมใบอนุญาตแล้ว แต่ยังไม่ได้จ่ายค่าบำรุงสมาชิก เปิดปิดทีละรายการ แล้วดูใบอนุญาตของปีถัดไป</p>
+    <p class="lbl">สิ่งที่แพรจ่ายครบในกำหนด</p>
+    <div class="togs" data-togs="pay">
+      <button data-k="mem" aria-pressed="false"><span>ค่าบำรุงสมาชิกของปีถัดไป<small>500 บาท</small></span></button>
+      <button data-k="fee" aria-pressed="true"><span>ค่าธรรมเนียมใบอนุญาตของปีถัดไป<small>2,000 บาท</small></span></button>
+    </div>
+    <div>
+      <div class="conds two">
+        <div class="cond" id="p0"><span class="mk"></span><span class="ico" data-ico="card"></span><span>สมาชิกภาพ<small id="p0s"></small><small>ข้อบังคับสมาชิกฯ ข้อ 15</small></span></div>
+        <div class="cond" id="p1"><span class="mk"></span><span class="ico" data-ico="mail"></span><span>ค่าธรรมเนียมใบอนุญาต<small id="p1s"></small><small>ข้อบังคับผู้สอบบัญชีฯ ข้อ 15</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="pk0" d="M75 0C75 18 150 12 150 30"/><path id="pk1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="gate" id="gate1" role="status"><span data-door></span><div><b id="gate1T"></b><span id="gate1S"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="pen"></span><span>ข้อเว้นของทั้งสองรายการ คือทำหนังสือยื่นต่อคณะกรรมการสภาฯ แสดงว่าที่ชำระไม่ครบเกิดจากพฤติการณ์ที่จำเป็น (พฤติการณ์คือเหตุการณ์ที่เกิดขึ้น) ภายในหนึ่งเดือนนับจากวันที่พฤติการณ์นั้นสิ้นสุดลง ในภาพนี้แพรไม่ได้ทำหนังสือ <span class="law">ข้อบังคับสมาชิกฯ ข้อ 15</span> <span class="law">ข้อบังคับผู้สอบบัญชีฯ ข้อ 15</span></span></p>
+    <p class="note"><span data-ico="info"></span><span>พ้นจากสมาชิกภาพ หรือใบอนุญาตสิ้นผลแล้ว สภาฯ ไม่คืนค่าบำรุงสมาชิกและค่าธรรมเนียม <span class="law">ข้อบังคับสมาชิกฯ ข้อ 14</span> <span class="law">ข้อบังคับผู้สอบบัญชีฯ ข้อ 15</span></span></p>
+  </section>
+
+  <!-- เรื่องที่ 2 -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>เรื่องที่ 2 · ชั่วโมงพัฒนาความรู้ต่อเนื่อง</small><h2 id="h2">รวมถึง 40 ชั่วโมงแล้ว ก็ยังไม่ครบได้</h2></div></div>
+    <p class="cap">ผู้สอบบัญชีรับอนุญาตมีหน้าที่เข้ารับการฝึกอบรมหรือเข้าร่วมประชุมสัมมนา ข้อบังคับเรียกว่าการพัฒนาความรู้ต่อเนื่องทางวิชาชีพ หรือที่เรียกกันว่า CPD อย่างน้อย 40 ชั่วโมงต่อปีปฏิทิน มีสองแบบ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.43</span> <span class="law">ข้อบังคับฝึกอบรมฯ ข้อ 4 · 10 · 13</span></p>
+    <div class="x03-kinds">
+      <div><b>ทางการ</b><span>กิจกรรมที่สภาฯ ให้ความเห็นชอบ ประเมินผลหรือตรวจสอบได้</span><em>อย่างน้อย 20 ชั่วโมงต่อปี</em><span>ในนี้ การบัญชีหรือการสอบบัญชีไม่น้อยกว่า 10 จรรยาบรรณไม่น้อยกว่า 1</span></div>
+      <div><b>ไม่เป็นทางการ</b><span>การเรียนรู้และฝึกฝนทักษะในกิจกรรมใด ๆ ที่เกี่ยวเนื่องกับธุรกิจหรือวิชาชีพ และนำไปใช้ในการปฏิบัติงานได้</span><em>อย่างน้อย 20 ชั่วโมงต่อปี</em><span>ชั่วโมงทางการส่วนที่เกิน 20 นับรวมได้</span></div>
+    </div>
+
+    <p class="cap">ปีนี้แพรมี 44 ชั่วโมง แต่ยังไม่ครบ ลองเปลี่ยนชั่วโมงของแพร แล้วดูว่าส่วนไหนถึง ส่วนไหนยังไม่ถึง</p>
+    <p class="lbl">ชั่วโมงของแพรปีนี้ (ถือใบอนุญาตมาหลายปีแล้ว)</p>
+    <div class="chips" data-pick="hrs">
+      <button data-v="0" aria-pressed="true">ทางการ 14 · ไม่เป็นทางการ 30</button>
+      <button data-v="1">ทางการ 20 · ไม่เป็นทางการ 20</button>
+      <button data-v="2">ทางการ 26 · ไม่เป็นทางการ 14</button>
+      <button data-v="3">ทางการ 20 ไม่มีจรรยาบรรณ · ไม่เป็นทางการ 20</button>
+    </div>
+    <div aria-live="polite">
+      <div class="count"><b id="hT"></b><span id="hTs"></span></div>
+      <div class="x03-hrs">
+        <div class="x03-hr" id="hF">
+          <div class="x03-top"><span>ชั่วโมงทางการ</span><b><span id="hFv"></span> <i>ชั่วโมง</i></b></div>
+          <div class="x03-bar"><div class="x03-seg"><span class="x03-c1" id="hFa"></span><span class="x03-c2" id="hFe"></span><span class="x03-c3" id="hFo"></span></div><em style="left:62.500%"></em></div>
+          <div class="x03-st" id="hFs"></div>
+          <div class="x03-leg"><span><i class="x03-c1"></i>การบัญชีหรือการสอบบัญชี</span><span><i class="x03-c2"></i>จรรยาบรรณ</span><span><i class="x03-c3"></i>ด้านอื่น</span></div>
+        </div>
+        <div class="conds two">
+          <div class="cond" id="hA"><span class="mk"></span><span class="ico" data-ico="book"></span><span>การบัญชีหรือการสอบบัญชี<small>ไม่น้อยกว่า 10 ชั่วโมง</small><small id="hAs"></small></span></div>
+          <div class="cond" id="hE"><span class="mk"></span><span class="ico" data-ico="shield"></span><span>จรรยาบรรณ<small>ไม่น้อยกว่า 1 ชั่วโมง</small><small id="hEs"></small></span></div>
+        </div>
+        <div class="x03-hr" id="hI">
+          <div class="x03-top"><span>ชั่วโมงไม่เป็นทางการ</span><b><span id="hIv"></span> <i>ชั่วโมง</i></b></div>
+          <div class="x03-bar"><div class="x03-seg"><span class="x03-c4" id="hIn"></span><span class="x03-c5" id="hIx"></span></div><em style="left:62.500%"></em></div>
+          <div class="x03-st" id="hIs"></div>
+          <div class="x03-leg"><span><i class="x03-c4"></i>ของชั่วโมงไม่เป็นทางการเอง</span><span><i class="x03-c5"></i>ส่วนที่เกินของทางการ</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="result" id="hR" role="status"></p>
+    <div class="cons" aria-live="polite">
+      <b>แล้วสิ้นปีต้องทำอะไร</b>
+      <div class="cg" id="hC"><span class="ico"></span><div class="x03-cq"><b id="hCb"></b><span id="hCs"></span><small class="law" id="hCl"></small></div></div>
+    </div>
+
+    <h3 style="margin-top:8px">ชั่วโมงทางการมาจากอะไรได้บ้าง</h3>
+    <p class="cap">ทุกอย่างต้องเป็นกิจกรรมที่สภาฯ ให้ความเห็นชอบ เลขข้อในภาพมาจากข้อบังคับฝึกอบรมฯ</p>
+    <div class="x03-grps">
+      <div><span class="x03-big" data-ico="clock"></span><b>เข้าอบรมหรือประชุมสัมมนา</b><span>นับตามเวลา ดังนี้</span>
+        <div class="x03-min" role="img" aria-label="น้อยกว่า 15 นาทีไม่นับ 15 ถึง 44 นาทีนับครึ่งชั่วโมง 45 ถึง 60 นาทีนับหนึ่งชั่วโมง"><span>น้อยกว่า 15 นาที<b>ไม่นับ</b></span><span>15 ถึง 44 นาที<b>ครึ่งชั่วโมง</b></span><span>45 ถึง 60 นาที<b>หนึ่งชั่วโมง</b></span></div>
+        <span class="law">ข้อ 7 (1) · 12</span></div>
+      <div><span class="x03-big">× 2</span><b>เป็นวิทยากรหรือผู้บรรยาย</b><span>นับเวลาบรรยาย และเวลาเตรียมตัวครั้งแรกอีกสองเท่า</span><span class="law">ข้อ 7 (2) · 15</span></div>
+      <div><span class="x03-big">20 · 3</span><b>ผลงานทางวิชาการเกี่ยวกับวิชาชีพบัญชี ที่เผยแพร่ต่อสาธารณชน</b><span>งานวิจัย 20 ชั่วโมง หนังสือหรือตำรา 20 ชั่วโมง บทความทั่วไป 3 ชั่วโมง</span><span class="law">ข้อ 7 (3) · 16 · 17</span></div>
+      <div><span class="x03-big">3</span><b>กรรมการ อนุกรรมการ หรือคณะทำงาน</b><span>ของสภาฯ หรือหน่วยงานที่เกี่ยวข้องกับวิชาชีพบัญชี 3 ชั่วโมงต่อตำแหน่ง ได้สองตำแหน่งต่อปี ต้องเข้าประชุมอย่างน้อยร้อยละ 50</span><span class="law">ข้อ 7 (4) · 18</span></div>
+      <div><span class="x03-big">20</span><b>จบการศึกษาสูงกว่าวุฒิเดิม</b><span>20 ชั่วโมงต่อวุฒิ ในปีที่จบ</span><span class="law">ข้อ 7 (5) · 19</span></div>
+    </div>
+
+    <h3 style="margin-top:8px">ปีแรกที่ได้รับใบอนุญาต คิดตามจำนวนเดือน</h3>
+    <p class="cap">ปีแรกต้องมีชั่วโมงตามสัดส่วนของจำนวนเดือนที่ได้รับใบอนุญาตในปีนั้น ไม่นับเศษของเดือน ลองเปลี่ยนเดือนที่แพรได้รับใบอนุญาต <span class="law">ข้อบังคับฝึกอบรมฯ ข้อ 10 วรรคสอง</span></p>
+    <div class="chips" data-pick="fy">
+      <button data-v="0" aria-pressed="true">ได้รับกลางเดือนมีนาคม</button>
+      <button data-v="1">ได้รับกลางเดือนมิถุนายน</button>
+      <button data-v="2">ได้รับกลางเดือนกันยายน</button>
+    </div>
+    <div class="x03-box" aria-live="polite">
+      <div class="x03-mon" id="fyM"></div>
+      <div class="x03-keyrow"><span><i class="x03-c1"></i>เดือนที่นับ</span><span><i style="background:repeating-linear-gradient(45deg,#fff 0 3px,#DCEBF3 3px 6px);box-shadow:inset 0 0 0 1px #CFCBBF"></i>เศษของเดือน ไม่นับ</span><span><i style="background:#fff;box-shadow:inset 0 0 0 1px #CFCBBF"></i>ก่อนได้รับใบอนุญาต</span></div>
+      <div class="count"><b id="fyN"></b><span>ชั่วโมงที่แพรต้องมีในปีแรก</span></div>
+    </div>
+    <p class="result" id="fyR" role="status"></p>
+  </section>
+
+  <!-- เรื่องที่ 3 -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>เรื่องที่ 3 · ใบอนุญาต</small><h2 id="h3">ใบอนุญาตไม่มีอายุ แต่สิ้นผลได้ และถูกพักใช้ได้</h2></div></div>
+    <p class="cap">แพรถือใบอนุญาตมาหลายปี ใบอนุญาตยังอยู่ ลองแตะเหตุการณ์ทีละเรื่อง แล้วดูว่าใบอนุญาตเป็นอย่างไร</p>
+    <p class="lbl">ถ้าเกิดเรื่องนี้กับแพร (เรื่องอื่นเหมือนเดิม)</p>
+    <div class="chips" data-pick="ev">
+      <button data-v="0" aria-pressed="true">ถือใบอนุญาตมา 10 ปี</button>
+      <button data-v="1">ลาออกจากสมาชิกสภาฯ</button>
+      <button data-v="2">เป็นบุคคลล้มละลาย</button>
+      <button data-v="3">ถูกเพิกถอนเพราะผิดจรรยาบรรณ</button>
+      <button data-v="4">อบรมไม่ครบ สภาฯ สั่งพักใช้</button>
+      <button data-v="5">อบรมไม่ครบ สภาฯ ไม่ได้สั่งพักใช้</button>
+    </div>
+    <div role="status" style="display:grid;gap:8px">
+      <div class="x03-cert" id="cert">
+        <svg viewBox="0 0 200 130" aria-hidden="true">
+          <g class="x03-paper">
+            <rect x="20" y="8" width="160" height="114" rx="8" fill="#fff" stroke="currentColor" stroke-width="3"/>
+            <rect x="30" y="18" width="140" height="94" rx="4" fill="none" stroke="currentColor" stroke-width="1.500" opacity=".4"/>
+            <path d="M62 36h76M48 54h104M48 68h104M48 82h52" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity=".35"/>
+            <circle cx="142" cy="90" r="14" fill="#F0C84B"/><path d="M135.500 90l4.500 4.500 8.500-9.500" fill="none" stroke="#fff" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g class="x03-band"><rect x="-10" y="50" width="220" height="30" fill="#C9A227" transform="rotate(-12 100 65)"/><rect x="-10" y="55" width="220" height="3" fill="#fff" opacity=".6" transform="rotate(-12 100 65)"/><rect x="-10" y="72" width="220" height="3" fill="#fff" opacity=".6" transform="rotate(-12 100 65)"/></g>
+          <g class="x03-tear"><path d="M36 24L164 106M164 24L36 106" stroke="#B3261E" stroke-width="7" stroke-linecap="round"/></g>
+        </svg>
+        <b id="certT"></b>
+      </div>
+      <div class="x03-why" id="certS"></div>
+    </div>
+    <p class="lbl">ใบอนุญาตสิ้นผล เมื่อผู้รับใบอนุญาต <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.41 วรรคสอง</span></p>
+    <ol class="x03-six" id="six">
+      <li><i>1</i><span>ตาย</span></li>
+      <li><i>2</i><span>พ้นจากสมาชิกภาพของสมาชิกสภาฯ</span></li>
+      <li><i>3</i><span>ขาดคุณสมบัติหรือมีลักษณะต้องห้ามตามมาตรา 39</span></li>
+      <li><i>4</i><span>ถูกเพิกถอนใบอนุญาตเนื่องจากประพฤติผิดจรรยาบรรณ</span></li>
+      <li><i>5</i><span>ไม่ชำระค่าธรรมเนียมใบอนุญาต และไม่ได้รับการผ่อนผันตามที่คณะกรรมการสภาฯ กำหนด<small>ผ่อนผัน คือยอมลดหย่อนให้</small></span></li>
+      <li><i>6</i><span>ไม่เข้ารับการอบรมให้ครบถ้วนตามมาตรา 43 และสภาฯ ไม่ได้มีคำสั่งพักใช้ใบอนุญาต</span></li>
+    </ol>
+
+    <h3 style="margin-top:8px">อบรมไม่ครบ สภาฯ สั่งพักใช้ได้ ถ้าไม่ได้สั่ง ใบอนุญาตสิ้นผล</h3>
+    <p class="cap">แตะปุ่มอบรมไม่ครบสองปุ่มข้างบน ช่องที่ตรงจะเปลี่ยนสี</p>
+    <div class="map">
+      <div class="nd"><span class="ico" data-ico="book"></span><b>ชั่วโมงของปีไม่ครบตามเรื่องที่ 2</b><small>ให้ทำหนังสือยื่นต่อคณะกรรมการสภาฯ แสดงว่าเกิดจากพฤติการณ์ที่จำเป็น ภายในหนึ่งเดือนนับจากวันที่พฤติการณ์นั้นสิ้นสุดลง</small><span class="law">ข้อบังคับฝึกอบรมฯ ข้อ 22</span></div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <div class="tr" id="fkA"><span class="ico" data-ico="lock"></span><b>สภาฯ มีคำสั่งพักใช้ใบอนุญาต</b><small>พักใช้ไว้จนกว่าจะได้ปฏิบัติตาม และอาจกำหนดเงื่อนไขให้ปฏิบัติ</small><span class="law">ม.43 · ข้อ 22</span><small>ทำการสอบบัญชีระหว่างถูกพักใช้ เป็นความผิด มีโทษจำคุกหรือปรับ หรือทั้งจำทั้งปรับ</small><span class="law">ม.68</span></div>
+        <div class="tr" id="fkB"><span class="ico" data-ico="x"></span><b>สภาฯ ไม่ได้มีคำสั่งพักใช้ใบอนุญาต</b><small>ใบอนุญาตสิ้นผล</small><span class="law">ม.41 (6)</span></div>
+      </div>
+    </div>
+    <div class="invite"><span class="ico" data-ico="mail"></span><span><b>สิ้นผลเพราะอบรมไม่ครบ แล้วจะขอรับใบอนุญาตใหม่</b> ต้องมีชั่วโมงของปีที่ยื่นคำขอ 40 ชั่วโมง และอีก 40 ชั่วโมงต่อปีของทุกปีที่ยังไม่ได้ยื่นชั่วโมง ส่วนหลังนี้รวมกันไม่เกิน 160 ชั่วโมง <span class="law">ข้อบังคับฝึกอบรมฯ ข้อ 11</span></span></div>
+  </section>
+
+  <!-- เรื่องที่ 4 -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>เรื่องที่ 4 · แจ้งงานที่ลงลายมือชื่อ</small><h2 id="h4">งานที่ลงลายมือชื่อ ต้องแจ้งสภาฯ ทั้งก่อนและหลัง</h2></div></div>
+    <p class="cap">ข้อกำหนดให้ผู้สอบบัญชีแจ้งสภาฯ ว่าลงลายมือชื่อแสดงความเห็นต่องบการเงินของกิจการใดบ้าง เพื่อควบคุมการประกอบวิชาชีพสอบบัญชี และป้องกันการแอบอ้างใช้ชื่อของผู้สอบบัญชี เลขข้อในเรื่องนี้มาจากข้อกำหนดรายงานฯ</p>
+    <ol class="todo">
+      <li><div><b>แจ้งรายชื่อกิจการของปีถัดไป</b><small>ภายใน 30 มิถุนายนของทุกปี แจ้งรายชื่อกิจการที่จะลงลายมือชื่อแสดงความเห็นต่องบการเงินในปีถัดไป ให้ถูกต้องครบถ้วน <span class="law">ข้อ 6 วรรคหนึ่ง</span></small></div></li>
+      <li><div><b>รายชื่อเปลี่ยน แจ้งก่อนลงลายมือชื่อ</b><small>จำนวนและรายชื่อกิจการเปลี่ยนจากที่แจ้งไว้ ให้แจ้งการเปลี่ยนแปลงต่อสภาฯ ก่อน <span class="law">ข้อ 6 วรรคสอง</span></small></div></li>
+      <li><div><b>ลงลายมือชื่อแล้ว แจ้งยืนยัน</b><small>แจ้งยืนยันรายชื่อกิจการที่ลงลายมือชื่อ ปีละสองรอบ รอบแรกครบกำหนด 30 มิถุนายน วันเดียวกับขั้นที่ 1 <span class="law">ข้อ 7</span></small></div></li>
+    </ol>
+
+    <h3 style="margin-top:8px">ก่อนลงลายมือชื่อ ดูว่ากิจการนี้อยู่ในรายชื่อที่แจ้งไว้ไหม</h3>
+    <p class="cap">บริษัท พาวเด้ออ้าย จำกัด เป็นบริษัทลูกค้าที่แพรตรวจอยู่ เจ้าของชื่อพริ้ง อยู่ในรายชื่อที่แพรแจ้งสภาฯ ไว้แล้ว ส่วนลูกค้ารายใหม่ยังไม่อยู่ ลองเปลี่ยนงานที่แพรกำลังจะลงลายมือชื่อ</p>
+    <p class="lbl">งบการเงินที่แพรกำลังจะลงลายมือชื่อ</p>
+    <div class="chips" data-pick="ntf">
+      <button data-v="0" aria-pressed="true">ลูกค้ารายใหม่ ยังไม่ได้แจ้ง</button>
+      <button data-v="1">ลูกค้ารายใหม่ แจ้งการเปลี่ยนแปลงแล้ว</button>
+      <button data-v="2">บริษัท พาวเด้ออ้าย จำกัด</button>
+    </div>
+    <div style="display:grid;gap:8px">
+      <div class="x03-list" aria-live="polite">
+        <div class="x03-lt"><span>รายชื่อกิจการที่แพรแจ้งสภาฯ ไว้</span><b><span id="ntfN"></span> <i>กิจการ</i></b></div>
+        <ul class="x03-rows">
+          <li id="ntfP"><span data-ico="bag"></span><span>บริษัท พาวเด้ออ้าย จำกัด<small id="ntfPs"></small></span></li>
+          <li><span data-ico="bag"></span><span>กิจการอื่นอีก 39 กิจการ</span></li>
+          <li id="ntfI" class="x03-sign"><span data-ico="bag"></span><span>ลูกค้ารายใหม่<small>แจ้งการเปลี่ยนแปลงแล้ว กำลังจะลงลายมือชื่อ</small></span></li>
+        </ul>
+        <div class="x03-out" id="ntfO"><span data-ico="x"></span><span>ลูกค้ารายใหม่<small>อยู่นอกรายชื่อ กำลังจะลงลายมือชื่อ</small></span></div>
+      </div>
+      <div class="gate" id="gate4" role="status"><span data-door></span><div><b id="gate4T"></b><span id="gate4S"></span></div></div>
+    </div>
+
+    <h3 style="margin-top:8px">หลังลงลายมือชื่อ แจ้งยืนยันภายในเมื่อไร</h3>
+    <p class="cap">ดูจากเดือนที่ลงลายมือชื่อ ลองเปลี่ยนเดือน <span class="law">ข้อ 7 (1) · (2)</span></p>
+    <div class="chips" data-pick="sg">
+      <button data-v="0" aria-pressed="true">กุมภาพันธ์</button>
+      <button data-v="1">มิถุนายน</button>
+      <button data-v="2">กรกฎาคม</button>
+      <button data-v="3">พฤศจิกายน</button>
+    </div>
+    <div style="display:grid;gap:8px" aria-live="polite">
+      <div class="x03-half" id="sgHA"><div class="x03-mon" id="sgA"></div><div class="x03-flag"><span data-ico="flag"></span><span>แจ้งยืนยันภายใน 30 มิถุนายน ของปีที่ลงลายมือชื่อ</span></div></div>
+      <div class="x03-half" id="sgHB"><div class="x03-mon" id="sgB"></div><div class="x03-flag"><span data-ico="flag"></span><span>แจ้งยืนยันภายใน 31 ธันวาคม ของปีที่ลงลายมือชื่อ</span></div></div>
+    </div>
+    <p class="result" id="sgR" role="status"></p>
+
+    <h3 style="margin-top:8px">สี่กรณีที่ข้อกำหนดให้ถือว่ามิได้แจ้งข้อความให้ถูกต้องครบถ้วน</h3>
+    <ul class="needs">
+      <li><span class="hd">ข้อกำหนดเขียนไว้สี่กรณี <span class="law">ข้อ 9</span></span></li>
+      <li class="x03-x"><span class="mk" data-ico="x"></span><span>ลงลายมือชื่อจำนวนรายเกินกว่าจำนวนรายที่แจ้งไว้</span></li>
+      <li class="x03-x"><span class="mk" data-ico="x"></span><span>ลงลายมือชื่อในงบการเงินของกิจการที่ไม่ได้ยื่นแจ้งรายชื่อไว้</span></li>
+      <li class="x03-x"><span class="mk" data-ico="x"></span><span>ยื่นแจ้งรายชื่อพ้นกำหนดเวลาของขั้นที่ 1 หรือขั้นที่ 2</span></li>
+      <li class="x03-x"><span class="mk" data-ico="x"></span><span>ไม่แจ้งยืนยัน หรือแจ้งยืนยันพ้นกำหนดเวลาของขั้นที่ 3</span></li>
+    </ul>
+
+    <h3 style="margin-top:8px">ขัดต่อข้อกำหนดนี้ เรื่องไปถึงคณะกรรมการจรรยาบรรณ</h3>
+    <p class="cap">ข้อ 10 ใช้กำกับดูแลทั้งข้อกำหนด ทั้งเรื่องนี้และเรื่องที่ 5</p>
+    <ol class="todo">
+      <li><div><b>สภาฯ มีหนังสือเรียกได้</b><small>ให้ผู้สอบบัญชีมาให้ถ้อยคำ ชี้แจง หรือส่งเอกสารหลักฐานที่เกี่ยวกับการปฏิบัติงานสอบบัญชี <span class="law">ข้อ 10 วรรคหนึ่ง</span></small></div></li>
+      <li><div><b>ไม่ทำตามหนังสือ หรือปฏิบัติขัดต่อข้อกำหนดนี้</b><small>ให้มีหนังสือแจ้งคณะกรรมการจรรยาบรรณเพื่อดำเนินการต่อไป <span class="law">ข้อ 10 วรรคสอง</span></small></div></li>
+    </ol>
+  </section>
+
+  <!-- เรื่องที่ 5 -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>เรื่องที่ 5 · จำนวนรายที่ลงลายมือชื่อ</small><h2 id="h5">นับตามวันที่ลงลายมือชื่อ เกิน 200 รายต่อปี เข้าข้อสันนิษฐาน</h2></div></div>
+    <p class="cap">หนึ่งรายคือหนึ่งกิจการ นับทั้งปีปฏิทิน พี่แพมเป็นผู้สอบบัญชีรับอนุญาต หุ้นส่วนของสำนักงานที่แพรทำงาน มีงบการเงิน 20 กิจการที่เป็นงบของรอบบัญชีก่อนหน้า (รอบบัญชีคือช่วงเวลาที่งบการเงินฉบับหนึ่งครอบคลุม) ลองเปลี่ยนปีที่พี่แพมลงลายมือชื่อในงบชุดนี้</p>
+    <div class="facts"><span>ปีก่อน ลงลายมือชื่อในงบอื่นไปแล้ว 150 กิจการ</span><span>ปีนี้ ลงลายมือชื่อในงบอื่น 185 กิจการ</span><span>งบ 20 กิจการชุดนี้ ไม่ซ้ำกับกิจการข้างต้น</span></div>
+    <p class="lbl">พี่แพมลงลายมือชื่อในงบ 20 กิจการนี้ปีไหน</p>
+    <div class="chips" data-pick="cnt">
+      <button data-v="0" aria-pressed="true">ปีนี้ทั้ง 20 กิจการ</button>
+      <button data-v="1">ปีก่อนทั้ง 20 กิจการ</button>
+      <button data-v="2">ปีก่อน 5 ปีนี้ 15</button>
+    </div>
+    <div class="x03-hrs" aria-live="polite">
+      <div class="x03-hr" id="y0">
+        <div class="x03-top"><span>ปีก่อน</span><b><span id="y0v"></span> <i>ราย</i></b></div>
+        <div class="x03-bar"><div class="x03-seg"><span class="x03-c1" id="y0a"></span><span class="x03-c6" id="y0x"></span></div><em style="left:80%"></em></div>
+        <div class="x03-st" id="y0s"></div>
+      </div>
+      <div class="x03-hr" id="y1">
+        <div class="x03-top"><span>ปีนี้</span><b><span id="y1v"></span> <i>ราย</i></b></div>
+        <div class="x03-bar"><div class="x03-seg"><span class="x03-c1" id="y1a"></span><span class="x03-c6" id="y1x"></span></div><em style="left:80%"></em></div>
+        <div class="x03-st" id="y1s"></div>
+      </div>
+      <div class="x03-leg"><span><i class="x03-c1"></i>งบอื่น</span><span><i class="x03-c6"></i>งบของรอบบัญชีก่อนหน้า 20 กิจการ</span><span><i style="background:var(--ink);width:4px"></i>เส้น 200 ราย</span></div>
+    </div>
+    <p class="result" id="cntR" role="status"></p>
+    <p class="note"><span data-ico="info"></span><span>ข้อกำหนดให้นับกิจการของผู้มีหน้าที่จัดทำบัญชีตามพระราชบัญญัติการบัญชี พ.ศ. 2543 ที่ผู้สอบบัญชีตรวจตามมาตรฐานการสอบบัญชี ทุกกิจการในตัวอย่างนี้เป็นแบบนั้น จึงนับทั้งหมด <span class="law">ข้อกำหนดรายงานฯ ข้อ 3 · 5</span></span></p>
+    <div class="invite"><span class="ico" data-ico="flag"></span><span><b>จำนวนรายกับการแจ้งเป็นคนละเรื่อง</b> ไม่เกิน 200 รายต่อปี ก็ยังต้องแจ้งให้ครบตามเรื่องที่ 4</span></div>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="card"></span><span>ค่าบำรุงสมาชิกกับค่าธรรมเนียมใบอนุญาตเป็นคนละรายการ จ่ายของปีถัดไปภายในวันทำการสุดท้ายของปี</span></li>
+      <li><span class="ico" data-ico="x"></span><span>พ้นจากสมาชิกภาพ ใบอนุญาตสิ้นผล แม้จ่ายค่าธรรมเนียมใบอนุญาตครบแล้ว</span></li>
+      <li><span class="ico" data-ico="book"></span><span>พัฒนาความรู้ต่อเนื่องปีละอย่างน้อย 40 ชั่วโมง ทางการอย่างน้อย 20 ไม่เป็นทางการอย่างน้อย 20</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>ในชั่วโมงทางการ การบัญชีหรือการสอบบัญชีไม่น้อยกว่า 10 จรรยาบรรณไม่น้อยกว่า 1</span></li>
+      <li><span class="ico" data-ico="star"></span><span>ใบอนุญาตไม่มีอายุ แต่สิ้นผลได้หกเหตุ อบรมไม่ครบ สภาฯ สั่งพักใช้ได้ ถ้าไม่ได้สั่ง ใบอนุญาตสิ้นผล</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>แจ้งรายชื่อกิจการของปีถัดไปภายใน 30 มิถุนายน รายชื่อเปลี่ยนให้แจ้งก่อนลงลายมือชื่อ</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>แจ้งยืนยันงานที่ลงลายมือชื่อ ภายใน 30 มิถุนายน หรือ 31 ธันวาคม ของปีที่ลงลายมือชื่อ</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>จำนวนรายนับตามวันที่ลงลายมือชื่อ เกิน 200 รายต่อปี เข้าข้อสันนิษฐานของข้อ 4</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>พ.ร.บ.วิชาชีพบัญชี คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
+      <li>ข้อบังคับสมาชิกฯ คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยสมาชิก พ.ศ. 2569</li>
+      <li>ข้อบังคับค่าบำรุงฯ คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556</li>
+      <li>ข้อบังคับผู้สอบบัญชีฯ คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยหลักเกณฑ์และคุณสมบัติของผู้สอบบัญชีรับอนุญาต พ.ศ. 2556</li>
+      <li>ข้อบังคับฝึกอบรมฯ คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยหลักเกณฑ์ และวิธีการเข้ารับการฝึกอบรมหรือเข้าร่วมประชุมสัมมนาของผู้สอบบัญชีรับอนุญาต พ.ศ. 2559 โดยข้อ 10 (1) ใช้ความตามฉบับที่ 3 พ.ศ. 2565</li>
+      <li>ข้อกำหนดรายงานฯ คือข้อกำหนดสภาวิชาชีพบัญชี ว่าด้วยหลักเกณฑ์การรายงานและการพิจารณาการปฏิบัติงานของผู้สอบบัญชีรับอนุญาต พ.ศ. 2556 ซึ่งข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 ข้อ 19 ให้มีผลใช้บังคับต่อไป</li>
+      <li>“สภาฯ” คือสภาวิชาชีพบัญชี · “ปี” ในข้อบังคับและข้อกำหนดเหล่านี้คือปีปฏิทิน · แพร พี่แพม และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>เปิดสำนักงาน ต้องมีอะไรบ้าง</b>
+    <p>เปิดสำนักงานแล้ว ต้องตรวจทั้งตัวเราและสำนักงานเรื่องอะไร</p>
+    <a class="btn" href="law2v-r04.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function mark(id, ok) { var c = $(id); c.className = c.className.replace(/ ?\b(ok|no)\b/g, '') + (ok ? ' ok' : ' no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); }
+  function line(id, ok) { $(id).setAttribute('class', ok ? 'ok' : 'no'); }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  function pct(n, max) { return Math.min(100, n / max * 100) + '%'; }
+  var MON = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'],
+    FULL = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+  function months(id, from, to, fn) { var h = ''; for (var m = from; m <= to; m++) h += '<i class="' + fn(m) + '">' + MON[m - 1] + '</i>'; $(id).innerHTML = h; }
+  V.spy('#steps');
+
+  /* ปฏิทินของบท: แถบสิบสองเดือนของแต่ละแถว ช่องที่ถึงกำหนดมาจาก data-due · all = ไม่มีเดือนกำหนด นับทุกเดือน */
+  [].forEach.call(document.querySelectorAll('.x03-tr'), function (t) {
+    var d = t.getAttribute('data-due') || '', due = d.split(','), h = '';
+    for (var m = 1; m <= 12; m++) h += '<i' + (d === 'all' ? ' class="x03-all"' : (due.indexOf(String(m)) >= 0 ? ' class="x03-due"' : '')) + '></i>';
+    t.innerHTML = h; });
+
+  /* เรื่องที่ 1: ข้อบังคับสมาชิกฯ ข้อ 15 → พ.ร.บ. ม.17 (4) · ม.41 (2) · ข้อบังคับผู้สอบบัญชีฯ ข้อ 15 → ม.41 (5) · ข้อเท็จจริงคงที่: แพรไม่ได้ทำหนังสือ */
+  V.togs('pay', function (s) {
+    mark('p0', s.mem); mark('p1', s.fee); line('pk0', s.mem); line('pk1', s.fee);
+    $('p0s').textContent = s.mem ? 'ปีถัดไปยังเป็นสมาชิก' : 'ให้ถือว่าสิ้นสุดลง';
+    $('p1s').textContent = s.fee ? 'ชำระครบในกำหนด' : 'ไม่ชำระให้ครบในกำหนด';
+    var ok = s.mem && s.fee, why;
+    if (ok) why = 'สมาชิกภาพยังอยู่ และชำระค่าธรรมเนียมใบอนุญาตครบในกำหนด';
+    else if (!s.mem && s.fee) why = 'ไม่จ่ายค่าบำรุงสมาชิกให้ครบในกำหนด ให้ถือว่าสมาชิกภาพสิ้นสุดลง ผู้รับใบอนุญาตที่พ้นจากสมาชิกภาพ ใบอนุญาตสิ้นผล แม้จ่ายค่าธรรมเนียมใบอนุญาตครบแล้ว (พ.ร.บ.วิชาชีพบัญชี ม.17 (4) · ม.41 (2))';
+    else if (s.mem && !s.fee) why = 'ไม่ชำระค่าธรรมเนียมใบอนุญาตให้ครบในกำหนด ให้ถือว่าใบอนุญาตสิ้นผลลง ทั้งที่แพรยังเป็นสมาชิกอยู่ (พ.ร.บ.วิชาชีพบัญชี ม.41 (5))';
+    else why = 'ขาดทั้งสองรายการ สมาชิกภาพสิ้นสุดลง และใบอนุญาตสิ้นผลจากทั้งสองเหตุ (พ.ร.บ.วิชาชีพบัญชี ม.41 (2) · (5))';
+    gate('gate1', ok, ok ? 'ปีถัดไป ใบอนุญาตของแพรยังอยู่' : 'ใบอนุญาตของแพรสิ้นผล', why); });
+
+  /* เรื่องที่ 2: ข้อบังคับฝึกอบรมฯ ข้อ 10 (รวม 40) · (1) ตามฉบับที่ 3: ทางการ 20 การบัญชีหรือการสอบบัญชี 10 จรรยาบรรณ 1 · (2) ไม่เป็นทางการ 20 นับส่วนเกินของ (1) ได้
+     a = การบัญชีหรือการสอบบัญชี  e = จรรยาบรรณ  o = ด้านอื่น  n = ไม่เป็นทางการ
+     ไม่ครบ: ข้อ 22 (ทำหนังสือ · สภาฯ อาจมีคำสั่งพักใช้) · พ.ร.บ. ม.43 วรรคสอง · ม.41 (6) (ไม่ครบและสภาฯ ไม่ได้มีคำสั่งพักใช้ ใบอนุญาตสิ้นผล) */
+  var HRS = [{ a: 10, e: 1, o: 3, n: 30 }, { a: 10, e: 1, o: 9, n: 20 }, { a: 10, e: 1, o: 15, n: 14 }, { a: 12, e: 0, o: 8, n: 20 }], HMAX = 32;
+  V.pick('hrs', function (v) { var d = HRS[v], f = d.a + d.e + d.o, ex = Math.max(0, f - 20), inf = d.n + ex, tot = f + d.n,
+      okT = tot >= 40, okF = f >= 20, okA = d.a >= 10, okE = d.e >= 1, okI = inf >= 20, all = okT && okF && okA && okE && okI;
+    $('hT').textContent = tot; $('hTs').textContent = okT ? 'ชั่วโมงรวมของปีนี้ ถึง 40 แล้ว' : 'ชั่วโมงรวมของปีนี้ ยังไม่ถึง 40';
+    $('hFv').textContent = f; $('hFa').style.width = pct(d.a, HMAX); $('hFe').style.width = pct(d.e, HMAX); $('hFo').style.width = pct(d.o, HMAX);
+    $('hF').className = 'x03-hr' + (okF ? ' x03-good' : '');
+    $('hFs').textContent = okF ? (ex ? 'ถึง 20 แล้ว เกินมา ' + ex + ' ชั่วโมง' : 'ถึง 20 พอดี') : 'ยังไม่ถึง 20 ขาดอีก ' + (20 - f) + ' ชั่วโมง';
+    mark('hA', okA); $('hAs').textContent = 'แพรมี ' + d.a + ' ชั่วโมง'; mark('hE', okE); $('hEs').textContent = d.e ? 'แพรมี ' + d.e + ' ชั่วโมง' : 'แพรยังไม่มี';
+    $('hIv').textContent = d.n; $('hIn').style.width = pct(d.n, HMAX); $('hIx').style.width = pct(ex, HMAX);
+    $('hI').className = 'x03-hr' + (okI ? ' x03-good' : '');
+    $('hIs').textContent = !okI ? 'ยังไม่ถึง 20' : (d.n >= 20 ? 'ถึง 20 แล้ว' : 'ของตัวเอง ' + d.n + ' รวมส่วนที่เกินของทางการ ' + ex + ' เป็น ' + inf + ' ถึง 20 แล้ว');
+    var r = $('hR'); r.className = 'result' + (all ? ' ok' : '');
+    r.textContent = all ? (ex ? 'ครบ ชั่วโมงไม่เป็นทางการของแพรมี ' + d.n + ' แต่ชั่วโมงทางการส่วนที่เกิน 20 มา ' + ex + ' ชั่วโมง นับรวมได้' : 'ครบ ถึงทุกส่วนพอดี')
+      : (!okF ? 'รวม ' + tot + ' ชั่วโมง ถึง 40 แล้ว แต่ยังไม่ครบ ชั่วโมงทางการมี ' + f + ' ยังไม่ถึง 20 ชั่วโมงไม่เป็นทางการมีเกิน ก็ไม่ช่วยให้ชั่วโมงทางการถึง 20'
+        : 'ยังไม่ครบ ชั่วโมงทางการถึง 20 แล้ว แต่ไม่มีเนื้อหาจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี ต้องมีไม่น้อยกว่า 1 ชั่วโมง');
+    $('hC').className = 'cg ' + (all ? 'ok' : 'lock'); $('hC').querySelector('.ico').innerHTML = V.icon(all ? 'check' : 'lock');
+    $('hCb').textContent = all ? 'ยื่นหลักฐานชั่วโมงทางการ' : 'ถ้าถึงสิ้นปียังไม่ครบ';
+    $('hCs').textContent = all ? 'ยื่นต่อสภาฯ ภายในวันทำการสุดท้ายของปี และเก็บหลักฐานไว้ไม่น้อยกว่า 1 ปีนับจากวันที่ยื่น'
+      : 'ให้ทำหนังสือถึงคณะกรรมการสภาฯ สภาฯ อาจมีคำสั่งพักใช้ใบอนุญาต ถ้าสภาฯ ไม่ได้มีคำสั่งพักใช้ ใบอนุญาตสิ้นผล ดูลำดับในเรื่องที่ 3';
+    $('hCl').textContent = all ? 'ข้อบังคับฝึกอบรมฯ ข้อ 21' : 'ข้อบังคับฝึกอบรมฯ ข้อ 22 · พ.ร.บ. ม.41 (6)'; });
+
+  /* เรื่องที่ 2: ปีแรก ข้อ 10 วรรคสอง (ตามสัดส่วนของจำนวนเดือนที่ได้รับใบอนุญาตในปีนั้น ไม่นับเศษของเดือน) ใช้เฉพาะ 9 · 6 · 3 เดือน ซึ่งได้ 30 · 20 · 10 ชั่วโมงพอดี */
+  var FY = [3, 6, 9];
+  V.pick('fy', function (v) { var g = FY[v], n = 12 - g, need = 40 * n / 12;
+    months('fyM', 1, 12, function (m) { return m < g ? '' : (m === g ? 'x03-cut' : 'x03-in'); });
+    $('fyN').textContent = need;
+    $('fyR').textContent = 'ได้รับใบอนุญาตกลางเดือน' + FULL[g - 1] + ' เศษของเดือนนั้นไม่นับ นับ' + FULL[g] + 'ถึงธันวาคมได้ ' + n + ' เดือน ตามสัดส่วน ' + n + ' จาก 12 เดือน คือ ' + need + ' จาก 40 ชั่วโมง'; });
+
+  /* เรื่องที่ 3: พ.ร.บ. ม.41 · ม.17 (2) · ม.39 (4) · ม.49 (4) · ม.43 วรรคสอง · ม.68 (ไม่ขึ้นอัตราโทษ)   st: 0 ยังอยู่ 1 สิ้นผล 2 ถูกพักใช้   hit: เลข (1)–(6) ของ ม.41 วรรคสอง
+     ปุ่ม 4 กับ 5 ต่างกันข้อเท็จจริงเดียว คือสภาฯ มีคำสั่งพักใช้หรือไม่ ผลเป็นถ้อยคำของ ม.43 วรรคสอง กับ ม.41 (6) จอไม่บอกว่าสิ้นผลนับจากวันใด เพราะตัวบทไม่ได้เขียน */
+  var EV = [
+    { st: 0, hit: 0, s: 'ใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาตไม่มีอายุ ถือมากี่ปีก็ไม่หมดอายุเอง แต่ผู้รับใบอนุญาตต้องชำระค่าธรรมเนียมใบอนุญาตตามที่สภาฯ กำหนด', law: 'พ.ร.บ.วิชาชีพบัญชี ม.41 วรรคหนึ่ง' },
+    { st: 1, hit: 2, s: 'สมาชิกภาพสิ้นสุดลงเมื่อลาออก ผู้รับใบอนุญาตที่พ้นจากสมาชิกภาพของสมาชิกสภาฯ ใบอนุญาตสิ้นผล', law: 'พ.ร.บ.วิชาชีพบัญชี ม.17 (2) · ม.41 (2)' },
+    { st: 1, hit: 3, s: 'ผู้ขอรับใบอนุญาตต้องไม่เป็นบุคคลล้มละลาย เมื่อเป็นบุคคลล้มละลาย จึงขาดคุณสมบัติตามมาตรา 39', law: 'พ.ร.บ.วิชาชีพบัญชี ม.39 (4) · ม.41 (3)' },
+    { st: 1, hit: 4, s: 'เพิกถอนใบอนุญาตเป็นโทษการประพฤติผิดจรรยาบรรณอย่างหนึ่ง ผู้รับใบอนุญาตที่ถูกเพิกถอนใบอนุญาตเนื่องจากประพฤติผิดจรรยาบรรณ ใบอนุญาตสิ้นผล', law: 'พ.ร.บ.วิชาชีพบัญชี ม.49 (4) · ม.41 (4)' },
+    { st: 2, hit: 0, s: 'แพรอบรมไม่ครบ และสภาฯ มีคำสั่งพักใช้ใบอนุญาตไว้จนกว่าแพรจะได้ปฏิบัติตาม จึงไม่เข้าเหตุสิ้นผลข้อ 6 ซึ่งต้องเป็นกรณีที่สภาฯ ไม่ได้มีคำสั่งพักใช้ ระหว่างถูกพักใช้ ถ้าแพรทำการสอบบัญชี เป็นความผิด มีโทษจำคุกหรือปรับ หรือทั้งจำทั้งปรับ', law: 'พ.ร.บ.วิชาชีพบัญชี ม.43 วรรคสอง · ม.68' },
+    { st: 1, hit: 6, s: 'เหตุสิ้นผลข้อ 6 มีสองส่วน คืออบรมไม่ครบ และสภาฯ ไม่ได้มีคำสั่งพักใช้ใบอนุญาต แพรเข้าทั้งสองส่วน ใบอนุญาตจึงสิ้นผล ต่างจากปุ่มก่อนหน้าเรื่องเดียว คือไม่มีคำสั่งพักใช้', law: 'พ.ร.บ.วิชาชีพบัญชี ม.41 (6)' }],
+    ST = [['', 'ใบอนุญาตยังอยู่'], [' x03-end', 'ใบอนุญาตสิ้นผล'], [' x03-hold', 'ใบอนุญาตถูกพักใช้']];
+  V.pick('ev', function (v) { var e = EV[v];
+    $('cert').className = 'x03-cert' + ST[e.st][0]; $('certT').textContent = ST[e.st][1];
+    $('certS').innerHTML = e.s + ' <span class="law">' + e.law + '</span>';
+    [].forEach.call($('six').children, function (li, i) { li.className = i + 1 === e.hit ? 'x03-hit' : ''; });
+    $('fkA').className = 'tr' + (e.st === 2 ? ' x03-fh' : ''); $('fkB').className = 'tr' + (e.hit === 6 ? ' x03-fe' : ''); });
+
+  /* เรื่องที่ 4: ข้อกำหนดรายงานฯ ข้อ 6 วรรคสอง · ข้อ 9   n = จำนวนกิจการในรายชื่อที่แจ้งไว้ (ตัวเลขสมมติ) */
+  var NTF = [
+    [false, 40, 'ต้องแจ้งการเปลี่ยนแปลงก่อน', 'ลูกค้ารายใหม่อยู่นอกรายชื่อ 40 กิจการที่แจ้งไว้ แพรต้องแจ้งการเปลี่ยนแปลงต่อสภาฯ ก่อนลงลายมือชื่อ ถ้าลงลายมือชื่อโดยไม่แจ้ง จะตรงกรณีที่สองของสี่กรณีข้างล่าง'],
+    [true, 41, 'แจ้งก่อนลงลายมือชื่อแล้ว', 'แพรแจ้งการเปลี่ยนแปลงต่อสภาฯ แล้ว รายชื่อที่แจ้งไว้เป็น 41 กิจการ มีลูกค้ารายใหม่อยู่ด้วย ลงลายมือชื่อแล้ว เหลือแจ้งยืนยัน'],
+    [true, 40, 'ไม่ต้องแจ้งเพิ่มก่อนลงลายมือชื่อ', 'บริษัท พาวเด้ออ้าย จำกัด อยู่ในรายชื่อ 40 กิจการที่แจ้งไว้แล้ว จำนวนและรายชื่อไม่ได้เปลี่ยน ลงลายมือชื่อแล้ว เหลือแจ้งยืนยัน']];
+  V.pick('ntf', function (v) { var d = NTF[v]; $('ntfN').textContent = d[1];
+    $('ntfI').hidden = v !== 1; $('ntfO').hidden = v !== 0;
+    $('ntfP').className = v === 2 ? 'x03-sign' : ''; $('ntfPs').textContent = v === 2 ? 'อยู่ในรายชื่อ กำลังจะลงลายมือชื่อ' : 'อยู่ในรายชื่อ';
+    gate('gate4', d[0], d[2], d[3]); });
+
+  /* เรื่องที่ 4: ข้อ 7 (1) มกราคมถึงมิถุนายน → 30 มิถุนายน · (2) กรกฎาคมถึงธันวาคม → 31 ธันวาคม ของปีที่ลงลายมือชื่อ */
+  var SG = [2, 6, 7, 11];
+  V.pick('sg', function (v) { var m = SG[v], a = m <= 6, at = function (x) { return x === m ? 'x03-at' : ''; };
+    months('sgA', 1, 6, at); months('sgB', 7, 12, at);
+    $('sgHA').className = 'x03-half' + (a ? ' x03-live' : ''); $('sgHB').className = 'x03-half' + (a ? '' : ' x03-live');
+    $('sgR').textContent = 'ลงลายมือชื่อเดือน' + FULL[m - 1] + ' อยู่ในช่วง' + (a ? 'มกราคมถึงมิถุนายน แจ้งยืนยันภายใน 30 มิถุนายน' : 'กรกฎาคมถึงธันวาคม แจ้งยืนยันภายใน 31 ธันวาคม'); });
+
+  /* เรื่องที่ 5: ข้อ 4 (เกิน 200 รายต่อปี) · ข้อ 5 (นับจำนวนกิจการ ตามวันที่ลงลายมือชื่อ) · ข้อ 3 (ปีปฏิทิน)   [งบของรอบบัญชีก่อนหน้าที่ลงปีก่อน, ที่ลงปีนี้] */
+  var CNT = [[0, 20], [20, 0], [5, 15]], BASE = [150, 185], CMAX = 250;
+  function yr(i, base, x) { var n = base + x; $('y' + i + 'v').textContent = n; $('y' + i + 'a').style.width = pct(base, CMAX); $('y' + i + 'x').style.width = pct(x, CMAX);
+    $('y' + i).className = 'x03-hr ' + (n > 200 ? 'x03-over' : 'x03-plain');
+    $('y' + i + 's').textContent = n > 200 ? 'เกิน 200 ราย' : (n === 200 ? '200 รายพอดี ยังไม่เกิน 200 ราย' : 'ไม่เกิน 200 ราย'); return n; }
+  V.pick('cnt', function (v) { var a = yr(0, BASE[0], CNT[v][0]), b = yr(1, BASE[1], CNT[v][1]), r = $('cntR');
+    r.className = 'result' + (b > 200 ? ' x03-warn' : '');
+    r.innerHTML = b > 200 ? 'ปีนี้ ' + b + ' ราย งบ 20 กิจการเป็นงบของรอบบัญชีก่อนหน้า แต่พี่แพมลงลายมือชื่อปีนี้ จึงนับเป็นของปีนี้ เกิน 200 รายต่อปี เข้าข้อสันนิษฐานของข้อ 4 <a href="#r5">ข้อความเต็มอยู่ในแถวที่ 5 ของปฏิทิน</a>'
+      : (b === 200 ? 'ปีนี้ 200 รายพอดี ข้อกำหนดใช้คำว่าเกิน 200 รายต่อปี 200 รายจึงยังไม่เกิน ส่วนปีก่อน ' + a + ' ราย'
+        : 'งบ 20 กิจการชุดเดียวกัน แต่พี่แพมลงลายมือชื่อไปตั้งแต่ปีก่อน จึงนับเป็นของปีก่อน ปีก่อน ' + a + ' ราย ปีนี้ ' + b + ' ราย ไม่มีปีใดเกิน 200 ราย'); });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'ผู้สอบบัญชีรับอนุญาตคนหนึ่ง ถือใบอนุญาตมาหลายปี ปีนี้มีชั่วโมงทางการ 30 ชั่วโมง เป็นการบัญชีหรือการสอบบัญชี 20 ชั่วโมง ด้านอื่น 10 ชั่วโมง ไม่มีเนื้อหาจรรยาบรรณ และมีชั่วโมงไม่เป็นทางการ 10 ชั่วโมง', q: 'ชั่วโมงของปีนี้ครบหรือยัง', o: [
+      ['ครบ เพราะรวมได้ 40 ชั่วโมง', 0, 'รวม 40 ชั่วโมงถึงแล้ว แต่ชั่วโมงทางการต้องมีเนื้อหาจรรยาบรรณของผู้ประกอบวิชาชีพบัญชีไม่น้อยกว่า 1 ชั่วโมงด้วย เขายังไม่มี (ข้อบังคับฝึกอบรมฯ ข้อ 10 (1))'],
+      ['ยังไม่ครบ เพราะชั่วโมงไม่เป็นทางการมีแค่ 10', 0, 'ชั่วโมงทางการเกิน 20 มา 10 ชั่วโมง ส่วนที่เกินนี้นับเป็นชั่วโมงไม่เป็นทางการได้ รวมกับของเดิม 10 เป็น 20 ถึงแล้ว ส่วนที่ยังขาดคือเนื้อหาจรรยาบรรณ (ข้อบังคับฝึกอบรมฯ ข้อ 10 (1) · (2))'],
+      ['ยังไม่ครบ เพราะไม่มีเนื้อหาจรรยาบรรณ', 1, 'ชั่วโมงทางการต้องมีเนื้อหาจรรยาบรรณของผู้ประกอบวิชาชีพบัญชีไม่น้อยกว่า 1 ชั่วโมง ส่วนอื่นถึงหมดแล้ว รวมทั้งชั่วโมงไม่เป็นทางการ ซึ่งนับส่วนที่เกินของทางการ 10 ชั่วโมงมารวมได้ (ข้อบังคับฝึกอบรมฯ ข้อ 10 (1) · (2))']] },
+    { f: 'พี่แพมจะลงลายมือชื่อในงบการเงินของลูกค้ารายหนึ่งสัปดาห์หน้า แพรรู้เพียงว่าพี่แพมมีใบอนุญาต ยังเป็นสมาชิก และชั่วโมงของปีนี้ครบ', q: 'แพรต้องรู้อะไรเพิ่ม จึงจะบอกได้ว่าพี่แพมต้องแจ้งสภาฯ ก่อนลงลายมือชื่อหรือไม่', o: [
+      ['ไม่ต้องรู้อะไรเพิ่ม มีใบอนุญาตแล้วไม่มีเรื่องต้องแจ้ง', 0, 'ผู้สอบบัญชีต้องแจ้งรายชื่อกิจการที่จะลงลายมือชื่อไว้ล่วงหน้า และถ้ารายชื่อเปลี่ยน ต้องแจ้งการเปลี่ยนแปลงก่อนลงลายมือชื่อ จึงต้องรู้ก่อนว่ากิจการนี้อยู่ในรายชื่อหรือไม่ (ข้อกำหนดรายงานฯ ข้อ 6)'],
+      ['กิจการนี้อยู่ในรายชื่อกิจการที่พี่แพมแจ้งสภาฯ ไว้หรือไม่', 1, 'ถ้าอยู่ในรายชื่อที่แจ้งไว้แล้ว รายชื่อไม่ได้เปลี่ยน ถ้าไม่อยู่ ต้องแจ้งการเปลี่ยนแปลงต่อสภาฯ ก่อนลงลายมือชื่อ (ข้อกำหนดรายงานฯ ข้อ 6 วรรคสอง)'],
+      ['งบการเงินของกิจการนี้เป็นของรอบบัญชีใด', 0, 'รอบบัญชีของงบไม่ใช่ตัวกำหนด ข้อกำหนดดูว่ากิจการอยู่ในรายชื่อที่แจ้งไว้หรือไม่ และดูวันที่ลงลายมือชื่อ (ข้อกำหนดรายงานฯ ข้อ 5 · ข้อ 6)']] },
+    { f: 'ผู้สอบบัญชีรับอนุญาตคนหนึ่ง ปีนี้ลงลายมือชื่อในงบการเงินของ 198 กิจการ ทุกกิจการอยู่ในรายชื่อที่แจ้งไว้ แต่งานที่ลงลายมือชื่อช่วงกรกฎาคมถึงธันวาคม เขาไม่ได้แจ้งยืนยันจนพ้น 31 ธันวาคม', q: 'เรื่องของเขาคือเรื่องไหน', o: [
+      ['ไม่มีเรื่องอะไร เพราะไม่เกิน 200 ราย', 0, 'จำนวนรายกับการแจ้งเป็นคนละเรื่อง ไม่เกิน 200 รายก็ยังต้องแจ้งยืนยันตามกำหนด งานช่วงกรกฎาคมถึงธันวาคมของเขาพ้น 31 ธันวาคมแล้วยังไม่ได้แจ้งยืนยัน (ข้อกำหนดรายงานฯ ข้อ 7 (2) · ข้อ 9)'],
+      ['เรื่องการแจ้ง งานช่วงกรกฎาคมถึงธันวาคมไม่ได้แจ้งยืนยันภายใน 31 ธันวาคม ส่วนจำนวนรายยังไม่เกิน 200', 1, 'งานที่ลงลายมือชื่อช่วงกรกฎาคมถึงธันวาคม ต้องแจ้งยืนยันภายใน 31 ธันวาคมของปีที่ลงลายมือชื่อ ไม่แจ้งยืนยันหรือแจ้งพ้นกำหนด เป็นกรณีหนึ่งในสี่กรณีที่ข้อกำหนดให้ถือว่ามิได้แจ้งข้อความให้ถูกต้องครบถ้วน ส่วน 198 รายยังไม่เกิน 200 รายต่อปี (ข้อกำหนดรายงานฯ ข้อ 4 · ข้อ 7 (2) · ข้อ 9)'],
+      ['เรื่องจำนวนราย 198 รายใกล้ 200 จึงเข้าข้อสันนิษฐานของข้อ 4', 0, 'ข้อสันนิษฐานของข้อ 4 ใช้เมื่อตรวจสอบและแสดงความเห็นต่องบการเงินเกิน 200 รายต่อปี 198 รายยังไม่เกิน เรื่องของเขาคือการไม่แจ้งยืนยัน (ข้อกำหนดรายงานฯ ข้อ 4 · ข้อ 9)']] }
+  ]);
+})();
+</script>
+</body>
+</html>

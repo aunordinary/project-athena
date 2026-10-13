@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>กฎและมาตรฐานมาจากไหน | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* สไตล์เฉพาะหน้า r14 (ขึ้นต้น x14-) */
+.x14-mini { list-style:none; margin:2px 0 0; padding:0; width:100%; display:grid; gap:5px; }
+.x14-mini li { display:grid; grid-template-columns:8px minmax(0,1fr); gap:6px; align-items:start; text-align:left; font-size:13px; line-height:1.3; }
+.x14-mini li::before { content:""; width:8px; height:8px; margin-top:5px; border-radius:50%; background:var(--hue); }
+.x14-pin svg { flex:none; }
+
+.x14-org { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+.x14-org li { display:grid; grid-template-columns:32px minmax(0,1fr); gap:10px; align-items:start; padding:8px 10px; border-radius:14px; background:var(--soft); font-size:13px; line-height:1.45; }
+.x14-org li > span:first-child { width:32px; height:32px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--hue); }
+.x14-org li.x14-sup > span:first-child { background:var(--sun); color:var(--ink); }
+.x14-org svg { width:18px; height:18px; }
+.x14-org b { display:block; font-family:var(--display); font-size:15px; line-height:1.3; }
+.x14-go { justify-self:start; display:inline-flex; align-items:center; min-height:44px; padding:4px 14px; border-radius:16px; background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); color:var(--hue-ink); font-size:14px; font-weight:700; line-height:1.3; text-decoration:none; }
+.x14-fine { font-size:13px; line-height:1.45; color:var(--muted); }
+
+.x14-case { display:grid; grid-template-columns:56px minmax(0,1fr); gap:12px; align-items:center; padding:10px 12px; border-radius:20px; background:var(--soft); }
+.x14-case svg { width:56px; height:56px; border-radius:50%; }
+.x14-case b { display:block; font-family:var(--display); font-size:18px; line-height:1.2; }
+.x14-case span { font-size:14px; line-height:1.4; color:var(--muted); }
+
+.x14-kinds { display:grid; gap:10px; }
+.x14-kind { display:grid; grid-template-columns:minmax(0,1fr) 20px minmax(0,1.2fr); gap:4px; align-items:stretch; }
+.x14-doc { position:relative; display:grid; align-content:center; justify-items:center; gap:4px; padding:14px 8px 12px; border-radius:4px 18px 18px 18px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; overflow:hidden; }
+.x14-doc::before { content:""; position:absolute; top:0; left:0; width:16px; height:16px; background:var(--hue); border-radius:0 0 8px 0; opacity:.55; }
+.x14-doc svg { width:24px; height:24px; }
+.x14-doc b { font-family:var(--display); font-size:16px; line-height:1.25; }
+.x14-doc em { font-style:normal; padding:1px 8px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:11px; font-weight:700; line-height:1.4; }
+.x14-arw { align-self:center; width:20px; height:20px; }
+.x14-arw path { fill:none; stroke:var(--line); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.x14-by { display:grid; align-content:center; justify-items:start; gap:3px; padding:10px 12px; border-radius:18px; background:var(--soft); }
+.x14-by i { font-style:normal; font-size:11px; font-weight:700; letter-spacing:.04em; color:var(--muted); }
+.x14-by b { font-family:var(--display); font-size:15px; line-height:1.25; }
+.x14-by small { font-size:13px; line-height:1.35; color:var(--muted); }
+.x14-by .x14-go { min-height:44px; margin-top:2px; font-size:13px; }
+
+.x14-list { display:grid; gap:8px; }
+.x14-grp { display:grid; gap:6px; padding:10px; border-radius:18px; background:var(--soft); box-shadow:inset 0 0 0 2px transparent; transition:background-color .2s ease, box-shadow .2s ease; }
+.x14-grp > i { font-style:normal; font-size:12px; font-weight:700; line-height:1.4; color:var(--muted); }
+.x14-grp > em { font-style:normal; font-size:13px; font-weight:700; line-height:1.4; color:var(--muted); }
+.x14-grp button { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:4px 8px; width:100%; min-height:46px; margin:0; padding:6px 12px; border-radius:14px; border:2px solid transparent; background:var(--white); color:var(--ink); font:inherit; font-size:15px; font-weight:600; line-height:1.35; text-align:left; cursor:pointer; -webkit-tap-highlight-color:transparent; transition:transform .12s ease, background-color .12s ease; }
+.x14-grp button:active { transform:scale(.98); }
+.x14-grp button[aria-pressed="true"] { background:var(--hue); color:#fff; }
+.x14-grp.x14-hot { background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); }
+.x14-grp.x14-hot > i, .x14-grp.x14-hot > em { color:var(--hue-ink); }
+.x14-why { padding:10px 14px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); font-size:14px; font-weight:600; line-height:1.45; }
+
+.x14-route { display:grid; gap:0; }
+.x14-st { position:relative; display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:start; width:100%; margin:0; padding:0 0 12px; border:0; background:none; font:inherit; color:var(--ink); text-align:left; }
+button.x14-st { cursor:pointer; -webkit-tap-highlight-color:transparent; }
+.x14-st::before { content:""; position:absolute; left:18px; top:38px; bottom:-4px; width:4px; border-radius:2px; background:var(--line); }
+.x14-mk { position:relative; z-index:1; width:40px; height:40px; margin-top:6px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 2.5px var(--line); color:transparent; transition:background-color .2s ease; }
+.x14-mk svg { width:20px; height:20px; }
+.x14-bx { display:grid; gap:4px; min-height:52px; padding:10px 12px; border-radius:16px; background:var(--soft); transition:background-color .2s ease; }
+.x14-bx b { font-family:var(--display); font-size:16px; line-height:1.3; }
+.x14-bx small { font-size:13px; line-height:1.4; color:var(--muted); }
+.x14-ft { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.x14-sw { margin-left:auto; padding:2px 10px; border-radius:99px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); font-size:12px; font-weight:700; }
+.x14-sw::after { content:"ยังไม่มี"; }
+.x14-st[aria-pressed="true"] .x14-sw::after { content:"มีแล้ว"; }
+.x14-st[aria-pressed="true"] .x14-sw { background:var(--good); color:#fff; box-shadow:none; }
+.x14-st[aria-pressed="true"] .x14-mk, .x14-fix .x14-mk { background:var(--good); box-shadow:none; color:#fff; }
+.x14-st[aria-pressed="true"]::before, .x14-fix::before { background:var(--good); }
+.x14-st[aria-pressed="true"] .x14-bx { background:var(--good-soft); color:var(--good); }
+.x14-st[aria-pressed="true"] .x14-bx small { color:inherit; }
+.x14-fix .x14-bx { background:var(--good-soft); color:var(--good); } .x14-fix .x14-bx small { color:inherit; }
+button.x14-st:active .x14-bx { transform:scale(.99); }
+
+.x14-heads { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:8px; }
+.x14-head { display:grid; align-content:start; gap:6px; padding:12px 10px; border-radius:4px 16px 16px 16px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); font-size:13px; line-height:1.4; }
+.x14-head i { font-style:normal; font-size:11px; font-weight:700; letter-spacing:.04em; color:var(--muted); }
+.x14-head b { font-family:var(--display); font-size:14px; line-height:1.3; }
+.x14-head q { quotes:"“" "”"; }
+.x14-head mark { background:var(--sun); color:var(--ink); padding:0 2px; border-radius:3px; }
+.x14-two { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x14-card { display:grid; align-content:start; justify-items:center; gap:4px; padding:14px 10px; border-radius:18px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; font-size:13px; line-height:1.4; }
+.x14-card b { font-family:var(--display); font-weight:800; font-size:17px; line-height:1.2; }
+.x14-card b.x14-big { font-size:34px; line-height:1; }
+.x14-ticks { list-style:none; margin:4px 0; padding:0; width:100%; display:grid; gap:6px; text-align:left; }
+.x14-ticks li { display:grid; grid-template-columns:20px minmax(0,1fr); gap:6px; align-items:start; font-size:13px; line-height:1.35; }
+.x14-ticks li > span:first-child { width:20px; height:20px; border-radius:50%; display:grid; place-items:center; background:var(--good); color:#fff; }
+.x14-ticks svg { width:12px; height:12px; }
+.x14-ticks small { display:block; font-size:12px; opacity:.85; }
+.x14-down { justify-self:center; width:4px; height:16px; margin:4px 0; border-radius:2px; background:var(--line); }
+.x14-meet { padding:12px 14px; border-radius:18px; background:var(--soft); text-align:center; font-size:14px; line-height:1.4; }
+.x14-meet b { display:block; font-family:var(--display); font-size:17px; }
+
+.x14-days { display:grid; gap:0; }
+.x14-day { position:relative; display:grid; grid-template-columns:84px 24px minmax(0,1fr); gap:8px; align-items:center; width:100%; min-height:56px; margin:0; padding:6px 8px; border:0; border-radius:14px; background:none; font:inherit; color:var(--ink); text-align:left; cursor:pointer; }
+.x14-day::before { content:""; position:absolute; left:110px; top:0; bottom:0; width:4px; background:var(--line); }
+.x14-day:first-child::before { top:50%; } .x14-day:last-child::before { bottom:50%; }
+.x14-d { font-family:var(--display); font-weight:800; font-size:15px; line-height:1.2; }
+.x14-dot { position:relative; z-index:1; justify-self:center; width:18px; height:18px; border-radius:50%; background:var(--white); box-shadow:inset 0 0 0 2.5px var(--line); }
+.x14-ev { display:grid; gap:3px; justify-items:start; font-size:14px; line-height:1.3; }
+.x14-ev small { font-size:12px; color:var(--muted); }
+.x14-day.x14-past .x14-dot { background:var(--hue); box-shadow:none; }
+.x14-day.x14-future .x14-ev > span:first-child, .x14-day.x14-future .x14-ev small { opacity:.6; }
+.x14-day[aria-pressed="true"] { background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); }
+.x14-today, .x14-eff { display:none; padding:1px 9px; border-radius:99px; font-size:12px; font-weight:700; line-height:1.5; }
+.x14-today { background:var(--hue); color:#fff; } .x14-eff { background:var(--good); color:#fff; }
+.x14-day[aria-pressed="true"] .x14-today { display:inline-block; }
+.x14-day.x14-effrow .x14-eff { display:inline-block; }
+.x14-day.x14-effrow .x14-dot { box-shadow:0 0 0 4px var(--good-soft), inset 0 0 0 2.5px var(--good); }
+
+.x14-flow { display:grid; justify-items:center; gap:0; }
+.x14-blk { width:100%; display:grid; gap:8px; padding:14px; border-radius:18px; background:var(--soft); }
+.x14-blk > b { font-family:var(--display); font-size:17px; line-height:1.3; }
+.x14-blk > small { font-size:13px; color:var(--muted); line-height:1.45; }
+.x14-blk .facts span { background:var(--white); }
+.x14-blk .facts span.x14-me { background:var(--sun); }
+.x14-quote { padding:10px 12px; border-radius:12px; background:var(--white); font-size:14px; line-height:1.55; }
+.x14-quote mark { background:var(--sun); color:var(--ink); padding:0 4px; border-radius:3px; font-weight:700; }
+.x14-prob { list-style:none; margin:0; padding:0; display:grid; gap:6px; font-size:14px; line-height:1.4; }
+.x14-prob li { display:grid; grid-template-columns:22px minmax(0,1fr); gap:8px; align-items:start; padding:8px 10px; border-radius:12px; background:var(--hue-soft); color:var(--hue-ink); font-weight:600; }
+.x14-prob svg { width:20px; height:20px; margin-top:1px; }
+.x14-prob small { display:block; font-size:12px; font-weight:500; }
+.x14-blk.x14-must { background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); }
+.x14-back { width:100%; display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px; background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); color:var(--ink); text-decoration:none; font-size:14px; line-height:1.4; }
+.x14-back svg { width:44px; height:44px; }
+.x14-back b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ บท 14 (หัวข้อ R15 ของโครง v2) · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
+     ตัวบทที่เปิดเทียบ (sources/law2/1-profession): พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.4 ม.5 ม.6 ม.7 (3) (11) ม.20 ม.22 ม.28 (1) (3) (5) ม.29 ม.30 ม.33 ม.34 ม.38 วรรคสอง ม.43 ม.44 ม.59 ม.60 (1) (3)
+     หัวเอกสาร ข้อ 2 และท้ายเอกสารของข้อบังคับจริงสามฉบับ: P2.4.2 (ฉบับที่ 3 พ.ศ. 2563) · P2.5.3 (ฉบับที่ 3 พ.ศ. 2565) · P2.2.2 (พ.ศ. 2556)
+     คำว่าผู้มีหน้าที่จัดทำบัญชี: พ.ร.บ.การบัญชี พ.ศ. 2543 ม.4 ม.8 (สำเนาใน exchange/v2/builds/fba-f08/references)
+     ขั้นของร่างข้อบังคับเรียกด้วยคำของ ม.30 วรรคสาม คำเดียว คือ สภาฯ อนุมัติร่าง · ที่ประชุมใหญ่ปรากฏเฉพาะแถบชื่อและส่วนใครเสนอร่างได้
+     แพรกับพีทเป็นกรณีสมมติ วันที่ในตัวอย่างเป็นวันสมมติ · บันทึก: exchange/v2/builds/law2u-2026-10-11/law2v/notes/R14.notes.md -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <clipPath id="x14-pc"><circle cx="60" cy="60" r="60"/></clipPath>
+  <symbol id="x14-peet" viewBox="0 0 120 120"><g clip-path="url(#x14-pc)">
+    <rect width="120" height="120" fill="#E3F3E8"/>
+    <path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#2F6B8A"/><path d="M49 95l11 12 11-12 5 3-16 17-16-17z" fill="#FDFDFB"/>
+    <path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/>
+    <ellipse cx="60" cy="55" rx="21" ry="25" fill="#F2CDB3"/><ellipse cx="39" cy="58" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="81" cy="58" rx="3" ry="5" fill="#F2CDB3"/>
+    <path d="M38 54c-3-21 7-32 22-32 16 0 25 10 22 32-2-8-5-13-9-16-10 3-22 3-30-1-3 4-4 10-5 17z" fill="#231712"/>
+    <circle cx="50.5" cy="57" r="2.8" fill="#2E1D14"/><circle cx="69.5" cy="57" r="2.8" fill="#2E1D14"/>
+    <path d="M45 51q5.500-3 10.500-.500M64.500 50.500q5-2.500 10.500.500" fill="none" stroke="#2A1B15" stroke-width="1.800" stroke-linecap="round"/>
+    <path d="M60 59c-1 4-2 6-1 8h2.500" fill="none" stroke="#C99A7E" stroke-width="1.400" stroke-linecap="round"/>
+    <path d="M54 72c3.500 2.400 8.500 2.400 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>
+  </g></symbol>
+</defs></svg>
+<main>
+  <header class="hero">
+    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · บทที่ 14</p>
+    <h1>กฎและมาตรฐานมาจากไหน</h1>
+    <p class="sub">อนุมัติแล้ว เริ่มใช้ได้เลยไหม ดูว่าข้อบังคับและมาตรฐานการบัญชีต้องมีอะไรอีก ก่อนจะใช้บังคับได้ แตะเรื่องที่อยากดู</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพเอกสารหนึ่งฉบับเดินผ่านสามจุดไปถึงธง">
+      <path d="M52 104 C 96 104, 92 78, 132 78 S 190 44, 236 44 S 296 30, 312 24" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 13"/>
+      <g transform="translate(16 76)"><path d="M2 2h20l10 10v34H2z" fill="#fff"/><path d="M22 2v10h10" fill="#DCEBF3"/><path d="M8 20h18M8 27h18M8 34h12" stroke="#2F6B8A" stroke-width="3" stroke-linecap="round"/></g>
+      <circle cx="132" cy="78" r="10" fill="#F0C84B"/><circle cx="186" cy="56" r="10" fill="#F0C84B"/><circle cx="240" cy="44" r="10" fill="#F0C84B"/>
+      <g fill="none" stroke="#1C4257" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="M127.500 78l3.500 3.500 6-6.500"/><path d="M181.500 56l3.500 3.500 6-6.500"/><path d="M235.500 44l3.500 3.500 6-6.500"/></g>
+      <g transform="translate(300 2)"><path d="M12 30V2" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M12 3h22l-5 6.500 5 6.500H12z" fill="#F0C84B"/></g>
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps" id="steps" aria-label="เรื่องในบทนี้">
+    <a href="#s1"><i>1</i>ชนิดกฎ</a><a href="#s2"><i>2</i>ข้อบังคับ</a><a href="#s3"><i>3</i>มาตรฐาน</a><a href="#s4"><i>4</i>วันเริ่มใช้</a><a href="#s5"><i>5</i>มีปัญหา</a>
+  </nav>
+
+  <!-- หน้าหลัก: แผนที่ -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">แผนที่ของบท</span>
+    <h2 id="f0">สภาฯ อนุมัติร่างข้อบังคับแล้ว ยังใช้บังคับไม่ได้ทันที</h2>
+    <p class="cap">มาตรฐานการบัญชีที่ปรับปรุงแล้วก็เช่นกัน ยังต้องมีอีกหลายอย่างก่อนใช้บังคับได้ ดูชื่อที่จะเจอก่อน แล้วแตะเรื่องที่อยากดู</p>
+    <p class="lbl">ชื่อที่จะเจอในบทนี้ <span class="law">พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547</span></p>
+    <ul class="x14-org">
+      <li><span data-ico="bag"></span><span><b>สภาวิชาชีพบัญชี (สภาฯ)</b>นิติบุคคลที่มีวัตถุประสงค์เพื่อส่งเสริมและพัฒนาวิชาชีพบัญชี เป็นผู้ออกข้อบังคับ <span class="law">ม.6 · ม.7 (11)</span></span></li>
+      <li><span data-ico="star"></span><span><b>ที่ประชุมใหญ่</b>การประชุมใหญ่สามัญหรือวิสามัญของสภาฯ ที่สมาชิกสามัญมาประชุม <span class="law">ม.4 · ม.20</span></span></li>
+      <li><span data-ico="card"></span><span><b>คณะกรรมการสภาวิชาชีพบัญชี (คณะกรรมการสภาฯ)</b>บริหารกิจการของสภาฯ มีนายกสภาฯ และกรรมการ <span class="law">ม.22 · ม.28 (1)</span></span></li>
+      <li><span data-ico="pen"></span><span><b>นายกสภาวิชาชีพบัญชี (นายกสภาฯ)</b>ได้รับเลือกตั้งจากสมาชิกสามัญ อยู่ในคณะกรรมการสภาฯ <span class="law">ม.22 (1)</span></span></li>
+      <li><span data-ico="book"></span><span><b>คณะกรรมการกำหนดมาตรฐานการบัญชี</b>มีหน้าที่กำหนดและปรับปรุงมาตรฐานการบัญชี กรรมการผู้ทรงคุณวุฒิแต่งตั้งโดยคณะกรรมการสภาฯ <span class="law">ม.33 · ม.34</span></span></li>
+      <li class="x14-sup"><span data-ico="shield"></span><span><b>คณะกรรมการกำกับดูแลฯ</b>ปลัดกระทรวงพาณิชย์เป็นประธาน กำกับดูแลการดำเนินกิจการของสภาฯ <span class="law">ม.59 · ม.60 (1)</span> และให้ความเห็นชอบข้อบังคับบางเรื่องกับมาตรฐานการบัญชี <span class="law">ม.60 (3)</span></span></li>
+    </ul>
+    <a class="x14-go" href="law2v-r13.html">รายละเอียดของแต่ละชุด อยู่ในบทที่ 13 สภาฯ ทำอะไร ใครกำกับ</a>
+    <div class="map">
+      <span class="pinp x14-pin"><span data-face="prae2"></span>แพร ผู้สอบบัญชีรับอนุญาต ตามเรื่องข้อบังคับสภาฯ</span>
+      <span class="pinp x14-pin"><svg aria-hidden="true"><use href="#x14-peet"/></svg>พีท ผู้ทำบัญชี ตามเรื่องมาตรฐานการบัญชี</span>
+      <a class="nd" href="#s1"><span class="num">1</span><span class="ico" data-ico="book"></span><b>ชนิดของกฎ</b><small>ข้อบังคับ ระเบียบ มาตรฐานการบัญชี กฎกระทรวง คนออกไม่ใช่ชุดเดียวกัน</small><span class="law">ม.5 · ม.7 · ม.28 · ม.34</span></a>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
+      <div class="fork">
+        <a class="tr" href="#s2"><span class="num">2</span><span class="ico" data-ico="pen"></span><b>ข้อบังคับสภาฯ</b><ul class="x14-mini"><li>สภาฯ อนุมัติร่าง</li><li>บางเรื่องต้องได้ความเห็นชอบจากคณะกรรมการกำกับดูแลฯ</li><li>นายกสภาฯ ลงนาม</li></ul><span class="law">ม.30</span></a>
+        <a class="tr" href="#s3"><span class="num">3</span><span class="ico" data-ico="shield"></span><b>มาตรฐานการบัญชี</b><ul class="x14-mini"><li>กำหนดและปรับปรุงโดยคณะกรรมการกำหนดมาตรฐานการบัญชี</li><li>ต้องได้ความเห็นชอบจากคณะกรรมการกำกับดูแลฯ</li></ul><span class="law">ม.34</span></a>
+      </div>
+      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M25 0C25 14 50 8 50 18M75 0C75 14 50 8 50 18M50 18V26"/></svg>
+      <a class="nd" href="#s4"><span class="num">4</span><span class="ico" data-ico="mail"></span><b>ประกาศในราชกิจจานุเบกษา</b><small>ราชกิจจานุเบกษาคือหนังสือของทางราชการที่ใช้ลงประกาศกฎหมาย ส่วนวันเริ่มใช้ ข้อบังคับเขียนไว้ในตัวเอง</small><span class="law">ม.30 วรรคสาม · ม.34 วรรคสาม</span></a>
+      <span class="ln"></span>
+      <div class="nd end"><span class="ico" data-ico="flag"></span><b>ใช้บังคับได้</b><small>ขาดอย่างใดอย่างหนึ่ง ยังไม่ถึงตรงนี้</small></div>
+      <span class="ln"></span>
+      <a class="nd" href="#s5"><span class="num">5</span><span class="ico" data-ico="info"></span><b>มาตรฐานการบัญชีใช้แล้วมีปัญหา</b><small>เมื่อได้รับแจ้ง คณะกรรมการกำหนดมาตรฐานการบัญชีต้องตรวจสอบ รับฟังความคิดเห็น และกำหนด ปรับปรุง หรือพัฒนามาตรฐาน</small><span class="law">ม.34 วรรคสี่</span></a>
+    </div>
+  </section>
+
+  <!-- 1 ชนิดของกฎ -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>เรื่องที่ 1 · ชนิดของกฎ</small><h2 id="h1">ดูชื่อเอกสารก่อน แต่ละชนิดคนออกไม่เหมือนกัน</h2></div></div>
+    <p class="cap">ข้อบังคับกับมาตรฐานการบัญชี คนออกคนละชุด สิ่งที่ต้องมีก่อนใช้บังคับได้จึงไม่เหมือนกัน</p>
+    <div class="x14-kinds">
+      <div class="x14-kind">
+        <div class="x14-doc"><span data-ico="pen"></span><b>ข้อบังคับสภาวิชาชีพบัญชี</b><em>แพรตามเรื่องนี้</em></div>
+        <svg class="x14-arw" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h14M11 5l5 5-5 5"/></svg>
+        <div class="x14-by"><i>คนออก</i><b>สภาวิชาชีพบัญชี</b><small>เรื่องอย่างการฝึกอบรมของผู้สอบบัญชีรับอนุญาต พ.ร.บ. ให้กำหนดในข้อบังคับ</small><span class="law">ม.7 (11) · ม.43</span><a class="x14-go" href="#s2">ดูเรื่องที่ 2</a></div>
+      </div>
+      <div class="x14-kind">
+        <div class="x14-doc"><span data-ico="card"></span><b>ระเบียบ</b></div>
+        <svg class="x14-arw" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h14M11 5l5 5-5 5"/></svg>
+        <div class="x14-by"><i>คนออก</i><b>คณะกรรมการสภาฯ</b><small>ออกเพื่อปฏิบัติการให้เป็นไปตามพระราชบัญญัตินี้</small><span class="law">ม.28 (5)</span></div>
+      </div>
+      <div class="x14-kind">
+        <div class="x14-doc"><span data-ico="shield"></span><b>มาตรฐานการบัญชี</b><em>พีทตามเรื่องนี้</em></div>
+        <svg class="x14-arw" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h14M11 5l5 5-5 5"/></svg>
+        <div class="x14-by"><i>คนกำหนดและปรับปรุง</i><b>คณะกรรมการกำหนดมาตรฐานการบัญชี</b><small>ใช้เป็นมาตรฐานในการจัดทำบัญชี</small><span class="law">ม.34 วรรคหนึ่ง</span><a class="x14-go" href="#s3">ดูเรื่องที่ 3</a></div>
+      </div>
+      <div class="x14-kind">
+        <div class="x14-doc"><span data-ico="book"></span><b>กฎกระทรวง</b></div>
+        <svg class="x14-arw" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h14M11 5l5 5-5 5"/></svg>
+        <div class="x14-by"><i>คนออก</i><b>รัฐมนตรีว่าการกระทรวงพาณิชย์</b><small>ประกาศในราชกิจจานุเบกษาแล้วใช้บังคับได้</small><span class="law">ม.5</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 ข้อบังคับสภาฯ -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>เรื่องที่ 2 · ข้อบังคับสภาฯ</small><h2 id="h2">ข้อบังคับต้องลงนามและประกาศ บางเรื่องต้องได้ความเห็นชอบก่อน</h2></div></div>
+    <div class="x14-case"><span data-face="prae2"></span><div><b>แพร</b><span>ผู้สอบบัญชีรับอนุญาต ได้ข่าวว่าสภาวิชาชีพบัญชีอนุมัติร่างข้อบังคับฉบับใหม่แล้ว</span></div></div>
+    <p class="cap">ร่างฉบับนี้ยังไม่ได้ความเห็นชอบ ยังไม่ได้ลงนาม ยังไม่ได้ประกาศ จึงยังใช้บังคับไม่ได้ ลองเปลี่ยนหัวเรื่องของร่าง แล้วดูว่าต้องมีอะไรบ้าง</p>
+    <p class="lbl">หัวเรื่องของร่างข้อบังคับ ตั้งต้นเป็นเรื่องการฝึกอบรม</p>
+    <div class="x14-list" data-pick="sub">
+      <div class="x14-grp x14-hot" id="grpIn">
+        <i>เรื่องที่มาตรา 30 วรรคสองระบุ</i>
+        <button data-v="0" aria-pressed="true"><span>การฝึกอบรมของผู้สอบบัญชีรับอนุญาต</span><span class="law">ม.43 วรรคหนึ่ง</span></button>
+        <button data-v="1"><span>ค่าบำรุงสมาชิกหรือค่าธรรมเนียม</span><span class="law">ม.30 วรรคสอง</span></button>
+        <button data-v="2"><span>การขึ้นทะเบียนผู้ทำบัญชี</span><span class="law">ม.44 วรรคสอง</span></button>
+        <button data-v="3"><span>คุณสมบัติและการเลือกตั้งนายกสภาฯ และกรรมการ</span><span class="law">ม.22 วรรคสาม</span></button>
+        <em>ต้องได้รับความเห็นชอบจากคณะกรรมการกำกับดูแลฯ ก่อน</em>
+      </div>
+      <div class="x14-grp" id="grpOut">
+        <i>เรื่องที่มาตรา 30 วรรคสองไม่ได้ระบุ เช่น</i>
+        <button data-v="4"><span>การขอรับและออกใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต</span><span class="law">ม.38 วรรคสอง</span></button>
+      </div>
+    </div>
+    <p class="x14-why" id="subWhy" aria-live="polite"></p>
+    <p class="lbl">สิ่งที่ร่างนี้ต้องมี แตะเพื่อเปลี่ยนว่ามีแล้วหรือยัง</p>
+    <p class="x14-fine">ภาพนี้ดูแค่ว่ามีครบหรือยัง ไม่ได้เรียงว่าอะไรมาก่อน ลงนามกับประกาศ มาตรา 30 วรรคสามเขียนไว้คู่กัน</p>
+    <div>
+      <div class="x14-route" data-togs="reg">
+        <div class="x14-st x14-fix"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>สภาฯ อนุมัติร่างแล้ว</b><small>ข่าวที่แพรได้มา</small><span class="x14-ft"><span class="law">ม.30 วรรคสาม</span></span></span></div>
+        <button class="x14-st" id="rApp" data-k="app" aria-pressed="false"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>คณะกรรมการกำกับดูแลฯ ให้ความเห็นชอบ</b><small id="rAppS"></small><span class="x14-ft"><span class="law">ม.30 วรรคสอง</span><span class="x14-sw" aria-hidden="true"></span></span></span></button>
+        <button class="x14-st" id="rSig" data-k="sig" aria-pressed="false"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>นายกสภาฯ ลงนาม</b><span class="x14-ft"><span class="law">ม.30 วรรคสาม</span><span class="x14-sw" aria-hidden="true"></span></span></span></button>
+        <button class="x14-st" id="rGaz" data-k="gaz" aria-pressed="false"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>ประกาศในราชกิจจานุเบกษา</b><span class="x14-ft"><span class="law">ม.30 วรรคสาม</span><span class="x14-sw" aria-hidden="true"></span></span></span></button>
+      </div>
+      <div class="gate" id="gateR" role="status"><span data-door></span><div><b id="gateRT"></b><span id="gateRS"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>ร่างข้อบังคับซึ่งสภาฯ อนุมัติ หรือคณะกรรมการกำกับดูแลฯ ให้ความเห็นชอบแล้ว แล้วแต่กรณี เมื่อนายกสภาฯ ลงนามและประกาศในราชกิจจานุเบกษาแล้ว ให้ใช้บังคับได้ <span class="law">ม.30 วรรคสาม</span></span></p>
+
+    <h3 style="margin-top:8px">ดูได้จากหัวข้อบังคับ</h3>
+    <p class="cap">ข้อบังคับของสภาฯ สองฉบับนี้ขึ้นต้นไม่เหมือนกัน</p>
+    <div class="x14-heads">
+      <div class="x14-head"><i>เรื่องที่มาตรา 30 วรรคสองระบุ · ออกตามมาตรา 43</i><b>ข้อบังคับเรื่องการฝึกอบรมของผู้สอบบัญชีรับอนุญาต (ฉบับที่ 3) พ.ศ. 2565</b><q>สภาวิชาชีพบัญชี <mark>โดยความเห็นชอบของคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</mark> จึงออกข้อบังคับไว้</q></div>
+      <div class="x14-head"><i>เรื่องที่มาตรา 30 วรรคสองไม่ได้ระบุ · ออกตามมาตรา 38 วรรคสอง</i><b>ข้อบังคับเรื่องหลักเกณฑ์และคุณสมบัติของผู้สอบบัญชีรับอนุญาต (ฉบับที่ 3) พ.ศ. 2563</b><q>สภาวิชาชีพบัญชีจึงออกข้อบังคับไว้</q></div>
+    </div>
+
+    <h3 style="margin-top:8px">ใครเสนอร่างข้อบังคับได้</h3>
+    <div>
+      <div class="x14-two">
+        <div class="x14-card"><b>คณะกรรมการสภาฯ</b><span>เสนอร่างข้อบังคับต่อที่ประชุมใหญ่สภาวิชาชีพบัญชี</span><span class="law">ม.28 (3)</span></div>
+        <div class="x14-card"><b class="x14-big">100</b><span>สมาชิกสามัญไม่น้อยกว่าหนึ่งร้อยคน เข้าชื่อเสนอร่างข้อบังคับต่อสภาฯ ได้</span><span class="law">ม.29 วรรคหนึ่ง</span></div>
+      </div>
+      <div class="x14-flow"><span class="x14-down"></span></div>
+      <div class="x14-meet"><b>ประชุมใหญ่เพื่อพิจารณาร่าง</b>ร่างที่สมาชิกเข้าชื่อเสนอ คณะกรรมการสภาฯ ต้องจัดให้มีการประชุมใหญ่เพื่อพิจารณาโดยไม่ชักช้า <span class="law">ม.29 วรรคสอง</span></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>วิธีการเสนอและการพิจารณาร่างข้อบังคับ ให้เป็นไปตามข้อบังคับสภาวิชาชีพบัญชี <span class="law">ม.30 วรรคหนึ่ง</span></span></p>
+  </section>
+
+  <!-- 3 มาตรฐานการบัญชี -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>เรื่องที่ 3 · มาตรฐานการบัญชี</small><h2 id="h3">มาตรฐานการบัญชีต้องได้ความเห็นชอบ และประกาศ ครบทั้งสองอย่าง</h2></div></div>
+    <div class="x14-case"><svg aria-hidden="true"><use href="#x14-peet"/></svg><div><b>พีท</b><span>ผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด ได้ข่าวว่าคณะกรรมการกำหนดมาตรฐานการบัญชีปรับปรุงมาตรฐานการบัญชีฉบับหนึ่งแล้ว</span></div></div>
+    <p class="cap">ฉบับปรับปรุงยังไม่ได้ความเห็นชอบ ยังไม่ได้ประกาศ จึงยังใช้บังคับไม่ได้ แตะแต่ละอย่างเพื่อเปลี่ยนว่ามีแล้วหรือยัง แล้วดูประตู</p>
+    <p class="lbl">สิ่งที่ฉบับปรับปรุงต้องมี</p>
+    <p class="x14-fine">ภาพนี้ดูแค่ว่ามีครบหรือยัง ไม่ได้เรียงว่าอะไรมาก่อน</p>
+    <div>
+      <div class="x14-route" data-togs="std">
+        <div class="x14-st x14-fix"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>คณะกรรมการกำหนดมาตรฐานการบัญชีปรับปรุงแล้ว</b><small>ข่าวที่พีทได้มา</small><span class="x14-ft"><span class="law">ม.34 วรรคหนึ่ง</span></span></span></div>
+        <button class="x14-st" id="sApp" data-k="app" aria-pressed="false"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>คณะกรรมการกำกับดูแลฯ ให้ความเห็นชอบ</b><span class="x14-ft"><span class="law">ม.34 วรรคสาม · ม.60 (3)</span><span class="x14-sw" aria-hidden="true"></span></span></span></button>
+        <button class="x14-st" id="sGaz" data-k="gaz" aria-pressed="false"><span class="x14-mk" data-ico="check"></span><span class="x14-bx"><b>ประกาศในราชกิจจานุเบกษา</b><span class="x14-ft"><span class="law">ม.34 วรรคสาม</span><span class="x14-sw" aria-hidden="true"></span></span></span></button>
+      </div>
+      <div class="gate" id="gateS" role="status"><span data-door></span><div><b id="gateST"></b><span id="gateSS"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>มาตรฐานการบัญชีที่คณะกรรมการกำหนดมาตรฐานการบัญชีกำหนดและปรับปรุง เมื่อได้รับความเห็นชอบจากคณะกรรมการกำกับดูแลฯ และประกาศในราชกิจจานุเบกษาแล้ว ให้ใช้บังคับได้ <span class="law">ม.34 วรรคสาม</span></span></p>
+    <p class="lbl">มาตรฐานการบัญชีต้องจัดทำขึ้นเป็นภาษาไทย <span class="law">ม.34 วรรคสอง</span></p>
+
+    <h3 style="margin-top:8px">ต่างจากข้อบังคับตรงไหน</h3>
+    <div class="x14-two">
+      <div class="x14-card"><b>ข้อบังคับสภาฯ</b>
+        <ul class="x14-ticks">
+          <li><span data-ico="check"></span><span>ความเห็นชอบ<small>เฉพาะเรื่องที่มาตรา 30 วรรคสองระบุ</small></span></li>
+          <li><span data-ico="check"></span><span>นายกสภาฯ ลงนาม</span></li>
+          <li><span data-ico="check"></span><span>ประกาศในราชกิจจานุเบกษา</span></li>
+        </ul><span class="law">ม.30</span></div>
+      <div class="x14-card"><b>มาตรฐานการบัญชี</b>
+        <ul class="x14-ticks">
+          <li><span data-ico="check"></span><span>ความเห็นชอบ</span></li>
+          <li><span data-ico="check"></span><span>ประกาศในราชกิจจานุเบกษา</span></li>
+        </ul><span class="law">ม.34 วรรคสาม</span></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>สภาฯ มีอำนาจหน้าที่กำหนดมาตรฐานการบัญชี มาตรฐานการสอบบัญชี และมาตรฐานอื่นที่เกี่ยวกับวิชาชีพบัญชี <span class="law">ม.7 (3)</span> มาตรา 34 เขียนขั้นตอนของมาตรฐานการบัญชี</span></p>
+  </section>
+
+  <!-- 4 ประกาศและวันเริ่มใช้ -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>เรื่องที่ 4 · ประกาศและวันเริ่มใช้</small><h2 id="h4">วันลงนาม วันประกาศ และวันเริ่มใช้ เป็นคนละวันได้</h2></div></div>
+    <p class="cap">ข้อบังคับเขียนวันเริ่มใช้ไว้ในตัวเอง ฉบับในตัวอย่างนี้เขียนไว้ในข้อ 2 วันนี้คือวันที่ 3 ข้อบังคับยังไม่ใช้บังคับ แตะวันอื่นเพื่อย้ายวันนี้</p>
+    <p class="lbl">ข้อ 2 ของข้อบังคับฉบับนี้ ให้ใช้บังคับตั้งแต่</p>
+    <div class="chips" data-pick="cl">
+      <button data-v="0" aria-pressed="true">วันถัดจากวันประกาศในราชกิจจานุเบกษา</button>
+      <button data-v="1">วันที่ที่ข้อ 2 ระบุไว้เอง ในตัวอย่างนี้คือวันที่ 1 ของเดือนถัดไป</button>
+    </div>
+    <div class="x14-days" data-pick="day">
+      <button class="x14-day" data-v="0" aria-pressed="true"><span class="x14-d">วันที่ 3</span><span class="x14-dot"></span><span class="x14-ev"><span>สภาฯ อนุมัติร่าง</span><span class="x14-today">วันนี้</span><span class="x14-eff">เริ่มใช้บังคับ</span></span></button>
+      <button class="x14-day" data-v="1"><span class="x14-d">วันที่ 10</span><span class="x14-dot"></span><span class="x14-ev"><span>นายกสภาฯ ลงนาม</span><small>วันที่ท้ายข้อบังคับ</small><span class="x14-today">วันนี้</span><span class="x14-eff">เริ่มใช้บังคับ</span></span></button>
+      <button class="x14-day" data-v="2"><span class="x14-d">วันที่ 20</span><span class="x14-dot"></span><span class="x14-ev"><span>ลงประกาศในราชกิจจานุเบกษา</span><span class="x14-today">วันนี้</span><span class="x14-eff">เริ่มใช้บังคับ</span></span></button>
+      <button class="x14-day" data-v="3"><span class="x14-d">วันที่ 21</span><span class="x14-dot"></span><span class="x14-ev"><span>วันถัดจากวันประกาศ</span><span class="x14-today">วันนี้</span><span class="x14-eff">เริ่มใช้บังคับ</span></span></button>
+      <button class="x14-day" data-v="4"><span class="x14-d">วันที่ 1 เดือนถัดไป</span><span class="x14-dot"></span><span class="x14-ev"><span>วันแรกของเดือนถัดไป</span><small id="dayLast" hidden>วันที่ที่ข้อ 2 ระบุ</small><span class="x14-today">วันนี้</span><span class="x14-eff">เริ่มใช้บังคับ</span></span></button>
+    </div>
+    <p class="result" id="dayR" role="status"></p>
+
+    <h3 style="margin-top:8px">ข้อ 2 ของข้อบังคับจริงสองฉบับ</h3>
+    <div class="x14-heads">
+      <div class="x14-head"><i>ให้เริ่มวันถัดจากวันประกาศ</i><b>ข้อบังคับเรื่องหลักเกณฑ์และคุณสมบัติของผู้สอบบัญชีรับอนุญาต (ฉบับที่ 3) พ.ศ. 2563</b><q>ข้อบังคับนี้ให้ใช้บังคับตั้งแต่<mark>วันถัดจากวันประกาศในราชกิจจานุเบกษา</mark>เป็นต้นไป</q></div>
+      <div class="x14-head"><i>ระบุวันที่ไว้เอง</i><b>ข้อบังคับเรื่องค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556</b><span>ข้อ 2 ให้ใช้บังคับตั้งแต่<mark>วันที่ที่ระบุไว้</mark>เป็นต้นไป วันนั้นอยู่หลังวันที่ลงประกาศในราชกิจจานุเบกษา</span></div>
+    </div>
+  </section>
+
+  <!-- 5 หลังเริ่มใช้ -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>เรื่องที่ 5 · หลังเริ่มใช้</small><h2 id="h5">ได้รับแจ้งว่ามาตรฐานการบัญชีมีปัญหา คณะกรรมการต้องดำเนินการ</h2></div></div>
+    <p class="cap">มาตรฐานการบัญชีใช้บังคับแล้ว ต่อมาพีทพบว่าการปฏิบัติตามมีปัญหา พีทเป็นผู้ทำบัญชี อยู่ในรายชื่อที่มาตรา 34 วรรคสี่เขียนไว้</p>
+    <div class="x14-flow">
+      <div class="x14-blk">
+        <b>เมื่อได้รับแจ้งจาก</b>
+        <div class="facts"><span class="x14-me">ผู้ทำบัญชี</span><span>ผู้มีหน้าที่จัดทำบัญชี</span><span>ผู้ใช้ข้อมูลทางการเงิน</span><span>กรมการประกันภัย</span><span>กรมพัฒนาธุรกิจการค้า</span><span>กรมสรรพากร</span><span>ธนาคารแห่งประเทศไทย</span><span>สำนักงานการตรวจเงินแผ่นดิน</span><span>สำนักงาน ก.ล.ต.</span><span>หรือหน่วยงานอื่นใด</span></div>
+        <small>ผู้มีหน้าที่จัดทำบัญชี คือผู้มีหน้าที่จัดให้มีการทำบัญชี เช่น บริษัท พาวเด้ออ้าย จำกัด ส่วนผู้ทำบัญชี คือผู้รับผิดชอบในการทำบัญชีของผู้มีหน้าที่จัดทำบัญชี เช่น พีท <span class="law">พ.ร.บ.การบัญชี พ.ศ. 2543 ม.4 · ม.8</span></small>
+      </div>
+      <span class="x14-down"></span>
+      <div class="x14-blk">
+        <b>แจ้งว่า</b>
+        <p class="x14-quote">มีปัญหาเกี่ยวกับการปฏิบัติตามมาตรฐานการบัญชีที่กำหนดไว้ซึ่งอาจก่อให้เกิดความเสียหาย <mark>หรือ</mark>การปฏิบัติตามมาตรฐานดังกล่าวทำให้เกิดความเสียหายต่อเศรษฐกิจของประเทศ <mark>หรือ</mark>เป็นอุปสรรคต่อการประกอบกิจการ</p>
+      </div>
+      <span class="x14-down"></span>
+      <div class="x14-blk x14-must">
+        <b>คณะกรรมการกำหนดมาตรฐานการบัญชีต้อง</b>
+        <ul class="x14-prob">
+          <li><span data-ico="check"></span><span>ดำเนินการตรวจสอบและรับฟังความคิดเห็นของผู้ที่เกี่ยวข้อง</span></li>
+          <li><span data-ico="check"></span><span>และกำหนด ปรับปรุง หรือพัฒนามาตรฐานการบัญชีโดยพลัน<small>โดยพลัน คือทันที</small></span></li>
+        </ul>
+        <span class="law" style="justify-self:start">ม.34 วรรคสี่</span>
+      </div>
+      <span class="x14-down"></span>
+      <a class="x14-back" href="#s3"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#DCEBF3"/><path d="M30 24a8 8 0 11-3-7.500" fill="none" stroke="#2F6B8A" stroke-width="3" stroke-linecap="round"/><path d="M28 10v7h-7" fill="none" stroke="#2F6B8A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>มาตรฐานที่ปรับปรุงแล้ว กลับไปเรื่องที่ 3</b>ต้องได้ความเห็นชอบ และประกาศในราชกิจจานุเบกษา จึงใช้บังคับได้ <span class="law">ม.34 วรรคสาม</span></span></a>
+    </div>
+  </section>
+
+  <!-- ลองดู -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองดู</span>
+    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- จำจากภาพ -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">จำจากภาพ</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="book"></span><span>สภาฯ อนุมัติร่างข้อบังคับแล้ว ยังใช้บังคับไม่ได้ทันที ดูก่อนว่าเป็นกฎชนิดไหน ใครเป็นคนออก</span></li>
+      <li><span class="ico" data-ico="pen"></span><span>ข้อบังคับสภาฯ ต้องให้นายกสภาฯ ลงนาม และประกาศในราชกิจจานุเบกษา <span class="law">ม.30 วรรคสาม</span></span></li>
+      <li><span class="ico" data-ico="shield"></span><span>ข้อบังคับที่ต้องได้ความเห็นชอบจากคณะกรรมการกำกับดูแลฯ ก่อน: ค่าบำรุงสมาชิกหรือค่าธรรมเนียม · เลือกตั้งนายกสภาฯ และกรรมการ · ฝึกอบรมของผู้สอบบัญชีรับอนุญาต · ขึ้นทะเบียนผู้ทำบัญชี <span class="law">ม.30 วรรคสอง</span></span></li>
+      <li><span class="ico" data-ico="check"></span><span>มาตรฐานการบัญชี ต้องได้ความเห็นชอบจากคณะกรรมการกำกับดูแลฯ และประกาศในราชกิจจานุเบกษา ครบทั้งสองอย่าง <span class="law">ม.34 วรรคสาม</span></span></li>
+      <li><span class="ico" data-ico="clock"></span><span>วันลงนาม วันประกาศ และวันเริ่มใช้ เป็นคนละวันได้ วันเริ่มใช้ดูที่ตัวข้อบังคับ</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>ได้รับแจ้งว่ามาตรฐานการบัญชีมีปัญหา คณะกรรมการกำหนดมาตรฐานการบัญชีต้องตรวจสอบ รับฟังความคิดเห็น และกำหนด ปรับปรุง หรือพัฒนามาตรฐาน <span class="law">ม.34 วรรคสี่</span></span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>เลขมาตราในหน้านี้มาจากพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547 ยกเว้นที่เขียนชื่อกฎหมายอื่นกำกับไว้</li>
+      <li>“คณะกรรมการกำกับดูแลฯ” คือคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</li>
+      <li>มาตรา 22 วรรคสาม คือข้อบังคับเรื่องคุณสมบัติและลักษณะต้องห้ามของนายกสภาฯ และกรรมการ และหลักเกณฑ์และวิธีการเลือกตั้ง มาตรา 43 วรรคหนึ่ง คือข้อบังคับเรื่องการฝึกอบรมหรือประชุมสัมมนาของผู้สอบบัญชีรับอนุญาต มาตรา 44 วรรคสอง คือข้อบังคับเรื่องการขึ้นทะเบียนผู้ทำบัญชี มาตรา 38 วรรคสอง คือข้อบังคับเรื่องแบบและหลักเกณฑ์การขอรับใบอนุญาต การอนุญาต และการออกใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต</li>
+      <li>ข้อบังคับที่ยกหัวเอกสารและข้อ 2 มาให้ดู คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยหลักเกณฑ์ และวิธีการเข้ารับการฝึกอบรมหรือเข้าร่วมประชุมสัมมนาของผู้สอบบัญชีรับอนุญาต (ฉบับที่ 3) พ.ศ. 2565 · ว่าด้วยหลักเกณฑ์และคุณสมบัติของผู้สอบบัญชีรับอนุญาต (ฉบับที่ 3) พ.ศ. 2563 · ว่าด้วยค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556</li>
+      <li>ความหมายของผู้มีหน้าที่จัดทำบัญชีและผู้ทำบัญชี มาจากพระราชบัญญัติการบัญชี พ.ศ. 2543 มาตรา 4 และมาตรา 8</li>
+      <li>ชื่อหน่วยงานเขียนตามตัวบท · สำนักงาน ก.ล.ต. คือสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์</li>
+      <li>แพรกับพีทเป็นกรณีสมมติ วันที่ในตัวอย่างเป็นวันสมมติ</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>บทถัดไป</small>
+    <b>อยากลงสภาฯ ต้องรู้อะไร</b>
+    <p>จากสมาชิกคนหนึ่ง เรามีส่วนร่วมกับสภาฯ ได้แค่ไหน</p>
+    <a class="btn" href="law2v-r15.html">ไปบทถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  V.spy('#steps');
+
+  /* need = สิ่งที่ต้องมี (เรียงตามที่มาตราเขียน ไม่ได้อ้างว่าเป็นลำดับก่อนหลัง) · st = สถานะจากปุ่ม · ids = ปุ่มของแต่ละอย่าง
+     ซ่อนปุ่มที่ไม่อยู่ใน need แล้วคืนรายการที่ยังขาด ภาพตัดสินจากความครบเท่านั้น */
+  function paint(need, st, ids) {
+    var miss = [], k;
+    for (k in ids) { $(ids[k]).hidden = need.indexOf(k) < 0; }
+    need.forEach(function (n) { if (!st[n]) miss.push(n); });
+    return miss;
+  }
+  function list(miss, names) { return miss.map(function (m) { return names[m]; }).join(' · '); }
+
+  /* เรื่องที่ 2: ข้อบังคับ (ม.30 วรรคสอง · วรรคสาม) · sp = อยู่ในเรื่องที่มาตรา 30 วรรคสองระบุ */
+  var SUB = [
+    { sp: true, name: 'การฝึกอบรมหรือประชุมสัมมนาของผู้สอบบัญชีรับอนุญาต' },
+    { sp: true, name: 'ค่าบำรุงสมาชิกหรือค่าธรรมเนียม' },
+    { sp: true, name: 'การขึ้นทะเบียนผู้ทำบัญชี' },
+    { sp: true, name: 'คุณสมบัติและการเลือกตั้งนายกสภาฯ และกรรมการ' },
+    { sp: false, name: 'การขอรับและออกใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต' }];
+  var RN = { app: 'ความเห็นชอบของคณะกรรมการกำกับดูแลฯ', sig: 'นายกสภาฯ ลงนาม', gaz: 'ประกาศในราชกิจจานุเบกษา' };
+  var sub = 0, regSt = null;
+  function drawReg() {
+    if (!regSt) return;
+    var s = SUB[sub], miss = paint(s.sp ? ['app', 'sig', 'gaz'] : ['sig', 'gaz'], regSt, { app: 'rApp', sig: 'rSig', gaz: 'rGaz' });
+    $('grpIn').className = 'x14-grp' + (s.sp ? ' x14-hot' : '');
+    $('grpOut').className = 'x14-grp' + (s.sp ? '' : ' x14-hot');
+    $('subWhy').textContent = 'เรื่อง' + s.name + (s.sp ? ' อยู่ในรายการของมาตรา 30 วรรคสอง ร่างนี้ต้องได้ความเห็นชอบด้วย' : ' ไม่อยู่ในรายการของมาตรา 30 วรรคสอง ภาพข้างล่างจึงไม่มีความเห็นชอบ เหลือลงนามกับประกาศ');
+    $('rAppS').textContent = 'ร่างนี้เป็นเรื่อง' + s.name;
+    if (!miss.length) gate('gateR', true, 'ครบแล้ว ใช้บังคับได้', (s.sp ? 'ได้ความเห็นชอบ ลงนาม และประกาศแล้ว' : 'สภาฯ อนุมัติ ลงนาม และประกาศแล้ว') + ' วันเริ่มใช้ ดูเรื่องที่ 4');
+    else gate('gateR', false, 'ยังใช้บังคับไม่ได้', 'สภาฯ อนุมัติร่างแล้ว แต่ยังขาด: ' + list(miss, RN));
+  }
+  V.pick('sub', function (v) { sub = v; drawReg(); });
+  V.togs('reg', function (st) { regSt = st; drawReg(); });
+
+  /* เรื่องที่ 3: มาตรฐานการบัญชี (ม.34 วรรคหนึ่งถึงสาม · ม.60 (3)) */
+  var SN = { app: 'ความเห็นชอบของคณะกรรมการกำกับดูแลฯ', gaz: 'ประกาศในราชกิจจานุเบกษา' };
+  V.togs('std', function (st) {
+    var miss = paint(['app', 'gaz'], st, { app: 'sApp', gaz: 'sGaz' });
+    if (!miss.length) gate('gateS', true, 'ครบแล้ว ใช้บังคับได้', 'ได้ความเห็นชอบ และประกาศในราชกิจจานุเบกษาแล้ว');
+    else gate('gateS', false, 'ยังใช้บังคับไม่ได้', 'ปรับปรุงแล้ว แต่ยังขาด: ' + list(miss, SN));
+  });
+
+  /* เรื่องที่ 4: วันสมมติ อนุมัติ 3 · ลงนาม 10 · ลงราชกิจจานุเบกษา 20 · ข้อ 2 แบบ 0 = วันถัดจากวันประกาศ (21) แบบ 1 = ข้อ 2 ระบุวันที่เอง (สมมติเป็นวันที่ 1 ของเดือนถัดไป) */
+  var DAY = [
+    ['สภาฯ อนุมัติร่างแล้ว ยังไม่ได้ลงนาม ยังไม่ได้ประกาศ ข้อบังคับยังไม่ใช้บังคับ', 'สภาฯ อนุมัติร่างแล้ว ยังไม่ได้ลงนาม ยังไม่ได้ประกาศ ข้อบังคับยังไม่ใช้บังคับ'],
+    ['ลงนามแล้ว แต่ยังไม่ได้ประกาศในราชกิจจานุเบกษา ข้อบังคับยังไม่ใช้บังคับ', 'ลงนามแล้ว แต่ยังไม่ได้ประกาศในราชกิจจานุเบกษา ข้อบังคับยังไม่ใช้บังคับ'],
+    ['ประกาศวันนี้ แต่ข้อ 2 ให้เริ่มวันถัดไป วันนี้ยังไม่ใช้บังคับ เริ่มวันที่ 21', 'ประกาศวันนี้ แต่ข้อ 2 ระบุให้เริ่มวันที่ 1 ของเดือนถัดไป วันนี้ยังไม่ใช้บังคับ'],
+    ['วันนี้เป็นวันถัดจากวันประกาศ ข้อบังคับเริ่มใช้บังคับวันนี้', 'ประกาศไปแล้วเมื่อวาน แต่ข้อ 2 ระบุให้เริ่มวันที่ 1 ของเดือนถัดไป วันนี้ยังไม่ใช้บังคับ'],
+    ['ข้อบังคับใช้บังคับมาตั้งแต่วันที่ 21 แล้ว', 'วันนี้ถึงวันที่ข้อ 2 ระบุ ข้อบังคับเริ่มใช้บังคับวันนี้']];
+  var day = 0, cl = 0, rows = [].slice.call(document.querySelectorAll('.x14-day'));
+  function drawDay() {
+    var eff = cl === 0 ? 3 : 4, on = day >= eff;
+    rows.forEach(function (b, i) { b.className = 'x14-day ' + (i <= day ? 'x14-past' : 'x14-future') + (i === eff ? ' x14-effrow' : ''); });
+    $('dayLast').hidden = cl !== 1;
+    $('dayR').className = 'result' + (on ? ' ok' : ''); $('dayR').textContent = DAY[day][cl];
+  }
+  V.pick('cl', function (v) { cl = v; drawDay(); });
+  V.pick('day', function (v) { day = v; drawDay(); });
+
+  /* ลองดู */
+  V.quiz($('quiz'), [
+    { f: 'ข้อบังคับฉบับหนึ่ง นายกสภาฯ ลงนามวันที่ 8 ลงประกาศในราชกิจจานุเบกษาวันที่ 15 ข้อ 2 เขียนว่าให้ใช้บังคับตั้งแต่วันถัดจากวันประกาศในราชกิจจานุเบกษาเป็นต้นไป', q: 'ข้อบังคับฉบับนี้เริ่มใช้บังคับวันไหน', o: [
+      ['วันที่ 8 วันที่นายกสภาฯ ลงนาม', 0, 'วันที่ 8 นายกสภาฯ ลงนามแล้ว แต่ยังไม่ได้ประกาศในราชกิจจานุเบกษา ข้อบังคับต้องมีทั้งลงนามและประกาศจึงใช้บังคับได้ (มาตรา 30 วรรคสาม)'],
+      ['วันที่ 15 วันที่ลงประกาศ', 0, 'ข้อ 2 ของฉบับนี้ให้เริ่มวันถัดจากวันประกาศ วันที่ 15 เป็นวันประกาศ จึงยังไม่เริ่ม'],
+      ['วันที่ 16 วันถัดจากวันประกาศ', 1, 'ลงนามและประกาศครบแล้วตามมาตรา 30 วรรคสาม และข้อ 2 ของฉบับนี้ให้เริ่มวันถัดจากวันประกาศ คือวันที่ 16']] },
+    { multi: true, f: 'สมาชิกสามัญ 150 คนเข้าชื่อเสนอร่างข้อบังคับว่าด้วยค่าบำรุงสมาชิก ต่อมาสภาฯ อนุมัติร่างแล้ว ยังไม่มีอย่างอื่น', q: 'แตะทุกอย่างที่ยังต้องมี ก่อนข้อบังคับนี้ใช้บังคับได้', o: [
+      ['ความเห็นชอบของคณะกรรมการกำกับดูแลฯ', 1, 'ร่างข้อบังคับเกี่ยวกับค่าบำรุงสมาชิกต้องได้รับความเห็นชอบจากคณะกรรมการกำกับดูแลฯ ก่อน (มาตรา 30 วรรคสอง)'],
+      ['นายกสภาฯ ลงนาม', 1, 'ข้อบังคับต้องให้นายกสภาฯ ลงนาม (มาตรา 30 วรรคสาม)'],
+      ['ประกาศในราชกิจจานุเบกษา', 1, 'ข้อบังคับต้องประกาศในราชกิจจานุเบกษา (มาตรา 30 วรรคสาม)'],
+      ['ให้คณะกรรมการสภาฯ เสนอร่างเดียวกันอีกรอบ', 0, 'สมาชิกสามัญไม่น้อยกว่าหนึ่งร้อยคนเข้าชื่อเสนอร่างข้อบังคับได้เอง (มาตรา 29) ร่างนี้มีสมาชิกสามัญ 150 คนเสนอแล้ว']],
+      ex: 'เรื่องค่าบำรุงสมาชิกอยู่ในรายการของมาตรา 30 วรรคสอง จึงต้องมีทั้งความเห็นชอบของคณะกรรมการกำกับดูแลฯ นายกสภาฯ ลงนาม และประกาศในราชกิจจานุเบกษา' },
+    { f: 'ข้อบังคับอีกฉบับหนึ่ง นายกสภาฯ ลงนามแล้ว และลงประกาศในราชกิจจานุเบกษาวันที่ 12 แล้ว วันนี้คือวันที่ 13 ของเดือนเดียวกัน ข้อมูลมีเท่านี้', q: 'วันนี้ข้อบังคับฉบับนี้ใช้บังคับแล้วหรือยัง', o: [
+      ['ใช้บังคับแล้ว วันนี้เป็นวันถัดจากวันประกาศ', 0, 'จะเริ่มวันถัดจากวันประกาศก็ต่อเมื่อข้อบังคับฉบับนี้เขียนไว้อย่างนั้น ข้อมูลที่มียังไม่ได้บอกว่าฉบับนี้เขียนวันเริ่มใช้ไว้ว่าอะไร'],
+      ['ยังตอบไม่ได้ ต้องเปิดข้อบังคับฉบับนี้ดูก่อนว่าเขียนให้ใช้บังคับตั้งแต่วันไหน', 1, 'ลงนามและประกาศครบแล้ว แต่วันเริ่มใช้เขียนอยู่ในตัวข้อบังคับ บางฉบับให้เริ่มวันถัดจากวันประกาศ บางฉบับระบุวันที่ไว้เอง จึงต้องเปิดดูฉบับนี้ก่อน'],
+      ['ยังไม่ใช้บังคับ ต้องรอถึงวันที่ 1 ของเดือนถัดไป', 0, 'วันที่ 1 ของเดือนถัดไปเป็นวันของฉบับในตัวอย่างข้างบน ฉบับนี้เริ่มวันไหน ต้องดูที่ตัวข้อบังคับฉบับนี้']] }
+  ]);
+})();
+</script>
+</body>
+</html>
