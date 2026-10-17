@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>กฎหมาย 2 รุ่นภาพ | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<link rel="stylesheet" href="law2v-engine.css">
+</head>
+<body>
+<!-- กฎหมาย 2 รุ่นภาพ · บทที่วาดจากชุดเนื้อหา (ภาษีหัก ณ ที่จ่าย W01–W19 · ภาษีธุรกิจเฉพาะ S01–S11)
+     หน้าเดียวใช้ทุกบท: law2v-c.html?c=W01 · ข้อมูลของบทอยู่ที่ law2v-data/<รหัส>.js (สร้างจากตัวสร้าง อย่าแก้ด้วยมือ) -->
+<main id="app"><p class="ve-load">กำลังเปิดบท</p></main>
+<script src="law2v.js"></script>
+<script src="law2v-data/toc.js"></script>
+<script>
+/* โหลดข้อมูลของบทแล้วจึงโหลดตัววาด เขียนแท็กตอน parser ยังทำงาน เพื่อให้ทุกอย่างพร้อมก่อนเหตุการณ์ load */
+(function () {
+  var m = /[?&]c=([A-Z]\d\d)\b/.exec(location.search), code = m ? m[1] : 'W01';
+  /* สาย 1 (วิชาชีพบัญชี) เป็นหน้าทำมือ law2v-rNN.html ตั้งแต่ 14 ต.ค. 2569 · ลิงก์เก่า ?c=R.. ของฉบับตัววาดกลางพาไปสถานีที่รับเนื้อหานั้น */
+  var RM = { R01: '01', R02: '02', R03: '02', R04: '03', R05: '04', R06: '05', R07: '06', R08: '07', R09: '08', R10: '09' };
+  if (code.charAt(0) === 'R') { location.replace('law2v-r' + (RM[code] || '01') + '.html' + location.hash); return; }
+  document.write('<script src="law2v-data/' + code + '.js"><\/script><script src="law2v-engine.js"><\/script>');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ต้นแบบ ลองเอง ห้ารอบ | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+.xd-bar { display:grid; gap:4px; } .xd-bar .t { display:flex; justify-content:space-between; font-weight:600; font-size:15px; }
+.xd-bar .tr { position:relative; height:14px; border-radius:99px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); overflow:hidden; }
+.xd-bar .tr i { position:absolute; left:0; top:0; bottom:0; background:var(--hue); border-radius:99px; transition:width .2s ease; }
+.xd-bar .tr em { position:absolute; top:-3px; bottom:-3px; width:3px; background:var(--ink); }
+.xd-pic { display:grid; gap:12px; padding:14px; border-radius:18px; background:var(--soft); }
+.xd-res { padding:12px 14px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.5; } .xd-res b { font-family:var(--display); font-size:17px; }
+.xd-res.ok { background:var(--good-soft); color:var(--good); } .xd-res.no { background:var(--bad-soft); color:var(--bad-ink); }
+.xd-note { font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <div class="top"><a href="law2v-index.html#R">‹ สายวิชาชีพบัญชี</a><span>ต้นแบบ · ยังไม่ใช่ฉบับจริง</span></div>
+  <p class="kick">ต้นแบบฟีเจอร์ · เริ่มจากว่าง + ลองเอง ห้ารอบ</p>
+  <h1>ต้องอบรมปีละกี่ชั่วโมง</h1>
+  <p class="sub">ใช้เนื้อหาเดียวกับสถานี 1.2 ส่วนที่ 5 เพื่อให้ผู้ก่อตั้งลองกดดูวิธีเล่นแบบใหม่</p>
+</header>
+
+<section class="fig" id="s1" data-step="s1">
+  <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="xdCase"></p></div>
+  <p class="x02-rule note"><span data-ico="info"></span><span>ทั้งปีต้องมีไม่น้อยกว่า 40 ชั่วโมง ในนั้นเป็นชั่วโมงทางการไม่น้อยกว่า 20 ชั่วโมง ซึ่งต้องมีการบัญชีหรือการสอบบัญชีไม่น้อยกว่า 10 ชั่วโมง และจรรยาบรรณไม่น้อยกว่า 1 ชั่วโมง ชั่วโมงทางการส่วนที่เกิน 20 นับรวมเป็นไม่เป็นทางการได้ <span class="law">ข้อบังคับฝึกอบรมฯ ข้อ 4 · 10 · 13</span></span></p>
+  <p class="lbl">ใส่ชั่วโมงของแพรทีละอย่าง เริ่มจากศูนย์</p>
+  <div class="nums" data-nums="xd">
+    <div data-k="f" data-min="0" data-max="44" data-v="0" data-unit="ชั่วโมง">ชั่วโมงทางการ</div>
+    <div data-k="i" data-min="0" data-max="44" data-v="0" data-unit="ชั่วโมง">ชั่วโมงไม่เป็นทางการ</div>
+  </div>
+  <div class="togs" data-togs="xd">
+    <button data-k="acc" aria-pressed="false"><span>ในชั่วโมงทางการ มีการบัญชีหรือการสอบบัญชีครบ 10 ชั่วโมง</span></button>
+    <button data-k="eth" aria-pressed="false"><span>ในชั่วโมงทางการ มีจรรยาบรรณอย่างน้อย 1 ชั่วโมง</span></button>
+  </div>
+  <div class="xd-pic" aria-hidden="true">
+    <div class="xd-bar"><div class="t"><span>ทางการ</span><span id="xdF"></span></div><div class="tr"><i id="xdFb"></i><em style="left:45.45%"></em></div></div>
+    <div class="xd-bar"><div class="t"><span>รวมทั้งปี</span><span id="xdT"></span></div><div class="tr"><i id="xdTb"></i><em style="left:90.9%"></em></div></div>
+    <p class="xd-note">เส้นดำ: ทางการ 20 ชั่วโมง · รวม 40 ชั่วโมง</p>
+  </div>
+  <div class="xd-res" id="xdRes" role="status" aria-live="polite"></div>
+  <div id="xdRounds"></div>
+</section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); }, S = { f: 0, i: 0, acc: false, eth: false };
+  function judge(s) {
+    var miss = [];
+    if (s.f < 20) miss.push('ชั่วโมงทางการยังขาดอีก ' + (20 - s.f) + ' ชั่วโมง');
+    if (!s.acc) miss.push('ยังไม่มีการบัญชีหรือการสอบบัญชีครบ 10 ชั่วโมง');
+    if (!s.eth) miss.push('ยังไม่มีจรรยาบรรณ');
+    if (s.f + s.i < 40) miss.push('รวมยังขาดอีก ' + (40 - s.f - s.i) + ' ชั่วโมง');
+    return miss;
+  }
+  var R = V.rounds('xdRounds', {
+    title: 'ลองเอง ห้ารอบ',
+    show: function (k, v) { return k === 'f' ? 'ทางการ ' + v + ' ชั่วโมง' : k === 'i' ? 'ไม่เป็นทางการ ' + v + ' ชั่วโมง' : k === 'acc' ? (v ? 'มีการบัญชีหรือการสอบบัญชีครบ 10' : 'การบัญชีหรือการสอบบัญชีไม่ครบ 10') : (v ? 'มีจรรยาบรรณ' : 'ไม่มีจรรยาบรรณ'); },
+    rounds: [
+      { case: 'ปี 20x5 แพรมีชั่วโมงทางการ 14 ชั่วโมง ไม่เป็นทางการ 30 ชั่วโมง ในชั่วโมงทางการมีการบัญชี 10 ชั่วโมง และจรรยาบรรณ 1 ชั่วโมง', want: { f: 14, i: 30, acc: true, eth: true }, note: 'รวม 44 ชั่วโมง เกิน 40 แล้ว แต่ทางการยังไม่ถึง 20 ชั่วโมงที่ไม่เป็นทางการมีมากก็ช่วยฝั่งทางการไม่ได้' },
+      { case: 'ถ้าแพรไปอบรมทางการเพิ่มจน<mark>ทางการเป็น 20 ชั่วโมง ไม่เป็นทางการเหลือ 20 ชั่วโมง</mark> เรื่องอื่นเหมือนรอบก่อน', want: { f: 20, i: 20, acc: true, eth: true }, note: 'ถึงเส้นพอดีทั้งสองเส้น ถือว่าครบ เพราะกฎเขียนว่าไม่น้อยกว่า' },
+      { case: 'ถ้า<mark>ทางการเป็น 26 ชั่วโมง ไม่เป็นทางการ 14 ชั่วโมง</mark>', want: { f: 26, i: 14, acc: true, eth: true }, note: 'ไม่เป็นทางการมีแค่ 14 แต่ทางการเกินมา 6 ชั่วโมง ส่วนที่เกินนับรวมได้ รวมจึงถึง 40 ผลไม่เปลี่ยนจากรอบก่อน' },
+      { case: 'ถ้าทางการ 20 ไม่เป็นทางการ 30 แต่<mark>ในชั่วโมงทางการไม่มีจรรยาบรรณเลย</mark>', want: { f: 20, i: 30, acc: true, eth: false }, note: 'ชั่วโมงถึงทุกเส้น แต่ขาดจรรยาบรรณข้อเดียวก็ยังไม่ครบ' },
+      { case: 'ถ้าแพรมี<mark>แต่ชั่วโมงทางการ 40 ชั่วโมง ไม่เป็นทางการ 0 ชั่วโมง</mark> มีการบัญชีและจรรยาบรรณครบ', want: { f: 40, i: 0, acc: true, eth: true }, note: 'ไม่มีชั่วโมงไม่เป็นทางการเลยก็ครบได้ เพราะทางการส่วนที่เกิน 20 นับมาแทนได้ทั้งหมด' }
+    ]
+  });
+  function paint() {
+    $('xdF').textContent = S.f + ' ชั่วโมง'; $('xdT').textContent = (S.f + S.i) + ' ชั่วโมง';
+    $('xdFb').style.width = Math.min(100, S.f / 44 * 100) + '%'; $('xdTb').style.width = Math.min(100, (S.f + S.i) / 44 * 100) + '%';
+    var any = S.f || S.i || S.acc || S.eth;
+    $('xdCase').innerHTML = any ? 'ปี 20x5 แพรมีชั่วโมงทางการ <b>' + S.f + '</b> ชั่วโมง ไม่เป็นทางการ <b>' + S.i + '</b> ชั่วโมง' + (S.acc ? ' มีการบัญชีหรือการสอบบัญชีครบ 10 ชั่วโมง' : '') + (S.eth ? ' มีจรรยาบรรณ' : '') + ' แพรอบรมครบหรือยัง' : 'ปี 20x5 แพรยังไม่ได้ใส่ชั่วโมงอบรมเลย ลองใส่ทีละอย่างแล้วดูว่าครบเมื่อไร';
+    var miss = judge(S), v;
+    if (!miss.length) { $('xdRes').className = 'xd-res ok'; v = '<b>ครบแล้ว</b> ทางการ ' + S.f + ' ถึง 20 · รวม ' + (S.f + S.i) + ' ถึง 40 · มีการบัญชีและจรรยาบรรณ'; }
+    else { $('xdRes').className = 'xd-res' + (any ? ' no' : ''); v = '<b>' + (any ? 'ยังไม่ครบ' : 'ยังไม่ได้เริ่ม') + '</b> ' + miss.join(' · '); }
+    $('xdRes').innerHTML = v; R.update(S, v);
+  }
+  V.nums('xd', function (s) { S.f = s.f; S.i = s.i; paint(); });
+  V.togs('xd', function (s) { S.acc = s.acc; S.eth = s.eth; paint(); });
+})();
+</script>
+</body>
+</html>

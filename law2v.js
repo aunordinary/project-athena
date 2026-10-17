@@ -8,7 +8,20 @@
     book: 'M5 4.500h10.500a3 3 0 013 3V20H8a3 3 0 01-3-3zM5 17a3 3 0 013-3h10.500', card: 'M3.500 6h17v12h-17zM7 10.500h4M7 14h6M15.500 10.500h2',
     star: 'M12 3.500l2.600 5.300 5.900.900-4.300 4.100 1 5.800-5.200-2.700-5.200 2.700 1-5.800-4.300-4.100 5.900-.900z', mail: 'M3.500 6h17v12h-17zM3.500 7l8.500 6 8.500-6',
     clock: 'M12 3.500a8.500 8.500 0 100 17 8.500 8.500 0 000-17zM12 7.500V12l3 2', info: 'M12 3.500a8.500 8.500 0 100 17 8.500 8.500 0 000-17zM12 11v5M12 7.600v.300',
-    flag: 'M6 21V4M6 5h11l-2 3.500 2 3.500H6', pen: 'M4 20l1-4L16.500 4.500l3 3L8 19zM14 7l3 3'
+    flag: 'M6 21V4M6 5h11l-2 3.500 2 3.500H6', pen: 'M4 20l1-4L16.500 4.500l3 3L8 19zM14 7l3 3',
+    /* เพิ่ม 13 ต.ค. 2569 สำหรับแผ่นไอคอนของการ์ดแม่บท */
+    user: 'M12 12a4 4 0 100-8 4 4 0 000 8zM4.500 20c0-4 3.500-6 7.500-6s7.500 2 7.500 6',
+    users: 'M9 11a3.500 3.500 0 100-7 3.500 3.500 0 000 7zM2.500 20c0-3.500 3-5.500 6.500-5.500s6.500 2 6.500 5.500M16 4.300a3.500 3.500 0 010 6.600M18 14.800c2.200.700 3.500 2.300 3.500 5.200',
+    globe: 'M12 20.500a8.500 8.500 0 100-17 8.500 8.500 0 000 17zM3.500 12h17M12 3.500c-3.200 3-3.200 14 0 17M12 3.500c3.200 3 3.200 14 0 17',
+    calendar: 'M5 6h14v14H5zM5 10.500h14M9 3.500V8M15 3.500V8', doc: 'M7 3.500h7l4 4V20.500H7zM14 3.500v4h4M10 12.500h5M10 16h5',
+    coin: 'M12 20.500a8.500 8.500 0 100-17 8.500 8.500 0 000 17zM14.500 9.800c-.500-1-1.400-1.500-2.500-1.500-1.500 0-2.500.800-2.500 1.900s1 1.600 2.500 1.900 2.500.800 2.500 1.900-1 1.900-2.500 1.900c-1.200 0-2.100-.500-2.600-1.500M12 6.500v1.800M12 15.900v1.800',
+    bank: 'M4 10l8-5 8 5M5 10h14M7 10v7M12 10v7M17 10v7M4 20h16', scale: 'M12 4v16M7.500 20h9M5.500 7h13M5.500 7l-2.500 6a2.700 2.700 0 005 0zM18.500 7L16 13a2.700 2.700 0 005 0z',
+    ban: 'M12 20.500a8.500 8.500 0 100-17 8.500 8.500 0 000 17zM6 6l12 12', heart: 'M12 20s-7.500-4.400-7.500-9.700A4.200 4.200 0 0112 7.800a4.200 4.200 0 017.500 2.500C19.500 15.600 12 20 12 20z',
+    home: 'M4 11l8-7 8 7M6 9.500V20h12V9.500', id: 'M3.500 6h17v12h-17zM8.500 13a2 2 0 100-4 2 2 0 000 4zM5.500 16c.500-1.400 1.700-2 3-2s2.500.600 3 2M14 10h4M14 13.500h4',
+    search: 'M11 18a7 7 0 100-14 7 7 0 000 14zM16 16l5 5', percent: 'M6 18L18 6M8 9.500a1.500 1.500 0 100-3 1.500 1.500 0 000 3zM16 17.500a1.500 1.500 0 100-3 1.500 1.500 0 000 3z',
+    vote: 'M5 11.500h14V20H5zM9 11.500V5h6v6.500M9.800 8.200l1.600 1.600 3-3', chat: 'M5 5h14v10H10l-5 4z', building: 'M5 21V5h9v16M14 10h5v11M8 9h3M8 13h3M8 17h3',
+    gavel: 'M13 5l6 6M10 8l6 6M11.500 6.500l-5 5 6 6 5-5M4 20.500h8', hand: 'M8 12V6.500a1.500 1.500 0 013 0V11M11 11V5a1.500 1.500 0 013 0v6M14 11V6.500a1.500 1.500 0 013 0V14c0 4-2.500 6.500-6 6.500-3 0-4.500-1.500-6-4.500l-1.300-2.800a1.400 1.400 0 012.400-1.400L8 13.500',
+    plane: 'M3 12l18-8-6 17-3.500-7zM11.500 14L21 4', key: 'M14.500 14a5 5 0 10-4.300-2.500L3.500 18v2.500H7V18h2.500v-2.500h2z', tool: 'M14.500 6.500a4 4 0 005 5L10 21l-3-3 9.500-9.500zM14.500 6.500L17 4a4 4 0 00-5 5'
   };
   function icon(n) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + (P[n] || P.info) + '"/></svg>'; }
   [].forEach.call(document.querySelectorAll('[data-ico]'), function (e) { e.innerHTML = icon(e.getAttribute('data-ico')); });
@@ -109,11 +122,138 @@
 
   /* แถบขั้นด้านบน: ไฮไลต์ขั้นที่กำลังอ่าน */
   function spy(navSel) {
-    var nav = document.querySelector(navSel); if (!nav || !('IntersectionObserver' in window)) return;
+    var nav = document.querySelector(navSel); if (!nav) return;
+    /* ปุ่มกลับผังของสาย: อยู่ในแถบที่ติดขอบบนตลอด กลับได้จากทุกตำแหน่งของหน้า */
+    if (!nav.querySelector('.home')) {
+      var mm = /law2v-r\d\d\.html/.test(location.pathname) ? 'R' : ((/[?&]c=([A-Z])\d\d\b/.exec(location.search) || [])[1] || '');
+      var hm = document.createElement('a'); hm.className = 'home'; hm.href = 'law2v-index.html' + (mm ? '#' + mm : ''); hm.setAttribute('aria-label', 'กลับไปผังสถานีของสายนี้');
+      hm.innerHTML = '<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.500l8-7 8 7M6.500 10v9.500h11V10"/></svg></i>ผังสาย';
+      nav.insertBefore(hm, nav.firstChild);
+    }
+    if (!('IntersectionObserver' in window)) return;
     var links = [].slice.call(nav.querySelectorAll('a[href^="#"]')), map = {};
     links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
     var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; links.forEach(function (a) { a.removeAttribute('aria-current'); }); var a = map[e.target.getAttribute('data-step')]; if (a) a.setAttribute('aria-current', 'step'); }); }, { rootMargin: '-35% 0px -55% 0px' });
-    [].forEach.call(document.querySelectorAll('[data-step]'), function (s) { io.observe(s); });
+    [].forEach.call(document.querySelectorAll('section[data-step]'), function (s) { io.observe(s); });
   }
-  window.LAW2V = { icon: icon, pick: pick, quiz: quiz, face: face, togs: togs, spy: spy };
+  /* จุดเช็กระหว่างทาง: คำถามสั้นหนึ่งข้อท้ายส่วน แตะตัวเลือกแล้วเห็นผลกับเหตุผลทันที ตอบใหม่ได้ ไม่มีคะแนน
+     V.check('id ของกล่องว่าง', { f: 'ข้อเท็จจริงสั้น ๆ (ไม่ใส่ก็ได้)', q: 'คำถาม', o: [['ตัวเลือก', 1, 'เหตุผล'], ['ตัวเลือก', 0, 'ตอบคนที่เลือกข้อนี้ว่าพลาดตรงไหน']] })
+     สองตัวเลือกวางคู่กัน สามตัวเลือกขึ้นไปเรียงลง */
+  function check(root, it) {
+    if (typeof root === 'string') root = document.getElementById(root);
+    if (!root) return;
+    root.className = (root.className ? root.className + ' ' : '') + 'ckp';
+    var h = '<small>' + icon('check') + 'ลองเอง</small>' + (it.f ? '<p class="ckf">' + it.f + '</p>' : '') + '<p class="ckq">' + it.q + '</p><div class="ckb' + (it.o.length > 2 ? ' col' : '') + '">';
+    it.o.forEach(function (o, i) { h += '<button type="button" data-i="' + i + '" aria-pressed="false">' + o[0] + '</button>'; });
+    root.innerHTML = h + '</div><div class="ckr" role="status" aria-live="polite"></div>';
+    var bs = [].slice.call(root.querySelectorAll('.ckb button')), r = root.querySelector('.ckr');
+    bs.forEach(function (b, i) { b.onclick = function () {
+      var ok = !!it.o[i][1];
+      bs.forEach(function (x, j) { x.setAttribute('aria-pressed', j === i ? 'true' : 'false'); x.className = it.o[j][1] ? 'right' : ''; });
+      root.className = root.className.replace(/ ?\b(done|hit)\b/g, '') + ' done' + (ok ? ' hit' : '');
+      r.innerHTML = '<b>' + (ok ? 'ถูกใจใช่เลย' : 'อาจจะยัง') + '</b><span>' + it.o[i][2] + '</span>';
+    }; });
+  }
+  /* แถบเลื่อนตัวเลขมีปุ่ม − + : ใช้เมื่อข้อเท็จจริงที่ผู้เรียนเปลี่ยนเป็นตัวเลข (ชั่วโมง ปี วัน บาท จำนวนคน)
+     <div class="nums" data-nums="ชื่อ"><div data-k="a" data-min="0" data-max="40" data-step="1" data-v="14" data-unit="ชั่วโมง">ป้าย<small>คำอธิบายสั้น (ไม่ใส่ก็ได้)</small></div>…</div>
+     V.nums('ชื่อ', function (s) { s.a … }) เรียกครั้งแรกทันที และทุกครั้งที่ค่าเปลี่ยน · คืน { set: function (k, v) } ไว้ตั้งค่าจากปุ่มอื่น */
+  function nums(name, onChange) {
+    var box = document.querySelector('[data-nums="' + name + '"]'), st = {}, ins = {};
+    function fmt(v) { return String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+    [].forEach.call(box.querySelectorAll('[data-k]'), function (el) {
+      var k = el.getAttribute('data-k'), min = +el.getAttribute('data-min') || 0, max = +el.getAttribute('data-max'), step = +el.getAttribute('data-step') || 1,
+        unit = el.getAttribute('data-unit') || '', sm = el.querySelector('small'), note = sm ? sm.outerHTML : '';
+      if (sm) el.removeChild(sm);
+      var label = el.innerHTML.replace(/^\s+|\s+$/g, ''), plain = label.replace(/<[^>]+>/g, '');
+      st[k] = Math.min(max, Math.max(min, +el.getAttribute('data-v') || min));
+      el.className = (el.className ? el.className + ' ' : '') + 'nm';
+      el.innerHTML = '<div class="nmh"><span>' + label + '</span><output></output></div><div class="nmc"><button type="button" aria-label="ลด ' + plain + '">−</button>' +
+        '<input type="range" min="' + min + '" max="' + max + '" step="' + step + '" aria-label="' + plain + '"><button type="button" aria-label="เพิ่ม ' + plain + '">+</button></div>' + note;
+      var inp = el.querySelector('input'), out = el.querySelector('output'), bs = el.querySelectorAll('.nmc button');
+      function paint() { inp.value = st[k]; out.innerHTML = fmt(st[k]) + (unit ? '<i>' + unit + '</i>' : ''); inp.style.setProperty('--p', (max > min ? 100 * (st[k] - min) / (max - min) : 0) + '%');
+        inp.setAttribute('aria-valuetext', fmt(st[k]) + ' ' + unit); bs[0].disabled = st[k] <= min; bs[1].disabled = st[k] >= max; }
+      function to(v, quiet) { v = Math.min(max, Math.max(min, Math.round(v / step) * step)); if (v === st[k] && !quiet) return; st[k] = v; paint(); if (!quiet) onChange(st); }
+      inp.oninput = function () { to(+inp.value); }; bs[0].onclick = function () { to(st[k] - step); }; bs[1].onclick = function () { to(st[k] + step); };
+      ins[k] = to; paint();
+    });
+    onChange(st);
+    return { set: function (k, v) { if (ins[k]) { ins[k](v, true); onChange(st); } } };
+  }
+  /* ลองเอง ห้ารอบ: โจทย์เดิมบิดทีละนิด ผู้เรียนปรับตัวควบคุมของภาพให้ตรงกับโจทย์รอบนั้น เมื่อตรงครบ ผลขึ้นพร้อมบอกว่าอะไรเปลี่ยน
+     var R = V.rounds('id', { title, rounds: [{ case: 'html', want: { k: ค่า }, note: 'อะไรเปลี่ยน อะไรคงเดิม' }], show: function (k, v) { return 'ป้ายของค่า' } })
+     แล้วเรียก R.update(state, 'ผลตอนนี้ (html)') ทุกครั้งที่ตัวควบคุมของภาพเปลี่ยน */
+  function rounds(root, cfg) {
+    if (typeof root === 'string') root = document.getElementById(root);
+    var k = 0, done = [], last = null, verdict = '', N = cfg.rounds.length;
+    root.className = (root.className ? root.className + ' ' : '') + 'rnd';
+    root.innerHTML = '<div class="rnh"><b>' + (cfg.title || 'ลองเอง ' + N + ' รอบ') + '</b><span class="rnd-dots">' + cfg.rounds.map(function () { return '<i></i>'; }).join('') + '</span></div>' +
+      '<div class="case" role="status" aria-live="polite"><small></small><p></p></div><p class="lbl">ปรับภาพข้างบนให้ตรงกับโจทย์รอบนี้</p><ul class="rnd-todo"></ul><div class="rnd-res" role="status"></div><button type="button" class="btn" hidden></button>';
+    var dots = root.querySelectorAll('.rnd-dots i'), cs = root.querySelector('.case'), todo = root.querySelector('.rnd-todo'), res = root.querySelector('.rnd-res'), nx = root.querySelector('button');
+    function same(a, b) { return String(a) === String(b); }
+    function paint() {
+      [].forEach.call(dots, function (d, i) { d.className = done[i] ? 'ok' : (i === k ? 'on' : ''); });
+      if (k >= N) {
+        cs.hidden = true; todo.innerHTML = ''; root.querySelector('.lbl').hidden = true; nx.hidden = true;
+        res.innerHTML = '<b>ครบ ' + N + ' รอบ</b><table><tr><th>รอบ</th><th>โจทย์</th><th>ผล</th></tr>' + done.map(function (d, i) { return '<tr><td>' + (i + 1) + '</td><td>' + cfg.rounds[i].case + '</td><td>' + d + '</td></tr>'; }).join('') + '</table>';
+        return;
+      }
+      var r = cfg.rounds[k]; cs.hidden = false; root.querySelector('.lbl').hidden = false;
+      cs.querySelector('small').textContent = 'โจทย์รอบ ' + (k + 1) + ' จาก ' + N; cs.querySelector('p').innerHTML = r.case;
+      var keys = Object.keys(r.want), ok = 0;
+      todo.innerHTML = keys.map(function (q) { var m = last && same(last[q], r.want[q]); if (m) ok++; return '<li class="' + (m ? 'ok' : '') + '"><i></i><span>' + cfg.show(q, r.want[q]) + (m || !last ? '' : ' · ตอนนี้ ' + cfg.show(q, last[q])) + '</span></li>'; }).join('');
+      if (last && ok === keys.length) { res.innerHTML = verdict + (r.note ? '<em>' + r.note + '</em>' : ''); nx.hidden = false; nx.textContent = k < N - 1 ? 'รอบถัดไป' : 'ดูผลทั้ง ' + N + ' รอบ'; }
+      else { res.innerHTML = ''; nx.hidden = true; }
+    }
+    nx.onclick = function () { done[k] = verdict.replace(/<em>[\s\S]*$/, ''); k++; paint(); };
+    paint();
+    return { update: function (state, v) { last = {}; for (var q in state) last[q] = state[q]; verdict = v; paint(); } };
+  }
+  window.LAW2V = { icon: icon, pick: pick, quiz: quiz, face: face, togs: togs, spy: spy, check: check, nums: nums, rounds: rounds };
+
+  /* จำสถานีที่เปิดไว้ในเครื่องนี้ เพื่อให้หน้ารวมแสดงว่ามาถึงสถานีไหนแล้ว (ไม่ส่งออกไปที่ใด) */
+  try {
+    var m = /law2v-r(\d\d)\.html/.exec(location.pathname), c = m ? 'R' + m[1] : (/[?&]c=([A-Z]\d\d)\b/.exec(location.search) || [])[1];
+    if (c) { var sn = JSON.parse(localStorage.getItem('law2v:seen') || '{}') || {}; sn[c] = 1; localStorage.setItem('law2v:seen', JSON.stringify(sn)); localStorage.setItem('law2v:last', c); }
+  } catch (e) {}
+
+  /* โหมดรีวิว: เปิดด้วย ?rv=1 ปิดด้วย ?rv=0 (จำไว้ในเครื่องนี้) แสดงที่อยู่ของแต่ละจอ แตะเพื่อคัดลอก ผู้เรียนทั่วไปไม่เห็น
+     LA2.<สาย>.<สถานี>.<ส่วน> เช่น LA2.1.3.4 = สาย 1 สถานี 3 ส่วนที่ 4 · ต่อท้าย a แม่บท · b ตัวอย่าง · c ลองเปลี่ยน
+     .0 ภาพรวมของบท · .Q2 คำถามข้อ 2 · .S สรุปบทนี้ */
+  try {
+    var rq = /[?&]rv=([01])\b/.exec(location.search);
+    if (rq) { if (rq[1] === '1') localStorage.setItem('law2v:rv', '1'); else localStorage.removeItem('law2v:rv'); }
+    if (localStorage.getItem('law2v:rv') === '1') window.addEventListener('load', function () {
+      var LN = { R: 1, W: 2, S: 3, C: 4, V: 5, A: 1, F: 2, B: 4, P: 3, H: 5 }, SUBJECT = { A: 'LA1.', F: 'LA1.', B: 'LA1.', P: 'LA1.', H: 'LA1.' };   /* A F = สายของ LA1 */
+      function ad(code, no) { var t = window.LAW2V_TOC && window.LAW2V_TOC[code]; return (SUBJECT[code.charAt(0)] || 'LA2.') + LN[code.charAt(0)] + '.' + (no != null ? no : (t && t.no != null ? t.no : +code.slice(1))); }
+      function copy(t) {
+        if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).catch(function () {}); return; }
+        var ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta);
+      }
+      function tag(host, a, first) {
+        var b = document.createElement('span'); b.className = 'rv-ad'; b.setAttribute('role', 'button'); b.setAttribute('tabindex', '0'); b.setAttribute('aria-label', 'คัดลอกที่อยู่ ' + a); b.textContent = a;
+        b.onclick = function (ev) { ev.preventDefault(); ev.stopPropagation(); copy(a); b.textContent = 'คัดลอกแล้ว'; setTimeout(function () { b.textContent = a; }, 900); };
+        if (first) host.insertBefore(b, host.firstChild); else host.appendChild(b);
+      }
+      var st = document.createElement('style');
+      st.textContent = '.rv-ad{display:inline-block;float:right;margin:0 0 8px 10px;padding:6px 9px;border-radius:7px;background:#16283A;color:#fff;font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.02em;cursor:pointer;position:relative;z-index:2}' +
+        '.lp .rv-ad,.q .rv-ad{float:none;margin:0 0 0 8px;vertical-align:middle}a .rv-ad{float:none;margin:0 0 0 8px;padding:4px 7px;vertical-align:middle}' +
+        '.rv-bar{position:fixed;left:12px;bottom:12px;z-index:50;padding:8px 12px;border-radius:999px;background:#16283A;color:#fff;font:600 13px/1.2 Anuphan,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.25)}.rv-bar a{color:#F2C94C;margin-left:10px}';
+      document.head.appendChild(st);
+      var m = /law2v-r(\d\d)\.html/.exec(location.pathname), code = m ? 'R' + m[1] : (/[?&]c=([A-Z]\d\d)\b/.exec(location.search) || [])[1];
+      if (code && LN[code.charAt(0)]) {
+        var base = ad(code);
+        var f0 = document.querySelector('section[aria-labelledby="f0"]'); if (f0) tag(f0, base + '.0', true);
+        [].forEach.call(document.querySelectorAll('section[data-step]'), function (sec) {
+          var n = sec.getAttribute('data-step').replace(/^s/, ''); tag(sec, base + '.' + n, true);
+          [].forEach.call(sec.querySelectorAll('.lp'), function (lp) { var i = lp.querySelector('i'), k = i ? 'abc'.charAt(+i.textContent - 1) : ''; if (k) tag(lp, base + '.' + n + k); });
+        });
+        [].forEach.call(document.querySelectorAll('#quiz > .q'), function (q, i) { var p = q.querySelector('p') || q; tag(p, base + '.Q' + (i + 1)); });
+        var fk = document.querySelector('section[aria-labelledby="fk"]'); if (fk) tag(fk, base + '.S', true);
+      }
+      [].forEach.call(document.querySelectorAll('a[data-code]'), function (a) { var c = a.getAttribute('data-code'); var w = /สถานี (\d+)/.exec(a.getAttribute('data-where') || ''); if (LN[c.charAt(0)]) tag(a.querySelector('small') || a, ad(c, w ? +w[1] : null)); });
+      var bar = document.createElement('div'); bar.className = 'rv-bar';
+      bar.innerHTML = 'โหมดรีวิว · แตะรหัสเพื่อคัดลอก<a href="' + location.pathname + location.search.replace(/([?&])rv=[01]&?/, '$1').replace(/[?&]$/, '') + (location.search.replace(/([?&])rv=[01]&?/, '$1').replace(/[?&]$/, '') ? '&' : '?') + 'rv=0">ปิด</a>';
+      document.body.appendChild(bar);
+    });
+  } catch (e) {}
 })();

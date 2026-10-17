@@ -4,421 +4,1023 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>งานนี้เราทำได้จริงไหม | CPA Answer</title>
+<title>สภาฯ มีคณะกรรมการอะไรบ้าง ใครเป็นได้ | CPA Answer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="law2v.css">
 <style>
-/* สไตล์เฉพาะหน้า หลัก (ค) — ทุก class ขึ้นต้น xec- */
-.xec-steps { grid-template-columns:repeat(4,1fr); }
-.xec-lk { color:var(--hue-ink); font-weight:700; text-underline-offset:3px; }
-.xec-hint { font-size:13px; color:var(--muted); line-height:1.45; }
-.xec-ic { flex:none; }
+/* สถานี 1.7 · สไตล์เฉพาะหน้า ทุก class ขึ้นต้น x07-
+   สีบอกที่มาของตำแหน่ง ใช้เหมือนกันทั้งหน้า: เลือกตั้ง (el) · โดยตำแหน่ง (ex) · แต่งตั้ง (ap) · ผู้แทนหน่วยงาน (rp) */
+.x07 { --x07-el:#1F7A6B; --x07-els:#DDF1EC; --x07-ex:#B7791F; --x07-exs:#FBF0D2; --x07-ap:#6B4E9B; --x07-aps:#ECE6F6; }
+.steps.x07-steps { grid-auto-columns:minmax(60px,1fr); overflow-x:auto; scrollbar-width:none; }
+.steps.x07-steps::-webkit-scrollbar { display:none; }
+.x07-bel { background:var(--x07-el); } .x07-bex { background:var(--x07-ex); } .x07-bap { background:var(--x07-ap); } .x07-brp { background:var(--ink); }
+.x07-o { display:inline-block; padding:1px 9px; border-radius:99px; color:#fff; font-size:12px; font-weight:700; line-height:1.55; white-space:nowrap; }
+.x07-key { display:flex; flex-wrap:wrap; gap:6px 14px; margin:0; padding:0; list-style:none; font-size:13px; line-height:1.4; color:var(--muted); }
+.x07-key li { display:flex; align-items:center; gap:6px; }
+.x07-key i { flex:none; width:14px; height:14px; border-radius:50%; }
+.x07-key i.x07-two { background:var(--x07-ex); box-shadow:inset 0 0 0 4px var(--x07-ex), inset 0 0 0 9px var(--x07-el); }
+.x07-h3 { margin-top:8px; padding-top:18px; border-top:2px solid var(--soft); }
+.fig a.x07-lk { font-weight:700; color:var(--hue-ink); }
+.result.x07-stop { background:var(--bad-soft); color:var(--bad-ink); }
+.cg.x07-neu .ico { background:var(--hue); }
+/* ก้อนลองเปลี่ยน: โจทย์ (.case ของกลาง) → ตัวควบคุม → หลัก → ภาพ → กล่องตัดสิน */
+.x07-rl { display:grid; grid-template-columns:auto minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); font-size:15px; font-weight:600; line-height:1.45; }
+.x07-rl > b { padding:1px 10px; border-radius:99px; background:var(--hue-ink); color:#fff; font-size:12px; font-weight:800; letter-spacing:.03em; line-height:1.7; white-space:nowrap; }
+.x07-rl > span { display:block; min-width:0; }
+.case .x07-per { grid-template-columns:44px minmax(0,1fr); margin:2px 0; }
+.case .x07-per svg { width:44px; height:44px; }
+.case .x07-per b { display:block; font-family:var(--display); font-size:16px; line-height:1.25; }
+.case .x07-per small { display:block; font-size:13px; line-height:1.35; color:var(--muted); }
+.case .x07-q2 { color:var(--muted); font-size:14px; }
+.x07-key i.x07-opt { background:transparent; border:2px dashed var(--muted); }
 
-/* ภาพหลัก: ถ้อยคำของข้อ 9 (ค) */
-.xec-map .and { margin:8px 0; }
-.xec-map .nd.xec-name { background:var(--hue-ink); color:#fff; padding:16px 14px; max-width:none; }
-.xec-map .nd.xec-name .law { box-shadow:none; margin-top:4px; }
-.xec-map .nd.xec-part { gap:6px; padding:16px 14px 12px; max-width:none; }
-.xec-verb { font-size:13px; font-weight:700; color:var(--hue-ink); }
-.xec-words { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
-.xec-words i { font-style:normal; font-family:var(--display); font-weight:800; font-size:17px; line-height:1.3; padding:3px 12px; border-radius:99px; background:var(--sun); color:var(--ink); }
-.xec-jump { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin-top:4px; }
-.xec-jump a { display:inline-grid; place-items:center; min-height:44px; padding:4px 14px; border-radius:99px; background:var(--white); color:var(--hue-ink); box-shadow:inset 0 0 0 1.5px var(--hue); font-size:13px; font-weight:700; line-height:1.25; text-decoration:none; }
-.xec-jump a::after { content:" ›"; }
-.xec-jump a:active { transform:scale(.97); }
-.xec-roles { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
-.xec-role { display:grid; grid-template-columns:52px minmax(0,1fr); gap:12px; align-items:center; min-height:52px; padding:10px 12px; border-radius:18px; background:var(--soft); text-decoration:none; color:var(--ink); transition:transform .12s ease, box-shadow .12s ease; }
-.xec-role:hover { box-shadow:inset 0 0 0 2px var(--hue); } .xec-role:active { transform:scale(.98); }
-.xec-role svg { width:52px; height:52px; border-radius:50%; }
-.xec-role .xec-ic { width:52px; height:52px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; } .xec-role .xec-ic svg { width:26px; height:26px; border-radius:0; }
-.xec-role b { display:block; font-family:var(--display); font-size:17px; line-height:1.25; }
-.xec-role small { display:block; font-size:13px; color:var(--muted); line-height:1.35; }
-.xec-role em { display:block; font-style:normal; font-size:12px; font-weight:700; color:var(--hue-ink); }
-.xec-pin { justify-self:start; margin:0; } .xec-pin svg { width:26px; height:26px; border-radius:50%; }
+/* ภาพรวม: ห้าคณะ ใครตั้งใคร */
+.x07-map .nd { max-width:none; }
+.x07-map .nd .x07-os, .x07-b .x07-os { display:flex; flex-wrap:wrap; justify-content:center; gap:4px; margin-top:4px; }
+.x07-b .x07-os { justify-content:flex-start; }
+.x07-gm { background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--sun); }
+.x07-arw { width:100%; display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; }
+.x07-arw::before, .x07-arw::after { content:""; width:4px; height:10px; background:var(--line); }
+.x07-arw > span { max-width:290px; padding:5px 14px; border-radius:16px; background:var(--ink); color:#fff; font-size:13px; font-weight:600; line-height:1.45; text-align:center; }
+.x07-council { width:100%; display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px 12px 12px; border-radius:22px; background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); }
+.x07-ct { font-family:var(--display); font-weight:800; font-size:16px; line-height:1.3; color:var(--hue-ink); }
+.x07-sub { padding:0 2px; font-size:13px; font-weight:700; line-height:1.4; color:var(--hue-ink); }
+.x07-b { position:relative; display:grid; grid-template-columns:minmax(0,1fr); gap:3px; justify-items:start; min-height:44px; padding:12px; border-radius:16px; background:var(--white); color:var(--ink); text-decoration:none; }
+.x07-map .go { margin-top:2px; }
+.x07-map .x07-ov .go { color:var(--sun); }
+.x07-b b { font-family:var(--display); font-size:16px; line-height:1.3; }
+.x07-b small { font-size:13px; line-height:1.4; color:var(--muted); }
+.x07-b.x07-main { box-shadow:inset 0 0 0 2px var(--hue); }
+a.x07-b:hover { box-shadow:inset 0 0 0 2px var(--hue); }
+.x07-map .x07-ov { background:var(--ink); color:#fff; }
+.x07-map .x07-ov small { color:rgba(255,255,255,.86); }
+.x07-map .x07-ov .law, .x07-map .x07-min .law { box-shadow:none; }
+.x07-map .x07-min { background:var(--gold-soft); }
+.x07-jump { display:flex; flex-wrap:wrap; gap:8px; }
+.x07-jump a { display:inline-flex; align-items:center; min-height:44px; padding:0 14px; border-radius:99px; background:var(--soft); color:var(--hue-ink); font-size:14px; font-weight:700; text-decoration:none; }
 
-/* ส่วน 1: ข้อเท็จจริงที่แตะสลับได้ เป็นแถว */
-.xec-facts { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
-.xec-fact { display:grid; grid-template-columns:40px minmax(0,1fr) 24px; gap:10px; align-items:center; min-height:60px; padding:10px 12px; border-radius:18px; border:0; background:var(--good-soft); color:var(--good); font:inherit; font-size:15px; font-weight:700; line-height:1.35; text-align:left; cursor:pointer; transition:background-color .2s ease, transform .12s ease; }
-.xec-fact:active { transform:scale(.98); }
-.xec-fact .xec-ic { width:40px; height:40px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .xec-fact .xec-ic svg { width:20px; height:20px; }
-.xec-fact .xec-mk { width:24px; height:24px; border-radius:50%; display:grid; place-items:center; color:#fff; background:var(--good); } .xec-fact .xec-mk svg { width:14px; height:14px; }
-.xec-fact small { display:block; margin-top:2px; font-weight:500; font-size:12px; line-height:1.4; }
-.xec-fact[aria-pressed="false"] { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
-.xec-fact[aria-pressed="false"] .xec-ic { background:var(--bad-soft); }
-.xec-fact[aria-pressed="false"] .xec-mk { background:var(--bad); }
+/* ส่วนที่ 1: โต๊ะของคณะกรรมการสภาฯ */
+.x07-tw { position:relative; }
+.x07-tw svg { width:100%; height:auto; }
+.x07-tc { position:absolute; left:50%; top:50%; width:54%; transform:translate(-50%,-50%); text-align:center; font-size:12px; font-weight:700; line-height:1.35; color:var(--hue-ink); pointer-events:none; }
+.x07-tc b { display:block; font-family:var(--display); font-weight:800; font-size:32px; line-height:1; color:var(--ink); }
+.x07-desk { fill:var(--soft); stroke:var(--line); stroke-width:2; }
+.x07-s { cursor:pointer; transition:opacity .2s ease; }
+.x07-s.x07-dim { opacity:.2; }
+.x07-ring { fill:none; stroke:var(--sun); stroke-width:3; opacity:0; transition:opacity .2s ease; }
+.x07-s.x07-lit .x07-ring { opacity:1; }
+.x07-fel { fill:var(--x07-el); } .x07-fex { fill:var(--x07-ex); } .x07-fap { fill:var(--x07-ap); }
+.x07-core { fill:var(--x07-el); stroke:#fff; stroke-width:1.5; }
+.x07-grp { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+.x07-grp button { display:grid; grid-template-columns:14px minmax(0,1fr); gap:8px; align-items:center; min-height:56px; padding:8px 10px; border-radius:16px; border:2px solid transparent; background:var(--soft); color:var(--ink); font:inherit; text-align:left; cursor:pointer; transition:transform .12s ease; }
+.x07-grp button:active { transform:scale(.98); }
+.x07-grp button[aria-pressed="true"] { border-color:var(--hue); background:var(--hue-soft); }
+.x07-grp button.x07-wide { grid-column:1 / -1; }
+.x07-grp i { width:14px; height:14px; border-radius:50%; }
+.x07-grp i.x07-hat { background:var(--white); box-shadow:inset 0 0 0 3px var(--sun); }
+.x07-grp b { display:block; font-family:var(--display); font-size:15px; line-height:1.25; }
+.x07-grp small { display:block; font-size:13px; line-height:1.3; color:var(--muted); }
+.x07-via { display:grid; grid-template-columns:minmax(0,1fr) 14px minmax(0,1fr) 14px minmax(0,1.1fr); gap:3px; align-items:stretch; }
+.x07-via span { display:grid; place-items:center; padding:8px 5px; border-radius:12px; background:var(--soft); font-size:13px; font-weight:700; line-height:1.3; text-align:center; }
+.x07-via span:last-child { background:var(--ink); color:#fff; }
+.x07-via i { align-self:center; height:0; border-top:4px dotted var(--line); }
 
-/* ทางจัดการที่คู่มือยกไว้: แถวที่สว่างเมื่อเรื่องของมันยังขาด */
-.xec-ways { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; margin:0; padding:0; list-style:none; }
-.xec-way { display:grid; grid-template-columns:32px minmax(0,1fr); gap:10px; align-items:center; min-height:48px; padding:8px 12px; border-radius:14px; background:var(--soft); color:var(--muted); font-size:14px; line-height:1.4; transition:background-color .2s ease, color .2s ease, box-shadow .2s ease; }
-.xec-way .xec-ic { width:32px; height:32px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .xec-way .xec-ic svg { width:16px; height:16px; }
-.xec-way small { display:block; font-size:12px; font-weight:500; }
-.xec-way.xec-hit { background:var(--gold-soft); color:#4A3B0C; box-shadow:inset 0 0 0 2px var(--gold); font-weight:600; }
-.xec-way.xec-done { background:var(--good-soft); color:var(--good); box-shadow:inset 0 0 0 2px var(--good); font-weight:600; }
-.xec-way.xec-shut { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); font-weight:600; }
-.cg.xec-neu .ico { background:var(--hue); }
+/* ส่วนที่ 2 และ 8: แถวกรรมการ 17 คน กับเส้นกึ่งหนึ่ง */
+.x07-rows { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x07-rows li { display:grid; grid-template-columns:36px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.45; }
+.x07-rows .ico { width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--hue); }
+.x07-rows .ico svg { width:20px; height:20px; }
+.x07-qw { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; padding:12px; border-radius:20px; background:var(--soft); }
+.x07-ql { justify-self:center; padding:1px 10px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; line-height:1.6; }
+.x07-q { position:relative; display:grid; grid-template-columns:repeat(17,minmax(0,1fr)); gap:3px; padding:6px 0; }
+.x07-q::before { content:""; position:absolute; left:50%; top:0; bottom:0; width:3px; margin-left:-1.5px; border-radius:2px; background:var(--ink); z-index:1; }
+.x07-q i { aspect-ratio:1; border-radius:50%; background:var(--white); box-shadow:inset 0 0 0 2px var(--line); transition:background-color .2s ease; }
+.x07-q i.x07-in { background:var(--hue); box-shadow:none; }
+.x07-q i.x07-out { background:transparent; box-shadow:inset 0 0 0 2px var(--bad); opacity:.55; }
+.x07-qk { display:flex; flex-wrap:wrap; gap:4px 14px; font-size:12px; font-weight:600; color:var(--muted); }
+.x07-qk span { display:inline-flex; align-items:center; gap:5px; }
+.x07-qk i { width:12px; height:12px; border-radius:50%; background:var(--hue); }
+.x07-qk i.x07-out { background:transparent; box-shadow:inset 0 0 0 2px var(--bad); opacity:.55; }
+.x07-qk i.x07-emp { background:var(--white); box-shadow:inset 0 0 0 2px var(--line); }
+.x07-s3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; counter-reset:x07s; margin:0; padding:0; list-style:none; }
+.x07-s3 li { counter-increment:x07s; display:grid; align-content:start; gap:4px; padding:10px 8px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); font-size:13px; font-weight:600; line-height:1.4; text-align:center; }
+.x07-s3 li::before { content:counter(x07s); justify-self:center; width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; font-family:var(--display); font-weight:800; font-size:14px; }
 
-/* ส่วน 2: การ์ดที่แตะสลับ เพียงพอ / ไม่เพียงพอ */
-.xec-tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
-.xec-tile { position:relative; display:grid; justify-items:center; align-content:start; gap:6px; min-height:132px; padding:14px 8px 12px; border-radius:18px; border:0; background:var(--good-soft); color:var(--good); font:inherit; font-size:14px; font-weight:700; line-height:1.3; text-align:center; cursor:pointer; transition:background-color .2s ease, transform .12s ease; }
-.xec-tile:active { transform:scale(.98); }
-.xec-tile .xec-ic { width:46px; height:46px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .xec-tile .xec-ic svg { width:24px; height:24px; }
-.xec-tile .xec-mk { position:absolute; top:8px; right:8px; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; color:#fff; background:var(--good); } .xec-tile .xec-mk svg { width:13px; height:13px; }
-.xec-tile small { display:block; font-weight:500; font-size:12px; }
-.xec-tile .xec-st { padding:1px 10px; border-radius:99px; background:var(--good); color:#fff; font-size:12px; font-weight:700; }
-.xec-tile[aria-pressed="false"] { background:var(--white); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
-.xec-tile[aria-pressed="false"] .xec-ic { background:var(--bad-soft); }
-.xec-tile[aria-pressed="false"] .xec-mk, .xec-tile[aria-pressed="false"] .xec-st { background:var(--bad); }
-/* ลำดับสามขั้น (ใช้ .todo ของกลาง) หรี่ลงเมื่อยังไม่มีเรื่องที่ไม่เพียงพอ */
-.xec-flow { padding:14px; border-radius:20px; background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--gold); transition:background-color .2s ease, box-shadow .2s ease; }
-.xec-flow li > div { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; justify-items:start; }
-.xec-flow b { font-size:16px; }
-.xec-flow .xec-eg { display:block; position:relative; padding-left:14px; font-size:14px; line-height:1.4; } .xec-flow .xec-eg::before { content:"•"; position:absolute; left:2px; }
-.xec-flow.xec-idle { background:var(--soft); box-shadow:none; }
-.xec-flow.xec-idle li::before { background:var(--line); color:var(--muted); box-shadow:none; }
-.xec-flow.xec-idle li::after { background:var(--line); }
-.xec-flow.xec-idle b, .xec-flow.xec-idle .xec-eg { color:var(--muted); }
+/* ส่วนที่ 3: คณะของประธานที่นั่งโดยตำแหน่ง */
+.x07-ch { grid-template-columns:minmax(0,1fr); }
+.x07-ch button { grid-template-columns:auto minmax(0,1fr); }
+.x07-dots { display:flex; gap:3px; }
+.x07-dots i { width:12px; height:12px; }
+.x07-home { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; padding:14px; border-radius:20px; background:var(--soft); }
+.x07-home > b { font-family:var(--display); font-size:19px; line-height:1.3; }
+.x07-home > p { font-size:15px; line-height:1.5; }
+.x07-strips { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:10px 12px; border-radius:14px; background:var(--white); }
+.x07-strip { display:flex; flex-wrap:wrap; align-items:center; gap:4px; }
+.x07-strip i { width:15px; height:15px; border-radius:50%; }
+.x07-strip i.x07-opt { background:transparent; border:2px dashed var(--muted); }
+.x07-strip span { flex:1 0 100%; font-size:13px; font-weight:700; line-height:1.4; }
+.x07-flow { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; }
+.x07-flow > span { width:100%; padding:9px 12px; border-radius:14px; background:var(--white); font-size:14px; font-weight:700; line-height:1.4; text-align:center; transition:opacity .2s ease, background-color .2s ease, color .2s ease; }
+.x07-flow > i { width:4px; height:12px; background:var(--line); }
+.x07-flow > span:last-child { background:var(--ink); color:#fff; }
+.x07-flow.x07-off > span { opacity:.4; }
+.x07-flow.x07-on > span { background:var(--good-soft); color:var(--good); }
+.x07-flow.x07-on > span:last-child { background:var(--good); color:#fff; }
+.x07-flow.x07-on > i { background:var(--good); }
+.x07-bl { margin:0; padding:0 0 0 18px; display:grid; gap:6px; font-size:14px; line-height:1.5; }
 
-/* กล่องผล */
-.xec-out { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--soft); font-size:15px; line-height:1.45; transition:background-color .2s ease; }
-.xec-out > b { font-family:var(--display); font-size:20px; line-height:1.25; }
-.xec-out .xec-sub { font-weight:700; }
-.xec-out.xec-good { background:var(--good); color:#fff; } .xec-out.xec-good .law { box-shadow:none; }
-.xec-out.xec-warn { background:var(--gold-soft); color:#4A3B0C; box-shadow:inset 0 0 0 2px var(--gold); }
-.xec-out.xec-ink { background:var(--white); color:var(--ink); box-shadow:inset 0 0 0 2px var(--ink); }
+/* ส่วนที่ 4: สวิตช์สี่ข้อ → แผ่นเงื่อนไข → ประตู */
+.x07-per { display:grid; grid-template-columns:56px minmax(0,1fr); gap:10px; align-items:center; }
+.x07-per svg { width:56px; height:56px; }
+.x07-tg button:disabled { opacity:.45; cursor:default; }
+.conds.x07-c4 { grid-template-columns:repeat(4,minmax(0,1fr)); gap:5px; }
+.x07-c4 .cond { padding:12px 2px 8px; font-size:12px; line-height:1.25; }
+.x07-c4 .cond .ico { width:36px; height:36px; } .x07-c4 .cond .ico svg { width:20px; height:20px; }
+.x07-c4 .cond .mk { top:4px; right:4px; width:18px; height:18px; } .x07-c4 .cond .mk svg { width:11px; height:11px; }
+.cond.x07-na { background:var(--soft); color:var(--muted); box-shadow:inset 0 0 0 2px var(--line); }
+.cond.x07-na .mk { display:none; }
 
-/* ส่วน 3: ภาพนิ่ง */
-.xec-three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-.xec-three div { display:grid; justify-items:center; align-content:start; gap:6px; padding:14px 4px 12px; border-radius:18px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; font-family:var(--display); font-weight:800; font-size:15px; line-height:1.25; }
-.xec-three svg { width:28px; height:28px; }
-.xec-fc svg { width:52px; height:52px; border-radius:50%; }
-.xec-asst .tr { background:var(--good-soft); color:var(--good); } .xec-asst .tr small { color:var(--good); } .xec-asst .tr .ico { color:var(--good); }
-.xec-box { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:18px; background:var(--soft); font-size:14px; line-height:1.45; }
-.xec-bh { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; }
-.xec-bh .xec-ic { width:40px; height:40px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; } .xec-bh .xec-ic svg { width:20px; height:20px; }
-.xec-bh b { font-family:var(--display); font-size:17px; line-height:1.3; }
-.xec-box .facts span { background:var(--white); border-radius:14px; }
+/* ส่วนที่ 5: วาระ */
+.x07-trm { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.x07-trm button { display:grid; grid-template-columns:minmax(0,1fr); gap:5px; justify-items:start; min-height:56px; padding:9px 12px; border-radius:16px; border:2px solid transparent; background:var(--soft); color:var(--ink); font:inherit; text-align:left; cursor:pointer; }
+.x07-trm button[aria-pressed="true"] { border-color:var(--hue); background:var(--hue-soft); }
+.x07-trm b { font-family:var(--display); font-size:15px; line-height:1.3; }
+.x07-trm span { display:flex; flex-wrap:wrap; gap:4px; }
+.x07-trm em { font-style:normal; padding:2px 9px; border-radius:99px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--hue); color:var(--hue-ink); font-size:12px; font-weight:800; line-height:1.5; }
+.x07-trm em.x07-cap { box-shadow:inset 0 0 0 1.5px var(--bad); color:var(--bad-ink); }
+.x07-tl { display:grid; grid-template-columns:repeat(9,minmax(0,1fr)); gap:4px 3px; }
+.x07-tm { grid-row:1; padding:2px 2px; border-radius:99px; background:var(--soft); font-size:12px; font-weight:700; line-height:1.5; text-align:center; }
+.x07-yc { grid-row:2; display:grid; place-items:center; min-height:44px; border-radius:10px; background:var(--hue-soft); color:var(--hue-ink); font-family:var(--display); font-weight:800; font-size:12px; letter-spacing:-.02em; transition:background-color .2s ease, color .2s ease; }
+.x07-yc.x07-done { background:var(--hue); color:#fff; }
+.x07-yc.x07-bar { background:repeating-linear-gradient(135deg, var(--white) 0 6px, var(--bad-soft) 6px 12px); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.x07-yc.x07-now { box-shadow:inset 5px 0 0 var(--ink); }
+.x07-yc.x07-bar.x07-now { box-shadow:inset 5px 0 0 var(--ink), inset 0 0 0 2px var(--bad); }
+.x07-pin { grid-row:3; justify-self:start; position:relative; margin-top:5px; padding:1px 9px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; line-height:1.5; white-space:nowrap; }
+.x07-pin::before { content:""; position:absolute; left:0; top:-5px; border:6px solid transparent; border-top:0; border-left:0; border-bottom-color:var(--ink); }
 
-/* ส่วน 4: ความเห็นที่สอง */
-.xec-stacks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-.xec-stack { display:grid; justify-items:center; align-content:start; gap:8px; padding:12px 8px; border-radius:18px; background:var(--soft); text-align:center; }
-.xec-stack b { font-family:var(--display); font-size:15px; line-height:1.25; }
-.xec-stack small { font-size:12px; color:var(--muted); line-height:1.35; }
-.xec-docs { display:grid; grid-template-columns:repeat(2,36px); gap:6px; }
-.xec-docs span { position:relative; width:36px; height:44px; border-radius:6px; background:var(--hue); border:2px solid var(--hue); transition:background-color .25s ease, border-color .25s ease; }
-.xec-docs span::before { content:""; position:absolute; left:6px; right:6px; top:9px; height:3px; border-radius:2px; background:#fff; box-shadow:0 8px 0 #fff, 0 16px 0 #fff; opacity:.9; }
-.xec-docs span.xec-gap { background:transparent; border:2px dashed var(--line); } .xec-docs span.xec-gap::before { opacity:0; }
-.xec-docs span.xec-get { background:var(--good); border-color:var(--good); }
-.xec-docs span.xec-bar { background:var(--bad-soft); border:2px dashed var(--bad); } .xec-docs span.xec-bar::before { opacity:0; }
+/* ส่วนที่ 6: เหตุที่พ้น และแถบคะแนนเสียง */
+.x07-box { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--soft); }
+.x07-box > b { font-family:var(--display); font-size:15px; line-height:1.4; }
+.x07-pills { display:flex; flex-wrap:wrap; gap:6px; }
+.x07-pills span, .x07-pills a { padding:6px 10px; border-radius:12px; background:var(--white); color:var(--ink); font-size:14px; font-weight:600; line-height:1.35; }
+.x07-pills .x07-dif { background:var(--sun); }
+.x07-split { display:grid; grid-template-columns:1fr 2fr; height:40px; border-radius:12px; overflow:hidden; font-size:13px; font-weight:700; text-align:center; }
+.x07-split span { display:grid; place-items:center; padding:0 4px; line-height:1.2; background:var(--line); }
+.x07-split span + span { background:var(--hue); color:#fff; }
+.x07-ticks { display:grid; grid-template-columns:1fr 1fr 1fr; font-size:12px; font-weight:700; color:var(--muted); }
+.x07-ticks span { text-align:right; padding-right:2px; }
+.x07-vw { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:12px; border-radius:20px; background:var(--soft); }
+.x07-vote { position:relative; height:112px; }
+.x07-hall, .x07-yes { position:absolute; left:0; top:42px; height:30px; border-radius:8px; transition:width .3s ease; }
+.x07-hall { background:var(--white); box-shadow:inset 0 0 0 2px var(--line); }
+.x07-yes { background:var(--hue); }
+.x07-vn { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+.x07-vn span { display:grid; grid-template-columns:12px minmax(0,1fr); gap:2px 6px; align-items:center; padding:8px 10px; border-radius:12px; background:var(--white); font-size:13px; font-weight:600; line-height:1.3; color:var(--muted); }
+.x07-vn i { width:12px; height:12px; border-radius:50%; background:var(--hue); }
+.x07-vn i.x07-emp { background:var(--white); box-shadow:inset 0 0 0 2px var(--line); }
+.x07-vn b { grid-column:2; font-family:var(--display); font-weight:800; font-size:18px; line-height:1.1; color:var(--ink); }
+.x07-ln { position:absolute; top:34px; width:0; height:46px; border-left:3px solid var(--bad); transition:left .3s ease, border-color .2s ease; }
+.x07-ln.x07-lb { border-left-style:dashed; }
+.x07-ln span { position:absolute; left:0; transform:translateX(-50%); padding:1px 8px; border-radius:99px; background:var(--bad); color:#fff; font-size:12px; font-weight:700; line-height:1.5; white-space:nowrap; transition:background-color .2s ease; }
+.x07-ln.x07-la span { top:-28px; }
+.x07-ln.x07-lb span { top:50px; }
+.x07-ln.x07-hit { border-left-color:var(--good); }
+.x07-ln.x07-hit span { background:var(--good); }
+
+/* ส่วนที่ 7: คณะกรรมการกำกับดูแลฯ */
+.x07-seats { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:12px; border-radius:20px; background:var(--soft); }
+.x07-sr { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; padding:10px 12px; border-radius:14px; background:var(--white); }
+.x07-sr b { font-family:var(--display); font-size:16px; line-height:1.3; }
+.x07-sr > span { font-size:14px; line-height:1.5; }
+.x07-sr .x07-dots i { width:18px; height:18px; border-radius:50%; }
+.x07-sr .x07-dots i.x07-me { box-shadow:0 0 0 3px var(--sun); }
+.x07-sr mark { padding:0 4px; border-radius:6px; background:var(--sun); color:var(--ink); font-weight:700; }
+.x07-dir { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x07-dg { display:grid; grid-template-columns:36px minmax(0,1fr); gap:10px; align-items:start; padding:12px; border-radius:18px; background:var(--soft); }
+.x07-ar { width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:var(--ink); color:#fff; }
+.x07-ar svg { width:20px; height:20px; }
+.x07-dg b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
+.x07-dg ul { margin:4px 0 0; padding:0 0 0 18px; display:grid; gap:5px; font-size:14px; line-height:1.5; }
+.x07-trk { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:minmax(0,1fr); }
+.x07-trk li { position:relative; display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; padding-bottom:14px; font-size:14px; line-height:1.45; color:var(--muted); transition:color .2s ease; }
+.x07-trk li:last-child { padding-bottom:0; }
+.x07-trk li::before { content:""; width:28px; height:28px; border-radius:50%; background:var(--white); box-shadow:inset 0 0 0 2px var(--line); z-index:1; }
+.x07-trk li::after { content:""; position:absolute; left:12px; top:28px; bottom:0; width:4px; background:var(--line); }
+.x07-trk li:last-child::after { display:none; }
+.x07-trk li.x07-past { color:var(--ink); }
+.x07-trk li.x07-past::before { background:var(--hue); box-shadow:none; }
+.x07-trk li.x07-past::after { background:var(--hue); }
+.x07-trk li.x07-here { color:var(--ink); }
+.x07-trk li.x07-here::before { background:var(--sun); box-shadow:0 0 0 4px rgba(240,200,75,.35); }
+.x07-trk b { display:block; font-family:var(--display); font-size:15px; line-height:1.3; color:inherit; }
+
+/* ส่วนที่ 8: กรรมการชั่วคราว · แถบจำนวนวันและจำนวนปี */
+.x07-tmp { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; padding:14px; border-radius:20px; background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--sun); }
+.x07-tmp > * { transition:opacity .2s ease; }
+/* ยังไม่ถึงขั้นนี้: จางทุกชิ้น ยกเว้นหัวกล่องกับโจทย์ ซึ่งบอกว่าต้องทำอะไรก่อน */
+.x07-tmp.x07-off > :not(b):not(.case) { opacity:.45; }
+.x07-tmp > b { font-family:var(--display); font-size:17px; line-height:1.3; }
+.x07-tmp .stat b { font-size:22px; line-height:1.2; }
+.x07-bar2 { position:relative; height:66px; }
+.x07-bt, .x07-bf { position:absolute; left:0; top:30px; height:22px; border-radius:8px; }
+.x07-bt { right:0; background:var(--white); box-shadow:inset 0 0 0 2px var(--line); }
+.x07-bf { background:var(--hue); transition:width .3s ease; }
+.x07-bm { position:absolute; top:22px; width:0; height:38px; border-left:3px solid var(--ink); transition:left .3s ease; }
+.x07-bm span { position:absolute; left:0; top:-24px; transform:translateX(-50%); padding:1px 8px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; line-height:1.5; white-space:nowrap; }
+
+/* ===== X07-EXTRA (ถอดได้ทั้งก้อน) ===== */
+.x07-extra { box-shadow:var(--lift), inset 0 0 0 2px var(--line); }
+.x07-oos { justify-self:start; padding:2px 10px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; line-height:1.6; }
+details.x07-fold p { margin-top:12px; font-weight:700; }
+details.x07-fold ul { margin-top:4px; }
+/* ===== จบ X07-EXTRA ===== */
 </style>
 </head>
 <body>
-<!-- กฎหมาย 2 รุ่นภาพ · จรรยาบรรณ หลักการพื้นฐาน ข้อ 9 (ค) · 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
-     ตัวบทที่เปิดเทียบ: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 ข้อ 4 ข้อ 9 (ค) ข้อ 10 ข้อ 11 (ก) (ภาพ p1 p3 p4 p5)
-     คู่มือประมวลจรรยาบรรณฯ แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566: การนำประมวลจรรยาบรรณไปใช้ ข้อ 11 13 15 · 113 · 230 · 270.3 · 320.3–320.4 · 321 · พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.46
-     แพร พีท พริ้ง และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ ที่มาของแต่ละกรณีอยู่ใน notes/ETH-c.notes.md -->
-<main>
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพบัญชี สถานี 1.7 “สภาฯ มีคณะกรรมการอะไรบ้าง ใครเป็นได้” (รหัสเนื้อหาเดิม R08) · เขียนใหม่ทั้งหน้า 14 ต.ค. 2569
+     ตัวบท: พระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547 มาตรา 4 · 5 · 18 · 20 · 22–29 · 31–36 · 40 · 42 · 47 · 50–64 · 71 (ถ้อยคำที่ยันอยู่ใน claims R08-K01 ถึง K72 ของ claude-content/R08.content.json)
+     ส่วนที่ 9 ทั้งส่วน (ระหว่างเครื่องหมาย X07-EXTRA) ยืนบนข้อบังคับเลือกตั้ง พ.ศ. 2568 และข้อบังคับคณะรายด้าน พ.ศ. 2563 ซึ่งอยู่นอกรายการขอบเขตสอบ ถอดออกได้ทั้งก้อน ส่วนอื่นไม่ได้อ้างถึง
+     ตัวเลขของเรื่องตัวอย่าง (ไม่ใช่ของกฎหมาย): คณะกรรมการสภาฯ 17 คน · สมาชิกสามัญมาประชุม 330 คน ให้ออก 240 เสียง · พ้น 9 คน · วาระเหลือ 300 วัน · 1 มกราคม 20x1 · พี่แพม 12 ปี
+     แพร พี่แพม และรุ่นน้องของแพร เป็นกรณีสมมติ · บันทึก: exchange/v2/builds/law2u-2026-10-11/law2v/notes-rw/r07.md
+     รอบคนเรียนครั้งแรก 14 ต.ค. 2569: ก้อนลองเปลี่ยนทุกก้อนเรียง โจทย์ (.case) → ตัวควบคุม → หลัก (.x07-rl) → ภาพ → กล่องตัดสิน · รายละเอียดอยู่ท้ายบันทึก -->
+<main class="x07">
   <header class="hero">
-    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
-    <p class="kick">วิชาชีพบัญชี · บทที่ 7 · จรรยาบรรณ หลัก (ค)</p>
-    <h1>งานนี้เราทำได้จริงไหม</h1>
-    <p class="sub">ผู้ประกอบวิชาชีพบัญชีรับงานได้เมื่อมีความรู้ความสามารถพอ และต้องทำด้วยความเอาใจใส่ เรื่องนี้คือหลักการพื้นฐานข้อ (ค) ของจรรยาบรรณ</p>
-    <svg viewBox="0 0 340 126" role="img" aria-label="ภาพรายการตรวจความพร้อมก่อนรับงาน คู่กับหมวกบัณฑิต">
-      <g transform="translate(36 16)"><rect width="96" height="100" rx="12" fill="rgba(255,255,255,.14)"/><rect x="30" y="-7" width="36" height="16" rx="8" fill="#F0C84B"/>
-        <g stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M16 34l6 6 10-11M16 58l6 6 10-11M16 82l6 6 10-11"/></g>
-        <g stroke="rgba(255,255,255,.6)" stroke-width="5" stroke-linecap="round"><path d="M44 36h36M44 60h36M44 84h26"/></g></g>
-      <g stroke="#F0C84B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M152 66h40"/><path d="M182 54l14 12-14 12"/></g>
-      <g transform="translate(214 20)"><circle cx="46" cy="46" r="46" fill="#fff"/><path d="M14 40L46 24l32 16-32 16z" fill="#2F6B8A"/><path d="M28 50v12c5 6 11 8 18 8s13-2 18-8V50" fill="none" stroke="#2F6B8A" stroke-width="5" stroke-linecap="round"/><path d="M78 40v18" stroke="#F0C84B" stroke-width="5" stroke-linecap="round"/></g>
-      <rect x="0" y="120" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    <div class="top"><a href="law2v-index.html#R">สายวิชาชีพบัญชี</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · สถานี 1.7</p>
+    <h1>สภาฯ มีคณะกรรมการอะไรบ้าง ใครเป็นได้</h1>
+    <p class="sub">มีห้าคณะ สี่คณะทำงานของสภาวิชาชีพบัญชี อีกหนึ่งคณะคอยกำกับ แต่ละตำแหน่งมีที่มาไม่เหมือนกัน บางตำแหน่งเลือกตั้ง บางตำแหน่งแต่งตั้ง บางตำแหน่งได้นั่งเพราะเป็นตำแหน่งอื่นอยู่แล้ว</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพโต๊ะประชุมมองจากด้านบน ที่นั่งรอบโต๊ะมีสามสีตามที่มาของตำแหน่ง">
+      <ellipse cx="170" cy="66" rx="98" ry="26" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.4)" stroke-width="3"/>
+      <circle cx="170.0" cy="22.0" r="9" fill="#F0C84B"/><circle cx="216.2" cy="25.0" r="9" fill="#FFFFFF"/><circle cx="256.2" cy="33.5" r="9" fill="#FFFFFF"/><circle cx="284.6" cy="46.4" r="9" fill="#FFFFFF"/><circle cx="297.5" cy="61.9" r="9" fill="#FFFFFF"/><circle cx="293.1" cy="78.0" r="9" fill="#FFFFFF"/><circle cx="272.1" cy="92.5" r="9" fill="#FFFFFF"/><circle cx="237.4" cy="103.4" r="9" fill="#FFFFFF"/><circle cx="193.5" cy="109.3" r="9" fill="#FFFFFF"/><circle cx="146.5" cy="109.3" r="9" fill="#C9B8E8"/><circle cx="102.6" cy="103.4" r="9" fill="#C9B8E8"/><circle cx="67.9" cy="92.5" r="9" fill="#C9B8E8"/><circle cx="46.9" cy="78.0" r="9" fill="#F0C84B"/><circle cx="42.5" cy="61.9" r="9" fill="#F0C84B"/><circle cx="55.4" cy="46.4" r="9" fill="#F0C84B"/><circle cx="83.8" cy="33.5" r="9" fill="#F0C84B"/><circle cx="123.8" cy="25.0" r="9" fill="#F0C84B"/>
+      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
     </svg>
   </header>
 
-  <nav class="steps xec-steps" id="steps" aria-label="ส่วนของบท">
-    <a href="#s1"><i>1</i>ก่อนรับงาน</a><a href="#s2"><i>2</i>งานในองค์กร</a><a href="#s3"><i>3</i>ระหว่างทำงาน</a><a href="#s4"><i>4</i>ความเห็นที่สอง</a>
+  <nav class="steps x07-steps" id="steps" aria-label="ส่วนของสถานี">
+    <a href="#s1"><i>1</i>ใครนั่ง</a><a href="#s2"><i>2</i>ทำอะไร</a><a href="#s3"><i>3</i>อีกสามคณะ</a><a href="#s4"><i>4</i>ใครเป็นได้</a><a href="#s5"><i>5</i>กี่ปี</a><a href="#s6"><i>6</i>พ้นก่อน</a><a href="#s7"><i>7</i>ผู้กำกับ</a><a href="#s8"><i>8</i>ไม่ทำตาม</a><a href="#s9"><i>9</i>ลงสมัคร</a>
   </nav>
 
-  <!-- หลักนี้เขียนว่าอะไร -->
+  <!-- ภาพรวม: ห้าคณะ ใครตั้งใคร -->
   <section class="fig" aria-labelledby="f0">
-    <span class="fno">หลักนี้เขียนว่าอะไร</span>
-    <h2 id="f0">หลัก (ค) มีสองส่วน และต้องมีทั้งคู่</h2>
-    <p class="cap">บทนี้มีสี่ส่วน แตะส่วนที่อยากดู</p>
-    <div class="map xec-map">
-      <div class="nd xec-name"><span class="ico" data-ico="cap"></span><b>ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน</b><span class="law">ข้อบังคับจรรยาบรรณ ข้อ 9 (ค)</span></div>
+    <span class="fno">ภาพรวมของสถานี</span>
+    <h2 id="f0">ห้าคณะ ใครตั้งใคร</h2>
+    <p class="cap">แพรเป็นผู้สอบบัญชีรับอนุญาต และเป็นสมาชิกสามัญ ซึ่งเป็นสมาชิกประเภทหนึ่งของสภาวิชาชีพบัญชี (หน้านี้เรียกสั้น ๆ ว่าสภาฯ) ปีนี้การประชุมใหญ่มีเลือกตั้ง แพรเลยอยากรู้ว่าคนในแต่ละคณะคือใคร มาจากไหน</p>
+    <p class="cap">อ่านผังจากบนลงล่าง ชื่อคณะยาวและคล้ายกัน ให้ดูบรรทัดเล็กใต้ชื่อว่าคณะนั้นทำอะไร สีของป้ายบอกว่าคนในคณะมาทางไหน</p>
+    <ul class="x07-key" aria-label="สีบอกที่มาของตำแหน่ง">
+      <li><i class="x07-bel"></i>เลือกตั้ง</li><li><i class="x07-bap"></i>แต่งตั้ง</li><li><i class="x07-bex"></i>โดยตำแหน่ง คือได้นั่งเพราะเป็นตำแหน่งอื่นอยู่</li>
+    </ul>
+    <div class="map x07-map">
+      <span class="pinp"><span data-face="prae2"></span>แพรอยู่ตรงนี้ นั่งในที่ประชุมใหญ่</span>
+      <div class="nd x07-gm"><span class="ico" data-ico="users"></span><b>ที่ประชุมใหญ่</b><small>การประชุมใหญ่ของสภาวิชาชีพบัญชี ต้องมีสมาชิกสามัญมาประชุมไม่น้อยกว่า 200 คน ประชุมใหญ่สามัญมีอย่างน้อยปีละครั้ง</small><span class="law">ม.18 · ม.20</span></div>
+      <div class="x07-arw"><span>เลือกตั้งนายก กรรมการ และประธานของแต่ละด้าน</span></div>
+      <div class="x07-council">
+        <span class="x07-ct">ในสภาวิชาชีพบัญชี มีสี่คณะ</span>
+        <a class="x07-b x07-main" href="#s1"><b>คณะกรรมการสภาวิชาชีพบัญชี</b><small>บริหารกิจการของสภาฯ ต่อจากนี้เรียกว่าคณะกรรมการสภาฯ</small><span class="x07-os"><span class="x07-o x07-bel">เลือกตั้ง</span><span class="x07-o x07-bex">โดยตำแหน่ง</span><span class="x07-o x07-bap">แต่งตั้ง</span></span><span class="law">ม.22 · ม.28</span><span class="go">ดูส่วนที่ 1 และ 2</span></a>
+        <span class="x07-sub">ประธานของสามคณะข้างล่างนี้ ได้นั่งในคณะกรรมการสภาฯ โดยตำแหน่ง</span>
+        <a class="x07-b" href="#s3"><b>คณะกรรมการวิชาชีพบัญชีของแต่ละด้าน</b><small>วิชาชีพบัญชีมีหกด้าน เช่น การทำบัญชี การสอบบัญชี แต่ละด้านมีคณะของตัวเอง คอยพัฒนาและส่งเสริมวิชาชีพด้านนั้น</small><span class="x07-os"><span class="x07-o x07-bel">ประธานมาจากเลือกตั้ง</span></span><span class="law">ม.4 · ม.32</span><span class="go">ดูส่วนที่ 3</span></a>
+        <a class="x07-b" href="#s3"><b>คณะกรรมการกำหนดมาตรฐานการบัญชี</b><small>กำหนดและปรับปรุงมาตรฐานการบัญชี</small><span class="x07-os"><span class="x07-o x07-bap">แต่งตั้ง</span><span class="x07-o x07-brp">ผู้แทนหน่วยงาน</span></span><span class="law">ม.33 · ม.34</span><span class="go">ดูส่วนที่ 3</span></a>
+        <a class="x07-b" href="#s4"><b>คณะกรรมการจรรยาบรรณ</b><small>สอบสวนพิจารณาคำกล่าวหาว่าประพฤติผิดจรรยาบรรณ</small><span class="x07-os"><span class="x07-o x07-bap">แต่งตั้ง</span></span><span class="law">ม.50 · ม.53</span><span class="go">ดูส่วนที่ 3 และ 4</span></a>
+      </div>
+      <div class="x07-arw"><span>คณะข้างล่างกำกับดูแลการดำเนินกิจการของสภาฯ</span></div>
+      <a class="nd x07-ov" href="#s7"><span class="ico" data-ico="search"></span><b>คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</b><small>คณะที่ห้า อยู่นอกสภาฯ ปลัดกระทรวงพาณิชย์เป็นประธาน ต่อจากนี้เรียกว่าคณะกรรมการกำกับดูแลฯ</small><span class="x07-os"><span class="x07-o x07-bex">โดยตำแหน่ง</span><span class="x07-o x07-bap">แต่งตั้ง</span></span><span class="law">ม.59 · ม.60</span><span class="go">ดูส่วนที่ 7</span></a>
       <span class="ln"></span>
-      <div class="nd xec-part"><span class="xec-verb">รักษาไว้ซึ่ง</span><span class="xec-words"><i>ความรู้</i><i>ความสามารถ</i><i>ความชำนาญทางวิชาชีพ</i></span><small>ในระดับที่ลูกค้าหรือผู้ว่าจ้างได้รับบริการที่ทันวิวัฒนาการล่าสุด</small>
-        <span class="xec-jump"><a href="#s1">ส่วน 1 ก่อนรับงาน</a><a href="#s2">ส่วน 2 งานในองค์กร</a></span></div>
-      <span class="and">และ</span>
-      <div class="nd xec-part"><span class="xec-verb">ปฏิบัติหน้าที่ด้วย</span><span class="xec-words"><i>ความเอาใจใส่</i></span><small>ให้เป็นไปตามมาตรฐานวิชาชีพที่เกี่ยวข้อง</small>
-        <span class="xec-jump"><a href="#s3">ส่วน 3 ระหว่างทำงาน</a></span></div>
+      <a class="nd x07-min" href="#s8"><span class="ico" data-ico="gavel"></span><b>รัฐมนตรีว่าการกระทรวงพาณิชย์</b><small>แต่งตั้งผู้ทรงคุณวุฒิในคณะกรรมการกำกับดูแลฯ และมีคำสั่งให้นายกหรือกรรมการที่ไม่ทำตามคำสั่งพ้นจากตำแหน่ง</small><span class="law">ม.5 · ม.59 · ม.63</span><span class="go">ดูส่วนที่ 8</span></a>
     </div>
-    <p class="note"><span data-ico="info"></span><span>ถ้อยคำเต็ม: รักษาไว้ซึ่งความรู้ ความสามารถ และความชำนาญทางวิชาชีพในระดับที่รับรองได้ว่าลูกค้าหรือผู้ว่าจ้างได้รับบริการทางวิชาชีพที่ถึงพร้อมด้วยวิวัฒนาการล่าสุดในวิธีการ หรือเทคนิคการปฏิบัติงาน หรือตามกฎหมาย และปฏิบัติหน้าที่ด้วยความเอาใจใส่ให้เป็นไปตามมาตรฐานวิชาชีพที่เกี่ยวข้อง <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 9 (ค)</span> ส่วนพระราชบัญญัติวิชาชีพบัญชี ให้ปฏิบัติหน้าที่ตามมาตรฐานการบัญชี มาตรฐานการสอบบัญชี หรือมาตรฐานอื่นใดที่เกี่ยวข้องที่กำหนดตามพระราชบัญญัติ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46</span></span></p>
-    <p class="lbl">ใช้กับผู้ประกอบวิชาชีพบัญชีทั้งสองบทบาท <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 4 · ข้อ 9</span></p>
-    <div class="xec-roles">
-      <a class="xec-role" href="#s1"><span data-face="prae2"></span><span><em>ส่วน 1</em><b>แพร ผู้สอบบัญชีรับอนุญาต ในสำนักงานสอบบัญชี</b><small>ข้อบังคับเรียกว่า ผู้ประกอบวิชาชีพบัญชีที่ให้บริการสาธารณะ คือผู้ประกอบวิชาชีพบัญชีในสำนักงานที่ให้บริการทางวิชาชีพ</small></span></a>
-      <a class="xec-role" href="#s2"><span data-xec-pete></span><span><em>ส่วน 2</em><b>พีท ผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด</b><small>ข้อบังคับเรียกว่า ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ คือผู้ประกอบวิชาชีพบัญชีที่ได้รับการว่าจ้างในกิจการ</small></span></a>
-      <a class="xec-role" href="#s4"><span class="xec-ic" data-ico="book"></span><span><em>ส่วน 4 · อีกเรื่องที่อยู่ใต้หลักนี้</em><b>ความเห็นที่สอง</b><small>บริษัทที่มีผู้สอบบัญชีอยู่แล้ว มาขอความเห็นจากผู้ประกอบวิชาชีพบัญชีอีกคน</small></span></a>
-    </div>
-    <p class="note"><span data-ico="book"></span><span>“คู่มือ” ในหน้านี้ คือคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี ของสภาวิชาชีพบัญชี เลขข้อที่ขึ้นต้นด้วย R เป็นข้อกำหนด เลขข้อที่มีอักษร A เป็นคำอธิบายการนำไปปฏิบัติ</span></p>
+    <p class="lbl">เรื่องที่อยู่ระหว่างทาง</p>
+    <div class="x07-jump"><a href="#s2">คณะกรรมการสภาฯ ทำอะไร</a><a href="#s5">อยู่ได้กี่ปี</a><a href="#s6">พ้นก่อนครบวาระ</a><a href="#s9">ข้อบังคับเรื่องผู้สมัคร</a></div>
   </section>
 
-  <!-- 1 ก่อนรับงาน -->
+  <!-- ส่วนที่ 1 -->
   <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
-    <div class="sechd"><i>1</i><div><small>เห็นจากกรณี · ก่อนรับงาน</small><h2 id="h1">ทีมต้องทำงานนั้นได้ และต้องรู้ข้อเท็จจริงก่อนตอบรับ</h2></div></div>
-    <span class="pinp xec-pin"><span data-face="prae2"></span>แพร ผู้สอบบัญชีรับอนุญาต ในสำนักงานสอบบัญชี</span>
-    <p class="cap">พริ้ง เจ้าของบริษัท พาวเด้ออ้าย จำกัด ขอให้แพรเป็นผู้สอบบัญชีของบริษัท แทนผู้สอบบัญชีคนเดิม ตอนนี้ข้อเท็จจริงสามเรื่องข้างล่างเป็นสีเขียวทั้งหมด แตะเพื่อเปลี่ยนทีละเรื่อง</p>
-    <p class="note"><span data-ico="info"></span><span><b>อุปสรรค</b> เป็นคำของข้อบังคับ เหตุการณ์แวดล้อมที่ผู้ประกอบวิชาชีพบัญชีปฏิบัติงานอยู่ อาจทำให้เกิดอุปสรรคในการปฏิบัติตามหลักการพื้นฐาน ข้อบังคับให้ระบุอุปสรรค ประเมิน แล้วใช้ <b>มาตรการป้องกัน</b> ที่จำเป็น เพื่อขจัดหรือลดอุปสรรคให้อยู่ในระดับที่ยอมรับได้ <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 10</span></span></p>
-    <div class="xec-facts" data-togs="acc">
-      <p class="lbl">ทีมของแพรทำงานนี้ได้ไหม <span class="law">คู่มือ 320.3 A4</span></p>
-      <p class="xec-hint">คู่มือใช้หลายเรื่องประเมินระดับของอุปสรรคในเรื่องนี้ รวมถึงสองเรื่องข้างล่าง (คู่มือเรียกทีมว่า กลุ่มผู้ปฏิบัติงาน)</p>
-      <button class="xec-fact" id="a0" data-k="biz" aria-pressed="true"><span class="xec-ic" data-ico="bag"></span><span><span class="xec-tx"></span><small>คู่มือไล่ไว้ว่า ลักษณะธุรกิจของลูกค้า ความซับซ้อนของการดำเนินงาน ความต้องการของงาน และวัตถุประสงค์ ลักษณะและขอบเขตของงานที่ต้องปฏิบัติ</small></span><span class="xec-mk"></span></button>
-      <button class="xec-fact" id="a1" data-k="ind" aria-pressed="true"><span class="xec-ic" data-ico="book"></span><span class="xec-tx"></span><span class="xec-mk"></span></button>
-      <p class="lbl" style="margin-top:6px">ข้อเท็จจริงที่เกี่ยวข้อง ที่ต้องรู้ก่อนตอบรับ <span class="law">คู่มือ 320.4 A1 · A4</span></p>
-      <p class="xec-hint">ทางหนึ่งที่คู่มือยกไว้เพื่อให้รู้ คือขอข้อมูลที่ผู้สอบบัญชีคนเดิมทราบอยู่แล้ว และเห็นว่าผู้ที่จะรับงานจำเป็นต้องตระหนักก่อนตัดสินใจตอบรับ การขออาจทำให้ทราบข้อเท็จจริงในประเด็นที่ปกปิดก่อนหน้านี้</p>
-      <button class="xec-fact" id="a2" data-k="prev" aria-pressed="true"><span class="xec-ic" data-ico="mail"></span><span class="xec-tx"></span><span class="xec-mk"></span></button>
+    <div class="sechd"><i>1</i><div><small>คณะกรรมการสภาวิชาชีพบัญชี</small><h2 id="h1">คนที่บริหารสภาฯ มีใครบ้าง มาจากไหน</h2></div></div>
+    <p class="cap">คนรอบโต๊ะนี้มีสี่กลุ่ม ที่ประชุมใหญ่เลือกตั้งเข้ามาเองสองกลุ่ม คือนายกสภาวิชาชีพบัญชี (เรียกสั้น ๆ ว่านายก) กับกรรมการ อีกสองกลุ่มไม่ได้เลือก</p>
+    <p class="cap">ภาพเริ่มที่นายก ที่นั่งของนายกสว่างอยู่ แตะกลุ่มอื่นใต้ภาพ แล้วดูว่าเขามาทางไหน</p>
+    <div class="x07-tw">
+      <svg viewBox="0 0 320 196" role="img" aria-label="โต๊ะประชุมของคณะกรรมการสภาวิชาชีพบัญชี มี 17 ที่นั่ง สีของที่นั่งบอกที่มาของตำแหน่ง">
+        <ellipse class="x07-desk" cx="160" cy="98" rx="104" ry="52"/>
+        <g class="x07-s" id="st0" data-g="0"><circle class="x07-ring" cx="160.0" cy="18.0" r="15.5"/><circle class="x07-f x07-fel" cx="160.0" cy="18.0" r="12"/></g>
+        <g class="x07-s" id="st1" data-g="2"><circle class="x07-ring" cx="209.1" cy="23.4" r="15.5"/><circle class="x07-f x07-fex" cx="209.1" cy="23.4" r="12"/><circle class="x07-core" cx="209.1" cy="23.4" r="4.5"/></g>
+        <g class="x07-s" id="st2" data-g="2"><circle class="x07-ring" cx="251.6" cy="38.9" r="15.5"/><circle class="x07-f x07-fex" cx="251.6" cy="38.9" r="12"/><circle class="x07-core" cx="251.6" cy="38.9" r="4.5"/></g>
+        <g class="x07-s" id="st3" data-g="2"><circle class="x07-ring" cx="281.7" cy="62.3" r="15.5"/><circle class="x07-f x07-fex" cx="281.7" cy="62.3" r="12"/><circle class="x07-core" cx="281.7" cy="62.3" r="4.5"/></g>
+        <g class="x07-s" id="st4" data-g="2"><circle class="x07-ring" cx="295.4" cy="90.6" r="15.5"/><circle class="x07-f x07-fex" cx="295.4" cy="90.6" r="12"/><circle class="x07-core" cx="295.4" cy="90.6" r="4.5"/></g>
+        <g class="x07-s" id="st5" data-g="2"><circle class="x07-ring" cx="290.8" cy="119.9" r="15.5"/><circle class="x07-f x07-fex" cx="290.8" cy="119.9" r="12"/><circle class="x07-core" cx="290.8" cy="119.9" r="4.5"/></g>
+        <g class="x07-s" id="st6" data-g="2"><circle class="x07-ring" cx="268.5" cy="146.2" r="15.5"/><circle class="x07-f x07-fex" cx="268.5" cy="146.2" r="12"/><circle class="x07-core" cx="268.5" cy="146.2" r="4.5"/></g>
+        <g class="x07-s" id="st7" data-g="2"><circle class="x07-ring" cx="231.6" cy="166.0" r="15.5"/><circle class="x07-f x07-fex" cx="231.6" cy="166.0" r="12"/></g>
+        <g class="x07-s" id="st8" data-g="2"><circle class="x07-ring" cx="185.0" cy="176.6" r="15.5"/><circle class="x07-f x07-fex" cx="185.0" cy="176.6" r="12"/></g>
+        <g class="x07-s" id="st9" data-g="3"><circle class="x07-ring" cx="135.0" cy="176.6" r="15.5"/><circle class="x07-f x07-fap" cx="135.0" cy="176.6" r="12"/></g>
+        <g class="x07-s" id="st10" data-g="3"><circle class="x07-ring" cx="88.4" cy="166.0" r="15.5"/><circle class="x07-f x07-fap" cx="88.4" cy="166.0" r="12"/></g>
+        <g class="x07-s" id="st11" data-g="3"><circle class="x07-ring" cx="51.5" cy="146.2" r="15.5"/><circle class="x07-f x07-fap" cx="51.5" cy="146.2" r="12"/></g>
+        <g class="x07-s" id="st12" data-g="1"><circle class="x07-ring" cx="29.2" cy="119.9" r="15.5"/><circle class="x07-f x07-fel" cx="29.2" cy="119.9" r="12"/></g>
+        <g class="x07-s" id="st13" data-g="1"><circle class="x07-ring" cx="24.6" cy="90.6" r="15.5"/><circle class="x07-f x07-fel" cx="24.6" cy="90.6" r="12"/></g>
+        <g class="x07-s" id="st14" data-g="1"><circle class="x07-ring" cx="38.3" cy="62.3" r="15.5"/><circle class="x07-f x07-fel" cx="38.3" cy="62.3" r="12"/></g>
+        <g class="x07-s" id="st15" data-g="1"><circle class="x07-ring" cx="68.4" cy="38.9" r="15.5"/><circle class="x07-f x07-fel" cx="68.4" cy="38.9" r="12"/></g>
+        <g class="x07-s" id="st16" data-g="1"><circle class="x07-ring" cx="110.9" cy="23.4" r="15.5"/><circle class="x07-f x07-fel" cx="110.9" cy="23.4" r="12"/></g>
+      </svg>
+      <div class="x07-tc"><b>17</b>ที่นั่ง ในเรื่องนี้</div>
     </div>
-    <div class="xec-out" id="out1" role="status"></div>
-    <p class="lbl">ตัวอย่างมาตรการป้องกันที่คู่มือยกไว้ <span class="law">คู่มือ 320.3 A5 · 320.4 A4</span></p>
-    <p class="xec-hint">แถวที่มีกรอบสีเหลือง คือทางของเรื่องที่ยังขาด</p>
-    <ul class="xec-ways">
-      <li class="xec-way" id="w0"><span class="xec-ic" data-ico="card"></span><span>มอบหมายงานให้พนักงานที่มีความรู้ความสามารถที่จำเป็น ในจำนวนที่เพียงพอ</span></li>
-      <li class="xec-way" id="w1"><span class="xec-ic" data-ico="clock"></span><span>ตกลงกรอบเวลาที่มีความเป็นไปได้ในการปฏิบัติงาน</span></li>
-      <li class="xec-way" id="w2"><span class="xec-ic" data-ico="cap"></span><span>ใช้ผู้เชี่ยวชาญในกรณีที่จำเป็น</span></li>
-      <li class="xec-way" id="w3"><span class="xec-ic" data-ico="mail"></span><span>ขอให้ผู้สอบบัญชีคนเดิมให้ข้อมูลที่ทราบอยู่แล้ว<small>วิธีติดต่ออยู่ในบทที่ 8 <a class="xec-lk" href="law2v-r08.html">“เรื่องนี้บอกใครได้บ้าง”</a></small></span></li>
+    <ul class="x07-key" aria-label="สีของที่นั่ง">
+      <li><i class="x07-bel"></i>เลือกตั้ง</li><li><i class="x07-bex"></i>โดยตำแหน่ง</li><li><i class="x07-bap"></i>แต่งตั้ง</li>
+      <li><i class="x07-two"></i>จุดเขียวตรงกลาง คือประธานของด้าน ซึ่งผ่านการเลือกตั้งมาก่อนแล้วจึงได้นั่งโดยตำแหน่ง</li>
     </ul>
-    <div class="cons">
-      <b>ถ้าอุปสรรคจัดการด้วยมาตรการป้องกันไม่ได้</b>
-      <div class="cg xec-neu"><span class="ico" data-ico="flag"></span><div><b>อาจเป็นเหตุผลหนึ่งที่จะไม่ตอบรับงาน</b><span>เมื่อถูกขอให้มาแทนผู้ประกอบวิชาชีพบัญชีคนอื่น แพรต้องตัดสินใจว่ามีเหตุผลใดในการไม่ตอบรับงาน <span class="law">คู่มือ R320.4 · 320.4 A1</span></span></div></div>
+    <div class="x07-grp" data-pick="seat">
+      <button data-v="0" aria-pressed="true"><i class="x07-bel"></i><span><b>นายก</b><small>1 คน</small></span></button>
+      <button data-v="1"><i class="x07-bel"></i><span><b>กรรมการที่เลือกตั้ง</b><small>ไม่เกิน 5 คน</small></span></button>
+      <button data-v="2"><i class="x07-bex"></i><span><b>กรรมการโดยตำแหน่ง</b><small>ประธานของคณะอื่น</small></span></button>
+      <button data-v="3"><i class="x07-bap"></i><span><b>กรรมการผู้ทรงคุณวุฒิ</b><small>3 คน</small></span></button>
+      <button data-v="4" class="x07-wide"><i class="x07-hat"></i><span><b>อุปนายก เลขาธิการ เหรัญญิก นายทะเบียน</b><small>นายกเลือกจากคนที่นั่งอยู่แล้ว</small></span></button>
     </div>
-    <p class="note"><span data-ico="info"></span><span>คู่มือเรียกอุปสรรคในส่วนนี้ว่า <b>อุปสรรคจากผลประโยชน์ส่วนตน</b> ข้อบังคับอธิบายว่า คืออุปสรรคที่เกิดจากผลประโยชน์ทางการเงินหรือผลประโยชน์อื่น ที่มีอิทธิพลอย่างไม่เหมาะสมต่อการใช้ดุลยพินิจ หรือพฤติกรรมของผู้ประกอบวิชาชีพ <span class="law">ข้อบังคับจรรยาบรรณ ข้อ 11 (ก)</span> อุปสรรคประเภทอื่นและขั้นตอนจัดการ อยู่ในบทที่ 11 <a class="xec-lk" href="law2v-r11.html">“เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง”</a></span></p>
+    <div class="x07-via" aria-live="polite"><span id="via0"></span><i></i><span id="via1"></span><i></i><span id="via2"></span></div>
+    <div class="cons" role="status">
+      <div class="cg" id="seatC"><span class="ico" id="seatI"></span><div><b id="seatT"></b><span id="seatS"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>พระราชบัญญัติไม่ได้เขียนจำนวนรวมของคณะนี้ไว้ 17 ที่นั่งเป็นตัวเลขของเรื่องนี้ นับเมื่อวิชาชีพบัญชีมีหกด้านตามมาตรา 4 และที่ประชุมใหญ่เลือกกรรมการครบ 5 คน <span class="law">ม.22 · ม.4</span> ส่วนคุณสมบัติของนายก ผู้ทรงคุณวุฒิ และกรรมการที่เลือกตั้ง กับวิธีเลือกตั้ง พระราชบัญญัติให้เป็นไปตามข้อบังคับสภาฯ <span class="law">ม.22 วรรคสาม</span></span></p>
+    <div id="ck1"></div>
   </section>
 
-  <!-- 2 งานในองค์กร -->
+  <!-- ส่วนที่ 2 -->
   <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
-    <div class="sechd"><i>2</i><div><small>เห็นจากกรณี · งานในองค์กร</small><h2 id="h2">ขาดเวลา ข้อมูล ประสบการณ์ หรือทรัพยากร ก็กระทบหลักนี้ได้</h2></div></div>
-    <span class="pinp xec-pin"><span data-xec-pete></span>พีท ผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด</span>
-    <p class="cap">พริ้ง เจ้าของบริษัท เป็นผู้บังคับบัญชาของพีท พริ้งมอบงานสำคัญให้พีท คือจัดทำประมาณการทางการเงินเพื่อยื่นขอสินเชื่อ ตอนนี้พีทมีเพียงพอทั้งสี่เรื่อง</p>
-    <p class="lbl">แตะการ์ดเพื่อสลับระหว่าง เพียงพอ กับ ไม่เพียงพอ <span class="law">คู่มือ 230.3 A2</span></p>
-    <div class="xec-tiles" data-togs="pae">
-      <button class="xec-tile" id="p0" data-k="time" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="clock"></span><span>เวลา<small>ในการปฏิบัติหน้าที่ให้สำเร็จ</small></span><span class="xec-st"></span></button>
-      <button class="xec-tile" id="p1" data-k="info" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="card"></span><span>ข้อมูล<small>ต่อการปฏิบัติหน้าที่</small></span><span class="xec-st"></span></button>
-      <button class="xec-tile" id="p2" data-k="exp" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="cap"></span><span>ประสบการณ์<small>การฝึกอบรม และการศึกษา</small></span><span class="xec-st"></span></button>
-      <button class="xec-tile" id="p3" data-k="res" aria-pressed="true"><span class="xec-mk"></span><span class="xec-ic" data-ico="bag"></span><span>ทรัพยากร<small>สำหรับการปฏิบัติหน้าที่</small></span><span class="xec-st"></span></button>
-    </div>
-    <div class="count" aria-live="polite"><b id="pN"></b><span>จากสี่เรื่อง ที่พีทมีเพียงพอ</span></div>
-    <div class="xec-out" id="out2" role="status"></div>
-    <p class="lbl">เมื่ออาจเกิดอุปสรรค คู่มือเขียนลำดับไว้อย่างนี้ <span class="law">คู่มือ 230.3 A4 · R230.4</span></p>
-    <ol class="todo xec-flow xec-idle" id="flow2">
-      <li class="first"><div><b>จัดการอุปสรรค</b><span class="xec-hint">ตัวอย่างมาตรการป้องกันที่คู่มือยกไว้ เป็นชุดเดียว ไม่ได้แยกตามเรื่องที่ไม่เพียงพอ</span><span class="xec-eg">ได้รับความช่วยเหลือ หรือการฝึกอบรมจากผู้เชี่ยวชาญที่จำเป็น</span><span class="xec-eg">ทำให้มั่นใจได้ว่ามีเวลาเพียงพอในการปฏิบัติหน้าที่ที่เกี่ยวข้อง</span></div></li>
-      <li><div><b>ถ้าจัดการไม่ได้ ต้องพิจารณาว่าจะปฏิเสธการปฏิบัติหน้าที่ที่เป็นปัญหาหรือไม่</b></div></li>
-      <li><div><b>ถ้าเห็นว่าการปฏิเสธเหมาะสม ต้องสื่อสารถึงเหตุผลนั้น</b></div></li>
+    <div class="sechd"><i>2</i><div><small>งานของคณะกรรมการสภาวิชาชีพบัญชี</small><h2 id="h2">นั่งแล้วทำอะไร ต้องมากี่คนถึงประชุมได้</h2></div></div>
+    <p class="cap">งานมีห้าอย่าง และจะประชุมกันได้ ต้องมีกรรมการมาไม่น้อยกว่ากึ่งหนึ่งของกรรมการทั้งหมด</p>
+    <ol class="rule">
+      <li><span class="ri" data-ico="building"></span><div><b>บริหารกิจการของสภาฯ</b><small>ให้เป็นไปตามวัตถุประสงค์ของสภาฯ <span class="law">ม.28 (1)</span></small></div></li>
+      <li><span class="ri" data-ico="card"></span><div><b>ทำงานที่อยู่ในอำนาจหน้าที่ของสภาฯ</b><small>เช่น พิจารณาคำขอรับใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต <span class="law">ม.28 (2) · ม.40</span></small></div></li>
+      <li><span class="ri" data-ico="doc"></span><div><b>เสนอร่างข้อบังคับสภาฯ ต่อที่ประชุมใหญ่</b><small>สมาชิกสามัญไม่น้อยกว่า 100 คนเข้าชื่อเสนอร่างได้ด้วย เรื่องนี้อยู่สถานี<a class="x07-lk" href="law2v-r09.html">กฎและมาตรฐานมาจากไหน</a> <span class="law">ม.28 (3) · ม.29</span></small></div></li>
+      <li><span class="ri" data-ico="users"></span><div><b>จัดให้มีการประชุมใหญ่</b><small><span class="law">ม.28 (4)</span></small></div></li>
+      <li><span class="ri" data-ico="pen"></span><div><b>ออกระเบียบ</b><small>เพื่อปฏิบัติการให้เป็นไปตามพระราชบัญญัติ <span class="law">ม.28 (5)</span></small></div></li>
     </ol>
-    <p class="lbl">เปลี่ยนอีกเรื่องหนึ่ง คำสั่งของพริ้ง</p>
-    <div class="togs" data-togs="push">
-      <button data-k="push" aria-pressed="false"><span>พริ้งสั่งว่า ขาดอะไรก็ให้ทำไปก่อน<small>และต้องส่งตามกำหนดเดิม</small></span></button>
-    </div>
-    <div class="xec-out xec-ink" id="out2b" role="status" hidden></div>
-    <ul class="legend">
-      <li><span data-ico="shield"></span><span>ความกดดันที่คู่มือยกตัวอย่างไว้ เช่น ความกดดันจากผู้บังคับบัญชาเพื่อปฏิบัติงานโดยไม่มีทักษะหรือการฝึกอบรมที่เพียงพอ หรือภายในกำหนดเวลาที่ไม่สมจริง ในกรณีนี้ผู้บังคับบัญชาคือพริ้ง <span class="law">คู่มือ 270.3 A2</span></span></li>
-      <li><span data-ico="info"></span><span>พีทต้องไม่จงใจทำให้องค์กรผู้ว่าจ้างเข้าใจผิดเกี่ยวกับระดับความเชี่ยวชาญหรือประสบการณ์ที่ตนมี <span class="law">คู่มือ R230.3</span></span></li>
-      <li><span data-ico="cap"></span><span>คู่มือเขียนว่า หลักนี้กำหนดให้ “รับงานที่สำคัญได้ต่อเมื่อ ผู้ประกอบวิชาชีพบัญชีมีหรือได้รับการฝึกอบรมหรือมีประสบการณ์ที่เพียงพอ” <span class="law">คู่มือ 230.3 A1</span></span></li>
+    <ul class="x07-rows">
+      <li><span class="ico" data-ico="users"></span><span>งานไหนอยากให้คนกลุ่มเล็กช่วยดู คณะกรรมการสภาฯ ตั้งคณะอนุกรรมการให้พิจารณาหรือปฏิบัติการตามที่มอบหมายได้ <span class="law">ม.27</span></span></li>
+      <li><span class="ico" data-ico="hand"></span><span>เรื่องที่เกี่ยวกับบุคคลภายนอก นายกเป็นคนทำการแทนสภาฯ และมอบหมายเป็นหนังสือให้กรรมการอื่นทำแทนเฉพาะกิจการใดก็ได้ <span class="law">ม.31</span></span></li>
     </ul>
+
+    <h3 class="x07-h3">ต้องมากี่คน ถึงจะเป็นองค์ประชุม</h3>
+    <p class="cap">องค์ประชุม คือจำนวนคนขั้นต่ำที่ต้องมา จึงจะประชุมและลงมติได้</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="attQ"></p><p>การประชุมครั้งนี้เป็นองค์ประชุมไหม</p></div>
+    <p class="lbl">ลองเลื่อนจำนวนคนที่มา</p>
+    <div class="nums" data-nums="att">
+      <div data-k="n" data-min="0" data-max="17" data-v="9" data-unit="คน">กรรมการที่มาประชุม</div>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span>ต้องมีกรรมการมาไม่น้อยกว่ากึ่งหนึ่งของกรรมการทั้งหมด <span class="law">ม.26</span></span></div>
+    <div class="x07-qw">
+      <span class="x07-ql">กึ่งหนึ่งของ 17 คน คือ 8.5 คน</span>
+      <div class="x07-q" role="img" aria-label="แถวกรรมการ 17 คน มีเส้นกึ่งหนึ่งอยู่ตรงกลาง"><i id="qa0"></i><i id="qa1"></i><i id="qa2"></i><i id="qa3"></i><i id="qa4"></i><i id="qa5"></i><i id="qa6"></i><i id="qa7"></i><i id="qa8"></i><i id="qa9"></i><i id="qa10"></i><i id="qa11"></i><i id="qa12"></i><i id="qa13"></i><i id="qa14"></i><i id="qa15"></i><i id="qa16"></i></div>
+      <div class="x07-qk"><span><i></i>มาประชุม</span><span><i class="x07-emp"></i>ไม่ได้มา</span></div>
+    </div>
+    <p class="result" id="attR" role="status"></p>
+    <p class="lbl">เป็นองค์ประชุมแล้ว ลงมติกันตามนี้</p>
+    <ol class="x07-s3" aria-label="ลำดับของการลงมติ">
+      <li>เป็นองค์ประชุมก่อน</li>
+      <li>กรรมการคนละหนึ่งเสียง มติถือเสียงข้างมาก</li>
+      <li>เสียงเท่ากัน ประธานในที่ประชุมออกเสียงเพิ่มอีกหนึ่งเสียง เป็นเสียงชี้ขาด</li>
+    </ol>
+    <p class="note"><span data-ico="info"></span><span>การประชุมคณะกรรมการสภาวิชาชีพบัญชี ต้องมีกรรมการมาประชุมไม่น้อยกว่ากึ่งหนึ่งของจำนวนกรรมการทั้งหมด จึงจะเป็นองค์ประชุม <span class="law">ม.26</span> กติกานี้ใช้กับการประชุมของคณะกรรมการกำหนดมาตรฐานการบัญชี คณะกรรมการจรรยาบรรณ คณะกรรมการกำกับดูแลฯ และคณะอนุกรรมการของคณะเหล่านี้ด้วย <span class="law">ม.27 · ม.36 · ม.58 · ม.62</span></span></p>
+    <div id="ck2"></div>
   </section>
 
-  <!-- 3 ระหว่างทำงาน -->
+  <!-- ส่วนที่ 3 -->
   <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
-    <div class="sechd"><i>3</i><div><small>ระหว่างทำงาน</small><h2 id="h3">ทำงานให้รอบคอบ ครบถ้วน และทันเวลา</h2></div></div>
-    <p class="cap">ส่วนที่สองของหลัก ใช้ตลอดเวลาที่ทำงาน ทั้งกับแพรและพีท</p>
-    <p class="xec-hint"><span class="law">คู่มือ 113.1 A3</span> การปฏิบัติงานอย่างมุ่งมั่น ขยันหมั่นเพียร ครอบคลุมถึงความรับผิดชอบในการปฏิบัติตามข้อกำหนดของงานที่ได้รับมอบหมาย อย่าง</p>
-    <div class="xec-three" role="img" aria-label="ระมัดระวังรอบคอบ ครบถ้วน และทันต่อเวลา">
-      <div><span data-ico="shield"></span>ระมัดระวังรอบคอบ</div>
-      <div><span data-ico="check"></span>ครบถ้วน</div>
-      <div><span data-ico="clock"></span>ทันต่อเวลา</div>
+    <div class="sechd"><i>3</i><div><small>อีกสามคณะในสภาฯ</small><h2 id="h3">ประธานที่นั่งโดยตำแหน่ง มาจากคณะไหน</h2></div></div>
+    <p class="cap">ในส่วนที่ 1 มีที่นั่งโดยตำแหน่งของประธานจากคณะอื่น ประธานพวกนี้มาจากคณะสามแบบ แต่ละคณะมีงานของตัวเอง และคนข้างในก็มาคนละทาง แตะตำแหน่งประธาน แล้วดูคณะของเขา</p>
+    <div class="x07-grp x07-ch" data-pick="home">
+      <button data-v="0" aria-pressed="true"><span class="x07-dots"><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i></span><span><b>ประธานของหกด้าน</b><small>ด้านละ 1 คน จากคณะที่พัฒนาและส่งเสริมวิชาชีพแต่ละด้าน</small></span></button>
+      <button data-v="1"><span class="x07-dots"><i class="x07-bex"></i></span><span><b>ประธานคณะกรรมการกำหนดมาตรฐานการบัญชี</b><small>จากคณะที่กำหนดและปรับปรุงมาตรฐานการบัญชี</small></span></button>
+      <button data-v="2"><span class="x07-dots"><i class="x07-bex"></i></span><span><b>ประธานคณะกรรมการจรรยาบรรณ</b><small>จากคณะที่สอบสวนคำกล่าวหาว่าประพฤติผิดจรรยาบรรณ</small></span></button>
+    </div>
+    <div class="x07-home" aria-live="polite">
+      <b id="hmN"></b>
+      <p id="hmJ"></p>
+      <div class="x07-strips" id="hmS"></div>
+      <ul class="x07-key" aria-label="วิธีอ่านแถวที่นั่ง"><li><i class="x07-opt"></i>วงเส้นประ คือที่นั่งที่จำนวนยังไม่ตายตัว</li></ul>
+      <p class="lbl">กว่าประธานของคณะนี้จะได้นั่งในคณะกรรมการสภาฯ</p>
+      <div class="x07-flow"><span id="hc0"></span><i></i><span id="hc1"></span><i></i><span id="hc2"></span></div>
+      <ul class="x07-bl" id="hmB"></ul>
+      <div id="hmL"></div>
+    </div>
+    <div id="ck3"></div>
+    <p class="cap">ในสามคณะนี้ คณะกรรมการจรรยาบรรณเป็นคณะที่พระราชบัญญัติเขียนคุณสมบัติของกรรมการไว้เองเป็นข้อ ๆ ส่วนถัดไปดูทีละข้อ ผ่านพี่แพม หัวหน้าของแพร ซึ่งเพิ่งถูกเสนอชื่อ</p>
+  </section>
+
+  <!-- ส่วนที่ 4 -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>คณะกรรมการจรรยาบรรณ</small><h2 id="h4">อยากเป็นกรรมการจรรยาบรรณ ต้องมีอะไร</h2></div></div>
+    <p class="cap">มีสองขั้น ขั้นแรกต้องมีคุณสมบัติครบสี่ข้อ ขั้นที่สองคณะกรรมการสภาฯ ต้องแต่งตั้ง โดยที่ประชุมใหญ่เห็นชอบ ดูจากกรณีของพี่แพม หัวหน้าของแพร</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><div class="x07-per" id="ethP"><span data-x07face="pam"></span><div><b>พี่แพม</b><small>หัวหน้าของแพร เป็นผู้สอบบัญชีรับอนุญาต</small></div></div><p id="ethQ"></p><p class="x07-q2" id="ethQ2"></p></div>
+    <p class="lbl">ลองปิดทีละข้อ หรือเปลี่ยนคนที่ถูกเสนอชื่อ</p>
+    <div class="chips" data-pick="nom">
+      <button data-v="0" aria-pressed="true">พี่แพม</button>
+      <button data-v="1">ผู้แทนของหน่วยงานของรัฐ</button>
+    </div>
+    <div class="togs x07-tg" data-togs="eth">
+      <button data-k="mem" aria-pressed="true" id="tb0"><span><span id="tg0"></span><small>ข้อ (1)</small></span></button>
+      <button data-k="yrs" aria-pressed="true" id="tb1"><span><span id="tg1"></span><small>ข้อ (2) จำนวนปี ข้อบังคับสภาฯ เป็นผู้กำหนด</small></span></button>
+      <button data-k="pun" aria-pressed="true" id="tb2"><span><span id="tg2"></span><small>ข้อ (3)</small></span></button>
+      <button data-k="oth" aria-pressed="true" id="tb3"><span><span id="tg3"></span><small>ข้อ (4) ปิดข้อนี้ คือเป็นอนุกรรมการอยู่</small></span></button>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span id="ethRl"></span></div>
+    <div>
+      <div class="conds x07-c4">
+        <div class="cond" id="q0"><span class="mk"></span><span class="ico" data-ico="card"></span><span>สมาชิกสามัญ<small id="q0s">(1)</small></span></div>
+        <div class="cond" id="q1"><span class="mk"></span><span class="ico" data-ico="clock"></span><span>ทำงานนานถึงเกณฑ์<small id="q1s">(2)</small></span></div>
+        <div class="cond" id="q2"><span class="mk"></span><span class="ico" data-ico="shield"></span><span>ไม่เคยถูกลงโทษ<small>(3)</small></span></div>
+        <div class="cond" id="q3"><span class="mk"></span><span class="ico" data-ico="flag"></span><span>ไม่มีตำแหน่งอื่น<small>(4)</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path id="jq0" d="M50 0C50 18 200 12 200 30"/><path id="jq1" d="M150 0C150 16 200 14 200 30"/><path id="jq2" d="M250 0C250 16 200 14 200 30"/><path id="jq3" d="M350 0C350 18 200 12 200 30"/></svg>
+      <div class="gate" id="g4" role="status"><span data-door></span><div><b id="g4T"></b><span id="g4S"></span></div></div>
+    </div>
+    <p class="lbl">ผ่านประตูแล้ว ยังมีขั้นที่สอง</p>
+    <div class="x07-flow x07-off" id="af"><span id="af0"></span><i></i><span id="af1"></span><i></i><span id="af2"></span></div>
+    <div class="cons" role="status">
+      <div class="cg" id="ethC"><span class="ico" id="ethI"></span><div><b id="ethT"></b><span id="ethS"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>คณะกรรมการจรรยาบรรณมีไม่น้อยกว่า 9 คนแต่ไม่เกิน 15 คน คณะกรรมการสภาฯ แต่งตั้งโดยความเห็นชอบของที่ประชุมใหญ่ จากผู้ซึ่งมีความเที่ยงธรรมและมีความซื่อสัตย์สุจริตเป็นที่ประจักษ์ <span class="law">ม.50</span> ส่วนอนุกรรมการที่คณะนี้ตั้งมาช่วยสอบสวน ต้องมีข้อ (1) (3) และ (4) <span class="law">ม.53 วรรคสี่</span></span></p>
+    <div id="ck4"></div>
+  </section>
+
+  <!-- ส่วนที่ 5 -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <div class="sechd"><i>5</i><div><small>วาระการดำรงตำแหน่ง</small><h2 id="h5">ได้นั่งแล้ว อยู่ได้กี่ปี</h2></div></div>
+    <p class="cap">วาระ คือรอบของการอยู่ในตำแหน่ง รอบละ 3 ปี ครบแล้วกลับมาได้อีก แต่บางตำแหน่งอยู่ติดกันได้ไม่เกินสองวาระ การประชุมใหญ่ที่แพรไปมีเลือกตั้งนายกคนใหม่ ก็เพราะเรื่องนี้</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="tlQ"></p><p id="tlQ2"></p></div>
+    <p class="lbl">ลองเลื่อนจำนวนปีย้อนกลับ หรือเปลี่ยนตำแหน่ง</p>
+    <div class="x07-trm" data-pick="tseat">
+      <button data-v="0" aria-pressed="true"><b>นายกสภาวิชาชีพบัญชี</b><span><em>3 ปี</em><em class="x07-cap">ไม่เกิน 2 วาระติดต่อกัน</em></span></button>
+      <button data-v="1"><b>กรรมการผู้ทรงคุณวุฒิ และกรรมการที่เลือกตั้ง ในคณะกรรมการสภาฯ</b><span><em>3 ปี</em><em>แต่งตั้งหรือเลือกตั้งอีกได้</em></span></button>
+      <button data-v="2"><b>กรรมการจรรยาบรรณ</b><span><em>3 ปี</em><em class="x07-cap">ไม่เกิน 2 วาระติดต่อกัน</em></span></button>
+      <button data-v="3"><b>ผู้ทรงคุณวุฒิในคณะกรรมการกำกับดูแลฯ</b><span><em>3 ปี</em><em class="x07-cap">ไม่เกิน 2 วาระติดต่อกัน</em></span></button>
+    </div>
+    <div class="nums" data-nums="yr">
+      <div data-k="y" data-min="0" data-max="6" data-v="6" data-unit="ปี">ผ่านมาแล้ว นับจากวันเข้ารับตำแหน่ง</div>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span id="tlRl"></span></div>
+    <div class="x07-tl" role="img" aria-label="เส้นเวลาเก้าปี แบ่งเป็นสามวาระ วาระละสามปี">
+      <span class="x07-tm" style="grid-column:1 / span 3">วาระที่ 1</span><span class="x07-tm" style="grid-column:4 / span 3">วาระที่ 2</span><span class="x07-tm" style="grid-column:7 / span 3">วาระที่ 3</span>
+      <span class="x07-yc" id="yc0" style="grid-column:1">20x1</span><span class="x07-yc" id="yc1" style="grid-column:2">20x2</span><span class="x07-yc" id="yc2" style="grid-column:3">20x3</span><span class="x07-yc" id="yc3" style="grid-column:4">20x4</span><span class="x07-yc" id="yc4" style="grid-column:5">20x5</span><span class="x07-yc" id="yc5" style="grid-column:6">20x6</span><span class="x07-yc" id="yc6" style="grid-column:7">20x7</span><span class="x07-yc" id="yc7" style="grid-column:8">20x8</span><span class="x07-yc" id="yc8" style="grid-column:9">20x9</span>
+      <span class="x07-pin" id="tlPin"></span>
+    </div>
+    <p class="result" id="tlR" role="status"></p>
+    <p class="note"><span data-ico="clock"></span><span>ครบวาระแล้วแต่ยังไม่มีการเลือกตั้งหรือแต่งตั้งคนใหม่ คนเดิมอยู่ในตำแหน่งเพื่อดำเนินงานต่อไป จนกว่าคนใหม่เข้ารับหน้าที่ <span class="law">ม.23 วรรคสาม</span> กรรมการจรรยาบรรณก็ปฏิบัติหน้าที่ไปพลางก่อนแบบเดียวกัน <span class="law">ม.51</span> ผู้ทรงคุณวุฒิในคณะกรรมการกำหนดมาตรฐานการบัญชี มีวาระคราวละ 3 ปีเหมือนกัน <span class="law">ม.33</span></span></p>
+    <div id="ck5"></div>
+  </section>
+
+  <!-- ส่วนที่ 6 -->
+  <section class="fig" id="s6" data-step="s6" aria-labelledby="h6">
+    <div class="sechd"><i>6</i><div><small>พ้นจากตำแหน่งก่อนครบวาระ</small><h2 id="h6">ยังไม่ครบวาระ พ้นจากตำแหน่งได้ยังไง</h2></div></div>
+    <p class="cap">เหตุมีตามรายการนี้ กรรมการจรรยาบรรณมีข้อหนึ่งที่คนอื่นไม่มี คือที่ประชุมใหญ่ลงมติให้ออก</p>
+    <div class="x07-box">
+      <b>นายก กรรมการผู้ทรงคุณวุฒิ และกรรมการที่เลือกตั้ง <span class="law">ม.24</span></b>
+      <div class="x07-pills"><span>ตาย</span><span>ลาออก</span><span>พ้นจากสมาชิกภาพของสมาชิกสภาฯ</span><span>ขาดคุณสมบัติ หรือมีลักษณะต้องห้ามตามข้อบังคับสภาฯ</span><a href="#s8">รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่งตามมาตรา 63</a></div>
+      <b>กรรมการจรรยาบรรณ <span class="law">ม.52</span></b>
+      <div class="x07-pills"><span>ตาย</span><span>ลาออก</span><span>ขาดคุณสมบัติ หรือมีลักษณะต้องห้ามตามมาตรา 50</span><span class="x07-dif">ที่ประชุมใหญ่มีมติให้ออก</span></div>
+    </div>
+    <p class="lbl">ตำแหน่งในคณะกรรมการสภาฯ ว่างก่อนครบวาระ คนที่มาแทนอยู่เท่าวาระที่เหลือ <span class="law">ม.23 วรรคสอง</span></p>
+    <div>
+      <div class="x07-split" role="img" aria-label="วาระสามปี คนเดิมอยู่หนึ่งปี คนที่มาแทนอยู่สองปีที่เหลือ"><span>คนเดิม</span><span>คนที่มาแทน อยู่ 2 ปีที่เหลือ</span></div>
+      <div class="x07-ticks"><span>ปีที่ 1</span><span>ปีที่ 2</span><span>ครบ 3 ปี</span></div>
     </div>
 
-    <h3 style="margin-top:8px">ถ้ามีผู้ช่วย ต้องทำให้มั่นใจว่าผู้ช่วยได้รับการฝึกอบรมและการกำกับดูแล</h3>
-    <p class="cap">ผู้ช่วยในทีมของแพรรับงานตรวจสอบไปทำส่วนหนึ่ง <span class="law">คู่มือ R113.2</span></p>
-    <div class="map xec-asst" role="img" aria-label="แพรต้องทำตามขั้นตอนที่สมเหตุสมผล เพื่อให้มั่นใจว่าผู้ช่วยที่อยู่ภายใต้การกำกับดูแลของแพร ได้รับการฝึกอบรมและการกำกับดูแลที่เหมาะสม">
-      <div class="nd"><span class="xec-fc" data-face="prae2"></span><b>แพร</b><small>ต้องทำตามขั้นตอนที่สมเหตุสมผล เพื่อให้มั่นใจว่า</small></div>
-      <span class="ln"></span>
-      <div class="nd"><span class="ico" data-ico="pen"></span><b>ผู้ช่วยที่อยู่ภายใต้การกำกับดูแลของแพร</b><small>ได้รับ</small></div>
-      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
-      <div class="fork">
-        <div class="tr"><span class="ico" data-ico="book"></span><b>การฝึกอบรม</b><small>ที่เหมาะสม</small></div>
-        <div class="tr"><span class="ico" data-ico="shield"></span><b>การกำกับดูแล</b><small>ที่เหมาะสม</small></div>
+    <h3 class="x07-h3">ที่ประชุมใหญ่ให้กรรมการจรรยาบรรณออก ต้องได้กี่เสียง</h3>
+    <p class="cap">เหตุนี้มีเกณฑ์คะแนนสองจำนวน ต้องถึงทั้งคู่ ดูจากการประชุมใหญ่ที่แพรไป</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="vQ"></p><p>มติให้ออกผ่านไหม กรรมการคนนี้พ้นจากตำแหน่งหรือเปล่า</p></div>
+    <p class="lbl">ลองเลื่อนสองแถบนี้</p>
+    <div class="nums" data-nums="vote">
+      <div data-k="n" data-min="270" data-max="360" data-step="30" data-v="330" data-unit="คน">สมาชิกสามัญที่มาประชุม</div>
+      <div data-k="v" data-min="150" data-max="260" data-v="240" data-unit="เสียง">คะแนนเสียงให้ออก</div>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span>ต้องถึงทั้งสองจำนวน คือไม่น้อยกว่า 2 ใน 3 ของสมาชิกสามัญที่มาประชุม และไม่น้อยกว่า 200 เสียง <span class="law">ม.52 (4)</span></span></div>
+    <div class="x07-vw">
+      <div class="x07-vn"><span><i></i>คะแนนเสียงให้ออก<b id="vYesN"></b></span><span><i class="x07-emp"></i>สมาชิกสามัญที่มาประชุม<b id="vHallN"></b></span></div>
+      <div class="x07-vote" role="img" aria-label="แถบคะแนนเสียงให้ออก เทียบกับเส้น 200 เสียง และเส้น 2 ใน 3 ของสมาชิกสามัญที่มาประชุม">
+        <div class="x07-hall" id="vHall"></div>
+        <div class="x07-yes" id="vYes"></div>
+        <div class="x07-ln x07-la" id="vA" style="left:55.556%"><span>200 เสียง</span></div>
+        <div class="x07-ln x07-lb" id="vB"><span id="vBn"></span></div>
+      </div>
+      <p class="cap" style="font-size:13px">เส้นทึบ 200 เสียงอยู่กับที่ เส้นประ 2 ใน 3 ขยับตามจำนวนคนที่มา แถบสีต้องยาวถึงทั้งสองเส้น</p>
+    </div>
+    <div>
+      <div class="conds two">
+        <div class="cond" id="vc0"><span class="mk"></span><span class="ico" data-ico="users"></span><span>ไม่น้อยกว่า 2 ใน 3 ของคนที่มา<small id="vc0n"></small></span></div>
+        <div class="cond" id="vc1"><span class="mk"></span><span class="ico" data-ico="vote"></span><span>ไม่น้อยกว่า 200 เสียง<small>จำนวนขั้นต่ำ</small></span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="vj0" d="M75 0C75 18 150 12 150 30"/><path id="vj1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="gate" id="vg" role="status"><span data-door></span><div><b id="vgT"></b><span id="vgS"></span></div></div>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>ที่ประชุมใหญ่สภาวิชาชีพบัญชีมีมติให้ออกด้วยคะแนนเสียงไม่น้อยกว่าสองในสามของจำนวนสมาชิกสามัญที่มาประชุม แต่ต้องไม่น้อยกว่าสองร้อยคะแนนเสียง <span class="law">ม.52 (4)</span> ตำแหน่งที่ว่างลงก่อนครบวาระ คณะกรรมการสภาฯ แต่งตั้งกรรมการจรรยาบรรณแทนไปพลางก่อน คนที่มาแทนปฏิบัติหน้าที่ได้จนถึงการประชุมใหญ่คราวต่อไป <span class="law">ม.52 วรรคสอง</span></span></p>
+    <div id="ck6"></div>
+  </section>
+
+  <!-- ส่วนที่ 7 -->
+  <section class="fig" id="s7" data-step="s7" aria-labelledby="h7">
+    <div class="sechd"><i>7</i><div><small>คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</small><h2 id="h7">แล้วใครคอยดูสภาฯ อีกชั้น</h2></div></div>
+    <p class="cap">สี่คณะที่ผ่านมาอยู่ในสภาฯ ทั้งหมด คณะที่ห้าอยู่ข้างนอก ไม่มีตำแหน่งไหนมาจากการเลือกตั้ง นายกสภาฯ ได้นั่งด้วย แต่ประธานคือปลัดกระทรวงพาณิชย์</p>
+    <div class="x07-seats">
+      <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i></span><b>ประธานกรรมการ</b><span>ปลัดกระทรวงพาณิชย์ <span class="law">ม.59 (1)</span></span></div>
+      <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex x07-me"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i></span><b>กรรมการโดยตำแหน่ง 9 คน</b><span>อธิบดีกรมการประกันภัย · อธิบดีกรมสรรพากร · ผู้ว่าการตรวจเงินแผ่นดิน · ผู้ว่าการธนาคารแห่งประเทศไทย · เลขาธิการสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ · <mark>นายกสภาวิชาชีพบัญชี</mark> · ประธานสภาอุตสาหกรรมแห่งประเทศไทย · ประธานสมาคมธนาคารไทย · ประธานกรรมการหอการค้าไทย <span class="law">ม.59 (2)</span></span></div>
+      <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bap"></i><i class="x07-bap"></i><i class="x07-bap"></i></span><b>กรรมการผู้ทรงคุณวุฒิ 3 คน</b><span>รัฐมนตรีแต่งตั้ง จากผู้มีความรู้และความเชี่ยวชาญเกี่ยวกับวิชาการบัญชี 2 คน และผู้ทรงคุณวุฒิทางด้านกฎหมาย 1 คน <span class="law">ม.59 (3)</span></span></div>
+      <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i></span><b>กรรมการและเลขานุการ</b><span>อธิบดีกรมพัฒนาธุรกิจการค้า และกรมพัฒนาธุรกิจการค้าทำหน้าที่ธุรการให้คณะนี้ <span class="law">ม.59 วรรคสอง · วรรคสาม</span></span></div>
+    </div>
+    <p class="cap">นับรวมได้ 14 คน รัฐมนตรีในพระราชบัญญัตินี้ คือรัฐมนตรีว่าการกระทรวงพาณิชย์ <span class="law">ม.5</span></p>
+
+    <h3 class="x07-h3">คณะนี้ทำอะไรได้บ้าง</h3>
+    <div class="x07-dir">
+      <div class="x07-dg"><span class="x07-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M5.5 11.500L12 5l6.500 6.500"/></svg></span><div><b>เรื่องที่ขึ้นมาถึงคณะนี้</b><ul>
+        <li>ให้ความเห็นชอบข้อบังคับสภาฯ บางเรื่อง และมาตรฐานการบัญชี <span class="law">ม.60 (3)</span></li>
+        <li>พิจารณาอุทธรณ์ของผู้ขอรับใบอนุญาต ที่สภาฯ ไม่ออกใบอนุญาตให้ <span class="law">ม.60 (4)</span></li>
+        <li>พิจารณาอุทธรณ์ของผู้กล่าวหา หรือผู้ที่ถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ <span class="law">ม.60 (5)</span></li></ul></div></div>
+      <div class="x07-dg"><span class="x07-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15M5.5 12.500L12 19l6.500-6.500"/></svg></span><div><b>เรื่องที่คณะนี้ทำกับสภาฯ</b><ul>
+        <li>กำกับดูแลการดำเนินกิจการของสภาฯ ให้เป็นไปตามกฎหมายและวัตถุประสงค์ของสภาฯ <span class="law">ม.60 (1)</span></li>
+        <li>สอบสวนข้อเท็จจริงเกี่ยวกับการดำเนินงานของสภาฯ <span class="law">ม.61 (1)</span></li>
+        <li>สั่งเป็นหนังสือให้สมาชิก กรรมการ อนุกรรมการของสภาฯ หรือบุคคลใด ชี้แจงข้อเท็จจริงเกี่ยวกับกิจการของสภาฯ <span class="law">ม.61 (2)</span></li>
+        <li>สั่งเป็นหนังสือให้สภาฯ คณะกรรมการ หรือคณะอนุกรรมการ ระงับ แก้ไข หรือวางมาตรการแก้ไขการกระทำที่ขัดต่อกฎหมาย วัตถุประสงค์ หรือข้อบังคับสภาฯ <span class="law">ม.61 (3)</span></li></ul></div></div>
+      <div class="x07-dg"><span class="x07-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12.500 5.500L19 12l-6.500 6.500"/></svg></span><div><b>อีกสองอย่าง</b><ul>
+        <li>เสนอแนะให้ตราพระราชกฤษฎีกาตามมาตรา 9 คือกำหนดให้วิชาชีพบัญชีด้านใดต้องได้รับใบอนุญาต หรือต้องขึ้นทะเบียนกับสภาฯ <span class="law">ม.60 (2)</span></li>
+        <li>แต่งตั้งคณะอนุกรรมการมาช่วยงานในอำนาจหน้าที่ของตัวเอง <span class="law">ม.60 (6)</span></li></ul></div></div>
+    </div>
+
+    <h3 class="x07-h3">เรื่องจะขึ้นมาถึงคณะนี้เมื่อไร</h3>
+    <p class="cap">ไม่ใช่ทุกเรื่องในสภาฯ จะขึ้นมาถึงคณะนี้ ดูจากเรื่องใบอนุญาตของรุ่นน้องของแพร</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="appQ"></p><p>เรื่องนี้ไปถึงคณะกรรมการกำกับดูแลฯ หรือยัง</p></div>
+    <p class="lbl">ลองเปลี่ยนเรื่องที่เกิดขึ้น</p>
+    <div class="chips" data-pick="app">
+      <button data-v="0">สภาฯ ยังพิจารณาคำขออยู่</button>
+      <button data-v="1">สภาฯ ไม่ออกให้ รุ่นน้องไม่อุทธรณ์</button>
+      <button data-v="2" aria-pressed="true">สภาฯ ไม่ออกให้ รุ่นน้องอุทธรณ์</button>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span>ต้องมีสองอย่าง สภาฯ ไม่ออกใบอนุญาตให้ และผู้ยื่นคำขออุทธรณ์ เรื่องจึงมาถึงคณะนี้ <span class="law">ม.42 วรรคสอง · ม.60 (4)</span></span></div>
+    <ol class="x07-trk" aria-live="polite">
+      <li id="ap0"><div><b>คณะกรรมการสภาฯ พิจารณาคำขอ</b>เรื่องอยู่ในสภาฯ <span class="law">ม.40</span></div></li>
+      <li id="ap1"><div><b>สภาฯ ไม่ออกใบอนุญาต</b>ต้องแสดงเหตุผลไว้โดยชัดแจ้ง และผู้ยื่นคำขอมีสิทธิอุทธรณ์ <span class="law">ม.42 วรรคสอง</span></div></li>
+      <li id="ap2"><div><b>คณะกรรมการกำกับดูแลฯ พิจารณาอุทธรณ์</b>เรื่องออกจากสภาฯ มาถึงคณะนี้ <span class="law">ม.60 (4)</span></div></li>
+    </ol>
+    <div class="cons" role="status">
+      <div class="cg" id="appC"><span class="ico" id="appI"></span><div><b id="appT"></b><span id="appS"></span></div></div>
+    </div>
+    <p class="cap">อุทธรณ์คำสั่งของคณะกรรมการจรรยาบรรณก็มาที่คณะนี้เหมือนกัน รายละเอียดอยู่สถานี<a class="x07-lk" href="law2v-r05.html">เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร</a></p>
+    <div id="ck7"></div>
+  </section>
+
+  <!-- ส่วนที่ 8 -->
+  <section class="fig" id="s8" data-step="s8" aria-labelledby="h8">
+    <div class="sechd"><i>8</i><div><small>เมื่อสั่งแล้วไม่ทำตาม</small><h2 id="h8">นายกหรือกรรมการไม่ทำตามคำสั่ง จะเกิดอะไร</h2></div></div>
+    <p class="cap">เรื่องไปจบที่รัฐมนตรี ซึ่งมีคำสั่งให้พ้นจากตำแหน่ง และถ้ากรรมการเหลือไม่ถึงกึ่งหนึ่ง จะมีกรรมการชั่วคราวในวันเดียวกัน</p>
+    <ol class="todo">
+      <li class="first"><div><b>คณะกรรมการกำกับดูแลฯ สั่งเป็นหนังสือ</b><small>ให้ระงับ แก้ไข หรือวางมาตรการแก้ไขการกระทำที่ขัดต่อกฎหมาย วัตถุประสงค์ หรือข้อบังคับสภาฯ <span class="law">ม.61 (3)</span></small></div></li>
+      <li><div><b>นายก กรรมการ หรืออนุกรรมการ ไม่ปฏิบัติตามคำสั่ง</b><small>หรือกระทำการอันเป็นการเสื่อมเสียอย่างร้ายแรงแก่สภาฯ เหตุข้อใดข้อหนึ่งก็พอ <span class="law">ม.63</span></small></div></li>
+      <li><div><b>คณะกรรมการกำกับดูแลฯ สอบสวนโดยเร็ว</b><small>แล้วเสนอผลการพิจารณา เพื่อให้รัฐมนตรีมีคำสั่ง <span class="law">ม.63</span></small></div></li>
+      <li><div><b>รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่ง</b><small>คำสั่งของรัฐมนตรีเป็นที่สุด กรรมการโดยตำแหน่งที่ถูกสั่งให้พ้น ให้พ้นจากตำแหน่งตามมาตรา 22 (2) ด้วย <span class="law">ม.63 วรรคสอง · วรรคสาม</span></small></div></li>
+    </ol>
+    <p class="note"><span data-ico="info"></span><span>คนที่ไม่ปฏิบัติตามคำสั่งให้ชี้แจง หรือคำสั่งให้ระงับ แก้ไข ของคณะกรรมการกำกับดูแลฯ มีโทษทางอาญาด้วย <span class="law">ม.71</span></span></p>
+
+    <h3 class="x07-h3">พ้นไปกี่คน ถึงต้องมีกรรมการชั่วคราว</h3>
+    <p class="cap">ถ้ารัฐมนตรีมีคำสั่งให้พ้นหลายคนพร้อมกัน อาจต้องมีกรรมการชั่วคราวมาแทนก่อน ดูจากคณะกรรมการสภาฯ ของเรื่องนี้</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="outQ"></p><p>รัฐมนตรีต้องแต่งตั้งกรรมการชั่วคราวไหม</p></div>
+    <p class="lbl">ลองเลื่อนจำนวนคนที่พ้น</p>
+    <div class="nums" data-nums="out">
+      <div data-k="k" data-min="1" data-max="17" data-v="9" data-unit="คน">กรรมการที่รัฐมนตรีมีคำสั่งให้พ้น</div>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span>ดูที่จำนวนกรรมการที่เหลือ ถ้าเหลือไม่ถึงกึ่งหนึ่งของจำนวนที่คณะพึงมี ต้องมีกรรมการชั่วคราว <span class="law">ม.64 วรรคหนึ่ง</span></span></div>
+    <div class="x07-qw">
+      <span class="x07-ql">กึ่งหนึ่งของ 17 คน คือ 8.5 คน</span>
+      <div class="x07-q" role="img" aria-label="แถวกรรมการ 17 คน มีเส้นกึ่งหนึ่งอยู่ตรงกลาง"><i id="qo0"></i><i id="qo1"></i><i id="qo2"></i><i id="qo3"></i><i id="qo4"></i><i id="qo5"></i><i id="qo6"></i><i id="qo7"></i><i id="qo8"></i><i id="qo9"></i><i id="qo10"></i><i id="qo11"></i><i id="qo12"></i><i id="qo13"></i><i id="qo14"></i><i id="qo15"></i><i id="qo16"></i></div>
+      <div class="x07-qk"><span><i></i>กรรมการที่เหลือ</span><span><i class="x07-out"></i>พ้นจากตำแหน่ง</span></div>
+    </div>
+    <p class="result" id="outR" role="status"></p>
+    <div class="x07-tmp" id="tmp">
+      <b>มีกรรมการชั่วคราวแล้ว ต้องมีกรรมการใหม่ไหม ภายในกี่วัน</b>
+      <div class="stats"><div class="stat"><b>วันเดียวกัน</b><span>รัฐมนตรีแต่งตั้งสมาชิกสามัญเป็นกรรมการชั่วคราว ในวันที่มีคำสั่งให้พ้น</span></div><div class="stat"><b>90 วัน</b><span>เลือกตั้งหรือแต่งตั้งกรรมการใหม่ให้เสร็จ นับแต่วันที่มีคำสั่งแต่งตั้งกรรมการชั่วคราว</span></div></div>
+      <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="dQ"></p><p id="dQ2"></p></div>
+      <p class="lbl">ลองเลื่อนจำนวนวันที่วาระเหลืออยู่</p>
+      <div class="nums" data-nums="left">
+        <div data-k="d" data-min="100" data-max="360" data-step="10" data-v="300" data-unit="วัน">วาระเหลืออยู่</div>
+      </div>
+      <div class="x07-rl"><b>หลัก</b><span>ต้องมีกรรมการใหม่ใน 90 วัน เว้นแต่วาระเหลืออยู่ไม่ถึง 180 วัน รัฐมนตรีจะสั่งให้ไม่มีการเลือกตั้งก็ได้ <span class="law">ม.64 วรรคสอง</span></span></div>
+      <div class="x07-bar2" role="img" aria-label="แถบวาระที่เหลือ เทียบกับเส้น 180 วัน">
+        <div class="x07-bt"></div><div class="x07-bf" id="dF"></div><div class="x07-bm" style="left:50%"><span>180 วัน</span></div>
+      </div>
+      <p class="result" id="dR" role="status"></p>
+    </div>
+    <p class="note"><span data-ico="info"></span><span>คำสั่งตามมาตรา 63 ที่ทำให้กรรมการของคณะกรรมการสภาฯ เหลือไม่ถึงกึ่งหนึ่งของจำนวนกรรมการที่พึงมี ให้รัฐมนตรีแต่งตั้งสมาชิกสามัญเป็นกรรมการชั่วคราว <span class="law">ม.64 วรรคหนึ่ง</span> กรรมการชั่วคราวพ้นจากตำแหน่งเมื่อกรรมการใหม่เข้ารับหน้าที่แล้ว และกรรมการใหม่อยู่เท่าวาระที่เหลือของคนที่ตนแทน <span class="law">ม.64 วรรคสอง · วรรคสาม</span> 17 คนเป็นตัวเลขของเรื่องนี้ พระราชบัญญัติไม่ได้เขียนจำนวนกรรมการที่พึงมีเป็นตัวเลข</span></p>
+    <div id="ck8"></div>
+  </section>
+
+  <!-- ===== X07-EXTRA START · ส่วนที่ 9 ยืนบนข้อบังคับเลือกตั้ง พ.ศ. 2568 และข้อบังคับคณะรายด้าน พ.ศ. 2563 (นอกรายการขอบเขตสอบ) ถอดออกได้ทั้งก้อน: ลบส่วนนี้ ลบลิงก์ #s9 ในแถบขั้นและในภาพรวม ลบสคริปต์ก้อน X07-EXTRA และลบสองบรรทัดที่มีเครื่องหมายเดียวกันใน details.src ===== -->
+  <section class="fig x07-extra" id="s9" data-step="s9" aria-labelledby="h9">
+    <div class="sechd"><i>9</i><div><small>ส่วนเสริม · ข้อบังคับสภาฯ สองฉบับ</small><h2 id="h9">อยากลงสมัครนายกหรือกรรมการ ต้องมีอะไร</h2></div></div>
+    <span class="x07-oos">ข้อบังคับสองฉบับนี้อยู่นอกรายการขอบเขตสอบ</span>
+    <p class="cap">พระราชบัญญัติให้คุณสมบัติของสามตำแหน่งในคณะกรรมการสภาฯ เป็นไปตามข้อบังคับสภาฯ ข้อที่ต่างกันชัดที่สุดคือจำนวนปี ดูจากกรณีของพี่แพม</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="rQ"></p><p id="rQ2"></p></div>
+    <p class="lbl">ลองเปลี่ยนตำแหน่ง แล้วเลื่อนจำนวนปี</p>
+    <div class="chips" data-pick="run">
+      <button data-v="0" aria-pressed="true">กรรมการที่เลือกตั้ง</button>
+      <button data-v="1">นายก</button>
+      <button data-v="2">กรรมการผู้ทรงคุณวุฒิ</button>
+    </div>
+    <div class="nums" data-nums="exp">
+      <div data-k="y" data-min="5" data-max="20" data-v="12" data-unit="ปี">พี่แพมเป็นผู้สอบบัญชีรับอนุญาตมาแล้ว</div>
+    </div>
+    <div class="x07-rl"><b>หลัก</b><span id="rRl"></span></div>
+    <div class="x07-qw">
+      <div class="x07-bar2" role="img" aria-label="แถบจำนวนปีของพี่แพม เทียบกับจำนวนปีขั้นต่ำของตำแหน่งที่เลือก">
+        <div class="x07-bt"></div><div class="x07-bf" id="eF"></div><div class="x07-bm" id="eL"><span id="eLn"></span></div>
       </div>
     </div>
-
-    <h3 style="margin-top:8px">อีกสองเรื่องที่หลักนี้ให้ทำ</h3>
-    <div class="xec-box">
-      <div class="xec-bh"><span class="xec-ic" data-ico="flag"></span><b>ทำให้ผู้ใช้บริการตระหนักถึงข้อจำกัด</b></div>
-      <p>ต้องทำให้คนเหล่านี้ตระหนักถึงข้อจำกัดที่มีอยู่ในการให้บริการหรือกิจกรรม <span class="law">คู่มือ R113.3</span></p>
-      <div class="facts"><span>ลูกค้า</span><span>องค์กรผู้ว่าจ้าง</span><span>บุคคลอื่นที่เป็นผู้ใช้บริการทางวิชาชีพหรือกิจกรรมทางวิชาชีพ</span></div>
+    <div>
+      <div class="conds">
+        <div class="cond ok" id="r0"><span class="mk" data-ico="check"></span><span class="ico" data-ico="card"></span><span id="r0t"></span></div>
+        <div class="cond" id="r1"><span class="mk"></span><span class="ico" data-ico="clock"></span><span id="r1t"></span></div>
+        <div class="cond ok" id="r2"><span class="mk" data-ico="check"></span><span class="ico" data-ico="shield"></span><span>ไม่มีลักษณะต้องห้ามหกข้อ</span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="ok" d="M50 0C50 18 150 12 150 30"/><path id="rj1" d="M150 0V30"/><path class="ok" d="M250 0C250 18 150 12 150 30"/></svg>
+      <div class="gate" id="rg" role="status"><span data-door></span><div><b id="rgT"></b><span id="rgS"></span></div></div>
     </div>
-    <div class="xec-box">
-      <div class="xec-bh"><span class="xec-ic" data-ico="book"></span><b>ตามความรู้ให้ทัน</b></div>
-      <p>การรักษาไว้ซึ่งความรู้ความสามารถ ต้องตระหนักรู้อย่างต่อเนื่อง และมีความเข้าใจเกี่ยวกับการพัฒนาที่เกี่ยวข้อง <span class="law">คู่มือ 113.1 A2</span></p>
-      <div class="facts"><span>ทางเทคนิค</span><span>ทางวิชาชีพ</span><span>ทางธุรกิจ</span><span>ทางเทคโนโลยี</span></div>
-      <p class="xec-hint">จำนวนชั่วโมงพัฒนาความรู้ต่อเนื่อง อยู่ในบทที่ 3 <a class="xec-lk" href="law2v-r03.html">“เป็น CPA แล้วต้องดูแลอะไร”</a></p>
-    </div>
-
-    <div class="cons">
-      <b>ถ้าไม่ปฏิบัติตามจรรยาบรรณ หรือมาตรฐานที่กำหนดตามพระราชบัญญัติ</b>
-      <div class="cg lock"><span class="ico" data-ico="flag"></span><div><b>ให้ถือว่าประพฤติผิดจรรยาบรรณ</b><span>มาตรานี้ให้ปฏิบัติหน้าที่ตามมาตรฐานการบัญชี มาตรฐานการสอบบัญชี หรือมาตรฐานอื่นใดที่เกี่ยวข้องที่กำหนดตามพระราชบัญญัติ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46</span> โทษและขั้นตอนอยู่ในบทที่ 12 <a class="xec-lk" href="law2v-r12.html">“ถ้ามีคนร้องเรียนเรา”</a></span></div></div>
-    </div>
+    <details class="src x07-fold">
+      <summary>รายการเต็มของข้อบังคับสองฉบับนี้</summary>
+      <p>หกทางของคนที่จะเป็นนายก มีทางเดียวก็พอ <span class="law">ข้อบังคับเลือกตั้งฯ ข้อ 5 (2)</span></p>
+      <ul>
+        <li>(ก) เป็นหรือเคยเป็นผู้อำนวยการฝ่ายการเงินหรือฝ่ายการบัญชี หรือตำแหน่งที่มีหน้าที่เดียวกัน ในบริษัทจดทะเบียนในตลาดหลักทรัพย์แห่งประเทศไทย และหรือบริษัทมหาชนที่มีสินทรัพย์รวมไม่ต่ำกว่า 1,000 ล้านบาท หรือรัฐวิสาหกิจ รวมไม่น้อยกว่า 15 ปี</li>
+        <li>(ข) เป็นหรือเคยเป็นผู้สอบบัญชีรับอนุญาต รวมไม่น้อยกว่า 15 ปี และเคยตรวจสอบและแสดงความเห็นต่องบการเงินของบริษัทจดทะเบียนในตลาดหลักทรัพย์แห่งประเทศไทยไม่น้อยกว่า 2 บริษัท หรือบริษัทมหาชนที่มีสินทรัพย์รวมไม่ต่ำกว่า 1,000 ล้านบาทไม่น้อยกว่า 2 บริษัท หรืออย่างละอย่างน้อย 1 บริษัท หรือบริษัทจำกัดที่มีสินทรัพย์รวมไม่ต่ำกว่า 1,000 ล้านบาทอย่างน้อย 4 บริษัท</li>
+        <li>(ค) เป็นหรือเคยเป็นผู้บริหารของกิจการที่ให้บริการด้านการบัญชีแก่องค์กรต่าง ๆ รวมไม่น้อยกว่า 15 ปี</li>
+        <li>(ง) เป็นหรือเคยเป็นผู้บริหารของกิจการที่ให้บริการให้คำปรึกษาด้านภาษีอากรแก่องค์กรต่าง ๆ รวมไม่น้อยกว่า 15 ปี</li>
+        <li>(จ) เป็นหรือเคยเป็นข้าราชการหรือเจ้าหน้าที่ของรัฐ ตำแหน่งผู้บริหารสูงสุดหรือระดับรองของส่วนราชการหรือหน่วยงานที่ทำหน้าที่เกี่ยวข้องกับวิชาชีพบัญชี และปฏิบัติหน้าที่ในงานที่เกี่ยวข้องกับวิชาชีพบัญชี รวมไม่น้อยกว่า 5 ปี</li>
+        <li>(ฉ) เป็นหรือเคยเป็นอาจารย์ระดับไม่ต่ำกว่ารองศาสตราจารย์ สอนวิชาการบัญชีในสถาบันอุดมศึกษาที่สภาฯ รับรองปริญญา รวมไม่น้อยกว่า 15 ปี</li>
+        <li>เวลาของ (ก) (ค) และ (ง) นับรวมกันได้ แต่รวมแล้วต้องไม่น้อยกว่า 20 ปี ทุกทางนับถึงวันสมัครรับเลือกตั้ง และนายกต้องเป็นสมาชิกสามัญติดต่อกันไม่น้อยกว่า 1 ปีในวันสมัครด้วย <span class="law">ข้อ 5 (1)</span></li>
+      </ul>
+      <p>ลักษณะต้องห้ามหกข้อ ใช้กับทั้งสามตำแหน่ง <span class="law">ข้อบังคับเลือกตั้งฯ ข้อ 5 (3)</span></p>
+      <ul>
+        <li>เป็นบุคคลล้มละลาย</li>
+        <li>เคยถูกพักใช้หรือเพิกถอนใบอนุญาต หรือถูกสั่งให้พ้นจากสมาชิกภาพของสภาฯ ตามกฎหมายว่าด้วยวิชาชีพบัญชี หรือถูกเพิกถอนใบอนุญาตตามพระราชบัญญัติผู้สอบบัญชี พ.ศ. 2505 หรือถูกเพิกถอนการให้ความเห็นชอบเป็นผู้สอบบัญชีตามกฎหมายอื่น</li>
+        <li>เคยต้องโทษจำคุกโดยคำพิพากษาถึงที่สุด ในความผิดเกี่ยวกับทรัพย์ที่กระทำโดยทุจริต</li>
+        <li>เคยถูกไล่ออก ปลดออก หรือให้ออกจากราชการ รัฐวิสาหกิจ หรือหน่วยงานของรัฐ เพราะทุจริตต่อหน้าที่ หรือกระทำการทุจริตหรือประพฤติมิชอบในวงราชการ</li>
+        <li>มีความประพฤติเสื่อมเสียหรือบกพร่องในศีลธรรมอันดี หรือกระทำการใดซึ่งแสดงให้เห็นว่าไม่น่าไว้วางใจในความซื่อสัตย์สุจริต</li>
+        <li>เป็นข้าราชการการเมือง ผู้ดำรงตำแหน่งทางการเมือง สมาชิกสภาท้องถิ่นหรือผู้บริหารท้องถิ่น หรือกรรมการ ที่ปรึกษา หรือเจ้าหน้าที่ของพรรคการเมือง</li>
+      </ul>
+      <p>งานเลือกตั้งที่คณะกรรมการจรรยาบรรณดูแล <span class="law">ข้อบังคับเลือกตั้งฯ ข้อ 9 · 12 · 28</span></p>
+      <ul>
+        <li>ประกาศให้มีการเลือกตั้งและกำหนดวันประชุมใหญ่ ล่วงหน้าไม่น้อยกว่า 45 วัน</li>
+        <li>แต่งตั้งคณะกรรมการอำนวยการเลือกตั้ง รวมกันไม่น้อยกว่า 5 คน เป็นสมาชิกสามัญไม่น้อยกว่ากึ่งหนึ่ง และต้องไม่เป็นผู้สมัครในการเลือกตั้งคราวนั้น</li>
+        <li>ผู้สมัครที่ถูกสั่งไม่รับสมัคร อุทธรณ์ต่อคณะกรรมการจรรยาบรรณได้ภายใน 3 วันทำการนับแต่วันที่ได้รับแจ้ง คณะนี้วินิจฉัยให้เสร็จภายใน 7 วันทำการ คำวินิจฉัยเป็นที่สุด</li>
+        <li>คำร้องคัดค้านผลการเลือกตั้ง ยื่นต่อคณะกรรมการจรรยาบรรณภายใน 3 วันนับแต่วันประกาศผล คำวินิจฉัยเป็นที่สุด</li>
+      </ul>
+      <p>คณะกรรมการวิชาชีพบัญชีของแต่ละด้าน <span class="law">ข้อบังคับรายด้านฯ ข้อ 5 ถึงข้อ 10</span></p>
+      <ul>
+        <li>ประธานกับกรรมการรวมกันคณะละอย่างน้อย 7 คนแต่ไม่เกิน 15 คน เว้นแต่คณะกรรมการสภาฯ กำหนดเป็นอย่างอื่น กรรมการมาจากการเสนอชื่อของประธานด้านนั้น โดยคณะกรรมการสภาฯ เห็นชอบ</li>
+        <li>ประธานต้องเป็นสมาชิกสามัญติดต่อกันไม่น้อยกว่า 1 ปีในวันสมัครรับเลือกตั้ง มีประสบการณ์ตรงกับงานของด้านนั้น และไม่มีลักษณะต้องห้ามหกข้อ</li>
+        <li>ด้านการทำบัญชีและด้านการบัญชีบริหาร: ผู้อำนวยการฝ่ายการเงินหรือฝ่ายการบัญชี หรือตำแหน่งที่มีหน้าที่เดียวกัน ในบริษัทจำกัด บริษัทมหาชนจำกัด หรือรัฐวิสาหกิจ รวมไม่น้อยกว่า 10 ปี โดยไม่น้อยกว่า 5 ปีอยู่ในบริษัทจดทะเบียนในตลาดหลักทรัพย์แห่งประเทศไทย และหรือบริษัทมหาชนจำกัดที่มีสินทรัพย์รวมไม่ต่ำกว่า 1,000 ล้านบาท</li>
+        <li>ด้านการสอบบัญชี: ผู้สอบบัญชีรับอนุญาต รวมไม่น้อยกว่า 10 ปี โดยไม่น้อยกว่า 5 ปีเป็นผู้ตรวจสอบและแสดงความเห็นต่องบการเงินของบริษัทจดทะเบียนในตลาดหลักทรัพย์แห่งประเทศไทยไม่น้อยกว่า 2 บริษัท หรือบริษัทมหาชนจำกัดที่มีสินทรัพย์รวมไม่ต่ำกว่า 1,000 ล้านบาทไม่น้อยกว่า 2 บริษัท หรืออย่างละอย่างน้อย 1 บริษัท หรือบริษัทจำกัดที่มีสินทรัพย์รวมไม่ต่ำกว่า 1,000 ล้านบาทอย่างน้อย 4 บริษัท</li>
+        <li>ด้านการวางระบบบัญชี: ผู้ปฏิบัติงานให้บริการวางระบบบัญชี รวมไม่น้อยกว่า 10 ปี โดยเป็นผู้บริหารของกิจการนั้นไม่น้อยกว่า 5 ปี หรือผู้อำนวยการฝ่ายการเงินหรือฝ่ายการบัญชีแบบเดียวกับด้านการทำบัญชี หรืออาจารย์ระดับไม่ต่ำกว่ารองศาสตราจารย์ที่สอนวิชาการบัญชีรวมไม่น้อยกว่า 10 ปี โดยสอนวิชาการวางระบบบัญชีไม่น้อยกว่า 5 ปี นับเวลาของสามทางรวมกันได้ แต่ต้องไม่น้อยกว่า 10 ปี</li>
+        <li>ด้านการบัญชีภาษีอากร: ผู้ให้บริการให้คำปรึกษาด้านภาษีอากร รวมไม่น้อยกว่า 10 ปี โดยเป็นผู้บริหารของกิจการนั้นไม่น้อยกว่า 5 ปี หรือข้าราชการหรือเจ้าหน้าที่ของรัฐ ตำแหน่งผู้บริหารสูงสุดหรือระดับรองของหน่วยงานที่เกี่ยวข้องกับการจัดเก็บภาษีอากร ซึ่งทำงานที่เกี่ยวข้องกับการจัดเก็บภาษีอากรรวมไม่น้อยกว่า 5 ปี นับเวลาของสองทางรวมกันได้ แต่ต้องไม่น้อยกว่า 10 ปี</li>
+        <li>ด้านการศึกษาและเทคโนโลยีการบัญชี: อาจารย์ระดับไม่ต่ำกว่ารองศาสตราจารย์ที่สอนวิชาการบัญชีรวมไม่น้อยกว่า 10 ปี หรือข้าราชการหรือเจ้าหน้าที่ของรัฐ ตำแหน่งผู้บริหารสูงสุดหรือระดับรองของหน่วยงานที่เกี่ยวข้องกับวิชาชีพบัญชี ซึ่งทำงานที่เกี่ยวข้องกับวิชาชีพบัญชีรวมไม่น้อยกว่า 5 ปี หรือผู้บริหารสูงสุดของคณะที่สอนเกี่ยวกับวิชาชีพบัญชี หรือของสถาบันอุดมศึกษาที่สภาฯ รับรองปริญญา รวมไม่น้อยกว่า 5 ปี นับเวลาของสามทางรวมกันได้ แต่ต้องไม่น้อยกว่า 10 ปี</li>
+        <li>กรรมการของแต่ละด้านต้องเป็นสมาชิกสามัญ ปฏิบัติหน้าที่เกี่ยวข้องกับวิชาชีพบัญชีรวมไม่น้อยกว่า 10 ปี และไม่มีลักษณะต้องห้ามหกข้อ</li>
+        <li>วาระคราวละ 3 ปี ได้รับเลือกตั้งหรือแต่งตั้งอีกได้ แต่ประธานอยู่ติดต่อกันเกินสองวาระไม่ได้</li>
+        <li>พ้นก่อนครบวาระเมื่อ ตาย ลาออก ขาดคุณสมบัติหรือมีลักษณะต้องห้าม หรือสมาชิกสามัญในที่ประชุมใหญ่มีมติไม่น้อยกว่า 200 เสียงให้ออก ด้วยเหตุกระทำการอันเป็นการเสื่อมเสียแห่งเกียรติศักดิ์แห่งวิชาชีพบัญชี</li>
+        <li>งานเจ็ดอย่าง: ส่งเสริมความสามัคคีของผู้ประกอบวิชาชีพบัญชีด้านนั้นและโดยรวม · ผดุงศักดิ์ศรีของวิชาชีพด้านนั้น · ส่งเสริมและสร้างมาตรฐานการประกอบวิชาชีพของแต่ละด้าน · ส่งเสริมและให้ความรู้ และเสนอแนะการสร้างประสบการณ์ให้สอดคล้องกับความก้าวหน้าทางเศรษฐกิจของประเทศ · ประสานงานกับวิชาชีพบัญชีด้านอื่น องค์กรวิชาชีพอื่น และต่างประเทศ ภายใต้นโยบายของสภาฯ · เป็นตัวแทนของผู้ประกอบวิชาชีพด้านนั้นในการเสนอความเห็นต่อสภาฯ · ทำงานอื่นตามที่ที่ประชุมใหญ่หรือคณะกรรมการสภาฯ มอบหมาย</li>
+      </ul>
+    </details>
   </section>
+  <!-- ===== X07-EXTRA END ===== -->
 
-  <!-- 4 ความเห็นที่สอง -->
-  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
-    <div class="sechd"><i>4</i><div><small>ความเห็นที่สอง</small><h2 id="h4">ความเห็นที่สอง ถ้าไม่ได้อยู่บนข้อเท็จจริงเดียวกับผู้สอบบัญชีของบริษัท อาจกระทบหลักนี้</h2></div></div>
-    <p class="cap">ความเห็นที่สอง คือความเห็นเรื่องการใช้มาตรฐานการบัญชี การสอบบัญชี การรายงาน หรือมาตรฐานอื่น ที่ให้แก่บริษัทหรือกิจการซึ่งไม่ได้เป็นลูกค้าของผู้ให้ความเห็นในขณะนั้น <span class="law">คู่มือ 321.2 · 321.3 A1</span></p>
-    <span class="pinp xec-pin"><span data-face="prae2"></span>บริษัทแห่งหนึ่งขอความเห็นที่สองจากแพร</span>
-    <div class="map" role="img" aria-label="บริษัทที่ขอความเห็น มีผู้สอบบัญชีอยู่แล้ว และไม่ได้เป็นลูกค้าของแพร ข้างล่างเทียบข้อเท็จจริงที่ผู้สอบบัญชีของบริษัทมี กับที่แพรมี">
-      <div class="nd"><span class="ico" data-ico="bag"></span><b>บริษัทที่ขอความเห็น</b><small>มีผู้สอบบัญชีอยู่แล้ว และไม่ได้เป็นลูกค้าของแพร บริษัทเล่ารายการหนึ่งให้แพรฟัง แล้วถามว่าควรใช้มาตรฐานการบัญชีอย่างไร</small></div>
-      <svg class="y" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V8M50 8C50 18 25 12 25 26M50 8C50 18 75 12 75 26"/></svg>
-    </div>
-    <div class="xec-stacks">
-      <div class="xec-stack"><b>ผู้สอบบัญชีของบริษัท</b><div class="xec-docs"><span></span><span></span><span></span><span></span></div><small>ข้อเท็จจริงที่มีอยู่</small></div>
-      <div class="xec-stack"><b>แพร</b><div class="xec-docs" id="docsMe"><span></span><span class="xec-gap"></span><span class="xec-gap"></span><span class="xec-gap"></span></div><small id="docsCap" aria-live="polite"></small></div>
-    </div>
-    <p class="lbl">แพรขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท แล้วหรือยัง</p>
-    <div class="chips" data-pick="sec">
-      <button data-v="0" aria-pressed="true">ยังไม่ได้ขอ</button>
-      <button data-v="1">ขอแล้ว บริษัทอนุญาต</button>
-      <button data-v="2">ขอแล้ว บริษัทไม่อนุญาต</button>
-    </div>
-    <div class="xec-out" id="out4" role="status"></div>
-    <p class="lbl">ตัวอย่างมาตรการป้องกันที่คู่มือยกไว้ <span class="law">คู่มือ 321.3 A3</span></p>
-    <ul class="xec-ways">
-      <li class="xec-way" id="v0"><span class="xec-ic" data-ico="mail"></span><span>ขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท<small id="v0s"></small></span></li>
-      <li class="xec-way xec-hit"><span class="xec-ic" data-ico="flag"></span><span>อธิบายข้อจำกัดที่มีต่อการให้ความเห็น ในการสื่อสารใด ๆ กับบริษัท</span></li>
-      <li class="xec-way xec-hit"><span class="xec-ic" data-ico="card"></span><span>ให้สำเนาความเห็นของตนแก่ผู้สอบบัญชีของบริษัท</span></li>
-    </ul>
-  </section>
-
-  <p class="note"><span data-ico="flag"></span><span>เมื่อหลัก (ค) ถูกกระทบ ขั้นตอนระบุ ประเมิน และจัดการอุปสรรค รวมถึงเมื่อใดต้องปฏิเสธหรือยุติ อยู่ในบทที่ 11 <a class="xec-lk" href="law2v-r11.html">“เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง”</a></span></p>
-
-  <!-- ลองดู -->
+  <!-- โจทย์ท้ายหน้า -->
   <section class="fig" aria-labelledby="fq">
-    <span class="fno">ลองดู</span>
-    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
-    <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
+    <span class="fno">ลองเอง</span>
+    <h2 id="fq">สี่คำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบแล้วตอบใหม่ได้ ไม่มีคะแนน</p>
     <div id="quiz" style="display:grid;gap:12px"></div>
   </section>
 
-  <!-- จำจากภาพ -->
+  <!-- สรุป -->
   <section class="fig" aria-labelledby="fk">
     <span class="fno">สรุปบทนี้</span>
-    <h2 id="fk">จำจากภาพ</h2>
+    <h2 id="fk">เก็บจากภาพ</h2>
     <ul class="keep">
-      <li><span class="ico" data-ico="cap"></span><span>หลัก (ค) มีสองส่วน รักษาความรู้ ความสามารถ และความชำนาญทางวิชาชีพ กับปฏิบัติหน้าที่ด้วยความเอาใจใส่ตามมาตรฐานวิชาชีพ</span></li>
-      <li><span class="ico" data-ico="card"></span><span>ใช้ทั้งกับคนในสำนักงานที่ให้บริการทางวิชาชีพ และคนที่ได้รับการว่าจ้างในกิจการ</span></li>
-      <li><span class="ico" data-ico="bag"></span><span>ก่อนรับงาน ดูว่าทีมเข้าใจธุรกิจของลูกค้าและงานที่ต้องทำ มีความรู้ในอุตสาหกรรม และรู้ข้อเท็จจริงที่เกี่ยวข้องก่อนตอบรับ</span></li>
-      <li><span class="ico" data-ico="clock"></span><span>ในองค์กร ขาดเวลา ข้อมูล ประสบการณ์ หรือทรัพยากร อาจเกิดอุปสรรคต่อหลักนี้ จัดการไม่ได้ต้องพิจารณาว่าจะปฏิเสธหรือไม่</span></li>
-      <li><span class="ico" data-ico="shield"></span><span>ต้องไม่ปล่อยให้ความกดดันจากผู้อื่น ทำให้ฝ่าฝืนหลักการพื้นฐาน</span></li>
-      <li><span class="ico" data-ico="pen"></span><span>ระหว่างทำงาน รอบคอบ ครบถ้วน ทันเวลา ดูแลให้ผู้ช่วยได้รับการฝึกอบรมและการกำกับดูแล และทำให้ผู้ใช้บริการตระหนักถึงข้อจำกัด</span></li>
-      <li><span class="ico" data-ico="book"></span><span>ความเห็นที่สอง ถ้าไม่ได้อยู่บนข้อเท็จจริงเดียวกับผู้สอบบัญชีของบริษัท อาจเกิดอุปสรรค ทางหนึ่งคือขออนุญาตบริษัทเพื่อขอข้อมูล</span></li>
-      <li><span class="ico" data-ico="flag"></span><span>ไม่ปฏิบัติตามจรรยาบรรณหรือมาตรฐาน ให้ถือว่าประพฤติผิดจรรยาบรรณ</span></li>
+      <li><span class="ico" data-ico="building"></span><span>มีห้าคณะ สี่คณะอยู่ในสภาฯ อีกคณะคือคณะกรรมการกำกับดูแลฯ ซึ่งอยู่นอกสภาฯ และปลัดกระทรวงพาณิชย์เป็นประธาน</span></li>
+      <li><span class="ico" data-ico="users"></span><span>คณะกรรมการสภาฯ มีนายก 1 คน ประธานของคณะอื่นซึ่งนั่งโดยตำแหน่ง ผู้ทรงคุณวุฒิ 3 คน และกรรมการที่เลือกตั้งไม่เกิน 5 คน</span></li>
+      <li><span class="ico" data-ico="vote"></span><span>ที่ประชุมใหญ่เลือกตั้งนายกกับกรรมการจากสมาชิกสามัญ และเลือกตั้งประธานของแต่ละด้าน ตำแหน่งอื่นมาจากการแต่งตั้ง หรือมาโดยตำแหน่ง</span></li>
+      <li><span class="ico" data-ico="check"></span><span>ประชุมคณะกรรมการสภาฯ ต้องมีกรรมการมาไม่น้อยกว่ากึ่งหนึ่งของทั้งหมด มติถือเสียงข้างมาก เสียงเท่ากันประธานในที่ประชุมชี้ขาด</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>กรรมการจรรยาบรรณมี 9 ถึง 15 คน ต้องครบสี่ข้อของมาตรา 50 คณะกรรมการสภาฯ แต่งตั้งโดยความเห็นชอบของที่ประชุมใหญ่</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>วาระคราวละ 3 ปี นายก กรรมการจรรยาบรรณ และผู้ทรงคุณวุฒิในคณะกรรมการกำกับดูแลฯ อยู่เกินสองวาระติดต่อกันไม่ได้</span></li>
+      <li><span class="ico" data-ico="hand"></span><span>ที่ประชุมใหญ่ให้กรรมการจรรยาบรรณออกได้ ด้วยคะแนนไม่น้อยกว่า 2 ใน 3 ของสมาชิกสามัญที่มาประชุม และต้องไม่น้อยกว่า 200 เสียง</span></li>
+      <li><span class="ico" data-ico="gavel"></span><span>ไม่ทำตามคำสั่งของคณะกรรมการกำกับดูแลฯ รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่ง กรรมการเหลือไม่ถึงกึ่งหนึ่ง มีกรรมการชั่วคราววันเดียวกัน แล้วต้องมีกรรมการใหม่ใน 90 วัน เว้นแต่วาระเหลือไม่ถึง 180 วัน รัฐมนตรีจะสั่งให้ไม่มีการเลือกตั้งก็ได้</span></li>
     </ul>
   </section>
 
   <details class="src">
     <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
     <ul>
-      <li>ข้อบังคับจรรยาบรรณ คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
-      <li>คู่มือ คือคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 เลขที่ขึ้นต้นด้วย R เป็นข้อกำหนด เลขที่มีอักษร A เป็นคำอธิบายการนำไปปฏิบัติ</li>
-      <li>หมวดของคู่มือที่ใช้ในหน้านี้: หมวดย่อย 113 ความรู้ ความสามารถ และความเอาใจใส่ทางวิชาชีพ · หมวด 230 การปฏิบัติงานด้วยความชำนาญที่เพียงพอ · หมวด 270 ความกดดันต่อการฝ่าฝืนหลักการพื้นฐาน · หมวด 320 การแต่งตั้งผู้ให้บริการวิชาชีพ · หมวด 321 การให้ความเห็นที่สองในทางวิชาชีพ</li>
-      <li>พ.ร.บ.วิชาชีพบัญชี คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
-      <li>“ทีม” ในหน้านี้ คู่มือเรียกว่า กลุ่มผู้ปฏิบัติงาน · “ผู้สอบบัญชีคนเดิม” และ “ผู้สอบบัญชีของบริษัท” คู่มือเรียกว่า ผู้ประกอบวิชาชีพบัญชีคนปัจจุบันหรือคนก่อน</li>
-      <li>“บริษัทที่ขอความเห็น” ในส่วน 4 คู่มือ R321.4 เรียกว่า กิจการที่ร้องขอให้แสดงความเห็นที่สอง ส่วนย่อหน้า 321.3 A3 ใช้คำว่า ลูกค้า</li>
-      <li>แพร พีท พริ้ง และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ</li>
+      <li>เลขมาตรา (ม.) ทั้งหมด คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
+      <li>“สภาฯ” คือสภาวิชาชีพบัญชี · “คณะกรรมการสภาฯ” คือคณะกรรมการสภาวิชาชีพบัญชี · “คณะกรรมการกำกับดูแลฯ” คือคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี · “นายก” คือนายกสภาวิชาชีพบัญชี</li>
+      <li>“รัฐมนตรี” คือรัฐมนตรีว่าการกระทรวงพาณิชย์ ผู้รักษาการตามพระราชบัญญัตินี้ (มาตรา 4 · มาตรา 5)</li>
+      <li>ชื่อหน่วยงานในมาตรา 33 และมาตรา 59 เขียนตามตัวบท เช่น กรมการประกันภัย</li>
+      <li>คณะกรรมการสภาฯ 17 คน สมาชิกสามัญที่มาประชุม 330 คน จำนวนเสียง จำนวนคนที่พ้น จำนวนวัน และวันที่ 1 มกราคม 20x1 เป็นตัวเลขของเรื่องตัวอย่าง ไม่ใช่ตัวเลขของกฎหมาย · แพร พี่แพม และรุ่นน้องของแพร เป็นกรณีสมมติ</li>
+      <li data-x07extra="1">“ข้อบังคับเลือกตั้งฯ” คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยคุณสมบัติและลักษณะต้องห้ามของนายกสภาวิชาชีพบัญชี กรรมการผู้ทรงคุณวุฒิ และกรรมการสภาวิชาชีพบัญชี และหลักเกณฑ์และวิธีการเลือกตั้ง พ.ศ. 2568</li>
+      <li data-x07extra="1">“ข้อบังคับรายด้านฯ” คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยคุณสมบัติและลักษณะต้องห้าม การเลือกตั้งหรือการแต่งตั้ง การดำรงตำแหน่ง การพ้นจากตำแหน่งของประธานคณะกรรมการหรือกรรมการวิชาชีพบัญชีของแต่ละด้าน อำนาจหน้าที่และการดำเนินการอื่นของคณะกรรมการวิชาชีพบัญชีของแต่ละด้าน พ.ศ. 2563</li>
     </ul>
   </details>
 
   <section class="next">
-    <small>บทถัดไป</small>
-    <b>เรื่องนี้บอกใครได้บ้าง</b>
-    <p>หลักการพื้นฐานข้อ 9 (ง) การรักษาความลับ</p>
-    <a class="btn" href="law2v-r08.html">ไปบทถัดไป</a>
+    <small>สถานีถัดไป</small>
+    <b>เป็นสมาชิกแล้ว มีสิทธิ หน้าที่อะไรบ้าง</b>
+    <p>รู้แล้วว่าใครนั่งตรงไหน ต่อไปดูฝั่งของแพรเอง สมาชิกแต่ละประเภททำอะไรได้ในที่ประชุมใหญ่</p>
+    <a class="btn" href="law2v-r08.html">ไปสถานีถัดไป</a>
   </section>
 </main>
 <script src="law2v.js"></script>
 <script>
 (function () {
   var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
-  function L(t) { return ' <span class="law">' + t + '</span>'; }
-  function tile(id, on, yes, no) { var b = $(id); b.querySelector('.xec-mk').innerHTML = V.icon(on ? 'check' : 'x'); b.querySelector('.xec-st').textContent = on ? yes : no; }
-  function fact(id, on, yes, no) { var b = $(id); b.querySelector('.xec-mk').innerHTML = V.icon(on ? 'check' : 'x'); b.querySelector('.xec-tx').textContent = on ? yes : no; }
-  function way(id, kind) { $(id).className = 'xec-way' + (kind ? ' xec-' + kind : ''); }
-  function out(id, kind, html) { var o = $(id); o.className = 'xec-out xec-' + kind; o.innerHTML = html; }
+  function mark(id, ok) { var c = $(id); c.className = c.className.replace(/ ?\b(ok|no|x07-na)\b/g, '') + (ok ? ' ok' : ' no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); }
+  function line(id, ok) { $(id).setAttribute('class', ok ? 'ok' : 'no'); }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  function cg(id, kind, t, s) { $(id + 'C').className = 'cg ' + kind; $(id + 'I').innerHTML = V.icon(kind === 'ok' ? 'check' : kind === 'lock' ? 'x' : 'info'); $(id + 'T').textContent = t; $(id + 'S').innerHTML = s; }
+  function law(t) { return ' <span class="law">' + t + '</span>'; }
+  function dots(c, n) { var s = ''; while (n-- > 0) s += '<i class="' + c + '"></i>'; return s; }
+  /* โจทย์ของก้อนลองเปลี่ยน: ข้อที่ผู้เรียนเพิ่งเปลี่ยนเน้นด้วย <mark> · ready เป็นจริงหลังตั้งค่าตั้งต้นครบ จึงไม่มีข้อไหนถูกเน้นตอนเปิดหน้า */
+  var ready = false;
+  function hi(on, t) { return on ? '<mark>' + t + '</mark>' : t; }
+  /* แถบขั้นมีเก้าช่อง เลื่อนแถบให้ช่องที่กำลังอ่านอยู่ในจอ */
+  try {
+    var nav = $('steps');
+    if (window.MutationObserver && nav) new MutationObserver(function () { var a = nav.querySelector('a[aria-current="step"]'); if (a) nav.scrollLeft = Math.max(0, a.offsetLeft - 120); }).observe(nav, { attributes: true, subtree: true, attributeFilter: ['aria-current'] });
+  } catch (e) {}
+
+  /* ภาพหน้าของพี่แพม (วาดในหน้านี้) */
+  var PAM = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="x07fcN"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#x07fcN)">' +
+    '<rect width="120" height="120" fill="#ECE6F6"/><circle cx="60" cy="19" r="12" fill="#2B2024"/>' +
+    '<path d="M36 54c-3 12-1 22 4 28h40c5-6 7-16 4-28z" fill="#2B2024"/>' +
+    '<path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#5B3A6B"/><path d="M50 95l10 14 10-14 4 2-14 23-14-23z" fill="#FDFDFB"/>' +
+    '<path d="M46 97l14 24M74 97L60 121" stroke="#432A50" stroke-width="2" fill="none"/>' +
+    '<path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/>' +
+    '<ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><ellipse cx="39.5" cy="57" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="80.5" cy="57" rx="3" ry="5" fill="#F2CDB3"/>' +
+    '<circle cx="39.5" cy="64.5" r="2.2" fill="#F0C84B"/><circle cx="80.5" cy="64.5" r="2.2" fill="#F0C84B"/>' +
+    '<path d="M38.5 55c-3-21 7-32 22-32 14 0 24 9 21 32-2-9-5-15-10-19-9 2-20 0-27-4-3 5-5 12-6 23z" fill="#2B2024"/>' +
+    '<g><ellipse cx="50" cy="56" rx="5.2" ry="3.4" fill="#fff"/><ellipse cx="70" cy="56" rx="5.2" ry="3.4" fill="#fff"/><circle cx="50.4" cy="56" r="2.9" fill="#3B2418"/><circle cx="69.6" cy="56" r="2.9" fill="#3B2418"/><circle cx="51.3" cy="55" r=".9" fill="#fff"/><circle cx="70.5" cy="55" r=".9" fill="#fff"/><path d="M44.3 54.5q5.7-4.6 11.4-.3M64.3 54.2q5.7-4.3 11.4.3" fill="none" stroke="#2A1B15" stroke-width="1.7" stroke-linecap="round"/></g>' +
+    '<path d="M60 58c-1 4-2 6-1 8h2.5" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/>' +
+    '<path d="M53.5 71c4 3.2 9 3.2 13 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>' +
+    '<ellipse cx="46.5" cy="64.5" rx="4" ry="2.5" fill="#EFA69A" opacity=".4"/><ellipse cx="73.5" cy="64.5" rx="4" ry="2.5" fill="#EFA69A" opacity=".4"/></g></svg>';
+  [].forEach.call(document.querySelectorAll('[data-x07face]'), function (e, i) { e.innerHTML = PAM.replace(/x07fcN/g, 'x07fc' + i); });
+
+  /* ส่วนที่ 1: ที่มาของแต่ละกลุ่มในคณะกรรมการสภาฯ (ม.22 (1)–(4) · วรรคสอง · ม.25) · 17 ที่นั่งเป็นตัวเลขของเรื่อง */
+  var SEATG = [0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 1, 1, 1, 1, 1];
+  var SEAT = [
+    { n: ['สมาชิกสามัญ', 'ที่ประชุมใหญ่เลือกตั้ง', 'นายก 1 คน'], k: 'ok', t: 'ที่ประชุมใหญ่เลือกตั้งเข้ามาโดยตรง',
+      s: 'นายกมีคนเดียว ที่ประชุมใหญ่เลือกตั้งจากสมาชิกสามัญ' + law('ม.22 (1)') },
+    { n: ['สมาชิกสามัญ', 'ที่ประชุมใหญ่เลือกตั้ง', 'กรรมการ ไม่เกิน 5 คน'], k: 'ok', t: 'ที่ประชุมใหญ่เลือกตั้งเข้ามาโดยตรง',
+      s: 'เลือกตั้งจากสมาชิกสามัญเหมือนนายก มีได้ไม่เกิน 5 คน' + law('ม.22 (4)') },
+    { n: ['เป็นประธานของคณะอื่น', 'ได้นั่งโดยตำแหน่ง', 'ด้านละ 1 คน กับอีก 2 คน'], k: 'x07-neu', t: 'ไม่ได้เลือกตั้งเข้ามาโดยตรง',
+      s: 'ใครเป็นประธานคณะกรรมการวิชาชีพบัญชีของด้านใด ประธานคณะกรรมการกำหนดมาตรฐานการบัญชี หรือประธานคณะกรรมการจรรยาบรรณ ก็ได้นั่งทันที ในภาพมีหกด้าน จึงเป็น 6 คนกับอีก 2 คน' + law('ม.22 (2)') },
+    { n: ['นายก กับกรรมการโดยตำแหน่ง', 'มีมติแต่งตั้ง', 'ผู้ทรงคุณวุฒิ 3 คน'], k: 'x07-neu', t: 'ไม่ได้มาจากการเลือกตั้ง',
+      s: 'ผู้ทรงคุณวุฒิคือคนที่แต่งตั้งเข้ามาเพราะความรู้เฉพาะด้าน นายกกับกรรมการโดยตำแหน่งมีมติแต่งตั้ง จากผู้ทรงคุณวุฒิเกี่ยวกับวิชาการบัญชี 2 คน และทางด้านกฎหมาย 1 คน' + law('ม.22 (3)') },
+    { n: ['คนที่เป็นกรรมการอยู่แล้ว', 'นายกเลือกมาแต่งตั้ง', 'รับตำแหน่งเพิ่ม'], k: 'x07-neu', t: 'ไม่มีที่นั่งเพิ่ม คนเดิมรับตำแหน่งเพิ่ม',
+      s: 'อุปนายกมีกี่คน คณะกรรมการสภาฯ เป็นผู้กำหนด เลขาธิการ เหรัญญิก และนายทะเบียน ตำแหน่งละ 1 คน เลขาธิการเป็นเลขานุการของคณะนี้ด้วย และกำหนดตำแหน่งอื่นเพิ่มได้ตามความจำเป็น' + law('ม.22 วรรคสอง · ม.25') }];
+  V.pick('seat', function (v) { var d = SEAT[v];
+    SEATG.forEach(function (g, i) { $('st' + i).setAttribute('class', 'x07-s' + (v === 4 || g === v ? ' x07-lit' : ' x07-dim')); });
+    [0, 1, 2].forEach(function (i) { $('via' + i).textContent = d.n[i]; });
+    cg('seat', d.k, d.t, d.s); });
+  SEATG.forEach(function (g, i) { $('st' + i).onclick = function () { var b = document.querySelector('[data-pick="seat"] button[data-v="' + g + '"]'); if (b && b.click) b.click(); }; });
+
+  /* ส่วนที่ 2: องค์ประชุมของคณะกรรมการสภาฯ ไม่น้อยกว่ากึ่งหนึ่งของกรรมการทั้งหมด (ม.26) · ทั้งหมด 17 คนของเรื่อง */
+  var ALL = 17;
+  V.nums('att', function (s) { var n = s.n, ok = n * 2 >= ALL, i, r = $('attR'), came = n === 0 ? 'ไม่มีกรรมการมาเลย' : 'มีกรรมการมา ' + n + ' คน';
+    for (i = 0; i < ALL; i++) $('qa' + i).className = i < n ? 'x07-in' : '';
+    $('attQ').innerHTML = 'คณะกรรมการสภาฯ ของเรื่องนี้มีกรรมการทั้งหมด 17 คน วันนี้นัดประชุม ' + hi(ready, came);
+    r.className = 'result' + (ok ? ' ok' : ' x07-stop');
+    r.textContent = ok ? 'เป็นองค์ประชุม เพราะมา ' + n + ' คน ไม่น้อยกว่ากึ่งหนึ่งของ 17 คน ซึ่งคือ 8.5 คน' + (n === 9 ? ' ถ้าหายไปอีกคนเดียวจะไม่เป็น' : '')
+      : 'ยังไม่เป็นองค์ประชุม เพราะ' + (n === 0 ? 'ไม่มีกรรมการมา' : 'มา ' + n + ' คน') + ' น้อยกว่ากึ่งหนึ่งของ 17 คน ซึ่งคือ 8.5 คน' + (n === 8 ? ' ขาดอีกคนเดียว' : ''); });
+
+  /* ส่วนที่ 3: คณะของประธานที่นั่งโดยตำแหน่ง (ม.32 · ม.4 · ม.33–35 · ม.50 · ม.53 · ม.54 · ม.56 · ม.57 · ม.47) */
+  var HOME = [
+    { name: 'คณะกรรมการวิชาชีพบัญชีของแต่ละด้าน', job: 'มีไว้พัฒนาและส่งเสริมการประกอบวิชาชีพบัญชีด้านนั้น มีด้านละคณะ',
+      seats: '<div class="x07-strip">' + dots('x07-bel', 1) + '<span>ประธาน 1 คน</span></div><div class="x07-strip">' + dots('x07-opt', 5) + '<span>กรรมการอื่น จำนวนตามที่คณะกรรมการสภาฯ กำหนด</span></div>',
+      chain: ['สมาชิกสามัญเลือกตั้ง โดยที่ประชุมใหญ่', 'ได้เป็นประธานของด้านนั้น', 'นั่งในคณะกรรมการสภาฯ โดยตำแหน่ง'],
+      bl: ['หกด้านตามมาตรา 4 คือ การทำบัญชี การสอบบัญชี การบัญชีบริหาร การวางระบบบัญชี การบัญชีภาษีอากร และการศึกษาและเทคโนโลยีการบัญชี',
+        'คุณสมบัติ การแต่งตั้งหรือเลือกตั้ง วาระ การพ้นจากตำแหน่ง และอำนาจหน้าที่ของคณะนี้ พระราชบัญญัติให้เป็นไปตามข้อบังคับสภาฯ'],
+      law: ['ม.32', 'ม.4'] },
+    { name: 'คณะกรรมการกำหนดมาตรฐานการบัญชี', job: 'กำหนดและปรับปรุงมาตรฐานการบัญชี ที่ใช้จัดทำบัญชีตามกฎหมายว่าด้วยการบัญชีและกฎหมายอื่น',
+      seats: '<div class="x07-strip">' + dots('x07-bap', 7) + dots('x07-opt', 4) + '<span>ผู้ทรงคุณวุฒิ 7 ถึง 11 คน คณะกรรมการสภาฯ แต่งตั้ง</span></div><div class="x07-strip">' + dots('x07-brp', 6) + '<span>ผู้แทนของ 6 หน่วยงาน</span></div>',
+      chain: ['คณะกรรมการสภาฯ แต่งตั้งผู้ทรงคุณวุฒิ', 'กรรมการเลือกกันเอง เป็นประธาน 1 คน และเลขานุการ 1 คน', 'ประธานนั่งในคณะกรรมการสภาฯ โดยตำแหน่ง'],
+      bl: ['ผู้ทรงคุณวุฒิมาจากผู้มีความรู้ความชำนาญและประสบการณ์เกี่ยวกับการบัญชี',
+        'ผู้แทนมาจากกรมการประกันภัย กรมพัฒนาธุรกิจการค้า กรมสรรพากร ธนาคารแห่งประเทศไทย สำนักงานการตรวจเงินแผ่นดิน และสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์',
+        'ได้รับแจ้งว่ามาตรฐานมีปัญหาในการปฏิบัติซึ่งอาจก่อให้เกิดความเสียหาย คณะนี้ต้องตรวจสอบ รับฟังความคิดเห็นของผู้ที่เกี่ยวข้อง แล้วกำหนด ปรับปรุง หรือพัฒนามาตรฐานโดยพลัน',
+        'ตั้งคณะอนุกรรมการมาช่วยได้ และมาตรฐานที่ทำเสร็จยังต้องผ่านอีกสองขั้นก่อนใช้บังคับ ดูสถานี<a class="x07-lk" href="law2v-r09.html">กฎและมาตรฐานมาจากไหน</a>'],
+      law: ['ม.33', 'ม.34', 'ม.35'] },
+    { name: 'คณะกรรมการจรรยาบรรณ', job: 'เมื่อมีผู้กล่าวหาว่าใครประพฤติผิดจรรยาบรรณ คณะนี้สอบสวนพิจารณาโดยเร็ว แล้วสั่งลงโทษ หรือสั่งยกคำกล่าวหา',
+      seats: '<div class="x07-strip">' + dots('x07-bap', 9) + dots('x07-opt', 6) + '<span>กรรมการจรรยาบรรณ 9 ถึง 15 คน</span></div>',
+      chain: ['คณะกรรมการสภาฯ แต่งตั้ง โดยความเห็นชอบของที่ประชุมใหญ่', 'กรรมการเลือกกันเอง เป็นประธาน 1 คน', 'ประธานนั่งในคณะกรรมการสภาฯ โดยตำแหน่ง'],
+      bl: ['ตั้งคณะอนุกรรมการมาสอบสวนแทนได้ โดยต้องมีกรรมการจรรยาบรรณอยู่ด้วยอย่างน้อย 1 คน',
+        'เรียกบุคคลมาให้ถ้อยคำ หรือให้ส่งบัญชี ทะเบียน เอกสาร หรือหลักฐานได้',
+        'กรรมการและอนุกรรมการเป็นเจ้าพนักงานตามประมวลกฎหมายอาญา ใครมีส่วนได้เสียเป็นการส่วนตัวในเรื่องใด ห้ามร่วมพิจารณาหรือลงคะแนนในเรื่องนั้น',
+        'คนที่จัดทำจรรยาบรรณคือสภาฯ ไม่ใช่คณะนี้ ขั้นตอนสอบสวนและโทษอยู่สถานี<a class="x07-lk" href="law2v-r05.html">เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร</a>'],
+      law: ['ม.50', 'ม.53', 'ม.54', 'ม.56', 'ม.57', 'ม.47'] }];
+  V.pick('home', function (v) { var h = HOME[v];
+    $('hmN').textContent = h.name; $('hmJ').textContent = h.job; $('hmS').innerHTML = h.seats;
+    [0, 1, 2].forEach(function (i) { $('hc' + i).textContent = h.chain[i]; });
+    $('hmB').innerHTML = h.bl.map(function (t) { return '<li>' + t + '</li>'; }).join('');
+    $('hmL').innerHTML = h.law.map(function (t) { return '<span class="law">' + t + '</span>'; }).join(' '); });
+
+  /* ส่วนที่ 4: คุณสมบัติของกรรมการจรรยาบรรณ ม.50 (1)–(4) · ผู้แทนของหน่วยงานของรัฐไม่ใช้ข้อ (1) (2) (ม.50 วรรคสอง)
+     ประตูเปิด = ผ่านข้อที่ใช้กับคนนั้นครบ ยังไม่ได้แปลว่าเป็นแล้ว ต้องแต่งตั้งและได้รับความเห็นชอบอีกสองขั้น */
+  var EK = ['mem', 'yrs', 'pun', 'oth'], nom = 0, ethS = { mem: true, yrs: true, pun: true, oth: true }, ethL = '';
+  var EPRED = ['เป็นสมาชิกสามัญ', 'ประกอบวิชาชีพบัญชีมานานถึงที่ข้อบังคับสภาฯ กำหนด', 'ไม่เคยถูกลงโทษฐานประพฤติผิดจรรยาบรรณ', 'ไม่ได้เป็นนายก กรรมการ หรืออนุกรรมการอื่นตามพระราชบัญญัตินี้'];
+  var EMISS = ['ไม่ได้เป็นสมาชิกสามัญ', 'ประกอบวิชาชีพบัญชียังไม่ถึงระยะเวลาที่ข้อบังคับสภาฯ กำหนด', 'เคยถูกลงโทษฐานประพฤติผิดจรรยาบรรณ', 'เป็นอนุกรรมการตามพระราชบัญญัตินี้อยู่'];
+  var NOM = [
+    { who: 'พี่แพม', af: ['คณะกรรมการสภาฯ แต่งตั้ง', 'โดยความเห็นชอบของที่ประชุมใหญ่', 'เป็นกรรมการจรรยาบรรณ'] },
+    { who: 'ผู้แทน', af: ['คณะกรรมการสภาฯ ขอไปที่หน่วยงาน โดยความเห็นชอบของที่ประชุมใหญ่', 'หน่วยงานของรัฐที่กฎหมายให้ดูแลจรรยาบรรณ แต่งตั้งผู้แทนของตน', 'เป็นกรรมการจรรยาบรรณ'] }];
+  function eth() { var w = NOM[nom], miss = [], open;
+    EK.forEach(function (k, i) { var skip = nom === 1 && i < 2, c = $('q' + i);
+      if (skip) { c.className = 'cond x07-na'; c.querySelector('.mk').innerHTML = ''; $('jq' + i).setAttribute('class', ''); $('q' + i + 's').textContent = 'ไม่ใช้กับผู้แทน'; }
+      else { mark('q' + i, ethS[k]); line('jq' + i, ethS[k]); if (i < 2) $('q' + i + 's').textContent = '(' + (i + 1) + ')'; if (!ethS[k]) miss.push(EMISS[i]); } });
+    open = miss.length === 0;
+    /* โจทย์: ข้อเท็จจริงทุกข้อของคนที่ถูกเสนอชื่อ ณ ตอนนี้ (ผู้แทนไม่มีข้อ (1) (2) ให้บอก เพราะสองข้อนั้นไม่ใช้กับผู้แทน) */
+    $('ethP').hidden = nom === 1;
+    $('ethQ').innerHTML = hi(ethL === 'nom', nom === 0 ? 'พี่แพมถูกเสนอชื่อเป็นกรรมการจรรยาบรรณ' : 'หน่วยงานของรัฐที่กฎหมายให้ดูแลจรรยาบรรณ จะแต่งตั้งผู้แทนของตนมาเป็นกรรมการจรรยาบรรณ') + ' ' +
+      EK.map(function (k, i) { return nom === 1 && i < 2 ? '' : hi(ethL === k, (i === 3 ? 'และ' : '') + (i === 0 || (nom === 1 && i === 2) ? w.who : '') + (ethS[k] ? EPRED[i] : EMISS[i])); }).filter(function (t) { return t; }).join(' ');
+    $('ethQ2').textContent = w.who + 'เป็นกรรมการจรรยาบรรณได้ไหม' + (nom === 1 ? ' (ข้อ (1) และ (2) ไม่ใช้กับผู้แทน โจทย์จึงไม่บอกสองข้อนั้น)' : '');
+    $('ethRl').innerHTML = (nom === 0 ? 'ต้องครบทั้งสี่ข้อ ขาดข้อเดียวก็ไม่ได้' + law('ม.50') : 'ผู้แทนของหน่วยงานของรัฐใช้แค่ข้อ (3) และ (4) และต้องครบทั้งสองข้อ' + law('ม.50 วรรคสอง'));
+    gate('g4', open, open ? 'ประตูเปิด' : 'ประตูยังปิด', open ? (nom === 0 ? 'ครบทั้งสี่ข้อ' : 'ครบข้อ (3) และ (4)') : 'ติด ' + miss.length + ' ข้อ');
+    $('af').className = 'x07-flow ' + (open ? 'x07-on' : 'x07-off');
+    [0, 1, 2].forEach(function (i) { $('af' + i).textContent = w.af[i]; });
+    /* กล่องตัดสินล่างสุดของก้อน: ผล และเพราะข้อเท็จจริงข้อไหน */
+    if (open && nom === 0) cg('eth', 'ok', 'คุณสมบัติครบ แต่ยังไม่ได้เป็นทันที', 'พี่แพมครบทั้งสี่ข้อ ขั้นต่อไปคณะกรรมการสภาฯ ต้องแต่งตั้ง โดยความเห็นชอบของที่ประชุมใหญ่' + law('ม.50'));
+    else if (open) cg('eth', 'ok', 'ผู้แทนผ่านสองข้อที่ใช้กับผู้แทน', 'ข้อ (1) และ (2) ไม่ใช้กับผู้แทนที่หน่วยงานของรัฐแต่งตั้งมา ผู้แทนเข้ามาได้เมื่อคณะกรรมการสภาฯ ขอไปที่หน่วยงาน โดยความเห็นชอบของที่ประชุมใหญ่' + law('ม.50 วรรคสอง'));
+    else cg('eth', 'lock', w.who + 'ยังเป็นกรรมการจรรยาบรรณไม่ได้', 'เพราะ' + w.who + miss.join(' และ') + (nom === 0 ? ' ต้องครบทุกข้อ ขาดข้อเดียวก็ไม่ได้' + law('ม.50') : ' ข้อ (3) และ (4) ยังใช้กับผู้แทน' + law('ม.50 วรรคสอง'))); }
+  V.togs('eth', function (s) { if (ready) EK.forEach(function (k) { if (s[k] !== ethS[k]) ethL = k; }); ethS = s; eth(); });
+  V.pick('nom', function (v) { if (ready) ethL = 'nom'; nom = v;
+    EPRED.forEach(function (p, i) { $('tg' + i).textContent = v === 1 && i < 2 ? 'ข้อนี้ไม่ใช้กับผู้แทน' : p; });
+    $('tb0').disabled = v === 1; $('tb1').disabled = v === 1;
+    eth(); });
+
+  /* ส่วนที่ 5: วาระคราวละ 3 ปี (ม.23 · ม.51 · ม.59 วรรคสี่) · ภาพนี้ให้คนเดิมได้รับเลือกตั้งหรือแต่งตั้งอีกทุกครั้งที่ครบวาระ
+     y = จำนวนปีเต็มนับจากวันเข้ารับตำแหน่ง 1 มกราคม 20x1 (0 ถึง 6) */
+  var TS = [
+    { n: 'นายก', who: 'นายกสภาวิชาชีพบัญชีคนปัจจุบัน', verb: 'ได้รับเลือกตั้ง', cap: true, law: 'ม.23 วรรคสี่' },
+    { n: 'กรรมการผู้ทรงคุณวุฒิและกรรมการที่เลือกตั้ง', who: 'กรรมการคนหนึ่งในคณะกรรมการสภาฯ ซึ่งเป็นกรรมการผู้ทรงคุณวุฒิ หรือกรรมการที่เลือกตั้ง', verb: 'ได้รับแต่งตั้งหรือเลือกตั้ง', cap: false, law: 'ม.23 วรรคสี่' },
+    { n: 'กรรมการจรรยาบรรณ', who: 'กรรมการจรรยาบรรณคนหนึ่ง', verb: 'ได้รับแต่งตั้ง', cap: true, law: 'ม.51' },
+    { n: 'ผู้ทรงคุณวุฒิในคณะกรรมการกำกับดูแลฯ ', who: 'ผู้ทรงคุณวุฒิคนหนึ่งในคณะกรรมการกำกับดูแลฯ', verb: 'ได้รับแต่งตั้ง', cap: true, law: 'ม.59 วรรคสี่' }], ts = 0, yr = 6, tlL = '';
+  function tl() { var t = TS[ts], i, r = $('tlR'), stop = t.cap && yr === 6, txt;
+    for (i = 0; i < 9; i++) $('yc' + i).className = 'x07-yc' + (i < yr ? ' x07-done' : '') + (i >= 6 && t.cap ? ' x07-bar' : '') + (i === yr ? ' x07-now' : '');
+    $('tlPin').style.gridColumn = (yr + 1) + ' / -1';
+    $('tlPin').textContent = yr === 0 ? 'วันเข้ารับตำแหน่ง' : 'ผ่านมา ' + yr + ' ปี';
+    /* โจทย์: ตำแหน่ง · วันเข้ารับตำแหน่ง · ได้อยู่ต่อเมื่อครบวาระแรก (ข้อสมมติของภาพ) · เวลาที่ผ่านมา */
+    $('tlQ').innerHTML = hi(tlL === 't', t.who) + ' เข้ารับตำแหน่ง 1 มกราคม 20x1 ' + (yr >= 3 ? 'ครบวาระแรกแล้ว' + t.verb + 'อีกหนึ่งวาระ ' : '') +
+      hi(tlL === 'y', yr === 0 ? 'วันนี้คือวันเข้ารับตำแหน่ง' : 'ถึง 1 มกราคม 20x' + (yr + 1) + ' ผ่านมา ' + yr + ' ปี');
+    $('tlQ2').textContent = yr === 6 ? 'อยู่ต่อเป็นวาระที่สามทันทีได้ไหม' : 'ตอนนี้อยู่ตรงไหนของวาระ';
+    $('tlRl').innerHTML = 'วาระคราวละ 3 ปี ' + (t.cap ? 'พ้นตามวาระแล้ว' + t.verb + 'อีกได้ แต่อยู่เกินสองวาระติดต่อกันไม่ได้' : 'พ้นตามวาระแล้ว' + t.verb + 'อีกได้ มาตรา 23 ห้ามเกินสองวาระติดต่อกันไว้เฉพาะนายก') + law(t.law);
+    if (yr === 0) txt = 'วันเข้ารับตำแหน่ง ' + t.n + 'มีวาระคราวละ 3 ปี';
+    else if (yr < 3) txt = 'ผ่านมา ' + yr + ' ปี ยังอยู่ในวาระแรก เหลืออีก ' + (3 - yr) + ' ปี';
+    else if (yr === 3) txt = 'ครบวาระแรกแล้ว ' + t.n + t.verb + 'อีกได้ ภาพนี้ให้อยู่ต่อเป็นวาระที่สอง';
+    else if (yr < 6) txt = 'ผ่านมา ' + yr + ' ปี อยู่ในวาระที่สอง เหลืออีก ' + (6 - yr) + ' ปี';
+    else if (stop) txt = 'ครบสองวาระติดต่อกันแล้ว ' + t.n + 'จะดำรงตำแหน่งเกินสองวาระติดต่อกันไม่ได้ จึงอยู่ต่อวาระที่สามทันทีไม่ได้';
+    else txt = 'ครบสองวาระแล้ว ' + t.n + 'ยัง' + t.verb + 'อีกได้ มาตรา 23 ห้ามเกินสองวาระติดต่อกันไว้เฉพาะนายก';
+    r.className = 'result' + (stop ? ' x07-stop' : ' ok'); r.innerHTML = txt + law(t.law); }
+  V.pick('tseat', function (v) { if (ready) tlL = 't'; ts = v; tl(); });
+  V.nums('yr', function (s) { if (ready) tlL = 'y'; yr = s.y; tl(); });
+
+  /* ส่วนที่ 6: มติให้กรรมการจรรยาบรรณออก ม.52 (4) · ผ่านเมื่อ 3v >= 2n และ v >= 200 · n เลื่อนทีละ 30 จึงได้ 2 ใน 3 เป็นจำนวนเต็มเสมอ
+     แกนของแถบ 0 ถึง 360 คน */
+  var AX = 360, vP = null, vL = '';
+  V.nums('vote', function (s) { var n = s.n, v = s.v, need = 2 * n / 3, a = 3 * v >= 2 * n, b = v >= 200, pass = a && b, same = need === 200, t, why;
+    if (ready && vP) { if (vP.n !== n) vL = 'n'; else if (vP.v !== v) vL = 'v'; }
+    vP = { n: n, v: v };
+    $('vQ').innerHTML = 'การประชุมใหญ่ที่แพรไป มีการลงมติว่าจะให้กรรมการจรรยาบรรณคนหนึ่งออกจากตำแหน่งหรือไม่ มีสมาชิกสามัญมาประชุม ' + hi(vL === 'n', n + ' คน') + ' ลงคะแนนให้ออก ' + hi(vL === 'v', v + ' เสียง');
+    $('vHall').style.width = (n / AX * 100) + '%'; $('vYes').style.width = (v / AX * 100) + '%'; $('vYesN').textContent = v + ' เสียง'; $('vHallN').textContent = n + ' คน';
+    $('vA').className = 'x07-ln x07-la' + (b ? ' x07-hit' : '');
+    $('vB').style.left = (need / AX * 100) + '%'; $('vB').className = 'x07-ln x07-lb' + (a ? ' x07-hit' : '');
+    $('vBn').textContent = '2 ใน 3 คือ ' + need + ' เสียง'; $('vc0n').textContent = need + ' เสียง';
+    mark('vc0', a); mark('vc1', b); line('vj0', a); line('vj1', b);
+    if (pass) { t = 'มติผ่าน กรรมการคนนี้พ้นจากตำแหน่ง';
+      why = (same ? 'ได้ ' + v + ' เสียง ไม่น้อยกว่า 200 เสียง ซึ่งเป็นทั้ง 2 ใน 3 ของ ' + n + ' คน และจำนวนขั้นต่ำ' : 'ได้ ' + v + ' เสียง ไม่น้อยกว่า ' + need + ' เสียง และไม่น้อยกว่า 200 เสียง') +
+        (v === Math.max(need, 200) ? ' ได้เท่าพอดีก็ผ่าน' : '') + ' ตำแหน่งที่ว่าง คณะกรรมการสภาฯ แต่งตั้งคนแทนไปพลางก่อน'; }
+    else { t = 'มติไม่ผ่าน กรรมการคนนี้ยังอยู่ในตำแหน่ง';
+      why = same ? 'ได้ ' + v + ' เสียง ยังไม่ถึง 200 เสียง ซึ่งเป็นทั้ง 2 ใน 3 ของ ' + n + ' คน และจำนวนขั้นต่ำ ขาดอีก ' + (200 - v) + ' เสียง'
+        : a ? 'ถึง 2 ใน 3 ของ ' + n + ' คนแล้ว แต่ยังน้อยกว่า 200 เสียง ขาดอีก ' + (200 - v) + ' เสียง'
+        : b ? 'ถึง 200 เสียงแล้ว แต่ 2 ใน 3 ของ ' + n + ' คน คือ ' + need + ' เสียง ขาดอีก ' + (need - v) + ' เสียง'
+        : 'ยังไม่ถึงทั้งสองจำนวน ต้องได้ไม่น้อยกว่า ' + need + ' เสียง และไม่น้อยกว่า 200 เสียง'; }
+    gate('vg', pass, t, why); });
+
+  /* ส่วนที่ 7: เรื่องใบอนุญาตไปถึงคณะกรรมการกำกับดูแลฯ เมื่อไร (ม.40 · ม.42 วรรคสอง · ม.60 (4)) */
+  var APP = [
+    { at: 0, k: 'x07-neu', t: 'เรื่องยังอยู่ที่สภาฯ', s: 'คณะกรรมการสภาฯ ยังพิจารณาคำขออยู่ ยังไม่มีอะไรให้อุทธรณ์' },
+    { at: 1, k: 'x07-neu', t: 'เรื่องไม่ไปถึงคณะกรรมการกำกับดูแลฯ', s: 'รุ่นน้องมีสิทธิอุทธรณ์ แต่ไม่ได้ใช้สิทธิ คณะนี้จึงไม่ได้พิจารณาเรื่องนี้' },
+    { at: 2, k: 'ok', t: 'เรื่องไปถึงคณะกรรมการกำกับดูแลฯ', s: 'รุ่นน้องอุทธรณ์การไม่ออกใบอนุญาต คณะนี้เป็นผู้พิจารณาอุทธรณ์ ไม่ใช่คณะกรรมการสภาฯ' }];
+  var APPQ = ['คณะกรรมการสภาฯ ยังพิจารณาคำขออยู่', 'สภาฯ ไม่ออกใบอนุญาตให้ และรุ่นน้องไม่ได้อุทธรณ์', 'สภาฯ ไม่ออกใบอนุญาตให้ รุ่นน้องจึงอุทธรณ์การไม่ออกใบอนุญาต'];
+  V.pick('app', function (v) { var d = APP[v];
+    $('appQ').innerHTML = 'รุ่นน้องของแพรยื่นคำขอรับใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต ' + hi(ready, APPQ[v]);
+    [0, 1, 2].forEach(function (i) { $('ap' + i).className = i < d.at ? 'x07-past' : (i === d.at ? 'x07-here' : ''); });
+    cg('app', d.k, d.t, d.s); });
+
+  /* ส่วนที่ 8: ม.64 · มีกรรมการชั่วคราวเมื่อจำนวนที่เหลือไม่ถึงกึ่งหนึ่งของจำนวนที่พึงมี (17 คนของเรื่อง) · ข้อยกเว้นเมื่อวาระเหลือไม่ถึง 180 วัน
+     แกนของแถบวัน 0 ถึง 360 วัน */
+  var trig = false, days = 300, dL = false;
+  function tmp() { var r = $('dR');
+    $('tmp').className = 'x07-tmp' + (trig ? '' : ' x07-off'); $('dF').style.width = (days / 360 * 100) + '%';
+    $('dQ').innerHTML = trig ? 'รัฐมนตรีแต่งตั้งกรรมการชั่วคราวแล้ว วาระเหลืออยู่ ' + hi(dL, days + ' วัน') : 'ในโจทย์ข้างบน กรรมการที่เหลือยังไม่น้อยกว่ากึ่งหนึ่ง จึงยังไม่มีกรรมการชั่วคราว';
+    $('dQ2').textContent = trig ? 'ต้องเลือกตั้งหรือแต่งตั้งกรรมการใหม่ไหม' : 'เลื่อนจำนวนคนที่พ้นข้างบนให้ถึง 9 คนก่อน แล้วกล่องนี้จะเริ่ม';
+    r.className = 'result' + (!trig ? '' : (days < 180 ? ' x07-stop' : ' ok'));
+    r.textContent = !trig ? 'ยังไม่ถึงขั้นนี้ เพราะกรรมการที่เหลือไม่น้อยกว่ากึ่งหนึ่ง'
+      : days < 180 ? 'รัฐมนตรีจะสั่งให้ไม่มีการเลือกตั้งก็ได้ เพราะวาระเหลืออยู่ ' + days + ' วัน ไม่ถึง 180 วัน'
+      : 'ต้องเลือกตั้งหรือแต่งตั้งกรรมการใหม่ให้เสร็จภายใน 90 วัน นับแต่วันที่รัฐมนตรีมีคำสั่งแต่งตั้งกรรมการชั่วคราว เพราะวาระเหลืออยู่ ' + days + ' วัน' + (days === 180 ? 'พอดี ยังไม่ใช่เหลือไม่ถึง 180 วัน จึงไม่เข้าข้อยกเว้น' : ' ไม่เข้าข้อยกเว้นที่วาระต้องเหลือไม่ถึง 180 วัน'); }
+  V.nums('out', function (s) { var k = s.k, left = ALL - k, i, r = $('outR'); trig = left * 2 < ALL;
+    for (i = 0; i < ALL; i++) $('qo' + i).className = i < left ? 'x07-in' : 'x07-out';
+    $('outQ').innerHTML = 'คณะกรรมการสภาฯ ของเรื่องนี้พึงมีกรรมการ 17 คน รัฐมนตรีมีคำสั่งให้กรรมการ ' + hi(ready, k + ' คน') + 'พ้นจากตำแหน่ง เพราะไม่ทำตามคำสั่งของคณะกรรมการกำกับดูแลฯ ' + hi(ready, left === 0 ? 'ไม่เหลือกรรมการเลย' : 'เหลือกรรมการ ' + left + ' คน');
+    r.className = 'result' + (trig ? ' x07-stop' : ' ok');
+    r.textContent = trig ? 'ต้องมีกรรมการชั่วคราว เพราะพ้น ' + k + ' คน ' + (left === 0 ? 'ไม่เหลือกรรมการ' : 'เหลือ ' + left + ' คน') + ' ไม่ถึงกึ่งหนึ่งของ 17 คน ซึ่งคือ 8.5 คน รัฐมนตรีแต่งตั้งสมาชิกสามัญเป็นกรรมการชั่วคราว ในวันเดียวกับที่มีคำสั่งให้พ้น'
+      : 'ยังไม่ต้องมีกรรมการชั่วคราว เพราะพ้น ' + k + ' คน เหลือ ' + left + ' คน ไม่น้อยกว่ากึ่งหนึ่งของ 17 คน ซึ่งคือ 8.5 คน' + (left === 9 ? ' ถ้าพ้นอีกคนเดียวจะต้องมี' : '');
+    tmp(); });
+  V.nums('left', function (s) { if (ready) dL = true; days = s.d; tmp(); });
+
+  /* แถบเลื่อนของ law2v.js อ่าน data-step (ขนาดขั้น) ไปแล้ว ลบออกก่อนเรียก V.spy ซึ่งจับทุกชิ้นที่มี data-step เป็นส่วนของหน้า */
+  [].forEach.call(document.querySelectorAll('.nums [data-step]'), function (e) { e.removeAttribute('data-step'); });
   V.spy('#steps');
+  ready = true;
 
-  /* ภาพหน้าของพีท (วาดในหน้านี้ ของกลางมีเฉพาะแพรกับพราว) */
-  var peteN = 0;
-  [].forEach.call(document.querySelectorAll('[data-xec-pete]'), function (e) { peteN++; var c = 'xecP' + peteN;
-    e.innerHTML = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="' + c + '"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#' + c + ')">' +
-      '<rect width="120" height="120" fill="#E3F3E8"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#2F6B8A"/><path d="M50 95l10 12 10-12 5 3-15 20-15-20z" fill="#FDFDFB"/>' +
-      '<path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="21" ry="25" fill="#F2CDB3"/><ellipse cx="39" cy="57" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="81" cy="57" rx="3" ry="5" fill="#F2CDB3"/>' +
-      '<path d="M38 54c-3-20 6-32 22-32s26 10 22 32c-2-9-5-14-10-17-8 3-20 3-27 1-4 4-6 9-7 16z" fill="#231712"/>' +
-      '<circle cx="51" cy="57" r="2.800" fill="#2A1B15"/><circle cx="69" cy="57" r="2.800" fill="#2A1B15"/><path d="M45 51q6-3 11 0M64 51q6-3 11 0" fill="none" stroke="#2A1B15" stroke-width="1.800" stroke-linecap="round"/>' +
-      '<path d="M60 59c-1 4-2 6-1 8h2.500" fill="none" stroke="#C99A7E" stroke-width="1.400" stroke-linecap="round"/><path d="M54 72c3.500 2.500 8.500 2.500 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/></g></svg>'; });
+  /* จุดเช็กท้ายส่วน */
+  V.check('ck1', { q: 'ประธานคณะกรรมการจรรยาบรรณ ได้นั่งในคณะกรรมการสภาฯ ทางไหน', o: [
+    ['โดยตำแหน่ง', 1, 'เป็นประธานคณะกรรมการจรรยาบรรณอยู่ จึงได้นั่งทันที ไม่ต้องเลือกตั้งหรือแต่งตั้งเข้ามาอีก (ม.22 (2))'],
+    ['ที่ประชุมใหญ่เลือกตั้ง', 0, 'ที่ประชุมใหญ่เลือกตั้งเข้าคณะนี้โดยตรงแค่นายกกับกรรมการไม่เกิน 5 คน ประธานของคณะอื่นนั่งโดยตำแหน่ง (ม.22)']] });
+  V.check('ck2', { f: 'คณะกรรมการสภาฯ 17 คนของเรื่องนี้มาประชุม 10 คน ลงคะแนนแล้วเห็นด้วย 5 เสียง ไม่เห็นด้วย 5 เสียง', q: 'ต่อจากนี้เป็นยังไง', o: [
+    ['ตกไป ไม่ถึงครึ่งของ 17', 0, 'เสียงเท่ากันมติยังไม่ตกไปเอง กฎหมายให้ประธานในที่ประชุมออกเสียงเพิ่มอีกหนึ่งเสียงเป็นเสียงชี้ขาด ส่วนกึ่งหนึ่งของ 17 คนใช้ดูว่าเป็นองค์ประชุมไหม (ม.26)'],
+    ['ประธานในที่ประชุมชี้ขาด', 1, 'เสียงเท่ากัน ประธานในที่ประชุมออกเสียงเพิ่มอีกหนึ่งเสียงเป็นเสียงชี้ขาด (ม.26)']] });
+  V.check('ck3', { f: 'มีคนแจ้งว่ามาตรฐานการบัญชีฉบับหนึ่ง ทำตามแล้วเกิดปัญหาที่อาจก่อให้เกิดความเสียหาย', q: 'คณะไหนต้องรับไปดู', o: [
+    ['คณะกรรมการวิชาชีพบัญชีด้านการทำบัญชี', 0, 'คณะของแต่ละด้านมีไว้พัฒนาและส่งเสริมวิชาชีพด้านนั้น คนที่กำหนดและปรับปรุงมาตรฐานการบัญชีคือคณะกรรมการกำหนดมาตรฐานการบัญชี (ม.32 · ม.34)'],
+    ['คณะกรรมการกำหนดมาตรฐานการบัญชี', 1, 'คณะนี้ต้องตรวจสอบ รับฟังความคิดเห็นของผู้ที่เกี่ยวข้อง แล้วกำหนด ปรับปรุง หรือพัฒนามาตรฐานโดยพลัน (ม.34 วรรคสี่)'],
+    ['คณะกรรมการจรรยาบรรณ', 0, 'คณะกรรมการจรรยาบรรณดูเรื่องคนถูกกล่าวหาว่าประพฤติผิดจรรยาบรรณ เรื่องตัวมาตรฐานมีปัญหาเป็นงานของคณะกรรมการกำหนดมาตรฐานการบัญชี (ม.53 · ม.34)']] });
+  V.check('ck4', { f: 'อีกคนที่ถูกเสนอชื่อเป็นสมาชิกสามัญ ทำงานนานถึงเกณฑ์ ไม่มีตำแหน่งอื่น แต่เคยถูกคณะกรรมการจรรยาบรรณสั่งลงโทษมาแล้วหนึ่งครั้ง', q: 'ประตูเปิดไหม', o: [
+    ['ไม่เปิด', 1, 'ข้อ (3) เขียนว่าไม่เคยถูกลงโทษฐานประพฤติผิดจรรยาบรรณ เคยครั้งเดียวก็ติดข้อนี้ (ม.50 (3))'],
+    ['เปิด เพราะครบสามข้อ', 0, 'ต้องครบทั้งสี่ข้อ ขาดข้อเดียวประตูก็ไม่เปิด คนนี้ติดข้อ (3) (ม.50)']] });
+  V.check('ck5', { f: 'กรรมการจรรยาบรรณคนหนึ่งอยู่มาครบสองวาระติดต่อกันแล้ว', q: 'รับแต่งตั้งต่อวาระที่สามทันทีได้ไหม', o: [
+    ['ได้ ห้ามเฉพาะนายก', 0, 'มาตรา 23 ห้ามไว้เฉพาะนายกก็จริง แต่กรรมการจรรยาบรรณมีมาตรา 51 ห้ามเกินสองวาระติดต่อกันไว้อีกข้อหนึ่ง'],
+    ['ไม่ได้', 1, 'กรรมการจรรยาบรรณดำรงตำแหน่งเกินสองวาระติดต่อกันไม่ได้ เหมือนนายก (ม.51)']] });
+  V.check('ck6', { f: 'สมาชิกสามัญมาประชุม 300 คน ลงคะแนนให้กรรมการจรรยาบรรณคนหนึ่งออก 200 เสียง', q: 'มติผ่านไหม', o: [
+    ['ไม่ผ่าน ต้องเกิน 200', 0, 'กฎหมายเขียนว่าไม่น้อยกว่า ได้เท่าพอดีก็ถึงแล้ว ไม่ต้องเกิน (ม.52 (4))'],
+    ['ผ่าน', 1, '2 ใน 3 ของ 300 คน คือ 200 เสียง ได้ 200 เสียงเท่ากับทั้งสองจำนวนพอดี กฎหมายใช้คำว่าไม่น้อยกว่า จึงผ่าน (ม.52 (4))']] });
+  V.check('ck7', { q: 'นายกสภาวิชาชีพบัญชี อยู่ในคณะกรรมการกำกับดูแลฯ ในฐานะอะไร', o: [
+    ['กรรมการโดยตำแหน่ง', 1, 'นายกสภาฯ เป็นหนึ่งในกรรมการโดยตำแหน่งเก้าคน ส่วนประธานคือปลัดกระทรวงพาณิชย์ (ม.59)'],
+    ['ประธานกรรมการ', 0, 'ประธานของคณะนี้คือปลัดกระทรวงพาณิชย์ นายกสภาฯ เป็นกรรมการโดยตำแหน่งคนหนึ่ง (ม.59)']] });
+  V.check('ck8', { f: 'กรรมการเหลือไม่ถึงกึ่งหนึ่ง มีกรรมการชั่วคราวแล้ว และวาระเหลืออยู่ 180 วันพอดี', q: 'เรื่องกรรมการใหม่เป็นยังไง', o: [
+    ['สั่งไม่ให้เลือกตั้งได้', 0, 'รัฐมนตรีจะสั่งให้ไม่มีการเลือกตั้งได้เมื่อวาระเหลือไม่ถึง 180 วัน 180 วันพอดียังไม่ใช่ (ม.64 วรรคสอง)'],
+    ['ต้องมีกรรมการใหม่ใน 90 วัน', 1, 'ข้อยกเว้นใช้เมื่อวาระเหลือไม่ถึง 180 วัน เหลือ 180 วันพอดียังไม่เข้า จึงต้องเลือกตั้งหรือแต่งตั้งกรรมการใหม่ให้เสร็จใน 90 วัน (ม.64 วรรคสอง)']] });
 
-  /* 1 ก่อนรับงาน (ผู้ให้บริการสาธารณะ): คู่มือ 320.3 A3–A5 · 320.4 A1 · 320.4 A4 */
-  V.togs('acc', function (s) {
-    fact('a0', s.biz, 'ทีมเข้าใจธุรกิจของพาวเด้ออ้าย และงานที่ต้องทำ', 'ทีมยังไม่เข้าใจธุรกิจของพาวเด้ออ้าย และงานที่ต้องทำ');
-    fact('a1', s.ind, 'ทีมมีความรู้ในอุตสาหกรรมที่เกี่ยวข้อง', 'ทีมยังไม่มีความรู้ในอุตสาหกรรมที่เกี่ยวข้อง');
-    fact('a2', s.prev, 'แพรได้ข้อมูลจากผู้สอบบัญชีคนเดิมแล้ว', 'แพรยังไม่ได้ขอข้อมูลจากผู้สอบบัญชีคนเดิม');
-    var team = s.biz && s.ind, lack = [];
-    ['w0', 'w1', 'w2'].forEach(function (id) { way(id, team ? '' : 'hit'); }); way('w3', s.prev ? '' : 'hit');
-    if (team && s.prev) { out('out1', 'good', '<b>ในสามเรื่องนี้ ไม่พบเหตุที่ต้องจัดการก่อนตอบรับ</b><span>ทีมเข้าใจธุรกิจของลูกค้าและงานที่ต้องทำ มีความรู้ในอุตสาหกรรมที่เกี่ยวข้อง และแพรได้ข้อมูลจากผู้สอบบัญชีคนเดิมแล้ว</span>'); return; }
-    var h = '<b>ก่อนตอบรับ ยังมีเรื่องที่ขาด</b>';
-    if (!s.biz) lack.push('ความเข้าใจธุรกิจและงาน'); if (!s.ind) lack.push('ความรู้ในอุตสาหกรรม');
-    if (lack.length) h += '<span><span class="xec-sub">ทีมยังขาด: ' + lack.join(' · ') + '</span> อุปสรรคต่อหลัก (ค) เกิดขึ้นได้ ถ้าทีมไม่มีความรู้ความสามารถที่งานนี้ต้องใช้ หรือหามาไม่ได้' + L('คู่มือ 320.3 A3') + '</span>';
-    if (!s.prev) h += '<span><span class="xec-sub">ยังไม่ได้ข้อมูลจากคนเดิม</span> ถ้าตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจมีอุปสรรคต่อหลัก (ค)' + L('คู่มือ 320.4 A1') + '</span>';
-    out('out1', 'warn', h); });
-
-  /* 2 งานในองค์กร (ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ): คู่มือ 230.3 A2 · 230.3 A4 · R230.4 · R270.3 (ก) */
-  var NAME = { time: 'เวลา', info: 'ข้อมูล', exp: 'ประสบการณ์ การฝึกอบรม หรือการศึกษา', res: 'ทรัพยากร' }, KEYS = ['time', 'info', 'exp', 'res'];
-  var pae = { time: true, info: true, exp: true, res: true }, push = false;
-  function r2() { var lack = [];
-    KEYS.forEach(function (k, i) { tile('p' + i, pae[k], 'เพียงพอ', 'ไม่เพียงพอ'); if (!pae[k]) lack.push(NAME[k]); });
-    $('pN').textContent = 4 - lack.length;
-    $('flow2').className = 'todo xec-flow' + (lack.length ? '' : ' xec-idle');
-    if (!lack.length) out('out2', 'good', '<b>ไม่พบเหตุที่กระทบหลัก (ค) จากสี่เรื่องนี้</b><span>พีทมีเวลา ข้อมูล ประสบการณ์ และทรัพยากร เพียงพอสำหรับงานนี้</span>');
-    else out('out2', 'warn', '<b>อาจเกิดอุปสรรคต่อหลัก (ค)</b><span><span class="xec-sub">ที่ไม่เพียงพอ: ' + lack.join(' · ') + '</span>' + L('คู่มือ 230.3 A2') + '</span><span>ลำดับที่คู่มือเขียนไว้ อยู่ข้างล่าง</span>');
-    var o = $('out2b'); o.hidden = !push; if (!push) { o.innerHTML = ''; return; }
-    o.innerHTML = lack.length ? '<b>พริ้งสั่งให้ทำไปก่อน ลำดับสามขั้นข้างบนไม่เปลี่ยน</b><span>พีทต้องไม่ปล่อยให้ความกดดันจากผู้อื่น ทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน' + L('คู่มือ R270.3 (ก)') + '</span>'
-      : '<b>ตอนนี้พีทมีเพียงพอทั้งสี่เรื่อง</b><span>แตะการ์ดให้ไม่เพียงพอสักเรื่อง เพื่อดูผลของคำสั่งนี้</span>'; }
-  V.togs('pae', function (s) { pae = s; r2(); });
-  V.togs('push', function (s) { push = s.push; r2(); });
-
-  /* 4 ความเห็นที่สอง: คู่มือ 321.2 · 321.3 A1 · 321.3 A3 · R321.4 · การนำประมวลจรรยาบรรณไปใช้ ข้อ 13 */
-  V.pick('sec', function (v) { var d = $('docsMe').querySelectorAll('span');
-    [1, 2, 3].forEach(function (i) { d[i].className = v === 1 ? 'xec-get' : v === 2 ? 'xec-bar' : 'xec-gap'; });
-    $('docsCap').textContent = v === 1 ? 'ที่บริษัทเล่า และที่ขอจากผู้สอบบัญชีของบริษัทได้' : v === 2 ? 'มีเท่าที่บริษัทเล่าให้ฟัง บริษัทไม่ให้ติดต่อ' : 'มีเท่าที่บริษัทเล่าให้ฟัง';
-    way('v0', v === 1 ? 'done' : v === 2 ? 'shut' : 'hit');
-    $('v0s').textContent = v === 1 ? 'บริษัทอนุญาตแล้ว' : v === 2 ? 'บริษัทไม่อนุญาต' : 'แพรยังไม่ได้ขอ';
-    if (v === 1) out('out4', 'good', '<b>แพรขอข้อมูลจากผู้สอบบัญชีของบริษัทได้</b><span>การขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท เป็นมาตรการป้องกันอย่างหนึ่งที่คู่มือยกไว้' + L('คู่มือ 321.3 A3') + '</span>');
-    else if (v === 2) out('out4', 'warn', '<b>บริษัทไม่อนุญาตให้แพรสื่อสารกับผู้สอบบัญชีของบริษัท</b><span>แพรต้องตัดสินใจว่าอาจต้องให้ความเห็นที่สองตามที่ได้รับการร้องขอหรือไม่' + L('คู่มือ R321.4') + '</span>' +
-      '<span>คำว่า “อาจต้อง” คู่มืออธิบายว่า แสดงความหมายว่าอนุญาตให้กระทำการเฉพาะอย่าง ไม่ได้แสดงถึงเรื่องความเป็นไปได้</span>');
-    else out('out4', 'warn', '<b>ข้อเท็จจริงของแพรอาจไม่เท่ากับของผู้สอบบัญชีของบริษัท</b><span>อุปสรรคต่อหลัก (ค) อาจเกิดขึ้นได้ ถ้าความเห็นที่สองไม่ได้อยู่บนพื้นฐานข้อเท็จจริงเดียวกับที่ผู้สอบบัญชีของบริษัทมีอยู่ หรืออยู่บนพื้นฐานที่ไม่มีหลักฐานเพียงพอ' + L('คู่มือ 321.3 A1') + '</span>'); });
-
-  /* ลองดู */
+  /* โจทย์ท้ายหน้า */
   V.quiz($('quiz'), [
-    { f: 'นักบัญชีคนหนึ่งในบริษัท ถูกหัวหน้าสั่งให้จัดทำรายงานทางการเงินชนิดหนึ่งให้เสร็จตามกำหนด ทั้งที่ไม่เคยทำรายงานชนิดนี้ ไม่เคยได้รับการฝึกอบรมเรื่องนี้ และเห็นว่าเวลาที่ให้มาไม่เพียงพอ', q: 'ข้อใดตรงกับที่คู่มือเขียน', o: [
-      ['ทำตามที่สั่งไปก่อน เพราะเป็นคำสั่งของหัวหน้า และกำหนดส่งเลื่อนไม่ได้', 0, 'ผู้ประกอบวิชาชีพบัญชีต้องไม่ปล่อยให้ความกดดันจากผู้อื่น ทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน คำสั่งของหัวหน้าจึงไม่เปลี่ยนสิ่งที่ต้องทำ (คู่มือ R270.3 (ก))'],
-      ['ขอความช่วยเหลือหรือการฝึกอบรมจากผู้เชี่ยวชาญ และขอเวลาให้เพียงพอ', 1, 'ประสบการณ์ การฝึกอบรม และเวลาที่ไม่เพียงพอ อาจทำให้เกิดอุปสรรคต่อหลัก (ค) คู่มือยกมาตรการป้องกันไว้สองอย่างนี้ ถ้าจัดการไม่ได้ ต้องพิจารณาว่าจะปฏิเสธหรือไม่ (คู่มือ 230.3 A2 · 230.3 A4 · R230.4)'],
-      ['บอกหัวหน้าว่าเคยทำมาก่อน แล้วค่อยหาวิธีทำทีหลังให้ทันกำหนด', 0, 'ผู้ประกอบวิชาชีพบัญชีต้องไม่จงใจทำให้องค์กรผู้ว่าจ้างเข้าใจผิดเกี่ยวกับระดับความเชี่ยวชาญหรือประสบการณ์ที่ตนมี (คู่มือ R230.3)']] },
-    { f: 'บริษัทแห่งหนึ่งซึ่งไม่ได้เป็นลูกค้าของแพร และมีผู้สอบบัญชีอยู่แล้ว เล่าข้อเท็จจริงของรายการหนึ่งให้แพรฟัง แล้วขอความเห็นที่สองว่าควรใช้มาตรฐานการบัญชีอย่างไร แพรยังไม่ได้ติดต่อผู้สอบบัญชีของบริษัท', q: 'ข้อใดเป็นมาตรการป้องกันที่คู่มือยกไว้', o: [
-      ['ขออนุญาตบริษัท เพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท', 1, 'อุปสรรคอาจเกิดขึ้นได้ ถ้าความเห็นที่สองไม่ได้อยู่บนข้อเท็จจริงเดียวกับที่ผู้สอบบัญชีของบริษัทมีอยู่ การขออนุญาตเพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท เป็นมาตรการป้องกันที่คู่มือยกไว้ (คู่มือ 321.3 A1 · 321.3 A3)'],
-      ['ให้ความเห็นจากที่บริษัทเล่า โดยถือว่าข้อเท็จจริงครบแล้ว', 0, 'แพรยังไม่รู้ว่าข้อเท็จจริงที่ได้ฟัง ตรงกับที่ผู้สอบบัญชีของบริษัทมีอยู่หรือไม่ ความเห็นที่ไม่ได้อยู่บนข้อเท็จจริงเดียวกัน อาจทำให้เกิดอุปสรรคต่อหลัก (ค) (คู่มือ 321.3 A1)'],
-      ['ให้บริษัทย้ายมาเป็นลูกค้าของแพรก่อน แล้วจึงให้ความเห็น', 0, 'การเป็นลูกค้าไม่ได้อยู่ในมาตรการป้องกันที่คู่มือยกไว้ ที่ยกไว้คือขออนุญาตเพื่อขอข้อมูลจากผู้สอบบัญชีของบริษัท อธิบายข้อจำกัดของความเห็น และให้สำเนาความเห็นแก่ผู้สอบบัญชีของบริษัท (คู่มือ 321.3 A3)']] },
-    { f: 'สำนักงานสอบบัญชีแห่งหนึ่งถูกขอให้เป็นผู้สอบบัญชีของบริษัทแห่งหนึ่ง แทนผู้สอบบัญชีคนเดิม ทีมเข้าใจธุรกิจของบริษัทนี้และงานที่ต้องทำ แต่สำนักงานยังไม่ได้ขอข้อมูลจากผู้สอบบัญชีคนเดิม', q: 'ข้อใดตรงกับที่คู่มือเขียน', o: [
-      ['ทีมเข้าใจธุรกิจแล้ว ข้อมูลจากคนเดิมจึงไม่เกี่ยวกับหลัก (ค)', 0, 'คู่มือเขียนว่า ถ้าตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจมีอุปสรรคต่อหลักเรื่องความรู้ ความสามารถ และความเอาใจใส่ ซึ่งคือหลัก (ค) (คู่มือ 320.4 A1)'],
-      ['ตอบรับไปก่อนได้ ข้อเท็จจริงที่เหลือค่อยรู้ระหว่างตรวจสอบ', 0, 'คู่มือเขียนว่า ถ้าตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจมีอุปสรรคต่อหลัก (ค) และยกการขอข้อมูลจากคนเดิมก่อนตัดสินใจตอบรับ เป็นมาตรการป้องกัน (คู่มือ 320.4 A1 · 320.4 A4)'],
-      ['ขอให้คนเดิมให้ข้อมูลที่ทราบอยู่แล้ว ก่อนตัดสินใจตอบรับ', 1, 'คู่มือยกมาตรการป้องกันไว้ คือขอให้ผู้ประกอบวิชาชีพบัญชีคนปัจจุบันหรือคนก่อน ให้ข้อมูลที่ทราบอยู่แล้ว ซึ่งเห็นว่าผู้ที่จะรับงานจำเป็นต้องตระหนักก่อนตัดสินใจตอบรับ (คู่มือ 320.4 A4)']] }
+    { multi: true, f: 'สภาวิชาชีพบัญชีกำลังจะมีคนเข้ารับตำแหน่งชุดใหม่ห้าตำแหน่งนี้', q: 'แตะทุกตำแหน่งที่ที่ประชุมใหญ่เป็นผู้เลือกตั้ง', o: [
+      ['นายกสภาวิชาชีพบัญชี', 1, 'ที่ประชุมใหญ่เลือกตั้งนายกจากสมาชิกสามัญ (ม.22 (1))'],
+      ['กรรมการผู้ทรงคุณวุฒิในคณะกรรมการสภาฯ', 0, 'นายกกับกรรมการโดยตำแหน่งมีมติแต่งตั้ง ที่ประชุมใหญ่ไม่ได้เลือก (ม.22 (3))'],
+      ['ประธานคณะกรรมการวิชาชีพบัญชีด้านการทำบัญชี', 1, 'ประธานของแต่ละด้านมาจากการเลือกตั้งของสมาชิกสามัญ โดยที่ประชุมใหญ่ (ม.32)'],
+      ['กรรมการจรรยาบรรณ', 0, 'คณะกรรมการสภาฯ แต่งตั้ง ที่ประชุมใหญ่ให้ความเห็นชอบ ไม่ได้เลือกตั้ง (ม.50)'],
+      ['เหรัญญิก', 0, 'นายกเลือกจากคนที่เป็นกรรมการอยู่แล้ว ไม่ได้ลงเลือกตั้งแยก (ม.25)']],
+      ex: 'ที่ประชุมใหญ่เลือกตั้งนายก และประธานของแต่ละด้าน อีกสามตำแหน่งมาจากการแต่งตั้ง หรือนายกเลือกจากกรรมการ (ม.22 · ม.25 · ม.32 · ม.50)' },
+    { multi: true, f: 'สี่เรื่องนี้เกิดขึ้นในช่วงเดียวกัน', q: 'แตะทุกเรื่องที่ไปถึงคณะกรรมการกำกับดูแลฯ แล้ว', o: [
+      ['มีผู้ยื่นคำกล่าวหาว่าผู้ทำบัญชีคนหนึ่งประพฤติผิดจรรยาบรรณ', 0, 'คำกล่าวหาที่เพิ่งยื่นเป็นงานของคณะกรรมการจรรยาบรรณ จะไปถึงคณะกรรมการกำกับดูแลฯ เมื่อมีคำสั่งแล้วและมีการอุทธรณ์ (ม.53 · ม.60 (5))'],
+      ['มาตรฐานการบัญชีฉบับปรับปรุงทำเสร็จ และส่งไปขอความเห็นชอบ', 1, 'มาตรฐานการบัญชีต้องได้รับความเห็นชอบจากคณะกรรมการกำกับดูแลฯ (ม.34 วรรคสาม · ม.60 (3))'],
+      ['รุ่นน้องของแพรเพิ่งยื่นคำขอรับใบอนุญาต สภาฯ ยังพิจารณาอยู่', 0, 'คำขอรับใบอนุญาต คณะกรรมการสภาฯ เป็นผู้พิจารณา จะไปถึงเมื่อสภาฯ ไม่ออกให้แล้วผู้ยื่นอุทธรณ์ (ม.40 · ม.42)'],
+      ['ผู้สอบบัญชีที่ถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ ยื่นอุทธรณ์', 1, 'ผู้ที่ถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ อุทธรณ์ต่อคณะกรรมการกำกับดูแลฯ (ม.60 (5))']],
+      ex: 'สองเรื่องไปถึงแล้ว คือขอความเห็นชอบมาตรฐานการบัญชี กับอุทธรณ์คำสั่งลงโทษ อีกสองเรื่องยังอยู่ในสภาฯ (ม.60 (3) · (5))' },
+    { f: 'การประชุมใหญ่ครั้งหนึ่งมีสมาชิกสามัญมา 240 คน ลงคะแนนให้กรรมการจรรยาบรรณคนหนึ่งออก 180 เสียง', q: 'กรรมการคนนี้พ้นจากตำแหน่งไหม', o: [
+      ['พ้น เพราะได้เกิน 2 ใน 3 ของคนที่มา', 0, '2 ใน 3 ของ 240 คน คือ 160 เสียง ข้อนี้ถึงแล้ว แต่ยังมีอีกจำนวนหนึ่ง คือต้องไม่น้อยกว่า 200 เสียง ได้ 180 เสียงจึงยังไม่ถึง (ม.52 (4))'],
+      ['ยังไม่พ้น เพราะได้ไม่ถึง 200 เสียง', 1, 'ถึง 2 ใน 3 ของ 240 คนแล้ว แต่ 180 เสียงยังน้อยกว่า 200 เสียง ต้องถึงทั้งสองจำนวน (ม.52 (4))'],
+      ['ยังไม่พ้น เพราะต้องได้เสียงของทุกคนที่มา', 0, 'ไม่ต้องได้ทุกเสียง ต้องได้ไม่น้อยกว่า 2 ใน 3 ของสมาชิกสามัญที่มาประชุม และไม่น้อยกว่า 200 เสียง ที่ติดคือยังไม่ถึง 200 เสียง (ม.52 (4))']] },
+    { f: 'สมมติว่าคณะกรรมการสภาฯ อีกชุดหนึ่งพึงมีกรรมการ 16 คน รัฐมนตรีมีคำสั่งให้กรรมการพ้นจากตำแหน่งพร้อมกัน 8 คน', q: 'รัฐมนตรีต้องแต่งตั้งกรรมการชั่วคราวไหม', o: [
+      ['ต้อง เพราะพ้นไปถึงครึ่งคณะแล้ว', 0, 'เหลือ 8 คน เท่ากับกึ่งหนึ่งของ 16 คนพอดี กฎหมายใช้คำว่าเหลือไม่ถึงกึ่งหนึ่ง เท่ากันพอดียังไม่เข้า (ม.64 วรรคหนึ่ง)'],
+      ['ไม่ต้อง เพราะเหลือ 8 คน เท่ากึ่งหนึ่งพอดี', 1, 'พึงมี 16 คน พ้น 8 คน เหลือ 8 คน ไม่ได้น้อยกว่ากึ่งหนึ่ง จึงยังไม่ถึงเงื่อนไขของกรรมการชั่วคราว (ม.64 วรรคหนึ่ง)'],
+      ['ต้อง เพราะเป็นคำสั่งของรัฐมนตรี', 0, 'รัฐมนตรีสั่งให้พ้นแล้วไม่ได้มีกรรมการชั่วคราวทุกครั้ง ต้องดูว่ากรรมการที่เหลือไม่ถึงกึ่งหนึ่งของจำนวนที่พึงมีหรือเปล่า (ม.64 วรรคหนึ่ง)']] }
   ]);
 })();
+</script>
+<script>
+/* ===== X07-EXTRA START · สคริปต์ของส่วนที่ 9 (ข้อบังคับเลือกตั้งฯ พ.ศ. 2568 ข้อ 5–7) ถอดออกได้ทั้งก้อน =====
+   ประตูตรวจสามข้อ: ข้อแรกและข้อที่สามเป็นข้อเท็จจริงของพี่แพมที่ตั้งไว้ว่าผ่าน ข้อที่เลื่อนได้คือจำนวนปี */
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  var RUN = [
+    { thr: 10, c0: 'สมาชิกสามัญติดต่อกันไม่น้อยกว่า 1 ปี', c1: 'ทำงานเกี่ยวข้องกับวิชาชีพบัญชี รวมไม่น้อยกว่า 10 ปี',
+      ok: ['ครบสามข้อ สมัครรับเลือกตั้งเป็นกรรมการได้', 'นับถึงวันสมัครรับเลือกตั้ง (ข้อ 7)'], no: 'ยังสมัครเป็นกรรมการไม่ได้' },
+    { thr: 15, c0: 'สมาชิกสามัญติดต่อกันไม่น้อยกว่า 1 ปี', c1: 'เป็นผู้สอบบัญชีรับอนุญาต รวมไม่น้อยกว่า 15 ปี',
+      ok: ['ผ่านสามข้อที่ภาพนี้ตรวจ', 'ทางของผู้สอบบัญชีรับอนุญาตยังต้องเคยตรวจสอบงบการเงินของบริษัทตามชนิดและจำนวนที่ข้อบังคับกำหนดด้วย ดูรายการข้างล่าง (ข้อ 5 (2) (ข))'], no: 'ยังสมัครเป็นนายกทางนี้ไม่ได้' },
+    { thr: 15, c0: 'สัญชาติไทย จบปริญญาตรีด้านการบัญชี', c1: 'ประสบการณ์เกี่ยวกับวิชาชีพด้านนั้น รวมไม่น้อยกว่า 15 ปี',
+      ok: ['ครบสามข้อของกรรมการผู้ทรงคุณวุฒิ', 'ตำแหน่งนี้ไม่ได้สมัคร นายกกับกรรมการโดยตำแหน่งเป็นผู้มีมติแต่งตั้ง นับถึงวันแต่งตั้ง (ข้อ 6)'], no: 'ยังรับแต่งตั้งเป็นกรรมการผู้ทรงคุณวุฒิไม่ได้' }], run = 0, yrs = 12, rL = '', rReady = false;
+  var RASK = ['มีคนชวนลงสมัครรับเลือกตั้งเป็นกรรมการในคณะกรรมการสภาฯ', 'มีคนชวนลงสมัครรับเลือกตั้งเป็นนายก', 'มีคนเสนอให้แต่งตั้งเป็นกรรมการผู้ทรงคุณวุฒิในคณะกรรมการสภาฯ'];
+  var RQ = ['พี่แพมสมัครได้ไหม', 'ทางของผู้สอบบัญชีรับอนุญาต พี่แพมถึงจำนวนปีขั้นต่ำไหม', 'พี่แพมรับแต่งตั้งได้ไหม'];
+  var RRL = ['ต้องครบสามข้อ จำนวนปีขั้นต่ำของตำแหน่งนี้คือ 10 ปี <span class="law">ข้อบังคับเลือกตั้งฯ ข้อ 7</span>',
+    'ภาพนี้ตรวจสามข้อ จำนวนปีขั้นต่ำของทางผู้สอบบัญชีรับอนุญาตคือ 15 ปี ทางนี้ยังมีเงื่อนไขเรื่องบริษัทที่เคยตรวจสอบอีก ดูรายการเต็มใต้ภาพ <span class="law">ข้อบังคับเลือกตั้งฯ ข้อ 5</span>',
+    'ต้องครบสามข้อ จำนวนปีขั้นต่ำของตำแหน่งนี้คือ 15 ปี <span class="law">ข้อบังคับเลือกตั้งฯ ข้อ 6</span>'];
+  function hi(on, t) { return on ? '<mark>' + t + '</mark>' : t; }
+  function rn() { var d = RUN[run], ok = yrs >= d.thr, c = $('r1');
+    /* โจทย์: ข้อเท็จจริงของพี่แพมที่ตั้งไว้ว่าผ่าน (สองแผ่นที่ไม่ขยับ) + จำนวนปี + ตำแหน่งที่ถูกชวน */
+    $('rQ').innerHTML = 'พี่แพมสัญชาติไทย จบปริญญาตรีด้านการบัญชี เป็นสมาชิกสามัญติดต่อกันมาเกิน 1 ปี ไม่มีลักษณะต้องห้ามหกข้อ และเป็นผู้สอบบัญชีรับอนุญาตมาแล้ว ' + hi(rL === 'y', yrs + ' ปี') + ' ' + hi(rL === 'r', RASK[run]);
+    $('rQ2').textContent = RQ[run];
+    $('rRl').innerHTML = RRL[run];
+    $('r0t').textContent = d.c0; $('r1t').textContent = d.c1;
+    $('eF').style.width = (yrs / 20 * 100) + '%'; $('eL').style.left = (d.thr / 20 * 100) + '%'; $('eLn').textContent = 'ขั้นต่ำ ' + d.thr + ' ปี';
+    c.className = 'cond ' + (ok ? 'ok' : 'no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); $('rj1').setAttribute('class', ok ? 'ok' : 'no');
+    $('rg').className = 'gate' + (ok ? ' open' : '');
+    $('rgT').textContent = ok ? d.ok[0] : d.no;
+    $('rgS').textContent = ok ? d.ok[1] + (yrs === d.thr ? ' ครบ ' + d.thr + ' ปีพอดีก็ถึงแล้ว' : '') : 'พี่แพมทำมา ' + yrs + ' ปี ยังขาดอีก ' + (d.thr - yrs) + ' ปี'; }
+  V.pick('run', function (v) { if (rReady) rL = 'r'; run = v; rn(); });
+  V.nums('exp', function (s) { if (rReady) rL = 'y'; yrs = s.y; rn(); });
+  rReady = true;
+})();
+/* ===== X07-EXTRA END ===== */
 </script>
 </body>
 </html>

@@ -95,10 +95,12 @@ a { color:inherit; } :focus-visible { outline:3px solid var(--ink); outline-offs
 
 /* ภาพ 4: วุฒิ → ประเภทสมาชิก */
 .types { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
-.ty { position:relative; display:grid; justify-items:center; align-content:start; gap:6px; padding:14px 6px 12px; border-radius:18px; background:var(--soft); text-align:center; opacity:.55; transition:opacity .2s ease, background-color .2s ease; }
+.ty { position:relative; display:grid; justify-items:center; align-content:start; gap:6px; padding:14px 6px 12px; border-radius:18px; background:var(--soft); text-align:center; opacity:.62; transition:opacity .2s ease, background-color .2s ease; }
 .ty .ico { width:46px; height:46px; border-radius:50%; background:var(--white); display:grid; place-items:center; color:var(--muted); } .ty .ico svg { width:24px; height:24px; }
 .ty b { font-family:var(--display); font-size:18px; } .ty small { font-size:12px; line-height:1.3; color:var(--muted); }
-.ty.on { opacity:1; background:var(--hue-soft); box-shadow:inset 0 0 0 3px var(--hue); } .ty.on .ico { background:var(--hue); color:#fff; }
+.ty { --c:#1F7A6B; --cs:#DDF1EC; } .ty:nth-child(2) { --c:#B7791F; --cs:#FBF0D2; } .ty:nth-child(3) { --c:#2F6B8A; --cs:#DCEBF3; }
+.ty .ico { background:var(--c); color:#fff; }
+.ty.on { opacity:1; background:var(--cs); box-shadow:inset 0 0 0 3px var(--c); }
 .ty .cpa { order:9; padding:2px 8px; border-radius:10px; background:var(--sun); color:var(--ink); font-size:11px; font-weight:800; line-height:1.3; }
 .needs .mk.i { background:var(--white); color:var(--muted); box-shadow:inset 0 0 0 1.500px var(--line); }
 .needs { display:grid; gap:8px; margin:0; padding:14px; list-style:none; border-radius:18px; background:var(--soft); font-size:15px; }
@@ -151,6 +153,7 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .steps { position:sticky; top:0; z-index:5; margin:0 -16px; padding:8px 10px; background:var(--bg); display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:2px; box-shadow:0 6px 12px -10px rgba(11,59,60,.35); }
 .steps a { display:grid; justify-items:center; gap:2px; padding:4px 0; text-decoration:none; color:var(--muted); font-size:12px; font-weight:600; line-height:1.2; text-align:center; border-radius:12px; }
 .steps a i { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 1.500px var(--line); font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; color:var(--ink); }
+.steps a.home { color:var(--ink); font-weight:700; padding-right:6px; margin-right:4px; border-right:1.5px solid var(--line); border-radius:0; } .steps a.home i { background:var(--ink); color:#fff; box-shadow:none; } .steps a.home svg { width:17px; height:17px; }
 .steps a[aria-current="step"] { color:var(--hue-ink); font-weight:700; } .steps a[aria-current="step"] i { background:var(--hue); color:#fff; box-shadow:0 0 0 4px var(--hue-soft); }
 a.nd, a.tr { text-decoration:none; color:var(--ink); transition:transform .12s ease, box-shadow .12s ease; } a.nd:active, a.tr:active { transform:scale(.98); }
 a.nd:hover, a.tr:hover { box-shadow:inset 0 0 0 2px var(--hue); }
@@ -170,6 +173,7 @@ a.nd:hover, a.tr:hover { box-shadow:inset 0 0 0 2px var(--hue); }
 .cg { display:grid; grid-template-columns:44px 1fr; gap:10px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--white); }
 .cg .ico { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:#fff; background:var(--good); } .cg .ico svg { width:22px; height:22px; }
 .cg b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; } .cg span { font-size:14px; line-height:1.4; display:block; } .cg .law { display:inline-block; font-size:12px; }
+.cg.wait { color:var(--ink); box-shadow:inset 0 0 0 2px var(--sun); } .cg.wait .ico { background:#6A5412; }
 .cg.ok { color:var(--good); } .cg.lock { color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); } .cg.lock .ico { background:var(--bad); }
 .track { display:grid; gap:6px; } .track .bar { display:grid; grid-template-columns:3fr 2fr 1.200fr; height:44px; border-radius:14px; overflow:hidden; font-size:13px; font-weight:700; text-align:center; }
 .track .bar span { display:grid; place-items:center; padding:0 4px; line-height:1.2; } .track .z0 { background:var(--soft); color:var(--muted); } .track .z1 { background:var(--good); color:#fff; } .track .z2 { background:var(--bad-soft); color:var(--bad-ink); }
@@ -179,3 +183,86 @@ a.nd:hover, a.tr:hover { box-shadow:inset 0 0 0 2px var(--hue); }
 .endc .law { box-shadow:none; color:var(--hue-ink); }
 main, .fig, .map { grid-template-columns:minmax(0,1fr); }
 .pinp { max-width:100%; line-height:1.3; text-align:left; } .pinp > span { flex:none; }
+
+/* วงเรียนรู้ของหนึ่งเรื่อง: ① แม่บทบอกว่า → ② ตัวอย่าง → ③ ลองเปลี่ยนดู (ผู้ก่อตั้งกำหนด 13 ต.ค. 2569) */
+.lp { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:6px; font-family:var(--display); font-weight:800; font-size:17px; color:var(--hue-ink); }
+.lp > i { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--hue-ink); color:#fff; font-style:normal; font-size:14px; flex:none; }
+.lp .law { font-family:var(--body); }
+.rule { margin:0; padding:0; list-style:none; display:grid; gap:8px; }
+.rule li { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:12px; border-radius:18px; background:var(--cs); --c:#2F6B8A; --cs:#DCEBF3; --ci:#1C4257; }
+/* การ์ดแม่บทแต่ละใบมีสีของตัวเอง วนห้าสี ไม่เป็นสีเดียวทั้งชุด */
+.rule li:nth-child(5n+2) { --c:#1F7A6B; --cs:#DDF1EC; --ci:#0E4A41; } .rule li:nth-child(5n+3) { --c:#B7791F; --cs:#FBF0D2; --ci:#6B4508; }
+.rule li:nth-child(5n+4) { --c:#6B4E9B; --cs:#ECE6F6; --ci:#3F2C66; } .rule li:nth-child(5n+5) { --c:#B5532F; --cs:#F7E4DA; --ci:#6E2F17; }
+/* เงื่อนไขที่ต้องครบทุกข้อ: คั่นระหว่างการ์ดด้วยไอคอนบวก */
+.rule.need-all { gap:30px; } .rule.need-all li { position:relative; }
+.rule.need-all li + li::before { content:''; position:absolute; left:50%; top:-29px; width:28px; height:28px; margin-left:-14px; border-radius:50%; background:var(--sun) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B3B3C' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E") center/16px 16px no-repeat; }
+.rule .ri { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:var(--c); color:#fff; } .rule .ri svg { width:24px; height:24px; }
+.rule li > div { display:grid; gap:6px; justify-items:start; min-width:0; }
+.rule li b { font-family:var(--display); font-size:17px; line-height:1.3; color:var(--ink); }
+.rule .rk { display:flex; flex-wrap:wrap; gap:6px; } .rule .rk em { font-style:normal; font-family:var(--display); font-weight:800; font-size:16px; line-height:1.2; padding:5px 12px; border-radius:99px; background:var(--white); color:var(--ci); box-shadow:inset 0 0 0 2px var(--c); }
+.rule small { font-size:14px; line-height:1.45; color:var(--muted); }
+.rule .rm { width:100%; margin-top:2px; padding-top:7px; border-top:1px dashed color-mix(in srgb, var(--c) 45%, transparent); font-size:13px; line-height:1.45; color:var(--muted); }
+.rule .rm > span { display:block; font-size:12px; font-weight:800; letter-spacing:.02em; color:var(--ci); margin-bottom:2px; }
+.rule .rm ul { margin:0; padding:0 0 0 16px; display:grid; gap:3px; } .rule .rm li { display:list-item; padding:0; background:none; border-radius:0; grid-template-columns:none; }
+.rule .rx { display:inline-block; font-size:14px; font-weight:700; line-height:1.35; padding:4px 10px; border-radius:10px; background:var(--bad-soft); color:var(--bad-ink); }
+/* แนะนำสองคนของบท */
+.duo { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.duo > div { display:grid; justify-items:center; gap:2px; padding:14px 10px; border-radius:20px; background:var(--soft); text-align:center; }
+.duo [data-face] { width:64px; height:64px; border-radius:50%; overflow:hidden; background:var(--white); margin-bottom:4px; } .duo [data-face] svg { width:64px; height:64px; }
+.duo b { font-family:var(--display); font-size:19px; line-height:1.2; } .duo small { font-size:13px; color:var(--muted); }
+.duo em { font-style:normal; margin-top:6px; font-size:13px; font-weight:700; line-height:1.3; padding:4px 10px; border-radius:12px; background:var(--gold-soft); box-shadow:inset 0 0 0 1.5px var(--sun); }
+.walk { display:grid; gap:0; border-radius:18px; overflow:hidden; box-shadow:inset 0 0 0 1.5px var(--line); background:var(--white); }
+.walk > div { display:grid; grid-template-columns:96px minmax(0,1fr); gap:12px; padding:12px 14px; font-size:15px; line-height:1.45; }
+.walk > div + div { box-shadow:inset 0 1.5px 0 var(--line); }
+.walk small { font-size:12px; font-weight:700; letter-spacing:.02em; color:var(--muted); line-height:1.35; padding-top:2px; }
+.walk .res { background:var(--good-soft); } .walk .res span { font-family:var(--display); font-weight:800; font-size:16px; color:var(--good); } .walk .res small { color:var(--good); }
+
+/* จุดเช็กระหว่างทาง (V.check) · 14 ต.ค. 2569 · คำถามสั้น แตะแล้วเห็นผลทันที ตอบใหม่ได้ ไม่มีคะแนน */
+.ckp { display:grid; gap:8px; padding:12px; border-radius:18px; background:var(--gold-soft); box-shadow:inset 0 0 0 1.5px var(--sun); grid-template-columns:minmax(0,1fr); }
+.ckp > small { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:800; letter-spacing:.03em; color:var(--ink); } .ckp > small svg { width:16px; height:16px; }
+.ckp .ckq { margin:0; font-family:var(--display); font-weight:800; font-size:17px; line-height:1.3; color:var(--ink); }
+.ckp .ckf { margin:0; font-size:15px; line-height:1.45; }
+.ckp .ckb { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; } .ckp .ckb.col { grid-template-columns:minmax(0,1fr); }
+.ckp .ckb button { min-height:52px; padding:8px 10px; border:0; border-radius:16px; background:var(--white); color:var(--ink); font:inherit; font-size:15px; font-weight:700; line-height:1.25; cursor:pointer; box-shadow:inset 0 0 0 2px var(--ink); }
+.ckp .ckb button:active { transform:scale(.97); } .ckp .ckb button:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+.ckp.done .ckb button { box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
+.ckp.done .ckb button.right { background:var(--good); color:#fff; box-shadow:none; }
+.ckp.done .ckb button[aria-pressed="true"]:not(.right) { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.ckp .ckr:empty { display:none; } .ckp .ckr { display:grid; gap:4px; padding:10px 12px; border-radius:14px; background:var(--white); font-size:14.5px; line-height:1.45; }
+.ckp .ckr b { font-family:var(--display); font-weight:800; font-size:15px; color:var(--bad-ink); } .ckp.hit .ckr b { color:var(--good); }
+
+/* แถบเลื่อนตัวเลขมีปุ่ม − + (V.nums) · 14 ต.ค. 2569 · ใช้เมื่อข้อเท็จจริงที่เปลี่ยนเป็นตัวเลข แทนปุ่มเลือกสำเร็จรูป */
+.nums { display:grid; gap:10px; grid-template-columns:minmax(0,1fr); }
+.nums .nm { display:grid; gap:6px; padding:12px 14px; border-radius:18px; background:var(--soft); }
+.nums .nmh { display:flex; align-items:baseline; justify-content:space-between; gap:10px; font-weight:600; font-size:15px; line-height:1.3; }
+.nums .nmh output { font-family:var(--display); font-weight:800; font-size:26px; line-height:1; color:var(--ink); white-space:nowrap; } .nums .nmh output i { font-style:normal; font-family:var(--body); font-weight:500; font-size:13px; color:var(--muted); margin-left:4px; }
+.nums .nmc { display:grid; grid-template-columns:46px minmax(0,1fr) 46px; gap:10px; align-items:center; }
+.nums .nmc button { width:46px; height:46px; border-radius:50%; border:0; background:var(--white); color:var(--ink); font:800 24px/1 var(--display); cursor:pointer; box-shadow:inset 0 0 0 2px var(--ink); }
+.nums .nmc button:active { transform:scale(.94); } .nums .nmc button:disabled { opacity:.35; cursor:default; } .nums .nmc button:focus-visible, .nums input[type=range]:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+.nums input[type=range] { -webkit-appearance:none; appearance:none; width:100%; height:44px; margin:0; background:transparent; cursor:pointer; }
+.nums input[type=range]::-webkit-slider-runnable-track { height:10px; border-radius:99px; background:linear-gradient(to right, var(--hue) var(--p,0%), var(--white) var(--p,0%)); box-shadow:inset 0 0 0 1.5px var(--line); }
+.nums input[type=range]::-moz-range-track { height:10px; border-radius:99px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); } .nums input[type=range]::-moz-range-progress { height:10px; border-radius:99px; background:var(--hue); }
+.nums input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:30px; height:30px; margin-top:-10px; border-radius:50%; background:var(--hue); border:4px solid var(--white); box-shadow:0 1px 4px rgba(11,59,60,.3); }
+.nums input[type=range]::-moz-range-thumb { width:22px; height:22px; border-radius:50%; background:var(--hue); border:4px solid var(--white); box-shadow:0 1px 4px rgba(11,59,60,.3); }
+.nums .nm small { font-size:13px; color:var(--muted); line-height:1.35; }
+
+/* กล่องโจทย์ของส่วนลองเปลี่ยนดู (14 ต.ค. 2569 · ผู้ก่อตั้ง: ข้อเท็จจริงเต็มขึ้นเป็นโจทย์อยู่บนสุด ตัวเลือกอยู่ถัดลงมา แล้วภาพ แล้วกล่องตัดสินที่เปลี่ยนตามข้อเท็จจริง)
+   <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p>ข้อเท็จจริงทั้งหมดของกรณีตอนนี้ <mark>ข้อที่เพิ่งเปลี่ยน</mark></p></div> */
+.case { display:grid; gap:4px; padding:12px 14px; border-radius:18px; background:var(--white); box-shadow:inset 0 0 0 2px var(--ink); grid-template-columns:minmax(0,1fr); }
+.case > small { justify-self:start; padding:2px 10px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:800; letter-spacing:.03em; }
+.case p { margin:0; font-size:16px; line-height:1.5; } .case p + p { color:var(--muted); font-size:14px; }
+.case mark { padding:0 4px; border-radius:6px; background:var(--sun); color:var(--ink); font-weight:700; }
+.case ul { margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:6px; } .case li { padding:3px 10px; border-radius:99px; background:var(--soft); font-size:14px; line-height:1.4; } .case li.chg { background:var(--sun); font-weight:700; }
+
+/* ลองเอง ห้ารอบ (V.rounds) · 17 ต.ค. 2569 · โจทย์เดิมบิดทีละนิด ผู้เรียนปรับภาพให้ตรงโจทย์ แล้วเห็นผลทันที */
+.rnd { display:grid; gap:10px; padding:14px; border-radius:20px; background:var(--hue-soft); grid-template-columns:minmax(0,1fr); }
+.rnd .rnh { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.rnd .rnh b { font-family:var(--display); font-weight:800; font-size:17px; color:var(--hue-ink); }
+.rnd .rnd-dots { display:flex; gap:6px; } .rnd .rnd-dots i { width:12px; height:12px; border-radius:50%; background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); } .rnd .rnd-dots i.on { background:var(--hue); } .rnd .rnd-dots i.ok { background:var(--good); box-shadow:none; }
+.rnd .rnd-todo { margin:0; padding:0; list-style:none; display:grid; gap:6px; }
+.rnd .rnd-todo li { display:flex; gap:8px; align-items:center; padding:8px 12px; border-radius:12px; background:var(--white); font-size:15px; line-height:1.35; }
+.rnd .rnd-todo li i { flex:none; width:22px; height:22px; border-radius:50%; box-shadow:inset 0 0 0 2px var(--line); } .rnd .rnd-todo li.ok { color:var(--good); } .rnd .rnd-todo li.ok i { background:var(--good); box-shadow:none; }
+.rnd .rnd-res:empty { display:none; } .rnd .rnd-res { padding:12px 14px; border-radius:16px; background:var(--white); font-size:15px; line-height:1.5; } .rnd .rnd-res b { font-family:var(--display); font-weight:800; }
+.rnd .rnd-res em { display:block; margin-top:6px; font-style:normal; font-size:14px; color:var(--muted); }
+.rnd button.btn { justify-self:start; }
+.rnd table { width:100%; border-collapse:collapse; font-size:14px; background:var(--white); border-radius:14px; overflow:hidden; } .rnd th, .rnd td { padding:8px 10px; text-align:left; vertical-align:top; border-bottom:1px solid var(--soft); } .rnd th { font-size:12px; color:var(--muted); }

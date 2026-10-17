@@ -4,616 +4,951 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>เปิดสำนักงาน ต้องมีอะไรบ้าง | CPA Answer</title>
+<title>จรรยาบรรณหกข้อ | CPA Answer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="law2v.css">
 <style>
-/* สไตล์เฉพาะบทที่ 4 (ขึ้นต้น x04-) */
-.x04-grid { display:grid; grid-template-columns:58px minmax(0,1fr) minmax(0,1fr); gap:8px; align-items:stretch; }
-.x04-colh { align-self:end; text-align:center; font-family:var(--display); font-weight:800; font-size:15px; line-height:1.2; padding:2px; }
-.x04-colh small { display:block; font-family:var(--body); font-weight:500; font-size:12px; color:var(--muted); }
-.x04-rowh { display:grid; justify-items:center; align-content:center; gap:4px; padding:6px 2px; border-radius:16px; background:var(--hue-ink); color:#fff; font-family:var(--display); font-weight:800; font-size:13px; line-height:1.2; text-align:center; }
-.x04-rowh svg { width:22px; height:22px; color:var(--sun); }
-.x04-grid button { display:grid; justify-items:center; align-content:center; gap:8px; min-height:96px; padding:10px 4px; border-radius:18px; border:3px solid transparent; background:var(--soft); color:var(--ink); font:inherit; font-size:13px; font-weight:600; line-height:1.25; cursor:pointer; transition:transform .12s ease, background-color .12s ease; }
-.x04-grid button:active { transform:scale(.97); }
-.x04-grid button[aria-pressed="true"] { border-color:var(--hue); background:var(--hue-soft); color:var(--hue-ink); }
-.x04-pips { display:flex; gap:2px; }
-.x04-pips i { width:17px; height:17px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--line); box-shadow:inset 0 0 0 1.5px var(--line); }
-.x04-pips i:first-child { margin-right:4px; }
-.x04-pips i svg { width:10px; height:10px; }
-.x04-pips i.x04-lit { background:var(--hue); color:#fff; box-shadow:none; }
-.x04-out { display:grid; gap:10px; padding:14px; border-radius:20px; background:var(--soft); }
-.x04-out > b { font-family:var(--display); font-size:19px; line-height:1.25; }
-.x04-out > span { font-size:15px; color:var(--muted); margin-top:-6px; }
-.x04-reqs { display:grid; gap:8px; margin:0; padding:0; list-style:none; }
-.x04-req { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--white); }
-.x04-req .ico { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; }
-.x04-req .ico svg { width:20px; height:20px; }
-.x04-req b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
-.x04-req div > span { display:block; font-size:14px; line-height:1.45; }
-.x04-req a { display:inline-block; margin:2px 12px 0 0; padding:4px 0; font-size:13px; font-weight:700; color:var(--hue-ink); }
-.x04-req a::after { content:" ›"; }
-.x04-tag { display:inline-block; padding:0 8px; border-radius:99px; background:var(--hue-soft); color:var(--hue-ink); font-style:normal; font-size:12px; font-weight:700; }
-.x04-tag.x04-ent { background:var(--gold-soft); color:#6A5412; box-shadow:inset 0 0 0 1px var(--gold); }
-.x04-req.x04-off { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
-.x04-req.x04-off .ico { background:var(--white); color:var(--line); box-shadow:inset 0 0 0 1.5px var(--line); }
-.x04-req.x04-off b { font-weight:600; font-size:15px; }
+/* สถานี 1.4 จรรยาบรรณหกข้อ · ทุก class ขึ้นต้น x04- · ไม่แตะของกลาง */
+/* สีของหกหลัก: ใช้ชุดเดียวกันทั้งหน้า (ภาพรวม · หัวส่วน · ช่องของแบบฝึก · สรุป) */
+.x04-pa { --c:#2F6B8A; --cs:#DCEBF3; --ci:#1C4257; } .x04-pb { --c:#1F7A6B; --cs:#DDF1EC; --ci:#0E4A41; } .x04-pc { --c:#B7791F; --cs:#FBF0D2; --ci:#6B4508; }
+.x04-pd { --c:#6B4E9B; --cs:#ECE6F6; --ci:#3F2C66; } .x04-pe { --c:#B5532F; --cs:#F7E4DA; --ci:#6E2F17; } .x04-pf { --c:#A4476F; --cs:#F6E3EC; --ci:#6A2244; }
+.x04-L { display:grid; place-items:center; flex:none; width:64px; height:64px; border-radius:18px; background:var(--c, var(--hue)); color:#fff; font-family:var(--display); font-style:normal; font-weight:800; font-size:38px; line-height:1; }
+.x04-hd { display:grid; grid-template-columns:64px minmax(0,1fr); gap:14px; align-items:center; }
+.x04-hd small { display:block; font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--ci); }
+.x04-hd h2 { font-size:21px; }
+.x04-about { padding:10px 14px; border-radius:16px; background:var(--cs); color:var(--ci); font-size:16px; font-weight:600; line-height:1.45; }
+.x04-about b { font-family:var(--display); font-weight:800; }
+.x04-fc { display:block; width:52px; height:52px; border-radius:50%; overflow:hidden; flex:none; } .x04-fc svg { width:100%; height:100%; }
+.chips.x04-long button { border-radius:16px; text-align:left; line-height:1.3; }
 
-.x04-orwrap { position:relative; }
-.x04-or { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:1; padding:2px 12px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:700; }
-#payS .law, .gate .law { display:inline-block; margin-top:0; font-size:12px; }
-.cond.x04-idle { opacity:.6; } .cond.x04-idle .mk { display:none; }
+/* รอบคนเรียนครั้งแรก 14 ต.ค. 2569: ก้อนลองเปลี่ยนเรียง โจทย์ (.case ของกลาง) → ตัวเลือก + หลักที่ใช้ตัดสิน → ภาพ → กล่องตัดสิน */
+.case .x04-q { color:var(--ink); font-size:15px; font-weight:700; }
+.x04-rule { display:grid; grid-template-columns:minmax(0,1fr); gap:2px; padding:10px 14px 10px 16px; border-radius:14px; background:var(--cs, var(--hue-soft)); box-shadow:inset 4px 0 0 var(--c, var(--hue)); font-size:15px; font-weight:600; line-height:1.45; }
+.x04-rule small { font-size:12px; font-weight:800; letter-spacing:.03em; color:var(--ci, var(--hue-ink)); }
+.x04-grp { flex:0 0 100%; font-size:13px; font-weight:700; color:var(--muted); line-height:1.3; } .x04-grp + button ~ .x04-grp { margin-top:4px; }
+.x04-gs { display:block; font-size:13px; font-weight:500; line-height:1.4; color:var(--hue-ink); }
+.x04-key { list-style:none; margin:0; padding:12px 14px; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; border-radius:16px; background:var(--soft); font-size:14px; line-height:1.4; }
+.x04-key li { display:grid; grid-template-columns:72px minmax(0,1fr); gap:10px; align-items:baseline; } .x04-key .law { justify-self:start; }
 
-details.x04-more { padding:12px 14px; border-radius:18px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:14px; }
-details.x04-more summary { cursor:pointer; font-family:var(--display); font-weight:800; font-size:16px; line-height:1.3; min-height:28px; }
-details.x04-more > * + * { margin-top:10px; }
-.x04-ifs { display:grid; gap:6px; margin:0; padding:0; list-style:none; }
-.x04-ifs li { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); border-radius:14px; overflow:hidden; font-size:14px; line-height:1.35; box-shadow:inset 0 0 0 1.5px var(--line); }
-.x04-ifs li span { padding:9px 10px; }
-.x04-ifs li span:last-child { background:var(--soft); font-weight:700; }
+/* แถบขั้น: สองช่องแรกมีป้าย หกช่องเป็นตัวอักษรของหลัก จุดเล็กคือแบบฝึกแยกแยะ */
+.steps.x04-steps { grid-template-columns:auto 1.5fr 1.5fr 1fr 1fr 10px 1fr 1fr 10px 1fr 1fr 10px; align-items:start; }
+.x04-steps a i { width:26px; height:26px; font-size:13px; }
+.x04-steps a.x04-dot { padding-top:13px; } .x04-steps a.x04-dot i { width:8px; height:8px; background:var(--line); box-shadow:none; }
+.x04-steps a.x04-dot[aria-current="step"] i { background:var(--hue); box-shadow:0 0 0 3px var(--hue-soft); }
 
-.x04-year { display:grid; gap:6px; }
-.x04-yb { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); min-height:56px; border-radius:14px; overflow:hidden; font-size:13px; font-weight:700; text-align:center; line-height:1.25; }
-.x04-yb span { display:grid; place-items:center; align-content:center; padding:6px; }
-.x04-yb small { display:block; font-weight:500; font-size:12px; }
-.x04-y1 { background:var(--hue-soft); color:var(--hue-ink); }
-.x04-y2 { background:var(--good); color:#fff; transition:background-color .2s ease; }
-.x04-y2.x04-end { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
-.x04-yt { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); font-size:12px; font-weight:700; color:var(--muted); }
-.x04-yt span:first-child { text-align:right; padding-right:6px; border-right:3px solid var(--ink); }
-.x04-yt span:last-child { padding-left:6px; }
+/* ภาพรวม */
+.x04-trio { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.x04-trio > div { display:grid; justify-items:center; align-content:start; gap:2px; padding:12px 6px; border-radius:18px; background:var(--soft); text-align:center; }
+.x04-trio b { font-family:var(--display); font-size:17px; line-height:1.2; } .x04-trio small { font-size:12px; color:var(--muted); line-height:1.3; }
+.x04-trio em { font-style:normal; margin-top:4px; padding:3px 8px; border-radius:10px; background:var(--gold-soft); box-shadow:inset 0 0 0 1.5px var(--sun); font-size:12px; font-weight:700; line-height:1.3; }
+.x04-mh { margin:0; font-size:13px; font-weight:700; color:var(--hue-ink); }
+.x04-pair { width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x04-pt { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 8px; border-radius:18px; background:var(--cs); color:var(--ink); text-align:center; text-decoration:none; }
+.x04-pt:hover { box-shadow:inset 0 0 0 2px var(--c); }
+.x04-pt .x04-L { width:52px; height:52px; font-size:30px; border-radius:15px; }
+.x04-pt b { font-family:var(--display); font-size:15px; line-height:1.25; } .x04-pt small { font-size:13px; font-weight:600; color:var(--ci); line-height:1.3; }
+.x04-try { grid-column:1 / -1; justify-self:center; display:inline-flex; align-items:center; min-height:44px; padding:4px 18px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:13px; font-weight:700; text-decoration:none; }
+.x04-try::after { content:"\00a0›"; }
 
-.x04-evs { width:100%; max-width:300px; display:grid; justify-items:center; gap:4px; }
-.x04-ev { width:100%; display:grid; grid-template-columns:24px minmax(0,1fr); gap:8px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--soft); font-size:14px; font-weight:600; line-height:1.35; }
-.x04-ev svg { width:22px; height:22px; color:var(--hue); }
-.x04-orr { padding:0 10px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; }
-.x04-pill { justify-self:center; padding:3px 14px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:14px; font-weight:800; font-family:var(--display); }
+/* ส่วน 1: ที่มาสามชั้น */
+.x04-lays { display:grid; grid-template-columns:minmax(0,1fr); gap:0; }
+.x04-lay { display:grid; grid-template-columns:44px minmax(0,1fr); gap:4px 12px; align-items:start; padding:14px; border-radius:18px; background:var(--soft); }
+.x04-lay .ico { width:44px; height:44px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; } .x04-lay .ico svg { width:22px; height:22px; }
+.x04-lay small { display:block; font-size:12px; font-weight:700; letter-spacing:.03em; color:var(--hue-ink); }
+.x04-lay b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
+.x04-lay .x04-t { display:block; margin-top:2px; font-size:14px; line-height:1.45; color:var(--muted); }
+.x04-lay .law { margin-top:6px; }
+.x04-lay.x04-main { background:var(--hue-ink); color:#fff; } .x04-lay.x04-main small { color:var(--sun); } .x04-lay.x04-main .x04-t { color:rgba(255,255,255,.86); }
+.x04-lay.x04-main .ico { background:rgba(255,255,255,.14); color:#fff; } .x04-lay.x04-main .law { box-shadow:none; }
+.x04-dn { justify-self:center; width:4px; height:16px; background:var(--line); }
+.x04-six { grid-column:1 / -1; display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; margin-top:6px; }
+.x04-six a { display:grid; place-items:center; min-height:46px; border-radius:12px; background:#fff; color:var(--c); font-family:var(--display); font-weight:800; font-size:24px; line-height:1; text-decoration:none; }
 
-.x04-defs, .x04-chg, .x04-fees { display:grid; gap:6px; margin:0; padding:0; list-style:none; }
-.x04-defs li { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.35; }
-.x04-defs b { font-family:var(--display); font-size:15px; }
-.x04-fees li { display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:6px 2px; border-bottom:1.5px solid var(--line); font-size:14px; }
-.x04-fees b { font-family:var(--display); white-space:nowrap; }
-.x04-kinds { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; }
-.x04-kind { position:relative; display:grid; align-content:start; gap:4px; padding:14px 10px 12px; border-radius:18px; background:var(--soft); font-size:13px; line-height:1.35; color:var(--muted); }
-.x04-kind i { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--ink); color:#fff; font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; }
-.x04-kind b { font-family:var(--display); font-size:15px; line-height:1.25; color:var(--ink); }
-.x04-kind.x04-wide { grid-column:1 / -1; background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--gold); }
-.x04-sum { display:grid; gap:0; padding:12px 14px; border-radius:18px; background:var(--soft); }
-.x04-sum div { display:flex; justify-content:space-between; align-items:baseline; gap:10px; padding:5px 0; font-size:14px; }
-.x04-sum b { font-family:var(--display); font-weight:800; font-size:20px; white-space:nowrap; }
-.x04-sum b i { font-style:normal; font-size:13px; font-weight:600; }
-.x04-sum div.x04-tot { margin-top:4px; padding-top:9px; border-top:3px solid var(--ink); font-weight:700; }
-.x04-sum div.x04-tot b { font-size:26px; }
-.x04-cmp { display:grid; gap:10px; }
-.x04-bar { display:grid; gap:4px; padding:10px 12px; border-radius:16px; background:var(--soft); transition:background-color .2s ease; }
-.x04-bar .x04-bh { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:14px; font-weight:600; }
-.x04-bar .x04-bh b { font-family:var(--display); font-weight:800; font-size:18px; white-space:nowrap; }
-.x04-bar .x04-bt { height:14px; border-radius:99px; background:var(--white); overflow:hidden; }
-.x04-bar .x04-bt i { display:block; height:100%; border-radius:99px; background:var(--line); transition:width .35s ease, background-color .2s ease; }
-.x04-bar em { display:none; justify-self:start; padding:1px 10px; border-radius:99px; background:var(--hue); color:#fff; font-style:normal; font-size:12px; font-weight:700; }
-.x04-bar.x04-big { background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); color:var(--hue-ink); }
-.x04-bar.x04-big .x04-bt i { background:var(--hue); } .x04-bar.x04-big em { display:inline-block; }
-.x04-bar.x04-not { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
-.x04-bar.x04-not .x04-bt i { background:repeating-linear-gradient(135deg, var(--line) 0 6px, transparent 6px 12px); }
-.x04-bar.x04-not em { display:inline-block; background:var(--white); color:var(--muted); box-shadow:inset 0 0 0 1.5px var(--line); }
-.x04-two { display:grid; gap:6px; }
-.x04-two div { display:grid; gap:2px; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.4; }
-.x04-two div:last-child { background:var(--hue-soft); color:var(--hue-ink); }
-.x04-two b { font-family:var(--display); font-size:15px; }
-.x04-lane { display:grid; gap:6px; padding:12px; border-radius:18px; background:var(--soft); }
-.x04-lane > b { font-family:var(--display); font-size:16px; line-height:1.3; }
-.x04-lb { display:grid; height:42px; border-radius:12px; overflow:hidden; font-size:12px; font-weight:700; text-align:center; line-height:1.2; }
-.x04-lb span { display:grid; place-items:center; padding:0 4px; }
-.x04-lb span:first-child { background:var(--white); color:var(--muted); } .x04-lb span:last-child { background:var(--good); color:#fff; }
-.x04-la .x04-lb, .x04-la .x04-lt { grid-template-columns:minmax(0,3fr) minmax(0,1.4fr); }
-.x04-lz .x04-lb, .x04-lz .x04-lt { grid-template-columns:minmax(0,3fr) minmax(0,1.3fr); }
-.x04-lt { display:grid; font-size:12px; font-weight:700; color:var(--muted); }
-.x04-la .x04-lt span:first-child { text-align:right; padding-right:6px; border-right:3px solid var(--ink); }
-.x04-lz .x04-lt span:first-child { padding-left:6px; border-left:3px solid var(--ink); }
-.x04-lz .x04-lt span:last-child { text-align:right; padding-right:6px; border-right:3px solid var(--ink); }
-.x04-lane p { font-size:14px; line-height:1.45; }
-.x04-chg li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 10px; align-items:center; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.4; }
-.x04-chg b { font-family:var(--display); font-size:15px; display:block; }
-.x04-chg em { font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; white-space:nowrap; }
-.x04-chain { display:grid; justify-items:center; gap:6px; }
-.x04-node { width:100%; display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border-radius:18px; background:var(--bad-soft); color:var(--bad-ink); transition:background-color .2s ease, opacity .2s ease; }
-.x04-node .ico { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--white); } .x04-node .ico svg { width:22px; height:22px; }
-.x04-node b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; } .x04-node div > span { font-size:14px; line-height:1.4; }
-.x04-node.x04-skip { background:transparent; box-shadow:inset 0 0 0 1.5px var(--line); color:var(--muted); }
-.x04-link { padding:2px 12px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:700; text-align:center; }
-.x04-link.x04-if { background:var(--white); color:var(--ink); box-shadow:inset 0 0 0 1.5px var(--ink); }
-.x04-vs { display:grid; gap:10px; padding:14px; border-radius:18px; background:var(--soft); }
-.x04-vs div { display:grid; gap:4px; font-size:14px; } .x04-vs b { font-family:var(--display); font-size:16px; }
-.x04-vb { height:18px; border-radius:99px; } .x04-v1 { width:14%; background:var(--gold); } .x04-v2 { width:100%; background:linear-gradient(90deg, var(--bad) 0 82%, transparent); border-radius:99px 0 0 99px; }
+/* ส่วน 2: ร่ม */
+.x04-umb { display:grid; grid-template-columns:minmax(0,1fr); gap:0; }
+.x04-can { position:relative; } .x04-can svg { width:100%; height:auto; }
+.x04-can b { position:absolute; left:0; right:0; top:32%; text-align:center; color:#fff; font-family:var(--display); font-weight:800; font-size:20px; line-height:1.2; }
+.x04-pole { justify-self:center; width:5px; height:12px; background:var(--hue-ink); }
+.x04-under { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--hue-soft); box-shadow:inset 0 0 0 2px var(--hue); }
+.x04-g { font-size:13px; font-weight:700; color:var(--hue-ink); line-height:1.35; }
+.x04-fd { display:flex; flex-wrap:wrap; gap:6px; }
+.x04-fd span { padding:5px 10px; border-radius:14px; background:var(--white); font-size:14px; font-weight:600; line-height:1.3; transition:background-color .2s ease, color .2s ease; }
+.x04-fd span.x04-lit { background:var(--good); color:#fff; }
+.x04-or { justify-self:center; padding:1px 14px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:700; }
+.x04-slot { display:flex; justify-content:center; } .x04-slot:empty { display:none; } .x04-slot .pinp { margin:0; }
+.x04-pi { width:26px; height:26px; border-radius:50%; background:var(--white); display:grid; place-items:center; } .pinp .x04-pi svg { width:16px; height:16px; border-radius:0; }
+.x04-rain { margin-top:8px; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:12px 14px; border-radius:20px; border:2px dashed var(--line); background:repeating-linear-gradient(115deg, transparent 0 10px, rgba(47,107,138,.10) 10px 12px); font-size:14px; line-height:1.4; color:var(--muted); }
+.x04-rain b { font-family:var(--display); font-size:15px; color:var(--ink); }
+.who.x04-who button { grid-template-columns:minmax(0,1fr); justify-items:center; text-align:center; gap:4px; padding:12px 6px; }
+.who button .x04-fc { width:56px; height:56px; }
+.who button .x04-gen { display:grid; place-items:center; background:var(--white); color:var(--hue); } .who button .x04-gen svg { width:28px; height:28px; }
+
+/* กล่องผล: หน้าตาเดียวทุกส่วน */
+.x04-res { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:14px; border-radius:20px; background:var(--soft); transition:background-color .2s ease; }
+.x04-ri { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--muted); } .x04-ri svg { width:24px; height:24px; }
+.x04-res b { display:block; font-family:var(--display); font-size:20px; line-height:1.25; }
+.x04-res div > span { display:block; margin-top:4px; font-size:15px; line-height:1.45; }
+.x04-res.x04-good { background:var(--good-soft); color:var(--good); } .x04-good .x04-ri { background:var(--good); color:#fff; }
+.x04-res.x04-bad { background:var(--bad-soft); color:var(--bad-ink); } .x04-bad .x04-ri { background:var(--bad); color:#fff; }
+.x04-res.x04-warn { background:var(--gold-soft); color:var(--ink); box-shadow:inset 0 0 0 2px var(--sun); } .x04-warn .x04-ri { background:#6A5412; color:#fff; }
+
+/* รายการตัวอย่างของหลัก */
+.x04-eg { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.x04-eg li { display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:15px; line-height:1.45; }
+.x04-m { width:26px; height:26px; border-radius:50%; display:grid; place-items:center; background:var(--c, var(--hue)); color:#fff; } .x04-m svg { width:15px; height:15px; }
+
+/* ส่วน 3 (ก): แท่งเทียบงบกับเอกสาร (คำขออยู่ในกล่องโจทย์) */
+.x04-bars { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; padding:14px; border-radius:18px; background:var(--soft); }
+.x04-br { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; }
+.x04-bt { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:14px; font-weight:600; } .x04-bt b { font-family:var(--display); font-weight:800; font-size:20px; white-space:nowrap; }
+.x04-tk { display:flex; height:22px; border-radius:8px; background:var(--white); overflow:hidden; }
+.x04-tk i { display:block; height:100%; transition:width .3s ease; }
+.x04-real { background:var(--hue); } .x04-fake { background:repeating-linear-gradient(135deg, var(--bad) 0 6px, #C9514A 6px 12px); } .x04-left { background:repeating-linear-gradient(135deg, var(--gold) 0 6px, #E0C465 6px 12px); }
+.x04-sign { justify-self:center; display:inline-flex; align-items:center; gap:8px; padding:3px 14px 3px 4px; border-radius:99px; background:var(--muted); color:#fff; font-size:14px; font-weight:700; line-height:1.3; }
+.x04-sign i { width:30px; height:30px; flex:none; border-radius:50%; display:grid; place-items:center; background:#fff; color:var(--ink); font-style:normal; font-family:var(--display); font-weight:800; font-size:22px; line-height:1; }
+.x04-sign.x04-eq { background:var(--good); } .x04-sign.x04-ne { background:var(--bad); }
+.x04-lg { display:flex; flex-wrap:wrap; gap:4px 14px; margin:0; padding:0; list-style:none; font-size:13px; color:var(--muted); }
+.x04-lg li { display:flex; align-items:center; gap:6px; } .x04-lg i { width:22px; height:12px; border-radius:4px; }
+.x04-laws { display:flex; flex-wrap:wrap; gap:6px; }
+.x04-same { padding:12px 14px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.45; } .x04-same b { font-family:var(--display); }
+
+/* ส่วน 4 (ข): สามอย่างที่ต้องไม่มาลบล้างดุลยพินิจ · ของที่อยู่ระหว่างลูกค้ากับผู้สอบบัญชี */
+.x04-core { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px; background:var(--c); color:#fff; }
+.x04-core .ico { width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.18); display:grid; place-items:center; } .x04-core .ico svg { width:22px; height:22px; }
+.x04-core b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; } .x04-core span { font-size:14px; line-height:1.4; }
+.x04-strip { display:grid; grid-template-columns:minmax(0,1fr) 88px minmax(0,1fr); gap:6px; align-items:center; }
+.x04-tile { display:grid; justify-items:center; align-content:start; gap:2px; padding:12px 6px; border-radius:18px; background:var(--soft); text-align:center; }
+.x04-tile b { font-family:var(--display); font-size:15px; line-height:1.25; } .x04-tile small { font-size:12px; color:var(--muted); line-height:1.3; }
+.x04-av { width:48px; height:48px; border-radius:50%; overflow:hidden; display:grid; place-items:center; background:var(--white); } .x04-av svg { width:100%; height:100%; }
+.x04-link { display:grid; justify-items:center; gap:4px; font-size:12px; font-weight:700; line-height:1.25; text-align:center; color:var(--muted); }
+.x04-tok { width:46px; height:46px; border-radius:50%; display:grid; place-items:center; background:var(--sun); color:var(--ink); transition:background-color .2s ease; } .x04-tok svg { width:26px; height:26px; }
+.x04-ar { width:100%; height:12px; } .x04-ar path { fill:none; stroke:var(--line); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.x04-link.x04-flip .x04-ar { transform:scaleX(-1); }
+.x04-link.x04-good { color:var(--good); } .x04-link.x04-good .x04-ar path { stroke:var(--good); }
+.x04-link.x04-bad { color:var(--bad-ink); } .x04-link.x04-bad .x04-ar path { stroke:var(--bad); stroke-dasharray:3 6; } .x04-link.x04-bad .x04-tok { background:var(--bad-soft); box-shadow:inset 0 0 0 2px var(--bad); }
+
+/* ส่วน 6 (ค): สี่เรื่องที่งานต้องใช้ · ลำดับเมื่อไม่พอ */
+.x04-tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x04-tiles button { display:grid; justify-items:center; align-content:start; gap:4px; min-height:118px; padding:12px 8px 10px; border-radius:18px; border:0; background:var(--white); box-shadow:inset 0 0 0 2px var(--bad); color:var(--bad-ink); font:inherit; font-weight:700; font-size:15px; line-height:1.25; text-align:center; cursor:pointer; transition:background-color .2s ease; }
+.x04-tiles button small { display:block; font-weight:500; font-size:12px; line-height:1.3; }
+.x04-ti { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--bad-soft); } .x04-ti svg { width:22px; height:22px; }
+.x04-tiles button em { font-style:normal; font-size:12px; font-weight:800; padding:1px 12px; border-radius:99px; background:var(--bad); color:#fff; }
+.x04-tiles button[aria-pressed="true"] { background:var(--good-soft); box-shadow:none; color:var(--good); }
+.x04-tiles button[aria-pressed="true"] .x04-ti { background:var(--white); } .x04-tiles button[aria-pressed="true"] em { background:var(--good); }
+.x04-flow li { grid-template-columns:40px minmax(0,1fr); transition:opacity .2s ease; } .x04-flow.x04-idle li { opacity:.4; }
+
+/* ส่วน 7 (ง): สิ่งที่ทำกับข้อมูล · ทางที่เปิดเผยได้ (เอกสารอยู่ในกล่องโจทย์) */
+.x04-opts { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x04-opts button { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; min-height:56px; padding:8px 12px; border-radius:16px; border:2px solid transparent; background:var(--soft); font:inherit; color:var(--ink); text-align:left; cursor:pointer; }
+.x04-opts button b { display:block; font-size:15px; font-weight:700; line-height:1.3; } .x04-opts button small { display:block; font-size:13px; color:var(--muted); line-height:1.35; }
+.x04-oi { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--white); color:var(--muted); } .x04-oi svg { width:20px; height:20px; }
+.x04-opts button[aria-pressed="true"] { border-color:var(--c); background:var(--cs); } .x04-opts button[aria-pressed="true"] .x04-oi { background:var(--c); color:#fff; }
+.x04-tag { display:inline-block; font-style:normal; padding:1px 8px; border-radius:99px; background:var(--sun); color:var(--ink); font-size:12px; font-weight:800; line-height:1.5; }
+.x04-ways { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; counter-reset:x04w; }
+.x04-ways > div { counter-increment:x04w; display:grid; grid-template-columns:30px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:14px; background:var(--good-soft); color:var(--good); font-size:15px; font-weight:600; line-height:1.4; }
+.x04-ways > div::before { content:counter(x04w); width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--good); color:#fff; font-family:var(--display); font-weight:800; font-size:14px; }
+.x04-ways small { display:block; font-weight:500; font-size:13px; color:var(--ink); line-height:1.4; }
+
+/* ส่วน 9 (จ): ป้ายโฆษณา · ห้ากรณี */
+.x04-bb { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; }
+.x04-board { width:100%; display:grid; gap:4px; padding:16px 14px; border-radius:14px; background:var(--hue-ink); color:#fff; text-align:center; box-shadow:inset 0 0 0 4px var(--sun); }
+.x04-board small { font-size:12px; font-weight:700; letter-spacing:.04em; color:var(--sun); }
+.x04-board b { font-family:var(--display); font-weight:800; font-size:22px; line-height:1.3; } .x04-board span { font-size:14px; color:rgba(255,255,255,.86); }
+.x04-legs { width:56%; height:14px; border-left:8px solid var(--line); border-right:8px solid var(--line); }
+.x04-duty { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.x04-duty li { display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:14px; background:var(--good-soft); color:var(--good); font-size:15px; font-weight:600; line-height:1.4; transition:background-color .2s ease; }
+.x04-duty .x04-m { background:var(--good); }
+.x04-duty li.x04-hitbad { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); } .x04-duty li.x04-hitbad .x04-m { background:var(--bad); }
+.x04-five { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; counter-reset:x04f; }
+.x04-five li { counter-increment:x04f; display:grid; grid-template-columns:30px minmax(0,1fr); gap:10px; align-items:start; padding:9px 12px; border-radius:14px; background:var(--cs); font-size:15px; line-height:1.4; }
+.x04-five li::before { content:counter(x04f); width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--c); color:#fff; font-family:var(--display); font-weight:800; font-size:14px; }
+
+/* ส่วน 10 (ฉ): คนขอ → คนทำงบ → งบ → คนอ่านงบ */
+.togs.x04-ask button[aria-pressed="true"] { background:var(--gold-soft); color:var(--ink); } .togs.x04-ask button[aria-pressed="true"]::before { background-color:var(--hue); }
+.x04-flw { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.x04-per { display:grid; grid-template-columns:48px minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:18px; background:var(--soft); font-size:15px; line-height:1.35; }
+.x04-per .x04-fc { width:48px; height:48px; }
+.x04-per b { font-family:var(--display); font-size:17px; } .x04-per small { font-size:13px; font-weight:600; color:var(--muted); }
+.x04-per em { display:block; margin-top:4px; padding:4px 10px; border-radius:12px; background:var(--white); font-style:normal; font-weight:700; font-size:14px; }
+.x04-per.x04-asker { background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--sun); }
+.x04-per.x04-none { grid-template-columns:minmax(0,1fr); border:2px dashed var(--line); background:transparent; color:var(--muted); }
+.x04-via { display:grid; grid-template-columns:48px minmax(0,1fr); gap:10px; align-items:center; min-height:24px; padding:0 12px; font-size:13px; font-weight:700; color:var(--muted); }
+.x04-via i { justify-self:center; width:4px; height:24px; border-radius:2px; background:var(--hue); }
+.x04-via.x04-off i { background:linear-gradient(var(--line) 50%, transparent 50%); background-size:4px 8px; }
+.x04-sheet { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--soft); }
+.x04-sheet > b { font-family:var(--display); font-size:15px; }
+.x04-row { display:grid; grid-template-columns:minmax(0,1fr) 64px; gap:10px; align-items:center; min-height:48px; padding:8px 12px; border-radius:14px; background:var(--white); font-size:15px; font-weight:600; line-height:1.3; transition:background-color .2s ease; }
+.x04-row i { height:12px; border-radius:99px; background:var(--line); } .x04-row small { display:block; font-size:12px; font-weight:600; }
+.x04-row.x04-true { box-shadow:inset 0 0 0 2px var(--good); color:var(--good); } .x04-row.x04-true i { background:var(--good); }
+.x04-row.x04-gone { background:repeating-linear-gradient(135deg, #fff 0 8px, var(--bad-soft) 8px 16px); box-shadow:inset 0 0 0 2px var(--bad); color:var(--bad-ink); } .x04-row.x04-gone i { visibility:hidden; }
+.x04-row.x04-bent { box-shadow:inset 0 0 0 2px var(--bad); color:var(--bad-ink); } .x04-row.x04-bent i { background:var(--bad); }
+.x04-row u { text-decoration:underline wavy var(--bad); text-underline-offset:4px; }
+.x04-see { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); font-size:15px; line-height:1.4; }
+.x04-ey { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--hue-soft); color:var(--hue); } .x04-ey svg { width:22px; height:22px; }
+.x04-see small { display:block; font-size:12px; font-weight:700; color:var(--muted); }
+
+/* แบบฝึกแยกแยะ: การ์ดทีละใบ แตะหลักที่ใช่ การ์ดไปเข้าช่องของหลักนั้น */
+.x04-drill { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; }
+.x04-dcard { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:16px; border-radius:8px 20px 20px 20px; background:#FFFEFA; box-shadow:inset 0 0 0 1.5px var(--line), 5px 6px 0 var(--soft); transition:opacity .2s ease, transform .2s ease; }
+.x04-dcard small { font-size:12px; font-weight:700; letter-spacing:.03em; color:var(--muted); }
+.x04-dcard p { font-size:17px; font-weight:600; line-height:1.45; }
+.x04-dcard em { justify-self:start; font-style:normal; padding:1px 8px; border-radius:99px; background:var(--soft); font-size:12px; font-weight:700; color:var(--muted); } .x04-dcard em:empty { display:none; }
+.x04-dcard.x04-sent { opacity:.5; transform:scale(.97); }
+.x04-dbins { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; align-items:start; }
+.x04-dbin { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.x04-dbin button { display:grid; justify-items:center; align-content:start; gap:4px; min-height:104px; padding:10px 6px; border-radius:18px; border:3px solid var(--c); background:var(--cs); color:var(--ink); font:inherit; cursor:pointer; transition:transform .12s ease, background-color .2s ease; }
+.x04-dbin button:active { transform:scale(.97); } .x04-dbin button[disabled] { cursor:default; }
+.x04-dbin button .x04-L { width:48px; height:48px; font-size:28px; border-radius:14px; }
+.x04-dbin button b { font-family:var(--display); font-size:13px; line-height:1.25; text-align:center; }
+.x04-dbin button small { font-size:12px; font-weight:600; line-height:1.3; color:var(--ci); text-align:center; } .x04-dbin button.x04-hit small { color:#fff; }
+.x04-dbin button.x04-miss { border-style:dashed; border-color:var(--bad); background:var(--bad-soft); }
+.x04-dbin button.x04-hit { background:var(--c); color:#fff; } .x04-dbin button.x04-hit .x04-L { background:#fff; color:var(--c); }
+.x04-dbin ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:4px; }
+.x04-dbin li { display:grid; grid-template-columns:16px minmax(0,1fr); gap:6px; align-items:start; padding:6px 8px; border-radius:10px; background:var(--cs); color:var(--ci); font-size:13px; font-weight:700; line-height:1.3; }
+.x04-dbin li svg { width:16px; height:16px; margin-top:1px; }
+.x04-dwhy { padding:12px 14px; border-radius:16px; font-size:15px; line-height:1.45; } .x04-dwhy b { font-family:var(--display); }
+.x04-dwhy.x04-good { background:var(--good-soft); color:var(--good); } .x04-dwhy.x04-bad { background:var(--bad-soft); color:var(--bad-ink); }
+.x04-dnext { justify-self:start; }
+
+/* สรุป: ไอคอนเป็นตัวอักษรของหลัก */
+.keep .x04-kl { background:var(--c); color:#fff; font-family:var(--display); font-weight:800; font-size:20px; line-height:1; }
+details.x04-fold p { margin-top:10px; font-weight:700; } details.x04-fold p + span { display:block; margin-top:4px; }
 </style>
 </head>
 <body>
-<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ บทที่ 4 (หัวข้อ R05 ของโครง v2) · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
-     ตัวบทที่เปิดอ่านเอง (sources/law2/1-profession): พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.4 ม.11 ม.37–38 ม.44–46 ม.66 ม.67 ม.69
-     · พ.ร.บ.การบัญชี พ.ศ. 2543 ม.4 ม.8 (เฉพาะนิยามผู้ทำบัญชี) · กฎกระทรวงกำหนดหลักประกันฯ พ.ศ. 2553 ข้อ 1–6
-     · ประกาศสภาฯ ที่ 3/2558 ข้อ 3–12 (อ่านจากภาพสแกน) · ประกาศสภาฯ ที่ 15/2562 ข้อ 3 (อ่านจากภาพสแกน)
-     · ข้อบังคับผู้ขึ้นทะเบียนเป็นผู้ทำบัญชี พ.ศ. 2556 ข้อ 4–13 · ข้อบังคับค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556 ข้อ 7
-     แพร พีท และบริษัทในภาพเป็นกรณีสมมติ ตัวเลขทุน รายได้ และหลักประกันเป็นตัวเลขสมมติ อัตราร้อยละ 3 และกำหนดวันมาจากตัวบท -->
+<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพบัญชี สถานี 1.4 “จรรยาบรรณหกข้อ” (รหัสเนื้อหาเดิม R05) · เขียนใหม่ทั้งหน้า 14 ต.ค. 2569
+     โครง: จรรยาบรรณคืออะไร → ใครอยู่ใต้ → (ก) (ข) → แยก ก ข → (ค) (ง) → แยก ค ง → (จ) (ฉ) → แยก จ ฉ
+     ถ้อยคำที่ยัน: claim R05-K01 ถึง K86 ของ claude-content/R05.content.json (พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 · ข้อบังคับจรรยาบรรณ พ.ศ. 2569 อ่านจากภาพ · คู่มือประมวลจรรยาบรรณ แนบท้ายประกาศสภาฯ ที่ 53/2566 · เรื่องเล่าของสภาฯ TFAC Newsletter ฉบับที่ 107)
+     รอบคนเรียนครั้งแรก (14 ต.ค. 2569): ก้อนลองเปลี่ยนเจ็ดก้อน (s2 s3 s4 s6 s7 s9 s10) เรียง โจทย์ → ตัวเลือก + หลักที่ใช้ตัดสิน → ภาพ → กล่องตัดสิน · ส่วน (ข) เปิดด้วยเรื่องของขวัญก่อนภาพสามอย่าง
+     ภาพของหลักปรับจากหน้ารุ่นแรก ref-handbuilt-1210/law2v-r05 ถึง r10 · พีท พี่แพม พริ้ง แพร และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ · ที่มาของแต่ละกรณีอยู่ใน notes-rw/r04.md -->
 <main>
   <header class="hero">
-    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
-    <p class="kick">วิชาชีพบัญชี · บทที่ 4</p>
-    <h1>เปิดสำนักงาน ต้องมีอะไรบ้าง</h1>
-    <p class="sub">รับสอบบัญชีหรือรับทำบัญชี ต้องดูตัวคนที่ทำงาน และนิติบุคคลที่ให้บริการ แตะเรื่องที่อยากดู</p>
-    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพสำนักงานบัญชี ด้านซ้ายเป็นคนที่ทำงาน ด้านขวาเป็นทะเบียนและหลักประกันของนิติบุคคล">
+    <div class="top"><a href="law2v-index.html#R">สายวิชาชีพบัญชี</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · สถานี 1.4</p>
+    <h1>จรรยาบรรณหกข้อ</h1>
+    <p class="sub">คนทำงานบัญชีมีกติกาความประพฤติที่ต้องทำตาม แกนของมันคือหลักหกข้อ เรียกว่า (ก) ถึง (ฉ) มาดูว่าใช้กับใคร แล้วไล่ทีละข้อ ผ่านงบการเงินฉบับเดียวของบริษัทขายแป้ง</p>
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพร่มหนึ่งคัน ใต้ร่มมีแผ่นตัวอักษร ก ข ค ง จ ฉ หกแผ่น">
       <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
-      <g transform="translate(118 22)">
-        <rect x="0" y="16" width="104" height="88" rx="8" fill="rgba(255,255,255,.14)"/>
-        <rect x="14" y="0" width="76" height="22" rx="6" fill="#F0C84B"/>
-        <path d="M26 11h52" stroke="#1C4257" stroke-width="4" stroke-linecap="round"/>
-        <g fill="rgba(255,255,255,.6)"><rect x="12" y="32" width="20" height="18" rx="3"/><rect x="42" y="32" width="20" height="18" rx="3"/><rect x="72" y="32" width="20" height="18" rx="3"/><rect x="12" y="58" width="20" height="18" rx="3"/><rect x="72" y="58" width="20" height="18" rx="3"/></g>
-        <rect x="40" y="62" width="24" height="42" rx="4" fill="#fff"/><circle cx="58" cy="84" r="2.500" fill="#1C4257"/>
+      <path d="M14 58C40-8 300-8 326 58q-19.500-14-39 0q-19.500-14-39 0q-19.500-14-39 0q-19.500-14-39 0q-19.500-14-39 0q-19.500-14-39 0q-19.500-14-39 0q-19.500-14-39 0z" fill="#F0C84B"/>
+      <path d="M170 8V2" stroke="#F0C84B" stroke-width="5" stroke-linecap="round"/>
+      <path d="M170 58v10" stroke="rgba(255,255,255,.55)" stroke-width="4" stroke-linecap="round"/>
+      <g font-family="Anuphan, sans-serif" font-weight="800" font-size="26" text-anchor="middle">
+        <rect x="23" y="74" width="42" height="42" rx="11" fill="#fff"/><text x="44" y="104" fill="#2F6B8A">ก</text>
+        <rect x="73" y="74" width="42" height="42" rx="11" fill="#fff"/><text x="94" y="104" fill="#1F7A6B">ข</text>
+        <rect x="123" y="74" width="42" height="42" rx="11" fill="#fff"/><text x="144" y="104" fill="#B7791F">ค</text>
+        <rect x="175" y="74" width="42" height="42" rx="11" fill="#fff"/><text x="196" y="104" fill="#6B4E9B">ง</text>
+        <rect x="225" y="74" width="42" height="42" rx="11" fill="#fff"/><text x="246" y="104" fill="#B5532F">จ</text>
+        <rect x="275" y="74" width="42" height="42" rx="11" fill="#fff"/><text x="296" y="104" fill="#A4476F">ฉ</text>
       </g>
-      <g transform="translate(26 44)">
-        <circle cx="22" cy="18" r="13" fill="#F0C84B"/><path d="M0 62c2-18 10-26 22-26s20 8 22 26z" fill="#F0C84B"/>
-        <circle cx="62" cy="26" r="11" fill="rgba(255,255,255,.75)"/><path d="M44 62c2-15 8-22 18-22s16 7 18 22z" fill="rgba(255,255,255,.75)"/>
-      </g>
-      <g transform="translate(244 30)">
-        <rect x="0" y="6" width="46" height="60" rx="6" fill="#fff"/><path d="M9 20h28M9 31h28M9 42h16" stroke="#CFCBBF" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="54" r="8" fill="#0F5132"/>
-        <path d="M66 22l18 7v13c0 11-7 19-18 23-11-4-18-12-18-23V29z" fill="#F0C84B" stroke="#1C4257" stroke-width="3" stroke-linejoin="round"/><path d="M58 43l6 6 11-12" fill="none" stroke="#1C4257" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <path d="M96 96h18M226 96h14" stroke="rgba(255,255,255,.35)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11"/>
     </svg>
   </header>
 
-  <nav class="steps" id="steps" aria-label="เรื่องในบทนี้">
-    <a href="#s1"><i>1</i>ผู้ทำบัญชี</a><a href="#s2"><i>2</i>จดทะเบียน</a><a href="#s3"><i>3</i>หลักประกัน</a><a href="#s4"><i>4</i>ทุกปี</a><a href="#s5"><i>5</i>รับผิด</a>
+  <nav class="steps x04-steps" id="steps" aria-label="ส่วนของสถานีนี้">
+    <a href="#s1"><i>1</i>คืออะไร</a><a href="#s2"><i>2</i>ใครบ้าง</a><a href="#s3" aria-label="หลัก ก ความซื่อสัตย์สุจริต"><i>ก</i></a><a href="#s4" aria-label="หลัก ข ความเที่ยงธรรมและความเป็นอิสระ"><i>ข</i></a><a href="#s5" class="x04-dot" aria-label="ลองแยก ก กับ ข"><i></i></a><a href="#s6" aria-label="หลัก ค ความรู้ ความสามารถ ความเอาใจใส่"><i>ค</i></a><a href="#s7" aria-label="หลัก ง การรักษาความลับ"><i>ง</i></a><a href="#s8" class="x04-dot" aria-label="ลองแยก ค กับ ง"><i></i></a><a href="#s9" aria-label="หลัก จ พฤติกรรมทางวิชาชีพ"><i>จ</i></a><a href="#s10" aria-label="หลัก ฉ ความโปร่งใส"><i>ฉ</i></a><a href="#s11" class="x04-dot" aria-label="ลองแยก จ กับ ฉ"><i></i></a>
   </nav>
 
-  <!-- ภาพหลัก: ตารางสองแกน งาน × มีนิติบุคคลให้บริการหรือไม่ -->
+  <!-- ทั้งสถานีในภาพเดียว -->
   <section class="fig" aria-labelledby="f0">
-    <span class="fno">ภาพรวมของบท</span>
-    <h2 id="f0">งานอะไร ใครเป็นผู้ให้บริการ ต้องมีอะไร</h2>
-    <p class="cap">หลายปีต่อมา แพรเป็นผู้สอบบัญชีรับอนุญาตแล้ว และตั้งบริษัทจำกัดรับสอบบัญชี บริษัทของแพรอยู่ช่องขวาบน แตะช่องอื่นเพื่อเทียบ</p>
-    <p class="lbl">สอบบัญชี คือตรวจสอบบัญชีของกิจการแล้วแสดงความเห็นในฐานะผู้สอบบัญชี · ทำบัญชี คือจัดทำบัญชีของกิจการ</p>
-    <div class="x04-grid" data-pick="cell">
-      <span></span>
-      <span class="x04-colh">ไม่มีนิติบุคคลให้บริการ</span>
-      <span class="x04-colh">นิติบุคคลให้บริการ<small>บริษัท ห้างหุ้นส่วน</small></span>
-      <span class="x04-rowh"><span data-ico="star"></span>สอบบัญชี</span>
-      <button data-v="0" aria-label="สอบบัญชี ไม่มีนิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i data-ico="pen"></i><i data-ico="shield"></i><i data-ico="flag"></i><i data-ico="bag"></i></span>ดูที่ตัวคน</button>
-      <button data-v="1" aria-pressed="true" aria-label="สอบบัญชี นิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i class="x04-lit" data-ico="pen"></i><i class="x04-lit" data-ico="shield"></i><i class="x04-lit" data-ico="flag"></i><i class="x04-lit" data-ico="bag"></i></span>ดูตัวคนและนิติบุคคล</button>
-      <span class="x04-rowh"><span data-ico="book"></span>ทำบัญชี</span>
-      <button data-v="2" aria-label="ทำบัญชี ไม่มีนิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i data-ico="pen"></i><i data-ico="shield"></i><i data-ico="flag"></i><i data-ico="bag"></i></span>ดูที่ตัวคน</button>
-      <button data-v="3" aria-label="ทำบัญชี นิติบุคคลให้บริการ"><span class="x04-pips" aria-hidden="true"><i class="x04-lit" data-ico="card"></i><i class="x04-lit" data-ico="pen"></i><i class="x04-lit" data-ico="shield"></i><i data-ico="flag"></i><i data-ico="bag"></i></span>ดูตัวคนและนิติบุคคล</button>
+    <span class="fno">ทั้งสถานีในภาพเดียว</span>
+    <h2 id="f0">งบการเงินหนึ่งฉบับ ผ่านมือสามคน</h2>
+    <p class="cap">บริษัท พาวเด้ออ้าย จำกัด ขายแป้ง กำลังจะขอสินเชื่อ ธนาคารขอดูงบการเงินที่ผู้สอบบัญชีตรวจแล้ว</p>
+    <div class="x04-trio">
+      <div><span class="x04-fc" data-x04f="pring"></span><b>พริ้ง</b><small>เจ้าของบริษัท</small><em>อยากให้กู้ผ่าน</em></div>
+      <div><span class="x04-fc" data-x04f="pete"></span><b>พีท</b><small>ผู้ทำบัญชีของบริษัท</small><em>ทำงบเสร็จแล้ว</em></div>
+      <div><span class="x04-fc" data-x04f="pam"></span><b>พี่แพม</b><small>ผู้สอบบัญชีรับอนุญาต</small><em>กำลังจะตรวจงบนี้</em></div>
     </div>
-    <p class="lbl">จุดสีเข้ม คือข้อที่ใช้กับช่องนั้น เรียงตามรายการข้างล่าง</p>
-    <div class="x04-out" role="status">
-      <b id="cellT"></b><span id="cellS"></span>
-      <ul class="x04-reqs" id="cellR"></ul>
+    <p class="cap">ตอนเริ่มเรื่อง ยังไม่มีใครทำอะไรผิด สถานีนี้เดินตามลำดับข้างล่าง แตะเพื่อไปดู</p>
+    <div class="map">
+      <span class="pinp"><span data-x04f="pete"></span>พีทอยู่ตรงนี้ ยังไม่รู้ว่าจรรยาบรรณเกี่ยวกับตัวเองไหม</span>
+      <a class="nd" href="#s1"><span class="num">1</span><b>จรรยาบรรณคืออะไร</b><small>มาจากไหน ไม่ทำตามแล้วเป็นอย่างไร</small></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s2"><span class="num">2</span><b>ใครอยู่ใต้จรรยาบรรณบ้าง</b><small>สามคนนี้ ใครอยู่ ใครไม่อยู่</small></a>
+      <span class="ln"></span>
+      <p class="x04-mh">แล้วไล่หลักหกข้อ ทีละคู่</p>
+      <div class="x04-pair">
+        <a class="x04-pt x04-pa" href="#s3"><i class="x04-L">ก</i><b>ความซื่อสัตย์สุจริต</b><small>ตรงไปตรงมา จริงใจ</small></a>
+        <a class="x04-pt x04-pb" href="#s4"><i class="x04-L">ข</i><b>ความเที่ยงธรรมและความเป็นอิสระ</b><small>ตัดสินด้วยดุลยพินิจของตัวเอง</small></a>
+        <a class="x04-try" href="#s5">ลองแยก ก กับ ข</a>
+      </div>
+      <span class="ln"></span>
+      <div class="x04-pair">
+        <a class="x04-pt x04-pc" href="#s6"><i class="x04-L">ค</i><b>ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน</b><small>รู้จริง ทำครบ ตามมาตรฐาน</small></a>
+        <a class="x04-pt x04-pd" href="#s7"><i class="x04-L">ง</i><b>การรักษาความลับ</b><small>ไม่เปิดเผย ไม่เอาไปใช้</small></a>
+        <a class="x04-try" href="#s8">ลองแยก ค กับ ง</a>
+      </div>
+      <span class="ln"></span>
+      <div class="x04-pair">
+        <a class="x04-pt x04-pe" href="#s9"><i class="x04-L">จ</i><b>พฤติกรรมทางวิชาชีพ</b><small>ทำตามกฎหมาย ไม่ทำให้วิชาชีพเสียชื่อ</small></a>
+        <a class="x04-pt x04-pf" href="#s10"><i class="x04-L">ฉ</i><b>ความโปร่งใส</b><small>ไม่ปกปิด ไม่บิดเบือน</small></a>
+        <a class="x04-try" href="#s11">ลองแยก จ กับ ฉ</a>
+      </div>
     </div>
   </section>
 
-  <!-- เรื่องที่ 1 ผู้ทำบัญชี -->
+  <!-- 1 จรรยาบรรณคืออะไร -->
   <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
-    <div class="sechd"><i>1</i><div><small>เรื่องที่ 1 · ตัวคน ฝั่งทำบัญชี</small><h2 id="h1">ผู้ทำบัญชี เป็นสมาชิกหรือขึ้นทะเบียน อย่างเดียวก็พอ</h2></div></div>
-    <p class="note"><span data-ico="info"></span><span>ผู้ทำบัญชี คือผู้รับผิดชอบในการทำบัญชีของผู้มีหน้าที่จัดทำบัญชี เช่น บริษัทจำกัด ไม่ว่าจะทำในฐานะลูกจ้างของผู้นั้นหรือไม่ก็ตาม <span class="law">พ.ร.บ. ม.4</span> <span class="law">พ.ร.บ.การบัญชี ม.4 · ม.8</span></span></p>
-    <p class="cap">พีทเป็นพนักงานของบริษัท พาวเด้ออ้าย จำกัด บริษัทขายแป้งของพริ้ง รับผิดชอบทำบัญชีของบริษัทนั้น จึงเป็นผู้ทำบัญชี พีทไม่ได้เป็นสมาชิกสภาฯ แต่ขึ้นทะเบียนไว้ ลองปิดและเปิดทีละอย่าง</p>
-    <div class="togs" data-togs="bk">
-      <button data-k="mem" aria-pressed="false"><span>พีทเป็นสมาชิกสภาฯ<small>สมัครสมาชิกตามบทที่ 1</small></span></button>
-      <button data-k="reg" aria-pressed="true"><span>พีทขึ้นทะเบียนเป็นผู้ทำบัญชีไว้กับสภาฯ<small>มีบัตรประจำตัวผู้ขึ้นทะเบียนของปีนี้</small></span></button>
+    <div class="sechd"><i>1</i><div><small>ก่อนเข้าหกหลัก</small><h2 id="h1">จรรยาบรรณคืออะไร</h2></div></div>
+    <p class="cap">คือกติกาความประพฤติของคนทำงานวิชาชีพบัญชี กฎหมายสั่งให้สภาวิชาชีพบัญชีเป็นคนจัดทำ ที่มามีสามชั้นตามภาพ ส่วนสภาวิชาชีพบัญชีคืออะไร อยู่<a href="law2v-r06.html">สถานี 1.6</a> ตอนนี้รู้แค่ว่าเป็นคนออกกติกานี้ก็พอ</p>
+    <div class="x04-lays">
+      <div class="x04-lay"><span class="ico" data-ico="scale"></span><div><small>ชั้นที่ 1 · กฎหมาย</small><b>พระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</b><span class="x04-t">สั่งให้สภาวิชาชีพบัญชีจัดทำจรรยาบรรณ และให้คนในวิชาชีพมีหน้าที่ต้องทำตาม พร้อมกับทำหน้าที่ตามมาตรฐานการบัญชี มาตรฐานการสอบบัญชี หรือมาตรฐานอื่นที่เกี่ยวข้อง</span><span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46 · ม.47</span></div></div>
+      <span class="x04-dn" aria-hidden="true"></span>
+      <div class="x04-lay x04-main"><span class="ico" data-ico="book"></span><div><small>ชั้นที่ 2 · ตัวจรรยาบรรณ</small><b>ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</b><span class="x04-t">แกนคือหลักการพื้นฐานหกข้อ แตะตัวอักษรเพื่อไปดูข้อนั้น</span><span class="law">ข้อ 9</span></div>
+        <div class="x04-six"><a class="x04-pa" href="#s3" aria-label="หลัก ก">ก</a><a class="x04-pb" href="#s4" aria-label="หลัก ข">ข</a><a class="x04-pc" href="#s6" aria-label="หลัก ค">ค</a><a class="x04-pd" href="#s7" aria-label="หลัก ง">ง</a><a class="x04-pe" href="#s9" aria-label="หลัก จ">จ</a><a class="x04-pf" href="#s10" aria-label="หลัก ฉ">ฉ</a></div></div>
+      <span class="x04-dn" aria-hidden="true"></span>
+      <div class="x04-lay"><span class="ico" data-ico="search"></span><div><small>ชั้นที่ 3 · คำอธิบายและตัวอย่าง</small><b>คู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี</b><span class="x04-t">เป็นของสภาวิชาชีพบัญชีเหมือนกัน เมื่อมีปัญหาเกี่ยวกับการปฏิบัติตามข้อบังคับ คณะกรรมการสภาวิชาชีพบัญชีวินิจฉัยโดยใช้คู่มือนี้เป็นแนวทาง</span><span class="law">ข้อ 8 ของข้อบังคับ</span></div></div>
     </div>
-    <div>
-      <div class="x04-orwrap">
-        <div class="conds two">
-          <div class="cond" id="d0"><span class="mk"></span><span class="ico" data-ico="card"></span><span>เป็นสมาชิกสภาฯ<small>ม.44</small></span></div>
-          <div class="cond" id="d1"><span class="mk"></span><span class="ico" data-ico="pen"></span><span>ขึ้นทะเบียนไว้กับสภาฯ<small>ม.44</small></span></div>
-        </div>
-        <span class="x04-or">หรือ</span>
-      </div>
-      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="k0" d="M75 0C75 18 150 12 150 30"/><path id="k1" d="M225 0C225 18 150 12 150 30"/></svg>
-      <div class="gate" id="gate1" role="status"><span data-door></span><div><b id="gate1T"></b><span id="gate1S"></span></div></div>
+    <p class="lbl">ป้ายเล็กท้ายข้อความในหน้านี้ บอกว่าข้อความนั้นมาจากชั้นไหน</p>
+    <ul class="x04-key">
+      <li><span class="law">ม.46</span><span>ม. คือมาตราของพระราชบัญญัติ ชั้นที่ 1</span></li>
+      <li><span class="law">ข้อ 9</span><span>ข้อ คือข้อของข้อบังคับ ชั้นที่ 2</span></li>
+      <li><span class="law">R111.2</span><span>เลขที่มีจุด คือย่อหน้าของคู่มือ ชั้นที่ 3</span></li>
+    </ul>
+    <div class="cons">
+      <b>สองเรื่องที่ควรรู้ก่อนไปต่อ</b>
+      <div class="cg ok"><span class="ico" data-ico="users"></span><div><b>ทำหน้าที่เพื่อประโยชน์สาธารณะ</b><span>ข้อบังคับเขียนว่า ผู้ประกอบวิชาชีพบัญชีต้องปฏิบัติหน้าที่เพื่อประโยชน์สาธารณะ <span class="law">ข้อ 5</span></span></div></div>
+      <div class="cg lock"><span class="ico" data-ico="flag"></span><div><b>ไม่ทำตาม ถือว่าประพฤติผิดจรรยาบรรณ</b><span>ไม่ทำตามจรรยาบรรณ หรือมาตรฐาน อย่างใดอย่างหนึ่งก็ถือว่าประพฤติผิด และมีโทษ เรื่องโทษอยู่<a href="law2v-r05.html">สถานีถัดไป</a> <span class="law">ม.46 วรรคสอง · ม.49</span></span></div></div>
     </div>
-    <details class="x04-more">
-      <summary>ทางขึ้นทะเบียน ต้องมีคุณสมบัติอะไร</summary>
-      <ul class="needs">
-        <li><span class="hd">ผู้ทำบัญชีที่จะขึ้นทะเบียน <span class="law">พ.ร.บ. ม.45</span></span></li>
-        <li><span class="mk" data-ico="check"></span><span>มีภูมิลำเนาหรือถิ่นที่อยู่ในราชอาณาจักร</span></li>
-        <li><span class="mk" data-ico="check"></span><span>มีความรู้ภาษาไทยเพียงพอที่จะทำบัญชีเป็นภาษาไทยได้</span></li>
-        <li><span class="mk" data-ico="check"></span><span>ไม่เคยต้องคำพิพากษาถึงที่สุดให้จำคุกในความผิดตามที่มาตรา 39 (3) กำหนด เช่น ความผิดตามกฎหมายว่าด้วยการบัญชี เว้นแต่ต้องคำพิพากษาหรือพ้นโทษมาแล้วไม่น้อยกว่า 3 ปี</span></li>
-        <li><span class="mk" data-ico="check"></span><span>มีวุฒิการศึกษาเช่นเดียวกับวุฒิของผู้ทำบัญชีตามประกาศของกรมพัฒนาธุรกิจการค้า ซึ่งออกตามกฎหมายว่าด้วยการบัญชี <span class="law">ข้อบังคับผู้ทำบัญชี ข้อ 6</span></span></li>
-        <li><span class="mk" data-ico="check"></span><span>ไม่มีลักษณะต้องห้ามอื่นตามที่กำหนดในข้อบังคับสภาฯ</span></li>
-        <li><span class="mk i" data-ico="info"></span><span>ผู้ไม่มีสัญชาติไทย ต้องมีความรู้เกี่ยวกับมาตรฐานการรายงานทางการเงินและกฎหมายภาษีอากรของประเทศไทยด้วย <span class="law">ข้อ 5 วรรคสอง</span></span></li>
+    <details class="src x04-fold">
+      <summary>กฎหมายกำหนดว่าจรรยาบรรณอย่างน้อยต้องมีเรื่องอะไร</summary>
+      <p>มาตรา 47 ให้จรรยาบรรณอย่างน้อยมีข้อกำหนดสี่เรื่อง <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.47</span></p>
+      <ul>
+        <li>(1) ความโปร่งใส ความเป็นอิสระ ความเที่ยงธรรม และความซื่อสัตย์สุจริต</li>
+        <li>(2) ความรู้ความสามารถและมาตรฐานในการปฏิบัติงาน</li>
+        <li>(3) ความรับผิดชอบต่อผู้รับบริการและการรักษาความลับ</li>
+        <li>(4) ความรับผิดชอบต่อผู้ถือหุ้น ผู้เป็นหุ้นส่วน หรือบุคคลหรือนิติบุคคลที่ผู้ประกอบวิชาชีพบัญชีปฏิบัติหน้าที่ให้</li>
       </ul>
-      <p>คนที่เคยถูกเพิกถอนการขึ้นทะเบียน หรือถูกสั่งให้พ้นจากการเป็นสมาชิก เพราะโทษจรรยาบรรณ <span class="law">ข้อ 5 วรรคสาม</span></p>
-      <ul class="x04-ifs">
-        <li><span>ได้รับโทษมาแล้วไม่น้อยกว่า 3 ปี</span><span>ขอขึ้นทะเบียนได้</span></li>
-        <li><span>ถ้าคณะกรรมการสภาฯ ปฏิเสธ</span><span>ยื่นคำขอได้อีกเมื่อสิ้น 1 ปีนับจากวันที่ปฏิเสธ</span></li>
-        <li><span>ถ้าถูกปฏิเสธเป็นครั้งที่สอง</span><span>หมดสิทธิขอขึ้นทะเบียนอีกต่อไป</span></li>
+      <p>คำวินิจฉัยของคณะกรรมการสภาวิชาชีพบัญชีตามข้อ 8 <span class="law">ข้อ 8</span></p>
+      <span>ข้อบังคับให้ถือว่าเป็นที่สุด</span>
+    </details>
+    <p class="cap">รู้แล้วว่ากติกานี้มาจากไหน คำถามถัดไปคือ ใช้กับใคร ต่อจากนี้เรียกสภาวิชาชีพบัญชีว่า สภาฯ</p>
+  </section>
+
+  <!-- 2 ใครอยู่ใต้ -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>ก่อนเข้าหกหลัก</small><h2 id="h2">ใครอยู่ใต้จรรยาบรรณบ้าง</h2></div></div>
+    <p class="cap">กติกานี้ไม่ได้ใช้กับทุกคนในเรื่อง ดูทีละคน เริ่มที่พีท</p>
+    <div class="case" id="case2" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · เลือกคน</p>
+    <div class="who x04-who" data-pick="x04who">
+      <button data-v="0" aria-pressed="true"><span class="x04-fc" data-x04f="pete"></span><span><b>พีท</b><small>ผู้ทำบัญชีของบริษัท</small></span></button>
+      <button data-v="1"><span class="x04-fc" data-x04f="pam"></span><span><b>พี่แพม</b><small>ผู้สอบบัญชีของบริษัท</small></span></button>
+      <button data-v="2"><span class="x04-fc" data-x04f="pring"></span><span><b>พริ้ง</b><small>เจ้าของบริษัท</small></span></button>
+      <button data-v="3"><span class="x04-fc x04-gen" data-ico="tool"></span><span><b>อีกคนหนึ่ง</b><small>รับวางระบบบัญชี</small></span></button>
+    </div>
+    <div class="x04-rule"><small>หลัก</small><span>ทำงานวิชาชีพบัญชีด้านใดด้านหนึ่ง หรือขึ้นทะเบียนไว้กับสภาฯ เข้าข้อเดียวก็อยู่ใต้จรรยาบรรณ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46</span></span></div>
+    <div class="x04-umb">
+      <div class="x04-can"><svg viewBox="0 0 300 64" aria-hidden="true"><path d="M4 60C24-14 276-14 296 60q-18.250-14-36.500 0q-18.250-14-36.500 0q-18.250-14-36.500 0q-18.250-14-36.500 0q-18.250-14-36.500 0q-18.250-14-36.500 0q-18.250-14-36.500 0q-18.250-14-36.500 0z" fill="#1C4257"/></svg><b>จรรยาบรรณ</b></div>
+      <span class="x04-pole" aria-hidden="true"></span>
+      <div class="x04-under">
+        <div class="x04-slot" id="slotIn"></div>
+        <p class="x04-g">ทำงานวิชาชีพบัญชีด้านใดด้านหนึ่ง <span class="law">ข้อ 4</span></p>
+        <div class="x04-fd"><span id="fd0">การทำบัญชี</span><span id="fd1">การสอบบัญชี</span><span id="fd2">การบัญชีบริหาร</span><span id="fd3">การวางระบบบัญชี</span><span id="fd4">การบัญชีภาษีอากร</span><span id="fd5">การศึกษาและเทคโนโลยีการบัญชี</span><span id="fd6">บริการเกี่ยวกับการบัญชีด้านอื่น ตามที่กฎกระทรวงกำหนด</span></div>
+        <span class="x04-or">หรือ</span>
+        <div class="x04-fd"><span id="fd7">ขึ้นทะเบียนไว้กับสภาฯ</span></div>
+        <small class="x04-gs">คนจะเป็นผู้ทำบัญชีได้ ต้องเป็นสมาชิกสภาฯ หรือขึ้นทะเบียนไว้กับสภาฯ อย่างใดอย่างหนึ่ง พีทเลือกขึ้นทะเบียน <span class="law">ม.44</span></small>
+      </div>
+      <div class="x04-rain"><b>นอกร่ม</b><span>ไม่ได้ทำงานวิชาชีพบัญชี และไม่ได้ขึ้นทะเบียนไว้กับสภาฯ</span><div class="x04-slot" id="slotOut"></div></div>
+    </div>
+    <div class="x04-res" id="res2" role="status"><span class="x04-ri"></span><div><b></b><span></span></div></div>
+    <p class="note"><span data-ico="info"></span><span>ข้อบังคับเรียกคนทั้งสองกลุ่มรวมกันว่า ผู้ประกอบวิชาชีพบัญชี คำนี้อยู่ในถ้อยคำของข้อบังคับที่จะเห็นต่อจากนี้ <span class="law">ข้อ 4</span></span></p>
+    <p class="note"><span data-ico="users"></span><span>ไม่ได้ลงมือเองก็ยังนับ สิ่งที่ข้อบังคับให้เราทำหรือให้งดเว้น รวมถึงการกระทำของคนอื่นด้วย ถ้าเรารับรู้การกระทำนั้น หรือเรายินยอมให้เขาอ้างอิงชื่อเรา <span class="law">ข้อ 6</span></span></p>
+    <div id="ck2"></div>
+    <details class="src x04-fold">
+      <summary>ถ้อยคำเต็มของคำว่า ผู้ประกอบวิชาชีพบัญชี และคนที่นับเพิ่มในขั้นพิจารณา</summary>
+      <p>มาตรา 46 ของพระราชบัญญัติ <span class="law">พ.ร.บ.วิชาชีพบัญชี ม.46</span></p>
+      <span>ผู้ประกอบวิชาชีพบัญชี หรือผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี มีหน้าที่ต้องปฏิบัติตามจรรยาบรรณ</span>
+      <p>ข้อ 4 ของข้อบังคับจรรยาบรรณ <span class="law">ข้อ 4</span></p>
+      <span>“ผู้ประกอบวิชาชีพบัญชี” หมายความว่า ผู้ประกอบวิชาชีพบัญชีด้านการทำบัญชี ด้านการสอบบัญชี ด้านการบัญชีบริหาร ด้านการวางระบบบัญชี ด้านการบัญชีภาษีอากร ด้านการศึกษาและเทคโนโลยีการบัญชี และบริการเกี่ยวกับการบัญชีด้านอื่นตามที่กฎกระทรวงกำหนดให้เป็นวิชาชีพบัญชี และให้หมายความรวมถึงผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชีด้วย</span>
+      <p>ข้อบังคับเรื่องการพิจารณาเกี่ยวกับจรรยาบรรณ <span class="law">ข้อบังคับ (ฉบับที่ 12) ข้อ 3</span></p>
+      <span>ในขั้นพิจารณา ผู้ประกอบวิชาชีพบัญชีรวมถึงหัวหน้าคณะบุคคล หัวหน้าสำนักงาน หรือผู้มีอำนาจกระทำการแทนนิติบุคคลตามมาตรา 11 ด้วย และผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี หมายถึงผู้ซึ่งขึ้นทะเบียนเพื่อเป็นผู้ทำบัญชีตามมาตรา 44 หรือที่จะมีการตราพระราชกฤษฎีกาตามมาตรา 9</span>
+    </details>
+    <p class="cap">พีทกับพี่แพมอยู่ใต้ แล้วกติกานี้ให้สองคนทำอะไร เริ่มที่คำขอของพริ้ง</p>
+  </section>
+
+  <!-- 3 หลัก (ก) -->
+  <section class="fig x04-pa" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="x04-hd"><i class="x04-L" aria-hidden="true">ก</i><div><small>หลักข้อ (ก)</small><h2 id="h3">ความซื่อสัตย์สุจริต</h2></div></div>
+    <p class="x04-about"><b>เกี่ยวกับ</b> การตรงไปตรงมา และไม่เข้าไปเกี่ยวข้องกับข้อมูลที่ทำให้คนอ่านเข้าใจผิด</p>
+    <p class="cap">ธนาคารอยากเห็นยอดขายสูงกว่านี้ พริ้งจึงขอให้พีทแก้ยอดขายในงบ พีททำตามไม่ได้ เพราะส่วนที่เพิ่มไม่มีการขายจริง ดูโจทย์ แล้วลองเปลี่ยนสองเรื่องข้างล่าง</p>
+    <div class="case" id="case3" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · ถ้าเอกสารการขายรวมได้มากกว่านี้ล่ะ</p>
+    <div class="nums" data-nums="x04doc"><div data-k="d" data-min="1200000" data-max="1800000" data-step="100000" data-v="1200000" data-unit="บาท">เอกสารการขายของเดือนนี้ รวมได้<small>คือการขายที่เกิดขึ้นจริง บัญชีเดิมลงไว้ 1,200,000 บาท</small></div></div>
+    <p class="lbl">ใครอยากให้แก้</p>
+    <div class="chips" data-pick="x04ask">
+      <button data-v="0" aria-pressed="true">พริ้งเป็นคนขอ (ตัวอย่าง)</button>
+      <button data-v="1">ไม่มีใครขอ พีทคิดเอง</button>
+    </div>
+    <div class="x04-rule"><small>หลัก</small><span>ดูว่างบหลังแก้ ตรงกับการขายที่เกิดขึ้นจริงไหม ใครอยากให้แก้ไม่เปลี่ยนผล</span></div>
+    <div class="x04-bars" id="bars3" role="img" aria-label="">
+      <div class="x04-br"><div class="x04-bt"><span>งบหลังแก้</span><b>1,500,000</b></div><div class="x04-tk"><i class="x04-real" id="aReal"></i><i class="x04-fake" id="aFake"></i></div></div>
+      <span class="x04-sign" id="sign3"><i id="sign3I"></i><span id="sign3T"></span></span>
+      <div class="x04-br"><div class="x04-bt"><span>เอกสารการขายรวม</span><b id="bDocV"></b></div><div class="x04-tk"><i class="x04-real" id="bReal"></i><i class="x04-left" id="bLeft"></i></div></div>
+      <ul class="x04-lg"><li><i class="x04-real"></i>ขายจริง และอยู่ในงบ</li><li><i class="x04-fake"></i>อยู่ในงบ แต่ไม่มีการขายจริง</li><li><i class="x04-left"></i>ขายจริง แต่ยังไม่อยู่ในงบ</li></ul>
+    </div>
+    <div class="gate" id="g3" role="status"><span data-door></span><div><b id="g3T"></b><span id="g3S"></span></div></div>
+    <p class="x04-laws" id="g3L" aria-live="polite"></p>
+    <div class="x04-same" id="same3" role="status"></div>
+    <p class="note"><span data-ico="info"></span><span>ประพฤติตนอย่างตรงไปตรงมา จริงใจในความสัมพันธ์ทั้งมวล ทั้งทางวิชาชีพและทางธุรกิจ <span class="law">ข้อ 9 (ก)</span></span></p>
+    <p class="lbl">คู่มือของสภาฯ ขยายว่า ต้องไม่เข้าไปเกี่ยวข้องทั้งที่รู้ กับรายงาน แบบแสดงรายการภาษี หรือข้อมูลอื่น ที่เป็นแบบนี้ <span class="law">R111.2</span></p>
+    <ul class="x04-eg">
+      <li><span class="x04-m" data-ico="x"></span><span>มีข้อผิดพลาดที่มีสาระสำคัญ หรือทำให้เกิดความเข้าใจผิด</span></li>
+      <li><span class="x04-m" data-ico="x"></span><span>จัดทำขึ้นโดยไม่ไตร่ตรอง</span></li>
+      <li><span class="x04-m" data-ico="x"></span><span>ละเว้นหรือปิดบังข้อมูลที่จำเป็นต้องมี จนอาจทำให้เกิดความเข้าใจผิด</span></li>
+    </ul>
+    <p class="note"><span data-ico="clock"></span><span>ถ้าเพิ่งรู้ทีหลังว่าเกี่ยวข้องกับข้อมูลแบบนี้ไปแล้ว ต้องดำเนินการเพื่อยุติการเกี่ยวข้องกับข้อมูลนั้น <span class="law">R111.3</span></span></p>
+    <p class="cap">พีทไม่แก้ งบจึงไปถึงพี่แพมตามจริง คราวนี้พริ้งเตรียมของขวัญไว้ให้พี่แพม</p>
+  </section>
+
+  <!-- 4 หลัก (ข) -->
+  <section class="fig x04-pb" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="x04-hd"><i class="x04-L" aria-hidden="true">ข</i><div><small>หลักข้อ (ข)</small><h2 id="h4">ความเที่ยงธรรมและความเป็นอิสระ</h2></div></div>
+    <p class="x04-about"><b>เกี่ยวกับ</b> การตัดสินใจด้วยดุลยพินิจของตัวเอง คือใช้ความรู้และข้อเท็จจริงตัดสิน ไม่ให้อย่างอื่นมาตัดสินแทน คนสอบบัญชีมีข้อเพิ่ม ต้องเป็นอิสระจากลูกค้าที่ตัวเองตรวจ</p>
+    <p class="cap">งบไปถึงพี่แพมแล้ว ระหว่างตรวจ พริ้งส่งนาฬิกาเรือนแพงมาให้ พี่แพมรับไม่ได้ เพราะคนสอบบัญชีต้องเป็นอิสระจากลูกค้าที่ตัวเองตรวจ ดูโจทย์ แล้วลองเปลี่ยนสิ่งที่อยู่ระหว่างสองฝ่าย</p>
+    <div class="case" id="case4" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · สิ่งที่อยู่ระหว่างบริษัทกับพี่แพม</p>
+    <div class="chips x04-long" data-pick="x04tie">
+      <span class="x04-grp">ของขวัญ</span>
+      <button data-v="0" aria-pressed="true">นาฬิกาเรือนแพง (ตัวอย่าง)</button>
+      <button data-v="1">ชิ้นเล็ก ไม่หวังผล</button>
+      <button data-v="2">ชิ้นเล็ก แต่หวังให้ตรวจเบาลง</button>
+      <span class="x04-grp">หุ้น</span>
+      <button data-v="3">สามีของพี่แพมถือหุ้นบริษัทนี้</button>
+      <span class="x04-grp">ค่าสอบบัญชี</span>
+      <button data-v="4">ตกลงกันตามปกติ</button>
+      <button data-v="5">ได้เพิ่มถ้ากู้ผ่าน</button>
+    </div>
+    <div class="x04-rule" aria-live="polite"><small>หลัก</small><span id="rule4"></span></div>
+    <div class="x04-strip" aria-hidden="true">
+      <div class="x04-tile"><span class="x04-av" id="coAv"></span><b>บริษัท พาวเด้ออ้าย จำกัด</b><small>ลูกค้างานสอบบัญชี</small></div>
+      <div class="x04-link" id="lnk4"><span class="x04-tok" id="tok4"></span><svg class="x04-ar" viewBox="0 0 88 12"><path d="M4 6h78M74 1l8 5-8 5"/></svg><span id="lnk4T"></span></div>
+      <div class="x04-tile"><span class="x04-av" data-x04f="pam"></span><b>พี่แพม</b><small>ผู้สอบบัญชีของบริษัทนี้</small></div>
+    </div>
+    <div class="x04-res" id="res4" role="status"><span class="x04-ri"></span><div><b></b><span></span></div></div>
+    <p class="note"><span data-ico="info"></span><span>ผู้ให้บริการงานให้ความเชื่อมั่น เช่น งานสอบบัญชี ต้องเป็นอิสระจากลูกค้างานนั้น ทั้งทางด้านจิตใจ และในเชิงประจักษ์ คือที่คนอื่นมองเห็น เพื่อแสดงให้ผู้อื่นเห็นว่าได้ข้อสรุปโดยปราศจากความลำเอียง ส่วนคนที่กิจการว่าจ้างอย่างพีท ต้องคำนึงถึงความเป็นอิสระในการปฏิบัติงานด้วย <span class="law">ข้อ 9 (ข)</span></span></p>
+    <div id="ck4"></div>
+    <p class="cap">ความเป็นอิสระจากลูกค้าเป็นเรื่องของงานอย่างงานสอบบัญชี ตัวหลัก (ข) กว้างกว่านั้น คือไม่ให้สามอย่างนี้มาลบล้างดุลยพินิจ</p>
+    <div>
+      <div class="conds">
+        <div class="cond no"><span class="mk" data-ico="x"></span><span class="ico" data-ico="scale"></span><span>อคติ</span></div>
+        <div class="cond no"><span class="mk" data-ico="x"></span><span class="ico" data-ico="coin"></span><span>ความขัดแย้งทางผลประโยชน์</span></div>
+        <div class="cond no"><span class="mk" data-ico="x"></span><span class="ico" data-ico="hand"></span><span>อิทธิพลอันเกินควรของบุคคลอื่น</span></div>
+      </div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="no" d="M50 0C50 18 150 12 150 30"/><path class="no" d="M150 0V30"/><path class="no" d="M250 0C250 18 150 12 150 30"/></svg>
+      <div class="x04-core"><span class="ico" data-ico="shield"></span><div><b>ดุลยพินิจของเรา</b><span>สามอย่างข้างบนต้องไม่มาลบล้างการใช้ดุลยพินิจทางวิชาชีพ หรือทางธุรกิจ <span class="law">ข้อ 9 (ข)</span></span></div></div>
+    </div>
+    <p class="lbl">อย่างที่สองในภาพ ความขัดแย้งทางผลประโยชน์ เกิดได้สองแบบ <span class="law">ข้อ 15</span></p>
+    <ul class="x04-eg">
+      <li><span class="x04-m" data-ico="users"></span><span>ทำงานที่เกี่ยวกับสองฝ่ายขึ้นไป ซึ่งผลประโยชน์ในเรื่องนั้นขัดกัน เช่น ให้บริการทั้งผู้ขายและผู้ซื้อในรายการเดียวกัน <span class="law">310.4 A1</span></span></li>
+      <li><span class="x04-m" data-ico="user"></span><span>ผลประโยชน์ของเราเอง ขัดกับของคนที่เราทำงานให้ เช่น เป็นคนเลือกผู้ขายให้บริษัท แล้วคู่สมรสอาจได้ประโยชน์ทางการเงินจากการเลือกนั้น <span class="law">210.4 A1</span></span></li>
+    </ul>
+    <details class="src x04-fold">
+      <summary>ข้อกำหนดอื่นของคู่มือ ที่อยู่ใต้หลักนี้</summary>
+      <ul>
+        <li>ต้องไม่ดำเนินกิจกรรมทางวิชาชีพ ถ้าเหตุการณ์แวดล้อมหรือความสัมพันธ์ทำให้เกิดอิทธิพลอันเกินควรต่อดุลยพินิจทางวิชาชีพที่เกี่ยวข้องกับกิจกรรมนั้น <span class="law">R112.2</span></li>
+        <li>ต้องไม่เสนอให้ และต้องไม่รับ สิ่งจูงใจที่มีเจตนาให้มีอิทธิพลอย่างไม่เหมาะสมต่อพฤติกรรมของผู้รับหรือของบุคคลอื่น <span class="law">R340.7 · R340.8</span></li>
+        <li>สำนักงานต้องไม่ให้ค่าธรรมเนียมการสอบบัญชีได้รับอิทธิพลจากการให้บริการอื่นแก่ลูกค้างานสอบบัญชี <span class="law">R410.6</span></li>
+        <li>จ่ายหรือรับค่าธรรมเนียมจากการแนะนำ หรือรับค่านายหน้าที่เกี่ยวกับลูกค้า อาจทำให้ทำตามหลัก (ข) และหลัก (ค) ได้ยาก <span class="law">330.5 A1</span></li>
+        <li>ลูกค้างานสอบบัญชี คือกิจการที่สำนักงานปฏิบัติงานสอบบัญชีให้ ครอบครัวที่ใกล้ชิดที่สุด คือคู่สมรส หรือเทียบเท่า หรือผู้ที่อยู่ในอุปการะ <span class="law">อภิธานศัพท์ของคู่มือ</span></li>
       </ul>
     </details>
-
-    <h3 style="margin-top:8px">ขึ้นทะเบียนแล้ว ต้องต่ออายุทุกปี</h3>
-    <p class="cap">บัตรประจำตัวผู้ขึ้นทะเบียนใช้ได้ถึงสิ้นปีปฏิทิน ลองเปลี่ยนสิ่งที่พีททำตอนปลายปี</p>
-    <div class="stats"><div class="stat"><b>500</b><span>บาทต่อปี ผู้ขึ้นทะเบียนที่จบปริญญาตรีหรือเทียบเท่าขึ้นไป</span></div><div class="stat"><b>300</b><span>บาทต่อปี จบต่ำกว่าปริญญาตรี</span></div></div>
-    <div class="chips" data-pick="pay">
-      <button data-v="0" aria-pressed="true">ชำระครบภายในกำหนด</button>
-      <button data-v="1">ไม่ได้ชำระ</button>
-    </div>
-    <div class="x04-year" role="img" aria-label="แถบปี บัตรของปีนี้ใช้ได้ถึงวันที่ 31 ธันวาคม ต้องต่ออายุและชำระค่าธรรมเนียมของปีถัดไปภายในวันทำการสุดท้ายของปี">
-      <div class="x04-yb"><span class="x04-y1">บัตรของปีนี้<small>ใช้ได้ถึง 31 ธันวาคม</small></span><span class="x04-y2" id="yNext"></span></div>
-      <div class="x04-yt"><span>วันทำการสุดท้ายของปี</span><span>ปีถัดไป</span></div>
-    </div>
-    <div class="cons" aria-live="polite">
-      <b>พีทเป็นผู้ทำบัญชีต่อได้ไหม</b>
-      <div class="cg" id="payC"><span class="ico"></span><div><b id="payT"></b><span id="payS"></span></div></div>
-    </div>
-    <p class="note"><span data-ico="mail"></span><span>ไม่ชำระครบ ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลง เว้นแต่ทำหนังสือยื่นต่อคณะกรรมการสภาฯ หรือผู้ซึ่งคณะกรรมการมอบหมาย แสดงให้เห็นว่าเกิดจากพฤติการณ์ที่จำเป็น และยื่นภายใน 1 เดือนนับจากวันที่พฤติการณ์นั้นสิ้นสุดลง <span class="law">ข้อบังคับผู้ทำบัญชี ข้อ 13</span></span></p>
   </section>
 
-  <!-- เรื่องที่ 2 จดทะเบียนนิติบุคคล -->
-  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
-    <div class="sechd"><i>2</i><div><small>เรื่องที่ 2 · นิติบุคคล จดทะเบียนต่อสภาฯ</small><h2 id="h2">นิติบุคคลที่รับสอบบัญชีหรือทำบัญชี ต้องจดทะเบียนต่อสภาฯ ใน 30 วัน</h2></div></div>
-    <p class="cap">บริษัทของแพรจดทะเบียนสองแห่ง กรมพัฒนาธุรกิจการค้าเพื่อเป็นนิติบุคคล และสภาวิชาชีพบัญชีเพราะรับสอบบัญชี</p>
-    <p class="lbl">30 วัน นับหลังจากเหตุการณ์ใดเหตุการณ์หนึ่ง แล้วแต่กรณี <span class="law">ประกาศ 3/2558 ข้อ 4</span></p>
-    <div class="map">
-      <div class="x04-evs">
-        <div class="x04-ev"><span data-ico="bag"></span><span>จดทะเบียนจัดตั้งนิติบุคคลที่กรมพัฒนาธุรกิจการค้า</span></div>
-        <span class="x04-orr">หรือ</span>
-        <div class="x04-ev"><span data-ico="pen"></span><span>จดทะเบียนเปลี่ยนแปลงวัตถุประสงค์ เพื่อให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี</span></div>
-        <span class="x04-orr">หรือ</span>
-        <div class="x04-ev"><span data-ico="flag"></span><span>เริ่มให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี</span></div>
-      </div>
-      <span class="ln"></span><span class="x04-pill">ภายใน 30 วัน</span><span class="ln"></span>
-      <div class="nd end"><span class="ico" data-ico="pen"></span><b>จดทะเบียนต่อสภาวิชาชีพบัญชี</b><small>พร้อมหลักฐาน และแจ้งรายละเอียดเกี่ยวกับหลักประกันมาพร้อมกัน</small><span class="law">ประกาศ 3/2558 ข้อ 4 · ข้อ 8 (1)</span></div>
-    </div>
+  <!-- 5 แยก ก ข -->
+  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
+    <span class="fno">ลองเอง</span>
+    <h2 id="h5">ห้าเรื่องนี้ ขัดกับ (ก) หรือ (ข)</h2>
+    <p class="cap">ได้สองหลักแรกแล้ว ลองแยกดู อ่านทีละเรื่อง แล้วแตะหลักที่คิดว่าใช่ แตะแล้วเห็นเหตุผลทันที แตะใหม่ได้ ไม่มีคะแนน</p>
+    <div class="x04-drill" id="dr1"></div>
+  </section>
 
-    <h3 style="margin-top:8px">รับสอบบัญชี ต้องดูคนที่มีอำนาจลงนามผูกพันด้วย</h3>
-    <p class="cap">คนที่มีอำนาจลงนามผูกพัน คือคนที่ลงนามแล้วผูกพันบริษัทในการให้บริการการสอบบัญชี ในบริษัทของแพรคือแพร ซึ่งเป็นกรรมการ ลองเปลี่ยนทีละเรื่อง</p>
-    <p class="lbl">งานที่บริษัทรับ</p>
-    <div class="chips" data-pick="svc">
-      <button data-v="0" aria-pressed="true">รับสอบบัญชี</button>
-      <button data-v="1">รับทำบัญชีอย่างเดียว</button>
+  <!-- 6 หลัก (ค) -->
+  <section class="fig x04-pc" id="s6" data-step="s6" aria-labelledby="h6">
+    <div class="x04-hd"><i class="x04-L" aria-hidden="true">ค</i><div><small>หลักข้อ (ค)</small><h2 id="h6">ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน</h2></div></div>
+    <p class="x04-about"><b>เกี่ยวกับ</b> การมีความรู้พอและทันของใหม่ แล้วทำงานให้รอบคอบ ครบถ้วน ทันเวลา ตามมาตรฐาน</p>
+    <p class="cap">ซื่อตรงและเป็นกลางแล้ว ยังพลาดได้ถ้าทำงานไม่ถึง ธนาคารขอประมาณการทางการเงินเพิ่ม คือตัวเลขคาดการณ์ล่วงหน้าของบริษัท พริ้งให้พีททำให้เสร็จในสองวัน เวลาไม่พอ พีทต้องจัดการเรื่องนี้ก่อน</p>
+    <div class="case" id="case6" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · แตะการ์ดเพื่อสลับ พอ กับ ไม่พอ</p>
+    <div class="x04-tiles" data-togs="x04need">
+      <button id="n0" data-k="time" aria-pressed="false"><span class="x04-ti" data-ico="clock"></span><span>เวลา<small>ที่จะทำหน้าที่ให้สำเร็จ</small></span><em></em></button>
+      <button id="n1" data-k="info" aria-pressed="true"><span class="x04-ti" data-ico="doc"></span><span>ข้อมูล<small>สมบูรณ์ ไม่ถูกจำกัด</small></span><em></em></button>
+      <button id="n2" data-k="exp" aria-pressed="true"><span class="x04-ti" data-ico="cap"></span><span>ประสบการณ์<small>การฝึกอบรม และการศึกษา</small></span><em></em></button>
+      <button id="n3" data-k="res" aria-pressed="true"><span class="x04-ti" data-ico="bag"></span><span>ทรัพยากร<small>สำหรับการทำหน้าที่</small></span><em></em></button>
     </div>
-    <p class="lbl">คนที่มีอำนาจลงนามผูกพันบริษัท</p>
-    <div class="chips" data-pick="sig">
-      <button data-v="0" aria-pressed="true">แพร ผู้สอบบัญชีรับอนุญาต</button>
-      <button data-v="1">เปลี่ยนเป็นกรรมการอีกคน ที่ไม่ใช่ผู้สอบบัญชีรับอนุญาต</button>
+    <div class="x04-rule"><small>หลัก</small><span>สี่เรื่องนี้ไม่พอแม้เรื่องเดียว คู่มือเขียนว่าอาจทำให้ทำตามหลัก (ค) ได้ยาก และให้ทำตามลำดับสามขั้นนี้ <span class="law">230.3 A2 · 230.3 A4 · R230.4</span></span></div>
+    <ol class="todo x04-flow" id="flow6">
+      <li class="first"><div><b>จัดการก่อน</b><small>เช่น ขอความช่วยเหลือหรือการฝึกอบรมจากผู้เชี่ยวชาญ และทำให้มั่นใจว่ามีเวลาเพียงพอ</small></div></li>
+      <li><div><b>จัดการไม่ได้ ต้องพิจารณาว่าจะปฏิเสธหน้าที่ที่เป็นปัญหาหรือไม่</b></div></li>
+      <li><div><b>ถ้าเห็นว่าควรปฏิเสธ ต้องสื่อสารถึงเหตุผล</b></div></li>
+    </ol>
+    <div class="x04-res" id="res6" role="status"><span class="x04-ri"></span><div><b></b><span></span></div></div>
+    <p class="note"><span data-ico="info"></span><span>รักษาไว้ซึ่งความรู้ ความสามารถ และความชำนาญทางวิชาชีพ ในระดับที่ลูกค้าหรือผู้ว่าจ้างได้รับบริการที่ถึงพร้อมด้วยวิวัฒนาการล่าสุดในวิธีการ เทคนิคการปฏิบัติงาน หรือตามกฎหมาย และปฏิบัติหน้าที่ด้วยความเอาใจใส่ให้เป็นไปตามมาตรฐานวิชาชีพที่เกี่ยวข้อง <span class="law">ข้อ 9 (ค)</span></span></p>
+    <p class="lbl">เรื่องอื่นที่คู่มือของสภาฯ วางไว้ใต้หลักนี้</p>
+    <ul class="x04-eg">
+      <li><span class="x04-m" data-ico="users"></span><span>ผู้ช่วยที่อยู่ใต้การกำกับดูแลของเรา ต้องได้ทั้งการฝึกอบรมและการกำกับดูแลที่เหมาะสม <span class="law">R113.2</span></span></li>
+      <li><span class="x04-m" data-ico="chat"></span><span>ต้องทำให้ลูกค้า นายจ้าง หรือผู้ใช้บริการ รู้ข้อจำกัดของบริการที่ให้ <span class="law">R113.3</span></span></li>
+      <li><span class="x04-m" data-ico="x"></span><span>ต้องไม่จงใจทำให้นายจ้างเข้าใจผิดเรื่องความเชี่ยวชาญหรือประสบการณ์ของตัวเอง <span class="law">R230.3</span></span></li>
+      <li><span class="x04-m" data-ico="coin"></span><span>เสนอค่าบริการต่ำกว่ารายอื่นไม่ขัดจรรยาบรรณ แต่ถ้าต่ำมากจนยากจะทำงานให้ได้ตามมาตรฐาน ก็อาจกระทบหลักนี้ <span class="law">330.3 A2</span></span></li>
+    </ul>
+    <details class="src x04-fold">
+      <summary>ก่อนรับงานใหม่ คู่มือให้ดูอะไร</summary>
+      <ul>
+        <li>ทีมไม่มี หรือหามาไม่ได้ ซึ่งความรู้ความสามารถที่งานต้องใช้ กระทบการทำตามหลักนี้ได้ เรื่องที่ใช้ดูรวมถึงความเข้าใจลักษณะธุรกิจของลูกค้า และความรู้ในอุตสาหกรรมที่เกี่ยวข้อง <span class="law">320.3 A3 · A4</span></li>
+        <li>ตอบรับงานก่อนรับรู้ข้อเท็จจริงที่เกี่ยวข้องทั้งหมด อาจกระทบการทำตามหลักนี้ <span class="law">320.4 A1</span></li>
+        <li>งานตรวจสอบหรือสอบทานงบการเงิน คนที่จะรับงานต้องขอให้ผู้ประกอบวิชาชีพบัญชีคนปัจจุบันหรือคนก่อน ให้ข้อมูลที่จำเป็นต้องรู้ก่อนตัดสินใจรับงาน ถ้าลูกค้ายินยอม คนเดิมต้องให้ข้อมูลอย่างสุจริตและไม่คลุมเครือ ถ้าลูกค้าไม่ยินยอม คนเดิมต้องบอกข้อเท็จจริงนี้แก่คนที่จะรับงาน <span class="law">R320.8</span></li>
+      </ul>
+    </details>
+    <p class="cap">พีทขอเวลาเพิ่มได้ งานเดินต่อ ระหว่างตรวจ พี่แพมได้เห็นข้อมูลของบริษัทแทบทุกอย่าง</p>
+  </section>
+
+  <!-- 7 หลัก (ง) -->
+  <section class="fig x04-pd" id="s7" data-step="s7" aria-labelledby="h7">
+    <div class="x04-hd"><i class="x04-L" aria-hidden="true">ง</i><div><small>หลักข้อ (ง)</small><h2 id="h7">การรักษาความลับ</h2></div></div>
+    <p class="x04-about"><b>เกี่ยวกับ</b> ข้อมูลที่ได้มาจากงาน ไม่เปิดเผยให้คนนอก และไม่เอาไปใช้เพื่อตัวเองหรือคนอื่น</p>
+    <p class="cap">ระหว่างตรวจ พี่แพมได้ตารางราคาซื้อแป้งของบริษัทมา แล้วเผลอเล่าราคาให้คนที่บ้านฟัง แค่นี้ก็ขัดกับหลักนี้แล้ว ดูโจทย์ แล้วลองเปลี่ยนสิ่งที่พี่แพมทำ</p>
+    <div class="case" id="case7" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · พี่แพมทำอะไรกับข้อมูลนี้</p>
+    <div class="x04-opts" data-pick="x04use">
+      <button data-v="0"><span class="x04-oi" data-ico="search"></span><span><b>ใช้ตรวจงบของบริษัทนี้</b><small>ไม่ให้ใครนอกงานดู</small></span></button>
+      <button data-v="1" aria-pressed="true"><span class="x04-oi" data-ico="chat"></span><span><b>เล่าราคาให้คนที่บ้านฟัง (ตัวอย่าง)</b><small>ไม่มีใครเอาไปใช้ และไม่มีใครอนุมัติ</small></span></button>
+      <button data-v="2"><span class="x04-oi" data-ico="bag"></span><span><b>ไม่บอกใคร แต่ใช้ราคาที่รู้ไปต่อรองเอง</b><small>ซื้อของเข้าร้านของตัวเอง</small></span></button>
+      <button data-v="3"><span class="x04-oi" data-ico="clock"></span><span><b>งานจบแล้ว จึงเล่าราคาให้เพื่อนฟัง</b><small>เลิกเป็นผู้สอบบัญชีของบริษัทนี้แล้ว ไม่มีใครอนุมัติ</small></span></button>
+      <button data-v="4"><span class="x04-oi" data-ico="flag"></span><span><em class="x04-tag">เรื่องจริงที่สภาฯ เล่า</em><b>ให้คนอื่นซื้อหุ้นตามข้อมูลที่เห็นจากงาน</b><small>ผู้สอบบัญชีคนหนึ่งเห็นกำไรของลูกค้าที่ยังไม่เปิดเผยต่อสาธารณะ</small></span></button>
     </div>
+    <div class="x04-rule"><small>หลัก</small><span>ต้องผ่านทั้งสองช่อง คือไม่เปิดเผย และไม่นำไปใช้ <span class="law">ข้อ 9 (ง)</span></span></div>
     <div>
       <div class="conds two">
-        <div class="cond ok" id="e0"><span class="mk" data-ico="check"></span><span class="ico" data-ico="shield"></span><span>มีหลักประกัน<small>ม.11 (1) · ดูเรื่องที่ 3</small></span></div>
-        <div class="cond" id="e1"><span class="mk"></span><span class="ico" data-ico="flag"></span><span>คนที่มีอำนาจลงนามผูกพันเป็นผู้สอบบัญชีรับอนุญาต<small id="e1s">ม.11 (2)</small></span></div>
+        <div class="cond" id="u0"><span class="mk"></span><span class="ico" data-ico="chat"></span><span>ไม่เปิดเผย<small>ให้บุคคลที่สาม โดยไม่ได้รับอนุมัติ</small></span></div>
+        <div class="cond" id="u1"><span class="mk"></span><span class="ico" data-ico="bag"></span><span>ไม่นำไปใช้<small>เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม</small></span></div>
       </div>
-      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="ok" d="M75 0C75 18 150 12 150 30"/><path id="m1" d="M225 0C225 18 150 12 150 30"/></svg>
-      <div class="gate" id="gate2" role="status"><span data-door></span><div><b id="gate2T"></b><span id="gate2S"></span></div></div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="uj0" d="M75 0C75 18 150 12 150 30"/><path id="uj1" d="M225 0C225 18 150 12 150 30"/></svg>
+      <div class="x04-res" id="res7" role="status"><span class="x04-ri"></span><div><b></b><span></span></div></div>
     </div>
-  </section>
-
-  <!-- เรื่องที่ 3 หลักประกัน วันยื่นจด -->
-  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
-    <div class="sechd"><i>3</i><div><small>เรื่องที่ 3 · นิติบุคคล หลักประกันวันยื่นจด</small><h2 id="h3">วันยื่นจด ต้องมีหลักประกันไม่น้อยกว่าร้อยละ 3 ของทุน</h2></div></div>
-    <p class="note"><span data-ico="shield"></span><span>หลักประกันนี้นิติบุคคลต้องจัดให้มีไว้ เพื่อประกันความรับผิดต่อบุคคลที่สาม คือคนอื่นที่ไม่ใช่นิติบุคคลผู้ให้บริการเอง <span class="law">พ.ร.บ. ม.11 (1)</span></span></p>
-    <p class="cap">วันยื่นจด บริษัทของแพรมีเงินฝากประจำ 1 ปี 60,000 บาท บริษัทจำกัดคิดจากทุนจดทะเบียน <span class="law">กฎกระทรวง ข้อ 1</span> ลองเปลี่ยนทุน หรือให้เงินฝากก้อนนี้มีภาระผูกพัน</p>
-    <p class="lbl">ทุนจดทะเบียน ณ วันที่ยื่นจดทะเบียน</p>
-    <div class="chips" data-pick="cap">
-      <button data-v="0">1,000,000 บาท</button>
-      <button data-v="1" aria-pressed="true">2,000,000 บาท</button>
-      <button data-v="2">3,000,000 บาท</button>
+    <p class="lbl">ข้อห้ามเปิดเผยมีทางออก เปิดเผยได้ เมื่อเข้าทางใดทางหนึ่งในสามทางนี้ <span class="law">114.1 A1</span></p>
+    <div class="x04-ways">
+      <div><span>กฎหมายกำหนดให้เปิดเผย<small>เช่น จัดทำเอกสารหรือจัดหาหลักฐานในการดำเนินการทางกฎหมาย</small></span></div>
+      <div><span>กฎหมายอนุญาต และได้รับอนุมัติจากลูกค้าหรือองค์กรที่ว่าจ้าง<small>ต้องครบทั้งสองอย่าง</small></span></div>
+      <div><span>มีหน้าที่หรือสิทธิทางวิชาชีพที่จะเปิดเผย เมื่อไม่มีข้อห้ามทางกฎหมาย<small>เช่น ตอบข้อซักถามขององค์กรวิชาชีพ</small></span></div>
     </div>
-    <div class="togs" data-togs="enc">
-      <button data-k="enc" aria-pressed="false"><span>เงินฝากก้อนนี้จำนำเป็นประกันเงินกู้ของบริษัท<small>มีภาระผูกพัน</small></span></button>
-    </div>
-    <div class="x04-sum" aria-live="polite">
-      <div><span>ทุนจดทะเบียน</span><b><span id="q3a"></span> <i>บาท</i></b></div>
-      <div><span>คูณ</span><b>ร้อยละ 3</b></div>
-      <div class="x04-tot"><span>ต้องมีหลักประกันไม่น้อยกว่า</span><b><span id="q3b"></span> <i>บาท</i></b></div>
-    </div>
-    <div class="gauges">
-      <div class="hd"><span>เทียบกับหลักประกันที่บริษัทมี</span><span class="law">กฎกระทรวง ข้อ 2</span></div>
-      <div class="gz" id="g3"><div class="top"><span>หลักประกันที่นับได้</span><b><span id="g3v"></span> <i>บาท</i></b></div><div class="bar"><i></i><em id="g3m"></em></div><div class="st" id="g3s"></div></div>
-    </div>
-    <p class="result" id="r3" role="status"></p>
-
-    <h3 style="margin-top:8px">หลักประกันใช้ได้ห้าประเภท</h3>
-    <div class="x04-kinds">
-      <div class="x04-kind"><i>1</i><b>เงินฝากประจำ ตั้งแต่ 1 ปีขึ้นไป</b></div>
-      <div class="x04-kind"><i>2</i><b>บัตรเงินฝาก</b></div>
-      <div class="x04-kind"><i>3</i><b>พันธบัตรรัฐบาลไทย</b></div>
-      <div class="x04-kind"><i>4</i><b>พันธบัตรองค์การหรือรัฐวิสาหกิจ</b></div>
-      <div class="x04-kind x04-wide"><i>5</i><b>กรมธรรม์ประกันภัยความรับผิดทางวิชาชีพบัญชี</b>นับตามจำนวนเงินเอาประกันภัยที่ระบุไว้ในกรมธรรม์ ไม่ได้นับจากเบี้ยประกันที่จ่าย <span class="law">กฎกระทรวง ข้อ 4</span></div>
-    </div>
-    <p class="note"><span data-ico="lock"></span><span>ทุกประเภทต้องปราศจากภาระผูกพัน <span class="law">กฎกระทรวง ข้อ 3</span></span></p>
-    <details class="x04-more">
-      <summary>รายละเอียดของแต่ละประเภท และทุนของนิติบุคคลแบบอื่น</summary>
-      <ul class="x04-defs">
-        <li><b>1 เงินฝากประจำ</b><span>ฝากกับสถาบันการเงินในประเทศ</span></li>
-        <li><b>2 บัตรเงินฝาก</b><span>สถาบันการเงินในประเทศออกให้นิติบุคคลนั้น เป็นหลักฐานการฝากเงิน</span></li>
-        <li><b>3 พันธบัตรรัฐบาลไทย</b><span>ที่จำหน่ายในราชอาณาจักร</span></li>
-        <li><b>4 พันธบัตรองค์การหรือรัฐวิสาหกิจ</b><span>ที่เป็นนิติบุคคลซึ่งมีพระราชบัญญัติหรือพระราชกฤษฎีกาจัดตั้งขึ้น</span></li>
+    <p class="note"><span data-ico="info"></span><span>ไม่พึงเปิดเผยข้อมูลที่ได้มาจากความสัมพันธ์ทางวิชาชีพและทางธุรกิจให้กับบุคคลที่สาม โดยไม่ได้รับการอนุมัติจากผู้มีอำนาจอย่างถูกต้องและเฉพาะเจาะจง เว้นแต่เป็นการเปิดเผยตามสิทธิทางกฎหมาย หรือสิทธิทางวิชาชีพ หรือเป็นหน้าที่ที่ต้องเปิดเผย และไม่นำข้อมูลนั้นไปใช้เพื่อประโยชน์ส่วนตนหรือเพื่อบุคคลที่สาม <span class="law">ข้อ 9 (ง)</span></span></p>
+    <div id="ck7"></div>
+    <details class="src x04-fold">
+      <summary>รายละเอียดของสามทาง และข้อมูลที่นับเป็นความลับด้วย</summary>
+      <ul>
+        <li>ทางที่ 1 ตัวอย่างของคู่มือ: จัดทำเอกสารหรือจัดหาหลักฐานอื่นในการดำเนินการทางกฎหมาย หรือเปิดเผยต่อหน่วยราชการที่เหมาะสมเกี่ยวกับการละเมิดกฎหมายเมื่อพบ <span class="law">114.1 A1 (ก)</span></li>
+        <li>ทางที่ 3 มีสี่เรื่อง: ให้เป็นไปตามกระบวนการสอบทานคุณภาพขององค์กรวิชาชีพ · ตอบข้อซักถามหรือการไต่สวนโดยองค์กรวิชาชีพหรือองค์กรกำกับดูแล · ปกป้องผลประโยชน์ทางวิชาชีพของตนในการดำเนินการทางกฎหมาย · ปฏิบัติตามมาตรฐานการปฏิบัติงานและมาตรฐานวิชาชีพ รวมทั้งข้อกำหนดด้านจรรยาบรรณ <span class="law">114.1 A1 (ค)</span></li>
+        <li>ต้องรักษาความลับของข้อมูลภายในสำนักงานหรือองค์กรที่ว่าจ้าง และข้อมูลที่ผู้มีโอกาสเป็นลูกค้าหรือนายจ้างเปิดเผยให้ด้วย <span class="law">R114 (ข) · (ค)</span></li>
+        <li>เรื่องจริงที่สภาฯ เล่า มาจากบทความของคณะอนุกรรมการกำหนดจรรยาบรรณ สภาวิชาชีพบัญชี ใน TFAC Newsletter ฉบับที่ 107 ซึ่งระบุว่ามาจากกรณีศึกษาจริง และใช้ชื่อสมมติ</li>
       </ul>
-      <p>ประเภท 2 ถึง 4 นับตามจำนวนเงินที่ปรากฏในบัตรเงินฝากหรือพันธบัตรนั้น <span class="law">กฎกระทรวง ข้อ 3 · ข้อ 4</span></p>
-      <ul class="x04-defs">
-        <li><b>บริษัทมหาชนจำกัด</b><span>ทุนชำระแล้ว</span></li>
-        <li><b>ห้างหุ้นส่วนจดทะเบียน หรือห้างหุ้นส่วนจำกัด</b><span>ส่วนลงหุ้นของผู้เป็นหุ้นส่วนทุกคน</span></li>
-        <li><b>นิติบุคคลอื่น</b><span>เงินที่ผู้เป็นหุ้นส่วนหรือสมาชิกนำมาลงหุ้น</span></li>
-      </ul>
-      <p><span class="law">กฎกระทรวง ข้อ 1</span></p>
     </details>
   </section>
 
-  <!-- เรื่องที่ 4 ทุกปี -->
-  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
-    <div class="sechd"><i>4</i><div><small>เรื่องที่ 4 · นิติบุคคล หน้าที่ประจำปี</small><h2 id="h4">ทุกปี ร้อยละ 3 เท่าเดิม แต่ใช้ทุนหรือรายได้ จำนวนที่มากกว่า</h2></div></div>
-    <p class="cap">รอบปีบัญชีคือรอบเวลาที่บริษัทปิดบัญชีแต่ละครั้ง สิ้นรอบแรก บริษัทของแพรมีหลักประกัน 60,000 บาท ทุนจดทะเบียน 2,000,000 บาท รายได้ค่าสอบบัญชี 1,000,000 บาท ลองเปลี่ยนทีละเรื่อง</p>
-    <p class="lbl">รายได้จากการให้บริการสอบบัญชี รอบปีบัญชีที่ผ่านมา</p>
-    <div class="chips" data-pick="rev">
-      <button data-v="0" aria-pressed="true">1,000,000 บาท</button>
-      <button data-v="1">3,000,000 บาท</button>
-      <button data-v="2">5,000,000 บาท</button>
-    </div>
-    <p class="lbl">ทุนจดทะเบียน ณ วันสิ้นรอบปีบัญชี</p>
-    <div class="chips" data-pick="cap2">
-      <button data-v="0" aria-pressed="true">เท่าเดิม 2,000,000 บาท</button>
-      <button data-v="1">เพิ่มทุนระหว่างปี เป็น 4,000,000 บาท</button>
-    </div>
-    <div class="togs" data-togs="oth">
-      <button data-k="oth" aria-pressed="false"><span>ปีนั้นบริษัทมีรายได้ค่าเช่าอาคารอีก 4,000,000 บาท<small>ไม่ได้เกิดจากการให้บริการสอบบัญชีหรือทำบัญชี</small></span></button>
-    </div>
-    <div class="x04-two" id="w4" hidden>
-      <div><b>ระหว่างรอบปีบัญชี</b><span>การเพิ่มทุนไม่กระทบจำนวนหลักประกันที่จัดให้มีแล้วในรอบปีบัญชีนั้น <span class="law">กฎกระทรวง ข้อ 2 วรรคสอง</span></span></div>
-      <div><b>หลังวันสิ้นรอบปีบัญชี</b><span>คิดใหม่จากทุน ณ วันสิ้นรอบปีบัญชี 4,000,000 บาท <span class="law">ข้อ 6</span></span></div>
-    </div>
-    <div class="x04-cmp" aria-live="polite">
-      <div class="x04-bar" id="bCap"><div class="x04-bh"><span>ทุน ณ วันสิ้นรอบปีบัญชีที่ผ่านมา</span><b id="bCapV"></b></div><div class="x04-bt"><i></i></div><em>จำนวนที่มากกว่า</em></div>
-      <div class="x04-bar" id="bRev"><div class="x04-bh"><span>รายได้ที่เกิดจากการให้บริการสอบบัญชีหรือทำบัญชี รอบปีบัญชีที่ผ่านมา <span class="law">ข้อ 1</span></span><b id="bRevV"></b></div><div class="x04-bt"><i></i></div><em>จำนวนที่มากกว่า</em></div>
-      <div class="x04-bar x04-not" id="bOth" hidden><div class="x04-bh"><span>ค่าเช่าอาคาร</span><b>4,000,000</b></div><div class="x04-bt"><i style="width:80%"></i></div><em>ไม่ใช่รายได้จากการให้บริการ ไม่นำมาเทียบ</em></div>
-    </div>
-    <div class="x04-sum" aria-live="polite">
-      <div><span id="q4l"></span><b><span id="q4a"></span> <i>บาท</i></b></div>
-      <div><span>คูณ</span><b>ร้อยละ 3</b></div>
-      <div class="x04-tot"><span>ต้องมีหลักประกันไม่น้อยกว่า</span><b><span id="q4b"></span> <i>บาท</i></b></div>
-    </div>
-    <div class="gauges">
-      <div class="hd"><span>เทียบกับหลักประกันที่มีอยู่</span><span class="law">กฎกระทรวง ข้อ 6</span></div>
-      <div class="gz" id="g4"><div class="top"><span>หลักประกันที่มีอยู่</span><b>60,000 <i>บาท</i></b></div><div class="bar"><i></i><em id="g4m"></em></div><div class="st" id="g4s"></div></div>
-    </div>
-    <p class="result" id="r4" role="status"></p>
+  <!-- 8 แยก ค ง -->
+  <section class="fig" id="s8" data-step="s8" aria-labelledby="h8">
+    <span class="fno">ลองเอง</span>
+    <h2 id="h8">ห้าเรื่องนี้ ขัดกับ (ค) หรือ (ง)</h2>
+    <p class="cap">เหมือนรอบที่แล้ว แตะหลักที่คิดว่าใช่ แตะใหม่ได้ ไม่มีคะแนน</p>
+    <div class="x04-drill" id="dr2"></div>
+  </section>
 
-    <h3 style="margin-top:8px">สองกำหนดประจำปี นับจากคนละวัน</h3>
-    <div class="x04-lane x04-la" role="img" aria-label="กำหนดเรื่องหลักประกัน นับ 60 วันจากวันสิ้นรอบปีบัญชี">
-      <b>หลักประกัน นับจากวันสิ้นรอบปีบัญชี</b>
-      <div class="x04-lb"><span>รอบปีบัญชี</span><span>60 วัน</span></div>
-      <div class="x04-lt"><span>วันสิ้นรอบปีบัญชี</span><span></span></div>
-      <p>จัดให้มีหลักประกันตามจำนวนที่คิดใหม่ และแจ้งรายละเอียดต่อสภาฯ <span class="law">กฎกระทรวง ข้อ 6</span> <span class="law">ประกาศ ข้อ 8 (2)</span></p>
+  <!-- 9 หลัก (จ) -->
+  <section class="fig x04-pe" id="s9" data-step="s9" aria-labelledby="h9">
+    <div class="x04-hd"><i class="x04-L" aria-hidden="true">จ</i><div><small>หลักข้อ (จ)</small><h2 id="h9">พฤติกรรมทางวิชาชีพ</h2></div></div>
+    <p class="x04-about"><b>เกี่ยวกับ</b> การทำตามกฎหมาย และไม่ทำอะไรที่ทำให้วิชาชีพบัญชีเสื่อมเสียเกียรติศักดิ์ รวมถึงตอนหาลูกค้า</p>
+    <p class="cap">บริษัทกู้ผ่านแล้ว เรื่องย้ายมาที่สำนักงานของพี่แพม ซึ่งเปิดมา 3 ปี และอยากได้ลูกค้าเพิ่ม จึงจะขึ้นป้ายว่าประสบการณ์กว่า 20 ปี ป้ายแบบนี้ขึ้นไม่ได้ ดูโจทย์ แล้วลองเปลี่ยนข้อความบนป้าย</p>
+    <div class="case" id="case9" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · ข้อความบนป้าย</p>
+    <div class="chips" data-pick="x04ad">
+      <button data-v="0">บอกตามจริง</button>
+      <button data-v="1" aria-pressed="true">อวดเกินจริง (ตัวอย่าง)</button>
+      <button data-v="2">ดูหมิ่นสำนักงานอื่น</button>
+      <button data-v="3">เทียบโดยไม่มีข้อมูล</button>
     </div>
-    <div class="x04-lane x04-lz" role="img" aria-label="กำหนดเรื่องต่อทะเบียน ทุกหนึ่งปีนับแต่วันจดทะเบียน ทำภายในสามเดือนก่อนครบกำหนดหนึ่งปี">
-      <b>ทะเบียนนิติบุคคล นับจากวันจดทะเบียน</b>
-      <div class="x04-lb"><span>นับจากวันจดทะเบียน</span><span>3 เดือนก่อนครบ</span></div>
-      <div class="x04-lt"><span>วันจดทะเบียน</span><span>ครบหนึ่งปี</span></div>
-      <p>ต่อทะเบียนทุกหนึ่งปี ภายในสามเดือนก่อนครบกำหนดหนึ่งปี <span class="law">ประกาศ 15/2562 ข้อ 3</span></p>
-    </div>
-    <p class="note"><span data-ico="shield"></span><span>ต้องดำรงหลักประกันไว้ตลอดระยะเวลาที่ประกอบกิจการ <span class="law">กฎกระทรวง ข้อ 5</span></span></p>
-
-    <h3 style="margin-top:8px">มีเรื่องเปลี่ยน ทำภายใน 15 วัน</h3>
-    <ul class="x04-chg">
-      <li><b>เปลี่ยนประเภทของหลักประกันระหว่างรอบปีบัญชี</b><em>แจ้งสภาฯ</em></li>
-      <li><b>แก้ไขข้อมูลนิติบุคคลที่จดทะเบียนไว้</b><em>จดทะเบียนแก้ไข</em></li>
-      <li><b>เลิกให้บริการสอบบัญชีหรือทำบัญชี</b><em>จดทะเบียนเลิก</em></li>
+    <div class="x04-rule"><small>หลัก</small><span>ทำการตลาดต้องอยู่บนพื้นฐานของความจริง และมีสองอย่างที่ต้องไม่ทำ ดูใต้ป้าย <span class="law">R115.2</span></span></div>
+    <div class="x04-bb" aria-live="polite"><div class="x04-board"><small>ป้ายโฆษณาของสำนักงาน</small><b id="bbB"></b><span id="bbS"></span></div><span class="x04-legs" aria-hidden="true"></span></div>
+    <p class="lbl">สองอย่างที่ต้องไม่ทำ ป้ายนี้ชนข้อไหน</p>
+    <ul class="x04-duty">
+      <li id="du0"><span class="x04-m"></span><span>โอ้อวดเกินความเป็นจริง เรื่องบริการ คุณสมบัติ หรือประสบการณ์ของตัวเอง</span></li>
+      <li id="du1"><span class="x04-m"></span><span>ใช้ถ้อยคำดูหมิ่น หรือเปรียบเทียบงานของตัวเองกับผู้อื่น โดยไม่ได้อยู่บนหลักความจริง</span></li>
     </ul>
-    <p class="lbl"><span class="law">กฎกระทรวง ข้อ 6</span> <span class="law">ประกาศ 3/2558 ข้อ 6 · ข้อ 7 · ข้อ 9</span></p>
-    <p class="cap">ไม่ทำตามกำหนดในเรื่องที่ 2 และเรื่องนี้ สภาฯ อาจมีหนังสือให้นิติบุคคลมาชี้แจงหรือส่งเอกสาร รวมถึงพิจารณาแจ้งความต่อพนักงานเจ้าหน้าที่ <span class="law">ประกาศ 3/2558 ข้อ 11</span></p>
-    <details class="x04-more">
-      <summary>ค่าดำเนินการที่จ่ายให้สภาฯ</summary>
-      <ul class="x04-fees">
-        <li><span>จดทะเบียนนิติบุคคล</span><b>2,000 บาท</b></li>
-        <li><span>ต่ออายุทะเบียนนิติบุคคล</span><b>2,000 บาท</b></li>
-        <li><span>จดทะเบียนแก้ไขข้อมูลนิติบุคคล</span><b>500 บาท</b></li>
-        <li><span>จดทะเบียนเลิกให้บริการ</span><b>500 บาท</b></li>
-        <li><span>แจ้งรายละเอียดเกี่ยวกับหลักประกัน</span><b>400 บาท</b></li>
-        <li><span>แจ้งเปลี่ยนประเภทหลักประกัน</span><b>200 บาท</b></li>
+    <div class="x04-res" id="res9" role="status"><span class="x04-ri"></span><div><b></b><span></span></div></div>
+    <p class="cap">โฆษณาเป็นแค่เรื่องหนึ่งของหลักนี้ ตัวหลักเขียนกว้างกว่านั้น</p>
+    <p class="note"><span data-ico="info"></span><span>ปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้อง และหลีกเลี่ยงการกระทำใด ๆ ที่อาจทำให้เกิดความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี <span class="law">ข้อ 9 (จ)</span></span></p>
+    <p class="note"><span data-ico="users"></span><span>หลักนี้ยังให้รับผิดชอบต่อผู้รับบริการ คือผู้ว่าจ้างและคนอื่นที่ใช้ผลงานของเราด้วยความสุจริตและจำเป็น และรับผิดชอบต่อผู้ถือหุ้น ผู้เป็นหุ้นส่วน บุคคล นิติบุคคล หรือสำนักงาน ในหน่วยงานของตัวเอง <span class="law">ข้อ 9 (จ)</span></span></p>
+    <p class="lbl">ห้ากรณีที่ข้อบังคับถือว่า นำมาซึ่งความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี <span class="law">ข้อ 9 (จ) (1)–(5)</span></p>
+    <ol class="x04-five">
+      <li>ฝ่าฝืนหรือไม่ปฏิบัติตามจรรยาบรรณตามข้อบังคับนี้ โดยจงใจ หรือประมาทเลินเล่ออย่างร้ายแรง</li>
+      <li>เคยถูกลงโทษโดยคำสั่งถึงที่สุดเพราะประพฤติผิดจรรยาบรรณ แล้วยังประพฤติผิดซ้ำ ไม่หลาบจำ หรือไม่เกรงกลัว</li>
+      <li>กระทำความผิดในการประกอบวิชาชีพบัญชี ตามประมวลกฎหมายอาญา มาตรา 269 โดยคำพิพากษาถึงที่สุดให้จำคุก</li>
+      <li>กระทำความผิดตามมาตรา 36 ของพระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว พ.ศ. 2542 โดยคำพิพากษาถึงที่สุดให้จำคุก</li>
+      <li>กรณีอื่นที่คณะกรรมการจรรยาบรรณเห็นว่าเป็นการประพฤติผิดจรรยาบรรณอันจะนำมาซึ่งความเสื่อมเสียเกียรติศักดิ์</li>
+    </ol>
+    <div id="ck9"></div>
+    <details class="src x04-fold">
+      <summary>เรื่องอื่นที่คู่มือวางไว้ใต้หลักนี้</summary>
+      <ul>
+        <li>ต้องไม่รับงานในธุรกิจ อาชีพ หรือกิจกรรมใด ทั้งที่รู้ว่าทำให้หรืออาจทำให้ลดทอนความซื่อสัตย์สุจริต ความเที่ยงธรรม หรือชื่อเสียงที่ดีของวิชาชีพ <span class="law">R115.1</span></li>
+        <li>ต้องไม่ดูแลรักษาเงินหรือทรัพย์สินอื่นของลูกค้า ยกเว้นได้รับอนุญาตให้ทำตามกฎหมาย และเป็นไปตามเงื่อนไขที่กำหนด <span class="law">R350.3</span></li>
+        <li>เมื่อได้รับความไว้วางใจให้ดูแลเงินหรือทรัพย์สินของผู้อื่น ต้องปฏิบัติตามกฎหมายที่เกี่ยวข้อง เก็บแยกจากทรัพย์สินส่วนตัวหรือของสำนักงาน ใช้ตามวัตถุประสงค์ที่ตั้งใจเท่านั้น และพร้อมบันทึกทรัพย์สินนั้นกับผลประโยชน์ที่เกิดขึ้นให้ผู้มีสิทธิ <span class="law">R350.5</span></li>
       </ul>
-      <p><span class="law">ประกาศ 3/2558 ข้อ 12</span></p>
     </details>
+    <p class="cap">เหลืออีกหลักเดียว ระหว่างนั้นพริ้งมีเรื่องมาขอพีทอีกครั้ง คราวนี้ไม่ได้ให้เพิ่มอะไร แต่ให้เอาออก</p>
   </section>
 
-  <!-- เรื่องที่ 5 ใครรับผิด -->
-  <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
-    <div class="sechd"><i>5</i><div><small>เรื่องที่ 5 · เมื่อเกิดความเสียหาย</small><h2 id="h5">ผู้สอบบัญชีต้องรับผิด นิติบุคคลร่วมรับผิดด้วย จนครบจำนวน</h2></div></div>
-    <p class="cap">สมมติว่าผู้สอบบัญชีคนหนึ่งในบริษัทของแพรต้องรับผิดชอบต่อบุคคลที่สาม คือคนอื่นที่ไม่ใช่บริษัทเอง ลองเปลี่ยนสองเรื่อง แล้วดูว่าใครต้องร่วมรับผิด</p>
-    <div class="chips" data-pick="paid">
-      <button data-v="0" aria-pressed="true">ยังชำระค่าเสียหายได้ไม่ครบ</button>
-      <button data-v="1">ชำระได้ครบจำนวนแล้ว</button>
+  <!-- 10 หลัก (ฉ) -->
+  <section class="fig x04-pf" id="s10" data-step="s10" aria-labelledby="h10">
+    <div class="x04-hd"><i class="x04-L" aria-hidden="true">ฉ</i><div><small>หลักข้อ (ฉ)</small><h2 id="h10">ความโปร่งใส</h2></div></div>
+    <p class="x04-about"><b>เกี่ยวกับ</b> การทำงานให้เห็นว่าทำตามกฎ ไม่ปกปิดข้อเท็จจริง ไม่บิดเบือนความจริง และตรวจย้อนได้</p>
+    <p class="cap">บริษัทได้เงินกู้มาแล้ว พริ้งขอไม่ให้งบปีนี้มีเงินกู้ก้อนนี้ พีททำตามไม่ได้ เพราะเป็นการปกปิดข้อเท็จจริง โจทย์เริ่มที่ ถ้าพีททำตาม แล้วลองเปลี่ยนทีละเรื่อง</p>
+    <div class="case" id="case10" role="status" aria-live="polite"><small>โจทย์</small><p></p></div>
+    <p class="lbl">ลองเปลี่ยนดู · ในงบการเงิน พีททำอย่างไรกับเงินกู้ก้อนนี้</p>
+    <div class="chips" data-pick="x04act">
+      <button data-v="0">แสดงเป็นเงินกู้ตามสัญญา</button>
+      <button data-v="1" aria-pressed="true">ไม่แสดงเงินกู้ (ตัวอย่าง)</button>
+      <button data-v="2">แสดงเป็นรายได้</button>
     </div>
-    <div class="togs" data-togs="pf">
-      <button data-k="pf" aria-pressed="false"><span>กรรมการผู้มีอำนาจลงนามผูกพันพิสูจน์ได้<small>ว่าตนมิได้มีส่วนรู้เห็นหรือยินยอมในการกระทำผิดที่ต้องรับผิด</small></span></button>
+    <div class="togs x04-ask" data-togs="x04asked">
+      <button data-k="yes" aria-pressed="true"><span>พริ้งเป็นคนขอ<small>ปิดสวิตช์ คือไม่มีใครขอ พีททำเอง</small></span></button>
     </div>
-    <div class="x04-chain">
-      <div class="x04-node"><span class="ico" data-ico="star"></span><div><b>ผู้สอบบัญชี</b><span>ต้องรับผิดชอบต่อบุคคลที่สาม</span></div></div>
-      <span class="x04-link">ร่วมรับผิดด้วยอย่างลูกหนี้ร่วม</span>
-      <div class="x04-node"><span class="ico" data-ico="bag"></span><div><b>นิติบุคคลที่ผู้สอบบัญชีสังกัด</b><span>บริษัทของแพร ร่วมรับผิดด้วย</span></div></div>
-      <span class="x04-link x04-if">ถ้ายังชำระค่าเสียหายได้ไม่ครบจำนวน</span>
-      <div class="x04-node" id="n3"><span class="ico" data-ico="card"></span><div><b>หุ้นส่วน กรรมการผู้มีอำนาจลงนามผูกพัน หรือผู้แทนที่ต้องรับผิดชอบในการดำเนินการของนิติบุคคล</b><span id="n3s"></span></div></div>
+    <div class="x04-rule"><small>หลัก</small><span>ดูสิ่งที่อยู่ในงบ ว่าปกปิดข้อเท็จจริง หรือบิดเบือนความจริงอันเป็นสาระสำคัญไหม ใครขอไม่เปลี่ยนผล <span class="law">ข้อ 9 (ฉ)</span></span></div>
+    <div class="x04-flw">
+      <div class="x04-per x04-asker" id="fAsk"><span class="x04-fc" data-x04f="pring"></span><span><b>พริ้ง</b> <small>เจ้าของบริษัท</small><em>ขอไม่ให้งบมีเงินกู้ก้อนนี้</em></span></div>
+      <div class="x04-per x04-none" id="fNone" hidden><b>ไม่มีใครขอ</b></div>
+      <div class="x04-via" id="fVia"><i></i><span id="fViaT"></span></div>
+      <div class="x04-per"><span class="x04-fc" data-x04f="pete"></span><span><b>พีท</b> <small>ผู้ทำบัญชีของบริษัท</small><em id="fDoes"></em></span></div>
+      <div class="x04-via"><i></i><span>ออกมาเป็นงบการเงิน</span></div>
+      <div class="x04-sheet">
+        <b>งบการเงินของบริษัท พาวเด้ออ้าย จำกัด</b>
+        <div class="x04-row"><span>เงินสดและเงินฝากธนาคาร</span><i></i></div>
+        <div class="x04-row" id="fRow"><span id="fLab"></span><i></i></div>
+        <div class="x04-row"><span>ทุน</span><i></i></div>
+        <div class="x04-see" aria-live="polite"><span class="x04-ey"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg></span><span><small>คนที่อ่านงบนี้</small><span id="fSee"></span></span></div>
+      </div>
     </div>
-    <p class="result" id="r5" role="status"></p>
-    <p class="lbl">“ร่วมรับผิดด้วยอย่างลูกหนี้ร่วม” เป็นถ้อยคำของ <span class="law">พ.ร.บ. ม.11 วรรคสาม</span></p>
+    <div class="x04-res" id="res10" role="status"><span class="x04-ri"></span><div><b></b><span></span></div></div>
+    <p class="note"><span data-ico="info"></span><span>แสดงภาพลักษณ์ให้เห็นถึงการปฏิบัติงานตามกฎหมาย ข้อบังคับ ระเบียบต่าง ๆ และมาตรฐานวิชาชีพที่กำหนดไว้ และไม่ปกปิดข้อเท็จจริง หรือบิดเบือนความจริงอันเป็นสาระสำคัญ ซึ่งสามารถติดตามตรวจสอบได้ <span class="law">ข้อ 9 (ฉ)</span></span></p>
+    <p class="note"><span data-ico="book"></span><span>การไม่แสดงเงินกู้ ยังเข้าเรื่องที่คู่มือเขียนไว้ใต้หลัก (ก) ด้วย คือการละเว้นหรือปิดบังข้อมูลที่จำเป็นต้องมี จนอาจทำให้เกิดความเข้าใจผิด การกระทำเดียวจึงขัดได้มากกว่าหนึ่งหลัก <span class="law">R111.2</span></span></p>
+  </section>
 
-    <h3 style="margin-top:8px">จำนวนหลักประกัน กับจำนวนที่ต้องรับผิด เป็นคนละจำนวน</h3>
-    <div class="x04-vs" role="img" aria-label="แถบสั้นคือหลักประกันที่ต้องมีไว้ คิดจากทุนหรือรายได้ แถบยาวคือค่าเสียหายที่ต้องร่วมรับผิดจนครบจำนวน">
-      <div><span>หลักประกันที่ต้องมีไว้ คิดจากทุนหรือรายได้ <span class="law">ข้อ 2 · ข้อ 6</span></span><div class="x04-vb x04-v1"></div><b>ไม่น้อยกว่าร้อยละ 3</b></div>
-      <div><span>ค่าเสียหายที่ต้องรับผิดต่อบุคคลที่สาม <span class="law">ม.11 วรรคสาม</span></span><div class="x04-vb x04-v2"></div><b>ร่วมรับผิดจนครบจำนวน</b></div>
-    </div>
-    <p class="cap">ผู้ประกอบวิชาชีพบัญชี และผู้ซึ่งขึ้นทะเบียนไว้กับสภาฯ อย่างพีท มีหน้าที่ปฏิบัติตามจรรยาบรรณ <span class="law">พ.ร.บ. ม.46</span> เริ่มในบทถัดไป</p>
+  <!-- 11 แยก จ ฉ -->
+  <section class="fig" id="s11" data-step="s11" aria-labelledby="h11">
+    <span class="fno">ลองเอง</span>
+    <h2 id="h11">ห้าเรื่องนี้ ขัดกับ (จ) หรือ (ฉ)</h2>
+    <p class="cap">รอบสุดท้าย แตะหลักที่คิดว่าใช่ แตะใหม่ได้ ไม่มีคะแนน</p>
+    <div class="x04-drill" id="dr3"></div>
   </section>
 
   <!-- ลองดู -->
   <section class="fig" aria-labelledby="fq">
     <span class="fno">ลองดู</span>
-    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <h2 id="fq">สี่คำถาม ตอบจากภาพข้างบน</h2>
     <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
-    <div id="quiz" style="display:grid;gap:12px"></div>
+    <div id="quiz" style="display:grid;gap:12px;grid-template-columns:minmax(0,1fr)"></div>
   </section>
 
-  <!-- จำจากภาพ -->
+  <!-- สรุป -->
   <section class="fig" aria-labelledby="fk">
     <span class="fno">สรุปบทนี้</span>
     <h2 id="fk">จำจากภาพ</h2>
     <ul class="keep">
-      <li><span class="ico" data-ico="card"></span><span>ลงลายมือชื่อรับรองการสอบบัญชี ต้องเป็นผู้สอบบัญชีรับอนุญาต (CPA) ผู้ทำบัญชีเป็นสมาชิกหรือขึ้นทะเบียน อย่างเดียวก็พอ</span></li>
-      <li><span class="ico" data-ico="clock"></span><span>ผู้ขึ้นทะเบียนชำระค่าธรรมเนียมทุกปี ไม่ชำระครบตามกำหนด การขึ้นทะเบียนสิ้นสุดลง</span></li>
-      <li><span class="ico" data-ico="pen"></span><span>นิติบุคคลที่ให้บริการสอบบัญชีหรือทำบัญชี จดทะเบียนต่อสภาฯ ภายใน 30 วัน ต่อทะเบียนทุกหนึ่งปี</span></li>
-      <li><span class="ico" data-ico="flag"></span><span>รับสอบบัญชี คนที่มีอำนาจลงนามผูกพันนิติบุคคลต้องเป็นผู้สอบบัญชีรับอนุญาต</span></li>
-      <li><span class="ico" data-ico="shield"></span><span>หลักประกัน วันยื่นจดร้อยละ 3 ของทุน ทุกปีภายใน 60 วัน ร้อยละ 3 ของทุนหรือรายได้จากการให้บริการ จำนวนที่มากกว่า</span></li>
-      <li><span class="ico" data-ico="lock"></span><span>หลักประกันมีห้าประเภท ต้องปราศจากภาระผูกพัน</span></li>
-      <li><span class="ico" data-ico="mail"></span><span>เปลี่ยนประเภทหลักประกัน แก้ข้อมูล หรือเลิกให้บริการ ทำภายใน 15 วัน</span></li>
-      <li><span class="ico" data-ico="bag"></span><span>ผู้สอบบัญชีต้องรับผิดชอบต่อบุคคลที่สาม นิติบุคคลที่สังกัดร่วมรับผิดจนครบจำนวน</span></li>
+      <li><span class="ico" data-ico="book"></span><span>จรรยาบรรณอยู่ในข้อบังคับของสภาวิชาชีพบัญชี แกนคือหลักการพื้นฐานหกข้อ ไม่ทำตาม ถือว่าประพฤติผิดจรรยาบรรณ</span></li>
+      <li><span class="ico" data-ico="users"></span><span>ใช้กับคนทำงานวิชาชีพบัญชีหกด้าน กับด้านอื่นที่กฎกระทรวงกำหนด และคนที่ขึ้นทะเบียนไว้กับสภาฯ เข้าข้อเดียวก็อยู่ใต้ คนอื่นลงมือโดยเรารับรู้ก็นับ</span></li>
+      <li><span class="ico x04-kl x04-pa">ก</span><span>ตรงไปตรงมา ไม่เกี่ยวข้องทั้งที่รู้กับข้อมูลที่ทำให้เข้าใจผิด แก้ตัวเลขให้ตรงกับความจริงไม่ขัด ใครขอผลก็เท่าเดิม</span></li>
+      <li><span class="ico x04-kl x04-pb">ข</span><span>ไม่ให้อคติ ผลประโยชน์ขัดกัน หรืออิทธิพลเกินควร มาลบล้างดุลยพินิจ ผู้สอบบัญชีต้องเป็นอิสระจากลูกค้า ของขวัญรับได้เฉพาะมูลค่าเล็กน้อยและไม่สำคัญ และผู้ให้ไม่มีเจตนาให้มีอิทธิพล</span></li>
+      <li><span class="ico x04-kl x04-pc">ค</span><span>รักษาความรู้ให้ทันของใหม่ ทำงานรอบคอบ ครบถ้วน ทันเวลา ตามมาตรฐาน เวลา ข้อมูล ประสบการณ์ หรือทรัพยากรไม่พอ ต้องจัดการก่อน</span></li>
+      <li><span class="ico x04-kl x04-pd">ง</span><span>ไม่เปิดเผย ไม่เอาไปใช้ งานจบก็ยังต้องรักษา เปิดเผยได้สามทาง คือกฎหมายกำหนด กฎหมายอนุญาตและได้รับอนุมัติ หรือมีหน้าที่หรือสิทธิทางวิชาชีพเมื่อไม่มีกฎหมายห้าม</span></li>
+      <li><span class="ico x04-kl x04-pe">จ</span><span>ทำตามกฎหมาย ไม่ทำให้วิชาชีพเสื่อมเสียเกียรติศักดิ์ ซึ่งข้อบังคับระบุไว้ห้ากรณี โฆษณาต้องอยู่บนความจริง ไม่อวดเกินจริง ไม่ดูหมิ่น ไม่เทียบโดยไม่จริง</span></li>
+      <li><span class="ico x04-kl x04-pf">ฉ</span><span>ไม่ปกปิดข้อเท็จจริง ไม่บิดเบือนความจริงอันเป็นสาระสำคัญ และตรวจย้อนได้ ใครขอผลก็เท่าเดิม</span></li>
     </ul>
   </section>
 
   <details class="src">
     <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
     <ul>
-      <li>พ.ร.บ. คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547</li>
-      <li>พ.ร.บ.การบัญชี คือพระราชบัญญัติการบัญชี พ.ศ. 2543 หน้านี้ใช้เฉพาะนิยามผู้ทำบัญชี</li>
-      <li>กฎกระทรวง คือกฎกระทรวงกำหนดหลักประกันความรับผิดต่อบุคคลที่สามของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2553 ในกฎกระทรวงนี้ “ผู้ประกอบวิชาชีพบัญชี” หมายความว่านิติบุคคลซึ่งประกอบกิจการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี</li>
-      <li>ประกาศ 3/2558 และประกาศ 15/2562 คือประกาศสภาวิชาชีพบัญชี เรื่อง หลักเกณฑ์และวิธีการจดทะเบียน การแจ้งรายละเอียดเกี่ยวกับหลักประกันเพื่อประกันความรับผิดต่อบุคคลที่สามของนิติบุคคลที่ให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี ฉบับหลังแก้ข้อ 5 ของฉบับแรก จากต่อทะเบียนทุกสามปีเป็นทุกหนึ่งปี</li>
-      <li>ข้อบังคับผู้ทำบัญชี คือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยหลักเกณฑ์ วิธีการ เงื่อนไข และคุณสมบัติของผู้ขึ้นทะเบียนเป็นผู้ทำบัญชี พ.ศ. 2556 เลขข้อในเรื่องที่ 1 ที่ไม่ได้บอกชื่อ มาจากข้อบังคับนี้</li>
-      <li>ค่าธรรมเนียมรายปีของผู้ขึ้นทะเบียน มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยค่าบำรุงสมาชิกและค่าธรรมเนียม พ.ศ. 2556 ข้อ 7</li>
-      <li>“สภาฯ” คือสภาวิชาชีพบัญชี · CPA คือผู้สอบบัญชีรับอนุญาต · คน บริษัท และตัวเลขทุน รายได้ หลักประกันในภาพเป็นเรื่องสมมติ</li>
+      <li>เลขข้อที่ไม่ได้บอกชื่อกฎหมาย (ข้อ 4 ข้อ 5 ข้อ 6 ข้อ 8 ข้อ 9 ข้อ 15) มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
+      <li>พ.ร.บ.วิชาชีพบัญชี และเลขมาตรา (ม.) คือพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547 ยกเว้นมาตรา 269 ซึ่งเป็นของประมวลกฎหมายอาญา และมาตรา 36 ซึ่งเป็นของพระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว พ.ศ. 2542</li>
+      <li>เลขที่มีจุด เช่น R111.2 หรือ 114.1 A1 คือย่อหน้าของคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 เลขที่ขึ้นต้นด้วย R คือข้อกำหนด เลขที่มี A คือคำอธิบายการนำไปปฏิบัติ</li>
+      <li>ข้อบังคับ (ฉบับที่ 12) คือข้อบังคับสภาวิชาชีพบัญชี (ฉบับที่ 12) เรื่อง การพิจารณาเกี่ยวกับจรรยาบรรณ พ.ศ. 2549</li>
+      <li>“สภาฯ” คือสภาวิชาชีพบัญชี “คณะกรรมการสภาฯ” คือคณะกรรมการสภาวิชาชีพบัญชี</li>
+      <li>พีท พี่แพม พริ้ง แพร และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ ตัวเลขบาทและจำนวนปีในหน้านี้เป็นของกรณีสมมติ ยกเว้นเรื่องที่มีป้ายว่า เรื่องจริงที่สภาฯ เล่า</li>
     </ul>
   </details>
 
   <section class="next">
-    <small>บทถัดไป</small>
-    <b>ถูกขอให้แก้ตัวเลข ทำตามได้แค่ไหน</b>
-    <p>เริ่มภาคจรรยาบรรณ จากหลัก (ก) ความซื่อสัตย์สุจริต ข้อแรกในหกหลักการพื้นฐาน</p>
-    <a class="btn" href="law2v-r05.html">ไปบทถัดไป</a>
+    <small>สถานีถัดไป</small>
+    <b>เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร</b>
+    <p>บางเรื่องยังไม่ผิด แต่ทำให้ทำตามหกหลักได้ยาก ข้อบังคับให้ระบุ ประเมิน และจัดการ แล้วถ้าผิดไปแล้ว มีโทษอะไรบ้าง</p>
+    <a class="btn" href="law2v-r05.html">ไปสถานีถัดไป</a>
   </section>
 </main>
 <script src="law2v.js"></script>
 <script>
 (function () {
   var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function L(t) { return ' <span class="law">' + t + '</span>'; }
   function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
-  function law(t) { return ' <span class="law">' + t + '</span>'; }
-  /* สถานะของกล่องเงื่อนไข: ok = ผ่าน · no = ไม่ผ่าน · idle = ไม่ใช้ตัดสินในกรณีนี้ */
-  function cond(id, st) { var c = $(id); c.className = 'cond' + (st === 'ok' ? ' ok' : st === 'no' ? ' no' : ' x04-idle'); c.querySelector('.mk').innerHTML = st === 'idle' ? '' : V.icon(st === 'ok' ? 'check' : 'x'); }
-  function line(id, st) { $(id).setAttribute('class', st === 'ok' ? 'ok' : st === 'no' ? 'no' : ''); }
-  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').innerHTML = s; }
+  function mark(id, ok) { var c = $(id); c.className = c.className.replace(/ ?\b(ok|no)\b/g, '') + (ok ? ' ok' : ' no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); }
+  function line(id, ok) { $(id).setAttribute('class', ok ? 'ok' : 'no'); }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  /* กล่องผล: kind = good | bad | warn */
+  var RICO = { good: 'check', bad: 'x', warn: 'flag' };
+  function res(id, kind, t, s) { var o = $(id); o.className = 'x04-res x04-' + kind; o.querySelector('.x04-ri').innerHTML = V.icon(RICO[kind]);
+    var d = o.lastElementChild; d.firstElementChild.textContent = t; d.lastElementChild.innerHTML = s; }
+  /* กล่องโจทย์ (รอบคนเรียนครั้งแรก): ข้อเท็จจริงเต็มของกรณีตอนนี้ + คำถาม · mk เน้นข้อที่ผู้เรียนเพิ่งเปลี่ยน
+     live เป็นจริงเมื่อตั้งค่าครั้งแรกของทั้งหน้าเสร็จ สถานะตั้งต้นจึงไม่มีอะไรถูกเน้น */
+  var live = false;
+  function mk(on, t) { return on ? '<mark>' + t + '</mark>' : t; }
+  function kase(id, facts, q) { $(id).innerHTML = '<small>โจทย์</small><p>' + (facts.join ? facts.join('<br>') : facts) + '</p><p class="x04-q">' + q + '</p>'; }
+  function join(a) { return a.length < 3 ? a.join('และ') : a.slice(0, -1).join(' ') + ' และ' + a[a.length - 1]; }
   V.spy('#steps');
 
-  /* ภาพหลัก: งาน × มีนิติบุคคลให้บริการหรือไม่ (พ.ร.บ. ม.11 ม.37 ม.44 ม.67 · พ.ร.บ.การบัญชี ม.4)
-     แต่ละข้อ: [ไอคอน, เป็นเรื่องของตัวคน (1) หรือนิติบุคคล (0), หัวข้อ, ชื่อสั้นตอนไม่ใช้, ข้อความ, [[ลิงก์, คำ]…]] */
-  var REQ = {
-    cpa: ['card', 1, 'คนที่ลงลายมือชื่อรับรองการสอบบัญชี', '', 'ลงลายมือชื่อในฐานะผู้สอบบัญชี ต้องเป็นผู้สอบบัญชีรับอนุญาต' + law('พ.ร.บ. ม.37') + ' ฝ่าฝืนมีโทษจำคุกหรือปรับ' + law('ม.67'), []],
-    bk: ['card', 1, 'คนที่เป็นผู้ทำบัญชี', '', 'ผู้ทำบัญชีคือผู้รับผิดชอบในการทำบัญชีของกิจการ ต้องเป็นสมาชิกสภาวิชาชีพบัญชี (สภาฯ) หรือขึ้นทะเบียนไว้กับสภาฯ' + law('พ.ร.บ. ม.44'), [['#s1', 'เรื่องที่ 1']]],
-    reg: ['pen', 0, 'จดทะเบียนต่อสภาวิชาชีพบัญชี (สภาฯ)', 'จดทะเบียนต่อสภาวิชาชีพบัญชี', 'นิติบุคคลที่ให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี ต้องจดทะเบียน' + law('พ.ร.บ. ม.11'), [['#s2', 'เรื่องที่ 2']]],
-    gua: ['shield', 0, 'หลักประกัน', 'หลักประกัน', 'มีไว้ประกันความรับผิดต่อบุคคลที่สาม คือคนอื่นที่ไม่ใช่นิติบุคคลผู้ให้บริการเอง' + law('พ.ร.บ. ม.11 (1)'), [['#s3', 'เรื่องที่ 3 วันยื่นจด'], ['#s4', 'เรื่องที่ 4 ทุกปี']]],
-    sig: ['flag', 0, 'คนที่มีอำนาจลงนามผูกพันนิติบุคคล', 'คนที่มีอำนาจลงนามผูกพัน', 'ลงนามแล้วผูกพันนิติบุคคลในการให้บริการการสอบบัญชี ต้องเป็นผู้สอบบัญชีรับอนุญาต เป็นคนละเรื่องกับข้อแรก' + law('พ.ร.บ. ม.11 (2)'), [['#s2', 'เรื่องที่ 2']]],
-    liab: ['bag', 0, 'ร่วมรับผิดเมื่อเกิดความเสียหาย', 'ร่วมรับผิด', 'ผู้สอบบัญชีต้องรับผิดชอบต่อบุคคลที่สาม นิติบุคคลที่สังกัดร่วมรับผิดด้วย' + law('พ.ร.บ. ม.11 วรรคสาม'), [['#s5', 'เรื่องที่ 5']]]
-  };
-  var WHY_P = 'พ.ร.บ.วิชาชีพบัญชี มาตรา 11 เขียนเรื่องเหล่านี้กับนิติบุคคลที่ประกอบกิจการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี',
-    WHY_S = 'มาตรา 11 (2) เขียนถึงกรณีให้บริการการสอบบัญชี และวรรคสามเขียนถึงกรณีที่ผู้สอบบัญชีต้องรับผิดชอบต่อบุคคลที่สาม';
-  var CELL = [
-    { t: 'สอบบัญชี ไม่มีนิติบุคคลให้บริการ', s: 'ถ้าแพรรับสอบบัญชีในนามตัวเอง ไม่ได้ตั้งนิติบุคคล เรื่องที่ต้องดูคือใบอนุญาตของแพร', on: ['cpa'], off: ['reg', 'gua', 'sig', 'liab'], why: WHY_P },
-    { t: 'สอบบัญชี นิติบุคคลให้บริการ', s: 'บริษัทของแพรอยู่ช่องนี้ ใช้ครบทุกข้อ แพรเป็นทั้งคนที่ลงลายมือชื่อรับรองการสอบบัญชี และคนที่มีอำนาจลงนามผูกพันบริษัท', on: ['cpa', 'reg', 'gua', 'sig', 'liab'], off: [], why: '' },
-    { t: 'ทำบัญชี ไม่มีนิติบุคคลให้บริการ', s: 'พีทเป็นพนักงานของบริษัท พาวเด้ออ้าย จำกัด บริษัทขายแป้งของพริ้ง และรับผิดชอบทำบัญชีของบริษัทนั้น บริษัทขายแป้งไม่ได้ประกอบกิจการให้บริการด้านการทำบัญชี เรื่องที่ต้องดูคือตัวพีท', on: ['bk'], off: ['reg', 'gua', 'sig', 'liab'], why: WHY_P },
-    { t: 'ทำบัญชี นิติบุคคลให้บริการ', s: 'เช่น ห้างหุ้นส่วนจำกัดที่รับทำบัญชีให้กิจการอื่นอย่างเดียว ต้องดูคนที่เป็นผู้ทำบัญชี และห้างต้องจดทะเบียนกับมีหลักประกัน', on: ['bk', 'reg', 'gua'], off: ['sig', 'liab'], why: WHY_S }];
-  V.pick('cell', function (v) { var c = CELL[v];
-    $('cellT').textContent = c.t; $('cellS').textContent = c.s;
-    var h = c.on.map(function (k) { var q = REQ[k];
-      return '<li class="x04-req"><span class="ico">' + V.icon(q[0]) + '</span><div><em class="x04-tag' + (q[1] ? '' : ' x04-ent') + '">' + (q[1] ? 'ตัวคน' : 'นิติบุคคล') + '</em><b>' + q[2] + '</b><span>' + q[4] + '</span>'
-        + q[5].map(function (a) { return '<a href="' + a[0] + '">' + a[1] + '</a>'; }).join('') + '</div></li>'; }).join('');
-    if (c.off.length) h += '<li class="x04-req x04-off"><span class="ico">' + V.icon('info') + '</span><div><b>' + c.off.map(function (k) { return REQ[k][3]; }).join(' · ') + '</b><span>' + c.why + '</span></div></li>';
-    $('cellR').innerHTML = h; });
+  /* ภาพหน้าของพี่แพม พริ้ง และพีท (วาดในหน้านี้ ของกลางมีเฉพาะแพรกับพราว) */
+  var faceN = 0;
+  function eyes(y, c) { return '<ellipse cx="50" cy="' + y + '" rx="5.2" ry="3.4" fill="#fff"/><ellipse cx="70" cy="' + y + '" rx="5.2" ry="3.4" fill="#fff"/><circle cx="50.4" cy="' + y + '" r="2.9" fill="' + c + '"/><circle cx="69.6" cy="' + y + '" r="2.9" fill="' + c + '"/><path d="M44.3 ' + (y - 1.5) + 'q5.7-4.6 11.4-.3M64.3 ' + (y - 1.8) + 'q5.7-4.3 11.4.3" fill="none" stroke="#2A1B15" stroke-width="1.7" stroke-linecap="round"/>'; }
+  function F(n) {
+    faceN++; var id = 'x04fc' + faceN, s = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="' + id + '"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#' + id + ')">';
+    if (n === 'pam') s += '<rect width="120" height="120" fill="#E3F3E8"/><circle cx="60" cy="20" r="12" fill="#2A1B15"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#0B3B3C"/><path d="M50 95l10 14 10-14 4 2-14 23-14-23z" fill="#FDFDFB"/><path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><ellipse cx="39.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="80.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/><path d="M38.5 56c-4-22 6-33 22-33 15 0 25 9 21.5 33-2-10-6-17-13-20-7 6-18 8-26 8-2 3-3.5 7-4.5 12z" fill="#2A1B15"/><circle cx="39.5" cy="66" r="2.3" fill="#F0C84B"/><circle cx="80.5" cy="66" r="2.3" fill="#F0C84B"/>' + eyes(56, '#3B2418') + '<path d="M60 58c-1 4-2 6-1 8h2.5" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/><path d="M54 71c3.5 2.6 8.5 2.6 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>';
+    else if (n === 'pring') s += '<rect width="120" height="120" fill="#FBE6E4"/><path d="M31 54c-4 22-2 42 5 62h48c7-20 9-40 5-62z" fill="#4A2A1C"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#C9A227"/><path d="M49 95c3 8 19 8 22 0l4 2c-4 12-26 12-30 0z" fill="#FDFDFB"/><path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><path d="M38 60c-5-24 5-37 22-37s27 13 22 37c-1-11-4-19-9-23-4 5-12 9-24 9-6 2-9 7-11 14z" fill="#4A2A1C"/>' + eyes(57, '#3B2418') + '<path d="M60 59c-1 4-2 6-1 8h2.5" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/><path d="M54 72c3.5 2.6 8.5 2.6 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>';
+    else s += '<rect width="120" height="120" fill="#FBF6E4"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#2F6B8A"/><path d="M48 95l12 11 12-11 5 3-17 15-17-15z" fill="#FDFDFB"/><path d="M52 78h16v15c0 5-16 5-16 0z" fill="#D9A886"/><ellipse cx="39.5" cy="57" rx="3.2" ry="5.2" fill="#E8BE9F"/><ellipse cx="80.5" cy="57" rx="3.2" ry="5.2" fill="#E8BE9F"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#E8BE9F"/><path d="M38.5 52c-3-19 7-30 21.5-30s24.5 11 21.5 30c-2-8-6-13-11-15-8 3-17 3-23 1-4 3-7 8-9 14z" fill="#1E1612"/>' + eyes(57, '#2E1D14') + '<path d="M60 59c-1 4-2 6-1 8h2.5" fill="none" stroke="#B98A6C" stroke-width="1.4" stroke-linecap="round"/><path d="M54 72c3.5 2.2 8.5 2.2 12 0" fill="none" stroke="#8E4A3C" stroke-width="2" stroke-linecap="round"/>';
+    return s + '</g></svg>';
+  }
+  [].forEach.call(document.querySelectorAll('[data-x04f]'), function (e) { e.innerHTML = F(e.getAttribute('data-x04f')); });
+  var CO = '<svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" fill="#FBF6E4"/><path d="M8 34V17l12-8 12 8v17z" fill="#C9A227"/><rect x="17" y="25" width="6" height="9" fill="#FBF6E4"/><rect x="12" y="19" width="4" height="4" fill="#FBF6E4"/><rect x="24" y="19" width="4" height="4" fill="#FBF6E4"/></svg>';
+  var GIFT = '<svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="16" width="26" height="18" rx="3" fill="#F0C84B" stroke="#0B3B3C" stroke-width="2"/><rect x="5" y="11" width="30" height="7" rx="2" fill="#C9A227" stroke="#0B3B3C" stroke-width="2"/><rect x="18" y="11" width="4" height="23" fill="#0B3B3C"/><path d="M20 11c-3-7-10-5-6 0zM20 11c3-7 10-5 6 0z" fill="none" stroke="#0B3B3C" stroke-width="2.5" stroke-linejoin="round"/></svg>';
+  $('coAv').innerHTML = CO;
 
-  /* เรื่องที่ 1: พ.ร.บ. ม.44 เป็นสมาชิก หรือ ขึ้นทะเบียน · ม.69 */
-  V.togs('bk', function (s) { var any = s.mem || s.reg;
-    cond('d0', s.mem ? 'ok' : (any ? 'idle' : 'no')); cond('d1', s.reg ? 'ok' : (any ? 'idle' : 'no'));
-    line('k0', s.mem ? 'ok' : (any ? '' : 'no')); line('k1', s.reg ? 'ok' : (any ? '' : 'no'));
-    gate('gate1', any, any ? 'พีทเป็นผู้ทำบัญชีได้' : 'พีทยังเป็นผู้ทำบัญชีไม่ได้',
-      s.mem && s.reg ? 'มีทั้งสองอย่าง มีอย่างเดียวก็พอแล้ว' : s.reg ? 'ขึ้นทะเบียนไว้แล้ว ไม่ต้องเป็นสมาชิกด้วย' : s.mem ? 'เป็นสมาชิกสภาฯ แล้ว ไม่ต้องขึ้นทะเบียนอีก'
-        : 'ไม่ได้เป็นสมาชิก และไม่ได้ขึ้นทะเบียน ต้องมีอย่างใดอย่างหนึ่งก่อน ฝ่าฝืนมาตรา 44 มีโทษจำคุกหรือปรับ' + law('ม.69')); });
+  /* 2 ใครอยู่ใต้: พ.ร.บ. ม.46 วรรคหนึ่ง · ข้อ 4 · ม.4 · ม.44 (R05-K04 ถึง K07 · K10 · K11)
+     c = ข้อเท็จจริงของคนนั้นในกล่องโจทย์ (ต่อท้ายชื่อ) · fd = ช่องที่ติดไฟ (0–5 หกด้าน · 7 ขึ้นทะเบียน) · in = อยู่ใต้ร่ม · พริ้ง: ป้ายผลพูดเท่าที่ภาพตรวจ คือไม่อยู่ในสองกลุ่ม */
+  var WHO = [
+    { n: 'พีท', f: 'pete', fd: [0, 7], inn: true, c: 'ทำบัญชีให้บริษัท พาวเด้ออ้าย จำกัด เป็นลูกจ้างของบริษัท ไม่ได้เป็นสมาชิกสภาฯ แต่ขึ้นทะเบียนเป็นผู้ทำบัญชีไว้กับสภาฯ',
+      t: 'พีทอยู่ใต้จรรยาบรรณ', s: 'เข้าทั้งสองข้อ ทำงานด้านการทำบัญชี และขึ้นทะเบียนไว้กับสภาฯ ไม่ได้เป็นสมาชิกก็อยู่ใต้ ข้อบังคับเรียกคนที่กิจการว่าจ้างแบบพีทว่า ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ' + L('ม.46 · ข้อ 4') },
+    { n: 'พี่แพม', f: 'pam', fd: [1], inn: true, c: 'เป็นผู้สอบบัญชีรับอนุญาต ทำงานในสำนักงานสอบบัญชี และเป็นผู้สอบบัญชีของบริษัท พาวเด้ออ้าย จำกัด',
+      t: 'พี่แพมอยู่ใต้จรรยาบรรณ', s: 'ทำงานด้านการสอบบัญชี เข้าข้อแรกข้อเดียวก็พอ ข้อบังคับเรียกคนในสำนักงานที่ให้บริการทางวิชาชีพแบบพี่แพมว่า ผู้ประกอบวิชาชีพบัญชีที่ให้บริการสาธารณะ' + L('ข้อ 4') },
+    { n: 'พริ้ง', f: 'pring', fd: [], inn: false, c: 'เป็นเจ้าของบริษัท พาวเด้ออ้าย จำกัด จ้างพีททำบัญชี ไม่ได้ทำเอง ไม่ได้ทำงานวิชาชีพบัญชีด้านอื่น และไม่ได้ขึ้นทะเบียนไว้กับสภาฯ',
+      t: 'พริ้งไม่อยู่ในสองกลุ่มนี้', s: 'กฎหมายวางหน้าที่ไว้กับคนทำงานวิชาชีพบัญชี กับคนที่ขึ้นทะเบียนไว้ พริ้งไม่ใช่ทั้งสองอย่าง แต่พีทยังอยู่ใต้ พริ้งเป็นคนขอให้ทำ หน้าที่ของพีทก็ไม่หายไป' + L('ม.46') },
+    { n: 'คนรับวางระบบบัญชี', cn: 'อีกคนหนึ่ง', f: '', fd: [3], inn: true, c: 'รับวางระบบบัญชีให้บริษัท พาวเด้ออ้าย จำกัด ไม่ใช่ผู้ทำบัญชี ไม่ใช่ผู้สอบบัญชี และไม่ได้ขึ้นทะเบียนไว้กับสภาฯ',
+      t: 'คนรับวางระบบบัญชีก็อยู่ใต้', s: 'การวางระบบบัญชีเป็นหนึ่งในหกด้านของวิชาชีพบัญชี จรรยาบรรณไม่ได้ใช้กับผู้สอบบัญชีและผู้ทำบัญชีเท่านั้น' + L('ข้อ 4 · ม.4') }];
+  V.pick('x04who', function (v) { var w = WHO[v], i;
+    kase('case2', mk(live, w.cn || w.n) + w.c, w.n + 'อยู่ใต้จรรยาบรรณไหม');
+    for (i = 0; i < 8; i++) $('fd' + i).className = w.fd.indexOf(i) >= 0 ? 'x04-lit' : '';
+    var pin = '<span class="pinp">' + (w.f ? '<span>' + F(w.f) + '</span>' : '<span class="x04-pi">' + V.icon('tool') + '</span>') + w.n + (w.inn ? 'อยู่ใต้ร่ม' : 'อยู่นอกร่ม') + '</span>';
+    $('slotIn').innerHTML = w.inn ? pin : ''; $('slotOut').innerHTML = w.inn ? '' : pin;
+    res('res2', w.inn ? 'good' : 'warn', w.t, w.s); });
+  V.check('ck2', { f: 'เพื่อนของพีททำบัญชีให้อีกบริษัทหนึ่ง เป็นสมาชิกสภาฯ แต่ไม่ได้ขึ้นทะเบียนไว้', q: 'เพื่อนคนนี้อยู่ใต้จรรยาบรรณไหม', o: [
+    ['อยู่ใต้', 1, 'ทำงานด้านการทำบัญชี เข้าข้อแรกแล้ว ไม่ต้องขึ้นทะเบียนด้วย กลับกันกับพีทที่ไม่ได้เป็นสมาชิกแต่ขึ้นทะเบียน ผลเหมือนกัน'],
+    ['ไม่อยู่ใต้', 0, 'เข้าข้อเดียวก็พอ เพื่อนคนนี้ทำงานด้านการทำบัญชี ซึ่งเป็นหนึ่งในหกด้าน จึงอยู่ใต้แล้ว แม้ไม่ได้ขึ้นทะเบียน']] });
 
-  /* เรื่องที่ 1: ต่ออายุบัตรและค่าธรรมเนียมรายปี (ข้อบังคับผู้ทำบัญชี ข้อ 8 · 9 · 13) */
-  var PAY = [
-    { ok: true, y: 'บัตรของปีถัดไป<small>1 มกราคม ถึง 31 ธันวาคม</small>', t: 'ได้ ยังเป็นผู้ขึ้นทะเบียน', s: 'ต่ออายุบัตรและชำระค่าธรรมเนียมของปีถัดไปครบ ภายในวันทำการสุดท้ายของปี ถ้าโอนเงินผ่านธนาคารหรืออินเทอร์เน็ต ชำระได้ถึงวันสิ้นสุดของปี' + law('ข้อ 9') },
-    { ok: false, y: 'การขึ้นทะเบียนสิ้นสุดลง', t: 'ไม่ได้ จนกว่าจะเป็นสมาชิกหรือขึ้นทะเบียนไว้กับสภาฯ', s: 'ไม่ชำระค่าธรรมเนียมให้ครบภายในกำหนด ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลง' + law('ข้อ 13') + ' พีทไม่ได้เป็นสมาชิก จึงไม่เหลือสักอย่างตามมาตรา 44' }];
-  V.pick('pay', function (v) { var p = PAY[v];
-    $('yNext').className = 'x04-y2' + (p.ok ? '' : ' x04-end'); $('yNext').innerHTML = p.y;
-    $('payC').className = 'cg ' + (p.ok ? 'ok' : 'lock'); $('payC').querySelector('.ico').innerHTML = V.icon(p.ok ? 'check' : 'lock');
-    $('payT').textContent = p.t; $('payS').innerHTML = p.s; });
+  /* 3 หลัก (ก): ข้อ 9 (ก) · คู่มือ R111.2 · R220.4 (ค) · R270.3 (ก) (R05-K17 K19 K21 K22)
+     ตัวเลขของเรื่อง: บัญชีเดิม 1,200,000 · คำขอให้แก้เป็น 1,500,000 · เอกสารการขายเลื่อนได้ 1,200,000 ถึง 1,800,000 ทีละ 100,000
+     ผลเป็นฟังก์ชันของยอดเอกสาร d: d = 1,500,000 ตรงกัน · d น้อยกว่า งบมีส่วนที่ไม่มีการขายจริง · d มากกว่า งบยังลงไม่ครบ */
+  var REQ = 1500000, BOOK = 1200000, AX = 1800000, d3 = BOOK, ask3 = 0, last3 = '';
+  function draw3() { var real = Math.min(d3, REQ), fake = Math.max(0, REQ - d3), left = Math.max(0, d3 - REQ), eq = d3 === REQ, t, s, l;
+    $('aReal').style.width = (100 * real / AX) + '%'; $('aFake').style.width = (100 * fake / AX) + '%';
+    $('bReal').style.width = (100 * real / AX) + '%'; $('bLeft').style.width = (100 * left / AX) + '%';
+    $('bDocV').textContent = fmt(d3);
+    $('sign3').className = 'x04-sign ' + (eq ? 'x04-eq' : 'x04-ne'); $('sign3I').textContent = eq ? '=' : '≠';
+    $('sign3T').textContent = eq ? 'ตรงกัน' : (fake ? 'งบสูงกว่าเอกสาร ' + fmt(fake) + ' บาท' : 'งบต่ำกว่าเอกสาร ' + fmt(left) + ' บาท');
+    $('bars3').setAttribute('aria-label', 'งบหลังแก้ 1,500,000 บาท เอกสารการขายรวม ' + fmt(d3) + ' บาท ' + $('sign3T').textContent);
+    if (eq) { t = 'แก้แบบนี้ไม่ขัดกับหลัก (ก)'; s = 'บัญชีเดิมลงยอดขายขาดไป 300,000 บาท หลังแก้ งบตรงกับการขายที่เกิดขึ้นจริง เป็นการนำเสนอความจริงอย่างถูกต้อง'; l = L('R220.4 (ค)'); }
+    else if (fake) { t = ask3 ? 'พีทแก้แบบนี้ไม่ได้' : 'พีทแก้ตามคำขอไม่ได้'; l = L('R111.2');
+      s = d3 === BOOK ? 'บัญชีเดิมตรงกับเอกสารอยู่แล้ว อีก 300,000 บาทที่จะเพิ่ม ไม่มีการขายจริง ธนาคารอ่านงบแล้วจะเข้าใจว่าขายได้มากกว่าจริง'
+        : 'บัญชีเดิมลงขาดไป ' + fmt(d3 - BOOK) + ' บาท แก้ได้เท่าที่มีการขายจริง คือเป็น ' + fmt(d3) + ' บาท อีก ' + fmt(fake) + ' บาทที่เหลือ ไม่มีการขายจริง'; }
+    else { t = 'แก้เป็น 1,500,000 บาท งบก็ยังไม่ตรง'; l = L('R220.4 (ค)');
+      s = 'การขายที่เกิดขึ้นจริงคือ ' + fmt(d3) + ' บาท แก้เป็น 1,500,000 บาทยังขาดอีก ' + fmt(left) + ' บาท ต้องแก้ให้ตรงกับเอกสาร ไม่ใช่ให้ตรงกับตัวเลขที่มีคนอยากเห็น'; }
+    gate('g3', eq, t, s); $('g3L').innerHTML = l;
+    kase('case3', [mk(last3 === 'ask', ask3 ? 'ไม่มีใครขอ พีทอยากให้กู้ผ่าน จึงคิดจะแก้ยอดขายเดือนนี้ในงบเอง' : 'พริ้ง เจ้าของบริษัท ขอให้พีทแก้ยอดขายเดือนนี้ในงบ') + ' จาก 1,200,000 บาท เป็น 1,500,000 บาท',
+      'เอกสารการขายของเดือนนี้ ซึ่งคือการขายที่เกิดขึ้นจริง ' + mk(last3 === 'd', 'รวมได้ ' + fmt(d3) + ' บาท' + (d3 === BOOK ? ' เท่ากับที่บัญชีลงไว้' : ' มากกว่าที่บัญชีลงไว้ ' + fmt(d3 - BOOK) + ' บาท'))],
+      ask3 ? 'พีทแก้แบบนี้ได้ไหม' : 'พีทแก้ตามที่ขอได้ไหม');
+    $('same3').innerHTML = (ask3 ? '<b>ไม่มีใครขอ พีทคิดเอง ผลเท่าเดิม</b> ' : '<b>คนขอคือพริ้ง เจ้าของบริษัท</b> ') +
+      (eq ? 'ผลมาจากงบหลังแก้ตรงกับเอกสาร ไม่ได้มาจากว่าใครอยากให้แก้'
+          : 'ผลมาจากงบหลังแก้ไม่ตรงกับเอกสาร ไม่ได้มาจากว่าใครอยากให้แก้' + (!ask3 && fake ? ' เจ้าของขอหรือกดดัน พีทก็ต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้ฝ่าฝืนหลักการพื้นฐาน' + L('R270.3 (ก)') : '')); }
+  V.nums('x04doc', function (s) { d3 = s.d; if (live) last3 = 'd'; draw3(); });
+  V.pick('x04ask', function (v) { ask3 = v; if (live) last3 = 'ask'; draw3(); });
 
-  /* เรื่องที่ 2: พ.ร.บ. ม.11 (1) (2) · ม.66 */
-  var st2 = { svc: 0, sig: 0 };
-  function draw2() { var audit = st2.svc === 0, cpa = st2.sig === 0, e1 = audit ? (cpa ? 'ok' : 'no') : 'idle', open = e1 !== 'no';
-    cond('e1', e1); line('m1', e1 === 'idle' ? '' : e1); $('e1s').textContent = audit ? 'ม.11 (2)' : 'ม.11 (2) ไม่ใช้กับบริษัทนี้';
-    gate('gate2', open, open ? 'บริษัทครบเงื่อนไขการจดทะเบียนของมาตรา 11' : 'บริษัทยังไม่ครบเงื่อนไขการจดทะเบียนของมาตรา 11',
-      audit ? (cpa ? 'มีหลักประกัน และคนที่มีอำนาจลงนามผูกพันในการให้บริการการสอบบัญชีเป็นผู้สอบบัญชีรับอนุญาต'
-          : 'รับสอบบัญชี แต่คนที่มีอำนาจลงนามผูกพันไม่ใช่ผู้สอบบัญชีรับอนุญาต นิติบุคคลที่ฝ่าฝืนหรือไม่ปฏิบัติตามมาตรา 11 มีโทษปรับ และปรับรายวันจนกว่าจะปฏิบัติให้ถูกต้อง' + law('ม.66'))
-        : (cpa ? 'รับทำบัญชีอย่างเดียว มาตรา 11 (2) เขียนไว้สำหรับกิจการให้บริการการสอบบัญชี เหลือเงื่อนไขหลักประกันข้อเดียว' : 'รับทำบัญชีอย่างเดียว มาตรา 11 (2) ไม่ใช้กับบริษัทนี้ เปลี่ยนคนลงนามแล้วผลจึงไม่เปลี่ยน')); }
-  V.pick('svc', function (v) { st2.svc = v; draw2(); });
-  V.pick('sig', function (v) { st2.sig = v; draw2(); });
+  /* 4 หลัก (ข): ข้อ 9 (ข) · คู่มือ R420.3 · 420.3 A2 · R510.4 · 410.3 A1 · R410.9 · 410.8 A1 (R05-K27 K28 K33 K34 K37 K38 K40 K42 K43)
+     ic = ไอคอนของสิ่งที่อยู่ระหว่างสองฝ่าย · flip = ลูกศรชี้จากฝั่งผู้สอบบัญชีไปหาบริษัท (ถือหุ้น)
+     g = กลุ่มของตัวเลือก (0 ของขวัญ · 1 หุ้น · 2 ค่าสอบบัญชี) ใช้เลือกบรรทัดหลักที่ใช้ตัดสินกับคำถามของโจทย์ · c = ข้อเท็จจริงที่เปลี่ยนในกล่องโจทย์ */
+  var RULE4 = ['ของขวัญจากลูกค้าที่ตรวจ ดูสองอย่าง คือมูลค่า กับเจตนาของผู้ให้' + L('R420.3 · 420.3 A2'), 'หุ้นของลูกค้าที่ตรวจ ดูว่าใครเป็นคนถือ' + L('R510.4'), 'ค่าสอบบัญชี ดูว่าคิดจากอะไร' + L('410.3 A1 · R410.9')],
+    Q4 = ['พี่แพมรับได้ไหม', 'ถือหุ้นแบบนี้ได้ไหม', 'คิดค่าสอบบัญชีแบบนี้ได้ไหม'];
+  var TIE = [
+    { g: 0, c: 'พริ้งส่งนาฬิกาเรือนแพงมาให้พี่แพม', ic: 'clock', lb: 'นาฬิกาเรือนแพง', k: 'bad', t: 'พี่แพมต้องไม่รับ', s: 'ของขวัญและการต้อนรับจากลูกค้างานสอบบัญชี รับได้เฉพาะที่มีมูลค่าเล็กน้อยและไม่สำคัญ นาฬิกาเรือนแพงไม่ใช่ของแบบนั้น' + L('R420.3') },
+    { g: 0, c: 'พริ้งส่งของขวัญชิ้นเล็กมาให้พี่แพม มูลค่าเล็กน้อยและไม่สำคัญ และพริ้งไม่ได้หวังผลอะไร', ic: 'gift', lb: 'ของขวัญชิ้นเล็ก', k: 'good', t: 'รับได้', s: 'มูลค่าเล็กน้อยและไม่สำคัญ และผู้ให้ไม่มีเจตนาให้มีอิทธิพลต่อการทำงานของพี่แพม จึงเข้าข้อยกเว้น' + L('R420.3') },
+    { g: 0, c: 'พริ้งส่งของขวัญชิ้นเล็กมาให้พี่แพม มูลค่าเล็กน้อยและไม่สำคัญ แต่พริ้งหวังให้พี่แพมตรวจเบาลง', ic: 'gift', lb: 'ของขวัญชิ้นเล็ก ที่หวังผล', k: 'bad', t: 'พี่แพมต้องไม่รับ แม้ชิ้นเล็ก', s: 'เมื่อการให้มีเจตนาให้มีอิทธิพลที่ไม่เหมาะสมต่อพฤติกรรม ไม่อนุญาตให้รับ แม้มีมูลค่าเล็กน้อยและไม่สำคัญ' + L('420.3 A2') },
+    { g: 1, c: 'ไม่มีใครให้ของขวัญ แต่สามีของพี่แพมถือหุ้นของบริษัทนี้ พี่แพมเองไม่ได้ถือ', ic: 'doc', lb: 'สามีของพี่แพมถือหุ้น', flip: true, k: 'bad', t: 'ต้องไม่ถือ', s: 'หุ้นของลูกค้างานสอบบัญชี ต้องไม่ถือโดยสำนักงาน คนในกลุ่มที่สอบบัญชีลูกค้ารายนั้น หรือคู่สมรสและผู้อยู่ในอุปการะของเขา พี่แพมไม่ได้ถือเอง แต่สามีถือ ก็เข้าข้อนี้' + L('R510.4') },
+    { g: 2, c: 'ไม่มีใครให้ของขวัญ บริษัทจ่ายค่าสอบบัญชีตามที่เจรจาตกลงกันไว้ตามปกติ', ic: 'coin', lb: 'ค่าสอบบัญชี', k: 'good', t: 'เป็นการปฏิบัติที่ยอมรับโดยทั่วไป', s: 'ค่าสอบบัญชีที่เจรจากับลูกค้าและลูกค้าเป็นคนจ่าย คู่มือเขียนว่าอาจกระทบความเป็นอิสระได้ แต่เป็นการปฏิบัติที่รับรู้และยอมรับโดยทั่วไป' + L('410.3 A1') },
+    { g: 2, c: 'ไม่มีใครให้ของขวัญ บริษัทตกลงว่าถ้ากู้ผ่าน จะจ่ายค่าสอบบัญชีเพิ่ม', ic: 'percent', lb: 'ค่าสอบบัญชี ที่ผูกกับผลกู้', k: 'bad', t: 'ต้องไม่เรียกเก็บแบบนี้', s: 'ค่าธรรมเนียมที่คิดตามผลลัพธ์ของรายการหรือผลของบริการ เรียกว่าค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน สำนักงานต้องไม่เรียกเก็บสำหรับงานสอบบัญชี ทั้งโดยตรงและโดยอ้อม' + L('R410.9 · 410.8 A1') }];
+  V.pick('x04tie', function (v) { var e = TIE[v];
+    kase('case4', ['บริษัท พาวเด้ออ้าย จำกัด เป็นลูกค้างานสอบบัญชีของพี่แพม พี่แพมกำลังตรวจงบของบริษัท', mk(live, e.c)], Q4[e.g]);
+    $('rule4').innerHTML = RULE4[e.g];
+    $('tok4').innerHTML = e.ic === 'gift' ? GIFT : V.icon(e.ic);
+    $('lnk4').className = 'x04-link x04-' + e.k + (e.flip ? ' x04-flip' : ''); $('lnk4T').textContent = e.lb;
+    res('res4', e.k, e.t, e.s); });
+  V.check('ck4', { f: 'ระหว่างที่ทีมสอบบัญชีไปตรวจ ลูกค้าเลี้ยงข้าวกลางวันมื้อธรรมดา มูลค่าเล็กน้อยและไม่สำคัญ ไม่ได้หวังอะไร', q: 'ทีมสอบบัญชีรับได้ไหม', o: [
+    ['รับได้', 1, 'การต้อนรับใช้เกณฑ์เดียวกับของขวัญ มูลค่าเล็กน้อยและไม่สำคัญ และผู้ให้ไม่มีเจตนาให้มีอิทธิพล จึงเข้าข้อยกเว้น'],
+    ['ต้องไม่รับ', 0, 'ข้อห้ามนี้มีข้อยกเว้น ของขวัญและการต้อนรับที่มีมูลค่าเล็กน้อยและไม่สำคัญ รับได้ ถ้าผู้ให้ไม่มีเจตนาให้มีอิทธิพลอย่างไม่เหมาะสม']] });
 
-  /* เรื่องที่ 3: กฎกระทรวง ข้อ 2 (ร้อยละ 3 ของทุน ณ วันที่ยื่นจดทะเบียน) · ข้อ 3 วรรคสอง (ปราศจากภาระผูกพัน) */
-  var RATE = 3, HELD = 60000, CAPS = [1000000, 2000000, 3000000], st3 = { cap: 1, enc: false };
-  function meter(g, held, need, max) { $(g).className = 'gz' + (held >= need ? ' ok' : ''); $(g).querySelector('.bar i').style.width = Math.min(100, held / max * 100) + '%'; $(g + 'm').style.left = Math.min(100, need / max * 100) + '%'; }
-  function draw3() { var cap = CAPS[st3.cap], need = cap * RATE / 100, held = st3.enc ? 0 : HELD, ok = held >= need;
-    $('q3a').textContent = fmt(cap); $('q3b').textContent = fmt(need); $('g3v').textContent = fmt(held);
-    meter('g3', held, need, 120000);
-    $('g3s').textContent = st3.enc ? 'เงินฝาก 60,000 บาทมีภาระผูกพัน นับเป็นหลักประกันไม่ได้' : ok ? (held === need ? 'เท่ากับ ' + fmt(need) + ' บาทพอดี' : 'มากกว่า ' + fmt(need) + ' บาท') : 'ยังขาดอีก ' + fmt(need - held) + ' บาท';
-    var r = $('r3'); r.className = 'result' + (ok ? ' ok' : '');
-    r.textContent = st3.enc ? 'ยังไม่ผ่าน หลักประกันต้องปราศจากภาระผูกพัน เงินฝากที่จำนำไว้จึงใช้ไม่ได้ ทุนเท่าไรผลก็เหมือนกัน'
-      : ok ? (held === need ? 'ผ่าน กฎเขียนว่าไม่น้อยกว่า เท่ากับร้อยละ 3 พอดีก็ใช้ได้' : 'ผ่าน หลักประกันมากกว่าร้อยละ 3 ของทุน')
-      : 'ยังไม่ผ่าน ทุนมากขึ้น ร้อยละ 3 ก็มากขึ้น ต้องเพิ่มหลักประกันอีก ' + fmt(need - held) + ' บาทก่อนยื่นจด'; }
-  V.pick('cap', function (v) { st3.cap = v; draw3(); });
-  V.togs('enc', function (s) { st3.enc = s.enc; draw3(); });
+  /* 6 หลัก (ค): ข้อ 9 (ค) · คู่มือ 230.3 A2 · 230.3 A4 · R230.4 · 113.1 A3 (R05-K50 K51 K55 K56 K57) · สองวันเป็นตัวเลขของเรื่อง */
+  var NEED = [['time', 'เวลา', 'เวลา'], ['info', 'ข้อมูล', 'ข้อมูล'], ['exp', 'ประสบการณ์ การฝึกอบรม หรือการศึกษา', 'ประสบการณ์'], ['res', 'ทรัพยากร', 'ทรัพยากร']], prev6 = null;
+  V.togs('x04need', function (s) { var lack = [], cl = [], co = [];
+    NEED.forEach(function (n, i) { var k = n[0], w = mk(!!prev6 && prev6[k] !== s[k], n[2]);
+      $('n' + i).querySelector('em').textContent = s[k] ? 'พอ' : 'ไม่พอ'; if (s[k]) co.push(w); else { cl.push(w); lack.push(n[1]); } });
+    prev6 = s;
+    kase('case6', ['ธนาคารขอประมาณการทางการเงินเพิ่ม พริ้งให้พีททำให้เสร็จในสองวัน', 'สำหรับงานนี้ พีทมี' +
+      (!cl.length ? join(co) + 'พอทั้งสี่เรื่อง' : !co.length ? join(cl) + 'ไม่พอทั้งสี่เรื่อง' : join(cl) + 'ไม่พอ ส่วน' + join(co) + 'พอ')], 'มีเรื่องที่กระทบหลัก (ค) ไหม แล้วพีทต้องทำอะไร');
+    $('flow6').className = 'todo x04-flow' + (lack.length ? '' : ' x04-idle');
+    if (!lack.length) res('res6', 'good', 'ไม่พบเรื่องที่กระทบหลัก (ค) จากสี่เรื่องนี้', 'พีทมีเวลา ข้อมูล ประสบการณ์ และทรัพยากรพอสำหรับงานนี้ ที่เหลือคือทำให้ระมัดระวังรอบคอบ ครบถ้วน และทันต่อเวลา' + L('113.1 A3'));
+    else res('res6', 'warn', 'ยังไม่พอ: ' + lack.join(' · '), 'มีเรื่องที่ไม่พอ จึงเข้าลำดับสามขั้นข้างบน พีทเริ่มที่ขั้นแรก คือจัดการเรื่องที่ไม่พอก่อน' + L('230.3 A2 · 230.3 A4')); });
 
-  /* เรื่องที่ 4: กฎกระทรวง ข้อ 6 (ร้อยละ 3 ของทุน ณ วันสิ้นรอบปีบัญชี หรือของรายได้รอบปีบัญชีที่ผ่านมา แล้วแต่จำนวนใดจะมากกว่า)
-     · ข้อ 1 (รายได้ = รายได้ที่เกิดจากการให้บริการ) · ข้อ 2 วรรคสอง (เพิ่มทุนระหว่างรอบปีบัญชี) */
-  var REVS = [1000000, 3000000, 5000000], CAP2 = [2000000, 4000000], st4 = { rev: 0, cap: 0, oth: false };
-  function draw4() { var cap = CAP2[st4.cap], rev = REVS[st4.rev], byCap = cap >= rev, base = byCap ? cap : rev, need = base * RATE / 100, ok = HELD >= need, raised = st4.cap === 1;
-    $('bCapV').textContent = fmt(cap); $('bRevV').textContent = fmt(rev);
-    $('bCap').className = 'x04-bar' + (byCap ? ' x04-big' : ''); $('bRev').className = 'x04-bar' + (byCap ? '' : ' x04-big');
-    $('bCap').querySelector('.x04-bt i').style.width = cap / 5000000 * 100 + '%'; $('bRev').querySelector('.x04-bt i').style.width = rev / 5000000 * 100 + '%';
-    $('bOth').hidden = !st4.oth; $('w4').hidden = !raised;
-    $('q4l').textContent = byCap ? 'ทุนมากกว่า ใช้ทุน' : 'รายได้มากกว่า ใช้รายได้'; $('q4a').textContent = fmt(base); $('q4b').textContent = fmt(need);
-    meter('g4', HELD, need, 150000);
-    $('g4s').textContent = ok ? 'เท่ากับ ' + fmt(need) + ' บาทพอดี' : 'ยังขาดอีก ' + fmt(need - HELD) + ' บาท';
-    var r = $('r4'); r.className = 'result' + (ok ? ' ok' : '');
-    r.textContent = (ok ? 'หลักประกันเดิมพอ รายได้น้อยกว่าทุน จึงยังใช้ทุนเหมือนวันยื่นจด เหลือแจ้งรายละเอียดต่อสภาฯ ภายใน 60 วัน'
-      : (byCap ? 'ทุน ณ วันสิ้นรอบปีบัญชีเป็น 4,000,000 บาท มากกว่ารายได้ จึงใช้ทุน '
-        : (raised ? 'เพิ่มทุนแล้วก็ยังน้อยกว่ารายได้ จึงใช้รายได้ ' : 'ทุนเท่าเดิม แต่รายได้มากกว่าทุน จึงใช้รายได้ ')) + 'ต้องเพิ่มหลักประกันอีก ' + fmt(need - HELD) + ' บาท ภายใน 60 วันนับแต่วันสิ้นรอบปีบัญชี')
-      + (st4.oth ? ' มีค่าเช่าอาคารหรือไม่ ผลเท่าเดิม' : ''); }
-  V.pick('rev', function (v) { st4.rev = v; draw4(); });
-  V.pick('cap2', function (v) { st4.cap = v; draw4(); });
-  V.togs('oth', function (s) { st4.oth = s.oth; draw4(); });
+  /* 7 หลัก (ง): ข้อ 9 (ง) · คู่มือ R114 (ก) (จ) · R114.2 · เรื่องเล่าของสภาฯ (R05-K66 K67 K69 K70 K74 K75 K76)
+     a = ผ่านช่องไม่เปิดเผย · b = ผ่านช่องไม่นำไปใช้ · c = สิ่งที่พี่แพมทำ ต่อท้าย CASE7 ในกล่องโจทย์ · full = โจทย์ทั้งข้อเป็นเรื่องอื่น */
+  var CASE7 = 'พี่แพมได้ตารางราคาซื้อแป้งของบริษัท พาวเด้ออ้าย จำกัด มาจากงานสอบบัญชี';
+  var USE = [
+    { c: 'พี่แพมใช้ตารางนี้ตรวจงบของบริษัทนี้ และไม่ให้ใครนอกงานดู', a: 1, b: 1, k: 'good', t: 'ไม่ขัดกับหลัก (ง)', s: 'ใช้ข้อมูลในงานที่ได้ข้อมูลนั้นมา ไม่ได้เปิดเผยให้คนนอก และไม่ได้เอาไปใช้เพื่อตัวเองหรือคนอื่น' + L('ข้อ 9 (ง)') },
+    { c: 'พี่แพมเผลอเล่าราคาให้คนที่บ้านฟัง ไม่มีใครเอาราคาไปใช้ และไม่มีใครอนุมัติให้เล่า', a: 0, b: 1, k: 'bad', t: 'ขัดกับหลัก (ง) ตรงเปิดเผย', s: 'คนที่บ้านเป็นบุคคลที่สาม และไม่มีใครอนุมัติ คู่มือให้ระวังการเผลอเล่ากับคนในครอบครัว และคนที่ทำธุรกิจใกล้ชิดกันเป็นพิเศษ' + L('ข้อ 9 (ง) · R114 (ก)') },
+    { c: 'พี่แพมไม่บอกใคร แต่ใช้ราคาที่รู้ไปต่อรองซื้อของเข้าร้านของตัวเอง', a: 1, b: 0, k: 'bad', t: 'ขัดกับหลัก (ง) ตรงนำไปใช้', s: 'ไม่ได้บอกใครเลย แต่ใช้ข้อมูลที่เป็นความลับจากงาน เพื่อประโยชน์ของตัวเอง' + L('R114 (จ)') },
+    { c: 'พองานจบ พี่แพมเลิกเป็นผู้สอบบัญชีของบริษัทนี้แล้ว จึงเล่าราคาให้เพื่อนฟัง ไม่มีใครอนุมัติให้เล่า', a: 0, b: 1, k: 'bad', t: 'งานจบแล้ว ก็ยังขัด', s: 'หลักนี้ใช้ต่อเนื่อง แม้ความสัมพันธ์กับลูกค้าสิ้นสุดแล้ว พี่แพมใช้ประสบการณ์จากงานเดิมได้ แต่ต้องไม่ใช้หรือเปิดเผยข้อมูลที่เป็นความลับ' + L('R114.2') },
+    { a: 0, b: 0, k: 'bad', t: 'สภาฯ เรียกว่า การไม่รักษาความลับ', s: 'ผู้สอบบัญชีคนนั้นบอกข้อมูลให้คนอื่น และให้คนอื่นออกหน้าซื้อหุ้นตามข้อมูลนั้นเพื่อหากำไร จึงไม่ผ่านทั้งสองช่อง' + L('เรื่องเล่าของสภาฯ'),
+      full: ['เรื่องนี้ไม่ใช่เรื่องของพี่แพม เป็นเรื่องจริงที่สภาฯ เล่า', 'ผู้สอบบัญชีคนหนึ่งเห็นกำไรของลูกค้าที่ยังไม่เปิดเผยต่อสาธารณะ จากงานสอบบัญชี แล้วบอกข้อมูลนั้นให้คนอื่น และให้คนอื่นออกหน้าซื้อหุ้นตามข้อมูลนั้นเพื่อหากำไร'] }];
+  V.pick('x04use', function (v) { var e = USE[v];
+    kase('case7', e.full ? [mk(live, e.full[0]), e.full[1]] : [CASE7, mk(live, e.c)], 'ขัดกับหลัก (ง) ไหม ตรงไหน');
+    mark('u0', !!e.a); mark('u1', !!e.b); line('uj0', !!e.a); line('uj1', !!e.b);
+    res('res7', e.k, e.t, e.s); });
+  V.check('ck7', { f: 'กฎหมายกำหนดให้พี่แพมส่งตารางราคานี้ เป็นหลักฐานในการดำเนินการทางกฎหมาย ลูกค้าไม่ได้อนุมัติ', q: 'พี่แพมเปิดเผยตารางนี้ได้ไหม', o: [
+    ['เปิดเผยได้', 1, 'เข้าทางที่ 1 กฎหมายกำหนดให้เปิดเผย ทางนี้คู่มือไม่ได้เขียนเงื่อนไขเรื่องอนุมัติจากลูกค้าไว้'],
+    ['ไม่ได้ ลูกค้ายังไม่อนุมัติ', 0, 'อนุมัติจากลูกค้าเป็นเงื่อนไขของทางที่ 2 เรื่องนี้เข้าทางที่ 1 คือกฎหมายกำหนดให้เปิดเผย เข้าทางเดียวก็เปิดเผยได้']] });
 
-  /* เรื่องที่ 5: พ.ร.บ. ม.11 วรรคสาม */
-  var st5 = { paid: 0, pf: false };
-  function draw5() { var full = st5.paid === 1, liable = !full && !st5.pf;
-    $('n3').className = 'x04-node' + (liable ? '' : ' x04-skip');
-    $('n3s').textContent = full ? 'ไม่ถึงขั้นนี้ เพราะชำระค่าเสียหายได้ครบจำนวนแล้ว' : st5.pf ? 'กรรมการคนที่พิสูจน์ได้ ไม่ต้องร่วมรับผิด' : 'ต้องร่วมรับผิดจนครบจำนวน';
-    var r = $('r5'); r.className = 'result';
-    r.textContent = full ? (st5.pf ? 'ชำระค่าเสียหายได้ครบจำนวนแล้ว จึงไม่ถึงขั้นของกรรมการ ข้อพิสูจน์ของกรรมการไม่เปลี่ยนผล' : 'ชำระค่าเสียหายได้ครบจำนวนแล้ว จึงไม่ถึงขั้นที่หุ้นส่วนหรือกรรมการต้องร่วมรับผิด')
-      : st5.pf ? 'ยังชำระได้ไม่ครบ แต่กรรมการคนนี้พิสูจน์ได้ว่าตนมิได้มีส่วนรู้เห็นหรือยินยอม จึงไม่ต้องร่วมรับผิด ผู้สอบบัญชีกับบริษัทยังต้องรับผิดเหมือนเดิม'
-      : 'ยังชำระได้ไม่ครบ กรรมการผู้มีอำนาจลงนามผูกพันต้องร่วมรับผิดจนครบจำนวน'; }
-  V.pick('paid', function (v) { st5.paid = v; draw5(); });
-  V.togs('pf', function (s) { st5.pf = s.pf; draw5(); });
+  /* 9 หลัก (จ): ข้อ 9 (จ) · คู่มือ R115.2 (ก) (ข) (R05-K77 K78 K79 K81) · ข้อความบนป้าย 3 ปี กับ 20 ปี เป็นของเรื่อง แต่งจากถ้อยคำของ R115.2 · c = ข้อความบนป้ายกับข้อเท็จจริงของป้ายนั้น ในกล่องโจทย์ */
+  var AD = [
+    { b: 'รับสอบบัญชีและวางระบบบัญชี', sub: 'ผู้สอบบัญชีรับอนุญาต 2 คน เปิดสำนักงานมา 3 ปี', c: '“รับสอบบัญชีและวางระบบบัญชี ผู้สอบบัญชีรับอนุญาต 2 คน เปิดสำนักงานมา 3 ปี” ทุกข้อความตรงกับความจริง และไม่ได้พูดถึงสำนักงานอื่น', bad: '', k: 'good', t: 'ไม่ขัดกับสองข้อนี้', s: 'ป้ายนี้อยู่บนพื้นฐานของความจริง ไม่โอ้อวดเกินความเป็นจริง และไม่ได้อ้างถึงผู้อื่น' + L('R115.2') },
+    { b: 'ประสบการณ์กว่า 20 ปี', sub: 'รับสอบบัญชีและวางระบบบัญชี', c: '“ประสบการณ์กว่า 20 ปี” ป้ายไม่ได้พูดถึงสำนักงานอื่น', bad: 'du0', k: 'bad', t: 'ต้องไม่ทำ', s: 'สำนักงานเปิดมา 3 ปี แต่ป้ายบอกว่าประสบการณ์กว่า 20 ปี เป็นการโอ้อวดเกินความเป็นจริง ในทางประสบการณ์ที่มี' + L('R115.2 (ก)') },
+    { b: 'สำนักงานอื่นทำงานหยาบ มาใช้เราดีกว่า', sub: 'รับสอบบัญชีและวางระบบบัญชี', c: '“สำนักงานอื่นทำงานหยาบ มาใช้เราดีกว่า” ส่วนข้อความเรื่องบริการของตัวเองบนป้ายตรงกับความจริง', bad: 'du1', k: 'bad', t: 'ต้องไม่ทำ', s: 'ป้ายพูดถึงสำนักงานอื่นว่าทำงานหยาบ เป็นการอ้างอิงโดยใช้ถ้อยคำดูหมิ่น แม้ข้อความเรื่องบริการของตัวเองจะจริง' + L('R115.2 (ข)') },
+    { b: 'ตรวจละเอียดกว่าทุกสำนักงาน', sub: 'รับสอบบัญชีและวางระบบบัญชี', c: '“ตรวจละเอียดกว่าทุกสำนักงาน” สำนักงานไม่มีข้อมูลที่ใช้เทียบกับสำนักงานอื่น และป้ายไม่มีถ้อยคำดูหมิ่น', bad: 'du1', k: 'bad', t: 'ต้องไม่ทำ', s: 'ป้ายเทียบกับทุกสำนักงาน ทั้งที่ไม่มีข้อมูลใช้เทียบ เป็นการเปรียบเทียบงานของตัวเองกับผู้อื่น โดยไม่ได้อยู่บนหลักความจริง แม้ไม่มีถ้อยคำดูหมิ่น' + L('R115.2 (ข)') }];
+  V.pick('x04ad', function (v) { var a = AD[v]; $('bbB').textContent = a.b; $('bbS').textContent = a.sub;
+    kase('case9', ['สำนักงานของพี่แพมรับสอบบัญชีและวางระบบบัญชี เปิดมา 3 ปี มีผู้สอบบัญชีรับอนุญาต 2 คน อยากได้ลูกค้าเพิ่ม', 'จะขึ้นป้ายโฆษณาว่า ' + mk(live, a.c)], 'ป้ายนี้ขัดกับข้อที่ต้องไม่ทำไหม');
+    ['du0', 'du1'].forEach(function (id) { var bad = id === a.bad; $(id).className = bad ? 'x04-hitbad' : ''; $(id).querySelector('.x04-m').innerHTML = V.icon(bad ? 'x' : 'check'); });
+    res('res9', a.k, a.t, a.s); });
+  V.check('ck9', { f: 'ผู้ทำบัญชีคนหนึ่งทำผิดจรรยาบรรณเพราะพลั้งเผลอ ไม่ได้จงใจ และไม่ได้ประมาทเลินเล่ออย่างร้ายแรง', q: 'เรื่องนี้เข้ากรณีที่ 1 ของห้ากรณีไหม', o: [
+    ['ไม่เข้า', 1, 'กรณีที่ 1 ต้องจงใจ หรือประมาทเลินเล่ออย่างร้ายแรง เรื่องนี้ไม่มีทั้งสองอย่าง แต่ไม่ทำตามจรรยาบรรณ ก็ยังถือว่าประพฤติผิดจรรยาบรรณ'],
+    ['เข้า', 0, 'กรณีที่ 1 มีเงื่อนไขเพิ่ม ต้องเป็นการกระทำโดยจงใจ หรือประมาทเลินเล่ออย่างร้ายแรง เรื่องนี้ไม่มีทั้งสองอย่าง']] });
 
-  /* ลองดู */
+  /* 10 หลัก (ฉ): ข้อ 9 (ฉ) (R05-K85) · เรื่องเงินกู้เป็นตัวอย่างที่แต่งให้ตรงกับถ้อยคำ สมมติว่าเป็นสาระสำคัญ
+     ข้อความผลใช้คำของตัวบท “ปกปิดข้อเท็จจริง” / “บิดเบือนความจริง” · สวิตช์คนขอ: ภาพเปลี่ยน ผลของพีทเท่าเดิม · c = สิ่งที่พีททำ ในกล่องโจทย์ [มีคนขอ, ไม่มีใครขอ] */
+  var ACT = [
+    { row: 'x04-row x04-true', lab: 'เงินกู้จากธนาคาร', see: 'เห็นว่าบริษัทมีเงินกู้จากธนาคาร ตรงกับสัญญา', ok: true, c: ['พีทไม่ทำตาม แสดงเป็นเงินกู้ตามสัญญา', 'พีทแสดงเป็นเงินกู้ตามสัญญา'], does: 'แสดงเป็นเงินกู้ตามสัญญา', follow: 'พีทไม่ทำตามคำขอ', t: 'ไม่ปกปิด และไม่บิดเบือน', s: 'เงินกู้อยู่ในงบตามสัญญา' },
+    { row: 'x04-row x04-gone', lab: 'ไม่มีเงินกู้ในงบ', see: 'ไม่เห็นว่าบริษัทมีเงินกู้', ok: false, c: ['สมมติว่าพีททำตาม คือไม่แสดงเงินกู้ในงบ', 'สมมติว่าพีทไม่แสดงเงินกู้ในงบเอง'], does: 'ไม่แสดงเงินกู้', follow: 'พีททำตามคำขอ', t: 'ขัดกับหลัก (ฉ)', s: 'พีทไม่แสดงเงินกู้ในงบ เป็นการปกปิดข้อเท็จจริง' },
+    { row: 'x04-row x04-bent', lab: '<u>รายได้</u><small>ที่จริงคือเงินกู้จากธนาคาร</small>', see: 'เห็นเป็นรายได้ของบริษัท ทั้งที่เป็นเงินกู้', ok: false, c: ['สมมติว่าพีทไม่ได้เอาออก แต่แสดงเงินกู้ก้อนนี้เป็นรายได้', 'สมมติว่าพีทแสดงเงินกู้ก้อนนี้เป็นรายได้เอง'], does: 'แสดงเงินกู้เป็นรายได้', follow: 'พีทไม่แสดงเป็นเงินกู้', t: 'ขัดกับหลัก (ฉ)', s: 'พีทแสดงเงินกู้เป็นรายได้ รายการยังอยู่ในงบ แต่อยู่ผิดที่ เป็นการบิดเบือนความจริง' }];
+  var act = 1, asked = true, last10 = '';
+  function draw10() { var a = ACT[act];
+    kase('case10', ['บริษัท พาวเด้ออ้าย จำกัด ได้เงินกู้จากธนาคารมาแล้ว ก้อนนี้เป็นสาระสำคัญต่องบ', mk(last10 === 'ask', asked ? 'พริ้งขอไม่ให้งบปีนี้มีเงินกู้ก้อนนี้' : 'ไม่มีใครขออะไร'), mk(last10 === 'act', a.c[asked ? 0 : 1])], 'งบแบบนี้ขัดกับหลัก (ฉ) ไหม');
+    $('fAsk').hidden = !asked; $('fNone').hidden = asked;
+    $('fVia').className = 'x04-via' + (asked ? '' : ' x04-off'); $('fViaT').textContent = asked ? a.follow : 'พีททำเอง';
+    $('fDoes').textContent = a.does; $('fRow').className = a.row; $('fLab').innerHTML = a.lab; $('fSee').textContent = a.see;
+    res('res10', a.ok ? 'good' : 'bad', a.t, a.s + (asked ? ' พริ้งเป็นคนขอ ผลก็มาจากสิ่งที่อยู่ในงบ' : ' ไม่มีใครขอ ผลเท่าเดิม เพราะผลมาจากสิ่งที่อยู่ในงบ') + L('ข้อ 9 (ฉ)')); }
+  V.pick('x04act', function (v) { act = v; if (live) last10 = 'act'; draw10(); });
+  V.togs('x04asked', function (s) { asked = s.yes; if (live) last10 = 'ask'; draw10(); });
+
+  /* แบบฝึกแยกแยะ: การ์ดทีละใบ · a = ช่องที่ใช่ (0 หรือ 1) · s = ป้ายสั้นที่ไปอยู่ในช่อง · y = เหตุผล · n = ตอบคนที่แตะอีกช่อง
+     เรื่องที่เลือกมาเป็นเรื่องที่ข้อบังคับหรือคู่มือเขียนเป็นข้อที่ต้องทำหรือต้องไม่ทำ (ย่อหน้า R หรือข้อ 9) ป้าย src บอกที่มา */
+  function drill(id, LS, items) {
+    var root = $(id), i = 0, h = '<div class="x04-dcard"><small></small><p></p><em></em></div><div class="x04-dbins">';
+    LS.forEach(function (l, j) { h += '<div class="x04-dbin ' + l.c + '"><button type="button" data-j="' + j + '" aria-pressed="false"><i class="x04-L" aria-hidden="true">' + l.k + '</i><b>' + l.n + '</b><small>' + l.g + '</small></button><ul aria-label="เรื่องที่อยู่ในช่อง ' + l.k + '"></ul></div>'; });
+    root.innerHTML = h + '</div><div class="x04-dwhy" role="status" aria-live="polite" hidden></div><button type="button" class="btn x04-dnext" hidden></button>';
+    var card = root.querySelector('.x04-dcard'), bs = [].slice.call(root.querySelectorAll('.x04-dbin button')), uls = [].slice.call(root.querySelectorAll('.x04-dbin ul')),
+      why = root.querySelector('.x04-dwhy'), next = root.querySelector('.x04-dnext');
+    function show() { var it = items[i];
+      card.className = 'x04-dcard'; card.querySelector('small').textContent = 'เรื่องที่ ' + (i + 1) + ' จาก ' + items.length;
+      card.querySelector('p').textContent = it.f; card.querySelector('em').textContent = it.src || '';
+      bs.forEach(function (b) { b.className = ''; b.disabled = false; b.setAttribute('aria-pressed', 'false'); });
+      why.hidden = true; next.hidden = true; }
+    bs.forEach(function (b, j) { b.onclick = function () { var it = items[i], ok = j === it.a;
+      bs.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true');
+      why.hidden = false; why.className = 'x04-dwhy ' + (ok ? 'x04-good' : 'x04-bad');
+      why.innerHTML = '<b>' + (ok ? 'ถูกใจใช่เลย' : 'อาจจะยัง') + '</b> ' + (ok ? it.y : it.n);
+      if (!ok) { b.className = 'x04-miss'; return; }
+      bs.forEach(function (x) { x.className = ''; x.disabled = true; }); b.className = 'x04-hit';
+      uls[j].insertAdjacentHTML('beforeend', '<li>' + V.icon('check') + '<span>' + it.s + '</span></li>');
+      card.className = 'x04-dcard x04-sent';
+      next.hidden = false; next.textContent = i < items.length - 1 ? 'เรื่องถัดไป' : 'เล่นอีกรอบ'; }; });
+    next.onclick = function () { if (i < items.length - 1) i++; else { i = 0; uls.forEach(function (u) { u.innerHTML = ''; }); } show(); };
+    show();
+  }
+  /* g = คำเตือนความจำสั้น ๆ ใต้ชื่อหลัก ย่อจากบรรทัด “เกี่ยวกับ” ของหลักนั้น */
+  var PA = { k: 'ก', n: 'ความซื่อสัตย์สุจริต', g: 'ไม่เกี่ยวข้องกับข้อมูลที่ทำให้เข้าใจผิด', c: 'x04-pa' }, PB = { k: 'ข', n: 'ความเที่ยงธรรมและความเป็นอิสระ', g: 'ดุลยพินิจของตัวเอง และอิสระจากลูกค้าที่ตรวจ', c: 'x04-pb' },
+    PC = { k: 'ค', n: 'ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน', g: 'รู้จริง ทำครบ ตามมาตรฐาน', c: 'x04-pc' }, PD = { k: 'ง', n: 'การรักษาความลับ', g: 'ไม่เปิดเผย ไม่เอาไปใช้', c: 'x04-pd' },
+    PE = { k: 'จ', n: 'พฤติกรรมทางวิชาชีพ', g: 'ทำตามกฎหมาย ไม่ทำให้วิชาชีพเสื่อมเสีย', c: 'x04-pe' }, PF = { k: 'ฉ', n: 'ความโปร่งใส', g: 'ไม่ปกปิด ไม่บิดเบือน', c: 'x04-pf' };
+  drill('dr1', [PA, PB], [
+    { f: 'พีทรู้ว่าแบบแสดงรายการภาษีของบริษัทลงยอดขายขาดไป จำนวนเป็นสาระสำคัญ แต่ก็ยื่นแบบนั้นไป', src: 'ตามคู่มือ R111.2', a: 0, s: 'ยื่นแบบภาษีที่รู้ว่าผิด',
+      y: 'รู้อยู่ว่าแบบมีข้อผิดพลาดที่มีสาระสำคัญ แล้วยังเข้าไปเกี่ยวข้อง ตรงกับที่คู่มือห้ามไว้ใต้หลัก (ก)',
+      n: 'เรื่องนี้ไม่มีอคติ ผลประโยชน์ขัดกัน หรือใครมามีอิทธิพลต่อการตัดสินใจ ที่ผิดคือตัวข้อมูล พีทรู้ว่าแบบผิดแล้วยังยื่น' },
+    { f: 'ลูกค้างานสอบบัญชีออกค่าเที่ยวต่างประเทศให้ทีมสอบบัญชีทั้งทีม ซึ่งไม่ใช่มูลค่าเล็กน้อย และทีมรับไว้', src: 'ตามคู่มือ R420.3', a: 1, s: 'รับการต้อนรับราคาแพงจากลูกค้าที่ตรวจ',
+      y: 'ของขวัญและการต้อนรับจากลูกค้างานสอบบัญชี รับได้เฉพาะมูลค่าเล็กน้อยและไม่สำคัญ เป็นเรื่องความเป็นอิสระจากลูกค้าที่ตัวเองตรวจ',
+      n: 'ไม่มีข้อมูลไหนถูกทำให้ผิดไปจากความจริง ที่ผิดคือคนสอบบัญชีรับของจากลูกค้าที่ตัวเองตรวจ ซึ่งเป็นเรื่องความเป็นอิสระ' },
+    { f: 'พีทเพิ่งรู้ว่ารายงานที่ตัวเองทำและส่งไปแล้ว มียอดที่ทำให้คนอ่านเข้าใจผิด พีทปล่อยไว้ ไม่ทำอะไร', src: 'ตามคู่มือ R111.3', a: 0, s: 'รู้ทีหลังแล้วปล่อยไว้',
+      y: 'เมื่อเริ่มรู้ว่าตัวเองเกี่ยวข้องกับข้อมูลที่ทำให้เข้าใจผิด ต้องดำเนินการเพื่อยุติการเกี่ยวข้อง การปล่อยไว้จึงขัดกับหลัก (ก)',
+      n: 'เรื่องนี้ไม่ได้บอกว่ามีใครมีอิทธิพลต่อพีท ที่ต้องดูคือพีทยังเกี่ยวข้องกับข้อมูลที่ทำให้เข้าใจผิดอยู่ และไม่ทำอะไร' },
+    { f: 'แพร ซึ่งตอนนี้ทำงานในทีมสอบบัญชีของพี่แพม ไม่มีหุ้นของบริษัทที่ทีมกำลังตรวจ แต่สามีของแพรถืออยู่', src: 'ตามคู่มือ R510.4', a: 1, s: 'คู่สมรสถือหุ้นลูกค้าที่ตรวจ',
+      y: 'หุ้นของลูกค้างานสอบบัญชี คนในกลุ่มที่สอบบัญชีลูกค้ารายนั้น และคู่สมรสของเขา ต้องไม่ถือ เป็นเรื่องความเป็นอิสระจากลูกค้า',
+      n: 'ไม่มีใครทำข้อมูลให้ผิดจากความจริง ที่ต้องดูคือคนในทีมสอบบัญชีมีส่วนได้เสียในลูกค้าที่ตัวเองตรวจ ผ่านคู่สมรส' },
+    { f: 'สำนักงานสอบบัญชีตกลงกับลูกค้าว่า ถ้าธนาคารอนุมัติสินเชื่อ สำนักงานจะได้ค่าสอบบัญชีเพิ่ม', src: 'ตามคู่มือ R410.9', a: 1, s: 'ค่าสอบบัญชีผูกกับผลงาน',
+      y: 'ค่าธรรมเนียมที่ขึ้นอยู่กับผลงาน ต้องไม่เรียกเก็บสำหรับงานสอบบัญชี คู่มือวางข้อนี้ไว้ในเรื่องความเป็นอิสระ',
+      n: 'ยังไม่มีข้อมูลไหนผิดจากความจริง ที่ผิดคือวิธีคิดค่าสอบบัญชี ซึ่งคู่มือห้ามไว้ในเรื่องความเป็นอิสระ' }]);
+  drill('dr2', [PC, PD], [
+    { f: 'ผู้ช่วยในทีมของพี่แพมได้รับการฝึกอบรมแล้ว แต่ตลอดงานไม่มีใครกำกับดูแลงานของเขาเลย', src: 'ตามคู่มือ R113.2', a: 0, s: 'ผู้ช่วยไม่มีใครกำกับดูแล',
+      y: 'ผู้ช่วยที่อยู่ใต้การกำกับดูแล ต้องได้ทั้งการฝึกอบรมและการกำกับดูแลที่เหมาะสม ขาดอย่างหลัง จึงเป็นเรื่องของหลัก (ค)',
+      n: 'ไม่มีข้อมูลของลูกค้าถูกเปิดเผยหรือถูกเอาไปใช้ ที่ขาดคือการกำกับดูแลให้งานได้มาตรฐาน' },
+    { f: 'พี่แพมเลิกเป็นผู้สอบบัญชีของลูกค้ารายหนึ่งแล้ว จึงเล่ากำไรของรายนั้นให้เพื่อนฟัง โดยไม่มีใครอนุมัติ', src: 'ตามคู่มือ R114.2', a: 1, s: 'งานจบแล้วเล่าข้อมูลลูกค้า',
+      y: 'ความสัมพันธ์กับลูกค้าสิ้นสุดแล้ว ก็ยังต้องรักษาความลับต่อเนื่อง',
+      n: 'งานที่ทำไปไม่ได้บกพร่องตรงไหน ที่ผิดคือการเล่าข้อมูลที่ได้มาจากงาน' },
+    { f: 'พีทบอกบริษัทว่าเคยทำงบการเงินรวมมาหลายปี ทั้งที่ไม่เคยทำ เพื่อให้ได้รับมอบงานนี้', src: 'ตามคู่มือ R230.3', a: 0, s: 'ทำให้นายจ้างเข้าใจผิดเรื่องประสบการณ์',
+      y: 'ต้องไม่จงใจทำให้องค์กรที่ว่าจ้างเข้าใจผิดเรื่องระดับความเชี่ยวชาญหรือประสบการณ์ของตัวเอง คู่มือวางข้อนี้ไว้ใต้หลัก (ค)',
+      n: 'ไม่มีข้อมูลลับของใครถูกเปิดเผย เรื่องนี้คือพีทไม่มีประสบการณ์พอสำหรับงาน แล้วทำให้นายจ้างเข้าใจว่ามี' },
+    { f: 'พี่แพมเล่าผลประกอบการของลูกค้าที่ยังไม่มีใครรู้ ในวงกินข้าวกับเพื่อนที่ทำธุรกิจด้วยกัน ไม่มีใครอนุมัติ', src: 'ตามข้อ 9 (ง) และคู่มือ R114 (ก)', a: 1, s: 'เล่าในวงกินข้าว',
+      y: 'เพื่อนเป็นบุคคลที่สาม และไม่มีใครอนุมัติ คู่มือให้ระวังการเผลอเล่ากับคนที่ทำธุรกิจใกล้ชิดกันเป็นพิเศษ',
+      n: 'ไม่ใช่เรื่องความรู้หรือความรอบคอบของงาน งานตรวจทำครบก็ยังขัดเรื่องนี้ได้ เพราะที่ผิดคือการเล่า' },
+    { f: 'มาตรฐานการบัญชีเรื่องหนึ่งปรับใหม่แล้ว พีทไม่ได้ติดตาม จึงทำงบตามฉบับเดิมที่เลิกใช้', src: 'ตามข้อ 9 (ค)', a: 0, s: 'ไม่ตามมาตรฐานฉบับใหม่',
+      y: 'หลัก (ค) ให้รักษาความรู้ให้ทันวิวัฒนาการล่าสุด และทำงานให้เป็นไปตามมาตรฐานวิชาชีพที่เกี่ยวข้อง',
+      n: 'ไม่มีข้อมูลถูกเปิดเผยหรือถูกเอาไปใช้ ที่ขาดคือความรู้ที่ทันกับมาตรฐานฉบับปัจจุบัน' }]);
+  drill('dr3', [PE, PF], [
+    { f: 'ป้ายโฆษณาของสำนักงานบัญชีแห่งหนึ่งเขียนว่า สำนักงานอื่นทำงานหยาบ มาใช้เราดีกว่า', src: 'ตามคู่มือ R115.2', a: 0, s: 'โฆษณาดูหมิ่นสำนักงานอื่น',
+      y: 'การตลาดต้องไม่ใช้ถ้อยคำดูหมิ่นผู้อื่น คู่มือวางเรื่องการตลาดไว้ใต้หลัก (จ)',
+      n: 'ป้ายนี้ไม่ได้ปกปิดหรือบิดเบือนข้อเท็จจริงในงานที่ทำ ที่ผิดคือถ้อยคำดูหมิ่นผู้อื่น ซึ่งคู่มือวางไว้ใต้หลัก (จ)' },
+    { f: 'พีททำงบโดยไม่แสดงภาระหนี้ก้อนหนึ่งที่เป็นสาระสำคัญ ตามที่เจ้าของบริษัทขอ', src: 'ตามข้อ 9 (ฉ)', a: 1, s: 'ไม่แสดงหนี้ในงบ',
+      y: 'ไม่แสดงหนี้ที่เป็นสาระสำคัญ คือปกปิดข้อเท็จจริง เจ้าของเป็นคนขอ ผลก็ไม่เปลี่ยน',
+      n: 'การจงใจฝ่าฝืนหลักใดก็เข้ากรณีที่ 1 ของ (จ) ได้ด้วย แต่ตัวการกระทำนี้คือการปกปิดข้อเท็จจริง ซึ่งเป็นถ้อยคำของ (ฉ)' },
+    { f: 'ผู้ทำบัญชีคนหนึ่งเคยถูกลงโทษเพราะประพฤติผิดจรรยาบรรณ คำสั่งถึงที่สุดแล้ว ต่อมาก็ยังประพฤติผิดซ้ำ', src: 'ตามข้อ 9 (จ) (2)', a: 0, s: 'ถูกลงโทษแล้วทำผิดซ้ำ',
+      y: 'เป็นหนึ่งในห้ากรณีที่ข้อบังคับถือว่า นำมาซึ่งความเสื่อมเสียเกียรติศักดิ์แห่งวิชาชีพบัญชี',
+      n: 'เรื่องนี้ไม่ได้บอกว่ามีอะไรถูกปกปิดหรือบิดเบือน ที่บอกคือถูกลงโทษถึงที่สุดแล้วยังทำผิดซ้ำ ซึ่งข้อบังคับเขียนไว้ใน (จ)' },
+    { f: 'พีทบันทึกเงินที่เจ้าของถอนไปใช้ส่วนตัว เป็นค่าใช้จ่ายของบริษัท จำนวนเป็นสาระสำคัญ', src: 'ตามข้อ 9 (ฉ)', a: 1, s: 'ลงเงินส่วนตัวเป็นค่าใช้จ่ายบริษัท',
+      y: 'รายการยังอยู่ในงบ แต่ถูกแสดงเป็นอย่างอื่น คือบิดเบือนความจริงอันเป็นสาระสำคัญ',
+      n: 'ตัวการกระทำนี้คือการแสดงรายการให้ผิดไปจากความจริง ซึ่งเป็นถ้อยคำของ (ฉ) ไม่ใช่เรื่องการตลาด หรือห้ากรณีของ (จ)' },
+    { f: 'ผู้สอบบัญชีคนหนึ่งถูกศาลพิพากษาถึงที่สุดให้จำคุก เพราะกระทำความผิดในการประกอบวิชาชีพบัญชี ตามประมวลกฎหมายอาญา มาตรา 269', src: 'ตามข้อ 9 (จ) (3)', a: 0, s: 'ถูกจำคุกตามมาตรา 269',
+      y: 'ข้อบังคับเขียนกรณีนี้ไว้ตรงตัว ในห้ากรณีของ (จ)',
+      n: 'ข้อบังคับเขียนกรณีนี้ไว้ตรงตัวในห้ากรณีของ (จ) ไม่ได้จัดไว้ใต้ (ฉ)' }]);
+
+  /* ลองดู: 1 ขอบเขต + (ก) · 2 แก้ตัวเลขให้ตรงความจริง (เรื่องใหม่) · 3 ทางเปิดเผยทางที่ 3 พร้อมเงื่อนไข · 4 เรื่องใหม่ เลือกจากหกหลัก */
   V.quiz($('quiz'), [
-    { f: 'ผู้ทำบัญชีคนหนึ่งไม่ได้เป็นสมาชิกสภาฯ ใช้ทางขึ้นทะเบียน ปลายปีเขาไม่ได้ชำระค่าธรรมเนียมของปีถัดไป และไม่ได้ยื่นหนังสือแสดงเหตุจำเป็น', q: 'ผลกับการขึ้นทะเบียนของเขาคืออะไร', o: [
-      ['การขึ้นทะเบียนสิ้นสุดลง', 1, 'ไม่ชำระค่าธรรมเนียมให้ครบภายในกำหนด ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลง เว้นแต่ยื่นหนังสือแสดงว่าเกิดจากพฤติการณ์ที่จำเป็น ซึ่งเขาไม่ได้ยื่น (ข้อบังคับผู้ทำบัญชี ข้อ 13) เมื่อไม่ได้เป็นสมาชิกและไม่ได้ขึ้นทะเบียน ก็เป็นผู้ทำบัญชีไม่ได้ (พ.ร.บ. มาตรา 44)'],
-      ['ยังขึ้นทะเบียนอยู่ เพราะขึ้นทะเบียนครั้งเดียวใช้ได้ตลอด', 0, 'บัตรประจำตัวผู้ขึ้นทะเบียนใช้ได้ถึง 31 ธันวาคมของแต่ละปี ต้องต่ออายุและชำระค่าธรรมเนียมของปีต่อไปล่วงหน้า (ข้อบังคับผู้ทำบัญชี ข้อ 8 · ข้อ 9)'],
-      ['ยังขึ้นทะเบียนอยู่ จนกว่าสภาฯ จะสั่งเพิกถอน', 0, 'ข้อ 13 ให้ถือว่าการขึ้นทะเบียนสิ้นสุดลงเมื่อไม่ชำระค่าธรรมเนียมให้ครบภายในกำหนด (ข้อบังคับผู้ทำบัญชี ข้อ 13)']] },
-    { f: 'บริษัทจำกัดแห่งหนึ่งยื่นจดทะเบียนต่อสภาฯ เพื่อรับทำบัญชีอย่างเดียว ทุนจดทะเบียน 5,000,000 บาท มีพันธบัตรรัฐบาลไทยที่จำหน่ายในราชอาณาจักร 150,000 บาท ปราศจากภาระผูกพัน คนที่มีอำนาจลงนามผูกพันบริษัทไม่ใช่ผู้สอบบัญชีรับอนุญาต', q: 'บริษัทนี้ครบเงื่อนไขการจดทะเบียนของมาตรา 11 ไหม', o: [
-      ['ยังไม่ครบ เพราะคนที่มีอำนาจลงนามผูกพันไม่ใช่ผู้สอบบัญชีรับอนุญาต', 0, 'มาตรา 11 (2) เขียนไว้สำหรับกรณีประกอบกิจการให้บริการการสอบบัญชี บริษัทนี้รับทำบัญชีอย่างเดียว (พ.ร.บ. มาตรา 11 (2))'],
-      ['ครบ', 1, 'ร้อยละ 3 ของทุนจดทะเบียน 5,000,000 บาทคือ 150,000 บาท กฎเขียนว่าไม่น้อยกว่า เท่ากันพอดีจึงใช้ได้ และพันธบัตรรัฐบาลไทยเป็นหลักประกันประเภทหนึ่ง (กฎกระทรวง ข้อ 2 · ข้อ 3) ส่วนมาตรา 11 (2) เขียนไว้สำหรับกิจการให้บริการการสอบบัญชี บริษัทนี้รับทำบัญชีอย่างเดียว'],
-      ['ยังไม่ครบ เพราะหลักประกันต้องมากกว่าร้อยละ 3 ของทุน', 0, 'กฎกระทรวงเขียนว่าไม่น้อยกว่าร้อยละ 3 ของทุน ณ วันที่ยื่นจดทะเบียน 150,000 บาทเท่ากับร้อยละ 3 ของ 5,000,000 บาทพอดี (กฎกระทรวง ข้อ 2)']] },
-    { f: 'สิ้นรอบปีบัญชี บริษัทจำกัดแห่งหนึ่งที่รับสอบบัญชีมีทุนจดทะเบียน 2,000,000 บาท ปีนั้นบริษัทมีรายได้รวม 6,000,000 บาท ส่วนหนึ่งเป็นค่าสอบบัญชี อีกส่วนเป็นค่าเช่าอาคารที่บริษัทให้คนอื่นเช่า', q: 'ภายใน 60 วัน บริษัทต้องมีหลักประกันไม่น้อยกว่าเท่าไร', o: [
-      ['180,000 บาท คือร้อยละ 3 ของ 6,000,000 บาท', 0, 'รายได้ที่ใช้เทียบคือรายได้ที่เกิดจากการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี (กฎกระทรวง ข้อ 1) ค่าเช่าอาคารไม่นำมาเทียบ และโจทย์ยังไม่บอกว่าใน 6,000,000 บาทเป็นค่าสอบบัญชีเท่าไร'],
-      ['60,000 บาท คือร้อยละ 3 ของทุน 2,000,000 บาท', 0, 'ต้องเทียบทุนกับรายได้จากค่าสอบบัญชีก่อน แล้วใช้จำนวนที่มากกว่า (กฎกระทรวง ข้อ 6) โจทย์ยังไม่บอกรายได้ส่วนนี้ จึงยังสรุปเป็น 60,000 บาทไม่ได้'],
-      ['ยังสรุปไม่ได้ ต้องรู้ก่อนว่าค่าสอบบัญชีเป็นเท่าไร', 1, 'รายได้ที่ใช้เทียบคือรายได้ที่เกิดจากการให้บริการด้านการสอบบัญชีหรือด้านการทำบัญชี (กฎกระทรวง ข้อ 1) ถ้าค่าสอบบัญชีไม่เกิน 2,000,000 บาท ใช้ทุน ได้ 60,000 บาท ถ้าเกิน ใช้ค่าสอบบัญชีคูณร้อยละ 3 (ข้อ 6)']] }
+    { f: 'เจ้าของร้านขายส่งขอให้ผู้ทำบัญชีของร้านลงยอดขายเกินจริงเพื่อไปขอกู้ ผู้ทำบัญชีคนนี้ไม่ได้เป็นสมาชิกสภาฯ แต่ขึ้นทะเบียนไว้ และทำตามที่ขอ', q: 'ใครมีหน้าที่ตามจรรยาบรรณในเรื่องนี้ และขัดกับหลักข้อไหน', o: [
+      ['ผู้ทำบัญชี ขัดกับหลัก (ก) เจ้าของเป็นคนขอ ผลก็ไม่เปลี่ยน', 1, 'ผู้ทำบัญชีขึ้นทะเบียนไว้กับสภาฯ จึงอยู่ใต้จรรยาบรรณ งบที่มียอดขายเกินจริงทำให้คนอ่านเข้าใจผิด เป็นเรื่องของหลัก (ก) (พ.ร.บ.วิชาชีพบัญชี มาตรา 46 · คู่มือ R111.2)'],
+      ['เจ้าของร้าน เพราะเป็นคนสั่ง ผู้ทำบัญชีแค่ทำตาม', 0, 'ดูผิดคน เจ้าของร้านไม่ได้ทำงานวิชาชีพบัญชีและไม่ได้ขึ้นทะเบียน หน้าที่ตามจรรยาบรรณอยู่กับผู้ทำบัญชี และไม่หายไปเพราะมีคนสั่ง (มาตรา 46 · คู่มือ R270.3 (ก))'],
+      ['ไม่มีใคร เพราะผู้ทำบัญชีไม่ได้เป็นสมาชิกสภาฯ', 0, 'ลืมกลุ่มที่สอง คนที่ขึ้นทะเบียนไว้กับสภาฯ ก็อยู่ใต้จรรยาบรรณ แม้ไม่ได้เป็นสมาชิก (มาตรา 46)']] },
+    { f: 'เพื่อนของพีททำบัญชีให้อีกบริษัท พบว่าบัญชีลงค่าใช้จ่ายขาดไป จึงแก้ให้ตรงกับใบแจ้งหนี้ที่มีอยู่จริง กำไรในงบลดลง เจ้าของบริษัทไม่พอใจ', q: 'การแก้ครั้งนี้ขัดกับหลัก (ก) ไหม', o: [
+      ['ไม่ขัด เพราะหลังแก้ งบตรงกับความจริง', 1, 'หลังแก้ งบตรงกับเอกสาร เป็นการนำเสนอความจริงอย่างถูกต้อง เหมือนตอนเอกสารการขายของพีทรวมได้ 1,500,000 บาท (คู่มือ R220.4 (ค))'],
+      ['ขัด เพราะแก้ตัวเลขในบัญชี', 0, 'การแก้ตัวเลขไม่ได้ผิดในตัวเอง ที่ต้องดูคืองบหลังแก้ตรงกับความจริงหรือไม่ ครั้งนี้ตรง'],
+      ['ขัด เพราะเจ้าของบริษัทไม่เห็นด้วย', 0, 'ใครพอใจหรือไม่พอใจไม่ได้เปลี่ยนผล เหมือนที่ใครเป็นคนขอก็ไม่เปลี่ยนผล ที่ต้องดูคืองบหลังแก้ตรงกับความจริงหรือไม่']] },
+    { f: 'สภาวิชาชีพบัญชีมีข้อซักถามมาถึงพี่แพม ขอดูตารางราคาซื้อของลูกค้า ลูกค้าไม่ได้อนุมัติ และไม่มีกฎหมายห้ามเปิดเผย', q: 'พี่แพมเปิดเผยตารางนี้ต่อสภาฯ ได้ไหม', o: [
+      ['ได้ เพราะเป็นการตอบข้อซักถามขององค์กรวิชาชีพ และไม่มีกฎหมายห้าม', 1, 'เข้าทางที่ 3 มีหน้าที่หรือสิทธิทางวิชาชีพที่จะเปิดเผย เมื่อไม่มีข้อห้ามทางกฎหมาย ซึ่งรวมการตอบข้อซักถามหรือการไต่สวนขององค์กรวิชาชีพ (คู่มือ 114.1 A1 (ค))'],
+      ['ไม่ได้ ต้องให้ลูกค้าอนุมัติก่อนทุกครั้ง', 0, 'อนุมัติจากลูกค้าเป็นเงื่อนไขของทางที่ 2 ทางเดียว ยังมีอีกสองทางที่เปิดเผยได้ เรื่องนี้เข้าทางที่ 3'],
+      ['ได้เสมอ ถ้าคนขอคือสภาฯ ไม่ต้องดูอย่างอื่น', 0, 'ทางที่ 3 มีเงื่อนไขว่าต้องไม่มีข้อห้ามทางกฎหมาย เรื่องนี้เปิดเผยได้เพราะโจทย์บอกว่าไม่มีกฎหมายห้าม']] },
+    { tiles: true, f: 'สำนักงานบัญชีแห่งหนึ่งรับงานของธุรกิจโรงแรม ทั้งที่ทั้งทีมไม่เคยทำงานของธุรกิจนี้ ไม่เข้าใจธุรกิจของลูกค้า และไม่ได้หาคนที่มีความรู้มาช่วย', q: 'เรื่องนี้เป็นเรื่องของหลักข้อไหน', o: [
+      ['(ก) ความซื่อสัตย์สุจริต', 0, 'ไม่มีข้อมูลไหนถูกทำให้ผิดจากความจริง ที่ขาดคือความรู้ที่งานต้องใช้'],
+      ['(ข) ความเที่ยงธรรมและความเป็นอิสระ', 0, 'ไม่มีอคติ ผลประโยชน์ขัดกัน หรืออิทธิพลของใครมาเกี่ยว ที่ขาดคือความรู้ที่งานต้องใช้'],
+      ['(ค) ความรู้ ความสามารถ ความเอาใจใส่', 1, 'ทีมไม่มีความรู้ที่งานต้องใช้ และไม่ได้หามา คู่มือเขียนว่าเรื่องนี้กระทบการทำตามหลัก (ค) ได้ (คู่มือ 320.3 A3)'],
+      ['(ง) การรักษาความลับ', 0, 'ไม่มีข้อมูลของลูกค้าถูกเปิดเผยหรือถูกเอาไปใช้ ที่ขาดคือความรู้ที่งานต้องใช้'],
+      ['(จ) พฤติกรรมทางวิชาชีพ', 0, 'ไม่ใช่เรื่องการตลาด หรือห้ากรณีที่ถือว่าเสื่อมเสียเกียรติศักดิ์ เรื่องความรู้ที่งานต้องใช้ คู่มือวางไว้ใต้หลัก (ค)'],
+      ['(ฉ) ความโปร่งใส', 0, 'ไม่มีข้อเท็จจริงถูกปกปิดหรือบิดเบือน ที่ขาดคือความรู้ที่งานต้องใช้']] }
   ]);
+  live = true;
 })();
 </script>
 </body>

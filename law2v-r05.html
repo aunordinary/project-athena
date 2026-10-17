@@ -4,481 +4,595 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>ถูกขอให้แก้ตัวเลข ทำตามได้แค่ไหน | CPA Answer</title>
+<title>เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร | CPA Answer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="law2v.css">
 <style>
-/* สไตล์เฉพาะหน้า หลัก (ก) ความซื่อสัตย์สุจริต — คำนำ xea- · แก้หลัง blind test 12 ต.ค. 2569 */
-.xea-stack, .xea-parse { display:grid; gap:8px; grid-template-columns:minmax(0,1fr); }
-.xea-laws { display:flex; flex-wrap:wrap; gap:6px; }
-.xea-cg span .law, .xea-dir .law { display:inline-block; font-size:12px; }
+/* สไตล์เฉพาะสถานี “เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร” ทุก class ขึ้นต้น x05- */
+#steps { padding-left:6px; padding-right:6px; } #steps a { font-size:12px; } #steps a i { width:26px; height:26px; font-size:13px; }
+.x05-sm { font-size:13px; line-height:1.45; color:var(--muted); }
+.x05-h { margin-top:8px; padding-top:18px; border-top:2px solid var(--soft); }
+.x05-go { font-size:14px; font-weight:700; color:var(--hue-ink); }
+.x05-t0 { --c:#2F6B8A; --cs:#DCEBF3; --ci:#1C4257; } .x05-t1 { --c:#1F7A6B; --cs:#DDF1EC; --ci:#0E4A41; } .x05-t2 { --c:#B7791F; --cs:#FBF0D2; --ci:#6B4508; }
+.x05-t3 { --c:#6B4E9B; --cs:#ECE6F6; --ci:#3F2C66; } .x05-t4 { --c:#B5532F; --cs:#F7E4DA; --ci:#6E2F17; }
+.cg.x05-neu { color:var(--ink); } .cg.x05-neu .ico { background:var(--hue); }
+.gate { grid-template-columns:96px minmax(0,1fr); }
 
-/* ภาพหกหลักการ: ชุดเดียวของหน้าที่ใช้ตัวอักษร ก–ฉ */
-.xea-reg { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px; background:var(--hue-ink); color:#fff; }
-.xea-reg .ico { width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.14); display:grid; place-items:center; }
-.xea-reg .ico svg { width:22px; height:22px; }
-.xea-reg small { display:block; font-size:12px; font-weight:700; letter-spacing:.03em; color:var(--sun); }
-.xea-reg b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
-.xea-ln { justify-self:center; width:4px; height:14px; margin:-8px 0; background:var(--line); border-radius:2px; }
-.xea-art { font-size:15px; font-weight:600; line-height:1.45; }
-.xea-six { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; margin:0; padding:0; list-style:none; }
-.xea-six a, .xea-six .xea-me { display:grid; grid-template-columns:38px minmax(0,1fr) auto; gap:10px; align-items:center; min-height:50px; padding:6px 12px 6px 6px; border-radius:14px; background:var(--soft); color:var(--ink); text-decoration:none; }
-.xea-six a:hover { box-shadow:inset 0 0 0 2px var(--hue); }
-.xea-six i { width:38px; height:38px; border-radius:11px; display:grid; place-items:center; background:var(--hue); color:#fff; font-style:normal; font-family:var(--display); font-weight:800; font-size:18px; }
-.xea-six b { font-family:var(--display); font-size:15px; line-height:1.3; }
-.xea-six em { font-style:normal; font-size:12px; font-weight:700; color:var(--hue-ink); white-space:nowrap; }
-.xea-six a em::after { content:"\00a0›"; }
-.xea-six .xea-me { background:var(--sun); box-shadow:0 0 0 4px rgba(240,200,75,.3); }
-.xea-six .xea-me i { background:var(--ink); }
-.xea-six .xea-me em { color:var(--ink); }
-.xea-mix { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px; box-shadow:inset 0 0 0 1.5px var(--line); text-decoration:none; color:var(--ink); font-size:14px; line-height:1.45; }
-.xea-mix:hover { box-shadow:inset 0 0 0 2px var(--hue); }
-.xea-mix .ico { width:44px; height:44px; border-radius:50%; background:var(--soft); color:var(--hue); display:grid; place-items:center; }
-.xea-mix .ico svg { width:22px; height:22px; }
-.xea-mix b { display:block; margin-top:4px; font-family:var(--display); font-size:15px; color:var(--hue-ink); }
-.xea-mix b::after { content:"\00a0›"; }
+/* ภาพรวม: ใครเป็นใคร · สองครึ่งของเรื่อง */
+.x05-cast { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) minmax(0,1fr); gap:6px; align-items:center; padding:14px 8px; border-radius:20px; background:var(--hue-soft); }
+.x05-pp { display:grid; justify-items:center; gap:2px; text-align:center; } .x05-pp svg { width:64px; height:64px; }
+.x05-pp b { font-family:var(--display); font-size:17px; line-height:1.2; } .x05-pp small { font-size:12px; line-height:1.3; font-weight:600; color:var(--hue-ink); overflow-wrap:anywhere; }
+.x05-lk { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; gap:4px; text-align:center; font-size:12px; font-weight:700; line-height:1.3; color:var(--hue-ink); }
+.x05-lk svg { width:48px; height:14px; } .x05-lk path { fill:none; stroke:var(--hue); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.x05-req { padding:12px 14px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.5; } .x05-req b { font-family:var(--display); }
+.x05-half { margin:0 0 8px; padding:2px 12px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; }
+.x05-turn { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; width:100%; margin-bottom:8px; }
+.x05-turn::before { content:""; width:4px; height:14px; background:var(--line); }
+.x05-turn > span { max-width:300px; padding:8px 14px; border-radius:16px; background:var(--bad-soft); color:var(--bad-ink); font-size:13px; font-weight:700; line-height:1.45; text-align:center; }
 
-/* 1 ถ้อยคำของข้อ 9 (ก) */
-.xea-quote { display:grid; gap:8px; padding:18px 16px; border-radius:20px; background:var(--hue-ink); color:#fff; }
-.xea-quote b { font-family:var(--display); font-weight:800; font-size:21px; line-height:1.35; }
-.xea-quote .law { box-shadow:none; justify-self:start; }
-.xea-row { display:grid; grid-template-columns:78px minmax(0,1fr); gap:10px; align-items:start; padding:12px; border-radius:18px; background:var(--soft); }
-.xea-k { font-size:13px; font-weight:700; color:var(--hue-ink); padding-top:6px; }
-.xea-v { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
-.xea-v b { padding:5px 12px; border-radius:99px; background:var(--hue); color:#fff; font-family:var(--display); font-size:16px; line-height:1.3; }
-.xea-v i { font-style:normal; padding:4px 10px; border-radius:99px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--hue); color:var(--hue-ink); font-size:14px; font-weight:700; line-height:1.3; }
-.xea-v small { flex-basis:100%; font-size:13px; color:var(--muted); line-height:1.45; }
-.xea-duo { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
-.xea-p { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 8px; border-radius:18px; background:var(--soft); text-align:center; }
-.xea-p svg { width:60px; height:60px; border-radius:50%; }
-.xea-p > b { font-family:var(--display); font-size:19px; line-height:1.1; }
-.xea-p > small { font-size:13px; color:var(--muted); line-height:1.35; }
-.xea-ty { align-self:end; width:100%; margin-top:4px; padding:8px 6px; border-radius:12px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--hue); font-size:13px; font-weight:700; line-height:1.3; color:var(--hue-ink); }
-.xea-ty small { display:block; margin-top:2px; font-weight:500; font-size:12px; color:var(--muted); }
-.xea-ra { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
-.xea-ra div { display:grid; gap:2px; align-content:start; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:13px; line-height:1.4; }
-.xea-ra b { font-family:var(--display); font-weight:800; font-size:22px; line-height:1; color:var(--hue); }
+/* ส่วนที่ 1: ห้าอย่างที่ดึงดุลยพินิจ */
+.x05-wheel { padding:6px; border-radius:18px; background:var(--soft); } .x05-wheel svg { width:100%; height:auto; } .x05-wheel g[data-t] { cursor:pointer; }
+/* ห้าประเภทเป็นแถวที่เปิดทีละแถว: ชื่อกับตัวดึงเห็นครบห้าแถวเสมอ ผลและตัวอย่างเปิดดูทีละประเภท */
+.x05-ths { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x05-th { border-radius:18px; background:var(--cs); transition:box-shadow .15s ease; } .x05-th.x05-on { box-shadow:inset 0 0 0 3px var(--c); }
+.x05-th > button { display:grid; grid-template-columns:48px minmax(0,1fr) 22px; gap:10px; align-items:center; width:100%; min-height:72px; padding:12px; border:0; border-radius:18px; background:none; color:var(--ci); font:inherit; text-align:left; cursor:pointer; }
+.x05-th > button:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+.x05-ic { width:48px; height:48px; border-radius:16px; display:grid; place-items:center; background:var(--c); color:#fff; } .x05-ic svg { width:28px; height:28px; }
+.x05-th > button b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; color:var(--ink); } .x05-th > button small { display:block; font-size:13px; line-height:1.4; }
+.x05-chev { display:grid; place-items:center; width:22px; height:22px; color:var(--c); transition:transform .2s ease; } .x05-chev svg { width:22px; height:22px; } .x05-on .x05-chev { transform:rotate(180deg); }
+.x05-tb { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:0 12px 14px; } .x05-tb[hidden] { display:none; }
+.x05-eff { padding:8px 10px; border-radius:12px; background:var(--white); box-shadow:inset 4px 0 0 var(--c); font-size:14px; line-height:1.45; color:var(--ci); } .x05-eff small { display:block; font-size:12px; font-weight:700; }
+.x05-exh { margin-top:2px; font-size:13px; font-weight:700; line-height:1.4; color:var(--ci); }
+.x05-tb ul { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:minmax(0,1fr); gap:4px; }
+.x05-tb li { position:relative; padding:3px 0 3px 14px; font-size:14px; line-height:1.4; } .x05-tb li::before { content:""; position:absolute; left:2px; top:11px; width:6px; height:6px; border-radius:50%; background:var(--c); }
+.x05-tb li.x05-me { padding:8px 10px; border-radius:12px; background:var(--white); box-shadow:inset 0 0 0 2px var(--sun); font-weight:600; } .x05-tb li.x05-me::before { display:none; }
+/* บรรทัดหลักที่ใช้ตัดสิน อยู่ใต้กล่องโจทย์ · แถบบอกว่าเข้าครึ่งหลังแล้ว · รายการสั้น */
+.x05-rule { padding:8px 12px; border-radius:14px; background:var(--hue-soft); color:var(--hue-ink); font-size:14px; font-weight:600; line-height:1.45; } .x05-rule > b { margin-right:6px; padding:1px 9px; border-radius:99px; background:var(--hue-ink); color:#fff; font-size:12px; font-weight:800; }
+.x05-mid { padding:12px 14px; border-radius:18px; background:var(--bad-soft); color:var(--bad-ink); font-size:14px; line-height:1.45; } .x05-mid > b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
+.x05-pts { margin:0; padding:0 0 0 18px; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; font-size:14px; line-height:1.45; color:var(--muted); }
+.x05-drill { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; }
 
-/* แถวมีเลขลำดับ: ใช้กับข้อย่อยของคู่มือ (เลขในวงกลมขอบเส้น ไม่ใช่ตัวอักษรของหลักการ) */
-.xea-rows { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; counter-reset:xr; }
-.xea-rows > li { counter-increment:xr; display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:14px; background:var(--soft); font-size:15px; line-height:1.45; }
-.xea-rows > li::before { content:counter(xr); width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--muted); color:var(--muted); font-family:var(--display); font-weight:800; font-size:14px; }
-.xea-box { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:18px; background:var(--soft); }
-.xea-box > b { font-family:var(--display); font-size:17px; line-height:1.35; }
-.xea-box .xea-rows > li { background:var(--white); }
-.xea-box > small { font-size:13px; color:var(--muted); line-height:1.45; }
-.xea-jump { display:flex; align-items:center; min-height:40px; font-size:13px; font-weight:700; color:var(--hue-ink); }
-.xea-jump::after { content:"\00a0›"; }
-.xea-pt { display:block; margin-top:4px; font-size:13px; font-weight:600; line-height:1.4; color:var(--hue-ink); }
-.xea-tri { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:14px; border-radius:18px; background:var(--soft); text-decoration:none; color:var(--ink); }
-a.xea-tri:hover { box-shadow:inset 0 0 0 2px var(--hue); }
-.xea-tri .ico { width:44px; height:44px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; }
-.xea-tri .ico svg { width:22px; height:22px; }
-.xea-tri b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
-.xea-tri small { display:block; font-size:14px; color:var(--muted); line-height:1.45; margin-top:2px; }
-.xea-tri .xea-go { display:inline-block; margin-top:6px; font-size:13px; font-weight:700; color:var(--hue-ink); }
-.xea-tri .xea-go::after { content:"\00a0›"; }
+/* ส่วนที่ 2: สามอย่างที่ต้องทำ · ระดับที่ยอมรับได้ · มาตรการป้องกันสองประเภท */
+.x05-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.x05-3 span { position:relative; display:grid; justify-items:center; gap:2px; padding:10px 4px; border-radius:14px; background:var(--soft); text-align:center; font-family:var(--display); font-weight:800; font-size:16px; line-height:1.2; }
+.x05-3 small { font-family:var(--body); font-size:12px; font-weight:600; color:var(--muted); }
+.x05-3 span + span::before { content:"›"; position:absolute; left:-12px; top:50%; transform:translateY(-50%); color:var(--muted); font-weight:800; }
+.x05-3 .x05-did { background:var(--good-soft); color:var(--good); } .x05-3 .x05-did small { color:var(--good); }
+.x05-3 .x05-here { background:var(--hue); color:#fff; } .x05-3 .x05-here small { color:#fff; }
+.x05-lv { display:grid; grid-template-columns:minmax(0,1fr); }
+.x05-bar { position:relative; min-height:156px; border-radius:16px; overflow:hidden; background:var(--good-soft); transition:opacity .3s ease; }
+.x05-bar .x05-red { position:absolute; left:0; right:0; top:0; height:55%; background:repeating-linear-gradient(135deg, var(--bad-soft) 0 8px, #F4CFCB 8px 16px); }
+.x05-bar small { position:absolute; left:12px; font-size:13px; font-weight:700; line-height:1.25; }
+.x05-bar .x05-up { top:10px; color:var(--bad-ink); } .x05-bar .x05-dn { bottom:10px; color:var(--good); }
+.x05-bar .x05-cut { position:absolute; left:0; right:0; top:55%; height:4px; margin-top:-2px; background:var(--ink); }
+.x05-bar .x05-cut em { position:absolute; right:10px; top:50%; transform:translateY(-50%); padding:1px 8px; border-radius:99px; background:var(--ink); color:#fff; font-style:normal; font-size:12px; font-weight:700; white-space:nowrap; }
+.x05-dot { position:absolute; left:50%; top:26%; width:36px; height:36px; margin:-18px 0 0 -18px; border-radius:50%; display:grid; place-items:center; background:var(--bad); color:#fff; box-shadow:0 0 0 4px #fff; transition:top .45s ease, background-color .3s ease, opacity .3s ease; }
+.x05-dot svg { width:20px; height:20px; }
+.x05-s1 .x05-dot { top:92%; opacity:0; } .x05-s2 .x05-dot { top:76%; background:var(--good); }
+.x05-s3 .x05-bar { opacity:.35; } .x05-s3 .x05-dot { background:var(--muted); }
+.x05-pickl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x05-pickl button { min-height:48px; padding:8px 12px; border-radius:16px; border:2px solid transparent; background:var(--soft); color:var(--ink); font:inherit; font-size:15px; font-weight:600; line-height:1.35; text-align:left; cursor:pointer; transition:transform .12s ease, background-color .12s ease; }
+.x05-pickl button:active { transform:scale(.98); } .x05-pickl button[aria-pressed="true"] { background:var(--hue); color:#fff; }
+.x05-out { display:grid; grid-template-columns:minmax(0,1fr); gap:4px; padding:12px 14px; border-radius:16px; background:var(--bad-soft); color:var(--bad-ink); }
+.x05-out.x05-fine { background:var(--good-soft); color:var(--good); } .x05-out.x05-grey { background:var(--soft); color:var(--ink); }
+.x05-out b { font-family:var(--display); font-size:18px; line-height:1.25; } .x05-out p { font-size:14px; line-height:1.45; }
+.x05-ask { display:grid; grid-template-columns:48px minmax(0,1fr); gap:12px; align-items:center; padding:14px; border-radius:18px; background:var(--hue-ink); color:#fff; font-size:14px; line-height:1.5; }
+.x05-ask svg { width:48px; height:48px; } .x05-ask b { display:block; font-family:var(--display); font-size:13px; letter-spacing:.04em; color:var(--sun); } .x05-ask .law { box-shadow:none; }
+.x05-nest { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:12px; border-radius:20px; background:#DCEBF3; font-size:14px; line-height:1.45; }
+.x05-nest b { font-family:var(--display); font-size:16px; line-height:1.3; }
+.x05-in { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:12px; border-radius:16px; background:#FBF0D2; }
+.x05-in2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; }
+.x05-in2 > div { padding:10px; border-radius:12px; background:var(--white); font-size:13px; line-height:1.4; } .x05-in2 b { display:block; font-size:14px; margin-bottom:4px; }
+.x05-in2 ul { margin:0; padding:0 0 0 14px; display:grid; gap:4px; }
 
-/* 2 คำขอ · กระดาษสองใบ · คนขอสามคน */
-.xea-req { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:center; padding:12px 14px; border-radius:18px 18px 18px 4px; background:var(--hue-soft); color:var(--hue-ink); }
-.xea-req .ico { width:44px; height:44px; border-radius:50%; background:var(--white); color:var(--hue); display:grid; place-items:center; }
-.xea-req .ico svg { width:22px; height:22px; }
-.xea-req small { display:block; font-size:12px; font-weight:700; letter-spacing:.03em; }
-.xea-req b { display:block; font-family:var(--display); font-size:17px; line-height:1.3; }
-.xea-cmp { display:grid; grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr); gap:6px; align-items:center; }
-.xea-paper { display:grid; gap:2px; justify-items:center; padding:14px 6px 12px; border-radius:6px 18px 18px 18px; background:var(--soft); text-align:center; box-shadow:inset 0 0 0 1.5px var(--line); transition:box-shadow .2s ease; }
-.xea-paper small { font-size:12px; font-weight:700; color:var(--muted); line-height:1.3; }
-.xea-paper b { font-family:var(--display); font-weight:800; font-size:22px; line-height:1.15; }
-.xea-paper em { font-style:normal; font-size:12px; color:var(--muted); }
-.xea-mid { display:grid; justify-items:center; gap:4px; }
-.xea-sign { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:#fff; font-family:var(--display); font-weight:800; font-size:26px; line-height:1; background:var(--muted); transition:background-color .2s ease; }
-.xea-mid small { font-size:11px; font-weight:700; text-align:center; line-height:1.2; }
-.xea-cmp.xea-match .xea-sign { background:var(--good); } .xea-cmp.xea-match .xea-mid small { color:var(--good); }
-.xea-cmp.xea-diff .xea-sign { background:var(--bad); } .xea-cmp.xea-diff .xea-mid small { color:var(--bad-ink); }
-.xea-cmp.xea-diff .xea-doc { box-shadow:inset 0 0 0 2px var(--bad); }
-.xea-next { justify-self:start; display:inline-flex; align-items:center; min-height:44px; font-size:14px; font-weight:700; color:var(--hue-ink); }
-.xea-next::after { content:"\00a0›"; }
-.chips.xea-ask { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-.chips.xea-ask button { min-height:56px; padding:6px 4px; border-radius:16px; font-size:14px; line-height:1.25; text-align:center; }
-.xea-askfig { display:grid; grid-template-columns:minmax(0,1fr); gap:0; }
-.xea-same { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:12px 14px; border-radius:16px; background:var(--soft); font-size:15px; line-height:1.45; transition:background-color .2s ease; }
-.xea-same b { font-family:var(--display); }
-.xea-pill { justify-self:center; padding:3px 16px; border-radius:99px; background:var(--muted); color:#fff; font-family:var(--display); font-weight:800; font-size:16px; }
-.xea-same.xea-good { background:var(--good-soft); color:var(--good); } .xea-same.xea-good .xea-pill { background:var(--good); }
-.xea-same.xea-bad { background:var(--bad-soft); color:var(--bad-ink); } .xea-same.xea-bad .xea-pill { background:var(--bad); }
+/* ส่วนที่ 3: งานของพริ้ง */
+.conds.x05-c3 { grid-template-columns:repeat(3,minmax(0,1fr)); } .x05-c3 .cond { overflow-wrap:anywhere; padding:14px 4px 10px; }
+.x05-ask .law, .x05-pnl .law, .x05-out .law, .x05-th .law, .x05-rule .law { white-space:normal; }
+.x05-roles { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x05-rl { display:grid; grid-template-columns:52px minmax(0,1fr); gap:12px; align-items:start; padding:12px; border-radius:18px; background:var(--soft); font-size:14px; line-height:1.45; }
+.x05-rl svg { width:52px; height:52px; } .x05-rl b { display:block; font-family:var(--display); font-size:16px; line-height:1.25; } .x05-rl small { display:block; font-size:12px; color:var(--muted); }
+.x05-rl em { display:block; margin-top:6px; padding:8px 10px; border-radius:12px; background:var(--white); font-style:normal; font-weight:600; }
 
-/* 3 สมการของตัวอย่าง 220.4 A1 · ห้างานที่ต้องเลือกเอง */
-.xea-eq { display:grid; grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr); gap:6px; align-items:stretch; }
-.xea-eqc { display:grid; gap:2px; align-content:start; padding:10px; border-radius:14px; background:var(--soft); font-size:14px; line-height:1.35; }
-.xea-eqc small { font-size:12px; font-weight:700; color:var(--muted); }
-.xea-eqc b { font-family:var(--display); font-size:15px; }
-.xea-eqc em { font-style:normal; font-size:13px; color:var(--muted); }
-.xea-op { display:grid; place-items:center; font-family:var(--display); font-weight:800; font-size:22px; color:var(--muted); }
-.xea-eqr { grid-column:1 / -1; background:var(--bad-soft); color:var(--bad-ink); text-align:center; justify-items:center; }
-.xea-eqr small { color:var(--bad-ink); }
-.xea-eqr::before { content:"="; justify-self:center; font-family:var(--display); font-weight:800; font-size:22px; line-height:1; }
-.xea-mine { display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:12px 14px; border-radius:18px; background:var(--bad-soft); color:var(--bad-ink); font-size:14px; line-height:1.45; }
-.xea-mine svg { width:44px; height:44px; border-radius:50%; }
-.xea-mine b { display:block; margin-bottom:4px; font-family:var(--display); font-size:16px; line-height:1.3; }
+/* ส่วนที่ 4: บันไดของข้อยุติ */
+.x05-st { display:grid; grid-template-columns:minmax(0,1fr); }
+.x05-step { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; min-height:60px; margin-left:calc(var(--i) * 12px); padding:10px 12px; border:0; border-radius:16px; background:var(--soft); color:var(--ink); font:inherit; text-align:left; cursor:pointer; transition:background-color .2s ease, color .2s ease; }
+.x05-step > i { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 2px var(--line); font-style:normal; font-family:var(--display); font-weight:800; font-size:17px; color:var(--muted); overflow:hidden; }
+.x05-step > i svg { width:20px; height:20px; }
+.x05-step b { display:block; font-family:var(--display); font-size:15px; line-height:1.3; } .x05-step small { display:block; font-size:13px; line-height:1.4; color:var(--muted); }
+.x05-step.x05-past { background:var(--good-soft); } .x05-past > i { background:var(--good); color:#fff; box-shadow:none; }
+.x05-step[aria-pressed="true"] { background:var(--hue); color:#fff; box-shadow:0 0 0 4px var(--hue-soft); } .x05-step[aria-pressed="true"] small { color:rgba(255,255,255,.9); }
+.x05-step[aria-pressed="true"] > i { box-shadow:0 0 0 3px var(--sun); } .x05-step[aria-pressed="true"] > i svg { width:40px; height:40px; }
+.x05-rise { margin-left:calc(var(--i) * 12px + 18px); padding:6px 0 6px 14px; border-left:4px solid var(--line); font-size:12px; font-weight:700; line-height:1.35; color:var(--muted); }
+.x05-exits { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; margin:8px 0 0 66px; padding:0; list-style:none; opacity:.5; transition:opacity .2s ease; }
+.x05-exits li { display:grid; grid-template-columns:28px minmax(0,1fr); gap:8px; align-items:center; padding:8px 10px; border-radius:12px; background:var(--soft); font-size:13px; font-weight:600; line-height:1.35; }
+.x05-exits svg { width:22px; height:22px; color:var(--muted); }
+.x05-exits.x05-lit { opacity:1; } .x05-lit li { background:var(--gold-soft); box-shadow:inset 0 0 0 2px var(--sun); } .x05-lit svg { color:var(--ink); }
+.x05-side { min-height:52px; padding:10px 14px; border-radius:16px; border:2px dashed var(--line); background:var(--white); color:var(--ink); font:inherit; font-size:14px; font-weight:600; line-height:1.4; text-align:left; cursor:pointer; }
+.x05-side[aria-pressed="true"] { border-style:solid; border-color:var(--bad); background:var(--bad-soft); color:var(--bad-ink); }
+.x05-tips { display:flex; flex-wrap:wrap; gap:6px; } .x05-tips span { padding:5px 10px; border-radius:12px; background:var(--hue-soft); color:var(--hue-ink); font-size:13px; font-weight:600; line-height:1.35; }
 
-/* 4 ที่มาของความกดดัน · สองทิศ · ปรึกษาใคร */
-.xea-s3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-.xea-s3 > div { display:grid; justify-items:center; align-content:start; gap:4px; padding:12px 6px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); text-align:center; }
-.xea-s3 svg { width:24px; height:24px; }
-.xea-s3 b { font-family:var(--display); font-size:14px; line-height:1.25; }
-.xea-s3 small { font-size:12px; line-height:1.35; }
-.xea-tag { margin-top:4px; padding:3px 8px; border-radius:10px; background:var(--sun); color:var(--ink); font-size:12px; font-weight:700; line-height:1.3; }
-.xea-down { justify-self:center; width:120px; height:26px; margin:-6px 0; }
-.xea-down path { fill:none; stroke:var(--line); stroke-width:4; stroke-linecap:round; }
-.xea-dir { display:grid; grid-template-columns:84px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border-radius:18px; background:var(--soft); }
-.xea-dir > svg { width:84px; height:60px; }
-.xea-dir b { display:block; font-family:var(--display); font-size:16px; line-height:1.3; }
-.xea-dir span { font-size:14px; line-height:1.45; }
+/* ส่วนที่ 5: ขั้นของโทษ · ใบอนุญาต · เอกสารสองใบ */
+.x05-pens { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.x05-pen { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; min-height:56px; padding:10px 12px; border-radius:16px; border:3px solid transparent; background:var(--soft); color:var(--ink); font:inherit; text-align:left; cursor:pointer; }
+.x05-pen:nth-child(1) { margin-right:24%; } .x05-pen:nth-child(2) { margin-right:16%; } .x05-pen:nth-child(3) { margin-right:8%; }
+.x05-pen > i { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:var(--ink); color:#fff; font-style:normal; font-family:var(--display); font-weight:800; font-size:16px; }
+.x05-pen b { display:block; font-family:var(--display); font-size:15px; line-height:1.35; } .x05-pen small { display:block; font-size:13px; line-height:1.4; color:var(--muted); }
+.x05-pen.x05-hv { background:var(--bad-soft); } .x05-pen.x05-hv > i { background:var(--bad); } .x05-pen.x05-hv small { color:var(--bad-ink); }
+.x05-pen[aria-pressed="true"] { border-color:var(--ink); background:var(--white); }
+.x05-lic { position:relative; display:grid; grid-template-columns:56px minmax(0,1fr); gap:12px; align-items:center; padding:16px 14px; border-radius:16px; background:#FFFEFA; box-shadow:inset 0 0 0 1.5px var(--line), 5px 6px 0 var(--soft); }
+.x05-lic svg { width:56px; height:56px; } .x05-lic b { display:block; font-family:var(--display); font-size:16px; line-height:1.25; } .x05-lic small { display:block; font-size:13px; color:var(--muted); }
+.x05-seal { justify-self:start; margin-top:6px; padding:2px 12px; border:3px solid var(--good); border-radius:10px; color:var(--good); font-family:var(--display); font-weight:800; font-size:16px; line-height:1.3; transform:rotate(-3deg); }
+.x05-lic.x05-hold { background:repeating-linear-gradient(135deg, #FFFEFA 0 10px, var(--bad-soft) 10px 20px); } .x05-lic.x05-dead { background:var(--soft); }
+.x05-hold .x05-seal, .x05-dead .x05-seal { border-color:var(--bad); color:var(--bad); } .x05-dead b { text-decoration:line-through; color:var(--muted); }
+.x05-cap { position:relative; height:28px; border-radius:8px; overflow:hidden; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); }
+.x05-cap::after { content:""; position:absolute; left:60%; right:0; top:0; bottom:0; background:repeating-linear-gradient(135deg, var(--bad-soft) 0 6px, #F4CFCB 6px 12px); }
+.x05-cap i { position:absolute; left:0; top:0; bottom:0; z-index:1; background:var(--bad); transition:width .3s ease; } .x05-cap em { position:absolute; left:60%; top:0; bottom:0; z-index:2; width:4px; margin-left:-2px; background:var(--ink); }
+.x05-capt { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); font-size:12px; font-weight:700; color:var(--muted); text-align:right; } .x05-capt b { color:var(--ink); }
+.x05-docs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.x05-doc { display:grid; grid-template-columns:minmax(0,1fr); gap:7px; align-content:start; padding:12px 10px 14px; border-radius:12px; background:#FFFEFA; box-shadow:inset 0 0 0 1.5px var(--line), 4px 5px 0 var(--soft); }
+.x05-doc > b { padding-bottom:6px; border-bottom:2px solid var(--ink); font-family:var(--display); font-size:14px; line-height:1.3; }
+.x05-doc > i { height:5px; border-radius:3px; background:var(--line); } .x05-doc > i:nth-of-type(2) { width:70%; }
+.x05-doc s { font-size:13px; line-height:1.4; color:var(--bad-ink); text-decoration-thickness:2px; }
+.x05-doc em { justify-self:start; padding:2px 10px; border:2.5px solid var(--bad); border-radius:8px; color:var(--bad); font-style:normal; font-family:var(--display); font-weight:800; font-size:14px; line-height:1.35; transform:rotate(-3deg); }
 
-/* 5 ลำดับตามถ้อยคำของคู่มือ */
-.xea-send { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:8px; align-items:center; padding:10px 12px; border-radius:16px; background:var(--soft); font-size:13px; font-weight:700; }
-.xea-end { display:inline-flex; align-items:center; gap:6px; }
-.xea-end svg { width:20px; height:20px; color:var(--hue); }
-.xea-way { position:relative; height:4px; border-radius:2px; background:repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px); }
-.xea-way i { position:absolute; top:-9px; left:0; width:18px; height:22px; border-radius:2px 7px 3px 3px; background:var(--white); box-shadow:inset 0 0 0 2px var(--hue); transition:left .35s ease; }
-.xea-send.xea-sent .xea-way { background:var(--hue); }
-.xea-send.xea-sent .xea-way i { left:calc(100% - 18px); background:var(--hue); }
-.xea-lad li { grid-template-columns:40px minmax(0,1fr); transition:opacity .2s ease; }
-.xea-lad li > div { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; justify-items:start; }
-.xea-lad small .law { margin-top:4px; }
-.xea-when { padding:4px 10px; border-radius:10px; box-shadow:inset 0 0 0 1.5px var(--line); font-size:13px; font-weight:600; line-height:1.4; color:var(--muted); }
-.xea-when.xea-met { box-shadow:none; background:var(--hue-soft); color:var(--hue-ink); }
-.xea-gl { padding:6px 10px; border-radius:10px; background:var(--gold-soft); }
-.xea-acts { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:13px; font-weight:700; }
-.xea-act { padding:4px 10px; border-radius:12px; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); font-size:13px; font-weight:700; line-height:1.3; color:var(--muted); transition:background-color .2s ease; }
-.xea-act small { display:block; font-weight:500; font-size:12px; color:inherit; }
-.xea-act.xea-lit { box-shadow:none; background:var(--hue); color:#fff; }
-.xea-lad li .xea-st { display:inline-block; padding:2px 10px; border-radius:99px; font-size:13px; font-weight:700; background:var(--soft); color:var(--muted); }
-.xea-lad li.xea-fix::before { background:var(--good); } .xea-lad li.xea-fix .xea-st { background:var(--good-soft); color:var(--good); }
-.xea-lad li.xea-tried::before { background:var(--muted); }
-.xea-lad li.xea-far { opacity:.45; }
-.xea-lad li.xea-stop::before { background:var(--bad); } .xea-lad li.xea-stop .xea-st { background:var(--bad-soft); color:var(--bad-ink); }
-.result.xea-res { text-align:left; font-weight:500; font-size:15px; line-height:1.5; }
-.result.xea-res b { font-family:var(--display); }
-.result.xea-res.xea-halt { background:var(--bad-soft); color:var(--bad-ink); }
-.xea-keep { display:block; margin-top:8px; padding-top:8px; border-top:1.5px dashed currentColor; }
+/* ส่วนที่ 6 และ 8: แถวเวลาบนแกนเดียวกัน */
+.x05-terms { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; padding:12px 14px; border-radius:18px; background:var(--soft); }
+.x05-term { display:grid; grid-template-columns:minmax(0,2fr) 18px minmax(0,3fr); gap:6px; align-items:center; font-size:14px; line-height:1.35; }
+.x05-term small { font-size:14px; color:var(--muted); } .x05-term i { font-style:normal; color:var(--muted); text-align:center; } .x05-term b { font-family:var(--display); font-size:15px; }
+.x05-tl { position:relative; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; --lab:96px; --f:.3; padding-top:30px; }
+.x05-row { display:grid; grid-template-columns:var(--lab) minmax(0,1fr); align-items:center; min-height:46px; }
+.x05-lab { padding-right:8px; font-size:13px; font-weight:700; line-height:1.25; } .x05-lab small { display:block; font-size:12px; font-weight:600; color:var(--muted); }
+.x05-trk { position:relative; height:26px; border-radius:6px; background:var(--soft); overflow:hidden; }
+.x05-win { position:absolute; top:0; bottom:0; border-radius:6px; background:var(--hue-soft); transition:left .3s ease; }
+.x05-el { position:absolute; left:0; top:0; bottom:0; border-radius:6px; background:var(--hue); transition:width .3s ease; }
+.x05-over .x05-win { background:var(--bad-soft); box-shadow:inset 0 0 0 2px var(--bad); }
+.x05-over .x05-el { background:repeating-linear-gradient(135deg, var(--bad) 0 6px, #C9514A 6px 12px); }
+.x05-over .x05-lab, .x05-over .x05-lab small { color:var(--bad-ink); }
+.x05-run { position:absolute; left:0; right:0; top:0; bottom:0; display:grid; place-items:center; background:var(--bad); color:#fff; font-style:normal; font-size:12px; font-weight:700; }
+.x05-none .x05-trk { background:transparent; border:2px dashed var(--line); } .x05-none .x05-run { display:none; }
+.x05-now { position:absolute; top:0; bottom:22px; width:0; left:calc(var(--lab) + (100% - var(--lab)) * var(--f)); border-left:3px solid var(--ink); transition:left .3s ease; pointer-events:none; z-index:1; }
+.x05-now span { position:absolute; top:0; left:0; transform:translateX(-50%); padding:1px 9px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; white-space:nowrap; }
+.x05-far .x05-now span { transform:translateX(-100%); }
+.x05-ax { display:grid; grid-template-columns:var(--lab) minmax(0,1fr); font-size:12px; font-weight:700; color:var(--muted); }
+.x05-ax div { position:relative; height:18px; } .x05-ax div span { position:absolute; top:0; transform:translateX(-50%); white-space:nowrap; } .x05-ax div span:first-child { transform:none; }
+.x05-ax b { padding:0 5px; border-radius:99px; background:var(--ink); color:#fff; font-weight:800; }
+.x05-key { display:flex; flex-wrap:wrap; gap:6px 14px; margin:0; padding:0; list-style:none; font-size:13px; color:var(--muted); }
+.x05-key li { display:flex; align-items:center; gap:6px; } .x05-key i { width:22px; height:12px; border-radius:4px; background:var(--hue); } .x05-key .x05-k1 { background:var(--hue-soft); } .x05-key .x05-k2 { background:var(--bad); }
+
+/* ส่วนที่ 7: สี่ช่วง · คนตัดสิน · กำหนดวัน */
+.x05-seats { display:grid; grid-template-columns:repeat(15,minmax(0,1fr)); gap:3px; }
+.x05-seats i { aspect-ratio:1; border-radius:50%; background:var(--hue); } .x05-seats i:nth-child(n+10) { background:transparent; box-shadow:inset 0 0 0 2px var(--hue); }
+.x05-seatt { display:grid; grid-template-columns:9fr 6fr; gap:3px; font-size:12px; font-weight:700; text-align:center; color:var(--hue-ink); } .x05-seatt span { padding-top:4px; border-top:3px solid var(--hue); } .x05-seatt span + span { border-top-style:dashed; }
+.x05-line { position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2px; }
+.x05-line::before { content:""; position:absolute; left:12.5%; right:12.5%; top:22px; height:4px; border-radius:2px; background:var(--line); }
+.x05-line button { position:relative; display:grid; justify-items:center; align-content:start; gap:4px; min-height:74px; padding:0 0 4px; border:0; background:none; font:inherit; font-size:13px; font-weight:600; line-height:1.2; color:var(--muted); cursor:pointer; }
+.x05-line button i { width:48px; height:48px; border-radius:50%; display:grid; place-items:center; background:var(--white); box-shadow:inset 0 0 0 2px var(--line); color:var(--ink); transition:background-color .15s ease, box-shadow .15s ease; }
+.x05-line button i svg { width:24px; height:24px; }
+.x05-line button[aria-pressed="true"] { color:var(--hue-ink); font-weight:700; } .x05-line button[aria-pressed="true"] i { background:var(--hue); color:#fff; box-shadow:0 0 0 5px var(--hue-soft); }
+.x05-span { padding:5px 8px; border-radius:10px; background:var(--soft); color:var(--muted); font-size:12px; font-weight:700; line-height:1.35; text-align:center; }
+.x05-pnl { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; padding:14px; border-radius:20px; background:var(--soft); }
+.x05-pnl > b { font-family:var(--display); font-size:18px; line-height:1.25; }
+.x05-ck { display:grid; grid-template-columns:70px minmax(0,1fr); gap:12px; align-items:center; padding:12px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); }
+.x05-n { display:grid; justify-items:center; font-family:var(--display); font-weight:800; font-size:34px; line-height:1; } .x05-n i { font-style:normal; font-size:13px; font-weight:600; }
+.x05-ck b { display:block; font-family:var(--display); font-size:15px; line-height:1.3; color:var(--ink); } .x05-ck small { display:block; font-size:13px; line-height:1.4; }
+.x05-me2 { display:grid; grid-template-columns:40px minmax(0,1fr); gap:10px; align-items:center; font-size:14px; line-height:1.45; } .x05-me2 svg { width:40px; height:40px; }
+details.x05-fold ul { padding-left:18px; }
 </style>
 </head>
 <body>
-<!-- กฎหมาย 2 รุ่นภาพ · วิชาชีพ ภาคจรรยาบรรณ · หลักการพื้นฐานข้อ (ก) ความซื่อสัตย์สุจริต · เขียน 12 ต.ค. 2569 · แก้หลัง blind test 12 ต.ค. 2569
-     ตัวบทที่เปิดเทียบรอบแก้: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569 (ภาพ p1–p4) ข้อ 4 · ข้อ 8 · ข้อ 9 · ข้อ 10
-     คู่มือประมวลจรรยาบรรณฯ แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 (sources/law2/1-profession/P2.6.2-คู่มือประมวลจรรยาบรรณ-V2022Dec25-acpro.pdf) เลขย่อหน้าชุดเนื้อหาหลัก
-     100.5 A1–A2 · 200.1 · หมวดย่อย 111 (รวม 111.2 A1) · 220.3 A3 · R220.4 · 220.4 A1 · R220.5 · 220.5 A1 · R220.8 · 220.8 A1–A2 · R220.9 · R270.3 · 270.3 A1 · A2 · A4 · 250.4 A1 · 250.9 A2 · 260.2 · 260.4 · R320.7 · อภิธานศัพท์ (ผู้ประกอบวิชาชีพบัญชีที่เสนองาน)
-     พีท พราว พริ้ง เป็นกรณีสมมติ ที่มาของแต่ละกรณีและก้อนที่ถอดออกอยู่ใน notes/ETH-a.notes.md -->
+<!-- กฎหมาย 2 รุ่นภาพ · สายวิชาชีพบัญชี · สถานี “เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร” (รหัสเนื้อหาเดิม R06 รวมเรื่องร้องเรียน สอบสวน อุทธรณ์) · เขียนใหม่ทั้งหน้า 14 ต.ค. 2569
+     ฐาน: ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณฯ พ.ศ. 2569 ข้อ 4 8 9 10–17 · คู่มือประมวลจรรยาบรรณ แนบท้ายประกาศ 53/2566 · พ.ร.บ.วิชาชีพบัญชี พ.ศ. 2547 ม.40 41 46 48–51 53–55 57 59 70 71
+     · ข้อบังคับ (ฉบับที่ 12) การพิจารณาเกี่ยวกับจรรยาบรรณ พ.ศ. 2549 แก้ไขโดย (ฉบับที่ 21) พ.ศ. 2554 · ข้อกำหนดการสอบสวน พ.ศ. 2550 · ถ้อยคำที่ยันอยู่ใน claims R06-K01…K132 และบันทึก notes-rw/r05.md
+     พี่แพม พริ้ง พีท ผู้จัดการสำนักงาน และผู้ถือหุ้นที่กล่าวหา เป็นกรณีสมมติ หน้านี้ไม่บอกว่าเรื่องที่กล่าวหาคืออะไร และไม่ตัดสินว่าพี่แพมผิด อัตราโทษทางอาญาไม่ขึ้นจอ (นอกขอบเขตสอบ)
+     รอบคนเรียนครั้งแรก 14 ต.ค. 2569: ก้อนลองเปลี่ยนเรียงเป็น โจทย์ (.case เปลี่ยนตามข้อเท็จจริง) → ตัวเลือกหรือหลัก → ภาพ → กล่องตัดสิน · ห้าประเภทของส่วนที่ 1 เปิดทีละแถว · ไม่ได้เพิ่มข้อกฎหมาย รายละเอียดอยู่ท้าย notes-rw/r05.md -->
 <main>
   <header class="hero">
-    <div class="top"><a href="law2v-index.html">กฎหมาย 2 รุ่นภาพ</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
-    <p class="kick">วิชาชีพบัญชี · บทที่ 5 · จรรยาบรรณ หลัก (ก)</p>
-    <h1>ถูกขอให้แก้ตัวเลข ทำตามได้แค่ไหน</h1>
-    <p class="sub">แก้ให้ตรงกับความจริง ทำได้ แก้แล้วคนอ่านเข้าใจผิด ทำไม่ได้ นี่คือหลักความซื่อสัตย์สุจริต ข้อแรกในหลักการพื้นฐานหกข้อของจรรยาบรรณ แตะเรื่องที่อยากดู</p>
-    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพแผ่นบัญชีที่มีตัวเลขหนึ่งช่องถูกขอให้แก้ แล้วแยกไปสองทาง ทางหนึ่งเป็นเครื่องหมายถูก อีกทางเป็นกากบาท">
-      <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
-      <g transform="translate(24 14)">
-        <rect width="112" height="104" rx="10" fill="#fff"/>
-        <rect x="12" y="14" width="56" height="7" rx="3.5" fill="#CFE0EA"/>
-        <rect x="12" y="32" width="88" height="6" rx="3" fill="#E4ECF1"/>
-        <rect x="12" y="46" width="88" height="6" rx="3" fill="#E4ECF1"/>
-        <rect x="8" y="58" width="96" height="20" rx="6" fill="#F0C84B"/>
-        <rect x="14" y="65" width="40" height="6" rx="3" fill="#1C4257" opacity=".55"/>
-        <rect x="66" y="65" width="32" height="6" rx="3" fill="#1C4257"/>
-        <rect x="12" y="86" width="88" height="6" rx="3" fill="#E4ECF1"/>
-      </g>
-      <g transform="translate(126 60) rotate(-32)"><rect x="0" y="-5" width="44" height="10" rx="2" fill="#F0C84B"/><path d="M0-5l-11 5 11 5z" fill="#fff"/><rect x="38" y="-5" width="6" height="10" fill="#E3B598"/></g>
-      <path d="M176 82h20c22 0 20-34 44-34h24M196 82c22 0 20 26 44 26h24" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 12"/>
-      <circle cx="290" cy="48" r="19" fill="#F0C84B"/><path d="M281 48l6 6 12-13" fill="none" stroke="#1C4257" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="290" cy="106" r="14" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/><path d="M284 100l12 12M296 100l-12 12" stroke="rgba(255,255,255,.75)" stroke-width="3" stroke-linecap="round"/>
+    <div class="top"><a href="law2v-index.html#R">สายวิชาชีพบัญชี</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">วิชาชีพบัญชี · สถานี 1.5</p>
+    <h1>เสี่ยงผิดจรรยาบรรณทำยังไง ผิดแล้วโดนอะไร</h1>
+    <p class="sub">เจอเรื่องเสี่ยง ให้ระบุ ประเมิน แล้วจัดการ ถ้าประพฤติผิด โทษมีสี่ระดับ และต้องผ่านการสอบสวนกับมติก่อน</p>
+    <svg viewBox="0 0 340 120" role="img" aria-label="ภาพเรื่องเสี่ยงห้าเรื่องไหลเข้าหาโล่ อีกฝั่งเป็นบันไดสี่ขั้นของโทษ">
+      <g fill="none" stroke="rgba(255,255,255,.4)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"><path d="M32 16L104 54"/><path d="M32 38L104 58"/><path d="M32 60H104"/><path d="M32 82L104 62"/><path d="M32 104L104 66"/><path d="M158 60H196"/></g>
+      <g fill="#F0C84B"><circle cx="22" cy="16" r="8"/><circle cx="22" cy="38" r="8"/><circle cx="22" cy="60" r="8"/><circle cx="22" cy="82" r="8"/><circle cx="22" cy="104" r="8"/></g>
+      <path d="M130 30l24 10v18c0 15-10 26-24 32-14-6-24-17-24-32V40z" fill="#fff"/>
+      <path d="M119 60l8 8 15-17" fill="none" stroke="#1C4257" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="204" y="86" width="30" height="24" rx="5" fill="rgba(255,255,255,.28)"/><rect x="236" y="68" width="30" height="42" rx="5" fill="rgba(255,255,255,.45)"/>
+      <rect x="268" y="50" width="30" height="60" rx="5" fill="#F0C84B" opacity=".8"/><rect x="300" y="32" width="30" height="78" rx="5" fill="#F0C84B"/>
+      <g fill="#1C4257" font-family="Anuphan, sans-serif" font-weight="800" font-size="14" text-anchor="middle"><text x="219" y="103">1</text><text x="251" y="85">2</text><text x="283" y="67">3</text><text x="315" y="49">4</text></g>
+      <rect x="0" y="114" width="340" height="6" fill="rgba(255,255,255,.08)"/>
     </svg>
   </header>
 
-  <nav class="steps" id="steps" aria-label="ส่วนของบท">
-    <a href="#s1"><i>1</i>หลักนี้</a><a href="#s2"><i>2</i>แก้ตัวเลข</a><a href="#s3"><i>3</i>ตัดข้อมูล</a><a href="#s4"><i>4</i>ถูกกดดัน</a><a href="#s5"><i>5</i>รู้ทีหลัง</a>
+  <nav class="steps" id="steps" aria-label="ส่วนของบทนี้">
+    <a href="#s1"><i>1</i>อุปสรรค</a><a href="#s2"><i>2</i>จัดการ</a><a href="#s3"><i>3</i>รับงาน</a><a href="#s4"><i>4</i>ข้อยุติ</a><a href="#s5"><i>5</i>โทษ</a><a href="#s6"><i>6</i>กล่าวหา</a><a href="#s7"><i>7</i>สอบสวน</a><a href="#s8"><i>8</i>อุทธรณ์</a>
   </nav>
 
-  <!-- ภาพเปิดภาคจรรยาบรรณ: ข้อบังคับ → ข้อ 9 หกหลักการ → บทที่ 5–10 · ข้อ 10 → บทที่ 11 -->
+  <!-- ภาพรวม -->
   <section class="fig" aria-labelledby="f0">
-    <span class="fno">จรรยาบรรณ เจ็ดบท</span>
-    <h2 id="f0">หลักการพื้นฐานมีหกข้อ บทนี้คือข้อ (ก)</h2>
-    <p class="cap">แตะข้ออื่นเพื่อไปบทของข้อนั้น</p>
-    <div class="xea-reg"><span class="ico" data-ico="book"></span><span><small>จรรยาบรรณเขียนอยู่ใน</small><b>ข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</b></span></div>
-    <span class="xea-ln" aria-hidden="true"></span>
-    <p class="xea-art"><span class="law">ข้อ 9</span> ผู้ประกอบวิชาชีพบัญชีต้องปฏิบัติตามหลักการพื้นฐานของจรรยาบรรณ หกข้อนี้</p>
-    <ul class="xea-six">
-      <li><span class="xea-me" aria-current="true"><i>ก</i><b>ความซื่อสัตย์สุจริต</b><em>บทนี้</em></span></li>
-      <li><a href="law2v-r06.html"><i>ข</i><b>ความเที่ยงธรรมและความเป็นอิสระ</b><em>บทที่ 6</em></a></li>
-      <li><a href="law2v-r07.html"><i>ค</i><b>ความรู้ ความสามารถ ความเอาใจใส่ และการรักษามาตรฐานในการปฏิบัติงาน</b><em>บทที่ 7</em></a></li>
-      <li><a href="law2v-r08.html"><i>ง</i><b>การรักษาความลับ</b><em>บทที่ 8</em></a></li>
-      <li><a href="law2v-r09.html"><i>จ</i><b>พฤติกรรมทางวิชาชีพ</b><em>บทที่ 9</em></a></li>
-      <li><a href="law2v-r10.html"><i>ฉ</i><b>ความโปร่งใส</b><em>บทที่ 10</em></a></li>
-    </ul>
-    <span class="xea-ln" aria-hidden="true"></span>
-    <a class="xea-mix" href="law2v-r11.html"><span class="ico" data-ico="shield"></span><span><span class="law">ข้อ 10</span> เหตุการณ์แวดล้อมที่ผู้ประกอบวิชาชีพบัญชีปฏิบัติงานอยู่ อาจทำให้เกิดอุปสรรคในการปฏิบัติตามหลักการพื้นฐาน ข้อบังคับจึงให้ระบุ ประเมิน และจัดการอุปสรรค<b>บทที่ 11 เรื่องนี้กระทบหลักข้อไหน แล้วต้องจัดการยังไง</b></span></a>
+    <span class="fno">ภาพรวมของบท</span>
+    <h2 id="f0">ยังไม่ได้ทำผิด ทำไมต้องจัดการ แล้วถ้าผิดจะเจออะไร</h2>
+    <p class="cap">ดูผ่านเรื่องเดียวของพี่แพม ผู้สอบบัญชีรับอนุญาต (CPA) กับลูกค้าหนึ่งราย</p>
+    <div class="x05-cast">
+      <div class="x05-pp"><span data-x05face="pam"></span><b>พี่แพม</b><small>ผู้สอบบัญชีรับอนุญาต</small></div>
+      <div class="x05-lk"><span>สำนักงานของพี่แพม เป็นผู้สอบบัญชีของบริษัทนี้</span><svg viewBox="0 0 48 14" aria-hidden="true"><path d="M2 7h42M37 2l7 5-7 5"/></svg></div>
+      <div class="x05-pp"><span data-x05face="pring"></span><b>พริ้ง</b><small>เจ้าของบริษัท พาวเด้ออ้าย จำกัด</small></div>
+    </div>
+    <p class="x05-req"><b>พริ้งขอ</b> ให้สำนักงานของพี่แพมลงบัญชีค่าน้ำค่าไฟประจำเดือนให้ด้วย ฟังดูเป็นงานเล็ก ๆ แต่คนตรวจงบกับคนลงบัญชีจะกลายเป็นสำนักงานเดียวกัน</p>
+    <p class="cap">ทั้งบทมีสองครึ่ง แตะส่วนที่อยากดู</p>
+    <div class="map">
+      <span class="x05-half">ครึ่งแรก ยังไม่มีใครผิด</span>
+      <span class="pinp"><span data-x05face="pam"></span>พี่แพมอยู่ตรงนี้ สอบบัญชีให้บริษัทของพริ้งอยู่ ยังไม่ได้ตอบคำขอ</span>
+      <a class="nd" href="#s1"><span class="num">1</span><span class="ico" data-ico="search"></span><b>เรื่องนี้เสี่ยงตรงไหน</b><small>อุปสรรคห้าประเภท</small><span class="law">ข้อ 11</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s2"><span class="num">2</span><span class="ico" data-ico="shield"></span><b>เสี่ยงแล้วต้องทำอะไร</b><small>ระบุ ประเมิน จัดการด้วยมาตรการป้องกัน</small><span class="law">ข้อ 10 · ข้อ 14</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s3"><span class="num">3</span><span class="ico" data-ico="pen"></span><b>งานของพริ้ง รับได้ไหม</b><small>ดูที่ลูกค้า และดูว่าใครตัดสินใจ</small><span class="law">คู่มือฯ</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s4"><span class="num">4</span><span class="ico" data-ico="chat"></span><b>เรื่องยังไม่จบ ไปทางไหน</b><small>ปรึกษาตามลำดับ ถอนตัว ลาออก</small><span class="law">ข้อ 16</span></a>
+      <div class="x05-turn"><span>ไม่ปฏิบัติตามจรรยาบรรณ กฎหมายให้ถือว่าประพฤติผิดจรรยาบรรณ <span class="law">ม.46</span></span></div>
+      <span class="x05-half">ครึ่งหลัง ถ้าประพฤติผิด</span>
+      <a class="nd" href="#s5"><span class="num">5</span><span class="ico" data-ico="gavel"></span><b>ผิดแล้วโดนอะไร</b><small>โทษสี่ระดับ</small><span class="law">ม.49</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s6"><span class="num">6</span><span class="ico" data-ico="mail"></span><b>ใครร้องเรียนได้ ถึงเมื่อไร</b><small>ไม่พ้น 1 ปี และไม่เกิน 3 ปี</small><span class="law">ม.53</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s7"><span class="num">7</span><span class="ico" data-ico="doc"></span><b>ถูกร้องเรียนแล้วเกิดอะไรต่อ</b><small>ตรวจ ชี้แจง สอบสวน มีมติจึงมีคำสั่ง</small><span class="law">ม.53 · ม.54</span></a>
+      <span class="ln"></span>
+      <a class="nd" href="#s8"><span class="num">8</span><span class="ico" data-ico="flag"></span><b>ไม่เห็นด้วยกับคำสั่ง</b><small>อุทธรณ์ได้ภายใน 30 วัน</small><span class="law">ม.55</span></a>
+    </div>
+    <p class="note"><span data-ico="book"></span><span>ป้ายเล็กท้ายประโยคบอกที่มา <b>ข้อ</b> คือข้อของข้อบังคับสภาวิชาชีพบัญชีว่าด้วยจรรยาบรรณ <b>ม.</b> คือมาตราของพระราชบัญญัติวิชาชีพบัญชี <b>คู่มือฯ</b> คือคู่มือประมวลจรรยาบรรณ ที่คณะกรรมการสภาวิชาชีพบัญชีใช้เป็นแนววินิจฉัย ตัวอย่างในบทนี้มาจากเล่มนี้ <span class="law">ข้อ 8</span> ส่วนหลักการพื้นฐานหกข้อของจรรยาบรรณ อยู่ใน<a href="law2v-r04.html">สถานีจรรยาบรรณหกข้อ</a></span></p>
   </section>
 
-  <!-- 1 หลักนี้เขียนว่าอะไร -->
+  <!-- ส่วนที่ 1 -->
   <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
-    <div class="sechd"><i>1</i><div><small>หลักนี้เขียนว่าอะไร · ข้อ 9 (ก)</small><h2 id="h1">ความซื่อสัตย์สุจริต คือตรงไปตรงมาและจริงใจ</h2></div></div>
-    <p class="cap">ถ้อยคำของข้อนี้มีประโยคเดียว</p>
-    <div class="xea-quote"><b>ประพฤติตนอย่างตรงไปตรงมา จริงใจในความสัมพันธ์ทั้งมวล ทั้งทางวิชาชีพและทางธุรกิจ</b><span class="law">ข้อ 9 (ก) ความซื่อสัตย์สุจริต</span></div>
-    <div class="xea-parse">
-      <div class="xea-row"><span class="xea-k">ต้องทำ</span><div class="xea-v"><b>ตรงไปตรงมา</b><b>จริงใจ</b></div></div>
-      <div class="xea-row"><span class="xea-k">ครอบคลุม</span><div class="xea-v"><b>ความสัมพันธ์ทั้งมวล</b><i>ทางวิชาชีพ</i><i>ทางธุรกิจ</i></div></div>
-      <div class="xea-row"><span class="xea-k">ใครต้องทำ</span><div class="xea-v"><b>ผู้ประกอบวิชาชีพบัญชี</b><small>เช่น ด้านการทำบัญชี ด้านการสอบบัญชี และรวมถึงผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี <span class="law">ข้อ 4</span></small></div></div>
+    <div class="sechd"><i>1</i><div><small>อุปสรรคห้าประเภท</small><h2 id="h1">เรื่องแบบไหนเรียกว่าเสี่ยงผิดจรรยาบรรณ</h2></div></div>
+    <p class="cap">เรื่องที่อาจทำให้เราทำตาม<a href="law2v-r04.html">หลักการพื้นฐานหกข้อ</a>ของจรรยาบรรณไม่ได้ ข้อบังคับเรียกว่า<b>อุปสรรค</b> เจออุปสรรคยังไม่ใช่ทำผิด มันคือสิ่งที่มาดึงการตัดสินใจของเรา ซึ่งข้อบังคับใช้คำว่าดุลยพินิจ</p>
+    <p class="lbl">เริ่มจากเรื่องของพี่แพม</p>
+    <div class="walk"><div><small>เรื่องของพี่แพม</small><span>รายการที่สำนักงานลงบัญชีให้พริ้ง จะไปอยู่ในงบการเงินที่สำนักงานเองต้องตรวจและแสดงความเห็น</span></div><div><small>ดูว่าอะไรดึง</small><span>คนตรวจต้องประเมินงานที่คนในสำนักงานเดียวกันทำไว้ ข้อบังคับเรียกแบบนี้ว่าการสอบทานผลงานตนเอง <span class="law">ข้อ 11 (ข)</span></span></div><div class="res"><small>ผล</small><span>เป็นอุปสรรค ยังไม่ใช่ความผิด ระบุได้แล้ว ต้องประเมินต่อ</span></div></div>
+    <p class="lbl">ที่ดึงพี่แพมอยู่ เป็นหนึ่งในห้าประเภท แตะดูทีละประเภท</p>
+    <div class="x05-wheel" id="wheel" role="img" aria-label="ภาพดุลยพินิจของผู้ประกอบวิชาชีพบัญชีอยู่ตรงกลาง มีห้าอย่างดึงอยู่รอบตัว สีและไอคอนของแต่ละอย่างตรงกับแถวข้างล่าง อย่างที่เลือกอยู่เด่นกว่าอย่างอื่น"></div>
+    <div class="x05-ths" data-pick="thr">
+      <div class="x05-th x05-t0" id="th0"><button data-v="0" aria-controls="tb0"><span class="x05-ic" data-x05t="0"></span><span><b>ผลประโยชน์ส่วนตน</b><small>ตัวดึง คือเงินหรือประโยชน์อื่นของตัวเราเอง</small></span><span class="x05-chev" data-x05chev></span></button>
+        <div class="x05-tb" id="tb0" hidden><p class="x05-eff"><small>ผลที่ตามมา</small>มีอิทธิพลอย่างไม่เหมาะสมต่อดุลยพินิจหรือพฤติกรรม <span class="law">ข้อ 11 (ก)</span></p><p class="x05-exh">ตัวอย่างของคนที่ทำงานในสำนักงาน แบบพี่แพม <span class="law">คู่มือฯ 300.6 A1</span></p><ul id="x0"></ul><p class="x05-exh">ตัวอย่างของคนที่บริษัทจ้าง แบบพีท ผู้ทำบัญชีของบริษัทพริ้ง <span class="law">คู่มือฯ 200.6 A1</span></p><ul id="y0"></ul></div></div>
+      <div class="x05-th x05-t1" id="th1"><button data-v="1" aria-controls="tb1" aria-pressed="true"><span class="x05-ic" data-x05t="1"></span><span><b>การสอบทานผลงานตนเอง</b><small>ตัวดึง คืองานหรือดุลยพินิจเดิม ของเราหรือของคนในที่เดียวกัน</small></span><span class="x05-chev" data-x05chev></span></button>
+        <div class="x05-tb" id="tb1"><p class="x05-eff"><small>ผลที่ตามมา</small>ประเมินงานนั้นได้ไม่เหมาะสม ทั้งที่ต้องเชื่อถือมันในงานปัจจุบัน <span class="law">ข้อ 11 (ข)</span></p><p class="x05-exh">ตัวอย่างของคนที่ทำงานในสำนักงาน แบบพี่แพม <span class="law">คู่มือฯ 300.6 A1</span></p><ul id="x1"></ul><p class="x05-exh">ตัวอย่างของคนที่บริษัทจ้าง แบบพีท ผู้ทำบัญชีของบริษัทพริ้ง <span class="law">คู่มือฯ 200.6 A1</span></p><ul id="y1"></ul></div></div>
+      <div class="x05-th x05-t2" id="th2"><button data-v="2" aria-controls="tb2"><span class="x05-ic" data-x05t="2"></span><span><b>การเป็นผู้ให้การสนับสนุน</b><small>ตัวดึง คือการสนับสนุนสถานภาพของลูกค้าหรือผู้ว่าจ้าง</small></span><span class="x05-chev" data-x05chev></span></button>
+        <div class="x05-tb" id="tb2" hidden><p class="x05-eff"><small>ผลที่ตามมา</small>ไม่อยู่ในฐานะที่ทำงานได้ด้วยความเที่ยงธรรม <span class="law">ข้อ 11 (ค)</span></p><p class="x05-exh">ตัวอย่างของคนที่ทำงานในสำนักงาน แบบพี่แพม <span class="law">คู่มือฯ 300.6 A1</span></p><ul id="x2"></ul><p class="x05-exh">ตัวอย่างของคนที่บริษัทจ้าง แบบพีท ผู้ทำบัญชีของบริษัทพริ้ง <span class="law">คู่มือฯ 200.6 A1</span></p><ul id="y2"></ul></div></div>
+      <div class="x05-th x05-t3" id="th3"><button data-v="3" aria-controls="tb3"><span class="x05-ic" data-x05t="3"></span><span><b>ความคุ้นเคย</b><small>ตัวดึง คือความสัมพันธ์อันยาวนานหรือใกล้ชิด</small></span><span class="x05-chev" data-x05chev></span></button>
+        <div class="x05-tb" id="tb3" hidden><p class="x05-eff"><small>ผลที่ตามมา</small>เห็นอกเห็นใจเกินไป หรือยอมรับผลงานของเขาง่ายไป <span class="law">ข้อ 11 (ง)</span></p><p class="x05-exh">ตัวอย่างของคนที่ทำงานในสำนักงาน แบบพี่แพม <span class="law">คู่มือฯ 300.6 A1</span></p><ul id="x3"></ul><p class="x05-exh">ตัวอย่างของคนที่บริษัทจ้าง แบบพีท ผู้ทำบัญชีของบริษัทพริ้ง <span class="law">คู่มือฯ 200.6 A1</span></p><ul id="y3"></ul></div></div>
+      <div class="x05-th x05-t4" id="th4"><button data-v="4" aria-controls="tb4"><span class="x05-ic" data-x05t="4"></span><span><b>การถูกข่มขู่</b><small>ตัวดึง คือแรงกดดัน ไม่ว่าเกิดขึ้นจริงหรือเข้าใจไปได้เช่นนั้น</small></span><span class="x05-chev" data-x05chev></span></button>
+        <div class="x05-tb" id="tb4" hidden><p class="x05-eff"><small>ผลที่ตามมา</small>ถูกยับยั้งจากการทำงานอย่างเที่ยงธรรม <span class="law">ข้อ 11 (จ)</span></p><p class="x05-exh">ตัวอย่างของคนที่ทำงานในสำนักงาน แบบพี่แพม <span class="law">คู่มือฯ 300.6 A1</span></p><ul id="x4"></ul><p class="x05-exh">ตัวอย่างของคนที่บริษัทจ้าง แบบพีท ผู้ทำบัญชีของบริษัทพริ้ง <span class="law">คู่มือฯ 200.6 A1</span></p><ul id="y4"></ul></div></div>
     </div>
-
-    <h3 style="margin-top:8px">ทำงานในบริษัท หรือในสำนักงานสอบบัญชี ก็ต้องปฏิบัติตามหลักข้อนี้</h3>
-    <p class="cap">พีทกับพราวต่างกันที่ชื่อเรียกตามข้อ 4</p>
-    <div>
-      <div class="xea-duo">
-        <div class="xea-p"><span data-xea-face></span><b>พีท</b><small>ผู้ทำบัญชี ลูกจ้างของบริษัท พาวเด้ออ้าย จำกัด ขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชี</small><span class="xea-ty">ผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจ<small>คือผู้ที่ได้รับการว่าจ้างในกิจการ</small></span></div>
-        <div class="xea-p"><span data-face="praw"></span><b>พราว</b><small>หลายปีต่อมาเป็นผู้สอบบัญชีรับอนุญาต พนักงานของสำนักงานสอบบัญชี</small><span class="xea-ty">ผู้ประกอบวิชาชีพบัญชีที่ให้บริการสาธารณะ<small>คือผู้ที่อยู่ในสำนักงานที่ให้บริการทางวิชาชีพ</small></span></div>
-      </div>
-      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path class="ok" d="M75 0C75 18 150 12 150 30"/><path class="ok" d="M225 0C225 18 150 12 150 30"/></svg>
-      <div class="cons">
-        <div class="cg ok xea-cg"><span class="ico" data-ico="check"></span><div><b>ทั้งพีทและพราวต้องปฏิบัติตามหลักข้อ (ก)</b><span>เป็นผู้ประกอบวิชาชีพบัญชีทั้งคู่ <span class="law">ข้อ 4</span> <span class="law">ข้อ 9</span></span></div></div>
-      </div>
-    </div>
-
-    <h3 style="margin-top:8px">คู่มือประมวลจรรยาบรรณ อธิบายหลักนี้ต่อ</h3>
-    <p class="cap">คู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี เป็นของสภาวิชาชีพบัญชี คณะกรรมการสภาวิชาชีพบัญชีใช้เป็นแนวทางวินิจฉัย เมื่อมีปัญหาเกี่ยวกับการปฏิบัติตามข้อบังคับ <span class="law">ข้อ 8</span> บทนี้เรียกว่าคู่มือ</p>
-    <div class="xea-ra" role="img" aria-label="เลขย่อหน้าของคู่มือ ขึ้นต้นด้วย R คือข้อกำหนด มีตัว A คือคำอธิบายการนำไปปฏิบัติ">
-      <div><b>R</b><span>เลขย่อหน้าขึ้นต้นด้วย R คือข้อกำหนด ถือเป็นภาระหน้าที่</span></div>
-      <div><b>A</b><span>เลขย่อหน้าที่มี A คือคำอธิบายการนำไปปฏิบัติ</span></div>
-    </div>
-
-    <p class="lbl">คู่มือเขียนเรื่องหลักนี้ไว้สามเรื่อง แตะเพื่อไปดู</p>
-    <div class="xea-stack">
-      <div class="xea-box">
-        <b>ต้องไม่เข้าไปเกี่ยวข้องทั้ง ๆ ที่รู้ กับรายงาน แบบแสดงรายการภาษี การสื่อสาร หรือข้อมูลอื่น ที่เชื่อว่า</b>
-        <ol class="xea-rows">
-          <li><div>ประกอบด้วยข้อผิดพลาดที่มีสาระสำคัญ หรือรายงานที่ทำให้เกิดความเข้าใจผิด <span class="law">R111.2 (ก)</span><a class="xea-jump" href="#s2">ดูเรื่องที่ 2</a></div></li>
-          <li><div>ประกอบด้วยรายงานหรือข้อมูลที่จัดทำขึ้นโดยไม่ไตร่ตรอง <span class="law">R111.2 (ข)</span></div></li>
-          <li><div>ละเว้นหรือปิดบังข้อมูลที่จำเป็นต้องมี ซึ่งการละเว้นหรือปิดบังนั้นอาจทำให้เกิดความเข้าใจผิด <span class="law">R111.2 (ค)</span><a class="xea-jump" href="#s3">ดูเรื่องที่ 3</a></div></li>
-        </ol>
-        <small>ถ้าผู้ประกอบวิชาชีพบัญชีแสดงรายงานที่เปลี่ยนแปลงไปต่อรายงาน แบบแสดงรายการภาษี การสื่อสาร หรือข้อมูลอื่น ผู้ประกอบวิชาชีพบัญชีไม่ฝ่าฝืนย่อหน้า R111.2 <span class="law">111.2 A1</span></small>
-      </div>
-      <a class="xea-tri" href="#s4"><span class="ico" data-ico="shield"></span><span><b>กระทำอย่างเหมาะสม แม้เมื่อเผชิญกับแรงกดดันให้ปฏิบัติเป็นอย่างอื่น</b><small><span class="law">111.1 A1</span></small><span class="xea-go">เรื่องที่ 4 ถูกกดดัน</span></span></a>
-      <a class="xea-tri" href="#s5"><span class="ico" data-ico="clock"></span><span><b>เริ่มตระหนักว่าตนเกี่ยวข้องกับข้อมูลสามแบบข้างบน ต้องดำเนินการเพื่อยุติการเกี่ยวข้อง</b><small><span class="law">R111.3</span></small><span class="xea-go">เรื่องที่ 5 รู้ทีหลัง</span></span></a>
-    </div>
+    <p class="x05-sm">ตัวอย่างแยกเป็นสองแบบตามที่ทำงาน ข้อบังคับเรียกคนที่ทำงานในสำนักงานที่ให้บริการทางวิชาชีพว่า ผู้ให้บริการสาธารณะ และเรียกคนที่ได้รับการว่าจ้างในกิจการว่า ผู้อยู่ในหน่วยงานธุรกิจ ห้าประเภทนี้ใช้กับทั้งสองแบบ <span class="law">ข้อ 4</span></p>
+    <p class="note"><span data-ico="info"></span><span>เรื่องเดียวเป็นได้หลายประเภท และกระทบหลักการพื้นฐานได้มากกว่าหนึ่งหลักการ <span class="law">ข้อ 11</span> ความขัดแย้งทางผลประโยชน์ก็ทำให้เกิดอุปสรรค เช่น ทำเรื่องเดียวกันให้สองฝ่ายที่มีผลประโยชน์ขัดแย้งกัน <span class="law">ข้อ 15</span></span></p>
   </section>
 
-  <!-- 2 เห็นจากกรณี -->
+  <!-- แบบฝึกแยกแยะคั่นระหว่างทาง -->
+  <section class="fig" aria-labelledby="fa">
+    <span class="fno">คั่นก่อนไปต่อ</span>
+    <h2 id="fa">เรื่องนี้เป็นอุปสรรคประเภทไหน</h2>
+    <p class="cap">สี่เรื่องจากคู่มือฯ ถามตัวเองว่าอะไรเป็นตัวดึง แตะแล้วเห็นเหตุผลทันที ตอบใหม่ได้ ไม่มีคะแนน</p>
+    <div class="x05-drill"><div id="ck1a"></div><div id="ck1b"></div><div id="ck1c"></div><div id="ck1d"></div></div>
+    <p class="x05-go">รู้ประเภทแล้ว ยังตอบไม่ได้ว่างานของพริ้งรับได้ไหม ต้องประเมินก่อน</p>
+  </section>
+
+  <!-- ส่วนที่ 2 -->
   <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
-    <div class="sechd"><i>2</i><div><small>ถูกขอให้แก้ตัวเลข</small><h2 id="h2">คำขอเดียวกัน ผลไม่เหมือนกัน</h2></div></div>
-    <p class="cap">พีทเป็นผู้ทำบัญชีของบริษัท พาวเด้ออ้าย จำกัด มีคนขอให้แก้ยอดขายในงบที่จะส่งธนาคารผู้ให้กู้ เปลี่ยนข้อเท็จจริงทีละข้อ แล้วดูผล</p>
-    <div class="xea-req"><span class="ico" data-ico="mail"></span><span><small id="reqWho"></small><b>แก้ยอดขายเดือนนี้ จาก 1,200,000 บาท เป็น 1,500,000 บาท</b></span></div>
-    <div class="facts"><span>บัญชีลงยอดขายไว้ 1,200,000 บาท</span><span>งบนี้จะส่งธนาคารผู้ให้กู้</span><span>คนขออยากให้ยอดขายถึงตามที่ธนาคารคาดหวัง</span></div>
+    <div class="sechd"><i>2</i><div><small>ระบุ ประเมิน จัดการ</small><h2 id="h2">เจอเรื่องเสี่ยงแล้ว ต้องทำอะไร</h2></div></div>
+    <p class="cap">ทำสามอย่างตามลำดับ จนอุปสรรคหมดไป หรือลดลงถึงระดับที่ยอมรับได้ <span class="law">ข้อ 10</span></p>
+    <div class="x05-3"><span class="x05-did">ระบุ<small>ทำแล้วในส่วนที่ 1</small></span><span class="x05-here">ประเมิน<small>ยอมรับได้ไหม</small></span><span>จัดการ<small>ขจัด หรือลด</small></span></div>
+    <div class="x05-ask"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="16" r="8" fill="#F2CDB3"/><path d="M6 44c1-12 6-18 14-18s13 6 14 18z" fill="#2F6B8A"/><g fill="none" stroke="#F0C84B" stroke-width="3" stroke-linecap="round"><circle cx="35" cy="20" r="7" fill="rgba(255,255,255,.25)"/><path d="M40 26l5 6"/></g></svg><span><b>ระดับที่ยอมรับได้ วัดจากสายตาคนนอก</b>ถามว่า คนนอกที่รู้เรื่องพอและคิดอย่างมีเหตุผล มองแล้วจะยังสรุปได้ไหมว่าเราทำตามหลักการพื้นฐานอยู่ ถ้อยคำเต็มคือระดับที่บุคคลที่สามซึ่งมีความรอบรู้ และใช้วิจารณญาณเยี่ยงวิญญูชน อาจสรุปได้ว่าเรายังปฏิบัติตามหลักการพื้นฐาน เขาไม่จำเป็นต้องเป็นนักบัญชี แต่ควรมีความรู้และประสบการณ์ที่เกี่ยวข้อง <span class="law">ข้อ 10 · คู่มือฯ 120.7 A1 · 120.5 A6</span></span></div>
+    <p class="lbl">ตอนประเมิน ดูอะไรบ้าง <span class="law">ข้อ 12 (ก)</span></p>
+    <div class="facts"><span>นัยสำคัญของอุปสรรค</span><span>ลักษณะของงานที่ให้บริการ</span><span>โครงสร้างของสำนักงาน</span></div>
+    <ul class="x05-pts">
+      <li>คู่มือฯ ให้ดูทั้งเชิงปริมาณและเชิงคุณภาพ ถ้ามีมากกว่าหนึ่งประเภท ดูผลกระทบรวม <span class="law">คู่มือฯ 120.8 A1</span></li>
+      <li>ต้องประเมินเมื่อได้รู้ หรือมีเหตุผลเพียงพอที่คาดว่าควรรู้ <span class="law">ข้อ 11</span></li>
+      <li>จะสรุปว่ายอมรับได้ เพียงเพราะเรื่องนั้นไม่ได้ต้องห้ามอย่างเฉพาะเจาะจง ไม่ได้ <span class="law">คู่มือฯ 120.1</span></li>
+    </ul>
+    <div id="ck2"></div>
 
-    <p class="lbl">เปลี่ยนข้อที่ 1 · เอกสารการขายของเดือนนี้รวมได้เท่าไร</p>
-    <div class="chips" data-pick="doc">
-      <button data-v="0" aria-pressed="true">1,500,000 บาท</button>
-      <button data-v="1">1,200,000 บาท</button>
+    <h3 class="x05-h">ประเมินแล้วยอมรับไม่ได้ จัดการทางไหนได้บ้าง</h3>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="fixC"></p></div>
+    <p class="x05-rule"><b>หลัก</b>ต้องขจัดอุปสรรค หรือลดให้ถึงระดับที่ยอมรับได้ <span class="law">คู่มือฯ R120.10</span></p>
+    <p class="lbl">แตะทีละทาง แล้วดูว่าจุดสีแดงบนแถบไปอยู่ตรงไหน</p>
+    <div class="x05-pickl" data-pick="fix">
+      <button data-v="0" aria-pressed="true">ยังไม่ได้จัดการ</button>
+      <button data-v="1">ขจัดเหตุที่ทำให้เกิด</button>
+      <button data-v="2">ใช้มาตรการป้องกัน</button>
+      <button data-v="3">ปฏิเสธ หรือยุติงานนั้น</button>
     </div>
-    <div class="xea-cmp" id="cmp">
-      <div class="xea-paper"><small>บัญชีหลังแก้ตามคำขอ</small><b>1,500,000</b><em>ก่อนแก้ 1,200,000</em></div>
-      <div class="xea-mid"><span class="xea-sign" id="cmpSign" aria-hidden="true"></span><small id="cmpSay"></small></div>
-      <div class="xea-paper xea-doc"><small>เอกสารการขายรวม</small><b id="cmpDoc"></b><em>บาท</em></div>
+    <div class="x05-lv x05-s0" id="lv">
+      <div class="x05-bar" role="img" aria-label="แถบระดับของอุปสรรค ส่วนบนคือยอมรับไม่ได้ ส่วนล่างคือยอมรับได้ มีเส้นคั่นคือระดับที่ยอมรับได้ จุดบนแถบคืออุปสรรคในโจทย์"><span class="x05-red"></span><small class="x05-up">ยอมรับไม่ได้</small><span class="x05-cut"><em>ระดับที่ยอมรับได้</em></span><small class="x05-dn">ยอมรับได้</small><span class="x05-dot" data-ico="info"></span></div>
     </div>
-    <div class="gate" id="gA" role="status"><span data-door></span><div><b id="gAT"></b><span id="gAS"></span></div></div>
-    <p class="xea-laws" id="gALaw" aria-live="polite"></p>
-    <a class="xea-next" id="gAGo" href="#s3"></a>
+    <div class="x05-out" id="fixO" role="status"><b id="fixT"></b><p id="fixS"></p></div>
+    <p class="note"><span data-ico="info"></span><span>จัดการแล้วต้องสรุปโดยรวมอีกครั้ง ว่าสิ่งที่ทำหรือตั้งใจจะทำ ขจัดหรือลดอุปสรรคให้อยู่ในระดับที่ยอมรับได้หรือไม่ และเมื่อได้ข้อมูลใหม่หรือข้อเท็จจริงเปลี่ยน ต้องประเมินใหม่ <span class="law">คู่มือฯ R120.11 · R120.9</span></span></p>
 
-    <p class="lbl">เปลี่ยนข้อที่ 2 · ใครเป็นคนขอ</p>
-    <div class="xea-askfig">
-      <div class="chips xea-ask" data-pick="ask">
-        <button data-v="0" aria-pressed="true">หัวหน้าของพีท</button>
-        <button data-v="1">พริ้ง เจ้าของบริษัท</button>
-        <button data-v="2">เพื่อนร่วมงาน</button>
+    <h3 class="x05-h">มาตรการป้องกันมีสองประเภทใหญ่ <span class="law">ข้อ 14</span></h3>
+    <p class="cap">มาตรการป้องกัน คือการกระทำหรือมาตรการอื่นใด ที่อาจขจัดหรือลดอุปสรรคให้อยู่ในระดับที่ยอมรับได้ กรอบนอกมีคนกำหนดให้ทั้งวิชาชีพ กรอบในที่ทำงานจัดขึ้นเอง</p>
+    <div class="x05-nest">
+      <b>กำหนดโดยองค์กรวิชาชีพ กฎหมาย หรือข้อบังคับที่เกี่ยวข้อง</b>
+      <span>เช่น การกำหนดคุณสมบัติของผู้ทำบัญชีและผู้สอบบัญชี ชั่วโมงพัฒนาความรู้ต่อเนื่อง (CPD) และมาตรฐานวิชาชีพ</span>
+      <div class="x05-in">
+        <b>จัดให้มีขึ้นในสภาพแวดล้อมการปฏิบัติงาน</b>
+        <span>เช่น นโยบายและคู่มือการปฏิบัติงานของสำนักงาน และการยืนยันว่าปฏิบัติตามเป็นประจำทุกปี</span>
+        <div class="x05-in2">
+          <div><b>ใช้กับทั้งสำนักงาน</b><ul><li>ผู้นำที่เน้นความสำคัญของการทำตามหลักการพื้นฐาน</li><li>นโยบายติดตามการพึ่งพารายได้จากลูกค้ารายใดรายหนึ่ง</li><li>กลไกทางด้านวินัย</li></ul></div>
+          <div><b>ใช้กับแต่ละงาน</b><ul><li>ให้ผู้ที่ไม่เกี่ยวข้องกับงานเป็นผู้สอบทาน</li><li>ให้สำนักงานอื่นทำงานบางส่วนซ้ำ</li><li>หมุนเวียนบุคลากรอาวุโส</li><li>ปรึกษาบุคคลที่สามผู้มีความเป็นอิสระ</li></ul></div>
+        </div>
       </div>
-      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="a0" d="M50 0C50 18 150 12 150 30"/><path id="a1" d="M150 0V30"/><path id="a2" d="M250 0C250 18 150 12 150 30"/></svg>
-      <div class="xea-same" id="askBox" role="status"><span class="xea-pill" id="askP"></span><span id="askR"></span></div>
     </div>
+    <p class="x05-sm">ตัวอย่างในกรอบมาจากหนังสืออธิบายของสภาฯ ชื่อเต็มอยู่ท้ายหน้า</p>
+    <p class="x05-go">ได้วิธีคิดแล้ว ลองใช้กับงานที่พริ้งขอ</p>
   </section>
 
-  <!-- 3 การจัดทำและนำเสนอข้อมูล -->
+  <!-- ส่วนที่ 3 -->
   <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
-    <div class="sechd"><i>3</i><div><small>การจัดทำและนำเสนอข้อมูล</small><h2 id="h3">ตัวเลขถูกทุกตัว ก็ยังทำให้เข้าใจผิดได้</h2></div></div>
-    <p class="cap">งบของพีทแก้จนยอดขายตรงกับเอกสารแล้ว คราวนี้หัวหน้าขอให้ตัดข้อมูลเรื่องความเสี่ยงทางการเงินออก เพื่อให้ธนาคารเข้าใจว่าบริษัทไม่มีความเสี่ยงนี้ เปิดปิดทีละข้อ</p>
-    <div class="togs" data-togs="inf">
-      <button data-k="num" aria-pressed="true"><span>ตัวเลขในงบตรงกับเอกสาร<small id="tNum"></small></span></button>
-      <button data-k="dis" aria-pressed="false"><span>ข้อมูลความเสี่ยงทางการเงินยังอยู่ในงบ<small id="tDis"></small></span></button>
+    <div class="sechd"><i>3</i><div><small>ใช้กับเรื่องของพี่แพม</small><h2 id="h3">งานที่พริ้งขอ พี่แพมรับได้ไหม</h2></div></div>
+    <p class="cap">กลับมาที่เรื่องของพี่แพม อ่านโจทย์ แล้วลองเปลี่ยนข้อเท็จจริงทีละข้อ ดูว่าข้อไหนเปลี่ยนคำตอบ</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="jobC"></p></div>
+    <p class="x05-rule"><b>หลัก</b>รับได้เมื่อผ่านทั้งสองข้อที่คู่มือฯ เขียนเป็นข้อกำหนดไว้ และสำนักงานจัดการอุปสรรคแล้ว ข้อแรก ลูกค้าไม่ใช่กิจการที่มีส่วนได้เสียสาธารณะ เช่น กิจการที่จดทะเบียนในตลาดหลักทรัพย์ ข้อสอง ลูกค้าเป็นคนตัดสินใจเองว่ารายการลงบัญชีใด</p>
+    <p class="lbl">เรื่องนี้เกิดเมื่อไร</p>
+    <div class="chips" data-pick="late">
+      <button data-v="0" aria-pressed="true">พริ้งเพิ่งขอ ยังไม่ได้รับงาน</button>
+      <button data-v="1">รับงานนี้มาแล้วหนึ่งปี</button>
+    </div>
+    <p class="lbl">สองข้อของหลัก ลองปิดทีละข้อ</p>
+    <div class="togs" data-togs="job">
+      <button data-k="pie" aria-pressed="true"><span>บริษัทของพริ้งไม่ได้จดทะเบียนในตลาดหลักทรัพย์<small id="pieS">ปิดข้อนี้ คือเป็นบริษัทจดทะเบียน</small></span></button>
+      <button data-k="dec" aria-pressed="true"><span>พริ้งเป็นคนตัดสินใจว่ารายการลงบัญชีใด<small>ปิดข้อนี้ คือสำนักงานของพี่แพมตัดสินใจแทน</small></span></button>
+    </div>
+    <p class="lbl">มาตรการป้องกันที่สำนักงานใช้</p>
+    <div class="chips" data-pick="sg">
+      <button data-v="0" aria-pressed="true">ให้คนนอกทีมสอบบัญชีลงบัญชี</button>
+      <button data-v="1">ให้ผู้สอบทานที่เหมาะสมสอบทาน</button>
     </div>
     <div>
-      <div class="conds two">
-        <div class="cond" id="i0"><span class="mk"></span><span class="ico" data-ico="pen"></span><span>ตัวเลขตรงกับเอกสาร<small>ข้อเดียวกับเรื่องที่ 2</small></span></div>
-        <div class="cond" id="i1"><span class="mk"></span><span class="ico" data-ico="book"></span><span>ไม่ละเว้นข้อมูลโดยมีเจตนาให้เข้าใจผิด<small>R220.4 (ง)</small></span></div>
+      <div class="conds x05-c3">
+        <div class="cond" id="q0"><span class="mk"></span><span class="ico" data-ico="building"></span><span>ลูกค้า<small id="q0s"></small></span></div>
+        <div class="cond" id="q1"><span class="mk"></span><span class="ico" data-ico="pen"></span><span>งาน<small id="q1s"></small></span></div>
+        <div class="cond" id="q2"><span class="mk"></span><span class="ico" data-ico="shield"></span><span>มาตรการป้องกัน<small id="q2s"></small></span></div>
       </div>
-      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="n0" d="M75 0C75 18 150 12 150 30"/><path id="n1" d="M225 0C225 18 150 12 150 30"/></svg>
-      <div class="gate" id="gI" role="status"><span data-door></span><div><b id="gIT"></b><span id="gIS"></span></div></div>
+      <svg class="join" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path id="jq0" d="M50 0C50 18 150 12 150 30"/><path id="jq1" d="M150 0V30"/><path id="jq2" d="M250 0C250 18 150 12 150 30"/></svg>
+      <div class="gate" id="g3" role="status"><span data-door></span><div><b id="g3T"></b><span id="g3S"></span></div></div>
     </div>
-    <p class="xea-laws" id="gILaw" aria-live="polite"></p>
+    <p class="x05-sm" id="g3L"></p>
+    <p class="note"><span data-ico="info"></span><span>กิจการที่มีส่วนได้เสียสาธารณะ เช่น กิจการที่จดทะเบียนในตลาดหลักทรัพย์ <span class="law">คู่มือฯ อภิธานศัพท์</span> งานแบบประจำ คืองานที่ใช้ดุลยพินิจทางวิชาชีพเพียงเล็กน้อยหรือไม่ต้องใช้ เช่น ลงรายการตามใบเรียกเก็บค่าสาธารณูปโภค ที่ลูกค้าอนุมัติการจัดประเภทบัญชีแล้ว <span class="law">คู่มือฯ 601.5 A1 · A2</span></span></p>
 
-    <h3 style="margin-top:8px">ถ้อยคำของคู่มือ ที่ใช้กับงบของพีท</h3>
-    <p class="cap">R220.4 เขียนสิ่งที่ต้องทำเมื่อจัดทำหรือนำเสนอข้อมูลไว้หกข้อ บทนี้ใช้สามข้อ</p>
-    <ol class="xea-rows">
-      <li><div>จัดทำหรือนำเสนอข้อมูล โดยไม่ทำให้เข้าใจผิด หรือมีอิทธิพลต่อผลลัพธ์ตามสัญญาหรือตามกฎระเบียบต่าง ๆ อย่างไม่เหมาะสม <span class="law">R220.4 (ข)</span><span class="xea-pt">เรื่องที่ 2: ยอดขายที่ไม่มีการขายจริง</span></div></li>
-      <li><div>นำเสนอความจริงอย่างถูกต้องและครบถ้วนในส่วนที่เป็นสาระสำคัญทั้งหมด <span class="law">R220.4 (ค)</span><span class="xea-pt">เรื่องที่ 2: แก้ยอดขายที่ลงขาดไป</span></div></li>
-      <li><div>ไม่ละเว้นข้อมูลใด ๆ โดยมีเจตนาที่จะทำให้ข้อมูลนั้นทำให้เกิดความเข้าใจผิด หรือมีอิทธิพลต่อผลลัพธ์ตามสัญญา หรือตามกฎระเบียบต่าง ๆ อย่างไม่เหมาะสม <span class="law">R220.4 (ง)</span><span class="xea-pt">เรื่องนี้: ตัดข้อมูลความเสี่ยงทางการเงินออก</span></div></li>
-    </ol>
-
-    <p class="lbl">ตัวอย่างของคู่มือ เรื่องอิทธิพลต่อผลลัพธ์ตามสัญญา <span class="law">220.4 A1</span></p>
-    <div class="xea-eq" role="img" aria-label="ใช้ประมาณการที่ไม่สมจริง โดยเจตนาที่จะหลีกเลี่ยงการฝ่าฝืนข้อกำหนดตามสัญญา เช่น พันธะสัญญาการกู้เงิน เป็นตัวอย่างของอิทธิพลต่อผลลัพธ์ตามสัญญาอย่างไม่เหมาะสม">
-      <div class="xea-eqc"><small>สิ่งที่ทำ</small><b>ใช้ประมาณการที่ไม่สมจริง</b></div>
-      <span class="xea-op" aria-hidden="true">+</span>
-      <div class="xea-eqc"><small>เจตนา</small><b>หลีกเลี่ยงการฝ่าฝืนข้อกำหนดตามสัญญา</b><em>เช่น พันธะสัญญาการกู้เงิน ซึ่งเป็นข้อกำหนดตามสัญญาอย่างหนึ่ง</em></div>
-      <div class="xea-eqc xea-eqr"><small>คู่มือยกเป็นตัวอย่างของ</small><b>อิทธิพลต่อผลลัพธ์ตามสัญญาอย่างไม่เหมาะสม</b></div>
+    <h3 class="x05-h">ถ้าลดไม่ได้ ทางสุดท้ายต่างกันตามที่ทำงาน <span class="law">ข้อ 12</span></h3>
+    <div class="x05-roles">
+      <div class="x05-rl"><span data-x05face="pam"></span><div><b>พี่แพม</b><small>ทำงานในสำนักงาน ข้อบังคับเรียกว่าผู้ให้บริการสาธารณะ</small><em>ใช้มาตรการป้องกัน หรือยุติ หรือปฏิเสธการให้บริการที่เกี่ยวข้อง <span class="law">ข้อ 12 (ก)</span></em></div></div>
+      <div class="x05-rl"><span data-x05face="pete"></span><div><b>พีท</b><small>ผู้ทำบัญชีที่บริษัทจ้าง ข้อบังคับเรียกว่าผู้อยู่ในหน่วยงานธุรกิจ</small><em>ใช้มาตรการป้องกัน หรือต้องลาออกจากหน่วยงานธุรกิจ เมื่อใช้มาตรการป้องกันอย่างดีที่สุดแล้วยังลดไม่ได้ <span class="law">ข้อ 12 (ข)</span></em>พีทยังมีความรับผิดชอบที่จะส่งเสริมเป้าหมายที่ชอบธรรมขององค์กรผู้ว่าจ้าง</div></div>
     </div>
-
-    <div class="xea-mine"><span data-xea-face></span><span><b>งานที่ต้องใช้ดุลยพินิจ ห้ามใช้อย่างตั้งใจที่จะทำให้ผู้อื่นเข้าใจผิด</b>ดุลยพินิจ คือเรื่องที่ต้องตัดสินใจเอง เช่น การเลือกเปิดเผยข้อมูล <span class="law">R220.5</span> คู่มือยกตัวอย่างที่ตรงกับงบของพีท คือการละเว้นไม่แสดงข้อมูล หรือแสดงข้อมูลอย่างคลุมเครือ ที่เกี่ยวข้องกับความเสี่ยงทางการเงิน เพื่อให้เข้าใจผิด <span class="law">220.5 A1</span></span></div>
+    <div id="ck3"></div>
+    <p class="x05-go">ทีนี้สมมติพริ้งอยากให้สำนักงานตัดสินใจแทนไปเลย พี่แพมบอกว่าทำไม่ได้ แต่พริ้งไม่ยอม</p>
   </section>
 
-  <!-- 4 ถูกกดดัน -->
+  <!-- ส่วนที่ 4 -->
   <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
-    <div class="sechd"><i>4</i><div><small>ความกดดัน</small><h2 id="h4">ถูกกดดัน ก็ยังต้องทำสิ่งที่เหมาะสม</h2></div></div>
-    <p class="cap">ความซื่อสัตย์สุจริตเกี่ยวข้องกับลักษณะนิสัยที่เข้มแข็งในการกระทำอย่างเหมาะสม แม้เมื่อเผชิญกับแรงกดดันให้ปฏิบัติเป็นอย่างอื่น <span class="law">111.1 A1</span></p>
-    <p class="lbl">การกระทำอย่างเหมาะสม เกี่ยวข้องกับ <span class="law">111.1 A2</span></p>
-    <ol class="xea-rows">
-      <li><div>การมีจุดยืนอย่างมั่นคง เมื่อเผชิญกับสภาวะลำบากในการตัดสินใจ และสถานการณ์ที่ยาก</div></li>
-      <li><div>หรือการโต้แย้งผู้อื่น เมื่อมีเหตุการณ์แวดล้อมที่มีเหตุผลสมควร</div></li>
+    <div class="sechd"><i>4</i><div><small>ข้อยุติ</small><h2 id="h4">เรื่องยังไม่จบ ปรึกษาใคร ถอนตัวเมื่อไร</h2></div></div>
+    <p class="cap">คุยกันแล้วยังไม่จบ ข้อบังคับวางลำดับไว้ให้เดิน ทางจบของเรื่องข้อบังคับเรียกว่าข้อยุติ <span class="law">ข้อ 16</span></p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="ladC"></p></div>
+    <p class="x05-rule"><b>หลัก</b>คิดเองให้ครบก่อน แล้วขอคำปรึกษาตามลำดับ ทำทุกทางที่เป็นไปได้จนหมดแล้ว จึงตัดสินใจเรื่องถอนตัวหรือลาออก</p>
+    <p class="lbl">แตะขั้นที่พี่แพมทำมาถึง ป้ายระหว่างขั้นคือเงื่อนไขของการไปขั้นถัดไป</p>
+    <div class="x05-st" data-pick="lad">
+      <button class="x05-step" id="st1" data-v="1" style="--i:0"><i></i><span><b>คิดเองให้ครบ</b><small>ปัจจัยที่เกี่ยวข้อง ทางเลือก และผลกระทบของแต่ละทาง</small></span></button>
+      <div class="x05-rise" style="--i:1">ยังไม่ได้ข้อยุติ อาจต้องทำต่อตามลำดับ</div>
+      <button class="x05-step" id="st2" data-v="2" aria-pressed="true" style="--i:1"><i></i><span><b>ขอคำปรึกษาจากบุคคลอื่นที่เหมาะสม</b><small>ภายในสำนักงาน หรือองค์กรผู้ว่าจ้าง</small></span></button>
+      <div class="x05-rise" style="--i:2">เมื่อเป็นข้อขัดแย้งกับองค์กร หรือภายในองค์กร</div>
+      <button class="x05-step" id="st3" data-v="3" style="--i:2"><i></i><span><b>ขอคำปรึกษาจากผู้มีหน้าที่กำกับดูแลขององค์กร</b><small>เช่น คณะกรรมการบริษัท หรือคณะกรรมการตรวจสอบ</small></span></button>
+      <div class="x05-rise" style="--i:3">ยังไม่ได้ข้อยุติ และเป็นความขัดแย้งที่มีนัยสำคัญ</div>
+      <button class="x05-step" id="st4" data-v="4" style="--i:3"><i></i><span><b>อาจขอคำปรึกษาทางวิชาชีพจากข้างนอก</b><small>องค์กรทางวิชาชีพที่เกี่ยวข้อง หรือที่ปรึกษากฎหมาย โดยไม่ละเมิดการรักษาความลับ</small></span></button>
+      <div class="x05-rise" style="--i:4">ทำทุกทางที่เป็นไปได้จนหมดแล้ว</div>
+      <button class="x05-step" id="st5" data-v="5" style="--i:4"><i></i><span><b>ถ้าเป็นไปได้ ควรปฏิเสธที่จะเกี่ยวข้องกับเรื่องนั้น</b><small>แล้วตัดสินใจว่าทางออกข้างล่างทางใดเหมาะสม</small></span></button>
+    </div>
+    <ul class="x05-exits" id="exits">
+      <li><span data-ico="users"></span><span>ถอนตัวจากกลุ่มผู้ปฏิบัติงาน หรือจากงานที่ได้รับมอบหมายเป็นการเฉพาะ</span></li>
+      <li><span data-ico="doc"></span><span>ลาออกจากงานที่ได้รับมอบหมายนั้นโดยสิ้นเชิง</span></li>
+      <li><span data-ico="building"></span><span>ลาออกจากสำนักงาน หรือจากองค์กรผู้ว่าจ้าง</span></li>
+    </ul>
+    <div class="x05-out x05-grey" id="ladO" role="status"><b id="ladT"></b><p id="ladS"></p></div>
+    <button type="button" class="x05-side" id="lfr" aria-pressed="false">แล้วถ้าพี่แพมเล่าเรื่องนี้ให้เพื่อนนอกสำนักงานฟัง เพื่อขอความเห็นล่ะ</button>
+    <div class="x05-out" id="lfrO" role="status" hidden><b>เพื่อนไม่อยู่ในลำดับไหนเลย</b><p>คนนอกที่ข้อ 16 เขียนไว้มีสองที่ คือองค์กรทางวิชาชีพที่เกี่ยวข้อง กับที่ปรึกษากฎหมาย และข้อมูลที่ได้จากงาน ไม่พึงเปิดเผยให้บุคคลที่สาม โดยไม่ได้รับอนุมัติจากผู้มีอำนาจอย่างถูกต้องและเฉพาะเจาะจง <span class="law">ข้อ 9 (ง)</span></p></div>
+    <p class="lbl">ตอนขอคำปรึกษา คู่มือฯ บอกไว้สามเรื่อง <span class="law">คู่มือฯ 110.2 A2 · A3</span></p>
+    <div class="x05-tips"><span>ปรึกษาโดยไม่เปิดเผยชื่อได้</span><span>ปรึกษาแล้วยังต้องใช้ดุลยพินิจของตัวเอง</span><span>ควรบันทึกประเด็น การปรึกษา การตัดสินใจ และเหตุผล</span></div>
+
+    <h3 class="x05-h">อีกกรณี พบว่าฝ่าฝืนเงื่อนไขในข้อบังคับไปแล้ว <span class="law">ข้อ 13</span></h3>
+    <ol class="todo">
+      <li class="first"><div><b>ประเมินนัยสำคัญของการฝ่าฝืน</b><small>และผลกระทบต่อความสามารถในการปฏิบัติตามหลักการพื้นฐาน</small></div></li>
+      <li><div><b>ทำเท่าที่จะทำได้ทันที</b><small>เพื่อให้ได้ผลเป็นที่พอใจ</small></div></li>
+      <li><div><b>ตัดสินใจว่าต้องรายงานผู้เกี่ยวข้องหรือไม่</b><small>เช่น ผู้ที่อาจได้รับผลกระทบ องค์กรที่เป็นสมาชิก หน่วยงานกำกับดูแลที่เกี่ยวข้อง หรือผู้มีหน้าที่กำกับดูแล</small></div></li>
     </ol>
-    <p class="cap">ในลักษณะที่เหมาะสมกับเหตุการณ์แวดล้อมนั้น</p>
-
-    <h3 style="margin-top:8px">ความกดดันมาจากไหนได้บ้าง</h3>
-    <p class="cap">ความกดดันอาจชัดเจน หรือโดยนัย คือไม่ได้พูดออกมาตรง ๆ และอาจมาจากสามทาง <span class="law">270.3 A1</span></p>
-    <div>
-      <div class="xea-s3">
-        <div><span data-ico="bag"></span><b>ภายในองค์กรผู้ว่าจ้าง</b><small>เช่น เพื่อนร่วมงาน หรือผู้บังคับบัญชา</small><span class="xea-tag">เรื่องของพีท: หัวหน้า</span></div>
-        <div><span data-ico="mail"></span><b>บุคคลหรือองค์กรภายนอก</b><small>เช่น ผู้จำหน่าย ลูกค้า หรือผู้ให้กู้</small></div>
-        <div><span data-ico="flag"></span><b>เป้าหมาย และความคาดหวัง</b><small>เป้าหมายภายในหรือภายนอก</small><span class="xea-tag">เรื่องของพีท: ยอดขายที่ธนาคารคาดหวัง</span></div>
-      </div>
-      <svg class="xea-down" viewBox="0 0 120 26" aria-hidden="true"><path d="M20 2C20 14 60 10 60 22M60 2V22M100 2C100 14 60 10 60 22M53 16l7 7 7-7"/></svg>
-      <div class="xea-stack">
-        <div class="xea-dir">
-          <svg viewBox="0 0 84 60" aria-hidden="true"><g fill="none" stroke="#CFCBBF" stroke-width="3" stroke-linecap="round"><path d="M17 12l25 12M17 30h24M17 48l25-12"/></g><circle cx="10" cy="12" r="6" fill="#CFCBBF"/><circle cx="10" cy="30" r="6" fill="#CFCBBF"/><circle cx="10" cy="48" r="6" fill="#CFCBBF"/><circle cx="62" cy="30" r="17" fill="#2F6B8A"/><path d="M62 20l8 3.200v6c0 5-3.300 8.600-8 10.200-4.700-1.600-8-5.200-8-10.200v-6z" fill="none" stroke="#fff" stroke-width="2.200" stroke-linejoin="round"/></svg>
-          <div><b>คนอื่นกดดันพีท</b><span>ต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน <span class="law">R270.3 (ก)</span></span></div>
-        </div>
-        <div class="xea-dir">
-          <svg viewBox="0 0 84 60" aria-hidden="true"><circle cx="22" cy="30" r="17" fill="#2F6B8A"/><path d="M41 30h24" fill="none" stroke="#CFCBBF" stroke-width="3" stroke-linecap="round"/><circle cx="74" cy="30" r="7" fill="#CFCBBF"/><path d="M47 22l12 16M59 22L47 38" fill="none" stroke="#B3261E" stroke-width="3.500" stroke-linecap="round"/></svg>
-          <div><b>พีทกดดันคนอื่น</b><span>ต้องไม่สร้างแรงกดดันต่อผู้อื่น ที่รู้หรือมีเหตุผลที่จะเชื่อว่าจะส่งผลให้บุคคลอื่นฝ่าฝืนหลักการพื้นฐาน <span class="law">R270.3 (ข)</span></span></div>
-        </div>
-      </div>
-    </div>
-    <p class="cap">องค์กรผู้ว่าจ้างของพีท คือบริษัท พาวเด้ออ้าย จำกัด เรื่องที่ 2 ใกล้กับตัวอย่างที่คู่มือยก คือความกดดันที่จะรายงานผลการดำเนินงานที่ทำให้เข้าใจผิด เพื่อให้เป็นไปตามความคาดหวังของนักลงทุน นักวิเคราะห์ หรือผู้ให้กู้ <span class="law">270.3 A2</span></p>
-
-    <h3 style="margin-top:8px">ถูกกดดันแล้ว ปรึกษาใครได้บ้าง</h3>
-    <p class="cap">การปรึกษาหารือเกี่ยวกับเหตุการณ์แวดล้อมที่ทำให้เกิดความกดดัน อาจช่วยในการประเมินระดับของอุปสรรค และต้องตระหนักถึงหลักการพื้นฐานเรื่องการรักษาความลับ <span class="law">270.3 A4</span> ลองเปลี่ยนว่าใครสร้างความกดดัน</p>
-    <div class="chips" data-pick="prs">
-      <button data-v="0" aria-pressed="true">หัวหน้าของพีท</button>
-      <button data-v="1">เพื่อนร่วมงาน</button>
-    </div>
-    <div class="cons" role="status">
-      <div class="cg ok xea-cg"><span class="ico" data-ico="check"></span><div><b>ปรึกษาหารือกับบุคคลที่พยายามสร้างความกดดัน เพื่อหาแนวทางแก้ไข</b><span id="prA"></span></div></div>
-      <div class="cg xea-cg" id="prBox"><span class="ico" id="prIco"></span><div><b>ปรึกษาหารือกับผู้บังคับบัญชา ถ้าผู้บังคับบัญชาไม่ได้เป็นบุคคลที่สร้างความกดดัน</b><span id="prB"></span></div></div>
-    </div>
-    <p class="cap">และอาจรวมถึงการขยายเรื่องนั้นภายในองค์กรเมื่อเหมาะสม การเปิดเผยตามนโยบายขององค์กร และการปรึกษากับผู้อื่น เช่น ที่ปรึกษากฎหมาย</p>
+    <div id="ck4"></div>
+    <p class="x05-go">ครึ่งแรกจบตรงนี้ ครึ่งหลังดูว่าถ้าประพฤติผิดจริง จะเจออะไร</p>
   </section>
 
-  <!-- 5 รู้ทีหลัง -->
+  <!-- ส่วนที่ 5 -->
   <section class="fig" id="s5" data-step="s5" aria-labelledby="h5">
-    <div class="sechd"><i>5</i><div><small>ข้อมูลที่ทำให้เข้าใจผิด</small><h2 id="h5">รู้ทีหลัง ก็ต้องหาทางแก้และยุติการเกี่ยวข้อง</h2></div></div>
-    <p class="cap">หลังพีทส่งงาน หัวหน้าแก้ยอดขายเป็น 1,500,000 บาทเอง ทั้งที่เอกสารการขายรวม 1,200,000 บาท งบชุดนี้มีชื่อพีทเป็นผู้จัดทำ พีทเพิ่งรู้ เมื่อเริ่มตระหนัก ต้องดำเนินการเพื่อยุติการเกี่ยวข้องกับข้อมูลนั้น <span class="law">R111.3</span> ลองเปลี่ยนสองข้อข้างล่าง</p>
-    <p class="lbl">บริษัทแก้ไขข้อมูลเมื่อไร</p>
-    <div class="chips" data-pick="esc">
-      <button data-v="0" aria-pressed="true">หลังพีทปรึกษาในบริษัท</button>
-      <button data-v="1">หลังพีทดำเนินการเพิ่มเติม</button>
-      <button data-v="2">ไม่แก้เลย</button>
+    <p class="x05-mid"><b>ครึ่งหลัง ถ้าประพฤติผิด</b>ครึ่งแรกยังไม่มีใครผิด พี่แพมเจออุปสรรคแล้วจัดการ แต่ถ้าไม่ปฏิบัติตามจรรยาบรรณ กฎหมายให้ถือว่าประพฤติผิดจรรยาบรรณ <span class="law">ม.46</span></p>
+    <div class="sechd"><i>5</i><div><small>ระดับของโทษ</small><h2 id="h5">ผิดจรรยาบรรณแล้วโดนอะไร</h2></div></div>
+    <p class="cap">โทษมีสี่ระดับ เรียงจากเบาไปหนัก คนสั่งคือคณะกรรมการจรรยาบรรณ (เป็นใคร ดูส่วนที่ 7) และสั่งได้เมื่อมีมติว่าประพฤติผิด <span class="law">ม.49 · ม.54</span></p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="penC"></p></div>
+    <p class="lbl">แตะระดับอื่นเพื่อเปลี่ยนคำสั่ง แล้วดูใบอนุญาตของพี่แพมข้างล่าง</p>
+    <div class="x05-pens" data-pick="pen">
+      <button class="x05-pen" data-v="0"><i>1</i><span><b>ตักเตือนเป็นหนังสือ</b></span></button>
+      <button class="x05-pen" data-v="1"><i>2</i><span><b>ภาคทัณฑ์</b><small>ในภาษาทั่วไปคือตำหนิโทษไว้</small></span></button>
+      <button class="x05-pen x05-hv" data-v="2" aria-pressed="true"><i>3</i><span><b>พักใช้ใบอนุญาต พักการขึ้นทะเบียน หรือห้ามการประกอบวิชาชีพบัญชีด้านที่ประพฤติผิดจรรยาบรรณ</b><small>โดยมีกำหนดเวลา แต่ไม่เกิน 3 ปี</small></span></button>
+      <button class="x05-pen x05-hv" data-v="3"><i>4</i><span><b>เพิกถอนใบอนุญาต เพิกถอนการขึ้นทะเบียน หรือสั่งให้พ้นจากการเป็นสมาชิกสภาวิชาชีพบัญชี</b></span></button>
     </div>
-    <p class="lbl">งบชุดนี้ถึงธนาคารหรือยัง</p>
-    <div class="chips" data-pick="sent">
-      <button data-v="0" aria-pressed="true">ยังไม่ถึง</button>
-      <button data-v="1">ถึงแล้ว</button>
+    <div id="pdur">
+      <div class="nums" data-nums="yrs"><div data-k="y" data-min="1" data-max="5" data-v="1" data-unit="ปี">กำหนดเวลาพักใช้ใบอนุญาตของพี่แพม</div></div>
+      <div class="x05-cap" role="img" aria-label="แถบกำหนดเวลาพักใช้ มีเส้นเพดานที่ 3 ปี"><i id="pfill"></i><em></em></div>
+      <div class="x05-capt" aria-hidden="true"><span>1</span><span>2</span><span><b>3 ปี</b></span><span>4</span><span>5</span></div>
     </div>
-    <div class="xea-send" id="send" aria-hidden="true"><span class="xea-end"><span data-ico="pen"></span>งบที่มีชื่อพีท</span><span class="xea-way"><i></i></span><span class="xea-end"><span data-ico="bag"></span>ธนาคารผู้ให้กู้</span></div>
-    <p class="lbl">สามข้อนี้ต่อกันด้วยเงื่อนไขที่คู่มือเขียน</p>
-    <ol class="todo xea-lad">
-      <li id="L0"><div>
-        <span class="xea-when xea-met">เมื่อรู้ หรือมีเหตุผลที่เชื่อได้ว่า ข้อมูลที่ตนเกี่ยวข้องอยู่นั้นทำให้เข้าใจผิด</span>
-        <b>ต้องดำเนินการที่เหมาะสมเพื่อหาทางแก้ไข</b>
-        <small>รวมถึงปรึกษาหารือข้อกังวลกับผู้บังคับบัญชา ผู้บริหารระดับที่เหมาะสม หรือผู้มีหน้าที่กำกับดูแล และขอให้บุคคลดังกล่าวดำเนินการอย่างเหมาะสมเพื่อแก้ไข · ปรึกษาเกี่ยวกับนโยบายขององค์กร เช่น นโยบายการแจ้งเบาะแสการกระทำผิด <span class="law">R220.8</span> <span class="law">220.8 A1</span></small>
-        <small class="xea-gl">ผู้มีหน้าที่กำกับดูแล คือบุคคลหรือองค์กรซึ่งมีความรับผิดชอบต่อการกำกับดูแลกิจการ เช่น การกำกับดูแลกระบวนการรายงานทางการเงิน <span class="law">ข้อ 4</span></small>
-        <span class="xea-acts">การดำเนินการของบุคคลดังกล่าว อาจรวมถึง <span class="xea-act xea-lit">แก้ไขข้อมูลให้ถูกต้อง</span><span class="xea-act" id="actTell">แจ้งแก้ไขข้อมูลให้ถูกต้อง<small id="actTellS"></small></span></span>
-        <span class="xea-st" id="L0s"></span>
-      </div></li>
-      <li id="L1"><div>
-        <span class="xea-when" id="W1">ต่อจากข้อ 1 เมื่อพิจารณาว่าองค์กรยังมิได้ดำเนินการอย่างเหมาะสม และยังมีเหตุผลที่เชื่อได้ว่าข้อมูลทำให้เข้าใจผิด</span>
-        <b>ดำเนินการเพิ่มเติม</b>
-        <small>อาจเหมาะสม หากตระหนักถึงหลักการพื้นฐานเรื่องการรักษาความลับ · ปรึกษากับองค์กรวิชาชีพที่เกี่ยวข้อง ผู้ตรวจสอบภายในหรือผู้สอบบัญชีขององค์กร ที่ปรึกษากฎหมาย · พิจารณาว่ามีข้อกำหนดอื่นใดให้สื่อสารกับบุคคลที่สาม รวมทั้งผู้ใช้ข้อมูล หน่วยงานกำกับดูแล <span class="law">220.8 A2</span></small>
-        <span class="xea-st" id="L1s"></span>
-      </div></li>
-      <li id="L2"><div>
-        <span class="xea-when" id="W2">ต่อจากข้อ 1 และข้อ 2 เมื่อใช้ทางเลือกที่มีจนหมดแล้ว พิจารณาว่ายังไม่ได้ดำเนินการที่เหมาะสม และมีเหตุผลที่เชื่อได้ว่าข้อมูลยังคงทำให้เข้าใจผิดอยู่</span>
-        <b>ต้องปฏิเสธที่จะเกี่ยวข้องกับข้อมูล หรือปฏิเสธที่จะยังคงข้อมูลดังกล่าวไว้ต่อไป</b>
-        <small>ถ้อยคำของคู่มือ <span class="law">R220.9</span></small>
-        <span class="xea-st" id="L2s"></span>
-      </div></li>
-    </ol>
-    <div class="result xea-res" id="escR" role="status"></div>
+    <div class="x05-lic" id="lic"><span data-x05face="pam"></span><div><b>ใบอนุญาตเป็นผู้สอบบัญชีรับอนุญาต</b><small>ของพี่แพม</small><div class="x05-seal" id="seal"></div></div></div>
+    <div class="cons" role="status">
+      <b id="penH"></b>
+      <div class="cg" id="pr0"><span class="ico"></span><div><b></b><span></span></div></div>
+      <div class="cg" id="pr1"><span class="ico"></span><div><b></b><span></span></div></div>
+      <div class="cg" id="pr2"><span class="ico"></span><div><b></b><span></span></div></div>
+    </div>
+    <p class="x05-sm">ใบอนุญาตเป็นของผู้สอบบัญชีรับอนุญาต ส่วนการขึ้นทะเบียนเป็นของผู้ทำบัญชีที่ขึ้นทะเบียนไว้กับสภาฯ <span class="law">ม.38 · ม.44</span></p>
+
+    <h3 class="x05-h">อีกเรื่องที่กฎหมายเขียนไว้ตรง ๆ ผู้สอบบัญชีเขียนปัดความรับผิดไม่ได้ <span class="law">ม.48</span></h3>
+    <div class="x05-docs">
+      <div class="x05-doc"><b>สัญญาจ้างสอบบัญชี</b><i></i><i></i><s>ข้อความที่จำกัดหรือปฏิเสธความรับผิดชอบของผู้สอบบัญชีรับอนุญาต</s><em>เป็นโมฆะ</em></div>
+      <div class="x05-doc"><b>รายงานผลการสอบบัญชี</b><i></i><s>ข้อความว่าตนไม่รับผิดชอบในผลการตรวจสอบ</s><s>แสดงความไม่ชัดเจน เพราะตนปฏิบัติหน้าที่ไม่ครบถ้วน</s><em>ถือว่าประพฤติผิดจรรยาบรรณ</em></div>
+    </div>
+    <div id="ck5"></div>
+    <p class="x05-go">โทษไม่ได้มาเอง ต้องมีคนกล่าวหา มีการสอบสวน และมีมติก่อน ดูสามส่วนถัดไป</p>
   </section>
 
-  <!-- หลักนี้ในเรื่องอื่น -->
-  <section class="fig" aria-labelledby="fo">
-    <span class="fno">หลักนี้ในเรื่องอื่น</span>
-    <h2 id="fo">คู่มือเอ่ยถึงหลักนี้ในอีกสามเรื่อง</h2>
-    <p class="cap">รายละเอียดอยู่ในบทของหลักข้ออื่น แตะเพื่อไปบทนั้น</p>
-    <div class="xea-stack">
-      <a class="xea-tri" href="law2v-r06.html"><span class="ico" data-ico="star"></span><span><b>เสนอให้หรือยอมรับสิ่งจูงใจ เช่น ของขวัญ หรือการต้อนรับ</b><small>เมื่อมีเจตนาที่จะให้มีอิทธิพลอย่างไม่เหมาะสมต่อพฤติกรรมของผู้รับหรือของอีกบุคคลหนึ่ง เป็นการฝ่าฝืนหลักนี้ <span class="law">250.4 A1</span> <span class="law">250.9 A2</span></small><span class="xea-go">บทที่ 6 ความเที่ยงธรรมและความเป็นอิสระ</span></span></a>
-      <a class="xea-tri" href="law2v-r09.html"><span class="ico" data-ico="flag"></span><span><b>รู้หรือสงสัยว่ามีการไม่ปฏิบัติตามกฎหมายและข้อบังคับ</b><small>วัตถุประสงค์ข้อแรกของการตอบสนอง คือเพื่อปฏิบัติตามหลักนี้และหลักพฤติกรรมทางวิชาชีพ <span class="law">260.4</span></small><span class="xea-go">บทที่ 9 พฤติกรรมทางวิชาชีพ</span></span></a>
-      <a class="xea-tri" href="law2v-r08.html"><span class="ico" data-ico="mail"></span><span><b>ผู้ประกอบวิชาชีพบัญชีอีกคนกำลังพิจารณารับงาน แล้วติดต่อมาถาม</b><small>คนปัจจุบันหรือคนก่อนที่ถูกร้องขอให้ตอบ ต้องให้ข้อมูลด้วยความซื่อสัตย์สุจริต ไม่คลุมเครือ <span class="law">R320.7 (ข)</span></small><span class="xea-go">บทที่ 8 การรักษาความลับ</span></span></a>
+  <!-- ส่วนที่ 6 -->
+  <section class="fig" id="s6" data-step="s6" aria-labelledby="h6">
+    <div class="sechd"><i>6</i><div><small>คำกล่าวหา</small><h2 id="h6">ใครร้องเรียนเราได้ ยื่นได้ถึงเมื่อไร</h2></div></div>
+    <p class="cap">คนร้องเรียนมีเวลาจำกัด กำหนดมีสองข้อ นับจากคนละวัน ศัพท์ของเรื่องนี้มีสามคำ</p>
+    <div class="x05-terms">
+      <div class="x05-term"><small>คนร้องเรียน</small><i aria-hidden="true">→</i><b>ผู้กล่าวหา</b></div>
+      <div class="x05-term"><small>คนถูกร้องเรียน คือพี่แพม</small><i aria-hidden="true">→</i><b>ผู้ถูกกล่าวหา</b></div>
+      <div class="x05-term"><small>คนรับเรื่องและตัดสิน</small><i aria-hidden="true">→</i><b>คณะกรรมการจรรยาบรรณ</b></div>
     </div>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="accC"></p></div>
+    <p class="x05-rule"><b>หลัก</b>ต้องอยู่ในกำหนดทั้งสองข้อ คือยังไม่พ้น 1 ปีนับจากวันที่รู้ และยังไม่เกิน 3 ปีนับจากวันเกิดเหตุ <span class="law">ม.53 วรรคสอง</span></p>
+    <p class="lbl">ลองเลื่อนสองตัวเลขของโจทย์</p>
+    <div class="nums" data-nums="acc">
+      <div data-k="k" data-min="0" data-max="30" data-v="6" data-unit="เดือน">ผู้กล่าวหารู้เรื่องและรู้ตัว หลังวันเกิดเหตุ</div>
+      <div data-k="w" data-min="1" data-max="18" data-v="8" data-unit="เดือน">แล้วยื่นคำกล่าวหา หลังวันที่รู้</div>
+    </div>
+    <div class="x05-tl" id="tl6">
+      <div class="x05-now" aria-hidden="true"><span>วันยื่น</span></div>
+      <div class="x05-row" id="ra"><div class="x05-lab">นับจากวันเกิดเหตุ<small id="raS"></small></div><div class="x05-trk"><i class="x05-win" style="left:0;width:75%"><i class="x05-el" id="raE"></i></i></div></div>
+      <div class="x05-row" id="rb"><div class="x05-lab">นับจากวันที่รู้<small id="rbS"></small></div><div class="x05-trk"><i class="x05-win" id="rbW" style="width:25%"><i class="x05-el" id="rbE"></i></i></div></div>
+      <div class="x05-ax" aria-hidden="true"><span></span><div><span style="left:0">20x1</span><span style="left:25%">20x2</span><span style="left:50%">20x3</span><span style="left:75%"><b>ครบ 3 ปี</b></span></div></div>
+    </div>
+    <ul class="x05-key"><li><i></i>เวลาที่ผ่านไปแล้ว</li><li><i class="x05-k1"></i>เวลาที่เหลือในกำหนด</li><li><i class="x05-k2"></i>พ้นกำหนด</li></ul>
+    <div class="gate" id="g6" role="status"><span data-door></span><div><b id="g6T"></b><span id="g6S"></span></div></div>
+    <div class="cons" aria-live="polite"><b>แล้วเรื่องไปไหนต่อ</b><div class="cg" id="n6"><span class="ico"></span><div><b></b><span></span></div></div></div>
+    <p class="note"><span data-ico="clock"></span><span>สิทธิการกล่าวหาสิ้นสุดลงเมื่อพ้นหนึ่งปี นับแต่วันที่ผู้ได้รับความเสียหายหรือผู้กล่าวหารู้เรื่องการประพฤติผิดจรรยาบรรณ และรู้ตัวผู้ประพฤติผิด ทั้งนี้ ไม่เกินสามปีนับแต่วันที่มีการประพฤติผิดจรรยาบรรณนั้น ภาพนี้เรียกวันหลังว่าวันเกิดเหตุ <span class="law">ม.53 วรรคสอง</span></span></p>
+    <ul class="needs">
+      <li><span class="hd">เรื่องอื่นของคำกล่าวหา <span class="law">ม.53 · ข้อบังคับ ฉบับที่ 12 ข้อ 3 · 14 · 15</span></span></li>
+      <li><span class="mk i" data-ico="user"></span><span>คนที่ถูกกล่าวหาได้ คือผู้ประกอบวิชาชีพบัญชี และผู้ซึ่งขึ้นทะเบียนไว้กับสภาฯ เช่น ผู้ที่ขึ้นทะเบียนเพื่อเป็นผู้ทำบัญชี</span></li>
+      <li><span class="mk i" data-ico="search"></span><span>เรื่องเริ่มได้อีกทาง คือปรากฏต่อคณะกรรมการจรรยาบรรณเอง</span></li>
+      <li><span class="mk i" data-ico="doc"></span><span>คำกล่าวหาใช้แบบ จ.บ.1 อย่างน้อยมีชื่อและที่อยู่ของผู้กล่าวหา ชื่อของผู้ถูกกล่าวหา ข้อเท็จจริง และลายมือชื่อผู้กล่าวหา</span></li>
+      <li><span class="mk i" data-ico="mail"></span><span>ยื่นต่อประธานคณะกรรมการจรรยาบรรณ หรือส่งทางไปรษณีย์ลงทะเบียน</span></li>
+    </ul>
+    <div id="ck6"></div>
+  </section>
+
+  <!-- ส่วนที่ 7 -->
+  <section class="fig" id="s7" data-step="s7" aria-labelledby="h7">
+    <div class="sechd"><i>7</i><div><small>ตรวจ ชี้แจง สอบสวน มีมติ</small><h2 id="h7">ถูกร้องเรียนแล้ว ถือว่าผิดเลยไหม</h2></div></div>
+    <p class="cap">ยัง เรื่องต้องผ่านสี่ช่วง แต่ละช่วงมีคนตัดสินและกำหนดวันของมัน คำสั่งมีได้เมื่อคณะกรรมการจรรยาบรรณมีมติ</p>
+    <p class="x05-req">ผู้ถือหุ้นยื่นคำกล่าวหาพี่แพมทันกำหนดแล้ว เรื่องจึงเริ่มเดิน</p>
+    <p class="lbl">สี่ช่วงของเรื่องพี่แพม แตะดูทีละช่วง</p>
+    <div class="x05-line" data-pick="stg" role="group" aria-label="เลือกช่วง ดูว่าใครตัดสิน และมีกำหนดกี่วัน">
+      <button data-v="0" aria-pressed="true"><i data-ico="search"></i><span>ตรวจ</span></button>
+      <button data-v="1"><i data-ico="pen"></i><span>ชี้แจง</span></button>
+      <button data-v="2"><i data-ico="users"></i><span>สอบสวน</span></button>
+      <button data-v="3"><i data-ico="gavel"></i><span>มีมติ</span></button>
+    </div>
+    <p class="x05-span">ตลอดสามช่วงแรก ยังไม่มีมติว่าพี่แพมประพฤติผิดหรือไม่</p>
+    <div class="x05-pnl" id="pnl" role="status"></div>
+    <div id="ck7"></div>
+
+    <h3 class="x05-h">คนที่มีมติ คือคณะกรรมการจรรยาบรรณ เป็นใคร <span class="law">ม.50 · ม.51</span></h3>
+    <div>
+      <div class="x05-seats" role="img" aria-label="ที่นั่งสิบห้าที่ เก้าที่แรกทึบ หกที่หลังโปร่ง คณะกรรมการจรรยาบรรณมีไม่น้อยกว่าเก้าคน แต่ไม่เกินสิบห้าคน"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="x05-seatt" aria-hidden="true"><span>ไม่น้อยกว่า 9 คน</span><span>ไม่เกิน 15 คน</span></div>
+    </div>
+    <div class="facts"><span>วาระคราวละ 3 ปี</span><span>แต่งตั้งอีกได้ แต่ไม่เกิน 2 วาระติดต่อกัน</span><span>เลือกประธานกันเอง</span></div>
+    <ul class="needs">
+      <li><span class="hd">คณะกรรมการสภาฯ แต่งตั้ง โดยความเห็นชอบของที่ประชุมใหญ่ กรรมการทุกคนต้อง</span></li>
+      <li><span class="mk" data-ico="check"></span><span>เป็นสมาชิกสามัญ</span></li>
+      <li><span class="mk" data-ico="check"></span><span>ประกอบวิชาชีพบัญชีมาแล้วไม่น้อยกว่าเวลาที่ข้อบังคับสภาฯ กำหนด</span></li>
+      <li><span class="mk" data-ico="check"></span><span>ไม่เคยถูกลงโทษฐานประพฤติผิดจรรยาบรรณ</span></li>
+      <li><span class="mk" data-ico="check"></span><span>ไม่เป็นนายกสภาฯ และไม่เป็นกรรมการหรืออนุกรรมการอื่นตามพระราชบัญญัตินี้</span></li>
+    </ul>
+    <details class="src x05-fold">
+      <summary>เหตุที่คัดค้านกรรมการจรรยาบรรณหรืออนุกรรมการได้ แปดข้อ</summary>
+      <ul>
+        <li>เป็นผู้กล่าวหาเอง</li>
+        <li>เป็นคู่หมั้นหรือคู่สมรสของผู้กล่าวหาหรือผู้ถูกกล่าวหา</li>
+        <li>เป็นบุพการีหรือผู้สืบสันดานไม่ว่าชั้นใดของผู้กล่าวหาหรือผู้ถูกกล่าวหา</li>
+        <li>เป็นผู้แทนโดยชอบธรรม ผู้พิทักษ์ ผู้แทน หรือตัวแทนของผู้กล่าวหาหรือผู้ถูกกล่าวหา</li>
+        <li>เป็นเจ้าหนี้หรือลูกหนี้ หรือเป็นนายจ้างหรือลูกจ้างของผู้กล่าวหาหรือผู้ถูกกล่าวหา</li>
+        <li>มีประโยชน์ได้เสียในเรื่องที่กล่าวหา</li>
+        <li>มีสาเหตุโกรธเคืองกับผู้กล่าวหาหรือผู้ถูกกล่าวหา</li>
+        <li>มีเหตุอื่นซึ่งอาจทำให้การสอบสวนเสียความเป็นธรรม</li>
+      </ul>
+      <p style="margin-top:10px">คำคัดค้านทำเป็นหนังสือตามแบบ จ.บ.3 ยื่นต่อประธานคณะกรรมการจรรยาบรรณ ถ้ามีเหตุผลรับฟังได้ ผู้ถูกคัดค้านพ้นจากหน้าที่ในเรื่องนั้น ถ้าไม่มีเหตุผลพอ ให้ยกคำคัดค้าน คำสั่งเรื่องนี้เป็นที่สุด การคัดค้านกรรมการจรรยาบรรณต้องทำก่อนการพิจารณาเสร็จสิ้น <span class="law">ข้อบังคับ ฉบับที่ 12 ข้อ 9 · 10 · 12</span></p>
+      <p style="margin-top:10px">แม้ไม่มีใครคัดค้าน กรรมการหรืออนุกรรมการที่มีส่วนได้เสียเป็นการส่วนตัวในเรื่องใด ก็ห้ามร่วมพิจารณา ปรึกษาหารือ หรือลงคะแนนเสียงในเรื่องนั้น <span class="law">ม.57</span></p>
+    </details>
+    <p class="x05-go">มีมติแล้วจึงมีคำสั่ง ถ้าไม่เห็นด้วยกับคำสั่งล่ะ ดูส่วนสุดท้าย</p>
+  </section>
+
+  <!-- ส่วนที่ 8 -->
+  <section class="fig" id="s8" data-step="s8" aria-labelledby="h8">
+    <div class="sechd"><i>8</i><div><small>อุทธรณ์</small><h2 id="h8">ไม่เห็นด้วยกับคำสั่ง ทำยังไง</h2></div></div>
+    <p class="cap">อุทธรณ์ได้ ต่อคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี ซึ่งเป็นอีกคณะหนึ่ง ไม่ใช่คณะที่ออกคำสั่ง แต่ระหว่างอุทธรณ์ คำสั่งลงโทษยังเดิน <span class="law">ม.55</span></p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="apC"></p></div>
+    <p class="x05-rule"><b>หลัก</b>คนที่อุทธรณ์ได้ คือผู้กล่าวหา หรือผู้ซึ่งถูกสั่งลงโทษ และต้องยื่นภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง <span class="law">ม.55</span></p>
+    <p class="lbl">ลองเปลี่ยนคำสั่ง และเลื่อนวันที่ยื่น</p>
+    <div class="chips" data-pick="ord">
+      <button data-v="0" aria-pressed="true">คำสั่งลงโทษพี่แพม</button>
+      <button data-v="1">คำสั่งยกคำกล่าวหา</button>
+    </div>
+    <div class="nums" data-nums="apd"><div data-k="d" data-min="1" data-max="60" data-v="20" data-unit="วัน"><span id="apWho">พี่แพม</span>ยื่นอุทธรณ์ เมื่อผ่านไป<small>นับแต่วันที่ได้รับคำสั่ง</small></div></div>
+    <div class="x05-tl" id="tl8">
+      <div class="x05-now" aria-hidden="true"><span>วันยื่นอุทธรณ์</span></div>
+      <div class="x05-row" id="rc"><div class="x05-lab">กำหนดอุทธรณ์<small id="rcS"></small></div><div class="x05-trk"><i class="x05-win" style="left:0;width:50%"><i class="x05-el" id="rcE"></i></i></div></div>
+      <div class="x05-row" id="rd"><div class="x05-lab" id="rdL"></div><div class="x05-trk"><i class="x05-run">ยังต้องปฏิบัติตาม</i></div></div>
+      <div class="x05-ax" aria-hidden="true"><span></span><div><span style="left:0">วันที่ได้รับคำสั่ง</span><span style="left:50%"><b>30 วัน</b></span><span style="left:92%">60</span></div></div>
+    </div>
+    <div class="x05-out" id="apO" role="status"><b id="apT"></b><p id="apS"></p></div>
+    <p class="note"><span data-ico="lock"></span><span>การอุทธรณ์คำสั่งไม่เป็นการทุเลา คือไม่ได้ชะลอ การปฏิบัติตามคำสั่งลงโทษ เว้นแต่คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีจะสั่งเป็นอย่างอื่น <span class="law">ม.55 วรรคสาม</span></span></p>
+    <div class="endc" style="background:var(--hue-ink)"><span class="ico" data-ico="flag" style="color:var(--hue-ink)"></span><div><b>คำวินิจฉัยของคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีเป็นที่สุด</b><span>คณะนี้มีปลัดกระทรวงพาณิชย์เป็นประธาน <span class="law">ม.55 วรรคสอง · ม.59</span> กรมพัฒนาธุรกิจการค้าอธิบายว่า ยื่นต่อเลขานุการของคณะนี้ที่กรมฯ และวินิจฉัยได้เป็นยกคำร้องอุทธรณ์ ยกเลิกคำสั่ง หรือเปลี่ยนแปลงคำสั่งเป็นประการอื่น</span></div></div>
+    <div id="ck8"></div>
   </section>
 
   <!-- ลองดู -->
   <section class="fig" aria-labelledby="fq">
     <span class="fno">ลองดู</span>
-    <h2 id="fq">สามคำถาม ตอบจากภาพข้างบน</h2>
+    <h2 id="fq">ห้าคำถาม ตอบจากภาพข้างบน</h2>
     <p class="cap">ตอบผิดตอบใหม่ได้ ไม่มีคะแนน</p>
-    <div id="quiz" style="display:grid;gap:12px;grid-template-columns:minmax(0,1fr)"></div>
+    <div id="quiz" style="display:grid;gap:12px"></div>
   </section>
 
-  <!-- จำจากภาพ -->
+  <!-- สรุปบทนี้ -->
   <section class="fig" aria-labelledby="fk">
     <span class="fno">สรุปบทนี้</span>
     <h2 id="fk">จำจากภาพ</h2>
     <ul class="keep">
-      <li><span class="ico" data-ico="book"></span><span>จรรยาบรรณอยู่ในข้อบังคับสภาวิชาชีพบัญชี ข้อ 9 มีหลักการพื้นฐานหกข้อ บทนี้คือข้อ (ก)</span></li>
-      <li><span class="ico" data-ico="star"></span><span>หลัก (ก) ความซื่อสัตย์สุจริต คือตรงไปตรงมา จริงใจในความสัมพันธ์ทั้งมวล ทั้งทางวิชาชีพและทางธุรกิจ</span></li>
-      <li><span class="ico" data-ico="pen"></span><span>ถูกขอให้แก้ตัวเลข ดูที่ข้อมูลหลังแก้ ตรงกับความจริง แก้ได้ ทำให้เข้าใจผิด ทำตามไม่ได้</span></li>
-      <li><span class="ico" data-ico="x"></span><span>ห้ามเกี่ยวข้องทั้งที่รู้ กับข้อมูลที่ทำให้เกิดความเข้าใจผิด ที่จัดทำขึ้นโดยไม่ไตร่ตรอง หรือที่ละเว้นปิดบังข้อมูลที่จำเป็นต้องมี</span></li>
-      <li><span class="ico" data-ico="book"></span><span>ตัวเลขถูกทุกตัว แต่ละเว้นข้อมูลเพื่อให้เข้าใจผิด ก็ยังนำเสนอไม่ได้</span></li>
-      <li><span class="ico" data-ico="shield"></span><span>ใครขอหรือกดดัน ผลเท่าเดิม และห้ามกดดันคนอื่นให้ฝ่าฝืนด้วย</span></li>
-      <li><span class="ico" data-ico="clock"></span><span>รู้ทีหลัง ก็ต้องหาทางแก้ และยุติการเกี่ยวข้องกับข้อมูลนั้น</span></li>
-      <li><span class="ico" data-ico="flag"></span><span>หาทางแก้ในองค์กรก่อน องค์กรยังไม่ดำเนินการ จึงดำเนินการเพิ่มเติม ใช้ทางเลือกจนหมดแล้วข้อมูลยังทำให้เข้าใจผิด ต้องปฏิเสธที่จะเกี่ยวข้อง</span></li>
+      <li><span class="ico" data-ico="search"></span><span>อุปสรรคมีห้าประเภท ผลประโยชน์ส่วนตน การสอบทานผลงานตนเอง การเป็นผู้ให้การสนับสนุน ความคุ้นเคย การถูกข่มขู่ เรื่องเดียวเป็นได้หลายประเภท</span></li>
+      <li><span class="ico" data-ico="shield"></span><span>เจอแล้วระบุ ประเมิน จัดการ ระดับที่ยอมรับได้วัดจากมุมของบุคคลที่สามซึ่งมีความรอบรู้ มาตรการป้องกันมีสองประเภท ที่องค์กรวิชาชีพ กฎหมาย หรือข้อบังคับกำหนด กับที่จัดให้มีขึ้นในสภาพแวดล้อมการปฏิบัติงาน</span></li>
+      <li><span class="ico" data-ico="x"></span><span>ลดไม่ได้ คนที่ทำงานในสำนักงานยุติหรือปฏิเสธการให้บริการ คนที่บริษัทจ้างลาออก เมื่อใช้มาตรการป้องกันอย่างดีที่สุดแล้ว</span></li>
+      <li><span class="ico" data-ico="chat"></span><span>ยังไม่ได้ข้อยุติ คิดเองให้ครบ แล้วปรึกษาตามลำดับ คนในที่ทำงาน ผู้มีหน้าที่กำกับดูแล องค์กรทางวิชาชีพหรือที่ปรึกษากฎหมายโดยไม่ละเมิดความลับ ทำทุกทางแล้วจึงถอนตัวหรือลาออก</span></li>
+      <li><span class="ico" data-ico="gavel"></span><span>โทษสี่ระดับ ตักเตือนเป็นหนังสือ ภาคทัณฑ์ พักหรือห้ามโดยมีกำหนดเวลาไม่เกิน 3 ปี เพิกถอนหรือให้พ้นจากสมาชิก ถูกลงโทษสองระดับหลังแล้วยังประกอบวิชาชีพบัญชีในระหว่างนั้น มีโทษทางอาญา</span></li>
+      <li><span class="ico" data-ico="doc"></span><span>ข้อความในสัญญาจ้างสอบบัญชีที่จำกัดหรือปฏิเสธความรับผิดชอบของผู้สอบบัญชีรับอนุญาตเป็นโมฆะ และรายงานว่าตนไม่รับผิดชอบในผลการตรวจสอบไม่ได้ ทำแล้วถือว่าประพฤติผิดจรรยาบรรณ</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>สิทธิการกล่าวหาสิ้นสุดเมื่อพ้น 1 ปีนับแต่วันที่รู้เรื่องและรู้ตัวผู้ประพฤติผิด และไม่เกิน 3 ปีนับแต่วันที่มีการประพฤติผิด</span></li>
+      <li><span class="ico" data-ico="flag"></span><span>ชี้แจงได้ใน 15 วัน ถอนเรื่องไม่ระงับ มีมติจึงมีคำสั่ง อุทธรณ์ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง ระหว่างอุทธรณ์ยังต้องปฏิบัติตามคำสั่งลงโทษ เว้นแต่คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีจะสั่งเป็นอย่างอื่น</span></li>
     </ul>
   </section>
 
   <details class="src">
     <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
     <ul>
-      <li>ข้อ 4 ข้อ 8 ข้อ 9 และข้อ 10 มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
-      <li>ผู้ประกอบวิชาชีพบัญชี ตามข้อ 4 คือผู้ประกอบวิชาชีพบัญชีด้านการทำบัญชี ด้านการสอบบัญชี ด้านการบัญชีบริหาร ด้านการวางระบบบัญชี ด้านการบัญชีภาษีอากร ด้านการศึกษาและเทคโนโลยีการบัญชี และบริการเกี่ยวกับการบัญชีด้านอื่นตามที่กฎกระทรวงกำหนดให้เป็นวิชาชีพบัญชี และรวมถึงผู้ซึ่งขึ้นทะเบียนไว้กับสภาวิชาชีพบัญชีด้วย</li>
-      <li>เลขที่มีจุด เช่น R111.2 หรือ 220.8 A1 คือย่อหน้าของคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566</li>
-      <li>หมวดย่อย 111 ความซื่อสัตย์สุจริต อยู่ในส่วนที่ 1 ของคู่มือ หมวด 220 การจัดทำและการนำเสนอข้อมูล กับหมวด 270 ความกดดันต่อการฝ่าฝืนหลักการพื้นฐาน อยู่ในส่วนที่ 2 ซึ่งเขียนสำหรับผู้ประกอบวิชาชีพบัญชีในหน่วยงานธุรกิจอย่างพีท</li>
-      <li>การจัดทำหรือการนำเสนอข้อมูลในหมวด 220 รวมถึงการบันทึกข้อมูล การเก็บรักษาข้อมูล และการอนุมัติข้อมูล (220.3 A3)</li>
-      <li>ผู้มีหน้าที่กำกับดูแล ตามข้อ 4 คือบุคคลหรือกลุ่มบุคคล หรือองค์กร หรือกลุ่มองค์กร ซึ่งมีความรับผิดชอบต่อการกำกับดูแลทิศทางเชิงกลยุทธ์ของกิจการ ภาระผูกพันที่เกี่ยวกับการรับผิดชอบของกิจการ การกำกับดูแลกระบวนการรายงานทางการเงิน</li>
-      <li>“ผู้บังคับบัญชา” ในคู่มือ คือหัวหน้า · พีท พราว พริ้ง และบริษัท พาวเด้ออ้าย จำกัด เป็นกรณีสมมติ ตัวเลขบาทในหน้านี้เป็นของกรณีสมมติ</li>
+      <li>เลขข้อที่ไม่ได้บอกชื่อกฎหมาย มาจากข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2569</li>
+      <li>“คู่มือฯ” คือคู่มือประมวลจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี แนบท้ายประกาศสภาวิชาชีพบัญชีที่ 53/2566 เลขที่ตามหลังเป็นเลขย่อหน้า ย่อหน้าที่ขึ้นต้นด้วย R เป็นข้อกำหนด</li>
+      <li>“หนังสืออธิบายของสภาฯ” คือหนังสือข้อบังคับสภาวิชาชีพบัญชี ว่าด้วยจรรยาบรรณของผู้ประกอบวิชาชีพบัญชี พ.ศ. 2561 และคำอธิบายการใช้คู่มือประมวลจรรยาบรรณ พ.ศ. 2564 ของคณะอนุกรรมการกำหนดจรรยาบรรณ สภาวิชาชีพบัญชี เป็นเอกสารอธิบาย ไม่ใช่ตัวข้อบังคับ</li>
+      <li>“ข้อบังคับ ฉบับที่ 12” คือข้อบังคับสภาวิชาชีพบัญชี (ฉบับที่ 12) เรื่อง การพิจารณาเกี่ยวกับจรรยาบรรณ พ.ศ. 2549 ซึ่งแก้ไขเพิ่มเติมโดยข้อบังคับสภาวิชาชีพบัญชี (ฉบับที่ 21) พ.ศ. 2554</li>
+      <li>“ข้อกำหนดการสอบสวน” คือข้อกำหนดสภาวิชาชีพบัญชี เรื่อง หลักเกณฑ์และวิธีการสอบสวนของคณะอนุกรรมการสอบสวน พ.ศ. 2550</li>
+      <li>คำอธิบายของกรมพัฒนาธุรกิจการค้า มาจากเอกสารขั้นตอนและแนวทางการพิจารณาอุทธรณ์ของผู้กล่าวหาหรือผู้ซึ่งถูกคณะกรรมการจรรยาบรรณสั่งลงโทษ เป็นเอกสารอธิบาย ไม่ใช่ตัวประกาศ</li>
+      <li>ม. คือมาตราของพระราชบัญญัติวิชาชีพบัญชี พ.ศ. 2547 มาตรา 70 และมาตรา 71 เป็นบทกำหนดโทษทางอาญา</li>
+      <li>กลุ่มผู้ปฏิบัติงานสอบบัญชี ตามอภิธานศัพท์ของคู่มือฯ รวมสมาชิกทั้งหมดของกลุ่มที่ทำงานสอบบัญชีนั้น และบุคคลอื่นในสำนักงานที่มีอิทธิพลโดยตรงต่อผลของงานสอบบัญชี ครอบครัวที่ใกล้ชิดที่สุด คือคู่สมรส (หรือเทียบเท่า) หรือผู้ที่อยู่ในอุปการะ</li>
+      <li>“สภาฯ” คือสภาวิชาชีพบัญชี · พี่แพม พริ้ง พีท ผู้จัดการสำนักงาน และผู้ถือหุ้นที่กล่าวหา เป็นกรณีสมมติ หน้านี้ไม่ได้บอกว่าเรื่องที่กล่าวหาคืออะไร</li>
     </ul>
   </details>
 
   <section class="next">
     <small>บทถัดไป</small>
-    <b>ความเห็นนี้ เป็นของเราเองจริงไหม</b>
-    <p>หลัก (ข) ความเที่ยงธรรมและความเป็นอิสระ</p>
+    <b>สภาวิชาชีพบัญชีคืออะไร</b>
+    <p>ข้อบังคับ คู่มือฯ และคณะกรรมการจรรยาบรรณในบทนี้ มาจากสภาฯ ทั้งนั้น บทถัดไปดูว่าสภาฯ คือใคร ทำอะไร</p>
     <a class="btn" href="law2v-r06.html">ไปบทถัดไป</a>
   </section>
 </main>
@@ -486,111 +600,272 @@ a.xea-tri:hover { box-shadow:inset 0 0 0 2px var(--hue); }
 <script>
 (function () {
   var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function L(t) { return ' <span class="law">' + t + '</span>'; }
+  function sv(d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; }
+  function dOf(s) { return /d="([^"]+)"/.exec(s)[1]; }
   function mark(id, ok) { var c = $(id); c.className = c.className.replace(/ ?\b(ok|no)\b/g, '') + (ok ? ' ok' : ' no'); c.querySelector('.mk').innerHTML = V.icon(ok ? 'check' : 'x'); }
-  function line(id, c) { $(id).setAttribute('class', c); }
+  function line(id, ok) { $(id).setAttribute('class', ok ? 'ok' : 'no'); }
   function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
-  function law(t) { return '<span class="law">' + t + '</span>'; }
-  V.spy('#steps');
+  /* แถวผลแบบ .cg: โครงเดียวกันทุกแถว (ไอคอน หัว เหตุผล) */
+  function cg(id, cls, ico, b, s) { var e = $(id), d = e.children[1]; e.className = 'cg' + (cls ? ' ' + cls : ''); e.children[0].innerHTML = V.icon(ico); d.children[0].textContent = b; d.children[1].innerHTML = s; }
+  /* กล่องโจทย์: ข้อเท็จจริงที่ผู้เรียนเพิ่งเปลี่ยนเน้นด้วย <mark> ตอนเปิดหน้ายังไม่มีอะไรถูกเน้น */
+  function hl(t, on) { return on ? '<mark>' + t + '</mark>' : t; }
+  function out(id, cls, t, s) { $(id + 'O').className = 'x05-out' + (cls ? ' ' + cls : ''); $(id + 'T').textContent = t; $(id + 'S').innerHTML = s; }
 
-  /* ภาพหน้าพีท: วาดเฉพาะหน้านี้ (ของกลางมีแต่แพรกับพราว) */
-  var PETE = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="xeaF"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#xeaF)">' +
-    '<rect width="120" height="120" fill="#E3F3E8"/>' +
-    '<path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#5B8DB8"/><path d="M48 96l12 12 12-12 5 3-17 20-17-20z" fill="#FDFDFB"/>' +
-    '<path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/>' +
-    '<ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><ellipse cx="39.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="80.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/>' +
-    '<path d="M38.500 54c-3-20 6-31 21.500-31s24.500 11 21.500 31c-2-9-5-14-9-17-9 3-20 3-27 0-4 3-6 9-7 17z" fill="#1F1A17"/>' +
-    '<ellipse cx="50" cy="57" rx="5.2" ry="3.4" fill="#fff"/><ellipse cx="70" cy="57" rx="5.2" ry="3.4" fill="#fff"/>' +
-    '<circle cx="50.4" cy="57" r="2.9" fill="#2E1D14"/><circle cx="69.6" cy="57" r="2.9" fill="#2E1D14"/><circle cx="51.3" cy="56" r=".9" fill="#fff"/><circle cx="70.5" cy="56" r=".9" fill="#fff"/>' +
-    '<path d="M44 52.500q6-3.500 12-.500M64 52q6-3 12 .500" fill="none" stroke="#1F1A17" stroke-width="2.2" stroke-linecap="round"/>' +
-    '<path d="M60 59c-1 4-2 6-1 8h2.500" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/>' +
-    '<path d="M54 72c3.500 2.400 8.500 2.400 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>' +
-    '</g></svg>';
-  [].forEach.call(document.querySelectorAll('[data-xea-face]'), function (e, n) { e.innerHTML = PETE.replace(/xeaF/g, 'xeaF' + n); });
+  /* ภาพหน้าของพี่แพม พริ้ง และพีท (วาดเฉพาะหน้านี้ แบบเดียวกับหน้ารุ่นแรก) */
+  var faceN = 0;
+  function eyes(y, c) { return '<ellipse cx="50" cy="' + y + '" rx="5.2" ry="3.4" fill="#fff"/><ellipse cx="70" cy="' + y + '" rx="5.2" ry="3.4" fill="#fff"/><circle cx="50.4" cy="' + y + '" r="2.9" fill="' + c + '"/><circle cx="69.6" cy="' + y + '" r="2.9" fill="' + c + '"/><path d="M44.3 ' + (y - 1.5) + 'q5.7-4.6 11.4-.3M64.3 ' + (y - 1.8) + 'q5.7-4.3 11.4.3" fill="none" stroke="#2A1B15" stroke-width="1.7" stroke-linecap="round"/>'; }
+  function face(n) {
+    faceN++; var id = 'x05fc' + faceN, s = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="' + id + '"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#' + id + ')">';
+    if (n === 'pam') s += '<rect width="120" height="120" fill="#E3F3E8"/><circle cx="60" cy="20" r="12" fill="#2A1B15"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#0B3B3C"/><path d="M50 95l10 14 10-14 4 2-14 23-14-23z" fill="#FDFDFB"/><path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><ellipse cx="39.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="80.5" cy="58" rx="3" ry="5" fill="#F2CDB3"/><path d="M38.5 56c-4-22 6-33 22-33 15 0 25 9 21.5 33-2-10-6-17-13-20-7 6-18 8-26 8-2 3-3.5 7-4.5 12z" fill="#2A1B15"/><circle cx="39.5" cy="66" r="2.3" fill="#F0C84B"/><circle cx="80.5" cy="66" r="2.3" fill="#F0C84B"/>' + eyes(56, '#3B2418') + '<path d="M60 58c-1 4-2 6-1 8h2.5" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/><path d="M54 71c3.5 2.6 8.5 2.6 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>';
+    else if (n === 'pring') s += '<rect width="120" height="120" fill="#FBE6E4"/><path d="M31 54c-4 22-2 42 5 62h48c7-20 9-40 5-62z" fill="#4A2A1C"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#C9A227"/><path d="M49 95c3 8 19 8 22 0l4 2c-4 12-26 12-30 0z" fill="#FDFDFB"/><path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><path d="M38 60c-5-24 5-37 22-37s27 13 22 37c-1-11-4-19-9-23-4 5-12 9-24 9-6 2-9 7-11 14z" fill="#4A2A1C"/>' + eyes(57, '#3B2418') + '<path d="M60 59c-1 4-2 6-1 8h2.5" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/><path d="M54 72c3.5 2.6 8.5 2.6 12 0" fill="none" stroke="#A8483F" stroke-width="2" stroke-linecap="round"/>';
+    else s += '<rect width="120" height="120" fill="#FBF6E4"/><path d="M20 124c2-21 15-29 40-29s38 8 40 29z" fill="#2F6B8A"/><path d="M48 95l12 11 12-11 5 3-17 15-17-15z" fill="#FDFDFB"/><path d="M52 78h16v15c0 5-16 5-16 0z" fill="#D9A886"/><ellipse cx="39.5" cy="57" rx="3.2" ry="5.2" fill="#E8BE9F"/><ellipse cx="80.5" cy="57" rx="3.2" ry="5.2" fill="#E8BE9F"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#E8BE9F"/><path d="M38.5 52c-3-19 7-30 21.5-30s24.5 11 21.5 30c-2-8-6-13-11-15-8 3-17 3-23 1-4 3-7 8-9 14z" fill="#1E1612"/>' + eyes(57, '#2E1D14') + '<path d="M60 59c-1 4-2 6-1 8h2.5" fill="none" stroke="#B98A6C" stroke-width="1.4" stroke-linecap="round"/><path d="M54 72c3.5 2.2 8.5 2.2 12 0" fill="none" stroke="#8E4A3C" stroke-width="2" stroke-linecap="round"/>';
+    return s + '</g></svg>';
+  }
+  [].forEach.call(document.querySelectorAll('[data-x05face]'), function (e) { e.innerHTML = face(e.getAttribute('data-x05face')); });
 
-  /* 2 กรณีของพีท: เปลี่ยนยอดในเอกสารการขาย (ผลเปลี่ยน) · เปลี่ยนคนขอ (ผลไม่เปลี่ยน เส้นของคนขอทั้งสามลงที่ผลเดียวกัน)
-     ฐาน: R111.2 (ก) · R220.4 (ข) (ค) · 220.8 A1 · 270.3 A1 · R270.3 (ก) · ตัวอย่างต้นทาง 270.3 A2 */
-  var doc = 0, ask = 0, ASKER = ['หัวหน้า', 'พริ้ง', 'เพื่อนร่วมงาน'], ASKFULL = ['หัวหน้าของพีท', 'พริ้ง เจ้าของบริษัท', 'เพื่อนร่วมงานของพีท'];
-  function drawCase() { var ok = doc === 0;
-    $('reqWho').textContent = 'คำขอของ' + ASKER[ask];
-    $('cmpDoc').textContent = ok ? '1,500,000' : '1,200,000';
-    $('cmp').className = 'xea-cmp ' + (ok ? 'xea-match' : 'xea-diff');
-    $('cmpSign').textContent = ok ? '=' : '≠'; $('cmpSay').textContent = ok ? 'ตรงกัน' : 'ไม่ตรงกัน';
-    gate('gA', ok, ok ? 'พีทแก้ตามคำขอได้' : 'พีทแก้ตามคำขอไม่ได้',
-      ok ? 'บัญชีเดิมลงยอดขายขาดไป 300,000 บาท หลังแก้ บัญชีตรงกับเอกสาร เป็นการแก้ไขข้อมูลให้ถูกต้อง'
-         : 'บัญชีเดิมตรงกับเอกสารอยู่แล้ว ส่วนที่ขอเพิ่ม 300,000 บาทไม่มีการขายจริง ธนาคารที่อ่านงบจะเข้าใจผิด');
-    $('gALaw').innerHTML = ok ? law('R220.4 (ค)') + law('220.8 A1') : law('R111.2 (ก)') + law('R220.4 (ข)');
-    $('gAGo').setAttribute('href', ok ? '#s3' : '#s5');
-    $('gAGo').textContent = ok ? 'ตัวเลขตรงแล้ว ยังมีอีกข้อที่ต้องดู ไปเรื่องที่ 3' : 'ถ้างบแบบนี้ออกไปแล้ว พีททำอะไรต่อ ไปเรื่องที่ 5';
-    [0, 1, 2].forEach(function (i) { line('a' + i, i === ask ? (ok ? 'ok' : 'no') : ''); });
-    $('askBox').className = 'xea-same ' + (ok ? 'xea-good' : 'xea-bad');
-    $('askP').textContent = ok ? 'พีทแก้ตามคำขอได้' : 'พีทแก้ตามคำขอไม่ได้';
-    $('askR').innerHTML = (ask === 0 ? '<b>คนขอคือหัวหน้าของพีท</b> คู่มือเรียกหัวหน้าว่าผู้บังคับบัญชา ' : '<b>เปลี่ยนคนขอเป็น' + ASKFULL[ask] + ' ผลเท่าเดิม</b> ') +
-      (ok ? 'ผลมาจากยอดหลังแก้ที่ตรงกับเอกสาร ไม่ได้มาจากว่าใครเป็นคนขอ'
-          : 'ผลมาจากยอดหลังแก้ที่ไม่ตรงกับเอกสาร ไม่ได้มาจากว่าใครเป็นคนขอ ผู้ประกอบวิชาชีพบัญชีต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน ' + law('R270.3 (ก)') +
-            (ask === 1 ? ' เจ้าของบริษัทก็เป็นผู้อื่นตามข้อนี้' : ' คู่มือยกเพื่อนร่วมงานและผู้บังคับบัญชาเป็นตัวอย่างของความกดดันจากภายในองค์กร ' + law('270.3 A1'))); }
-  V.pick('doc', function (v) { doc = v; drawCase(); });
-  V.pick('ask', function (v) { ask = v; drawCase(); });
+  /* @s1 ห้าประเภท: ไอคอน ภาพห้าอย่างที่ดึงดุลยพินิจ และตัวอย่างจากคู่มือฯ 300.6 A1 (ในสำนักงาน รายการ x0–x4) กับ 200.6 A1 (คนที่บริษัทจ้าง รายการ y0–y4)
+     ห้าประเภทเป็นแถวที่เปิดทีละแถว (data-pick="thr") เปิดหน้ามาที่การสอบทานผลงานตนเอง ซึ่งเป็นเรื่องของพี่แพม */
+  var TIC = [V.icon('coin'), sv('M19.5 12a7.5 7.5 0 11-2.2-5.3M19.5 4.5V9H15M9 12.5l2 2 4-4.5'), V.icon('flag'), V.icon('heart'), sv('M12 3v9.5M8 8.5l4 4 4-4M5 16.5h14M7.5 20.5h9')],
+      TC = ['#2F6B8A', '#1F7A6B', '#B7791F', '#6B4E9B', '#B5532F'], TP = [[40, 84], [85, 42], [170, 26], [255, 42], [300, 84]];
+  [].forEach.call(document.querySelectorAll('[data-x05t]'), function (e) { e.innerHTML = TIC[+e.getAttribute('data-x05t')]; });
+  var ME = '<li class="x05-me">เรื่องของพี่แพม ทำบัญชีให้ลูกค้างานสอบบัญชี แล้วงานนั้นไปอยู่ในงบการเงินที่สำนักงานจะแสดงความเห็น' + L('คู่มือฯ 601.4 A1') + '</li>';
+  var EX = [
+    [['มีส่วนได้เสียทางการเงินโดยตรงกับลูกค้า', 'ตกลงค่าธรรมเนียมต่ำเพื่อให้ได้งานใหม่ ต่ำจนอาจยากที่จะทำงานได้ตามมาตรฐาน', 'มีความสัมพันธ์ทางธุรกิจที่ใกล้ชิดกับลูกค้า'],
+     ['ออกรายงานให้ความเชื่อมั่นว่าระบบทางการเงินได้ผล หลังจากที่ตนนำระบบนั้นมาใช้งาน', 'จัดเตรียมข้อมูลต้นฉบับที่ใช้ในการบันทึกรายการ ของงานที่ตนให้ความเชื่อมั่น'],
+     ['เป็นตัวแทนของลูกค้าในการดำเนินคดีหรือข้อพิพาทกับบุคคลที่สาม', 'ให้การสนับสนุนส่วนได้เสียหรือหุ้นของลูกค้า', 'โน้มน้าวเพื่อให้ลูกค้าได้รับผลประโยชน์ทางกฎหมาย ในนามของลูกค้า'],
+     ['สมาชิกในครอบครัวที่ใกล้ชิดหรือใกล้ชิดที่สุด เช่น คู่สมรส เป็นกรรมการหรือเจ้าหน้าที่บริหารของลูกค้า', 'สมาชิกกลุ่มผู้ปฏิบัติงานสอบบัญชีมีความสัมพันธ์อันยาวนานกับลูกค้างานสอบบัญชี'],
+     ['ถูกข่มขู่ว่าจะยกเลิกงาน เพราะความเห็นไม่ตรงกันในเรื่องทางวิชาชีพ', 'ได้รับแจ้งว่าจะไม่ได้เลื่อนตำแหน่งตามแผน จนกว่าจะเห็นด้วยกับการปฏิบัติด้านบัญชีที่ไม่เหมาะสม']],
+    [['มีส่วนได้เสียทางการเงิน หรือได้รับเงินกู้หรือการค้ำประกัน จากองค์กรผู้ว่าจ้าง', 'ได้รับข้อเสนอเป็นของขวัญ หรือการปฏิบัติเป็นพิเศษ จากคู่ค้าขององค์กรผู้ว่าจ้าง'],
+     ['เป็นผู้กำหนดวิธีปฏิบัติทางบัญชีของการรวมธุรกิจ หลังจากที่ตัวเองศึกษาความเป็นไปได้เพื่อสนับสนุนการตัดสินใจซื้อ'],
+     ['มีโอกาสตกแต่งข้อมูลในหนังสือชี้ชวน เพื่อให้ได้ประโยชน์จากการจัดหาเงินทุน'],
+     ['มีความสัมพันธ์อันยาวนานกับบุคคลผู้มีอิทธิพลต่อการตัดสินใจทางธุรกิจ'],
+     ['เผชิญการถูกปลดหรือโยกย้าย เพราะข้อขัดแย้งเกี่ยวกับการใช้หลักการบัญชี']]];
+  function lis(a) { return a.map(function (t) { return '<li>' + t + '</li>'; }).join(''); }
+  EX[0].forEach(function (a, i) { $('x' + i).innerHTML = (i === 1 ? ME : '') + lis(a); });
+  EX[1].forEach(function (a, i) { $('y' + i).innerHTML = lis(a); });
+  [].forEach.call(document.querySelectorAll('[data-x05chev]'), function (e) { e.innerHTML = sv('M6 9.5l6 6 6-6'); });
+  /* ภาพห้าอย่างที่ดึง: ประเภทที่เปิดอยู่เด่น เส้นทึบ ประเภทอื่นจาง · แตะวงกลมในภาพได้ผลเหมือนแตะแถว */
+  var thrB = [].slice.call(document.querySelectorAll('[data-pick="thr"] button[data-v]'));
+  function wheel(sel) { var w = '<svg viewBox="0 0 340 150" aria-hidden="true">';
+    TP.forEach(function (p, i) { w += '<path d="M' + p[0] + ' ' + p[1] + 'L170 108" fill="none" stroke="' + TC[i] + '" stroke-linecap="round"' + (i === sel ? ' stroke-width="5"' : ' stroke-width="4" stroke-dasharray="2 9" opacity=".5"') + '/>'; });
+    w += '<circle cx="170" cy="108" r="32" fill="#fff" stroke="#1C4257" stroke-width="3"/><g transform="translate(152 90) scale(1.5)" fill="none" stroke="#1C4257" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="' + dOf(V.icon('scale')) + '"/></g>';
+    TP.forEach(function (p, i) { w += '<g data-t="' + i + '"' + (i === sel ? '' : ' opacity=".55"') + '>' + (i === sel ? '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="25" fill="#fff" stroke="' + TC[i] + '" stroke-width="3"/>' : '') +
+      '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="21" fill="' + TC[i] + '"/><g transform="translate(' + (p[0] - 12) + ' ' + (p[1] - 12) + ')" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="' + dOf(TIC[i]) + '"/></g></g>'; });
+    $('wheel').innerHTML = w + '</svg>';
+    [].forEach.call($('wheel').querySelectorAll('g[data-t]'), function (g) { g.onclick = function () { thrB[+g.getAttribute('data-t')].onclick(); }; }); }
+  V.pick('thr', function (v) { thrB.forEach(function (b, i) { $('tb' + i).hidden = i !== v; $('th' + i).className = 'x05-th x05-t' + i + (i === v ? ' x05-on' : ''); b.setAttribute('aria-expanded', i === v ? 'true' : 'false'); }); wheel(v); });
 
-  /* 3 สองข้อที่งบของพีทต้องผ่าน: ตัวเลขตรงกับเอกสาร (ข้อเท็จจริงเดียวกับเรื่องที่ 2) · ไม่ละเว้นข้อมูลโดยมีเจตนาให้เข้าใจผิด R220.4 (ง)
-     ช่องแรกไม่ใช้ถ้อยคำ R220.4 (ค)(1) “ถูกต้องและครบถ้วน” เพราะเมื่อข้อมูลถูกตัดออก ช่องนั้นจะติ๊กถูกไม่ได้ · ตัวอย่างต้นทาง 220.5 A1 ข้อสุดท้าย */
-  V.togs('inf', function (s) { mark('i0', s.num); mark('i1', s.dis); line('n0', s.num ? 'ok' : 'no'); line('n1', s.dis ? 'ok' : 'no');
-    $('tNum').textContent = s.num ? 'ยอดขาย 1,500,000 บาท ตามเอกสารการขาย' : 'ยอดขายในงบไม่ตรงกับเอกสารการขาย';
-    $('tDis').textContent = s.dis ? 'ไม่ได้ตัดออก' : 'ถูกตัดออก เพื่อให้ธนาคารเข้าใจว่าบริษัทไม่มีความเสี่ยงนี้';
-    var all = s.num && s.dis;
-    gate('gI', all, all ? 'งบชุดนี้ผ่านทั้งสองข้อ' : 'งบชุดนี้ยังนำเสนอไม่ได้',
-      all ? 'ตัวเลขตรงกับเอกสาร และไม่ได้ละเว้นข้อมูลเพื่อให้เข้าใจผิด'
-          : (s.num ? 'ตัวเลขถูกทุกตัว แต่ละเว้นข้อมูลความเสี่ยงทางการเงินเพื่อให้ธนาคารเข้าใจผิด'
-                   : (s.dis ? 'ข้อมูลความเสี่ยงอยู่ครบ แต่ตัวเลขไม่ตรงกับเอกสาร' : 'ติดทั้งสองข้อ ตัวเลขไม่ตรงกับเอกสาร และละเว้นข้อมูลเพื่อให้เข้าใจผิด')));
-    $('gILaw').innerHTML = (s.num ? '' : law('R220.4 (ข)') + law('R111.2 (ก)')) + (s.dis ? '' : law('R220.4 (ง)') + law('R111.2 (ค)')); });
+  /* @fa แบบฝึกแยกแยะ: สี่เรื่องจากคู่มือฯ 200.6 A1 และ 300.6 A1 */
+  var QT = 'เป็นอุปสรรคประเภทไหน';
+  V.check('ck1a', { f: 'คู่ค้ารายหนึ่งของบริษัทเสนอของขวัญให้พีท ผู้ทำบัญชีที่บริษัทจ้าง', q: QT, o: [
+    ['ผลประโยชน์ส่วนตน', 1, 'ของขวัญเป็นผลประโยชน์อื่นของพีทเอง คู่มือฯ ยกเรื่องนี้ไว้ในประเภทนี้ (คู่มือฯ 200.6 A1)'],
+    ['ความคุ้นเคย', 0, 'ความคุ้นเคยดูที่ความสัมพันธ์อันยาวนานหรือใกล้ชิด เรื่องนี้ตัวดึงคือของที่พีทจะได้เอง']] });
+  V.check('ck1b', { f: 'นักบัญชีของบริษัทแห่งหนึ่งศึกษาความเป็นไปได้ของการซื้อกิจการ แล้วเป็นคนกำหนดวิธีปฏิบัติทางบัญชีของการรวมธุรกิจนั้นเอง', q: QT, o: [
+    ['การเป็นผู้ให้การสนับสนุน', 0, 'ประเภทนั้นคือการสนับสนุนสถานภาพของลูกค้าหรือผู้ว่าจ้าง เรื่องนี้ตัวดึงคืองานก่อนหน้าของตัวเอง'],
+    ['การสอบทานผลงานตนเอง', 1, 'งานชิ้นหลังตั้งอยู่บนผลของงานที่เขาทำเองก่อนหน้า (คู่มือฯ 200.6 A1)']] });
+  V.check('ck1c', { f: 'ผู้สอบบัญชีคนหนึ่งถือหุ้นของบริษัทที่ตัวเองสอบบัญชี', q: QT, o: [
+    ['ความคุ้นเคย', 0, 'ถือหุ้นไม่ได้แปลว่าสนิทกัน สิ่งที่ดึงคือส่วนได้เสียทางการเงินของตัวเอง'],
+    ['ผลประโยชน์ส่วนตน', 1, 'หุ้นเป็นส่วนได้เสียทางการเงินโดยตรงกับลูกค้า (คู่มือฯ 300.6 A1)']] });
+  V.check('ck1d', { f: 'นักบัญชีของบริษัทแห่งหนึ่งเผชิญการถูกโยกย้าย เพราะข้อขัดแย้งเกี่ยวกับการใช้หลักการบัญชี', q: QT, o: [
+    ['การถูกข่มขู่', 1, 'สิ่งที่ยับยั้งเขาคือแรงกดดัน (คู่มือฯ 200.6 A1)'],
+    ['ผลประโยชน์ส่วนตน', 0, 'การโยกย้ายกระทบตัวเขาก็จริง แต่สิ่งที่เกิดคือแรงกดดันที่ยับยั้งเขา ไม่ใช่ประโยชน์ที่เขาจะได้']] });
 
-  /* 4 ปรึกษาใคร: 270.3 A4 ข้อแรกกับข้อที่สอง เงื่อนไขของข้อที่สองคือผู้บังคับบัญชาไม่ได้เป็นบุคคลที่สร้างความกดดัน */
-  V.pick('prs', function (v) { var boss = v === 0;
-    $('prA').textContent = 'ในเรื่องนี้คือ' + (boss ? 'หัวหน้าของพีท' : 'เพื่อนร่วมงานของพีท');
-    $('prBox').className = 'cg xea-cg ' + (boss ? 'lock' : 'ok');
-    $('prIco').innerHTML = V.icon(boss ? 'x' : 'check');
-    $('prB').textContent = boss ? 'หัวหน้าเป็นบุคคลที่สร้างความกดดัน ไม่ตรงเงื่อนไขของข้อนี้' : 'หัวหน้าไม่ได้เป็นบุคคลที่สร้างความกดดัน ตรงเงื่อนไขของข้อนี้'; });
+  /* @s2 จัดการอุปสรรคที่ไม่อยู่ในระดับที่ยอมรับได้ (คู่มือฯ R120.10 · 120.10 A1) */
+  var FIX = [
+    ['', 'ทำงานต่อทั้งอย่างนี้ไม่ได้', 'อุปสรรคยังอยู่เหนือระดับที่ยอมรับได้ ต้องขจัด หรือลดให้ถึงระดับนั้น' + L('คู่มือฯ R120.10')],
+    ['x05-fine', 'อุปสรรคหมดไป', 'ขจัดเหตุการณ์แวดล้อม รวมถึงผลประโยชน์หรือความสัมพันธ์ ที่ทำให้เกิดอุปสรรคนั้น' + L('คู่มือฯ R120.10')],
+    ['x05-fine', 'อุปสรรคลดลงถึงระดับที่ยอมรับได้', 'ใช้มาตรการป้องกันเท่าที่มีอยู่และนำมาปฏิบัติได้ เหตุยังอยู่ แต่ลดลงมาใต้เส้น' + L('คู่มือฯ R120.10')],
+    ['x05-grey', 'ไม่ทำงานนั้น', 'ปฏิเสธ หรือยุติกิจกรรมทางวิชาชีพนั้น บางสถานการณ์จัดการอุปสรรคได้ทางนี้ทางเดียว' + L('คู่มือฯ R120.10 · 120.10 A1')]];
+  var FIXC = ['พี่แพมยังไม่ได้จัดการอะไร และจะทำงานต่อ', 'พี่แพมขจัดเหตุการณ์แวดล้อมที่ทำให้เกิดอุปสรรคนั้น', 'พี่แพมใช้มาตรการป้องกันที่มีอยู่และนำมาปฏิบัติได้ ซึ่งลดอุปสรรคนั้นลงได้', 'พี่แพมปฏิเสธ หรือยุติงานนั้น'], fixV = 0, fixCh = false;
+  V.pick('fix', function (v) { if (v !== fixV) fixCh = true; fixV = v; $('lv').className = 'x05-lv x05-s' + v;
+    $('fixC').innerHTML = 'พี่แพมประเมินอุปสรรคเรื่องหนึ่งแล้ว เห็นว่าอยู่เหนือระดับที่ยอมรับได้ ' + hl(FIXC[v], fixCh);
+    out('fix', FIX[v][0], FIX[v][1], FIX[v][2]); });
+  V.check('ck2', { q: 'เรื่องที่คู่มือฯ ไม่ได้ห้ามไว้ตรง ๆ สรุปได้เลยไหมว่ายอมรับได้', o: [
+    ['สรุปได้เลย', 0, 'ไม่มีข้อห้ามเขียนไว้ ไม่ได้แปลว่าอุปสรรคอยู่ในระดับที่ยอมรับได้ ยังต้องประเมินจากมุมของบุคคลที่สาม'],
+    ['ยังสรุปไม่ได้', 1, 'ต้องประเมินก่อน จะสรุปว่ายอมรับได้ เพียงเพราะไม่ได้ต้องห้ามอย่างเฉพาะเจาะจง ไม่ได้ (คู่มือฯ 120.1)']] });
 
-  /* 5 รู้ทีหลัง: R111.3 · R220.8 · 220.8 A1 · 220.8 A2 · R220.9
-     ลำดับมาจากถ้อยคำของคู่มือเอง: 220.8 A2 “ยังมิได้ดำเนินการอย่างเหมาะสม … การดำเนินการเพิ่มเติม” · R220.9 “หลังจากได้ใช้ทางเลือกที่มีจนหมดแล้ว”
-     งบถึงธนาคารหรือยัง: เปลี่ยนผลเฉพาะใน 220.8 A1 (แจ้งแก้ไขข้อมูลให้ถูกต้อง เมื่อข้อมูลเปิดเผยไปยังผู้ใช้รายงานแล้ว) · R220.9 ไม่มีเงื่อนไขเรื่องนี้ */
-  var esc = 0, sent = 0;
-  function drawEsc() {
-    var cls = [['xea-fix', 'xea-far', 'xea-far'], ['xea-tried', 'xea-fix', 'xea-far'], ['xea-tried', 'xea-tried', 'xea-stop']][esc],
-        st = [['บริษัทแก้ไขข้อมูลให้ถูกต้อง', 'ไปไม่ถึงข้อนี้', 'ไปไม่ถึงข้อนี้'],
-              ['ปรึกษาและขอให้แก้ไขแล้ว บริษัทยังไม่ดำเนินการ', 'บริษัทแก้ไขข้อมูลให้ถูกต้อง', 'ไปไม่ถึงข้อนี้'],
-              ['ปรึกษาและขอให้แก้ไขแล้ว บริษัทยังไม่ดำเนินการ', 'ดำเนินการเพิ่มเติมแล้ว ข้อมูลยังคงทำให้เข้าใจผิด', 'ข้อนี้ใช้กับพีทแล้ว']][esc];
-    [0, 1, 2].forEach(function (i) { $('L' + i).className = cls[i]; $('L' + i + 's').textContent = st[i]; });
-    $('W1').className = 'xea-when' + (esc >= 1 ? ' xea-met' : ''); $('W2').className = 'xea-when' + (esc === 2 ? ' xea-met' : '');
-    $('send').className = 'xea-send' + (sent ? ' xea-sent' : '');
-    $('actTell').className = 'xea-act' + (sent ? ' xea-lit' : '');
-    $('actTellS').textContent = sent ? 'งบถึงธนาคารแล้ว' : 'ใช้เมื่อข้อมูลเปิดเผยไปยังผู้ใช้รายงานแล้ว';
-    var r = $('escR'), fixed = esc < 2; r.className = 'result xea-res' + (fixed ? ' ok' : ' xea-halt');
-    r.innerHTML = fixed
-      ? '<b>' + (esc === 0 ? 'บริษัทแก้ไขข้อมูลให้ถูกต้อง หลังพีทปรึกษาและขอให้แก้ไข' : 'บริษัทแก้ไขข้อมูลให้ถูกต้อง หลังพีทดำเนินการเพิ่มเติม') + '</b> ' +
-        (sent ? 'งบถึงธนาคารแล้ว การดำเนินการเพื่อแก้ไขเรื่องนี้จึงอาจรวมถึงอีกอย่างหนึ่ง คู่มือเขียนว่า ถ้าข้อมูลนั้นได้รับการเปิดเผยไปยังผู้ตั้งใจจะให้เป็นผู้ใช้รายงานแล้ว ให้แจ้งแก้ไขข้อมูลให้ถูกต้อง '
-              : 'งบยังไม่ถึงธนาคาร ส่วนการแจ้งแก้ไขข้อมูลให้ถูกต้อง คู่มือเขียนไว้สำหรับข้อมูลที่เปิดเผยไปยังผู้ตั้งใจจะให้เป็นผู้ใช้รายงานแล้ว ') + law('220.8 A1')
-      : '<b>ใช้ทางเลือกที่มีจนหมดแล้ว และยังมีเหตุผลที่เชื่อได้ว่าข้อมูลยังคงทำให้เข้าใจผิดอยู่</b> คู่มือเขียนว่าต้องปฏิเสธที่จะเกี่ยวข้องกับข้อมูล หรือปฏิเสธที่จะยังคงข้อมูลดังกล่าวไว้ต่อไป ' + law('R220.9') +
-        '<span class="xea-keep"><b>' + (sent ? 'งบถึงธนาคารแล้ว ผลไม่เปลี่ยน' : 'งบยังไม่ถึงธนาคาร ผลก็เป็นแบบนี้') + '</b> เพราะ R220.9 ไม่ได้เขียนเงื่อนไขว่าข้อมูลถึงผู้ใช้แล้วหรือยัง ส่วนการสื่อสารกับผู้ใช้ข้อมูล คู่มือเขียนไว้ในข้อ 2 ให้พิจารณาว่ามีข้อกำหนดอื่นใดให้สื่อสารกับบุคคลที่สาม รวมทั้งผู้ใช้ข้อมูล ' + law('220.8 A2') + '</span>'; }
-  V.pick('esc', function (v) { esc = v; drawEsc(); });
-  V.pick('sent', function (v) { sent = v; drawEsc(); });
+  /* @s3 งานทำบัญชีให้ลูกค้างานสอบบัญชี: คู่มือฯ R601.5 · 601.5 A1–A3 · R601.6 · 600.15 A2 · R400.13 · R400.14 · R120.9 · R600.25
+     pie = ลูกค้าไม่ใช่กิจการที่มีส่วนได้เสียสาธารณะ · dec = ลูกค้าตัดสินใจเอง · sg = มาตรการป้องกันที่ใช้ (สองแบบ ผลเท่ากัน) · late = รับงานมาแล้ว
+     jobLast = ข้อเท็จจริงที่ผู้เรียนเพิ่งเปลี่ยน ใช้เน้นในกล่องโจทย์ jobC */
+  var job = { pie: true, dec: true }, sg = 0, late = 0, jobLast = '';
+  var SG = ['ให้พนักงานนอกทีมสอบบัญชีเป็นคนลงบัญชี', 'ให้ผู้สอบทานที่เหมาะสม ซึ่งไม่เกี่ยวข้องกับงานลงบัญชี สอบทาน'];
+  function job3() { var p = job.pie, d = job.dec, open = p && d, t, s, l;
+    $('pieS').textContent = late ? 'ปิดข้อนี้ คือบริษัทเข้าจดทะเบียนหลังจากรับงานแล้ว' : 'ปิดข้อนี้ คือเป็นบริษัทจดทะเบียน';
+    mark('q0', p); line('jq0', p); $('q0s').textContent = p ? 'ไม่ใช่กิจการที่มีส่วนได้เสียสาธารณะ' : 'บริษัทจดทะเบียน เป็นกิจการที่มีส่วนได้เสียสาธารณะ';
+    mark('q1', d); line('jq1', d); $('q1s').textContent = d ? 'งานแบบประจำ พริ้งตัดสินใจเอง' : 'สำนักงานตัดสินใจแทนพริ้ง';
+    mark('q2', p); line('jq2', p); $('q2s').textContent = p ? (sg ? 'มีผู้สอบทานที่เหมาะสม' : 'คนนอกทีมสอบบัญชีลงบัญชี') : 'กับลูกค้าแบบนี้ ลดอุปสรรคไม่ได้';
+    $('jobC').innerHTML = 'สำนักงานของพี่แพมเป็นผู้สอบบัญชีของบริษัท พาวเด้ออ้าย จำกัด ' +
+      hl(late ? 'และรับลงบัญชีค่าน้ำค่าไฟประจำเดือนให้พริ้งมาแล้วหนึ่งปี' : 'พริ้งเพิ่งขอให้ลงบัญชีค่าน้ำค่าไฟประจำเดือนให้ด้วย สำนักงานยังไม่ได้รับงาน', jobLast === 'late') + ' ' +
+      hl(p ? 'บริษัทไม่ได้จดทะเบียนในตลาดหลักทรัพย์' : (late ? 'ตอนนี้บริษัทเข้าจดทะเบียนในตลาดหลักทรัพย์แล้ว' : 'บริษัทเป็นบริษัทจดทะเบียนในตลาดหลักทรัพย์'), jobLast === 'pie') + ' ' +
+      hl(d ? 'พริ้งเป็นคนตัดสินใจเองว่ารายการไหนลงบัญชีใด' : 'สำนักงานเป็นคนตัดสินใจแทนพริ้งว่ารายการไหนลงบัญชีใด', jobLast === 'dec') + ' ' +
+      hl('สำนักงาน' + (late ? '' : 'จะ') + SG[sg], jobLast === 'sg');
+    if (open) { t = late ? 'ทำงานลงบัญชีนี้ต่อได้' : 'รับงานลงบัญชีนี้ได้';
+      s = 'ผ่านสองข้อ และสำนักงาน' + SG[sg] + ' สำนักงานยังต้องพอใจว่าพริ้งตัดสินใจเองทั้งหมด';
+      l = 'มาตรการป้องกันสองแบบนี้คู่มือฯ ยกไว้กับงานทำบัญชีให้ลูกค้างานสอบบัญชี เปลี่ยนแบบแล้วผลไม่เปลี่ยน' + L('คู่มือฯ R601.5 · 601.5 A3 · R400.14'); }
+    else if (!p) { t = late ? 'ต้องยุติงานลงบัญชี' : 'ต้องไม่รับงานนี้';
+      s = (late ? 'ข้อเท็จจริงเปลี่ยน ต้องประเมินใหม่ และยุติก่อน หรือโดยเร็วที่สุดเท่าที่ปฏิบัติได้ หลังจากลูกค้าเปลี่ยนเป็นกิจการที่มีส่วนได้เสียสาธารณะ' : 'บริษัทจดทะเบียนเป็นกิจการที่มีส่วนได้เสียสาธารณะ งานเดิม มาตรการเดิม แต่กับลูกค้าแบบนี้ อุปสรรคขจัดไม่ได้ และมาตรการป้องกันลดไม่ได้') + (d ? '' : ' และสำนักงานยังตัดสินใจแทนลูกค้าด้วย');
+      l = 'คู่มือฯ ห้ามให้บริการด้านการบัญชีและการจัดทำบัญชี แก่ลูกค้างานสอบบัญชีที่เป็นกิจการที่มีส่วนได้เสียสาธารณะ' + L(late ? 'คู่มือฯ R601.6 · R120.9 · R600.25' : 'คู่มือฯ R601.6 · 600.15 A2'); }
+    else { t = late ? 'ทำแบบนี้ต่อไม่ได้' : 'รับงานแบบนี้ไม่ได้';
+      s = 'งานเล็กเท่าเดิม แต่การกำหนดหรืออนุมัติว่ารายการลงบัญชีใด เป็นความรับผิดชอบของผู้บริหารของลูกค้า สำนักงานต้องไม่ทำแทน';
+      l = 'ถ้าพริ้งกลับมาตัดสินใจเอง ผลกลับเป็นแบบตัวอย่าง' + L('คู่มือฯ R400.13 · 601.2 A1'); }
+    gate('g3', open, t, s); $('g3L').innerHTML = l; }
+  V.togs('job', function (s) { if (s.pie !== job.pie) jobLast = 'pie'; else if (s.dec !== job.dec) jobLast = 'dec'; job = s; job3(); });
+  V.pick('sg', function (v) { if (v !== sg) jobLast = 'sg'; sg = v; job3(); });
+  V.pick('late', function (v) { if (v !== late) jobLast = 'late'; late = v; job3(); });
+  V.check('ck3', { f: 'พริ้งเปลี่ยนคำขอ เป็นให้สำนักงานคำนวณเงินเดือนตามข้อมูลที่พริ้งให้ โดยพริ้งอนุมัติและทำจ่ายเอง', q: 'สองข้อบนภาพยังผ่านไหม', o: [
+    ['ยังผ่าน', 1, 'คู่มือฯ ยกการคำนวณเงินเดือนแบบนี้เป็นตัวอย่างงานแบบประจำ และคนตัดสินใจยังเป็นพริ้ง (คู่มือฯ 601.5 A2)'],
+    ['ไม่ผ่านแล้ว', 0, 'ชนิดของงานเปลี่ยน แต่สิ่งที่ภาพตรวจคือลูกค้าเป็นใคร และใครตัดสินใจ ซึ่งยังเหมือนเดิม']] });
 
-  /* ลองดู */
+  /* @s4 ลำดับของข้อ 16 (ข้อบังคับจรรยาบรรณ พ.ศ. 2569) · ข้อ 17 · ข้อ 9 (ง) */
+  var LAD = [null,
+    ['เริ่มที่คิดเองให้ครบ', 'ข้อบังคับให้พิจารณาปัจจัยที่เกี่ยวข้อง กำหนดทางเลือก และให้น้ำหนักผลกระทบของแต่ละทางก่อน' + L('ข้อ 16')],
+    ['ตอนนี้ ปรึกษาคนที่เหมาะสมในสำนักงาน', 'คิดครบแล้วยังไม่ได้ข้อยุติ ลำดับแรกอยู่ในที่ทำงานของตัวเอง ยังไม่ถึงตอนถอนตัวหรือลาออก' + L('ข้อ 16 (ก)')],
+    ['ตอนนี้ ปรึกษาผู้มีหน้าที่กำกับดูแลขององค์กร', 'ขั้นนี้ใช้เมื่อเรื่องเป็นข้อขัดแย้งกับองค์กร หรือภายในองค์กร และต้องเลือกด้วยว่าจะติดต่อกับใครในโครงสร้างการกำกับดูแล จึงเหมาะกับเรื่อง' + L('ข้อ 16 (ข) · ข้อ 17')],
+    ['ตอนนี้ ขอคำปรึกษาทางวิชาชีพจากข้างนอกได้', 'ใช้เมื่อยังไม่ได้ข้อยุติเกี่ยวกับความขัดแย้งที่มีนัยสำคัญ คนนอกที่เขียนไว้มีสองที่ และต้องไม่ละเมิดหลักการรักษาความลับ' + L('ข้อ 16 (ค)')],
+    ['ตอนนี้ ปฏิเสธที่จะเกี่ยวข้อง แล้วเลือกทางออก', 'ทำทุกทางที่เป็นไปได้จนหมดแล้วยังไม่ได้ข้อยุติ ทางออกมีสามระดับ ต้องตัดสินใจเองว่าระดับใดเหมาะกับเรื่องนั้น' + L('ข้อ 16')]];
+  var LADC = [null, 'พี่แพมเพิ่งเจอเรื่องนี้ ยังไม่ได้คิดทางเลือกให้ครบ', 'พี่แพมคิดทางเลือกครบแล้ว ยังไม่ได้ข้อยุติ', 'พี่แพมปรึกษาคนในสำนักงานแล้ว ยังเห็นไม่ตรงกับผู้จัดการสำนักงาน',
+    'พี่แพมปรึกษาผู้มีหน้าที่กำกับดูแลแล้ว ยังไม่ได้ข้อยุติ และเห็นว่าเป็นความขัดแย้งที่มีนัยสำคัญ', 'พี่แพมทำทุกทางที่เป็นไปได้จนหมดแล้ว ยังไม่ได้ข้อยุติ'], ladV = 2, ladCh = false;
+  V.pick('lad', function (v) { var i, b, e; if (v !== ladV) ladCh = true; ladV = v;
+    $('ladC').innerHTML = 'พี่แพมบอกพริ้งแล้วว่าสำนักงานตัดสินใจลงบัญชีแทนไม่ได้ พริ้งยังยืนยัน และผู้จัดการสำนักงานอยากรับงานไว้ ' + hl(LADC[v], ladCh);
+    for (i = 1; i <= 5; i++) { e = $('st' + i); b = e.querySelector('i'); e.className = 'x05-step' + (i < v ? ' x05-past' : ''); b.innerHTML = i < v ? V.icon('check') : (i === v ? face('pam') : String(i)); }
+    $('exits').className = 'x05-exits' + (v === 5 ? ' x05-lit' : ''); out('lad', 'x05-grey', LAD[v][0], LAD[v][1]); });
+  $('lfr').onclick = function () { var on = this.getAttribute('aria-pressed') !== 'true'; this.setAttribute('aria-pressed', on ? 'true' : 'false'); $('lfrO').hidden = !on; };
+  V.check('ck4', { q: 'ถอนตัวหรือลาออก อยู่ตรงไหนของลำดับ', o: [
+    ['ทันทีที่เห็นไม่ตรงกัน', 0, 'ก่อนถึงตรงนั้นยังมีการคิดเองให้ครบ และการขอคำปรึกษาตามลำดับ'],
+    ['เมื่อทำทุกทางแล้ว', 1, 'ดำเนินการทุกทางที่เป็นไปได้จนหมดแล้วยังไม่ได้ข้อยุติ จึงปฏิเสธที่จะเกี่ยวข้อง และตัดสินใจเรื่องถอนตัวหรือลาออก (ข้อ 16)']] });
+
+  /* @s5 โทษตาม ม.49 (1)–(4) · ม.70 (บอกเพียงว่ามีโทษทางอาญา) · ม.40 · ม.41 (4) · ม.50 (3)
+     กำหนดเวลาพักใช้ y ปี: y <= 3 สั่งได้ (ไม่เกินสามปี รวม 3 ปีพอดี) · y > 3 เกินเพดาน */
+  var pen = 2, yrs = 1, penCh = false, PN = ['ตักเตือนเป็นหนังสือ', 'ภาคทัณฑ์', 'พักใช้ใบอนุญาต', 'เพิกถอนใบอนุญาต'];
+  var M70 = 'มาตรา 70 ใช้กับผู้ถูกลงโทษตาม (3) หรือ (4) ที่ยังประกอบวิชาชีพบัญชีในระหว่างนั้น โทษระดับนี้ไม่ได้พักหรือเพิกถอนอะไร' + L('ม.70'),
+      EVER = 'นับว่าเคยถูกลงโทษจรรยาบรรณแล้ว คนที่เคยถูกลงโทษเป็นกรรมการจรรยาบรรณไม่ได้' + L('ม.50');
+  function pens() { var over = pen === 2 && yrs > 3, lic = $('lic');
+    $('pdur').hidden = pen !== 2; $('pfill').style.width = (yrs * 20) + '%';
+    $('penC').innerHTML = 'ต่อมามีคนกล่าวหาพี่แพม และคณะกรรมการจรรยาบรรณมีมติว่าพี่แพมประพฤติผิดจรรยาบรรณ สมมติคำสั่งลงโทษคือ ' + hl(PN[pen] + (pen === 2 ? ' ' + yrs + ' ปี' : ''), penCh);
+    lic.className = 'x05-lic' + (pen === 2 && !over ? ' x05-hold' : (pen === 3 ? ' x05-dead' : ''));
+    $('seal').textContent = pen < 2 ? 'ยังใช้ได้' : (pen === 3 ? 'สิ้นผล' : (over ? 'คำสั่งนี้ออกไม่ได้' : 'พักใช้ ' + yrs + ' ปี'));
+    $('penH').textContent = over ? 'ถ้าคำสั่งคือพักใช้ ' + yrs + ' ปี' : 'ถ้าคำสั่งคือ' + PN[pen] + (pen === 2 ? ' ' + yrs + ' ปี' : '');
+    if (over) { cg('pr0', 'lock', 'x', 'เกินเพดานของโทษระดับนี้', 'กฎหมายให้กำหนดเวลาได้ แต่ไม่เกินสามปี ' + yrs + ' ปีจึงสั่งไม่ได้' + L('ม.49 (3)'));
+      cg('pr1', 'x05-neu', 'info', 'ถ้าต้องการให้หนักกว่า 3 ปี', 'ระดับถัดไปคือเพิกถอนใบอนุญาต ซึ่งไม่มีกำหนดเวลา' + L('ม.49 (4)'));
+      cg('pr2', 'x05-neu', 'clock', 'เพดานคือ 3 ปีพอดี', 'เลื่อนกลับมาที่ 3 ปี ยังสั่งได้ เพราะ 3 ปีไม่เกินสามปี'); return; }
+    if (pen < 2) { cg('pr0', 'ok', 'check', 'ใบอนุญาตของพี่แพมยังอยู่', PN[pen] + 'ไม่ได้พักหรือเพิกถอนใบอนุญาต' + L('ม.49 (' + (pen + 1) + ')'));
+      cg('pr1', 'x05-neu', 'info', 'โทษทางอาญาตามมาตรา 70 ไม่ใช้กับระดับนี้', M70); cg('pr2', 'x05-neu', 'flag', 'หลังจากนั้น', EVER); return; }
+    if (pen === 2) { cg('pr0', 'lock', 'lock', 'ใบอนุญาตของพี่แพมถูกพักใช้ ' + yrs + ' ปี', (yrs === 3 ? '3 ปีพอดี เท่ากับเพดาน ยังไม่เกินสามปี จึงสั่งได้' : yrs + ' ปี ไม่เกินสามปี จึงสั่งได้') + L('ม.49 (3)'));
+      cg('pr1', 'lock', 'x', 'รับงานสอบบัญชีระหว่างนั้น มีโทษทางอาญา', 'ผู้ถูกลงโทษตาม (3) ที่ทำการประกอบวิชาชีพบัญชีในระหว่างนั้น มีความผิด' + L('ม.70'));
+      cg('pr2', 'x05-neu', 'clock', 'หลังจากนั้น', 'โทษนี้มีกำหนดเวลา ' + yrs + ' ปี และ' + EVER); return; }
+    cg('pr0', 'lock', 'x', 'ใบอนุญาตของพี่แพมสิ้นผล', 'ใบอนุญาตสิ้นผลเมื่อถูกเพิกถอนเนื่องจากประพฤติผิดจรรยาบรรณ' + L('ม.49 (4) · ม.41 (4)'));
+    cg('pr1', 'lock', 'x', 'รับงานสอบบัญชีระหว่างนั้น มีโทษทางอาญา', 'ผู้ถูกลงโทษตาม (4) ที่ทำการประกอบวิชาชีพบัญชีในระหว่างนั้น มีความผิด' + L('ม.70'));
+    cg('pr2', 'x05-neu', 'clock', 'ทางกลับมา', 'ขอรับใบอนุญาตอีกได้เมื่อพ้น 5 ปีนับแต่วันที่ถูกสั่งเพิกถอน ถูกปฏิเสธ ยื่นได้อีกเมื่อสิ้น 1 ปี ถูกปฏิเสธครั้งที่สอง หมดสิทธิ' + L('ม.40')); }
+  V.pick('pen', function (v) { if (v !== pen) penCh = true; pen = v; pens(); });
+  V.nums('yrs', function (s) { if (s.y !== yrs) penCh = true; yrs = s.y; pens(); });
+  V.check('ck5', { q: 'ถูกสั่งเพิกถอนใบอนุญาต ขอรับใบอนุญาตอีกได้เมื่อไร', o: [
+    ['เมื่อพ้น 3 ปี', 0, '3 ปีเป็นเพดานของกำหนดเวลาพักใช้ ส่วนการเพิกถอนไม่มีกำหนดเวลาให้รอครบ ต้องขอรับใหม่เมื่อพ้น 5 ปี'],
+    ['เมื่อพ้น 5 ปี', 1, 'นับแต่วันที่ถูกสั่งเพิกถอนใบอนุญาต (ม.40)']] });
+
+  /* @s6 สิทธิการกล่าวหา ม.53 วรรคสอง: w = เดือนนับจากวันที่รู้ถึงวันยื่น ต้องไม่พ้น 12 (w <= 12) · f = k + w เดือนนับจากวันเกิดเหตุ ต้องไม่เกิน 36 (f <= 36)
+     วันเกิดเหตุคือ 1 มกราคม 20x1 ทุกวันในเรื่องเป็นวันที่ 1 ของเดือน · แกนยาว 48 เดือน */
+  var MON = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+  function dt(m) { return '1 ' + MON[m % 12] + ' 20x' + (1 + Math.floor(m / 12)); }
+  function span(m, lim, word) { return m === lim ? 'ครบ ' + (lim / 12) + ' ปีพอดี ยังไม่' + word + ' ' + (lim / 12) + ' ปี' : m + ' เดือน ' + (m < lim ? 'ยังไม่' : '') + word + ' ' + (lim / 12) + ' ปี' + (m < lim ? '' : 'แล้ว'); }
+  var accK = 6, accW = 8, accLast = '';
+  V.nums('acc', function (s) { var k = s.k, w = s.w, f = k + w, ok1 = w <= 12, ok3 = f <= 36, tl = $('tl6'), sub;
+    if (k !== accK) accLast = 'k'; else if (w !== accW) accLast = 'w'; accK = k; accW = w;
+    tl.style.setProperty('--f', String(f / 48)); tl.className = 'x05-tl' + (f > 40 ? ' x05-far' : '');
+    $('accC').innerHTML = 'ผู้ถือหุ้นคนหนึ่งของบริษัทลูกค้าอีกราย กล่าวหาว่าพี่แพมประพฤติผิดจรรยาบรรณ วันเกิดเหตุคือ ' + dt(0) + ' เขารู้เรื่องและรู้ว่าเป็นพี่แพม' +
+      hl(k ? 'เมื่อ ' + dt(k) + ' หลังวันเกิดเหตุ ' + k + ' เดือน' : 'ตั้งแต่วันเกิดเหตุ', accLast === 'k') + ' แล้วยื่นคำกล่าวหา' + hl('เมื่อ ' + dt(f) + ' หลังวันที่รู้ ' + w + ' เดือน', accLast !== '');
+    $('ra').className = 'x05-row' + (ok3 ? '' : ' x05-over'); $('raE').style.width = Math.min(100, f / 36 * 100) + '%'; $('raS').textContent = 'ผ่านไป ' + f + ' เดือน จาก 36';
+    $('rb').className = 'x05-row' + (ok1 ? '' : ' x05-over'); $('rbW').style.left = (k / 48 * 100) + '%'; $('rbE').style.width = Math.min(100, w / 12 * 100) + '%'; $('rbS').textContent = 'ผ่านไป ' + w + ' เดือน จาก 12';
+    if (ok1 && ok3) sub = 'นับจากวันที่รู้ ' + span(w, 12, 'พ้น') + ' และนับจากวันเกิดเหตุ ' + span(f, 36, 'เกิน');
+    else if (!ok1 && ok3) sub = 'รู้แล้วรอ ' + w + ' เดือน พ้น 1 ปีแล้ว ถึงนับจากวันเกิดเหตุ ' + span(f, 36, 'เกิน') + ' ก็ไม่ช่วย เพราะต้องอยู่ในกำหนดทั้งสองข้อ';
+    else if (ok1) sub = 'นับจากวันที่รู้ ' + span(w, 12, 'พ้น') + ' แต่นับจากวันเกิดเหตุรวม ' + f + ' เดือน เกิน 3 ปีแล้ว การรู้ช้าไม่ได้ยืดกำหนดสามปี';
+    else sub = 'พ้นกำหนดทั้งสองข้อ นับจากวันที่รู้ ' + w + ' เดือน และนับจากวันเกิดเหตุ ' + f + ' เดือน';
+    gate('g6', ok1 && ok3, ok1 && ok3 ? 'สิทธิการกล่าวหายังไม่สิ้นสุด' : 'สิทธิการกล่าวหาสิ้นสุดแล้ว', sub);
+    if (ok1 && ok3) cg('n6', 'x05-neu', 'search', 'ประธานคณะกรรมการจรรยาบรรณตรวจคำกล่าวหา', 'ยื่นทันกำหนดยังไม่ได้แปลว่ารับ ต้องตรวจก่อนว่ามีมูลไหม ดูส่วนถัดไป');
+    else cg('n6', 'lock', 'x', 'ประธานมีคำสั่งไม่รับคำกล่าวหา', 'สิทธิกล่าวหาสิ้นสุดลง ให้มีคำสั่งไม่รับ และแจ้งผู้กล่าวหาโดยเร็วพร้อมเหตุผล' + L('ข้อบังคับ ฉบับที่ 12 ข้อ 17')); });
+  V.check('ck6', { f: 'ผู้กล่าวหารู้เรื่องหลังวันเกิดเหตุ 30 เดือน แล้วยื่นหลังจากนั้นอีก 10 เดือน', q: 'สิทธิการกล่าวหายังอยู่ไหม', o: [
+    ['ยังอยู่', 0, 'ยื่นหลังรู้ 10 เดือน ยังไม่พ้น 1 ปีก็จริง แต่นับจากวันเกิดเหตุรวม 40 เดือน เกิน 3 ปีแล้ว'],
+    ['สิ้นสุดแล้ว', 1, '30 บวก 10 เป็น 40 เดือน เกิน 3 ปีนับแต่วันที่มีการประพฤติผิด การรู้ช้าไม่ได้ยืดกำหนดนี้ (ม.53 วรรคสอง)']] });
+
+  /* @s7 สี่ช่วง: ข้อบังคับ ฉบับที่ 12 ข้อ 6 · 10 · 16–18 · 20 · 24 · 25 · ข้อกำหนดการสอบสวน ข้อ 8 · 9 · พ.ร.บ. ม.53 · ม.54 · ม.71 */
+  var F12 = 'ข้อบังคับ ฉบับที่ 12 ';
+  var STG = [
+    { t: 'ช่วงที่ 1 ตรวจคำกล่าวหา', who: ['search', 'คนตัดสินช่วงนี้', 'ประธานคณะกรรมการจรรยาบรรณ หรือผู้ที่ประธานมอบหมาย ตรวจโดยไม่ชักช้า' + L(F12 + 'ข้อ 16')],
+      ck: [['15', 'ผู้กล่าวหาแก้ไขคำกล่าวหา หรือชี้แจงเพิ่ม เมื่อประธานสั่ง', 'นับแต่วันที่ได้รับแจ้ง']],
+      rows: [['ok', 'check', 'มีมูล หรือมีเหตุอันสมควรให้สอบสวน', 'รับเป็นคำกล่าวหา แล้วส่งสำเนาให้พี่แพม พร้อมแจ้งสิทธิยื่นคำแก้ข้อกล่าวหา' + L('ข้อ 17 · ข้อ 18')],
+        ['x05-neu', 'x', 'ไม่มีมูล สิทธิกล่าวหาสิ้นสุดลง หรือมีเหตุอันไม่สมควรให้สอบสวน', 'สั่งไม่รับ และแจ้งผู้กล่าวหาโดยเร็วพร้อมเหตุผล' + L('ข้อ 17')]],
+      me: 'พี่แพมยังไม่ต้องทำอะไร การรับเป็นคำกล่าวหายังไม่ใช่มติว่าพี่แพมประพฤติผิด' },
+    { t: 'ช่วงที่ 2 พี่แพมชี้แจง', who: ['pen', 'คนที่ลงมือช่วงนี้', 'พี่แพม ทำคำแก้ข้อกล่าวหา คือหนังสือชี้แจงแก้ข้อกล่าวหา ใช้แบบ จ.บ.2' + L(F12 + 'ข้อ 24')],
+      ck: [['15', 'พี่แพมยื่นคำแก้ข้อกล่าวหา', 'นับแต่วันที่ได้รับสำเนาคำกล่าวหา หรือภายในเวลาที่ประธานขยายให้']],
+      rows: [['lock', 'x', 'ถ้าพี่แพมไม่ยื่น', 'เรื่องไม่หยุด จะพิจารณาและวินิจฉัยไปตามพยานหลักฐานเท่าที่มีอยู่' + L('ข้อ 20')]],
+      me: 'พี่แพมขอตรวจดูเอกสารที่จำเป็นต้องรู้ เพื่อโต้แย้งหรือชี้แจงได้ (ข้อ 25)' },
+    { t: 'ช่วงที่ 3 สอบสวน', who: ['users', 'คนสอบสวน', 'คณะกรรมการจรรยาบรรณสอบสวนเอง หรือแต่งตั้งคณะอนุกรรมการทำแทน โดยมีกรรมการจรรยาบรรณอย่างน้อยหนึ่งคน' + L('ม.53')],
+      ck: [['30', 'คณะอนุกรรมการเริ่มสอบสวน', 'นับแต่วันแต่งตั้ง ประธานแจ้งคำสั่งแต่งตั้งให้ผู้กล่าวหาและพี่แพมทราบ'],
+        ['7', 'คัดค้านอนุกรรมการที่มีเหตุให้คัดค้าน เช่น เป็นคู่สมรสของผู้กล่าวหา', 'นับแต่วันรับทราบคำสั่งแต่งตั้ง หรือวันทราบเหตุ และต้องก่อนคณะอนุกรรมการพิจารณาเสร็จ']],
+      rows: [['x05-neu', 'mail', 'ถ้าผู้กล่าวหาขอถอนเรื่อง', 'ไม่เป็นเหตุให้ระงับ คณะอนุกรรมการที่เห็นว่ายังมีหลักฐานเพียงพอ สอบสวนต่อ' + L('ม.53 · ข้อกำหนดการสอบสวน ข้อ 8')],
+        ['x05-neu', 'doc', 'เรียกคนและเอกสารได้', 'เรียกบุคคลที่เกี่ยวข้องมาให้ถ้อยคำ หรือให้ส่งบัญชี เอกสาร หลักฐาน ผู้ใดไม่ปฏิบัติตามมีโทษทางอาญา' + L('ม.53 · ม.71')]],
+      me: 'การสอบสวนของคณะอนุกรรมการ ไม่จำเป็นต้องทำต่อหน้าพี่แพมหรือผู้กล่าวหา (ข้อกำหนดการสอบสวน ข้อ 9)' },
+    { t: 'ช่วงที่ 4 มีมติ แล้วจึงมีคำสั่ง', who: ['gavel', 'คนตัดสินช่วงนี้', 'คณะอนุกรรมการเสนอได้เพียงความเห็น คนที่มีมติคือคณะกรรมการจรรยาบรรณ พิจารณาจากผลการสอบสวน' + L('ม.53 · ม.54')],
+      ck: [],
+      rows: [['lock', 'flag', 'มีมติว่าประพฤติผิดจรรยาบรรณ', 'มีคำสั่งลงโทษตามมาตรา 49 ระดับใดระดับหนึ่งของส่วนที่ 5' + L('ม.54')],
+        ['ok', 'check', 'มีมติว่ามิได้ประพฤติผิดจรรยาบรรณ', 'สั่งยกคำกล่าวหา' + L('ม.54')]],
+      me: 'คำสั่งต้องแจ้งเป็นหนังสือโดยเร็ว ให้ทั้งผู้กล่าวหาและพี่แพม' }];
+  var PAM = face('pam');
+  V.pick('stg', function (v) { var d = STG[v], h = '<b>' + d.t + '</b>';
+    h += '<div class="cg x05-neu"><span class="ico">' + V.icon(d.who[0]) + '</span><div><b>' + d.who[1] + '</b><span>' + d.who[2] + '</span></div></div>';
+    d.ck.forEach(function (c) { h += '<div class="x05-ck"><span class="x05-n">' + c[0] + '<i>วัน</i></span><div><b>' + c[1] + '</b><small>' + c[2] + '</small></div></div>'; });
+    d.rows.forEach(function (r) { h += '<div class="cg ' + r[0] + '"><span class="ico">' + V.icon(r[1]) + '</span><div><b>' + r[2] + '</b><span>' + r[3] + '</span></div></div>'; });
+    $('pnl').innerHTML = h + '<div class="x05-me2">' + PAM + '<span>' + d.me + '</span></div>'; });
+  V.check('ck7', { f: 'พี่แพมได้รับสำเนาคำกล่าวหาแล้ว แต่ไม่ยื่นคำแก้ข้อกล่าวหา', q: 'เรื่องเดินต่อยังไง', o: [
+    ['เรื่องตกไป', 0, 'การไม่ชี้แจงไม่ได้ทำให้เรื่องหยุด เรื่องเดินต่อด้วยหลักฐานเท่าที่มี'],
+    ['วินิจฉัยตามหลักฐานที่มี', 1, 'ไม่ยื่นคำชี้แจงแก้ข้อกล่าวหา ก็พิจารณาและวินิจฉัยไปตามพยานหลักฐานเท่าที่มีอยู่ (ข้อบังคับ ฉบับที่ 12 ข้อ 20)']] });
+
+  /* @s8 อุทธรณ์ ม.55: d = จำนวนวันนับแต่วันที่ได้รับคำสั่งถึงวันยื่น ต้องอยู่ภายใน 30 (d <= 30) · ord 0 คำสั่งลงโทษ · 1 คำสั่งยกคำกล่าวหา · แกนยาว 60 วัน */
+  var ord = 0, day = 20, apLast = '';
+  function ap() { var ok = day <= 30, who = ord ? 'ผู้กล่าวหา' : 'พี่แพม', tl = $('tl8'), t, s;
+    $('apWho').textContent = who;
+    $('apC').innerHTML = 'คณะกรรมการจรรยาบรรณมีคำสั่ง' + hl(ord ? 'ยกคำกล่าวหา พี่แพมไม่ถูกลงโทษ' : 'พักใช้ใบอนุญาตของพี่แพม 1 ปี', apLast === 'ord') + ' ' + who + 'ไม่เห็นด้วย จึงยื่นอุทธรณ์' + hl('เมื่อผ่านไป ' + day + ' วัน', apLast === 'day') + ' นับแต่วันที่ได้รับคำสั่ง';
+    tl.style.setProperty('--f', String(day / 60)); tl.className = 'x05-tl' + (day > 46 ? ' x05-far' : '');
+    $('rc').className = 'x05-row' + (ok ? '' : ' x05-over'); $('rcE').style.width = Math.min(100, day / 30 * 100) + '%'; $('rcS').textContent = 'ผ่านไป ' + day + ' วัน จาก 30';
+    $('rd').className = 'x05-row' + (ord ? ' x05-none' : ''); $('rdL').innerHTML = ord ? 'คำสั่งลงโทษ<small>ไม่มี</small>' : 'คำสั่งพักใช้<small>1 ปี ของพี่แพม</small>';
+    if (!ord) { t = ok ? 'พี่แพมอุทธรณ์ได้ แต่คำสั่งพักใช้ยังเดิน' : 'พ้นกำหนดอุทธรณ์แล้ว';
+      s = ok ? (day === 30 ? 'วันที่ 30 พอดี ยังอยู่ภายใน 30 วัน' : 'วันที่ ' + day + ' ยังอยู่ภายใน 30 วัน') + ' และพี่แพมเป็นผู้ซึ่งถูกสั่งลงโทษ แถบสีแดงไม่หยุดตรงวันยื่น พี่แพมยังต้องหยุดงานสอบบัญชีตามคำสั่ง' + L('ม.55 วรรคหนึ่ง · วรรคสาม')
+        : 'พี่แพมยื่นวันที่ ' + day + ' เกิน 30 วันนับแต่วันที่ได้รับคำสั่ง คำสั่งพักใช้ 1 ปีมีผลตามเดิม' + L('ม.55 วรรคหนึ่ง'); }
+    else { t = ok ? 'ผู้กล่าวหาอุทธรณ์ได้' : 'พ้นกำหนดอุทธรณ์แล้ว';
+      s = 'พี่แพมไม่ได้ถูกสั่งลงโทษ คนที่อุทธรณ์คำสั่งยกคำกล่าวหาได้คือผู้กล่าวหา ' + (ok ? (day === 30 ? 'วันที่ 30 พอดี ยังอยู่ภายใน 30 วัน' : 'วันที่ ' + day + ' ยังอยู่ภายใน 30 วัน') : 'แต่วันที่ ' + day + ' เกิน 30 วันนับแต่วันที่ได้รับคำสั่งแล้ว') + L('ม.55 วรรคหนึ่ง'); }
+    out('ap', ok ? (ord ? 'x05-grey' : 'x05-fine') : '', t, s); }
+  V.pick('ord', function (v) { if (v !== ord) apLast = 'ord'; ord = v; ap(); });
+  V.nums('apd', function (s) { if (s.d !== day) apLast = 'day'; day = s.d; ap(); });
+  V.check('ck8', { q: 'พี่แพมยื่นอุทธรณ์ทันกำหนดแล้ว คำสั่งพักใช้หยุดไว้ก่อนไหม', o: [
+    ['หยุดไว้ก่อน', 0, 'ยื่นอุทธรณ์แล้วก็ยังต้องปฏิบัติตามคำสั่ง เว้นแต่คณะกรรมการที่รับอุทธรณ์จะสั่งเป็นอย่างอื่น'],
+    ['ไม่หยุด', 1, 'การอุทธรณ์ไม่เป็นการทุเลาการปฏิบัติตามคำสั่งลงโทษ เว้นแต่คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชีจะสั่งเป็นอย่างอื่น (ม.55 วรรคสาม)']] });
+
+  /* @fq ลองดู */
   V.quiz($('quiz'), [
-    { f: 'เพื่อนของพีททำบัญชีอยู่อีกบริษัทหนึ่ง หัวหน้าขอให้แก้ยอดลูกหนี้ในรายงานที่จะส่งผู้ให้กู้ เพื่อนเล่ามาเท่านี้', q: 'ตอบได้หรือยังว่าเพื่อนแก้ตามคำขอได้ไหม', o: [
-      ['ยังตอบไม่ได้ ต้องรู้ก่อนว่ายอดหลังแก้ตรงกับความจริงหรือไม่', 1, 'คู่มือห้ามเข้าไปเกี่ยวข้องทั้งที่รู้กับข้อมูลที่เชื่อว่าทำให้เกิดความเข้าใจผิด ที่เล่ามายังไม่บอกว่ายอดหลังแก้ตรงกับความจริงหรือไม่ จึงต้องรู้ข้อนี้ก่อน (R111.2)'],
-      ['แก้ไม่ได้ เพราะรายงานนี้จะส่งผู้ให้กู้', 0, 'การส่งให้ผู้ให้กู้ยังไม่ทำให้การแก้เป็นข้อห้าม ในเรื่องของพีท ยอดเดิมลงขาดไป การแก้ให้ตรงกับเอกสารเป็นการแก้ไขข้อมูลให้ถูกต้อง ที่ต้องรู้ก่อนคือยอดหลังแก้ตรงกับความจริงหรือไม่'],
-      ['แก้ได้ เพราะหัวหน้าเป็นคนขอ', 0, 'ใครเป็นคนขอไม่ได้เปลี่ยนผล ผู้ประกอบวิชาชีพบัญชีต้องไม่ปล่อยให้ความกดดันจากผู้อื่นทำให้เกิดการฝ่าฝืนการปฏิบัติตามหลักการพื้นฐาน ที่ต้องรู้ก่อนคือยอดหลังแก้ตรงกับความจริงหรือไม่ (R270.3 (ก))']] },
-    { multi: true, f: 'พีทรู้ข้อเท็จจริงของข้อมูลแต่ละชุดตามที่เขียนไว้ คู่มือเขียนว่าต้องไม่เข้าไปเกี่ยวข้องทั้งที่รู้ กับข้อมูลที่ทำให้เกิดความเข้าใจผิด หรือที่ละเว้นข้อมูลที่จำเป็นต้องมีจนอาจทำให้เกิดความเข้าใจผิด', q: 'แตะทุกชุดที่เป็นข้อมูลแบบที่ข้อห้ามนี้เขียนถึง', o: [
-      ['รายงานที่ลงยอดขายเพิ่มจากเอกสารการขาย โดยส่วนที่เพิ่มไม่มีการขายจริง เพื่อให้ถึงตามที่ผู้ให้กู้คาดหวัง', 1, 'ส่วนที่เพิ่มไม่มีการขายจริง คนอ่านรายงานจะเข้าใจผิด เหมือนเรื่องที่ 2'],
-      ['งบที่ตัวเลขตรงกับเอกสารทุกตัว แต่ตัดข้อมูลความเสี่ยงทางการเงินออก เพื่อให้คนอ่านเข้าใจผิด', 1, 'ตัวเลขถูก แต่ละเว้นข้อมูลที่จำเป็นต้องมี จนอาจทำให้เกิดความเข้าใจผิด'],
-      ['งบที่แก้ยอดขายจนตรงกับเอกสารการขายแล้ว และไม่ได้ตัดข้อมูลใดออก', 0, 'หลังแก้ ตัวเลขตรงกับเอกสาร และไม่ได้ละเว้นข้อมูล จึงไม่ใช่ข้อมูลแบบที่ข้อห้ามเขียนถึง'],
-      ['งบที่ตัวเลขตรงกับเอกสาร ไม่ได้ตัดข้อมูลใดออก และเจ้าของบริษัทเป็นคนสั่งให้จัดทำ', 0, 'ข้อห้ามเขียนถึงตัวข้อมูล งบชุดนี้ตัวเลขตรงกับเอกสารและไม่ได้ละเว้นข้อมูล ใครเป็นคนสั่งไม่ได้เปลี่ยนผล']],
-      ex: 'สองชุดแรกเป็นข้อมูลที่ทำให้เกิดความเข้าใจผิด และข้อมูลที่ละเว้นข้อมูลที่จำเป็นต้องมี ส่วนสองชุดหลัง ตัวเลขตรงกับเอกสารและไม่ได้ละเว้นข้อมูล ใครเป็นคนสั่งไม่ได้เปลี่ยนผล (R111.2)' },
-    { f: 'พีทเพิ่งรู้ว่ารายงานที่มีชื่อตัวเองเป็นผู้จัดทำ มียอดที่ทำให้เข้าใจผิด รายงานถึงมือผู้ใช้แล้ว และพีทยังไม่ได้คุยกับใคร', q: 'ทำแบบไหนตรงกับการดำเนินการที่เหมาะสมที่คู่มือเขียนไว้', o: [
-      ['ปรึกษาหารือข้อกังวลกับผู้บังคับบัญชาหรือผู้บริหารระดับที่เหมาะสม และขอให้ดำเนินการแก้ไข', 1, 'เมื่อรู้ว่าข้อมูลที่ตนเกี่ยวข้องอยู่ทำให้เข้าใจผิด ต้องดำเนินการที่เหมาะสมเพื่อหาทางแก้ไข ซึ่งรวมถึงการปรึกษาหารือข้อกังวลและขอให้ดำเนินการแก้ไข และเมื่อข้อมูลเปิดเผยไปยังผู้ใช้รายงานแล้ว การดำเนินการนั้นอาจรวมถึงการแจ้งแก้ไขข้อมูลให้ถูกต้อง (R220.8 · 220.8 A1)'],
-      ['ไม่ต้องทำอะไร เพราะตอนจัดทำยังไม่รู้', 0, 'เมื่อเริ่มตระหนักว่าตนเกี่ยวข้องกับข้อมูลที่ทำให้เกิดความเข้าใจผิด ต้องดำเนินการเพื่อยุติการเกี่ยวข้องกับข้อมูลนั้น รู้ทีหลังก็ต้องทำ (R111.3)'],
-      ['ปฏิเสธที่จะเกี่ยวข้องกับรายงานนี้อย่างเดียว ไม่ต้องหาทางให้ข้อมูลถูกแก้ไข', 0, 'คู่มือเขียนว่าต้องดำเนินการที่เหมาะสมเพื่อหาทางแก้ไขเรื่องนั้น ส่วนการปฏิเสธที่จะเกี่ยวข้องกับข้อมูล คู่มือเขียนไว้สำหรับตอนที่ใช้ทางเลือกที่มีจนหมดแล้ว และพีทยังไม่ได้ใช้ทางเลือกใด (R220.8 · R220.9)']] }
+    { f: 'แพรเป็นผู้สอบบัญชีรับอนุญาต มีสำนักงานของตัวเอง แพรตกลงค่าธรรมเนียมที่ต่ำมากเพื่อให้ได้ลูกค้ารายใหม่ ประเมินแล้วอุปสรรคไม่อยู่ในระดับที่ยอมรับได้', q: 'แพรต้องทำอย่างไร', o: [
+      ['ทำงานต่อได้เลย เพราะเสนอต่ำกว่ารายอื่นไม่ขัดต่อจรรยาบรรณ', 0, 'เสนอต่ำกว่ารายอื่นไม่ขัดต่อจรรยาบรรณก็จริง แต่ต่ำมากจนอาจยากที่จะทำงานตามมาตรฐาน เป็นอุปสรรคจากผลประโยชน์ส่วนตน และอุปสรรคที่ยอมรับไม่ได้ต้องจัดการก่อน (คู่มือฯ 330.3 A2)'],
+      ['จัดการอุปสรรค เช่น ปรับระดับค่าธรรมเนียมหรือขอบเขตของงาน', 1, 'คู่มือฯ ยกตัวอย่างมาตรการป้องกันของเรื่องนี้ไว้ คือปรับระดับของค่าธรรมเนียมหรือขอบเขตของงาน หรือให้ผู้สอบทานที่เหมาะสมสอบทานงานที่ทำ (คู่มือฯ 330.3 A4)'],
+      ['ลาออกจากสำนักงาน', 0, 'การลาออกจากหน่วยงานธุรกิจเป็นทางของคนที่บริษัทจ้าง แพรทำงานในสำนักงาน ถ้าลดไม่ได้ ทางของแพรคือยุติหรือปฏิเสธการให้บริการ (ข้อ 12)']] },
+    { f: 'พีทเป็นผู้ทำบัญชีที่บริษัทจ้าง เจออุปสรรคที่ไม่อยู่ในระดับที่ยอมรับได้ ใช้มาตรการป้องกันอย่างดีที่สุดแล้วก็ยังลดไม่ได้', q: 'ข้อบังคับให้พีททำอะไร', o: [
+      ['ยุติหรือปฏิเสธการให้บริการ', 0, 'ทางนี้เป็นของคนที่ทำงานในสำนักงาน ซึ่งให้บริการแก่ลูกค้า พีทเป็นคนที่บริษัทจ้าง (ข้อ 12 (ก))'],
+      ['ลาออกจากหน่วยงานธุรกิจ', 1, 'ผู้อยู่ในหน่วยงานธุรกิจต้องลาออก เมื่อใช้มาตรการป้องกันอย่างดีที่สุดแล้ว ยังลดอุปสรรคให้อยู่ในระดับที่ยอมรับได้ไม่ได้ (ข้อ 12 (ข))'],
+      ['ทำงานต่อได้ ถ้าบันทึกเหตุผลไว้', 0, 'การบันทึกเป็นสิ่งที่ควรทำเมื่อขอคำปรึกษา แต่ไม่ได้ทำให้อุปสรรคลดถึงระดับที่ยอมรับได้']] },
+    { f: 'ผู้สอบบัญชีคนหนึ่งถูกสั่งภาคทัณฑ์ อีกคนถูกสั่งพักใช้ใบอนุญาต 2 ปี ทั้งสองคนยังรับงานสอบบัญชีต่อในระหว่างนั้น', q: 'มาตรา 70 ซึ่งมีโทษทางอาญา ใช้กับใคร', o: [
+      ['ทั้งสองคน', 0, 'มาตรา 70 ใช้กับผู้ถูกลงโทษตามมาตรา 49 (3) หรือ (4) ภาคทัณฑ์เป็นโทษตาม (2)'],
+      ['เฉพาะคนที่ถูกพักใช้ใบอนุญาต', 1, 'พักใช้ใบอนุญาตเป็นโทษตามมาตรา 49 (3) คนที่ถูกลงโทษตาม (3) หรือ (4) แล้วทำการประกอบวิชาชีพบัญชีในระหว่างนั้น มีความผิดตามมาตรา 70'],
+      ['ไม่ใช้กับใคร เพราะยังไม่มีใครถูกเพิกถอน', 0, 'มาตรา 70 ไม่ได้รอถึงเพิกถอน พักใช้ตาม (3) ก็อยู่ในมาตรานี้แล้ว']] },
+    { f: 'ผู้กล่าวหาขอถอนเรื่องระหว่างการสอบสวน คณะอนุกรรมการเห็นว่ายังมีหลักฐานเพียงพอ จึงสอบสวนต่อ และเสนอความเห็นว่าควรลงโทษ', q: 'ตอนนี้เรื่องอยู่ตรงไหน', o: [
+      ['จบแล้ว เพราะผู้กล่าวหาถอนเรื่อง', 0, 'การถอนเรื่องการกล่าวหาที่ยื่นไว้แล้ว ไม่เป็นเหตุให้ระงับการดำเนินการ (ม.53)'],
+      ['ถูกลงโทษแล้ว เพราะคณะอนุกรรมการเห็นว่าผิด', 0, 'คณะอนุกรรมการเสนอได้เพียงความเห็น คำสั่งลงโทษมีได้เมื่อคณะกรรมการจรรยาบรรณมีมติ (ม.53 · ม.54)'],
+      ['ยังไม่มีคำสั่ง รอมติของคณะกรรมการจรรยาบรรณ', 1, 'ถอนเรื่องก็ไม่ระงับ และความเห็นของคณะอนุกรรมการยังไม่ใช่คำสั่ง ต้องรอคณะกรรมการจรรยาบรรณมีมติ (ม.53 · ม.54)']] },
+    { f: 'คณะกรรมการจรรยาบรรณมีมติว่าผู้สอบบัญชีคนหนึ่งมิได้ประพฤติผิดจรรยาบรรณ และสั่งยกคำกล่าวหา', q: 'ใครอุทธรณ์คำสั่งนี้ได้', o: [
+      ['ผู้สอบบัญชีคนนั้น', 0, 'คนที่อุทธรณ์ได้คือผู้กล่าวหา หรือผู้ซึ่งถูกสั่งลงโทษ ผู้สอบบัญชีคนนี้ไม่ได้ถูกสั่งลงโทษ (ม.55)'],
+      ['ผู้กล่าวหา ภายใน 30 วันนับแต่วันที่ได้รับคำสั่ง', 1, 'ผู้กล่าวหามีสิทธิอุทธรณ์คำสั่งตามมาตรา 54 ซึ่งรวมคำสั่งยกคำกล่าวหา ต่อคณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี (ม.55)'],
+      ['ไม่มีใครอุทธรณ์ได้ เพราะเรื่องจบแล้ว', 0, 'คำสั่งยกคำกล่าวหาก็เป็นคำสั่งตามมาตรา 54 ซึ่งผู้กล่าวหาอุทธรณ์ได้ (ม.55)']] }
   ]);
+
+  /* แถบขั้นด้านบน: data-step มีเฉพาะที่ section (แถบเลื่อนตัวเลขใช้ขั้นละ 1 ซึ่งเป็นค่าตั้งต้นของ V.nums จึงไม่ต้องใส่ data-step) */
+  V.spy('#steps');
 })();
 </script>
 </body>
