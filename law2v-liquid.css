@@ -84,7 +84,7 @@ section.next, main > .next {
   transition:background .2s ease, box-shadow .2s ease, transform .12s ease;
 }
 .chips button[aria-pressed="true"], .togs button[aria-pressed="true"], .ve-ctl .chips button[aria-pressed="true"] {
-  background:linear-gradient(160deg, #3A7FA2, #2F6B8A 55%, #275C77) !important; color:#fff !important;
+  background:linear-gradient(160deg, #3A7FA2, #2F6B8A 55%, #275C77) #2F6B8A !important; color:#fff !important;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 6px 14px -6px rgba(47,107,138,.65);
 }
 
@@ -110,3 +110,13 @@ section.next, main > .next {
   .steps { background:var(--bg) !important; -webkit-backdrop-filter:none; backdrop-filter:none; }
 }
 @media print { body::before { display:none; } }
+
+/* ชั้นในของตัววาดกลาง (18 ต.ค. รอบสอง): แผ่นพื้นขาวทึบเล็ก ๆ ในภาพ เปลี่ยนเป็นกระจกขาวหนา (ตัวหนังสือเข้มบนพื้นสว่างเท่านั้น) */
+.ve-grp .row, .ve-toc a, .ve-fill .mt, .ve-sw .swl, .rule li.fold .fbtn, .ve-fold,
+.ve-tiles > div, .ve-tl, .ve-rng, .lc, .walk, .cg, .rnd .rnd-todo li, .rnd table {
+  background:rgba(255,255,255,.74) !important;
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+}
+.ve-grp .row, .ve-toc a, .ve-sw .swl { box-shadow:inset 0 1px 0 rgba(255,255,255,.85), inset 0 0 0 1px rgba(11,59,60,.07); }
+/* กล่องสรุปและแผ่นศัพท์: กระจกนุ่ม */
+.ve-terms { background:rgba(255,255,255,.6) !important; -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); }

@@ -466,3 +466,7 @@ body.ve-R .law, body.ve-W .law, body.ve-S .law, body.ve-C .law, body.ve-V .law {
 
 /* 18 ต.ค. 2569: ลิงก์สถานีในกล่องผลเคยเป็นสีเดียวกับพื้นกล่อง มองไม่เห็น */
 .ve-out a, .ve-out .then a { color:inherit !important; text-decoration:underline; text-underline-offset:2px; }
+/* 18 ต.ค. 2569: แถวรวมของใบคำนวณที่อยู่ในการ์ดแม่บท ตัวเลขเคยเป็นสีเข้มบนพื้นเข้ม */
+.ve-slip .r.sum b, .ve-slip .r.sum span, .ve-slip .r.sum small { color:#fff !important; }
+/* 18 ต.ค. 2569: ช่องที่ถูกเลือกในภาพช่อง (bins) ตัวหนังสือเล็กเคยเป็นสีเทาบนพื้นสี อ่านยาก */
+.ve-bn .b.on small { color:rgba(255,255,255,.92) !important; }
