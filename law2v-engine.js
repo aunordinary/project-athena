@@ -538,6 +538,8 @@
   });
   /* ───── หลายหน้าในสถานีเดียว (ผู้ก่อตั้ง 13 ต.ค. 2569 ดึก: “ถ้ามันเลยสามหรือสี่ส่วน ให้กด next ไปหน้าถัดไปได้ แต่สถานีเดิม”)
      สถานีที่มีไม่เกินสี่ส่วนเป็นหน้าเดียวตามเดิม · ห้าส่วน = 3 + 2 · หกส่วน = 3 + 3 · ภาพรวมอยู่หน้าแรก โจทย์กับสรุปอยู่หน้าสุดท้าย ───── */
+  /* 18 ต.ค. 2569 (blind test): บอกเวลาอ่านโดยประมาณของหน้าที่เห็นอยู่ · นับตัวอักษรที่มองเห็น ราว 700 ตัวต่อนาที */
+  var readMin = function () { var n = 0; [].forEach.call(root.querySelectorAll('main > *, #app > *'), function (e) { if (e.tagName === 'HEADER' || e.classList.contains('ve-off') || !e.offsetParent) return; n += (e.innerText || '').replace(/\s+/g, '').length; }); return n ? Math.max(1, Math.round(n / 700)) : 0; };
   var NS = D.steps.length, NP = NS > PAGE_MAX ? Math.ceil(NS / 3) : 1, PER = Math.ceil(NS / NP);
   if (NP > 1) {
     var pSecs = [].slice.call(root.querySelectorAll('section[data-step]')), pNav = [].slice.call(root.querySelectorAll('#steps a')),
@@ -552,7 +554,7 @@
       pNav.forEach(function (a) { var m = /^#s(\d+)$/.exec(a.getAttribute('href') || ''); if (m) a.classList.toggle('ve-off', Math.floor((+m[1] - 1) / PER) + 1 !== p); });
       if (pFirst) pFirst.classList.toggle('ve-off', p !== 1); if (pGet) pGet.classList.toggle('ve-off', p !== 1);
       pLast.forEach(function (e) { e.classList.toggle('ve-off', p !== NP); });
-      hero.classList.toggle('slim', p !== 1); kick.textContent = kick0 + ' · หน้า ' + p + ' จาก ' + NP;
+      hero.classList.toggle('slim', p !== 1); var rm = readMin(); kick.textContent = kick0 + ' · หน้า ' + p + ' จาก ' + NP + (rm ? ' · ราว ' + rm + ' นาที' : '');
       pager.innerHTML = '<small>หน้า ' + p + ' จาก ' + NP + ' ของสถานีนี้</small><div>' +
         (p < NP ? '<button type="button" class="btn" data-p="' + (p + 1) + '">ไปหน้าถัดไป · ' + range(p + 1) + '</button>' : '') +
         (p > 1 ? '<button type="button" class="btn ghost" data-p="' + (p - 1) + '">กลับหน้าก่อน · ' + range(p - 1) + '</button>' : '') + '</div>';
@@ -562,7 +564,7 @@
     };
     var hm = /^#s(\d+)$/.exec(location.hash || ''), qp = /[?&]p=(\d+)/.exec(location.search || '');
     show(hm ? Math.floor((+hm[1] - 1) / PER) + 1 : qp ? +qp[1] : 1, false);
-  }
+  } else { var k1 = root.querySelector('header.hero .kick'), rm1 = readMin(); if (k1 && rm1) k1.textContent += ' · ราว ' + rm1 + ' นาที'; }
   V.spy('#steps');
   if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
 })();
