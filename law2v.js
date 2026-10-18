@@ -1,5 +1,15 @@
 /* CPA Answer · กฎหมาย 2 รุ่นภาพ (law2v) — ของกลางที่ทุกบทใช้: ไอคอนเส้น · ปุ่มเลือก · โจทย์แบบกดตรวจ
  * บทหนึ่งบทเป็นหน้า HTML ของตัวเอง (ภาพวาดอยู่ในหน้า) เกณฑ์และตัวเลขทางกฎหมายอยู่ในหน้าของบท ไม่อยู่ในไฟล์นี้ */
+/* 18 ต.ค. 2569 ชั้นหน้าตา liquid (law2v-liquid.css) ถอดได้: ?liquid=0 ปิด ?liquid=1 เปิด (จำในเครื่องผู้ดู) */
+(function () {
+  try {
+    var q = location.search.match(/[?&]liquid=([01])/);
+    if (q) localStorage.setItem('cpa-answer:liquid', q[1]);
+    if ((q ? q[1] : localStorage.getItem('cpa-answer:liquid')) === '0') return;
+  } catch (e) {}
+  if (document.querySelector('link[href$="law2v-liquid.css"]')) return;
+  var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'law2v-liquid.css'; document.head.appendChild(l);
+})();
 (function () {
   var P = {
     check: 'M5 12.5l4.5 4.5L19 7.5', x: 'M6 6l12 12M18 6L6 18', lock: 'M7 11V8a5 5 0 0110 0v3M5.5 11h13v9h-13z',
