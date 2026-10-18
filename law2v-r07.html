@@ -25,6 +25,18 @@
 .fig a.x07-lk { font-weight:700; color:var(--hue-ink); }
 .result.x07-stop { background:var(--bad-soft); color:var(--bad-ink); }
 .cg.x07-neu .ico { background:var(--hue); }
+.x07-cnt { display:grid; grid-template-columns:auto minmax(0,1fr); gap:12px; align-items:center; padding:10px 14px; border-radius:16px; background:var(--x07-els, #DDF1EC); color:var(--ink); font-size:14px; line-height:1.45; }
+.x07-cnt > b { font-family:var(--display); font-size:28px; font-weight:800; line-height:1; color:var(--x07-el, #1F7A6B); white-space:nowrap; }
+.x07-cnt > b small { font-size:13px; font-weight:700; color:var(--muted); }
+.result.x07-may { background:var(--gold-soft); color:var(--ink); }
+details.x07-more { margin-top:4px; font-size:14px; line-height:1.5; }
+.x07-two2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.x07-two2 > div { display:grid; align-content:start; gap:3px; padding:10px; border-radius:14px; background:var(--soft); font-size:13px; line-height:1.45; }
+.x07-two2 small { font-size:12px; font-weight:700; color:var(--muted); }
+.x07-two2 b { font-family:var(--display); font-size:15px; line-height:1.3; }
+.x07-two2 em { font-style:normal; font-weight:800; color:var(--hue-ink); }
+.x07-two2 .law { justify-self:start; }
+details.x07-more summary { cursor:pointer; min-height:32px; font-weight:700; color:var(--hue-ink); }
 /* ก้อนลองเปลี่ยน: โจทย์ (.case ของกลาง) → ตัวควบคุม → หลัก → ภาพ → กล่องตัดสิน */
 .x07-rl { display:grid; grid-template-columns:auto minmax(0,1fr); gap:10px; align-items:start; padding:10px 12px; border-radius:16px; background:var(--hue-soft); color:var(--hue-ink); font-size:15px; font-weight:600; line-height:1.45; }
 .x07-rl > b { padding:1px 10px; border-radius:99px; background:var(--hue-ink); color:#fff; font-size:12px; font-weight:800; letter-spacing:.03em; line-height:1.7; white-space:nowrap; }
@@ -244,16 +256,17 @@ details.x07-fold ul { margin-top:4px; }
      ส่วนที่ 9 ทั้งส่วน (ระหว่างเครื่องหมาย X07-EXTRA) ยืนบนข้อบังคับเลือกตั้ง พ.ศ. 2568 และข้อบังคับคณะรายด้าน พ.ศ. 2563 ซึ่งอยู่นอกรายการขอบเขตสอบ ถอดออกได้ทั้งก้อน ส่วนอื่นไม่ได้อ้างถึง
      ตัวเลขของเรื่องตัวอย่าง (ไม่ใช่ของกฎหมาย): คณะกรรมการสภาฯ 17 คน · สมาชิกสามัญมาประชุม 330 คน ให้ออก 240 เสียง · พ้น 9 คน · วาระเหลือ 300 วัน · 1 มกราคม 20x1 · พี่แพม 12 ปี
      แพร พี่แพม และรุ่นน้องของแพร เป็นกรณีสมมติ · บันทึก: exchange/v2/builds/law2u-2026-10-11/law2v/notes-rw/r07.md
-     รอบคนเรียนครั้งแรก 14 ต.ค. 2569: ก้อนลองเปลี่ยนทุกก้อนเรียง โจทย์ (.case) → ตัวควบคุม → หลัก (.x07-rl) → ภาพ → กล่องตัดสิน · รายละเอียดอยู่ท้ายบันทึก -->
+     รอบคนเรียนครั้งแรก 14 ต.ค. 2569: ก้อนลองเปลี่ยนทุกก้อนเรียง โจทย์ (.case) → ตัวควบคุม → หลัก (.x07-rl) → ภาพ → กล่องตัดสิน · รายละเอียดอยู่ท้ายบันทึก
+     รอบแก้ 18 ต.ค. 2569 ตามแผน exchange/v2/builds/law2v-r-scope-2026-10-17/PLAN-r07.md (หัวข้อ จ): ส่วนที่ 1 “ไม่ได้เลือกเข้าคณะนี้โดยตรง” + ตัวนับ 12 จาก 17 · สีที่นั่งบนหัวหน้าตรงคำอธิบายสี · ส่วนที่ 8 เทียบกึ่งหนึ่งสองแบบ แปล ม.63 วรรคสาม ผลไม่ถึง 180 วันเป็นสีกลาง · ผู้แทนหน่วยงานในคณะกรรมการจรรยาบรรณ (ม.50 วรรคสอง) · ส่วนที่ 7 พับรายชื่อ 9 ตำแหน่ง -->
 <main class="x07">
   <header class="hero">
     <div class="top"><a href="law2v-index.html#R">สายวิชาชีพบัญชี</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
     <p class="kick">วิชาชีพบัญชี · สถานี 1.7</p>
     <h1>สภาฯ มีคณะกรรมการอะไรบ้าง ใครเป็นได้</h1>
     <p class="sub">มีห้าคณะ สี่คณะทำงานของสภาวิชาชีพบัญชี อีกหนึ่งคณะคอยกำกับ แต่ละตำแหน่งมีที่มาไม่เหมือนกัน บางตำแหน่งเลือกตั้ง บางตำแหน่งแต่งตั้ง บางตำแหน่งได้นั่งเพราะเป็นตำแหน่งอื่นอยู่แล้ว</p>
-    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพโต๊ะประชุมมองจากด้านบน ที่นั่งรอบโต๊ะมีสามสีตามที่มาของตำแหน่ง">
+    <svg viewBox="0 0 340 132" role="img" aria-label="ภาพโต๊ะประชุมมองจากด้านบน ที่นั่งรอบโต๊ะมีสามสีตามที่มาของตำแหน่ง สีเดียวกับคำอธิบายสีในหน้านี้ เขียวคือเลือกตั้ง เหลืองอำพันคือโดยตำแหน่ง ม่วงคือแต่งตั้ง">
       <ellipse cx="170" cy="66" rx="98" ry="26" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.4)" stroke-width="3"/>
-      <circle cx="170.0" cy="22.0" r="9" fill="#F0C84B"/><circle cx="216.2" cy="25.0" r="9" fill="#FFFFFF"/><circle cx="256.2" cy="33.5" r="9" fill="#FFFFFF"/><circle cx="284.6" cy="46.4" r="9" fill="#FFFFFF"/><circle cx="297.5" cy="61.9" r="9" fill="#FFFFFF"/><circle cx="293.1" cy="78.0" r="9" fill="#FFFFFF"/><circle cx="272.1" cy="92.5" r="9" fill="#FFFFFF"/><circle cx="237.4" cy="103.4" r="9" fill="#FFFFFF"/><circle cx="193.5" cy="109.3" r="9" fill="#FFFFFF"/><circle cx="146.5" cy="109.3" r="9" fill="#C9B8E8"/><circle cx="102.6" cy="103.4" r="9" fill="#C9B8E8"/><circle cx="67.9" cy="92.5" r="9" fill="#C9B8E8"/><circle cx="46.9" cy="78.0" r="9" fill="#F0C84B"/><circle cx="42.5" cy="61.9" r="9" fill="#F0C84B"/><circle cx="55.4" cy="46.4" r="9" fill="#F0C84B"/><circle cx="83.8" cy="33.5" r="9" fill="#F0C84B"/><circle cx="123.8" cy="25.0" r="9" fill="#F0C84B"/>
+      <circle cx="170.0" cy="22.0" r="9" fill="#6FD0B9"/><circle cx="216.2" cy="25.0" r="9" fill="#E8B04B"/><circle cx="216.2" cy="25.0" r="3.5" fill="#1F7A6B"/><circle cx="256.2" cy="33.5" r="9" fill="#E8B04B"/><circle cx="256.2" cy="33.5" r="3.5" fill="#1F7A6B"/><circle cx="284.6" cy="46.4" r="9" fill="#E8B04B"/><circle cx="284.6" cy="46.4" r="3.5" fill="#1F7A6B"/><circle cx="297.5" cy="61.9" r="9" fill="#E8B04B"/><circle cx="297.5" cy="61.9" r="3.5" fill="#1F7A6B"/><circle cx="293.1" cy="78.0" r="9" fill="#E8B04B"/><circle cx="293.1" cy="78.0" r="3.5" fill="#1F7A6B"/><circle cx="272.1" cy="92.5" r="9" fill="#E8B04B"/><circle cx="272.1" cy="92.5" r="3.5" fill="#1F7A6B"/><circle cx="237.4" cy="103.4" r="9" fill="#E8B04B"/><circle cx="193.5" cy="109.3" r="9" fill="#E8B04B"/><circle cx="146.5" cy="109.3" r="9" fill="#BFA6E6"/><circle cx="102.6" cy="103.4" r="9" fill="#BFA6E6"/><circle cx="67.9" cy="92.5" r="9" fill="#BFA6E6"/><circle cx="46.9" cy="78.0" r="9" fill="#6FD0B9"/><circle cx="42.5" cy="61.9" r="9" fill="#6FD0B9"/><circle cx="55.4" cy="46.4" r="9" fill="#6FD0B9"/><circle cx="83.8" cy="33.5" r="9" fill="#6FD0B9"/><circle cx="123.8" cy="25.0" r="9" fill="#6FD0B9"/>
       <rect x="0" y="126" width="340" height="6" fill="rgba(255,255,255,.08)"/>
     </svg>
   </header>
@@ -281,7 +294,7 @@ details.x07-fold ul { margin-top:4px; }
         <span class="x07-sub">ประธานของสามคณะข้างล่างนี้ ได้นั่งในคณะกรรมการสภาฯ โดยตำแหน่ง</span>
         <a class="x07-b" href="#s3"><b>คณะกรรมการวิชาชีพบัญชีของแต่ละด้าน</b><small>วิชาชีพบัญชีมีหกด้าน เช่น การทำบัญชี การสอบบัญชี แต่ละด้านมีคณะของตัวเอง คอยพัฒนาและส่งเสริมวิชาชีพด้านนั้น</small><span class="x07-os"><span class="x07-o x07-bel">ประธานมาจากเลือกตั้ง</span></span><span class="law">ม.4 · ม.32</span><span class="go">ดูส่วนที่ 3</span></a>
         <a class="x07-b" href="#s3"><b>คณะกรรมการกำหนดมาตรฐานการบัญชี</b><small>กำหนดและปรับปรุงมาตรฐานการบัญชี</small><span class="x07-os"><span class="x07-o x07-bap">แต่งตั้ง</span><span class="x07-o x07-brp">ผู้แทนหน่วยงาน</span></span><span class="law">ม.33 · ม.34</span><span class="go">ดูส่วนที่ 3</span></a>
-        <a class="x07-b" href="#s4"><b>คณะกรรมการจรรยาบรรณ</b><small>สอบสวนพิจารณาคำกล่าวหาว่าประพฤติผิดจรรยาบรรณ</small><span class="x07-os"><span class="x07-o x07-bap">แต่งตั้ง</span></span><span class="law">ม.50 · ม.53</span><span class="go">ดูส่วนที่ 3 และ 4</span></a>
+        <a class="x07-b" href="#s4"><b>คณะกรรมการจรรยาบรรณ</b><small>สอบสวนพิจารณาคำกล่าวหาว่าประพฤติผิดจรรยาบรรณ</small><span class="x07-os"><span class="x07-o x07-bap">แต่งตั้ง</span><span class="x07-o x07-brp">ผู้แทนหน่วยงาน (บางกรณี)</span></span><span class="law">ม.50 · ม.53</span><span class="go">ดูส่วนที่ 3 และ 4</span></a>
       </div>
       <div class="x07-arw"><span>คณะข้างล่างกำกับดูแลการดำเนินกิจการของสภาฯ</span></div>
       <a class="nd x07-ov" href="#s7"><span class="ico" data-ico="search"></span><b>คณะกรรมการกำกับดูแลการประกอบวิชาชีพบัญชี</b><small>คณะที่ห้า อยู่นอกสภาฯ ปลัดกระทรวงพาณิชย์เป็นประธาน ต่อจากนี้เรียกว่าคณะกรรมการกำกับดูแลฯ</small><span class="x07-os"><span class="x07-o x07-bex">โดยตำแหน่ง</span><span class="x07-o x07-bap">แต่งตั้ง</span></span><span class="law">ม.59 · ม.60</span><span class="go">ดูส่วนที่ 7</span></a>
@@ -295,7 +308,7 @@ details.x07-fold ul { margin-top:4px; }
   <!-- ส่วนที่ 1 -->
   <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
     <div class="sechd"><i>1</i><div><small>คณะกรรมการสภาวิชาชีพบัญชี</small><h2 id="h1">คนที่บริหารสภาฯ มีใครบ้าง มาจากไหน</h2></div></div>
-    <p class="cap">คนรอบโต๊ะนี้มีสี่กลุ่ม ที่ประชุมใหญ่เลือกตั้งเข้ามาเองสองกลุ่ม คือนายกสภาวิชาชีพบัญชี (เรียกสั้น ๆ ว่านายก) กับกรรมการ อีกสองกลุ่มไม่ได้เลือก</p>
+    <p class="cap">คนรอบโต๊ะนี้มีสี่กลุ่ม ที่ประชุมใหญ่เลือกตั้งเข้าคณะนี้โดยตรงสองกลุ่ม คือนายกสภาวิชาชีพบัญชี (เรียกสั้น ๆ ว่านายก) กับกรรมการ อีกสองกลุ่มไม่ได้ถูกเลือกเข้าคณะนี้โดยตรง</p>
     <p class="cap">ภาพเริ่มที่นายก ที่นั่งของนายกสว่างอยู่ แตะกลุ่มอื่นใต้ภาพ แล้วดูว่าเขามาทางไหน</p>
     <div class="x07-tw">
       <svg viewBox="0 0 320 196" role="img" aria-label="โต๊ะประชุมของคณะกรรมการสภาวิชาชีพบัญชี มี 17 ที่นั่ง สีของที่นั่งบอกที่มาของตำแหน่ง">
@@ -324,6 +337,7 @@ details.x07-fold ul { margin-top:4px; }
       <li><i class="x07-bel"></i>เลือกตั้ง</li><li><i class="x07-bex"></i>โดยตำแหน่ง</li><li><i class="x07-bap"></i>แต่งตั้ง</li>
       <li><i class="x07-two"></i>จุดเขียวตรงกลาง คือประธานของด้าน ซึ่งผ่านการเลือกตั้งมาก่อนแล้วจึงได้นั่งโดยตำแหน่ง</li>
     </ul>
+    <div class="x07-cnt" aria-label="นับที่นั่งที่ผ่านการเลือกตั้งของที่ประชุมใหญ่"><b>12 <small>จาก 17 ที่นั่ง</small></b><span>ผ่านการเลือกตั้งของที่ประชุมใหญ่ ถ้านับประธานหกด้านที่มีจุดเขียวด้วย คือนายก 1 · ประธานหกด้าน 6 · กรรมการที่เลือกตั้ง 5 <span class="law">ม.22 (1) (4) · ม.32 วรรคสอง</span></span></div>
     <div class="x07-grp" data-pick="seat">
       <button data-v="0" aria-pressed="true"><i class="x07-bel"></i><span><b>นายก</b><small>1 คน</small></span></button>
       <button data-v="1"><i class="x07-bel"></i><span><b>กรรมการที่เลือกตั้ง</b><small>ไม่เกิน 5 คน</small></span></button>
@@ -517,7 +531,7 @@ details.x07-fold ul { margin-top:4px; }
     <p class="cap">สี่คณะที่ผ่านมาอยู่ในสภาฯ ทั้งหมด คณะที่ห้าอยู่ข้างนอก ไม่มีตำแหน่งไหนมาจากการเลือกตั้ง นายกสภาฯ ได้นั่งด้วย แต่ประธานคือปลัดกระทรวงพาณิชย์</p>
     <div class="x07-seats">
       <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i></span><b>ประธานกรรมการ</b><span>ปลัดกระทรวงพาณิชย์ <span class="law">ม.59 (1)</span></span></div>
-      <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex x07-me"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i></span><b>กรรมการโดยตำแหน่ง 9 คน</b><span>อธิบดีกรมการประกันภัย · อธิบดีกรมสรรพากร · ผู้ว่าการตรวจเงินแผ่นดิน · ผู้ว่าการธนาคารแห่งประเทศไทย · เลขาธิการสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ · <mark>นายกสภาวิชาชีพบัญชี</mark> · ประธานสภาอุตสาหกรรมแห่งประเทศไทย · ประธานสมาคมธนาคารไทย · ประธานกรรมการหอการค้าไทย <span class="law">ม.59 (2)</span></span></div>
+      <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex x07-me"></i><i class="x07-bex"></i><i class="x07-bex"></i><i class="x07-bex"></i></span><b>กรรมการโดยตำแหน่ง 9 คน</b><span>หัวหน้าหน่วยงานของรัฐ 5 คน <mark>นายกสภาวิชาชีพบัญชี</mark> และประธานองค์กรภาคธุรกิจ 3 คน <span class="law">ม.59 (2)</span></span><details class="x07-more"><summary>ดูชื่อตำแหน่งครบ 9 ตำแหน่ง</summary>อธิบดีกรมการประกันภัย · อธิบดีกรมสรรพากร · ผู้ว่าการตรวจเงินแผ่นดิน · ผู้ว่าการธนาคารแห่งประเทศไทย · เลขาธิการสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ · <mark>นายกสภาวิชาชีพบัญชี</mark> · ประธานสภาอุตสาหกรรมแห่งประเทศไทย · ประธานสมาคมธนาคารไทย · ประธานกรรมการหอการค้าไทย</details></div>
       <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bap"></i><i class="x07-bap"></i><i class="x07-bap"></i></span><b>กรรมการผู้ทรงคุณวุฒิ 3 คน</b><span>รัฐมนตรีแต่งตั้ง จากผู้มีความรู้และความเชี่ยวชาญเกี่ยวกับวิชาการบัญชี 2 คน และผู้ทรงคุณวุฒิทางด้านกฎหมาย 1 คน <span class="law">ม.59 (3)</span></span></div>
       <div class="x07-sr"><span class="x07-dots" aria-hidden="true"><i class="x07-bex"></i></span><b>กรรมการและเลขานุการ</b><span>อธิบดีกรมพัฒนาธุรกิจการค้า และกรมพัฒนาธุรกิจการค้าทำหน้าที่ธุรการให้คณะนี้ <span class="law">ม.59 วรรคสอง · วรรคสาม</span></span></div>
     </div>
@@ -569,7 +583,7 @@ details.x07-fold ul { margin-top:4px; }
       <li class="first"><div><b>คณะกรรมการกำกับดูแลฯ สั่งเป็นหนังสือ</b><small>ให้ระงับ แก้ไข หรือวางมาตรการแก้ไขการกระทำที่ขัดต่อกฎหมาย วัตถุประสงค์ หรือข้อบังคับสภาฯ <span class="law">ม.61 (3)</span></small></div></li>
       <li><div><b>นายก กรรมการ หรืออนุกรรมการ ไม่ปฏิบัติตามคำสั่ง</b><small>หรือกระทำการอันเป็นการเสื่อมเสียอย่างร้ายแรงแก่สภาฯ เหตุข้อใดข้อหนึ่งก็พอ <span class="law">ม.63</span></small></div></li>
       <li><div><b>คณะกรรมการกำกับดูแลฯ สอบสวนโดยเร็ว</b><small>แล้วเสนอผลการพิจารณา เพื่อให้รัฐมนตรีมีคำสั่ง <span class="law">ม.63</span></small></div></li>
-      <li><div><b>รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่ง</b><small>คำสั่งของรัฐมนตรีเป็นที่สุด กรรมการโดยตำแหน่งที่ถูกสั่งให้พ้น ให้พ้นจากตำแหน่งตามมาตรา 22 (2) ด้วย <span class="law">ม.63 วรรคสอง · วรรคสาม</span></small></div></li>
+      <li><div><b>รัฐมนตรีมีคำสั่งให้พ้นจากตำแหน่ง</b><small>คำสั่งของรัฐมนตรีเป็นที่สุด และถ้าคนที่ถูกสั่งให้พ้นเป็นกรรมการโดยตำแหน่ง เช่น ประธานของด้านหนึ่ง ก็เสียที่นั่งโดยตำแหน่งในคณะกรรมการสภาฯ ไปด้วย <span class="law">ม.63 วรรคสอง · วรรคสาม</span></small></div></li>
     </ol>
     <p class="note"><span data-ico="info"></span><span>คนที่ไม่ปฏิบัติตามคำสั่งให้ชี้แจง หรือคำสั่งให้ระงับ แก้ไข ของคณะกรรมการกำกับดูแลฯ มีโทษทางอาญาด้วย <span class="law">ม.71</span></span></p>
 
@@ -581,6 +595,10 @@ details.x07-fold ul { margin-top:4px; }
       <div data-k="k" data-min="1" data-max="17" data-v="9" data-unit="คน">กรรมการที่รัฐมนตรีมีคำสั่งให้พ้น</div>
     </div>
     <div class="x07-rl"><b>หลัก</b><span>ดูที่จำนวนกรรมการที่เหลือ ถ้าเหลือไม่ถึงกึ่งหนึ่งของจำนวนที่คณะพึงมี ต้องมีกรรมการชั่วคราว <span class="law">ม.64 วรรคหนึ่ง</span></span></div>
+    <div class="x07-two2" aria-label="เทียบเส้นกึ่งหนึ่งสองแบบ">
+      <div><small>องค์ประชุม ส่วนที่ 2</small><b>นับคนที่มาประชุม</b><span>ต้อง<em>ไม่น้อยกว่า</em>กึ่งหนึ่ง มา 9 คนขึ้นไปจึงประชุมได้</span><span class="law">ม.26</span></div>
+      <div><small>กรรมการชั่วคราว ส่วนนี้</small><b>นับคนที่ยังเหลือ</b><span>เหลือ<em>ไม่ถึง</em>กึ่งหนึ่ง คือเหลือ 8 คนลงมา จึงต้องมีกรรมการชั่วคราว</span><span class="law">ม.64</span></div>
+    </div>
     <div class="x07-qw">
       <span class="x07-ql">กึ่งหนึ่งของ 17 คน คือ 8.5 คน</span>
       <div class="x07-q" role="img" aria-label="แถวกรรมการ 17 คน มีเส้นกึ่งหนึ่งอยู่ตรงกลาง"><i id="qo0"></i><i id="qo1"></i><i id="qo2"></i><i id="qo3"></i><i id="qo4"></i><i id="qo5"></i><i id="qo6"></i><i id="qo7"></i><i id="qo8"></i><i id="qo9"></i><i id="qo10"></i><i id="qo11"></i><i id="qo12"></i><i id="qo13"></i><i id="qo14"></i><i id="qo15"></i><i id="qo16"></i></div>
@@ -805,7 +823,8 @@ details.x07-fold ul { margin-top:4px; }
         'ตั้งคณะอนุกรรมการมาช่วยได้ และมาตรฐานที่ทำเสร็จยังต้องผ่านอีกสองขั้นก่อนใช้บังคับ ดูสถานี<a class="x07-lk" href="law2v-r09.html">กฎและมาตรฐานมาจากไหน</a>'],
       law: ['ม.33', 'ม.34', 'ม.35'] },
     { name: 'คณะกรรมการจรรยาบรรณ', job: 'เมื่อมีผู้กล่าวหาว่าใครประพฤติผิดจรรยาบรรณ คณะนี้สอบสวนพิจารณาโดยเร็ว แล้วสั่งลงโทษ หรือสั่งยกคำกล่าวหา',
-      seats: '<div class="x07-strip">' + dots('x07-bap', 9) + dots('x07-opt', 6) + '<span>กรรมการจรรยาบรรณ 9 ถึง 15 คน</span></div>',
+      seats: '<div class="x07-strip">' + dots('x07-bap', 9) + dots('x07-opt', 6) + '<span>กรรมการจรรยาบรรณ 9 ถึง 15 คน</span></div><div class="x07-strip">'
+        + dots('x07-brp', 1) + '<span>บางกรณี คณะกรรมการสภาฯ โดยความเห็นชอบของที่ประชุมใหญ่ ขอให้หน่วยงานของรัฐที่กฎหมายให้ดูแลเรื่องจรรยาบรรณ แต่งตั้งผู้แทนมาเป็นกรรมการจรรยาบรรณได้ ดูส่วนที่ 4 <span class="law">ม.50 วรรคสอง</span></span></div>',
       chain: ['คณะกรรมการสภาฯ แต่งตั้ง โดยความเห็นชอบของที่ประชุมใหญ่', 'กรรมการเลือกกันเอง เป็นประธาน 1 คน', 'ประธานนั่งในคณะกรรมการสภาฯ โดยตำแหน่ง'],
       bl: ['ตั้งคณะอนุกรรมการมาสอบสวนแทนได้ โดยต้องมีกรรมการจรรยาบรรณอยู่ด้วยอย่างน้อย 1 คน',
         'เรียกบุคคลมาให้ถ้อยคำ หรือให้ส่งบัญชี ทะเบียน เอกสาร หรือหลักฐานได้',
@@ -916,7 +935,7 @@ details.x07-fold ul { margin-top:4px; }
     $('tmp').className = 'x07-tmp' + (trig ? '' : ' x07-off'); $('dF').style.width = (days / 360 * 100) + '%';
     $('dQ').innerHTML = trig ? 'รัฐมนตรีแต่งตั้งกรรมการชั่วคราวแล้ว วาระเหลืออยู่ ' + hi(dL, days + ' วัน') : 'ในโจทย์ข้างบน กรรมการที่เหลือยังไม่น้อยกว่ากึ่งหนึ่ง จึงยังไม่มีกรรมการชั่วคราว';
     $('dQ2').textContent = trig ? 'ต้องเลือกตั้งหรือแต่งตั้งกรรมการใหม่ไหม' : 'เลื่อนจำนวนคนที่พ้นข้างบนให้ถึง 9 คนก่อน แล้วกล่องนี้จะเริ่ม';
-    r.className = 'result' + (!trig ? '' : (days < 180 ? ' x07-stop' : ' ok'));
+    r.className = 'result' + (!trig ? '' : (days < 180 ? ' x07-may' : ' ok'));   /* ไม่ถึง 180 วันเป็นทางเลือกของรัฐมนตรี ใช้สีกลาง ไม่ใช้สีแดง */
     r.textContent = !trig ? 'ยังไม่ถึงขั้นนี้ เพราะกรรมการที่เหลือไม่น้อยกว่ากึ่งหนึ่ง'
       : days < 180 ? 'รัฐมนตรีจะสั่งให้ไม่มีการเลือกตั้งก็ได้ เพราะวาระเหลืออยู่ ' + days + ' วัน ไม่ถึง 180 วัน'
       : 'ต้องเลือกตั้งหรือแต่งตั้งกรรมการใหม่ให้เสร็จภายใน 90 วัน นับแต่วันที่รัฐมนตรีมีคำสั่งแต่งตั้งกรรมการชั่วคราว เพราะวาระเหลืออยู่ ' + days + ' วัน' + (days === 180 ? 'พอดี ยังไม่ใช่เหลือไม่ถึง 180 วัน จึงไม่เข้าข้อยกเว้น' : ' ไม่เข้าข้อยกเว้นที่วาระต้องเหลือไม่ถึง 180 วัน'); }
