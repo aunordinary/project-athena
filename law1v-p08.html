@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>คนครบไหม มติผ่านไหม | CPA Answer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;600;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="law2v.css">
+<style>
+/* กฎหมาย 1 · สายบริษัท · สถานี P08 คนครบไหม มติผ่านไหม · สไตล์เฉพาะหน้า ทุก class ขึ้นต้น xp08- */
+.xp08-nav { padding:8px 4px; }
+.xp08-nav a { font-size:12px; line-height:1.15; } .xp08-nav a i { width:28px; height:28px; font-size:13px; }
+.xp08-why { display:block; margin-top:4px; font-family:var(--body); font-weight:500; font-size:14px; line-height:1.45; }
+.xp08-then { font-size:14px; font-weight:700; color:var(--hue-ink); }
+.xp08-foot { font-size:13px; line-height:1.45; color:var(--muted); }
+.xp08-rule { display:grid; grid-template-columns:22px minmax(0,1fr); gap:8px; align-items:start; padding:8px 12px; border-radius:14px; background:var(--hue-soft); color:var(--hue-ink); font-size:14px; font-weight:700; line-height:1.45; }
+.xp08-rule svg { width:20px; height:20px; margin-top:1px; }
+.xp08-pk { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.xp08-pk button { border-radius:16px; padding:6px 8px; font-size:14px; line-height:1.25; }
+.xp08-pk3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+
+/* ภาพรวม: สองประตู */
+.xp08-two { display:grid; grid-template-columns:minmax(0,1fr); gap:0; justify-items:center; }
+.xp08-dr { display:grid; grid-template-columns:48px minmax(0,1fr); gap:12px; align-items:center; width:100%; padding:12px 14px; border-radius:18px; background:var(--soft); color:inherit; text-decoration:none; }
+.xp08-dr .ico { width:48px; height:48px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; } .xp08-dr .ico svg { width:24px; height:24px; }
+.xp08-dr b { display:block; font-family:var(--display); font-size:17px; line-height:1.25; } .xp08-dr small { display:block; font-size:13px; color:var(--muted); line-height:1.35; }
+.xp08-dr.xp08-d2 .ico { background:var(--gold); }
+.xp08-dr.xp08-d3 { background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); } .xp08-dr.xp08-d3 .ico { background:var(--ink); }
+.xp08-ln { width:4px; height:16px; background:var(--line); border-radius:2px; }
+.xp08-ppl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.xp08-pp { display:grid; grid-template-columns:44px minmax(0,1fr); gap:10px; align-items:center; padding:10px; border-radius:16px; background:var(--soft); font-size:13px; line-height:1.35; }
+.xp08-pp b { display:block; font-family:var(--display); font-size:16px; }
+.xp08-av { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:#fff; font-family:var(--body); font-weight:700; font-size:20px; }
+.xp08-av svg { width:22px; height:22px; }
+.xp08-av.xp08-pr { background:#B8503C; } .xp08-av.xp08-pt { background:#2F6B8A; }
+
+/* ห้องประชุม: ที่นั่งของผู้ถือหุ้นห้าคน */
+.xp08-room { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:5px; padding:12px 8px 10px; border-radius:20px; background:#EFE7D6; }
+.xp08-room .xp08-tb { grid-column:1 / -1; justify-self:center; padding:3px 14px; border-radius:99px; background:#7A5A3A; color:#fff; font-size:12px; font-weight:700; }
+.xp08-seat { display:grid; justify-items:center; align-content:start; gap:3px; min-height:96px; padding:8px 2px; border:0; border-radius:14px; background:var(--white); color:var(--ink); font:inherit; cursor:pointer; text-align:center; transition:background-color .2s ease, opacity .2s ease; }
+.xp08-seat:active { transform:scale(.96); }
+.xp08-seat .xp08-hd { width:34px; height:34px; border-radius:50%; display:grid; place-items:center; background:var(--hue); color:#fff; } .xp08-seat .xp08-hd svg { width:20px; height:20px; }
+.xp08-seat b { font-family:var(--display); font-size:14px; line-height:1.1; } .xp08-seat b i { display:block; font-style:normal; font-family:var(--body); font-size:11px; font-weight:600; color:var(--muted); }
+.xp08-seat em { font-style:normal; font-size:11px; font-weight:800; line-height:1.2; padding:2px 5px; border-radius:99px; background:var(--hue-soft); color:var(--hue-ink); }
+.xp08-seat.xp08-off { background:transparent; box-shadow:inset 0 0 0 2px var(--line); opacity:.75; } .xp08-seat.xp08-off .xp08-hd { background:var(--line); color:var(--ink); } .xp08-seat.xp08-off em { background:var(--soft); color:var(--muted); }
+.xp08-seat.xp08-px .xp08-hd { background:var(--gold); } .xp08-seat.xp08-px em { background:var(--gold-soft); color:var(--ink); box-shadow:inset 0 0 0 1.5px var(--sun); }
+.xp08-seat.xp08-y { background:var(--good-soft); } .xp08-seat.xp08-y .xp08-hd { background:var(--good); } .xp08-seat.xp08-y em { background:var(--good); color:#fff; }
+.xp08-seat.xp08-n { background:var(--white); box-shadow:inset 0 0 0 2px var(--bad); } .xp08-seat.xp08-n .xp08-hd { background:var(--bad); } .xp08-seat.xp08-n em { background:var(--bad-soft); color:var(--bad-ink); }
+
+/* แถบเกณฑ์: หลายช่องต่อกัน มีเส้นเกณฑ์ */
+.xp08-bx { display:grid; gap:6px; padding:12px 14px; border-radius:18px; background:var(--soft); transition:opacity .2s ease; }
+.xp08-bx .xp08-bt { display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-size:14px; font-weight:700; line-height:1.3; }
+.xp08-bx .xp08-bt b { font-family:var(--display); font-size:20px; white-space:nowrap; }
+.xp08-bar { position:relative; display:flex; height:30px; border-radius:10px; overflow:visible; background:var(--white); box-shadow:inset 0 0 0 1.5px var(--line); }
+.xp08-bar > span { height:100%; display:grid; place-items:center; overflow:hidden; font-size:11px; font-weight:800; color:#fff; white-space:nowrap; box-shadow:inset -2px 0 0 var(--white); transition:width .3s ease; }
+.xp08-bar > span:first-child { border-radius:10px 0 0 10px; }
+.xp08-bar .xp08-sy { background:var(--good); } .xp08-bar .xp08-sn { background:repeating-linear-gradient(135deg, var(--bad-soft) 0 6px, #F4CFCB 6px 12px); color:var(--bad-ink); } .xp08-bar .xp08-sp { background:var(--hue); } .xp08-bar .xp08-sg { background:var(--gold); color:var(--ink); }
+.xp08-bar .xp08-th { position:absolute; top:-6px; bottom:-6px; width:4px; margin-left:-2px; border-radius:2px; background:var(--ink); box-shadow:0 0 0 2px var(--sun); }
+.xp08-bx .xp08-st { font-size:13px; font-weight:700; color:var(--bad-ink); line-height:1.35; } .xp08-bx.ok .xp08-st { color:var(--good); }
+.xp08-bx.xp08-dim { opacity:.5; }
+.xp08-bx .xp08-tg { justify-self:start; padding:1px 9px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:700; }
+.xp08-bx.xp08-dim .xp08-tg { background:var(--line); color:var(--ink); }
+.xp08-ax { position:relative; height:16px; font-size:11px; font-weight:700; color:var(--muted); }
+.xp08-ax span { position:absolute; top:0; transform:translateX(-50%); white-space:nowrap; } .xp08-ax span.xp08-l0 { transform:none; } .xp08-ax span.xp08-l1 { transform:translateX(-100%); }
+
+/* ส่วนที่ 2: ล่วงเวลานัด 1 ชั่วโมง */
+.xp08-flow { display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; gap:0; }
+.xp08-nd { display:grid; justify-items:center; gap:2px; width:100%; max-width:320px; padding:10px 14px; border-radius:16px; background:var(--soft); text-align:center; font-size:14px; line-height:1.35; transition:background-color .2s ease, color .2s ease, opacity .2s ease; }
+.xp08-nd b { font-family:var(--display); font-size:16px; line-height:1.25; }
+.xp08-nd small { font-size:13px; color:var(--muted); }
+.xp08-nd.xp08-clk { background:var(--hue-ink); color:#fff; } .xp08-nd.xp08-clk small { color:rgba(255,255,255,.85); }
+.xp08-fk { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; width:100%; }
+.xp08-fk > div { display:grid; justify-items:center; align-content:start; gap:4px; padding:10px 8px; border-radius:16px; background:var(--soft); text-align:center; font-size:13px; line-height:1.35; opacity:.4; transition:opacity .2s ease, background-color .2s ease; }
+.xp08-fk > div b { font-family:var(--display); font-size:15px; line-height:1.25; }
+.xp08-fk > div .ico { width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:var(--white); } .xp08-fk > div .ico svg { width:20px; height:20px; }
+.xp08-fk > div.xp08-on { opacity:1; }
+.xp08-fk > div.xp08-stop.xp08-on { background:var(--bad-soft); color:var(--bad-ink); box-shadow:inset 0 0 0 2px var(--bad); }
+.xp08-fk > div.xp08-go.xp08-on { background:var(--good-soft); color:var(--good); box-shadow:inset 0 0 0 2px var(--good); }
+.xp08-fk > div .law { white-space:normal; }
+.xp08-y { width:100%; height:22px; } .xp08-y path { fill:none; stroke:var(--line); stroke-width:4; stroke-linecap:round; vector-effect:non-scaling-stroke; }
+
+/* ส่วนที่ 3: รายการเรื่องที่ใช้มติพิเศษ · คนที่ออกเสียงไม่ได้ */
+.xp08-tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+.cons .law { white-space:normal; } .cons > * { min-width:0; }
+.xp08-bx .xp08-bt { flex-wrap:wrap; } .xp08-bx .xp08-bt > span { flex:1 1 130px; }
+.xp08-tiles > div { display:grid; grid-template-columns:30px minmax(0,1fr); gap:8px; align-items:center; padding:8px 10px; border-radius:14px; background:var(--white); font-size:13px; font-weight:600; line-height:1.3; }
+.xp08-tiles .ico { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; background:var(--hue-soft); color:var(--hue); } .xp08-tiles .ico svg { width:17px; height:17px; }
+.xp08-ban > div .ico { background:var(--bad-soft); color:var(--bad-ink); }
+.xp08-tiles small { display:block; font-weight:500; color:var(--muted); font-size:12px; }
+
+/* ส่วนที่ 4: ตารางเทียบสองกฎหมาย */
+.xp08-cmp { width:100%; border-collapse:separate; border-spacing:0 6px; font-size:13px; line-height:1.35; table-layout:fixed; }
+.xp08-cmp th { padding:6px 8px; font-family:var(--display); font-size:14px; text-align:left; }
+.xp08-cmp th:first-child { width:24%; } .xp08-cmp th.xp08-h1 { background:var(--soft); border-radius:12px 12px 0 0; } .xp08-cmp th.xp08-h2 { background:var(--hue-soft); color:var(--hue-ink); border-radius:12px 12px 0 0; }
+.xp08-cmp td { padding:8px; vertical-align:top; background:var(--white); box-shadow:inset 0 -1px 0 var(--line); overflow-wrap:break-word; }
+.xp08-cmp td:first-child { font-weight:700; color:var(--muted); } .xp08-cmp td.xp08-c2 { background:#F3F8FB; }
+.xp08-cmp .law { white-space:normal; }
+.endc a { color:#fff; font-weight:700; }
+</style>
+</head>
+<body>
+<!-- กฎหมาย 1 · สาย P บริษัท · สถานี P08 “คนครบไหม มติผ่านไหม” · หน้าทำมือ ver 4 · 18 ต.ค. 2569
+     เนื้อหาจาก exchange/v2/builds/law1v-af-2026-10-13/content/P08.content.json (claims P08-K01–K28) · บันทึก notes-hb/P08.md
+     บริษัทอีกแห่ง (20,000 หุ้น ผู้ถือหุ้น 5 คน) และบริษัทมหาชนลูกค้าของพี่แพม เป็นเรื่องสมมติ ตัวเลขเป็นตัวเลขของเรื่อง ไม่ใช่ของกฎหมาย
+     ทุกคนที่มาประชุมในเรื่องมีสิทธิและลงคะแนนทุกคน (หน้านี้ไม่สอนงดออกเสียง ดู P1 · 2 ใน notes/P08.md) -->
+<main>
+  <header class="hero">
+    <div class="top"><a href="law1v-index.html#P">สายบริษัท</a><span>ตัวอย่าง · ยังไม่ใช่ฉบับจริง</span></div>
+    <p class="kick">บริษัทจำกัดและบริษัทมหาชน · สถานี 8</p>
+    <h1>คนครบไหม มติผ่านไหม</h1>
+    <p class="sub">ประชุมผู้ถือหุ้นมีสองด่าน ด่านแรกคนกับหุ้นที่มาต้องถึงเกณฑ์ เรียกว่าครบองค์ประชุม ด่านที่สองนับเสียง ซึ่งนับจากคนหรือจากหุ้นก็ได้ แล้วแต่วิธีลงคะแนน</p>
+    <svg viewBox="0 0 340 120" role="img" aria-label="ภาพโต๊ะประชุม มีผู้ถือหุ้นห้าคน สามคนชูมือ">
+      <rect x="40" y="78" width="260" height="16" rx="8" fill="rgba(255,255,255,.22)"/>
+      <g fill="#F0C84B"><circle cx="70" cy="46" r="11"/><circle cx="120" cy="46" r="11"/><circle cx="170" cy="46" r="11"/></g>
+      <g fill="rgba(255,255,255,.55)"><circle cx="220" cy="46" r="11"/><circle cx="270" cy="46" r="11"/></g>
+      <g fill="#F0C84B"><path d="M56 78c0-12 6-18 14-18s14 6 14 18z"/><path d="M106 78c0-12 6-18 14-18s14 6 14 18z"/><path d="M156 78c0-12 6-18 14-18s14 6 14 18z"/></g>
+      <g fill="rgba(255,255,255,.55)"><path d="M206 78c0-12 6-18 14-18s14 6 14 18z"/><path d="M256 78c0-12 6-18 14-18s14 6 14 18z"/></g>
+      <g stroke="#F0C84B" stroke-width="5" stroke-linecap="round"><path d="M82 62L90 22"/><path d="M132 62L140 22"/><path d="M182 62L190 22"/></g>
+      <rect x="0" y="114" width="340" height="6" fill="rgba(255,255,255,.08)"/>
+    </svg>
+  </header>
+
+  <nav class="steps xp08-nav" id="steps" aria-label="ส่วนของสถานีนี้">
+    <a class="home" href="law1v-index.html#P" aria-label="กลับไปผังสถานีของสายบริษัท"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.500l8-7 8 7M6.500 10v9.500h11V10"/></svg></i>ผังสาย</a>
+    <a href="#s1"><i>1</i>คนครบ</a><a href="#s2"><i>2</i>ไม่ครบ</a><a href="#s3"><i>3</i>นับเสียง</a><a href="#s4"><i>4</i>มหาชน</a>
+  </nav>
+
+  <!-- ภาพรวม -->
+  <section class="fig" aria-labelledby="f0">
+    <span class="fno">ภาพรวมของสถานี</span>
+    <h2 id="f0">นับคนกับหุ้นที่มาก่อน แล้วค่อยนับเสียง</h2>
+    <p class="cap">ทั้งหน้าใช้บริษัทเดียวเป็นตัวอย่าง บริษัทนี้มีผู้ถือหุ้น 5 คน รวม 20,000 หุ้น</p>
+    <div class="xp08-room xp08-room0" id="room0" aria-label="ผู้ถือหุ้นห้าคน ถือ 8,000 5,000 4,000 2,000 และ 1,000 หุ้น">
+      <span class="xp08-tb">บริษัทในหน้านี้ · 20,000 หุ้น</span>
+    </div>
+    <p class="xp08-foot">จุดเช็กท้ายแต่ละส่วนจะพากลับมาที่พาวเด้ออ้าย ซึ่งมีผู้ถือหุ้นสองคน คือพริ้ง 6,000 หุ้น กับพีท 4,000 หุ้น</p>
+    <div class="xp08-two">
+      <a class="xp08-dr" href="#s1"><span class="ico" data-ico="users"></span><span><b>ด่าน 1 · ครบองค์ประชุมไหม</b><small>คนและหุ้นที่มาต้องถึงขั้นต่ำก่อน จึงลงมติได้</small></span></a>
+      <span class="xp08-ln"></span>
+      <a class="xp08-dr xp08-d2" href="#s3"><span class="ico" data-ico="hand"></span><span><b>ด่าน 2 · มติผ่านไหม</b><small>ชูมือนับคนละ 1 เสียง ลงคะแนนลับนับหุ้นละ 1 เสียง เรื่องสำคัญต้องได้ 3 ใน 4</small></span></a>
+      <span class="xp08-ln"></span>
+      <a class="xp08-dr xp08-d3" href="#s4"><span class="ico" data-ico="building"></span><span><b>บริษัทมหาชนนับอีกแบบ</b><small>กฎหมายคนละฉบับ ตัวเลขคนละชุด</small></span></a>
+    </div>
+  </section>
+
+  <!-- ส่วนที่ 1 -->
+  <section class="fig" id="s1" data-step="s1" aria-labelledby="h1">
+    <div class="sechd"><i>1</i><div><small>องค์ประชุม</small><h2 id="h1">ถือหุ้นมากแค่ไหน มาคนเดียวก็ยังลงมติไม่ได้</h2></div></div>
+    <p class="cap">องค์ประชุม คือจำนวนคนและหุ้นขั้นต่ำที่ต้องมา ก่อนจะลงมติเรื่องใดได้ ต้องนับสองอย่าง คือคนที่มา กับหุ้นของคนที่มารวมกัน</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="qC"></p><p>ข้อที่ต่างจากโจทย์ตั้งต้นเป็นสีเหลือง</p></div>
+    <p class="xp08-rule"><span data-ico="scale"></span><span>มาไม่น้อยกว่า 2 คน และหุ้นรวมไม่น้อยกว่า 1 ใน 4 ของทุน (5,000 จาก 20,000 หุ้น) ต้องถึงทั้งสองข้อ</span></p>
+    <p class="xp08-foot">ผู้รับมอบฉันทะ คือคนที่ผู้ถือหุ้นมอบเป็นหนังสือให้มาประชุมแทน นับเป็นคนที่มาด้วย</p>
+    <p class="lbl">เลือกกรณี หรือแตะที่นั่งให้คนนั้นมาหรือไม่มา</p>
+    <div class="chips xp08-pk" data-pick="who">
+      <button data-v="0" aria-pressed="true">คนถือ 8,000 หุ้น<wbr> มาคนเดียว</button>
+      <button data-v="1">8,000 หุ้น<wbr> + ผู้รับมอบฉันทะ 1 คน</button>
+      <button data-v="2">คนถือ 2,000 กับ<wbr> 1,000 หุ้น</button>
+      <button data-v="3">คนถือ 4,000 กับ<wbr> 1,000 หุ้น</button>
+    </div>
+    <div class="xp08-room" id="room1" role="group" aria-label="ที่นั่งของผู้ถือหุ้นห้าคน แตะเพื่อสลับมาหรือไม่มา">
+      <span class="xp08-tb">โต๊ะประชุม · บริษัทอีกแห่ง 20,000 หุ้น</span>
+    </div>
+    <div class="xp08-bx" id="b1p"><div class="xp08-bt"><span>คนที่มา</span><b id="b1pv"></b></div><div class="xp08-bar" id="b1pb"></div><div class="xp08-ax"><span class="xp08-l0" style="left:0">0</span><span style="left:40%">2 คน</span><span class="xp08-l1" style="left:100%">5 คน</span></div><div class="xp08-st" id="b1ps"></div></div>
+    <div class="xp08-bx" id="b1s"><div class="xp08-bt"><span>หุ้นของคนที่มา</span><b id="b1sv"></b></div><div class="xp08-bar" id="b1sb"></div><div class="xp08-ax"><span class="xp08-l0" style="left:0">0</span><span style="left:25%">5,000 (1 ใน 4)</span><span class="xp08-l1" style="left:100%">20,000</span></div><div class="xp08-st" id="b1ss"></div></div>
+    <div class="gate" id="g1" role="status"><span data-door></span><div><b id="g1T"></b><span id="g1S"></span></div></div>
+    <details class="src">
+      <summary>รายละเอียดและถ้อยคำของตัวบท</summary>
+      <p>ข้อบังคับ คือกติกาภายในที่บริษัทตั้งไว้เอง ข้อบังคับกำหนดวิธีประชุมต่างจากนี้ได้ บริษัทในหน้านี้ไม่ได้กำหนด ตัวบทเขียนว่า 1 ใน 4 แห่งทุน ทุกหุ้นมูลค่าเท่ากันจึงนับเป็นหุ้นได้ <span class="law">ป.พ.พ. ม.1177 · ม.1178</span></p>
+      <p>การประชุมใหญ่ต้องมีผู้ถือหุ้นหรือผู้รับมอบฉันทะจากผู้ถือหุ้นเข้าร่วมประชุมกัน ไม่น้อยกว่าสองคนและมีจำนวนหุ้นนับรวมกันได้ไม่น้อยกว่าหนึ่งในสี่แห่งทุนของบริษัท จึงจะสามารถลงมติในเรื่องใด ๆ ได้ <span class="law">ป.พ.พ. ม.1178</span></p>
+      <p>ผู้ถือหุ้นทุกคนจะมอบฉันทะให้ผู้อื่นออกเสียงแทนตนก็ได้ แต่การมอบฉันทะเช่นนี้ต้องทำเป็นหนังสือ <span class="law">ป.พ.พ. ม.1187</span> วิธีมอบฉันทะอยู่ในสถานี<a href="law2v-c.html?c=P07">ก่อนหน้า</a></p>
+    </details>
+    <div id="ck1"></div>
+    <p class="xp08-then">แล้วถ้าถึงเวลานัดแล้วคนยังมาไม่ครบล่ะ</p>
+  </section>
+
+  <!-- ส่วนที่ 2 -->
+  <section class="fig" id="s2" data-step="s2" aria-labelledby="h2">
+    <div class="sechd"><i>2</i><div><small>ไม่ครบใน 1 ชั่วโมง</small><h2 id="h2">ล่วงเวลานัด 1 ชั่วโมงยังไม่ครบ ทำยังไงต่อ</h2></div></div>
+    <p class="cap">ดูว่าประชุมนี้เรียกขึ้นเพราะผู้ถือหุ้นร้องขอหรือเปล่า ถ้าใช่ ประชุมจบตรงนั้น ถ้าไม่ใช่ นัดใหม่ และครั้งหลังไม่ต้องครบองค์ประชุม</p>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="tC"></p></div>
+    <p class="lbl">ลองเปลี่ยนชนิดบริษัท และเหตุที่เรียกประชุม</p>
+    <div class="chips xp08-pk" data-pick="kind">
+      <button data-v="0" aria-pressed="true">บริษัทจำกัด</button>
+      <button data-v="1">บริษัทมหาชนจำกัด</button>
+    </div>
+    <div class="togs" data-togs="req">
+      <button data-k="r" aria-pressed="false"><span>ประชุมนี้เรียกเพราะผู้ถือหุ้นร้องขอ<small>ปิดไว้คือกรรมการเรียกประชุมตามปกติ</small></span></button>
+    </div>
+    <div class="xp08-flow">
+      <div class="xp08-nd xp08-clk"><b>ถึงเวลานัด</b><small>ผู้ถือหุ้นทยอยมา</small></div>
+      <span class="xp08-ln"></span>
+      <div class="xp08-nd"><b>ล่วงไป 1 ชั่วโมง ยังไม่ครบองค์ประชุม</b><small>นับ 1 ชั่วโมงจากเวลานัด</small></div>
+      <svg class="xp08-y" viewBox="0 0 100 22" preserveAspectRatio="none" aria-hidden="true"><path d="M50 0V6M50 6C50 16 25 10 25 22M50 6C50 16 75 10 75 22"/></svg>
+      <div class="xp08-fk">
+        <div class="xp08-stop" id="t0"><span class="ico" data-ico="ban"></span><b>ผู้ถือหุ้นร้องขอ</b><span id="t0s"></span><span class="law" id="t0l"></span></div>
+        <div class="xp08-go" id="t1"><span class="ico" data-ico="calendar"></span><b>ไม่ได้ร้องขอ</b><span id="t1s"></span><span class="law" id="t1l"></span></div>
+      </div>
+    </div>
+    <p class="result" id="tR" role="status"></p>
+    <details class="src">
+      <summary>ถ้อยคำของตัวบท</summary>
+      <p>การประชุมใหญ่เรียกนัดเวลาใด เมื่อล่วงเวลานัดนั้นไปแล้วถึงชั่วโมงหนึ่ง จำนวนผู้ถือหุ้นซึ่งมาเข้าประชุมยังไม่ครบถ้วนเป็นองค์ประชุม หากว่าการประชุมใหญ่นั้นได้เรียกนัดเพราะผู้ถือหุ้นร้องขอ ท่านให้เลิกประชุม ถ้าการประชุมใหญ่นั้นมิใช่ชนิดซึ่งเรียกนัดเพราะผู้ถือหุ้นร้องขอไซร้ ท่านให้เรียกนัดใหม่อีกคราวหนึ่งภายในสิบสี่วัน และการประชุมใหญ่ครั้งหลังนี้ท่านไม่บังคับว่าจำต้องครบองค์ประชุม <span class="law">ป.พ.พ. ม.1179</span></p>
+      <p>ตัวบทไม่ได้เขียนว่า 14 วันเริ่มนับจากวันไหน หน้านี้จึงไม่นับวันให้</p>
+      <p>บริษัทมหาชนจำกัด ถ้าเรียกเพราะผู้ถือหุ้นร้องขอ การประชุมเป็นอันระงับไป ถ้าไม่ใช่ ให้นัดประชุมใหม่ และส่งหนังสือนัดประชุมไปยังผู้ถือหุ้นไม่น้อยกว่า 7 วันก่อนวันประชุม ครั้งหลังไม่บังคับว่าต้องครบองค์ประชุม <span class="law">พ.ร.บ.บริษัทมหาชนจำกัด ม.103 วรรคสอง</span></p>
+    </details>
+    <div id="ck2"></div>
+    <p class="xp08-then">ครบองค์ประชุมแล้ว ถึงเวลานับเสียง</p>
+  </section>
+
+  <!-- ส่วนที่ 3 -->
+  <section class="fig" id="s3" data-step="s3" aria-labelledby="h3">
+    <div class="sechd"><i>3</i><div><small>นับเสียง</small><h2 id="h3">คนกลุ่มเดียวกัน ชูมือไม่ผ่าน ลงคะแนนลับผ่านได้</h2></div></div>
+    <p class="cap">วาระของบริษัทอีกแห่งคือแก้ข้อบังคับ ซึ่งต้องใช้มติพิเศษ คือต้องได้เสียงเห็นชอบไม่ต่ำกว่า 3 ใน 4 ของเสียงทั้งหมดของผู้ถือหุ้นที่มาประชุมและมีสิทธิออกเสียง ไม่ใช่ของทั้งบริษัท แล้วหนึ่งเสียงนับจากอะไร ขึ้นกับวิธีลงคะแนน</p>
+    <div class="cons">
+      <b>สองวิธีลงคะแนนของบริษัทจำกัด</b>
+      <div class="xp08-tiles">
+        <div><span class="ico" data-ico="hand"></span><span>ชูมือ วิธีปกติ<small>คนละ 1 เสียง ไม่ว่าถือกี่หุ้น มาเองหรือมอบฉันทะก็ 1 เสียง</small></span></div>
+        <div><span class="ico" data-ico="vote"></span><span>ลงคะแนนลับ<small>หุ้นละ 1 เสียง ใช้เมื่อผู้ถือหุ้น 2 คนขึ้นไปขอ ก่อนหรือตอนแสดงผลชูมือ</small></span></div>
+      </div>
+      <span class="xp08-foot"><span class="law">ป.พ.พ. ม.1182 · ม.1190 · ม.1191</span></span>
+    </div>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="vC"></p></div>
+    <p class="xp08-rule"><span data-ico="scale"></span><span>ไม่มีใครขอ หรือขอคนเดียว นับชูมือ · ผู้ถือหุ้น 2 คนขึ้นไปขอ นับลงคะแนนลับ และผลคะแนนลับเป็นมติ</span></p>
+    <p class="lbl">มีผู้ถือหุ้นขอลงคะแนนลับกี่คน</p>
+    <div class="chips xp08-pk xp08-pk3" data-pick="ask">
+      <button data-v="0" aria-pressed="true">ไม่มีใครขอ</button>
+      <button data-v="1">ขอ 1 คน</button>
+      <button data-v="2">ขอ 2 คน</button>
+    </div>
+    <p class="lbl">แตะที่นั่ง สลับ เห็นชอบ → ไม่เห็นชอบ → ไม่มา</p>
+    <div class="xp08-room" id="room3" role="group" aria-label="ที่นั่งของผู้ถือหุ้นห้าคน แตะเพื่อสลับเห็นชอบ ไม่เห็นชอบ ไม่มา">
+      <span class="xp08-tb">วาระ · แก้ข้อบังคับ (มติพิเศษ)</span>
+    </div>
+    <div class="xp08-bx" id="b3h"><span class="xp08-tg" id="b3ht"></span><div class="xp08-bt"><span>ชูมือ คนละ 1 เสียง</span><b id="b3hv"></b></div><div class="xp08-bar" id="b3hb"></div><div class="xp08-st" id="b3hs"></div></div>
+    <div class="xp08-bx" id="b3s"><span class="xp08-tg" id="b3st"></span><div class="xp08-bt"><span>ลงคะแนนลับ หุ้นละ 1 เสียง</span><b id="b3sv"></b></div><div class="xp08-bar" id="b3sb"></div><div class="xp08-st" id="b3ss"></div></div>
+    <p class="xp08-foot">เส้นดำคือ 3 ใน 4 ของเสียงที่นับได้ในวิธีนั้น ช่องแต่ละช่องคือผู้ถือหุ้นที่มาหนึ่งคน สีเขียวเห็นชอบ ลายแดงไม่เห็นชอบ</p>
+    <p class="result" id="vR" role="status"></p>
+    <div class="cons">
+      <b>เรื่องที่ต้องใช้มติพิเศษ <span class="law">ป.พ.พ. ม.1145 · ม.1220 · ม.1224 · ม.1236 (4) · ม.1238</span></b>
+      <div class="xp08-tiles">
+        <div><span class="ico" data-ico="doc"></span><span>ตั้งข้อบังคับใหม่ หรือแก้ข้อบังคับ</span></div>
+        <div><span class="ico" data-ico="pen"></span><span>แก้หนังสือบริคณห์สนธิ</span></div>
+        <div><span class="ico" data-ico="coin"></span><span>เพิ่มทุน ลดทุน</span></div>
+        <div><span class="ico" data-ico="building"></span><span>ควบบริษัท และมติให้เลิกบริษัท</span></div>
+      </div>
+      <span class="xp08-foot">รายละเอียดของแต่ละเรื่องอยู่ในสถานีของเรื่องนั้น หน้านี้ดูแค่ว่าต้องได้เสียงเท่าไร</span>
+    </div>
+    <div class="cons">
+      <b>คนที่มาแล้วแต่ออกเสียงไม่ได้</b>
+      <div class="xp08-tiles xp08-ban">
+        <div><span class="ico" data-ico="coin"></span><span>ยังค้างค่าหุ้นที่บริษัทเรียกแล้ว<small>ไม่มีสิทธิออกเสียง <span class="law">ม.1184</span></small></span></div>
+        <div><span class="ico" data-ico="ban"></span><span>มีส่วนได้เสียเป็นพิเศษในข้อที่ลงมติ<small>ห้ามออกเสียงในข้อนั้น ข้ออื่นยังออกเสียงได้ <span class="law">ม.1185</span></small></span></div>
+      </div>
+    </div>
+    <details class="src">
+      <summary>ถ้อยคำของตัวบท</summary>
+      <p>ในการลงคะแนนโดยวิธีชูมือนั้น ท่านให้นับว่าผู้ถือหุ้นทุกคนที่มาประชุมเองหรือมอบฉันทะให้ผู้อื่นมาประชุมแทนมีเสียงหนึ่งเป็นคะแนน แต่ในการลงคะแนนลับ ท่านให้นับว่าผู้ถือหุ้นทุกคนมีคะแนนเสียงเสียงหนึ่งต่อหุ้นหนึ่งที่ตนถือ <span class="law">ป.พ.พ. ม.1182</span></p>
+      <p>ข้อมติอันเสนอให้ลงคะแนนท่านให้ตัดสินด้วยวิธีชูมือ เว้นแต่เมื่อก่อนหรือในเวลาที่แสดงผลแห่งการชูมือนั้น จะได้มีผู้ถือหุ้นสองคนเป็นอย่างน้อยติดใจร้องขอให้ลงคะแนนลับ <span class="law">ป.พ.พ. ม.1190</span> ถ้ามีผู้ร้องขอให้ลงคะแนนลับ ผลแห่งคะแนนลับถือเป็นมติของที่ประชุม <span class="law">ม.1191 วรรคสอง</span></p>
+      <p>การใดที่กฎหมายกำหนดให้ต้องทำโดยมติพิเศษ ที่ประชุมใหญ่ต้องลงมติในเรื่องนั้นโดยคะแนนเสียงข้างมากไม่ต่ำกว่าสามในสี่ของจำนวนเสียงทั้งหมดของผู้ถือหุ้นที่มาประชุมและมีสิทธิออกเสียงลงคะแนน <span class="law">ป.พ.พ. ม.1194</span></p>
+      <p>ข้อบังคับที่ตั้งใหม่หรือแก้ไข บริษัทต้องนำไปจดทะเบียนภายใน 14 วันนับแต่วันที่ลงมติพิเศษ <span class="law">ป.พ.พ. ม.1146</span></p>
+    </details>
+    <div id="ck3"></div>
+    <p class="xp08-then">ทั้งหมดนี้คือบริษัทจำกัด บริษัทมหาชนใช้กฎหมายอีกฉบับ</p>
+  </section>
+
+  <!-- ส่วนที่ 4 -->
+  <section class="fig" id="s4" data-step="s4" aria-labelledby="h4">
+    <div class="sechd"><i>4</i><div><small>บริษัทมหาชน</small><h2 id="h4">ผู้ถือหุ้น 200 คน มา 30 คนก็ครบองค์ประชุมได้</h2></div></div>
+    <p class="cap">แพรเป็นผู้ช่วยของพี่แพม ผู้สอบบัญชีของบริษัทมหาชนลูกค้า วันนี้ไปดูประชุมผู้ถือหุ้นของลูกค้า เกณฑ์คนมีสองทาง ถึงทางเดียวก็พอ แต่เกณฑ์หุ้นต้องถึงด้วยเสมอ</p>
+    <div class="duo">
+      <div><span data-face="prae2"></span><b>แพร</b><small>ผู้ช่วยผู้สอบบัญชี</small></div>
+      <div><span id="fPam"></span><b>พี่แพม</b><small>ผู้สอบบัญชีของลูกค้า</small></div>
+    </div>
+    <div class="case" role="status" aria-live="polite"><small>โจทย์</small><p id="pC"></p></div>
+    <p class="xp08-rule"><span data-ico="scale"></span><span>คน ไม่น้อยกว่า 25 คน หรือไม่น้อยกว่ากึ่งหนึ่งของผู้ถือหุ้นทั้งหมด และหุ้น ไม่น้อยกว่า 1 ใน 3 ของหุ้นที่จำหน่ายได้ทั้งหมด</span></p>
+    <p class="xp08-foot">หุ้นที่จำหน่ายได้ คือหุ้นที่บริษัทขายให้ผู้ถือหุ้นไปแล้ว ลูกค้ารายนี้มี 10,000,000 หุ้น นับผู้รับมอบฉันทะเป็นคนที่มาเหมือนบริษัทจำกัด</p>
+    <p class="lbl">ลองเลื่อนจำนวนคนและหุ้นที่มา</p>
+    <div class="nums" data-nums="pub">
+      <div data-k="p" data-min="1" data-max="200" data-step="1" data-v="30" data-unit="คน">ผู้ถือหุ้นและผู้รับมอบฉันทะที่มา<small>จากผู้ถือหุ้นทั้งหมด 200 คน</small></div>
+      <div data-k="s" data-min="0" data-max="10000000" data-step="100000" data-v="4000000" data-unit="หุ้น">หุ้นของคนที่มารวมกัน<small>จาก 10,000,000 หุ้น</small></div>
+    </div>
+    <div class="xp08-bx" id="b4p"><div class="xp08-bt"><span>คนที่มา</span><b id="b4pv"></b></div><div class="xp08-bar" id="b4pb"></div><div class="xp08-ax"><span class="xp08-l0" style="left:0">0</span><span style="left:12.5%">25</span><span style="left:50%">100 (กึ่งหนึ่ง)</span><span class="xp08-l1" style="left:100%">200</span></div><div class="xp08-st" id="b4ps"></div></div>
+    <div class="xp08-bx" id="b4s"><div class="xp08-bt"><span>หุ้นที่มา</span><b id="b4sv"></b></div><div class="xp08-bar" id="b4sb"></div><div class="xp08-ax"><span class="xp08-l0" style="left:0">0</span><span style="left:33.333%">1 ใน 3</span><span class="xp08-l1" style="left:100%">10 ล้าน</span></div><div class="xp08-st" id="b4ss"></div></div>
+    <div class="gate" id="g4" role="status"><span data-door></span><div><b id="g4T"></b><span id="g4S"></span></div></div>
+    <h3>ครบแล้ว นับเสียงยังไง เทียบกับบริษัทจำกัด</h3>
+    <table class="xp08-cmp">
+      <thead><tr><th></th><th class="xp08-h1">บริษัทจำกัด</th><th class="xp08-h2">บริษัทมหาชนจำกัด</th></tr></thead>
+      <tbody>
+        <tr><td>คน</td><td>2 คนขึ้นไป</td><td class="xp08-c2">25 คน หรือกึ่งหนึ่งขึ้นไป <span class="law">ม.103</span></td></tr>
+        <tr><td>หุ้น</td><td>1 ใน 4 ของทุนขึ้นไป</td><td class="xp08-c2">1 ใน 3 ของหุ้นที่จำหน่ายได้ขึ้นไป</td></tr>
+        <tr><td>หนึ่งเสียง</td><td>ชูมือคนละ 1 · ลงคะแนนลับหุ้นละ 1</td><td class="xp08-c2">หุ้นสามัญหุ้นละ 1 ทั้งลงคะแนนเปิดเผยและลับ <span class="law">ม.102</span></td></tr>
+        <tr><td>เรื่องสำคัญ</td><td>มติพิเศษ 3 ใน 4 ขึ้นไป</td><td class="xp08-c2">ไม่น้อยกว่า 3 ใน 4 ของเสียงคนที่มาประชุมและมีสิทธิออกเสียง เช่น แก้หนังสือบริคณห์สนธิหรือข้อบังคับ ขายหรือโอนกิจการทั้งหมดหรือบางส่วนที่สำคัญ <span class="law">ม.31 · ม.107 (2)</span></td></tr>
+        <tr><td>มีส่วนได้เสียเป็นพิเศษ</td><td>ห้ามออกเสียงในข้อนั้น</td><td class="xp08-c2">ไม่มีสิทธิออกเสียงในเรื่องนั้น เว้นแต่เลือกตั้งกรรมการ <span class="law">ม.102 · ม.33</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note"><span data-ico="check"></span><span>บริษัทมหาชน เรื่องทั่วไปใช้เสียงข้างมากของผู้ถือหุ้นที่มาประชุมและออกเสียงลงคะแนน ถ้าเสียงเท่ากัน ประธานในที่ประชุมออกเสียงเพิ่มอีก 1 เสียงเป็นเสียงชี้ขาด <span class="law">ม.107 (1)</span></span></p>
+    <p class="xp08-foot">คอลัมน์ขวาคือพระราชบัญญัติบริษัทมหาชนจำกัด พ.ศ. 2535 คอลัมน์ซ้ายคือประมวลกฎหมายแพ่งและพาณิชย์ ที่ใช้มาตั้งแต่ส่วนที่ 1</p>
+    <details class="src">
+      <summary>ถ้อยคำของตัวบท</summary>
+      <p>ในการประชุมผู้ถือหุ้น ต้องมีผู้ถือหุ้นและผู้รับมอบฉันทะจากผู้ถือหุ้น (ถ้ามี) มาประชุมไม่น้อยกว่ายี่สิบห้าคนหรือไม่น้อยกว่ากึ่งหนึ่งของจำนวนผู้ถือหุ้นทั้งหมดและต้องมีหุ้นนับรวมกันได้ไม่น้อยกว่าหนึ่งในสามของจำนวนหุ้นที่จำหน่ายได้ทั้งหมด จึงจะเป็นองค์ประชุม <span class="law">พ.ร.บ.บริษัทมหาชนจำกัด ม.103</span></p>
+      <p>ตัวอย่าง ผู้ถือหุ้นทั้งหมด 40 คน กึ่งหนึ่งคือ 20 คน มา 20 คนก็ถึงเกณฑ์คน ไม่ต้องถึง 25 คน แต่หุ้นต้องถึง 1 ใน 3 ด้วย ถ้าหุ้นที่จำหน่ายได้มี 1,000 หุ้น มา 334 หุ้นถึง มา 333 หุ้นยังไม่ถึง</p>
+    </details>
+    <div id="ck4"></div>
+    <div class="endc"><span class="ico" data-ico="flag"></span><div><b>ครบองค์ประชุม แล้วนับเสียงให้ถูกวิธี</b><span>ประชุมผู้ถือหุ้นประจำปีต้องอนุมัติงบด้วย เรื่องนี้อยู่ใน<a href="law2v-c.html?c=P09">สถานีถัดไป</a></span></div></div>
+  </section>
+
+  <!-- โจทย์ท้ายหน้า -->
+  <section class="fig" aria-labelledby="fq">
+    <span class="fno">ลองเอง</span>
+    <h2 id="fq">ห้าคำถาม ตอบจากภาพข้างบน</h2>
+    <p class="cap">ตอบแล้วตอบใหม่ได้</p>
+    <div id="quiz" style="display:grid;gap:12px"></div>
+  </section>
+
+  <!-- สรุป -->
+  <section class="fig" aria-labelledby="fk">
+    <span class="fno">สรุปบทนี้</span>
+    <h2 id="fk">ประชุมผู้ถือหุ้นในแปดบรรทัด</h2>
+    <ul class="keep">
+      <li><span class="ico" data-ico="users"></span><span>ดูองค์ประชุมก่อน คนและหุ้นที่มาต้องถึงเกณฑ์พร้อมกันจึงลงมติได้ ครบแล้วยังไม่แปลว่ามติผ่าน</span></li>
+      <li><span class="ico" data-ico="percent"></span><span>บริษัทจำกัด มา 2 คนขึ้นไป นับผู้รับมอบฉันทะด้วย หุ้นไม่น้อยกว่า 1 ใน 4 ของทุน</span></li>
+      <li><span class="ico" data-ico="clock"></span><span>ล่วงเวลานัด 1 ชั่วโมงยังไม่ครบ ประชุมที่ผู้ถือหุ้นร้องขอเลิกหรือระงับไป นอกนั้นนัดใหม่</span></li>
+      <li><span class="ico" data-ico="calendar"></span><span>นัดใหม่ บริษัทจำกัดภายใน 14 วัน บริษัทมหาชนส่งหนังสือนัด 7 วันขึ้นไป ครั้งหลังไม่ต้องครบองค์ประชุม</span></li>
+      <li><span class="ico" data-ico="hand"></span><span>บริษัทจำกัด ปกติชูมือ คนละ 1 เสียง ผู้ถือหุ้น 2 คนขึ้นไปขอ จึงลงคะแนนลับ หุ้นละ 1 เสียง</span></li>
+      <li><span class="ico" data-ico="gavel"></span><span>มติพิเศษ 3 ใน 4 ขึ้นไปของเสียงคนที่มาและมีสิทธิ ค้างค่าหุ้นที่เรียกแล้วหรือมีส่วนได้เสียในข้อนั้น ออกเสียงไม่ได้</span></li>
+      <li><span class="ico" data-ico="building"></span><span>บริษัทมหาชน มา 25 คนหรือกึ่งหนึ่งขึ้นไป หุ้นไม่น้อยกว่า 1 ใน 3 ของหุ้นที่จำหน่ายได้</span></li>
+      <li><span class="ico" data-ico="vote"></span><span>บริษัทมหาชน หุ้นละ 1 เสียง ปกติใช้เสียงข้างมากของคนที่มาและลงคะแนน เรื่องที่กฎหมายกำหนด 3 ใน 4 ขึ้นไป</span></li>
+    </ul>
+  </section>
+
+  <details class="src">
+    <summary>ชื่อเต็มของกฎหมายในหน้านี้</summary>
+    <ul>
+      <li>ป.พ.พ. และเลขมาตรา 1145–1238 คือประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 3 ลักษณะ 22 หุ้นส่วนและบริษัท</li>
+      <li>พ.ร.บ.บริษัทมหาชนจำกัด และเลขมาตรา 31 33 102 103 107 คือพระราชบัญญัติบริษัทมหาชนจำกัด พ.ศ. 2535</li>
+      <li>พริ้ง พีท แพร พี่แพม บริษัทอีกแห่ง และบริษัทมหาชนลูกค้า เป็นกรณีสมมติ ทุกคนที่มาประชุมในเรื่องมีสิทธิและลงคะแนนทุกคน</li>
+    </ul>
+  </details>
+
+  <section class="next">
+    <small>สถานีถัดไป</small>
+    <b>ปิดปีแล้ว งบต้องผ่านใครบ้าง</b>
+    <p>ประชุมผู้ถือหุ้นที่นับเป็นแล้ว ใช้อนุมัติงบประจำปี</p>
+    <a class="btn" href="law2v-c.html?c=P09">ไปสถานีถัดไป</a>
+  </section>
+</main>
+<script src="law2v.js"></script>
+<script>
+(function () {
+  var V = window.LAW2V, $ = function (id) { return document.getElementById(id); };
+  function fmt(v) { return String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function dec(v) { return String(Math.round(v * 100) / 100); }
+  function mk(t, on) { return on ? '<mark>' + t + '</mark>' : t; }
+  function kase(id, facts, q) { $(id).innerHTML = facts + ' <b>' + q + '</b>'; }
+  function gate(id, open, t, s) { $(id).className = 'gate' + (open ? ' open' : ''); $(id + 'T').textContent = t; $(id + 'S').textContent = s; }
+  function res(id, ok, t, s) { $(id).className = 'result' + (ok ? ' ok' : ''); $(id).innerHTML = t + (s ? '<small class="xp08-why">' + s + '</small>' : ''); }
+  function list(a) { return a.length < 2 ? a.join('') : (a.length === 2 ? a.join(' กับ') : a.slice(0, -1).join(' ') + ' และ' + a[a.length - 1]); }
+  /* แถบ: segs = [[ส่วน, class, ป้าย]] เทียบกับ total · th = ตำแหน่งเส้นเกณฑ์ (0–1) */
+  function bar(id, segs, total, th) {
+    var h = segs.map(function (s) { var w = total > 0 ? 100 * s[0] / total : 0; return '<span class="' + s[1] + '" style="width:' + w + '%">' + (w >= 9 ? (s[2] || '') : '') + '</span>'; }).join('');
+    $(id).innerHTML = h + '<i class="xp08-th" style="left:' + (th * 100) + '%"></i>';
+  }
+  function box(id, ok, v, st) { $(id).className = 'xp08-bx' + (ok ? ' ok' : ''); $(id + 'v').textContent = v; $(id + 's').textContent = st; }
+  V.spy('#steps');
+
+  /* พี่แพม วาดในหน้านี้ (ของกลางมีเฉพาะแพรกับพราว) · หน้าเดียวกับ law2v-r01.html */
+  function eyes(y, c) { return '<ellipse cx="50" cy="' + y + '" rx="5.2" ry="3.4" fill="#fff"/><ellipse cx="70" cy="' + y + '" rx="5.2" ry="3.4" fill="#fff"/><circle cx="50.4" cy="' + y + '" r="2.9" fill="' + c + '"/><circle cx="69.6" cy="' + y + '" r="2.9" fill="' + c + '"/>'; }
+  $('fPam').innerHTML = '<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="xp08fb"><circle cx="60" cy="60" r="60"/></clipPath></defs><g clip-path="url(#xp08fb)">' +
+    '<rect width="120" height="120" fill="#ECE6F6"/><circle cx="60" cy="19" r="12" fill="#2B1D17"/><path d="M22 124c2-21 15-29 38-29s36 8 38 29z" fill="#6B4E9B"/><path d="M50 95l10 14 10-14 4 2-14 23-14-23z" fill="#FDFDFB"/>' +
+    '<path d="M52 78h16v15c0 5-16 5-16 0z" fill="#E3B598"/><ellipse cx="60" cy="55" rx="20.5" ry="25" fill="#F2CDB3"/><ellipse cx="39.5" cy="57" rx="3" ry="5" fill="#F2CDB3"/><ellipse cx="80.5" cy="57" rx="3" ry="5" fill="#F2CDB3"/>' +
+    '<path d="M38.5 55c-3-22 7-32 21.5-32s24.5 10 21.5 32c-3-9-8-15-14-17-8 3-17 3-23 1-3 4-5 9-6 16z" fill="#2B1D17"/>' + eyes(56, '#3B2418') +
+    '<path d="M44.3 50.5q5.7-3.6 11.4-.3M64.3 50.2q5.7-3.3 11.4.3" fill="none" stroke="#2A1B15" stroke-width="1.7" stroke-linecap="round"/>' +
+    '<circle cx="39" cy="65" r="2.2" fill="#F0C84B"/><circle cx="81" cy="65" r="2.2" fill="#F0C84B"/>' +
+    '<path d="M60 58c-1 4-2 6-1 8h2.5" fill="none" stroke="#C99A7E" stroke-width="1.4" stroke-linecap="round"/><path d="M53.5 71c4 3.2 9 3.2 13 0" fill="none" stroke="#B4534B" stroke-width="2" stroke-linecap="round"/></g></svg>';
+  $('fPam').style.cssText = 'width:64px;height:64px;border-radius:50%;overflow:hidden;margin-bottom:4px;display:block';
+  $('fPam').firstChild.style.cssText = 'width:64px;height:64px;display:block';
+
+  /* บริษัทอีกแห่ง: 20,000 หุ้น ผู้ถือหุ้นห้าคน (ตัวเลขของเรื่อง) */
+  var SH = [8000, 5000, 4000, 2000, 1000], TOT = 20000;
+  function seats(roomId, onTap) {
+    var room = $(roomId), bs = [];
+    SH.forEach(function (n, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'xp08-seat';
+      b.innerHTML = '<span class="xp08-hd">' + V.icon('user') + '</span><b>' + fmt(n) + '<i>หุ้น</i></b><em></em>';
+      b.onclick = function () { onTap(i); }; room.appendChild(b); bs.push(b);
+    });
+    return bs;
+  }
+  function holder(i) { return 'คนถือ ' + fmt(SH[i]) + ' หุ้น'; }
+
+  /* ส่วนที่ 1 · องค์ประชุมบริษัทจำกัด ป.พ.พ. ม.1178 (K01–K05) · ผู้รับมอบฉันทะนับเป็นคนที่มา (K02 K27)
+     at[i] 1 มาเอง 0 ไม่มา · px = คนถือ 1,000 หุ้นส่งผู้รับมอบฉันทะมาแทน (มีเฉพาะปุ่มที่ 2 ตามหน้าเดิม ดู notes P1 · 3)
+     แตะที่นั่ง = มาเองหรือไม่มา เท่านั้น ผลขึ้นกับ ม.1178 ตรง ๆ ทุก 32 แบบ */
+  var PRE = [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 1, 1], [0, 0, 1, 0, 1]], S1 = { at: PRE[0].slice(), px: false, pre: 0 };
+  var B1 = seats('room1', function (i) {
+    S1.at[i] = S1.at[i] ? 0 : 1; S1.px = false; S1.pre = -1;
+    [].forEach.call(document.querySelectorAll('[data-pick="who"] button'), function (b) { b.setAttribute('aria-pressed', 'false'); });
+    quorum();
+  });
+  function quorum() {
+    var pc = 0, ps = 0, names = [], segs = [], i;
+    for (i = 0; i < 5; i++) {
+      var on = !!S1.at[i], px = S1.px && i === 4 && !on;
+      B1[i].className = 'xp08-seat' + (on ? '' : (px ? ' xp08-px' : ' xp08-off'));
+      B1[i].querySelector('em').textContent = on ? 'มาเอง' : (px ? 'ผู้รับมอบฉันทะมา' : 'ไม่มา');
+      B1[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+      B1[i].setAttribute('aria-label', holder(i) + ' ' + (on ? 'มาเอง' : (px ? 'ส่งผู้รับมอบฉันทะมาแทน' : 'ไม่มา')));
+      if (on || px) { pc++; ps += SH[i]; segs.push([SH[i], px ? 'xp08-sg' : 'xp08-sp', fmt(SH[i])]); }
+      if (on) names.push(holder(i));
+    }
+    var pOk = pc >= 2, sOk = ps * 4 >= TOT, per = [];
+    for (i = 0; i < pc; i++) per.push([1, (S1.px && i === pc - 1) ? 'xp08-sg' : 'xp08-sp', '']);
+    bar('b1pb', per, 5, 0.4); bar('b1sb', segs, TOT, 0.25);
+    box('b1p', pOk, pc + ' คน', pOk ? 'ถึง 2 คนแล้ว' + (S1.px ? ' นับผู้รับมอบฉันทะเป็นคนที่มาด้วย' : '') : (pc ? 'ไม่ถึง 2 คน ขาดอีก ' + (2 - pc) + ' คน' : 'ยังไม่มีใครมา'));
+    box('b1s', sOk, fmt(ps) + ' หุ้น', sOk ? (ps * 4 === TOT ? 'เท่ากับ 1 ใน 4 พอดี ตัวบทใช้คำว่าไม่น้อยกว่า จึงถึง' : 'เกิน 5,000 หุ้นแล้ว') : 'ไม่ถึง 5,000 หุ้น ขาดอีก ' + fmt(5000 - ps) + ' หุ้น');
+    var ok = pOk && sOk;
+    if (ok) gate('g1', true, 'ครบองค์ประชุม ลงมติได้', 'มา ' + pc + ' คน หุ้นรวม ' + fmt(ps) + ' หุ้น ถึงทั้งสองข้อ ครบแล้วยังไม่ได้แปลว่ามติผ่าน ต้องนับเสียงต่อในส่วนที่ 3');
+    else if (sOk) gate('g1', false, 'ยังไม่ครบ', 'หุ้นถึงแล้ว แต่คนไม่ถึง 2 คน หุ้นมากใช้แทนคนไม่ได้');
+    else if (pOk) gate('g1', false, 'ยังไม่ครบ', 'คนถึง 2 คนแล้ว แต่หุ้นขาดอีก ' + fmt(5000 - ps) + ' หุ้น ขาดข้อเดียวก็ยังลงมติไม่ได้');
+    else gate('g1', false, 'ยังไม่ครบ', pc ? 'ไม่ถึงทั้งคนและหุ้น' : 'ยังไม่มีใครมาประชุม');
+    var who = names.length ? list(names) + (names.length === 1 ? 'มาคนเดียว' : 'มาเอง ' + names.length + ' คน') : (S1.px ? '' : 'ยังไม่มีใครมา');
+    if (S1.px) who = (names.length ? list(names) + 'มาเอง และ' : '') + 'คนถือ 1,000 หุ้นมอบฉันทะเป็นหนังสือให้อีกคนมาแทน';
+    kase('qC', 'บริษัทอีกแห่งมี 20,000 หุ้น ผู้ถือหุ้น 5 คนถือ 8,000 5,000 4,000 2,000 และ 1,000 หุ้น ข้อบังคับไม่ได้กำหนดองค์ประชุมไว้เอง ถึงเวลานัดประชุมผู้ถือหุ้น ' + mk(who, S1.pre !== 0), 'ครบองค์ประชุม ลงมติได้ไหม');
+  }
+  V.pick('who', function (v) { S1.pre = v; S1.at = PRE[v].slice(); S1.px = v === 1; quorum(); });
+  V.check('ck1', { f: 'กลับมาที่พาวเด้ออ้าย 10,000 หุ้น พริ้งถือ 6,000 หุ้นมาประชุมคนเดียว พีทไม่มา และไม่ได้มอบฉันทะให้ใคร', q: 'ครบองค์ประชุมไหม', o: [
+    ['ครบ หุ้นของพริ้งเกิน 1 ใน 4', 0, 'หุ้นถึงจริง แต่มาคนเดียว ไม่ถึง 2 คน หุ้นมากใช้แทนคนไม่ได้'],
+    ['ไม่ครบ มาคนเดียว', 1, 'ต้องมี 2 คนขึ้นไป พริ้งต้องมีพีท หรือผู้รับมอบฉันทะของพีทอีกคนหนึ่งมาด้วย']] });
+
+  /* ส่วนที่ 2 · ป.พ.พ. ม.1179 (K07 K08) · พ.ร.บ. ม.103 วรรคสอง (K09) · ไม่มีรอบตกเส้นที่ 1 ชั่วโมง และไม่นับวันของ 14 วัน (ดู ambiguous ในไฟล์ content) */
+  var S2 = { k: 0, r: false };
+  function late() {
+    var pub = S2.k === 1;
+    $('t0').className = 'xp08-stop' + (S2.r ? ' xp08-on' : ''); $('t1').className = 'xp08-go' + (S2.r ? '' : ' xp08-on');
+    $('t0s').textContent = pub ? 'การประชุมเป็นอันระงับไป' : 'ให้เลิกประชุม';
+    $('t1s').textContent = pub ? 'นัดประชุมใหม่ ส่งหนังสือนัดไม่น้อยกว่า 7 วันก่อนวันประชุม ครั้งหลังไม่ต้องครบองค์ประชุม' : 'เรียกนัดใหม่อีกคราวหนึ่งภายใน 14 วัน ครั้งหลังไม่ต้องครบองค์ประชุม';
+    $('t0l').textContent = pub ? 'พ.ร.บ.บริษัทมหาชนจำกัด ม.103 วรรคสอง' : 'ป.พ.พ. ม.1179';
+    $('t1l').textContent = $('t0l').textContent;
+    if (S2.r) res('tR', false, pub ? 'การประชุมเป็นอันระงับไป' : 'เลิกประชุม', 'ประชุมนี้เรียกเพราะผู้ถือหุ้นร้องขอ เมื่อล่วงเวลานัด 1 ชั่วโมงแล้วยังไม่ครบ ' + (pub ? 'กฎหมายให้การประชุมเป็นอันระงับไป' : 'กฎหมายให้เลิกประชุม') + ' ไม่มีการนัดใหม่ตามข้อนี้');
+    else res('tR', true, pub ? 'นัดประชุมใหม่ ส่งหนังสือนัด 7 วันขึ้นไปก่อนวันประชุม' : 'นัดประชุมใหม่ภายใน 14 วัน', 'ประชุมนี้ไม่ได้เรียกเพราะผู้ถือหุ้นร้องขอ จึงนัดใหม่ และครั้งหลังไม่ต้องครบองค์ประชุม มาเท่าไรก็ประชุมได้');
+    kase('tC', mk(pub ? 'บริษัทมหาชนลูกค้าของพี่แพม' : 'บริษัทอีกแห่ง', pub) + 'นัดประชุมผู้ถือหุ้น ' + mk(S2.r ? 'เพราะผู้ถือหุ้นร้องขอ' : 'ตามปกติ ไม่ได้เรียกเพราะผู้ถือหุ้นร้องขอ', S2.r) + ' ล่วงเวลานัดไป 1 ชั่วโมงแล้ว คนกับหุ้นที่มายังไม่ครบองค์ประชุม', 'ทำยังไงต่อ');
+  }
+  V.pick('kind', function (v) { S2.k = v; late(); });
+  V.togs('req', function (s) { S2.r = !!s.r; late(); });
+  V.check('ck2', { f: 'บริษัทจำกัดแห่งหนึ่งเรียกประชุมเพราะผู้ถือหุ้นร้องขอ ล่วงเวลานัดไป 1 ชั่วโมงแล้วยังไม่ครบองค์ประชุม', q: 'ทำยังไงต่อ', o: [
+    ['นัดใหม่ภายใน 14 วัน', 0, 'นัดใหม่ภายใน 14 วันเป็นทางของประชุมที่ไม่ได้เรียกเพราะผู้ถือหุ้นร้องขอ'],
+    ['เลิกประชุม', 1, 'ประชุมที่เรียกเพราะผู้ถือหุ้นร้องขอ ถ้าล่วง 1 ชั่วโมงแล้วยังไม่ครบ กฎหมายให้เลิกประชุม']] });
+
+  /* ส่วนที่ 3 · ชูมือ ม.1182 ม.1190 (K12) · ลงคะแนนลับ ม.1182 ม.1191 (K13) · ฐาน 3 ใน 4 ม.1194 (K10 K11 K14) · องค์ประชุม ม.1178 (K01)
+     st[i] 'y' เห็นชอบ · 'n' ไม่เห็นชอบ · 'a' ไม่มา · ทุกคนที่มามีสิทธิและลงคะแนน (หน้านี้ไม่สอนงดออกเสียง)
+     ผ่าน: ชูมือ yes*4 >= คนที่มา*3 · ลงคะแนนลับ หุ้นเห็นชอบ*4 >= หุ้นที่มา*3 · ถูกทุก 3^5 × 3 แบบ */
+  var D3 = ['y', 'y', 'n', 'y', 'n'], S3 = { st: D3.slice(), ask: 0 }, NX = { y: 'n', n: 'a', a: 'y' }, LB = { y: 'เห็นชอบ', n: 'ไม่เห็นชอบ', a: 'ไม่มา' };
+  var B3 = seats('room3', function (i) { S3.st[i] = NX[S3.st[i]]; vote(); });
+  function vote() {
+    var pc = 0, ps = 0, yc = 0, ysh = 0, hs = [], ss = [], ys = [], ns = [], as = [], i;
+    for (i = 0; i < 5; i++) {
+      var s = S3.st[i];
+      B3[i].className = 'xp08-seat xp08-' + (s === 'a' ? 'off' : s); B3[i].querySelector('em').textContent = LB[s];
+      B3[i].setAttribute('aria-label', holder(i) + ' ' + LB[s] + ' แตะเพื่อเปลี่ยน');
+      if (s === 'a') { as.push(holder(i)); continue; }
+      pc++; ps += SH[i];
+      if (s === 'y') { yc++; ysh += SH[i]; ys.push(holder(i)); } else ns.push(holder(i));
+    }
+    /* ช่องของแถบ: เห็นชอบก่อน แล้วไม่เห็นชอบ */
+    ['y', 'n'].forEach(function (k) { for (var j = 0; j < 5; j++) if (S3.st[j] === k) { hs.push([1, 'xp08-s' + k, '1']); ss.push([SH[j], 'xp08-s' + k, fmt(SH[j])]); } });
+    var secret = S3.ask >= 2, q = pc >= 2 && ps * 4 >= TOT;
+    var hOk = pc > 0 && yc * 4 >= pc * 3, sOk = ps > 0 && ysh * 4 >= ps * 3;
+    bar('b3hb', hs, pc, 0.75); bar('b3sb', ss, ps, 0.75);
+    box('b3h', hOk, yc + ' จาก ' + pc + ' เสียง', pc ? (hOk ? 'ถึง 3 ใน 4 ของ ' + pc + ' เสียง (' + dec(pc * 3 / 4) + ' เสียง)' : 'ไม่ถึง 3 ใน 4 ของ ' + pc + ' เสียง ซึ่งคือ ' + dec(pc * 3 / 4) + ' เสียง') : 'ไม่มีใครมา');
+    box('b3s', sOk, fmt(ysh) + ' จาก ' + fmt(ps) + ' เสียง', ps ? (sOk ? 'ถึง 3 ใน 4 ของ ' + fmt(ps) + ' เสียง (' + fmt(ps * 3 / 4) + ' เสียง)' : 'ไม่ถึง 3 ใน 4 ของ ' + fmt(ps) + ' เสียง ซึ่งคือ ' + fmt(ps * 3 / 4) + ' เสียง') : 'ไม่มีใครมา');
+    $('b3h').className += secret ? ' xp08-dim' : ''; $('b3s').className += secret ? '' : ' xp08-dim';
+    $('b3ht').textContent = secret ? 'ไม่ได้ใช้ครั้งนี้' : 'ใช้วิธีนี้'; $('b3st').textContent = secret ? 'ใช้วิธีนี้ ผลคะแนนลับเป็นมติ' : 'ไม่ได้ใช้ครั้งนี้';
+    var how = S3.ask === 0 ? 'ไม่มีใครขอลงคะแนนลับ' : (S3.ask === 1 ? 'ผู้ถือหุ้นขอลงคะแนนลับ 1 คน ไม่มีใครขอด้วย' : 'ผู้ถือหุ้น 2 คนขอลงคะแนนลับ');
+    var whoTxt = (ys.length ? 'ผู้ที่เห็นชอบคือ' + list(ys) : 'ไม่มีใครเห็นชอบ') + (ns.length ? ' ' + list(ns) + 'ไม่เห็นชอบ' : '') + (as.length ? ' ' + list(as) + 'ไม่มาประชุม' : ' ผู้ถือหุ้น 5 คนมาครบ 20,000 หุ้น');
+    var chg = S3.st.join('') !== D3.join('');
+    kase('vC', 'บริษัทอีกแห่งนัดประชุมถูกต้อง วาระแก้ข้อบังคับซึ่งต้องใช้มติพิเศษ คนที่มามีสิทธิและลงคะแนนทุกคน ' + mk(how, S3.ask !== 0) + ' ' + mk(whoTxt, chg), 'มติพิเศษผ่านไหม');
+    if (!q) { res('vR', false, 'ยังลงมติไม่ได้ ไม่ครบองค์ประชุม', 'มา ' + pc + ' คน หุ้น ' + fmt(ps) + ' หุ้น ต้องมา 2 คนขึ้นไป และหุ้นไม่น้อยกว่า 5,000 หุ้นก่อน ดูส่วนที่ 1'); return; }
+    var ok = secret ? sOk : hOk, other = secret ? hOk : sOk;
+    var why = secret ? 'ลงคะแนนลับนับหุ้นละ 1 เสียง เห็นชอบ ' + fmt(ysh) + ' จาก ' + fmt(ps) + ' เสียง' + (ysh * 4 === ps * 3 ? ' เท่ากับ 3 ใน 4 พอดี กฎหมายใช้คำว่าไม่ต่ำกว่า จึงผ่าน' : '')
+      : (S3.ask === 1 ? 'ขอคนเดียวไม่พอ ต้องผู้ถือหุ้น 2 คนขึ้นไป จึงยังนับชูมือ ' : 'ชูมือนับคนละ 1 เสียง ') + 'เห็นชอบ ' + yc + ' จาก ' + pc + ' เสียง' + (yc * 4 === pc * 3 ? ' เท่ากับ 3 ใน 4 พอดี จึงผ่าน' : '');
+    if (as.length) why += ' ฐานคือเสียงของคนที่มาประชุม คนที่ไม่มาไม่อยู่ในฐาน';
+    if (ok !== other) why += secret ? ' ถ้านับชูมือจะได้ ' + yc + ' จาก ' + pc + ' เสียง ผล' + (other ? 'ผ่าน' : 'ไม่ผ่าน') + ' แต่เมื่อมีผู้ถือหุ้น 2 คนขอ ผลคะแนนลับเป็นมติ'
+      : ' ถ้าผู้ถือหุ้น 2 คนขอลงคะแนนลับ จะนับหุ้นแทนคน ผลจะกลับเป็น' + (other ? 'ผ่าน' : 'ไม่ผ่าน');
+    if (ok) why += ' · แก้ข้อบังคับแล้ว บริษัทต้องนำไปจดทะเบียนภายใน 14 วันนับแต่วันที่ลงมติพิเศษ';
+    res('vR', ok, ok ? 'มติพิเศษผ่าน' : 'มติพิเศษไม่ผ่าน', why);
+  }
+  V.pick('ask', function (v) { S3.ask = v; vote(); });
+  V.check('ck3', { f: 'กลับมาที่พาวเด้ออ้าย พริ้ง 6,000 หุ้นกับพีท 4,000 หุ้นมาประชุมทั้งคู่ วาระแก้ข้อบังคับ พริ้งเห็นชอบ พีทไม่เห็นชอบ', q: 'มติพิเศษผ่านไหม', o: [
+    ['ผ่าน ถ้าลงคะแนนลับ', 0, 'ลงคะแนนลับได้ 6,000 จาก 10,000 เสียง เท่ากับร้อยละ 60 ยังไม่ถึง 3 ใน 4'],
+    ['ไม่ผ่านทั้งสองวิธี', 1, 'ชูมือได้ 1 จาก 2 เสียง ลงคะแนนลับได้ 6,000 จาก 10,000 เสียง ไม่ถึง 3 ใน 4 ทั้งคู่ เรื่องสำคัญของพาวเด้ออ้ายจึงต้องได้เสียงของพีทด้วย']] });
+
+  /* ส่วนที่ 4 · พ.ร.บ.บริษัทมหาชนจำกัด ม.103 วรรคหนึ่ง (K19 K20 K21) · ผู้ถือหุ้นทั้งหมด 200 คน หุ้นที่จำหน่ายได้ 10,000,000 หุ้น (ตัวเลขของเรื่อง)
+     คน: p >= 25 หรือ p*2 >= 200 · หุ้น: s*3 >= 10,000,000 · ถูกทุกค่าที่เลื่อนได้ */
+  var PN = 200, PS = 10000000;
+  V.nums('pub', function (st) {
+    var p = st.p, s = st.s, a = p >= 25, b = p * 2 >= PN, pOk = a || b, sOk = s * 3 >= PS, ok = pOk && sOk;
+    bar('b4pb', [[p, pOk ? 'xp08-sp' : 'xp08-sn', '']], PN, 0.125);
+    $('b4pb').insertAdjacentHTML('beforeend', '<i class="xp08-th" style="left:50%"></i>');
+    bar('b4sb', [[s, sOk ? 'xp08-sp' : 'xp08-sn', '']], PS, 1 / 3);
+    box('b4p', pOk, p + ' คน', a && b ? 'ถึงทั้งสองทาง ทางเดียวก็พอ' : (a ? 'ถึง 25 คนแล้ว ไม่ต้องถึงกึ่งหนึ่ง (100 คน)' : (b ? 'ถึงกึ่งหนึ่งแล้ว' : 'ไม่ถึง 25 คน และไม่ถึงกึ่งหนึ่ง 100 คน')));
+    box('b4s', sOk, fmt(s) + ' หุ้น', sOk ? 'ถึง 1 ใน 3 แล้ว (ร้อยละ ' + dec(100 * s / PS) + ')' : 'ไม่ถึง 1 ใน 3 ของ 10,000,000 หุ้น (ร้อยละ ' + dec(100 * s / PS) + ')');
+    if (ok) gate('g4', true, 'ครบองค์ประชุม', 'คนถึง' + (a ? ' 25 คน' : 'กึ่งหนึ่ง') + ' และหุ้นถึง 1 ใน 3 ' + (p === 25 ? 'มา 25 คนพอดีก็ถึง เพราะตัวบทใช้คำว่าไม่น้อยกว่า' : ''));
+    else if (pOk) gate('g4', false, 'ยังไม่ครบ', 'คนถึงแล้ว แต่หุ้นไม่ถึง 1 ใน 3 เกณฑ์หุ้นต้องถึงพร้อมกันเสมอ');
+    else if (sOk) gate('g4', false, 'ยังไม่ครบ', 'หุ้นถึงแล้ว แต่คนไม่ถึงสักทาง หุ้นใช้แทนคนไม่ได้');
+    else gate('g4', false, 'ยังไม่ครบ', 'ไม่ถึงทั้งคนและหุ้น');
+    kase('pC', 'บริษัทมหาชนลูกค้าของพี่แพมมีผู้ถือหุ้น 200 คน หุ้นที่จำหน่ายได้ 10,000,000 หุ้น วันประชุมผู้ถือหุ้น มีผู้ถือหุ้นและผู้รับมอบฉันทะมา ' + mk(p + ' คน', p !== 30) + ' ถือหุ้นรวม ' + mk(fmt(s) + ' หุ้น', s !== 4000000), 'ที่ประชุมครบองค์ประชุมไหม');
+  });
+  V.check('ck4', { f: 'บริษัทมหาชนลูกค้ามีผู้ถือหุ้น 200 คน หุ้นที่จำหน่ายได้ 10,000,000 หุ้น มาประชุม 100 คน ถือรวม 3,000,000 หุ้น', q: 'ครบองค์ประชุมไหม', o: [
+    ['ครบ มาถึงกึ่งหนึ่งแล้ว', 0, 'คนถึงกึ่งหนึ่งจริง แต่หุ้น 3,000,000 ไม่ถึง 1 ใน 3 ของ 10,000,000 หุ้น เกณฑ์หุ้นต้องถึงด้วย'],
+    ['ไม่ครบ หุ้นไม่ถึง 1 ใน 3', 1, '3,000,000 คูณ 3 ได้ 9,000,000 น้อยกว่า 10,000,000 หุ้น คนถึงแล้วก็ยังไม่ครบ']] });
+
+  /* โจทย์ท้ายหน้า: ห้าข้อจากไฟล์ content (K01 K02 K27 · K18 · K12 · K11 K14 · K19 K22) */
+  V.quiz(document.getElementById('quiz'), [
+    { f: 'พาวเด้ออ้ายประชุมผู้ถือหุ้น พริ้งถือ 6,000 จาก 10,000 หุ้นมาเอง พีทไม่มา แต่มอบฉันทะเป็นหนังสือให้เพื่อนมาแทน', q: 'ครบองค์ประชุมไหม', o: [
+      ['ครบ ผู้รับมอบฉันทะนับเป็นคนที่มา', 1, 'กฎหมายนับผู้ถือหุ้นที่มาเองและผู้รับมอบฉันทะ จึงเป็น 2 คน และหุ้นของพริ้งเกิน 1 ใน 4'],
+      ['ไม่ครบ ผู้ถือหุ้นมาเองคนเดียว', 0, 'ข้อนี้นับเฉพาะคนที่มาเอง แต่ผู้รับมอบฉันทะของพีทนับเป็นคนที่สองได้']] },
+    { f: 'บริษัทจำกัดแห่งหนึ่งครบองค์ประชุม ผู้ถือหุ้นมาเอง 8 คน มีสิทธิและลงคะแนนทุกคน มติพิเศษใช้ชูมือ ไม่มีใครขอลงคะแนนลับ เห็นชอบ 6 คน ซึ่งถือหุ้นรวมร้อยละ 45', q: 'มติพิเศษผ่านไหม', o: [
+      ['ผ่าน ชูมือได้ 6 จาก 8 เสียง', 1, 'ชูมือนับคนละ 1 เสียง 6 จาก 8 เสียง = ร้อยละ 75 เท่ากับ 3 ใน 4 พอดีจึงผ่าน'],
+      ['ไม่ผ่าน ฝ่ายเห็นชอบถือหุ้นแค่ร้อยละ 45', 0, 'ข้อนี้นับหุ้นแทนนับคน หุ้นละ 1 เสียงใช้เมื่อลงคะแนนลับ ครั้งนี้ไม่มีใครขอ']] },
+    { f: 'บริษัทอีกแห่งลงมติพิเศษแก้ข้อบังคับ ผู้ถือหุ้น 5 คนมาครบ ชูมือแล้วเห็นชอบ 4 คน คนถือ 8,000 หุ้นไม่เห็นชอบ และขอลงคะแนนลับคนเดียว ไม่มีใครขอด้วย', q: 'มติพิเศษผ่านไหม', o: [
+      ['ผ่าน ยังนับชูมือ 4 จาก 5 เสียง', 1, 'ลงคะแนนลับต้องมีผู้ถือหุ้นขออย่างน้อย 2 คน ขอคนเดียวจึงยังนับชูมือ 4 จาก 5 เสียง = ร้อยละ 80 ถึง 3 ใน 4'],
+      ['ไม่ผ่าน ต้องนับหุ้น ได้ 12,000 จาก 20,000 เสียง', 0, 'ข้อนี้ลืมว่าต้องขอ 2 คนขึ้นไป คนถือ 8,000 หุ้นขอคนเดียว จึงยังไม่ลงคะแนนลับ']] },
+    { f: 'บริษัทอีกแห่งประชุมใหม่ คนถือ 8,000 หุ้นไม่มา อีก 4 คนมา รวม 12,000 หุ้น มีสิทธิและลงคะแนนลับทุกคน คนถือ 5,000 กับ 4,000 หุ้นเห็นชอบ วาระแก้ข้อบังคับ', q: 'มติพิเศษผ่านไหม', o: [
+      ['ผ่าน ได้ 9,000 จาก 12,000 เสียง', 1, 'ฐานคือเสียงของคนที่มาประชุมและมีสิทธิ 12,000 เสียง 3 ใน 4 คือ 9,000 เสียงพอดี'],
+      ['ไม่ผ่าน ได้แค่ร้อยละ 45 ของ 20,000 หุ้น', 0, 'ข้อนี้ใช้ฐานผิด 8,000 หุ้นที่ไม่มาประชุมไม่อยู่ในฐานของมติพิเศษ']] },
+    { f: 'บริษัทมหาชนแห่งหนึ่งมีผู้ถือหุ้น 40 คน หุ้นที่จำหน่ายได้ 1,000 หุ้น มาประชุม 20 คน ถือรวม 333 หุ้น', q: 'ครบองค์ประชุมไหม', o: [
+      ['ครบ มาถึงกึ่งหนึ่งแล้ว', 0, 'คนถึงกึ่งหนึ่งก็จริง แต่ข้อนี้ลืมเกณฑ์หุ้น ซึ่งต้องถึงพร้อมกัน'],
+      ['ไม่ครบ หุ้นไม่ถึง 1 ใน 3', 1, '333 คูณ 3 ได้ 999 น้อยกว่า 1,000 หุ้น จึงไม่ถึง 1 ใน 3'],
+      ['ไม่ครบ คนไม่ถึง 25 คน', 0, 'เกณฑ์คนถึงทางเดียวก็พอ 20 คนคือกึ่งหนึ่งของ 40 คนแล้ว ที่ขาดคือหุ้น']] }
+  ]);
+})();
+</script>
+</body>
+</html>
